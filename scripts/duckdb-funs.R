@@ -95,3 +95,15 @@ dd_code <- glue(r"(
 invisible(parse(text = dd_code))
 
 writeLines(dd_code, "R/zzz-dd.R")
+
+globals <-
+  funs$parameter_types |>
+  unlist() |>
+  unique() |>
+  sort()
+
+globals_code <- paste0('utils::globalVariables("', globals, '")')
+
+invisible(parse(text = globals_code))
+
+writeLines(globals_code, "R/globals.R")
