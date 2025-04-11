@@ -3,16 +3,16 @@
 \docType{package}
 \name{dd-package}
 \alias{dd-package}
-\title{dd: What the Package Does (One Line, Title Case)}
+\title{dd: All DuckDB Functions}
 \description{
-What the package does (one paragraph).
+Lists all DuckDB functions for integration in R's help system.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/krlmlr/kirill}
-  \item \url{https://krlmlr.github.io/kirill}
-  \item Report bugs at \url{https://github.com/krlmlr/kirill/issues}
+  \item \url{https://github.com/krlmlr/dd}
+  \item \url{https://krlmlr.github.io/dd}
+  \item Report bugs at \url{https://github.com/krlmlr/dd/issues}
 }
 
 }
