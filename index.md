@@ -31,6 +31,7 @@ dd$acos
 #> }
 #> <bytecode: 0xdeadbeef>
 #> <environment: namespace:dd>
+
 help(acos, package = "dd")
 ```
 

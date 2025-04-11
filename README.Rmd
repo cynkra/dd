@@ -75,5 +75,6 @@ pak::pak("krlmlr/dd")
 ```{r example}
 library(dd)
 dd$acos
+
 help(acos, package = "dd")
 ```
