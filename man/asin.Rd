@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{asin}
 \alias{asin}
-\alias{duckdb_fun_asin}
 \title{DuckDB function asin}
 \arguments{
 \item{x}{\code{DOUBLE}}

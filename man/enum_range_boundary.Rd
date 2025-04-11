@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{enum_range_boundary}
 \alias{enum_range_boundary}
-\alias{duckdb_fun_enum_range_boundary}
 \title{DuckDB function enum_range_boundary}
 \arguments{
 \item{start}{\code{ANY}}

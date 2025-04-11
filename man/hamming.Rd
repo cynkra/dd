@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{hamming}
 \alias{hamming}
-\alias{duckdb_fun_hamming}
 \title{DuckDB function hamming}
 \arguments{
 \item{str1}{\code{VARCHAR}}

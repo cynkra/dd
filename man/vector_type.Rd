@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{vector_type}
 \alias{vector_type}
-\alias{duckdb_fun_vector_type}
 \title{DuckDB function vector_type}
 \arguments{
 \item{col}{\code{ANY}}

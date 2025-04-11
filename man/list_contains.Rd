@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_contains}
 \alias{list_contains}
-\alias{duckdb_fun_list_contains}
 \title{DuckDB function list_contains}
 \arguments{
 \item{list}{\code{ANY[]}}

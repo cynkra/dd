@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{unhex}
 \alias{unhex}
-\alias{duckdb_fun_unhex}
 \title{DuckDB function unhex}
 \arguments{
 \item{value}{\code{VARCHAR}}

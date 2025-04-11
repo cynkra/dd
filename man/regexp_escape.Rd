@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{regexp_escape}
 \alias{regexp_escape}
-\alias{duckdb_fun_regexp_escape}
 \title{DuckDB function regexp_escape}
 \arguments{
 \item{string}{\code{VARCHAR}}

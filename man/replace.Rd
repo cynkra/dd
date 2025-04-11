@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{replace}
 \alias{replace}
-\alias{duckdb_fun_replace}
 \title{DuckDB function replace}
 \arguments{
 \item{string}{\code{VARCHAR}}

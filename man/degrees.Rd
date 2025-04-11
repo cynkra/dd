@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{degrees}
 \alias{degrees}
-\alias{duckdb_fun_degrees}
 \title{DuckDB function degrees}
 \arguments{
 \item{x}{\code{DOUBLE}}

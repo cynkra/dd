@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{like_escape}
 \alias{like_escape}
-\alias{duckdb_fun_like_escape}
 \title{DuckDB function like_escape}
 \arguments{
 \item{string}{\code{VARCHAR}}

@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{can_cast_implicitly}
 \alias{can_cast_implicitly}
-\alias{duckdb_fun_can_cast_implicitly}
 \title{DuckDB function can_cast_implicitly}
 \arguments{
 \item{source_type}{\code{ANY}}

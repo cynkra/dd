@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{to_quarters}
 \alias{to_quarters}
-\alias{duckdb_fun_to_quarters}
 \title{DuckDB function to_quarters}
 \arguments{
 \item{integer}{\code{INTEGER}}

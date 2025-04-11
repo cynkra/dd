@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{factorial}
 \alias{factorial}
-\alias{duckdb_fun_factorial}
 \title{DuckDB function factorial}
 \arguments{
 \item{x}{\code{INTEGER}}

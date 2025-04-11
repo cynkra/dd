@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{unicode}
 \alias{unicode}
-\alias{duckdb_fun_unicode}
 \title{DuckDB function unicode}
 \arguments{
 \item{str}{\code{VARCHAR}}

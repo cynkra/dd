@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{pi}
 \alias{pi}
-\alias{duckdb_fun_pi}
 \title{DuckDB function pi}
 \description{
 Returns the value of pi.

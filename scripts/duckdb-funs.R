@@ -62,7 +62,7 @@ code <-
     #' \dontrun{{
     #' {examples}
     #' }}
-    duckdb_fun_{function_name} <- function({signature}) {{
+    {function_name} <- function({signature}) {{
       stop("DuckDB function {function_name}() is not available in R.")
     }}
 
@@ -78,3 +78,20 @@ code <- c(
 invisible(parse(text = code))
 
 writeLines(code, "R/duckdb-funs.R")
+
+dd_code <- glue(r"(
+  #' DuckDB functions
+  #'
+  #' A list of known DuckDB functions.
+  #'
+  #' @export
+  #' @examples
+  #' dd[1:3]
+  dd <- list(
+  {paste0("  ", tibble:::tick_if_needed(funs$function_name), " = ", tibble:::tick_if_needed(funs$function_name), collapse = ",\n")}
+  )
+  )")
+
+invisible(parse(text = dd_code))
+
+writeLines(dd_code, "R/zzz-dd.R")

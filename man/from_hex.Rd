@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{from_hex}
 \alias{from_hex}
-\alias{duckdb_fun_from_hex}
 \title{DuckDB function from_hex}
 \arguments{
 \item{value}{\code{VARCHAR}}

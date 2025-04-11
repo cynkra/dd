@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{even}
 \alias{even}
-\alias{duckdb_fun_even}
 \title{DuckDB function even}
 \arguments{
 \item{x}{\code{DOUBLE}}

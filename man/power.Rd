@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{power}
 \alias{power}
-\alias{duckdb_fun_power}
 \title{DuckDB function power}
 \arguments{
 \item{x}{\code{DOUBLE}}

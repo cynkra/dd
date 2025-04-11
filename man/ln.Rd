@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{ln}
 \alias{ln}
-\alias{duckdb_fun_ln}
 \title{DuckDB function ln}
 \arguments{
 \item{x}{\code{DOUBLE}}

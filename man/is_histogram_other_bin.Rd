@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{is_histogram_other_bin}
 \alias{is_histogram_other_bin}
-\alias{duckdb_fun_is_histogram_other_bin}
 \title{DuckDB function is_histogram_other_bin}
 \arguments{
 \item{val}{\code{ANY}}

@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{ucase}
 \alias{ucase}
-\alias{duckdb_fun_ucase}
 \title{DuckDB function ucase}
 \arguments{
 \item{string}{\code{VARCHAR}}

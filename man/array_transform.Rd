@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{array_transform}
 \alias{array_transform}
-\alias{duckdb_fun_array_transform}
 \title{DuckDB function array_transform}
 \arguments{
 \item{list}{\code{ANY[]}}

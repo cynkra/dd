@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_transform}
 \alias{list_transform}
-\alias{duckdb_fun_list_transform}
 \title{DuckDB function list_transform}
 \arguments{
 \item{list}{\code{ANY[]}}

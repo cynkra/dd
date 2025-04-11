@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{gamma}
 \alias{gamma}
-\alias{duckdb_fun_gamma}
 \title{DuckDB function gamma}
 \arguments{
 \item{x}{\code{DOUBLE}}

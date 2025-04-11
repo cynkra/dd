@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{sin}
 \alias{sin}
-\alias{duckdb_fun_sin}
 \title{DuckDB function sin}
 \arguments{
 \item{x}{\code{DOUBLE}}

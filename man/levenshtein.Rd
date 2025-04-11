@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{levenshtein}
 \alias{levenshtein}
-\alias{duckdb_fun_levenshtein}
 \title{DuckDB function levenshtein}
 \arguments{
 \item{str1}{\code{VARCHAR}}

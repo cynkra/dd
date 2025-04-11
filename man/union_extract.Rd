@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{union_extract}
 \alias{union_extract}
-\alias{duckdb_fun_union_extract}
 \title{DuckDB function union_extract}
 \arguments{
 \item{union}{\code{UNION}}

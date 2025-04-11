@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{string_to_array}
 \alias{string_to_array}
-\alias{duckdb_fun_string_to_array}
 \title{DuckDB function string_to_array}
 \arguments{
 \item{string}{\code{VARCHAR}}

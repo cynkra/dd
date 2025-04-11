@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_where}
 \alias{list_where}
-\alias{duckdb_fun_list_where}
 \title{DuckDB function list_where}
 \arguments{
 \item{value_list}{\code{ANY[]}}

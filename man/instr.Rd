@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{instr}
 \alias{instr}
-\alias{duckdb_fun_instr}
 \title{DuckDB function instr}
 \arguments{
 \item{haystack}{\code{VARCHAR}}

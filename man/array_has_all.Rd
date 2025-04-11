@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{array_has_all}
 \alias{array_has_all}
-\alias{duckdb_fun_array_has_all}
 \title{DuckDB function array_has_all}
 \arguments{
 \item{l1}{\code{ANY[]}}

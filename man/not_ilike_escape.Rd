@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{not_ilike_escape}
 \alias{not_ilike_escape}
-\alias{duckdb_fun_not_ilike_escape}
 \title{DuckDB function not_ilike_escape}
 \arguments{
 \item{string}{\code{VARCHAR}}

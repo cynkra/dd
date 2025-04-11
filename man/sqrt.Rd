@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{sqrt}
 \alias{sqrt}
-\alias{duckdb_fun_sqrt}
 \title{DuckDB function sqrt}
 \arguments{
 \item{x}{\code{DOUBLE}}

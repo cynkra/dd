@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_position}
 \alias{list_position}
-\alias{duckdb_fun_list_position}
 \title{DuckDB function list_position}
 \arguments{
 \item{list}{\code{ANY[]}}

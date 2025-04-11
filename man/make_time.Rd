@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{make_time}
 \alias{make_time}
-\alias{duckdb_fun_make_time}
 \title{DuckDB function make_time}
 \arguments{
 \item{hour}{\code{BIGINT}}

@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{damerau_levenshtein}
 \alias{damerau_levenshtein}
-\alias{duckdb_fun_damerau_levenshtein}
 \title{DuckDB function damerau_levenshtein}
 \arguments{
 \item{str1}{\code{VARCHAR}}

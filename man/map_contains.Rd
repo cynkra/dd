@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{map_contains}
 \alias{map_contains}
-\alias{duckdb_fun_map_contains}
 \title{DuckDB function map_contains}
 \arguments{
 \item{map}{\code{MAP(ANY, ANY)}}

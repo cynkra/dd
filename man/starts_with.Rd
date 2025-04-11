@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{starts_with}
 \alias{starts_with}
-\alias{duckdb_fun_starts_with}
 \title{DuckDB function starts_with}
 \arguments{
 \item{string}{\code{VARCHAR}}

@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{cos}
 \alias{cos}
-\alias{duckdb_fun_cos}
 \title{DuckDB function cos}
 \arguments{
 \item{x}{\code{DOUBLE}}

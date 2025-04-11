@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{to_timestamp}
 \alias{to_timestamp}
-\alias{duckdb_fun_to_timestamp}
 \title{DuckDB function to_timestamp}
 \arguments{
 \item{sec}{\code{DOUBLE}}

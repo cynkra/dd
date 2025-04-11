@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{nfc_normalize}
 \alias{nfc_normalize}
-\alias{duckdb_fun_nfc_normalize}
 \title{DuckDB function nfc_normalize}
 \arguments{
 \item{string}{\code{VARCHAR}}

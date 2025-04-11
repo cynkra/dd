@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{normalized_interval}
 \alias{normalized_interval}
-\alias{duckdb_fun_normalized_interval}
 \title{DuckDB function normalized_interval}
 \arguments{
 \item{interval}{\code{INTERVAL}}

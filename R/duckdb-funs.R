@@ -11,7 +11,7 @@
 #' \dontrun{
 #' acos(0.5)
 #' }
-duckdb_fun_acos <- function(x = DOUBLE) {
+acos <- function(x = DOUBLE) {
   stop("DuckDB function acos() is not available in R.")
 }
 
@@ -26,7 +26,7 @@ duckdb_fun_acos <- function(x = DOUBLE) {
 #' \dontrun{
 #' acosh(2.3)
 #' }
-duckdb_fun_acosh <- function(x = DOUBLE) {
+acosh <- function(x = DOUBLE) {
   stop("DuckDB function acosh() is not available in R.")
 }
 
@@ -41,7 +41,7 @@ duckdb_fun_acosh <- function(x = DOUBLE) {
 #' \dontrun{
 #' alias(42 + 1)
 #' }
-duckdb_fun_alias <- function(expr = ANY) {
+alias <- function(expr = ANY) {
   stop("DuckDB function alias() is not available in R.")
 }
 
@@ -57,7 +57,7 @@ duckdb_fun_alias <- function(expr = ANY) {
 #' \dontrun{
 #' list_transform([1, 2, 3], x -> x + 1)
 #' }
-duckdb_fun_apply <- function(list = `ANY[]`, lambda = LAMBDA) {
+apply <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function apply() is not available in R.")
 }
 
@@ -73,7 +73,7 @@ duckdb_fun_apply <- function(list = `ANY[]`, lambda = LAMBDA) {
 #' \dontrun{
 #' list_transform([1, 2, 3], x -> x + 1)
 #' }
-duckdb_fun_array_apply <- function(list = `ANY[]`, lambda = LAMBDA) {
+array_apply <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function array_apply() is not available in R.")
 }
 
@@ -89,7 +89,7 @@ duckdb_fun_array_apply <- function(list = `ANY[]`, lambda = LAMBDA) {
 #' \dontrun{
 #' list_concat([2, 3], [4, 5, 6])
 #' }
-duckdb_fun_array_cat <- function(list1 = `ANY[]`, list2 = `ANY[]`) {
+array_cat <- function(list1 = `ANY[]`, list2 = `ANY[]`) {
   stop("DuckDB function array_cat() is not available in R.")
 }
 
@@ -105,7 +105,7 @@ duckdb_fun_array_cat <- function(list1 = `ANY[]`, list2 = `ANY[]`) {
 #' \dontrun{
 #' list_concat([2, 3], [4, 5, 6])
 #' }
-duckdb_fun_array_concat <- function(list1 = `ANY[]`, list2 = `ANY[]`) {
+array_concat <- function(list1 = `ANY[]`, list2 = `ANY[]`) {
   stop("DuckDB function array_concat() is not available in R.")
 }
 
@@ -121,7 +121,7 @@ duckdb_fun_array_concat <- function(list1 = `ANY[]`, list2 = `ANY[]`) {
 #' \dontrun{
 #' list_contains([1, 2, NULL], 1)
 #' }
-duckdb_fun_array_contains <- function(list = `ANY[]`, element = ANY) {
+array_contains <- function(list = `ANY[]`, element = ANY) {
   stop("DuckDB function array_contains() is not available in R.")
 }
 
@@ -136,7 +136,7 @@ duckdb_fun_array_contains <- function(list = `ANY[]`, element = ANY) {
 #' \dontrun{
 #' list_distinct([1, 1, NULL, -3, 1, 5])
 #' }
-duckdb_fun_array_distinct <- function(list = `ANY[]`) {
+array_distinct <- function(list = `ANY[]`) {
   stop("DuckDB function array_distinct() is not available in R.")
 }
 
@@ -152,7 +152,7 @@ duckdb_fun_array_distinct <- function(list = `ANY[]`) {
 #' \dontrun{
 #' list_filter([3, 4, 5], x -> x > 4)
 #' }
-duckdb_fun_array_filter <- function(list = `ANY[]`, lambda = LAMBDA) {
+array_filter <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function array_filter() is not available in R.")
 }
 
@@ -168,7 +168,7 @@ duckdb_fun_array_filter <- function(list = `ANY[]`, lambda = LAMBDA) {
 #' \dontrun{
 #' list_contains([1, 2, NULL], 1)
 #' }
-duckdb_fun_array_has <- function(list = `ANY[]`, element = ANY) {
+array_has <- function(list = `ANY[]`, element = ANY) {
   stop("DuckDB function array_has() is not available in R.")
 }
 
@@ -184,7 +184,7 @@ duckdb_fun_array_has <- function(list = `ANY[]`, element = ANY) {
 #' \dontrun{
 #' list_has_all([1, 2, 3], [2, 3])
 #' }
-duckdb_fun_array_has_all <- function(l1 = `ANY[]`, l2 = `ANY[]`) {
+array_has_all <- function(l1 = `ANY[]`, l2 = `ANY[]`) {
   stop("DuckDB function array_has_all() is not available in R.")
 }
 
@@ -200,7 +200,7 @@ duckdb_fun_array_has_all <- function(l1 = `ANY[]`, l2 = `ANY[]`) {
 #' \dontrun{
 #' list_has_any([1, 2, 3], [2, 3, 4])
 #' }
-duckdb_fun_array_has_any <- function(l1 = `ANY[]`, l2 = `ANY[]`) {
+array_has_any <- function(l1 = `ANY[]`, l2 = `ANY[]`) {
   stop("DuckDB function array_has_any() is not available in R.")
 }
 
@@ -216,7 +216,7 @@ duckdb_fun_array_has_any <- function(l1 = `ANY[]`, l2 = `ANY[]`) {
 #' \dontrun{
 #' list_position([1, 2, NULL], 2)
 #' }
-duckdb_fun_array_indexof <- function(list = `ANY[]`, element = ANY) {
+array_indexof <- function(list = `ANY[]`, element = ANY) {
   stop("DuckDB function array_indexof() is not available in R.")
 }
 
@@ -232,7 +232,7 @@ duckdb_fun_array_indexof <- function(list = `ANY[]`, element = ANY) {
 #' \dontrun{
 #' list_position([1, 2, NULL], 2)
 #' }
-duckdb_fun_array_position <- function(list = `ANY[]`, element = ANY) {
+array_position <- function(list = `ANY[]`, element = ANY) {
   stop("DuckDB function array_position() is not available in R.")
 }
 
@@ -248,7 +248,7 @@ duckdb_fun_array_position <- function(list = `ANY[]`, element = ANY) {
 #' \dontrun{
 #' list_reduce([1, 2, 3], (x, y) -> x + y)
 #' }
-duckdb_fun_array_reduce <- function(list = `ANY[]`, lambda = LAMBDA) {
+array_reduce <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function array_reduce() is not available in R.")
 }
 
@@ -264,7 +264,7 @@ duckdb_fun_array_reduce <- function(list = `ANY[]`, lambda = LAMBDA) {
 #' \dontrun{
 #' list_select([10, 20, 30, 40], [1, 4])
 #' }
-duckdb_fun_array_select <- function(value_list = `ANY[]`, index_list = `BIGINT[]`) {
+array_select <- function(value_list = `ANY[]`, index_list = `BIGINT[]`) {
   stop("DuckDB function array_select() is not available in R.")
 }
 
@@ -280,7 +280,7 @@ duckdb_fun_array_select <- function(value_list = `ANY[]`, index_list = `BIGINT[]
 #' \dontrun{
 #' list_transform([1, 2, 3], x -> x + 1)
 #' }
-duckdb_fun_array_transform <- function(list = `ANY[]`, lambda = LAMBDA) {
+array_transform <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function array_transform() is not available in R.")
 }
 
@@ -295,7 +295,7 @@ duckdb_fun_array_transform <- function(list = `ANY[]`, lambda = LAMBDA) {
 #' \dontrun{
 #' list_unique([1, 1, NULL, -3, 1, 5])
 #' }
-duckdb_fun_array_unique <- function(list = `ANY[]`) {
+array_unique <- function(list = `ANY[]`) {
   stop("DuckDB function array_unique() is not available in R.")
 }
 
@@ -311,7 +311,7 @@ duckdb_fun_array_unique <- function(list = `ANY[]`) {
 #' \dontrun{
 #' list_where([10, 20, 30, 40], [true, false, false, true])
 #' }
-duckdb_fun_array_where <- function(value_list = `ANY[]`, mask_list = `BOOLEAN[]`) {
+array_where <- function(value_list = `ANY[]`, mask_list = `BOOLEAN[]`) {
   stop("DuckDB function array_where() is not available in R.")
 }
 
@@ -326,7 +326,7 @@ duckdb_fun_array_where <- function(value_list = `ANY[]`, mask_list = `BOOLEAN[]`
 #' \dontrun{
 #' ascii('Ω')
 #' }
-duckdb_fun_ascii <- function(string = VARCHAR) {
+ascii <- function(string = VARCHAR) {
   stop("DuckDB function ascii() is not available in R.")
 }
 
@@ -341,7 +341,7 @@ duckdb_fun_ascii <- function(string = VARCHAR) {
 #' \dontrun{
 #' asin(0.5)
 #' }
-duckdb_fun_asin <- function(x = DOUBLE) {
+asin <- function(x = DOUBLE) {
   stop("DuckDB function asin() is not available in R.")
 }
 
@@ -356,7 +356,7 @@ duckdb_fun_asin <- function(x = DOUBLE) {
 #' \dontrun{
 #' asinh(0.5)
 #' }
-duckdb_fun_asinh <- function(x = DOUBLE) {
+asinh <- function(x = DOUBLE) {
   stop("DuckDB function asinh() is not available in R.")
 }
 
@@ -371,7 +371,7 @@ duckdb_fun_asinh <- function(x = DOUBLE) {
 #' \dontrun{
 #' atan(0.5)
 #' }
-duckdb_fun_atan <- function(x = DOUBLE) {
+atan <- function(x = DOUBLE) {
   stop("DuckDB function atan() is not available in R.")
 }
 
@@ -387,7 +387,7 @@ duckdb_fun_atan <- function(x = DOUBLE) {
 #' \dontrun{
 #' atan2(1.0, 0.0)
 #' }
-duckdb_fun_atan2 <- function(y = DOUBLE, x = DOUBLE) {
+atan2 <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function atan2() is not available in R.")
 }
 
@@ -402,7 +402,7 @@ duckdb_fun_atan2 <- function(y = DOUBLE, x = DOUBLE) {
 #' \dontrun{
 #' atanh(0.5)
 #' }
-duckdb_fun_atanh <- function(x = DOUBLE) {
+atanh <- function(x = DOUBLE) {
   stop("DuckDB function atanh() is not available in R.")
 }
 
@@ -417,7 +417,7 @@ duckdb_fun_atanh <- function(x = DOUBLE) {
 #' \dontrun{
 #' base64('A'::blob)
 #' }
-duckdb_fun_base64 <- function(blob = BLOB) {
+base64 <- function(blob = BLOB) {
   stop("DuckDB function base64() is not available in R.")
 }
 
@@ -433,7 +433,7 @@ duckdb_fun_base64 <- function(blob = BLOB) {
 #' \dontrun{
 #' bit_position('010'::BIT, '1110101'::BIT)
 #' }
-duckdb_fun_bit_position <- function(substring = BIT, bitstring = BIT) {
+bit_position <- function(substring = BIT, bitstring = BIT) {
   stop("DuckDB function bit_position() is not available in R.")
 }
 
@@ -449,7 +449,7 @@ duckdb_fun_bit_position <- function(substring = BIT, bitstring = BIT) {
 #' \dontrun{
 #' can_implicitly_cast(NULL::INTEGER, NULL::BIGINT)
 #' }
-duckdb_fun_can_cast_implicitly <- function(source_type = ANY, target_type = ANY) {
+can_cast_implicitly <- function(source_type = ANY, target_type = ANY) {
   stop("DuckDB function can_cast_implicitly() is not available in R.")
 }
 
@@ -464,7 +464,7 @@ duckdb_fun_can_cast_implicitly <- function(source_type = ANY, target_type = ANY)
 #' \dontrun{
 #' cbrt(8)
 #' }
-duckdb_fun_cbrt <- function(x = DOUBLE) {
+cbrt <- function(x = DOUBLE) {
   stop("DuckDB function cbrt() is not available in R.")
 }
 
@@ -479,7 +479,7 @@ duckdb_fun_cbrt <- function(x = DOUBLE) {
 #' \dontrun{
 #' chr(65)
 #' }
-duckdb_fun_chr <- function(code_point = INTEGER) {
+chr <- function(code_point = INTEGER) {
   stop("DuckDB function chr() is not available in R.")
 }
 
@@ -494,7 +494,7 @@ duckdb_fun_chr <- function(code_point = INTEGER) {
 #' \dontrun{
 #' cos(90)
 #' }
-duckdb_fun_cos <- function(x = DOUBLE) {
+cos <- function(x = DOUBLE) {
   stop("DuckDB function cos() is not available in R.")
 }
 
@@ -509,7 +509,7 @@ duckdb_fun_cos <- function(x = DOUBLE) {
 #' \dontrun{
 #' cosh(1)
 #' }
-duckdb_fun_cosh <- function(x = DOUBLE) {
+cosh <- function(x = DOUBLE) {
   stop("DuckDB function cosh() is not available in R.")
 }
 
@@ -524,7 +524,7 @@ duckdb_fun_cosh <- function(x = DOUBLE) {
 #' \dontrun{
 #' cot(0.5)
 #' }
-duckdb_fun_cot <- function(x = DOUBLE) {
+cot <- function(x = DOUBLE) {
   stop("DuckDB function cot() is not available in R.")
 }
 
@@ -539,7 +539,7 @@ duckdb_fun_cot <- function(x = DOUBLE) {
 #' \dontrun{
 #' current_setting('access_mode')
 #' }
-duckdb_fun_current_setting <- function(setting_name = VARCHAR) {
+current_setting <- function(setting_name = VARCHAR) {
   stop("DuckDB function current_setting() is not available in R.")
 }
 
@@ -555,7 +555,7 @@ duckdb_fun_current_setting <- function(setting_name = VARCHAR) {
 #' \dontrun{
 #' damerau_levenshtein('hello', 'world')
 #' }
-duckdb_fun_damerau_levenshtein <- function(str1 = VARCHAR, str2 = VARCHAR) {
+damerau_levenshtein <- function(str1 = VARCHAR, str2 = VARCHAR) {
   stop("DuckDB function damerau_levenshtein() is not available in R.")
 }
 
@@ -570,7 +570,7 @@ duckdb_fun_damerau_levenshtein <- function(str1 = VARCHAR, str2 = VARCHAR) {
 #' \dontrun{
 #' decode('\xC3\xBC'::BLOB)
 #' }
-duckdb_fun_decode <- function(blob = BLOB) {
+decode <- function(blob = BLOB) {
   stop("DuckDB function decode() is not available in R.")
 }
 
@@ -585,7 +585,7 @@ duckdb_fun_decode <- function(blob = BLOB) {
 #' \dontrun{
 #' degrees(pi())
 #' }
-duckdb_fun_degrees <- function(x = DOUBLE) {
+degrees <- function(x = DOUBLE) {
   stop("DuckDB function degrees() is not available in R.")
 }
 
@@ -601,7 +601,7 @@ duckdb_fun_degrees <- function(x = DOUBLE) {
 #' \dontrun{
 #' levenshtein('duck','db')
 #' }
-duckdb_fun_editdist3 <- function(str1 = VARCHAR, str2 = VARCHAR) {
+editdist3 <- function(str1 = VARCHAR, str2 = VARCHAR) {
   stop("DuckDB function editdist3() is not available in R.")
 }
 
@@ -616,7 +616,7 @@ duckdb_fun_editdist3 <- function(str1 = VARCHAR, str2 = VARCHAR) {
 #' \dontrun{
 #' encode('my_string_with_ü')
 #' }
-duckdb_fun_encode <- function(string = VARCHAR) {
+encode <- function(string = VARCHAR) {
   stop("DuckDB function encode() is not available in R.")
 }
 
@@ -631,7 +631,7 @@ duckdb_fun_encode <- function(string = VARCHAR) {
 #' \dontrun{
 #' enum_code('happy'::mood)
 #' }
-duckdb_fun_enum_code <- function(enum = ANY) {
+enum_code <- function(enum = ANY) {
   stop("DuckDB function enum_code() is not available in R.")
 }
 
@@ -646,7 +646,7 @@ duckdb_fun_enum_code <- function(enum = ANY) {
 #' \dontrun{
 #' enum_first(NULL::mood)
 #' }
-duckdb_fun_enum_first <- function(enum = ANY) {
+enum_first <- function(enum = ANY) {
   stop("DuckDB function enum_first() is not available in R.")
 }
 
@@ -661,7 +661,7 @@ duckdb_fun_enum_first <- function(enum = ANY) {
 #' \dontrun{
 #' enum_last(NULL::mood)
 #' }
-duckdb_fun_enum_last <- function(enum = ANY) {
+enum_last <- function(enum = ANY) {
   stop("DuckDB function enum_last() is not available in R.")
 }
 
@@ -676,7 +676,7 @@ duckdb_fun_enum_last <- function(enum = ANY) {
 #' \dontrun{
 #' enum_range(NULL::mood)
 #' }
-duckdb_fun_enum_range <- function(enum = ANY) {
+enum_range <- function(enum = ANY) {
   stop("DuckDB function enum_range() is not available in R.")
 }
 
@@ -692,7 +692,7 @@ duckdb_fun_enum_range <- function(enum = ANY) {
 #' \dontrun{
 #' enum_range_boundary(NULL, 'happy'::mood)
 #' }
-duckdb_fun_enum_range_boundary <- function(start = ANY, end = ANY) {
+enum_range_boundary <- function(start = ANY, end = ANY) {
   stop("DuckDB function enum_range_boundary() is not available in R.")
 }
 
@@ -707,7 +707,7 @@ duckdb_fun_enum_range_boundary <- function(start = ANY, end = ANY) {
 #' \dontrun{
 #' even(2.9)
 #' }
-duckdb_fun_even <- function(x = DOUBLE) {
+even <- function(x = DOUBLE) {
   stop("DuckDB function even() is not available in R.")
 }
 
@@ -722,7 +722,7 @@ duckdb_fun_even <- function(x = DOUBLE) {
 #' \dontrun{
 #' exp(1)
 #' }
-duckdb_fun_exp <- function(x = DOUBLE) {
+exp <- function(x = DOUBLE) {
   stop("DuckDB function exp() is not available in R.")
 }
 
@@ -737,7 +737,7 @@ duckdb_fun_exp <- function(x = DOUBLE) {
 #' \dontrun{
 #' 4!
 #' }
-duckdb_fun_factorial <- function(x = INTEGER) {
+factorial <- function(x = INTEGER) {
   stop("DuckDB function factorial() is not available in R.")
 }
 
@@ -753,7 +753,7 @@ duckdb_fun_factorial <- function(x = INTEGER) {
 #' \dontrun{
 #' list_filter([3, 4, 5], x -> x > 4)
 #' }
-duckdb_fun_filter <- function(list = `ANY[]`, lambda = LAMBDA) {
+filter <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function filter() is not available in R.")
 }
 
@@ -768,7 +768,7 @@ duckdb_fun_filter <- function(list = `ANY[]`, lambda = LAMBDA) {
 #' \dontrun{
 #' flatten([[1, 2, 3], [4, 5]])
 #' }
-duckdb_fun_flatten <- function(nested_list = `ANY[][]`) {
+flatten <- function(nested_list = `ANY[][]`) {
   stop("DuckDB function flatten() is not available in R.")
 }
 
@@ -783,7 +783,7 @@ duckdb_fun_flatten <- function(nested_list = `ANY[][]`) {
 #' \dontrun{
 #' format_bytes(1000 * 16)
 #' }
-duckdb_fun_formatReadableDecimalSize <- function(bytes = BIGINT) {
+formatReadableDecimalSize <- function(bytes = BIGINT) {
   stop("DuckDB function formatReadableDecimalSize() is not available in R.")
 }
 
@@ -798,7 +798,7 @@ duckdb_fun_formatReadableDecimalSize <- function(bytes = BIGINT) {
 #' \dontrun{
 #' format_bytes(1000 * 16)
 #' }
-duckdb_fun_formatReadableSize <- function(bytes = BIGINT) {
+formatReadableSize <- function(bytes = BIGINT) {
   stop("DuckDB function formatReadableSize() is not available in R.")
 }
 
@@ -813,7 +813,7 @@ duckdb_fun_formatReadableSize <- function(bytes = BIGINT) {
 #' \dontrun{
 #' format_bytes(1000 * 16)
 #' }
-duckdb_fun_format_bytes <- function(bytes = BIGINT) {
+format_bytes <- function(bytes = BIGINT) {
   stop("DuckDB function format_bytes() is not available in R.")
 }
 
@@ -828,7 +828,7 @@ duckdb_fun_format_bytes <- function(bytes = BIGINT) {
 #' \dontrun{
 #' from_base64('QQ==')
 #' }
-duckdb_fun_from_base64 <- function(string = VARCHAR) {
+from_base64 <- function(string = VARCHAR) {
   stop("DuckDB function from_base64() is not available in R.")
 }
 
@@ -843,7 +843,7 @@ duckdb_fun_from_base64 <- function(string = VARCHAR) {
 #' \dontrun{
 #' unbin('0110')
 #' }
-duckdb_fun_from_binary <- function(value = VARCHAR) {
+from_binary <- function(value = VARCHAR) {
   stop("DuckDB function from_binary() is not available in R.")
 }
 
@@ -858,7 +858,7 @@ duckdb_fun_from_binary <- function(value = VARCHAR) {
 #' \dontrun{
 #' unhex('2A')
 #' }
-duckdb_fun_from_hex <- function(value = VARCHAR) {
+from_hex <- function(value = VARCHAR) {
   stop("DuckDB function from_hex() is not available in R.")
 }
 
@@ -873,7 +873,7 @@ duckdb_fun_from_hex <- function(value = VARCHAR) {
 #' \dontrun{
 #' gamma(5.5)
 #' }
-duckdb_fun_gamma <- function(x = DOUBLE) {
+gamma <- function(x = DOUBLE) {
   stop("DuckDB function gamma() is not available in R.")
 }
 
@@ -889,7 +889,7 @@ duckdb_fun_gamma <- function(x = DOUBLE) {
 #' \dontrun{
 #' get_bit('0110010'::BIT, 2)
 #' }
-duckdb_fun_get_bit <- function(bitstring = BIT, index = INTEGER) {
+get_bit <- function(bitstring = BIT, index = INTEGER) {
   stop("DuckDB function get_bit() is not available in R.")
 }
 
@@ -905,7 +905,7 @@ duckdb_fun_get_bit <- function(bitstring = BIT, index = INTEGER) {
 #' \dontrun{
 #' hamming('duck','luck')
 #' }
-duckdb_fun_hamming <- function(str1 = VARCHAR, str2 = VARCHAR) {
+hamming <- function(str1 = VARCHAR, str2 = VARCHAR) {
   stop("DuckDB function hamming() is not available in R.")
 }
 
@@ -922,7 +922,7 @@ duckdb_fun_hamming <- function(str1 = VARCHAR, str2 = VARCHAR) {
 #' \dontrun{
 #' ilike_escape('A%c', 'a$%C', '$')
 #' }
-duckdb_fun_ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
+ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
   stop("DuckDB function ilike_escape() is not available in R.")
 }
 
@@ -938,7 +938,7 @@ duckdb_fun_ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, 
 #' \dontrun{
 #' instr('test test','es')
 #' }
-duckdb_fun_instr <- function(haystack = VARCHAR, needle = VARCHAR) {
+instr <- function(haystack = VARCHAR, needle = VARCHAR) {
   stop("DuckDB function instr() is not available in R.")
 }
 
@@ -953,7 +953,7 @@ duckdb_fun_instr <- function(haystack = VARCHAR, needle = VARCHAR) {
 #' \dontrun{
 #' is_histogram_other_bin(v)
 #' }
-duckdb_fun_is_histogram_other_bin <- function(val = ANY) {
+is_histogram_other_bin <- function(val = ANY) {
   stop("DuckDB function is_histogram_other_bin() is not available in R.")
 }
 
@@ -969,7 +969,7 @@ duckdb_fun_is_histogram_other_bin <- function(val = ANY) {
 #' \dontrun{
 #' jaccard('duck','luck')
 #' }
-duckdb_fun_jaccard <- function(str1 = VARCHAR, str2 = VARCHAR) {
+jaccard <- function(str1 = VARCHAR, str2 = VARCHAR) {
   stop("DuckDB function jaccard() is not available in R.")
 }
 
@@ -984,7 +984,7 @@ duckdb_fun_jaccard <- function(str1 = VARCHAR, str2 = VARCHAR) {
 #' \dontrun{
 #' lower('Hello')
 #' }
-duckdb_fun_lcase <- function(string = VARCHAR) {
+lcase <- function(string = VARCHAR) {
   stop("DuckDB function lcase() is not available in R.")
 }
 
@@ -1000,7 +1000,7 @@ duckdb_fun_lcase <- function(string = VARCHAR) {
 #' \dontrun{
 #' left('Hello🦆', 2)
 #' }
-duckdb_fun_left <- function(string = VARCHAR, count = BIGINT) {
+left <- function(string = VARCHAR, count = BIGINT) {
   stop("DuckDB function left() is not available in R.")
 }
 
@@ -1016,7 +1016,7 @@ duckdb_fun_left <- function(string = VARCHAR, count = BIGINT) {
 #' \dontrun{
 #' left_grapheme('🤦🏼‍♂️🤦🏽‍♀️', 1)
 #' }
-duckdb_fun_left_grapheme <- function(string = VARCHAR, count = BIGINT) {
+left_grapheme <- function(string = VARCHAR, count = BIGINT) {
   stop("DuckDB function left_grapheme() is not available in R.")
 }
 
@@ -1031,7 +1031,7 @@ duckdb_fun_left_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #' \dontrun{
 #' length_grapheme('🤦🏼‍♂️🤦🏽‍♀️')
 #' }
-duckdb_fun_length_grapheme <- function(string = VARCHAR) {
+length_grapheme <- function(string = VARCHAR) {
   stop("DuckDB function length_grapheme() is not available in R.")
 }
 
@@ -1047,7 +1047,7 @@ duckdb_fun_length_grapheme <- function(string = VARCHAR) {
 #' \dontrun{
 #' levenshtein('duck','db')
 #' }
-duckdb_fun_levenshtein <- function(str1 = VARCHAR, str2 = VARCHAR) {
+levenshtein <- function(str1 = VARCHAR, str2 = VARCHAR) {
   stop("DuckDB function levenshtein() is not available in R.")
 }
 
@@ -1062,7 +1062,7 @@ duckdb_fun_levenshtein <- function(str1 = VARCHAR, str2 = VARCHAR) {
 #' \dontrun{
 #' lgamma(2)
 #' }
-duckdb_fun_lgamma <- function(x = DOUBLE) {
+lgamma <- function(x = DOUBLE) {
   stop("DuckDB function lgamma() is not available in R.")
 }
 
@@ -1079,7 +1079,7 @@ duckdb_fun_lgamma <- function(x = DOUBLE) {
 #' \dontrun{
 #' like_escape('a%c', 'a$%c', '$')
 #' }
-duckdb_fun_like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
+like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
   stop("DuckDB function like_escape() is not available in R.")
 }
 
@@ -1095,7 +1095,7 @@ duckdb_fun_like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, e
 #' \dontrun{
 #' list_transform([1, 2, 3], x -> x + 1)
 #' }
-duckdb_fun_list_apply <- function(list = `ANY[]`, lambda = LAMBDA) {
+list_apply <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function list_apply() is not available in R.")
 }
 
@@ -1111,7 +1111,7 @@ duckdb_fun_list_apply <- function(list = `ANY[]`, lambda = LAMBDA) {
 #' \dontrun{
 #' list_concat([2, 3], [4, 5, 6])
 #' }
-duckdb_fun_list_cat <- function(list1 = `ANY[]`, list2 = `ANY[]`) {
+list_cat <- function(list1 = `ANY[]`, list2 = `ANY[]`) {
   stop("DuckDB function list_cat() is not available in R.")
 }
 
@@ -1127,7 +1127,7 @@ duckdb_fun_list_cat <- function(list1 = `ANY[]`, list2 = `ANY[]`) {
 #' \dontrun{
 #' list_concat([2, 3], [4, 5, 6])
 #' }
-duckdb_fun_list_concat <- function(list1 = `ANY[]`, list2 = `ANY[]`) {
+list_concat <- function(list1 = `ANY[]`, list2 = `ANY[]`) {
   stop("DuckDB function list_concat() is not available in R.")
 }
 
@@ -1143,7 +1143,7 @@ duckdb_fun_list_concat <- function(list1 = `ANY[]`, list2 = `ANY[]`) {
 #' \dontrun{
 #' list_contains([1, 2, NULL], 1)
 #' }
-duckdb_fun_list_contains <- function(list = `ANY[]`, element = ANY) {
+list_contains <- function(list = `ANY[]`, element = ANY) {
   stop("DuckDB function list_contains() is not available in R.")
 }
 
@@ -1158,7 +1158,7 @@ duckdb_fun_list_contains <- function(list = `ANY[]`, element = ANY) {
 #' \dontrun{
 #' list_distinct([1, 1, NULL, -3, 1, 5])
 #' }
-duckdb_fun_list_distinct <- function(list = `ANY[]`) {
+list_distinct <- function(list = `ANY[]`) {
   stop("DuckDB function list_distinct() is not available in R.")
 }
 
@@ -1174,7 +1174,7 @@ duckdb_fun_list_distinct <- function(list = `ANY[]`) {
 #' \dontrun{
 #' list_filter([3, 4, 5], x -> x > 4)
 #' }
-duckdb_fun_list_filter <- function(list = `ANY[]`, lambda = LAMBDA) {
+list_filter <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function list_filter() is not available in R.")
 }
 
@@ -1190,7 +1190,7 @@ duckdb_fun_list_filter <- function(list = `ANY[]`, lambda = LAMBDA) {
 #' \dontrun{
 #' list_contains([1, 2, NULL], 1)
 #' }
-duckdb_fun_list_has <- function(list = `ANY[]`, element = ANY) {
+list_has <- function(list = `ANY[]`, element = ANY) {
   stop("DuckDB function list_has() is not available in R.")
 }
 
@@ -1206,7 +1206,7 @@ duckdb_fun_list_has <- function(list = `ANY[]`, element = ANY) {
 #' \dontrun{
 #' list_has_all([1, 2, 3], [2, 3])
 #' }
-duckdb_fun_list_has_all <- function(l1 = `ANY[]`, l2 = `ANY[]`) {
+list_has_all <- function(l1 = `ANY[]`, l2 = `ANY[]`) {
   stop("DuckDB function list_has_all() is not available in R.")
 }
 
@@ -1222,7 +1222,7 @@ duckdb_fun_list_has_all <- function(l1 = `ANY[]`, l2 = `ANY[]`) {
 #' \dontrun{
 #' list_has_any([1, 2, 3], [2, 3, 4])
 #' }
-duckdb_fun_list_has_any <- function(l1 = `ANY[]`, l2 = `ANY[]`) {
+list_has_any <- function(l1 = `ANY[]`, l2 = `ANY[]`) {
   stop("DuckDB function list_has_any() is not available in R.")
 }
 
@@ -1238,7 +1238,7 @@ duckdb_fun_list_has_any <- function(l1 = `ANY[]`, l2 = `ANY[]`) {
 #' \dontrun{
 #' list_position([1, 2, NULL], 2)
 #' }
-duckdb_fun_list_indexof <- function(list = `ANY[]`, element = ANY) {
+list_indexof <- function(list = `ANY[]`, element = ANY) {
   stop("DuckDB function list_indexof() is not available in R.")
 }
 
@@ -1254,7 +1254,7 @@ duckdb_fun_list_indexof <- function(list = `ANY[]`, element = ANY) {
 #' \dontrun{
 #' list_position([1, 2, NULL], 2)
 #' }
-duckdb_fun_list_position <- function(list = `ANY[]`, element = ANY) {
+list_position <- function(list = `ANY[]`, element = ANY) {
   stop("DuckDB function list_position() is not available in R.")
 }
 
@@ -1270,7 +1270,7 @@ duckdb_fun_list_position <- function(list = `ANY[]`, element = ANY) {
 #' \dontrun{
 #' list_reduce([1, 2, 3], (x, y) -> x + y)
 #' }
-duckdb_fun_list_reduce <- function(list = `ANY[]`, lambda = LAMBDA) {
+list_reduce <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function list_reduce() is not available in R.")
 }
 
@@ -1286,7 +1286,7 @@ duckdb_fun_list_reduce <- function(list = `ANY[]`, lambda = LAMBDA) {
 #' \dontrun{
 #' list_select([10, 20, 30, 40], [1, 4])
 #' }
-duckdb_fun_list_select <- function(value_list = `ANY[]`, index_list = `BIGINT[]`) {
+list_select <- function(value_list = `ANY[]`, index_list = `BIGINT[]`) {
   stop("DuckDB function list_select() is not available in R.")
 }
 
@@ -1302,7 +1302,7 @@ duckdb_fun_list_select <- function(value_list = `ANY[]`, index_list = `BIGINT[]`
 #' \dontrun{
 #' list_transform([1, 2, 3], x -> x + 1)
 #' }
-duckdb_fun_list_transform <- function(list = `ANY[]`, lambda = LAMBDA) {
+list_transform <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function list_transform() is not available in R.")
 }
 
@@ -1317,7 +1317,7 @@ duckdb_fun_list_transform <- function(list = `ANY[]`, lambda = LAMBDA) {
 #' \dontrun{
 #' list_unique([1, 1, NULL, -3, 1, 5])
 #' }
-duckdb_fun_list_unique <- function(list = `ANY[]`) {
+list_unique <- function(list = `ANY[]`) {
   stop("DuckDB function list_unique() is not available in R.")
 }
 
@@ -1333,7 +1333,7 @@ duckdb_fun_list_unique <- function(list = `ANY[]`) {
 #' \dontrun{
 #' list_where([10, 20, 30, 40], [true, false, false, true])
 #' }
-duckdb_fun_list_where <- function(value_list = `ANY[]`, mask_list = `BOOLEAN[]`) {
+list_where <- function(value_list = `ANY[]`, mask_list = `BOOLEAN[]`) {
   stop("DuckDB function list_where() is not available in R.")
 }
 
@@ -1348,7 +1348,7 @@ duckdb_fun_list_where <- function(value_list = `ANY[]`, mask_list = `BOOLEAN[]`)
 #' \dontrun{
 #' ln(2)
 #' }
-duckdb_fun_ln <- function(x = DOUBLE) {
+ln <- function(x = DOUBLE) {
   stop("DuckDB function ln() is not available in R.")
 }
 
@@ -1363,7 +1363,7 @@ duckdb_fun_ln <- function(x = DOUBLE) {
 #' \dontrun{
 #' log10(1000)
 #' }
-duckdb_fun_log10 <- function(x = DOUBLE) {
+log10 <- function(x = DOUBLE) {
   stop("DuckDB function log10() is not available in R.")
 }
 
@@ -1378,7 +1378,7 @@ duckdb_fun_log10 <- function(x = DOUBLE) {
 #' \dontrun{
 #' log2(8)
 #' }
-duckdb_fun_log2 <- function(x = DOUBLE) {
+log2 <- function(x = DOUBLE) {
   stop("DuckDB function log2() is not available in R.")
 }
 
@@ -1393,7 +1393,7 @@ duckdb_fun_log2 <- function(x = DOUBLE) {
 #' \dontrun{
 #' lower('Hello')
 #' }
-duckdb_fun_lower <- function(string = VARCHAR) {
+lower <- function(string = VARCHAR) {
   stop("DuckDB function lower() is not available in R.")
 }
 
@@ -1410,7 +1410,7 @@ duckdb_fun_lower <- function(string = VARCHAR) {
 #' \dontrun{
 #' lpad('hello', 10, '>')
 #' }
-duckdb_fun_lpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
+lpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
   stop("DuckDB function lpad() is not available in R.")
 }
 
@@ -1427,7 +1427,7 @@ duckdb_fun_lpad <- function(string = VARCHAR, count = INTEGER, character = VARCH
 #' \dontrun{
 #' make_time(13, 34, 27.123456)
 #' }
-duckdb_fun_make_time <- function(hour = BIGINT, minute = BIGINT, seconds = DOUBLE) {
+make_time <- function(hour = BIGINT, minute = BIGINT, seconds = DOUBLE) {
   stop("DuckDB function make_time() is not available in R.")
 }
 
@@ -1442,7 +1442,7 @@ duckdb_fun_make_time <- function(hour = BIGINT, minute = BIGINT, seconds = DOUBL
 #' \dontrun{
 #' make_timestamp(1732117793000000000)
 #' }
-duckdb_fun_make_timestamp_ns <- function(nanos = BIGINT) {
+make_timestamp_ns <- function(nanos = BIGINT) {
   stop("DuckDB function make_timestamp_ns() is not available in R.")
 }
 
@@ -1458,7 +1458,7 @@ duckdb_fun_make_timestamp_ns <- function(nanos = BIGINT) {
 #' \dontrun{
 #' map_contains(MAP {'key1': 10, 'key2': 20, 'key3': 30}, 'key2')
 #' }
-duckdb_fun_map_contains <- function(map = `MAP(ANY, ANY)`, key = ANY) {
+map_contains <- function(map = `MAP(ANY, ANY)`, key = ANY) {
   stop("DuckDB function map_contains() is not available in R.")
 }
 
@@ -1474,7 +1474,7 @@ duckdb_fun_map_contains <- function(map = `MAP(ANY, ANY)`, key = ANY) {
 #' \dontrun{
 #' hamming('duck','luck')
 #' }
-duckdb_fun_mismatches <- function(str1 = VARCHAR, str2 = VARCHAR) {
+mismatches <- function(str1 = VARCHAR, str2 = VARCHAR) {
   stop("DuckDB function mismatches() is not available in R.")
 }
 
@@ -1489,7 +1489,7 @@ duckdb_fun_mismatches <- function(str1 = VARCHAR, str2 = VARCHAR) {
 #' \dontrun{
 #' nfc_normalize('ardèch')
 #' }
-duckdb_fun_nfc_normalize <- function(string = VARCHAR) {
+nfc_normalize <- function(string = VARCHAR) {
   stop("DuckDB function nfc_normalize() is not available in R.")
 }
 
@@ -1504,7 +1504,7 @@ duckdb_fun_nfc_normalize <- function(string = VARCHAR) {
 #' \dontrun{
 #' normalized_interval(INTERVAL '30 days')
 #' }
-duckdb_fun_normalized_interval <- function(interval = INTERVAL) {
+normalized_interval <- function(interval = INTERVAL) {
   stop("DuckDB function normalized_interval() is not available in R.")
 }
 
@@ -1521,7 +1521,7 @@ duckdb_fun_normalized_interval <- function(interval = INTERVAL) {
 #' \dontrun{
 #' not_ilike_escape('A%c', 'a$%C', '$')
 #' }
-duckdb_fun_not_ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
+not_ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
   stop("DuckDB function not_ilike_escape() is not available in R.")
 }
 
@@ -1538,7 +1538,7 @@ duckdb_fun_not_ilike_escape <- function(string = VARCHAR, like_specifier = VARCH
 #' \dontrun{
 #' not_like_escape('a%c', 'a$%c', '$')
 #' }
-duckdb_fun_not_like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
+not_like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
   stop("DuckDB function not_like_escape() is not available in R.")
 }
 
@@ -1553,7 +1553,7 @@ duckdb_fun_not_like_escape <- function(string = VARCHAR, like_specifier = VARCHA
 #' \dontrun{
 #' unicode('ü')
 #' }
-duckdb_fun_ord <- function(str = VARCHAR) {
+ord <- function(str = VARCHAR) {
   stop("DuckDB function ord() is not available in R.")
 }
 
@@ -1568,7 +1568,7 @@ duckdb_fun_ord <- function(str = VARCHAR) {
 #' \dontrun{
 #' pi()
 #' }
-duckdb_fun_pi <- function() {
+pi <- function() {
   stop("DuckDB function pi() is not available in R.")
 }
 
@@ -1584,7 +1584,7 @@ duckdb_fun_pi <- function() {
 #' \dontrun{
 #' instr('test test','es')
 #' }
-duckdb_fun_position <- function(haystack = VARCHAR, needle = VARCHAR) {
+position <- function(haystack = VARCHAR, needle = VARCHAR) {
   stop("DuckDB function position() is not available in R.")
 }
 
@@ -1600,7 +1600,7 @@ duckdb_fun_position <- function(haystack = VARCHAR, needle = VARCHAR) {
 #' \dontrun{
 #' pow(2, 3)
 #' }
-duckdb_fun_pow <- function(x = DOUBLE, y = DOUBLE) {
+pow <- function(x = DOUBLE, y = DOUBLE) {
   stop("DuckDB function pow() is not available in R.")
 }
 
@@ -1616,7 +1616,7 @@ duckdb_fun_pow <- function(x = DOUBLE, y = DOUBLE) {
 #' \dontrun{
 #' pow(2, 3)
 #' }
-duckdb_fun_power <- function(x = DOUBLE, y = DOUBLE) {
+power <- function(x = DOUBLE, y = DOUBLE) {
   stop("DuckDB function power() is not available in R.")
 }
 
@@ -1631,7 +1631,7 @@ duckdb_fun_power <- function(x = DOUBLE, y = DOUBLE) {
 #' \dontrun{
 #' radians(90)
 #' }
-duckdb_fun_radians <- function(x = DOUBLE) {
+radians <- function(x = DOUBLE) {
   stop("DuckDB function radians() is not available in R.")
 }
 
@@ -1647,7 +1647,7 @@ duckdb_fun_radians <- function(x = DOUBLE) {
 #' \dontrun{
 #' list_reduce([1, 2, 3], (x, y) -> x + y)
 #' }
-duckdb_fun_reduce <- function(list = `ANY[]`, lambda = LAMBDA) {
+reduce <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function reduce() is not available in R.")
 }
 
@@ -1662,7 +1662,7 @@ duckdb_fun_reduce <- function(list = `ANY[]`, lambda = LAMBDA) {
 #' \dontrun{
 #' regexp_escape('https://duckdb.org')
 #' }
-duckdb_fun_regexp_escape <- function(string = VARCHAR) {
+regexp_escape <- function(string = VARCHAR) {
   stop("DuckDB function regexp_escape() is not available in R.")
 }
 
@@ -1679,7 +1679,7 @@ duckdb_fun_regexp_escape <- function(string = VARCHAR) {
 #' \dontrun{
 #' replace('hello', 'l', '-')
 #' }
-duckdb_fun_replace <- function(string = VARCHAR, source = VARCHAR, target = VARCHAR) {
+replace <- function(string = VARCHAR, source = VARCHAR, target = VARCHAR) {
   stop("DuckDB function replace() is not available in R.")
 }
 
@@ -1694,7 +1694,7 @@ duckdb_fun_replace <- function(string = VARCHAR, source = VARCHAR, target = VARC
 #' \dontrun{
 #' reverse('hello')
 #' }
-duckdb_fun_reverse <- function(string = VARCHAR) {
+reverse <- function(string = VARCHAR) {
   stop("DuckDB function reverse() is not available in R.")
 }
 
@@ -1710,7 +1710,7 @@ duckdb_fun_reverse <- function(string = VARCHAR) {
 #' \dontrun{
 #' right('Hello🦆', 3)
 #' }
-duckdb_fun_right <- function(string = VARCHAR, count = BIGINT) {
+right <- function(string = VARCHAR, count = BIGINT) {
   stop("DuckDB function right() is not available in R.")
 }
 
@@ -1726,7 +1726,7 @@ duckdb_fun_right <- function(string = VARCHAR, count = BIGINT) {
 #' \dontrun{
 #' right_grapheme('🤦🏼‍♂️🤦🏽‍♀️', 1)
 #' }
-duckdb_fun_right_grapheme <- function(string = VARCHAR, count = BIGINT) {
+right_grapheme <- function(string = VARCHAR, count = BIGINT) {
   stop("DuckDB function right_grapheme() is not available in R.")
 }
 
@@ -1743,7 +1743,7 @@ duckdb_fun_right_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #' \dontrun{
 #' rpad('hello', 10, '<')
 #' }
-duckdb_fun_rpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
+rpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
   stop("DuckDB function rpad() is not available in R.")
 }
 
@@ -1760,7 +1760,7 @@ duckdb_fun_rpad <- function(string = VARCHAR, count = INTEGER, character = VARCH
 #' \dontrun{
 #' set_bit('0110010'::BIT, 2, 0)
 #' }
-duckdb_fun_set_bit <- function(bitstring = BIT, index = INTEGER, new_value = INTEGER) {
+set_bit <- function(bitstring = BIT, index = INTEGER, new_value = INTEGER) {
   stop("DuckDB function set_bit() is not available in R.")
 }
 
@@ -1775,7 +1775,7 @@ duckdb_fun_set_bit <- function(bitstring = BIT, index = INTEGER, new_value = INT
 #' \dontrun{
 #' sin(90)
 #' }
-duckdb_fun_sin <- function(x = DOUBLE) {
+sin <- function(x = DOUBLE) {
   stop("DuckDB function sin() is not available in R.")
 }
 
@@ -1790,7 +1790,7 @@ duckdb_fun_sin <- function(x = DOUBLE) {
 #' \dontrun{
 #' sinh(1)
 #' }
-duckdb_fun_sinh <- function(x = DOUBLE) {
+sinh <- function(x = DOUBLE) {
   stop("DuckDB function sinh() is not available in R.")
 }
 
@@ -1806,7 +1806,7 @@ duckdb_fun_sinh <- function(x = DOUBLE) {
 #' \dontrun{
 #' string_split('hello-world', '-')
 #' }
-duckdb_fun_split <- function(string = VARCHAR, separator = VARCHAR) {
+split <- function(string = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function split() is not available in R.")
 }
 
@@ -1821,7 +1821,7 @@ duckdb_fun_split <- function(string = VARCHAR, separator = VARCHAR) {
 #' \dontrun{
 #' sqrt(4)
 #' }
-duckdb_fun_sqrt <- function(x = DOUBLE) {
+sqrt <- function(x = DOUBLE) {
   stop("DuckDB function sqrt() is not available in R.")
 }
 
@@ -1837,7 +1837,7 @@ duckdb_fun_sqrt <- function(x = DOUBLE) {
 #' \dontrun{
 #' starts_with('abc','a')
 #' }
-duckdb_fun_starts_with <- function(string = VARCHAR, search_string = VARCHAR) {
+starts_with <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function starts_with() is not available in R.")
 }
 
@@ -1853,7 +1853,7 @@ duckdb_fun_starts_with <- function(string = VARCHAR, search_string = VARCHAR) {
 #' \dontrun{
 #' string_split('hello-world', '-')
 #' }
-duckdb_fun_str_split <- function(string = VARCHAR, separator = VARCHAR) {
+str_split <- function(string = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function str_split() is not available in R.")
 }
 
@@ -1869,7 +1869,7 @@ duckdb_fun_str_split <- function(string = VARCHAR, separator = VARCHAR) {
 #' \dontrun{
 #' string_split('hello-world', '-')
 #' }
-duckdb_fun_string_split <- function(string = VARCHAR, separator = VARCHAR) {
+string_split <- function(string = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function string_split() is not available in R.")
 }
 
@@ -1885,7 +1885,7 @@ duckdb_fun_string_split <- function(string = VARCHAR, separator = VARCHAR) {
 #' \dontrun{
 #' string_split('hello-world', '-')
 #' }
-duckdb_fun_string_to_array <- function(string = VARCHAR, separator = VARCHAR) {
+string_to_array <- function(string = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function string_to_array() is not available in R.")
 }
 
@@ -1900,7 +1900,7 @@ duckdb_fun_string_to_array <- function(string = VARCHAR, separator = VARCHAR) {
 #' \dontrun{
 #' strip_accents('mühleisen')
 #' }
-duckdb_fun_strip_accents <- function(string = VARCHAR) {
+strip_accents <- function(string = VARCHAR) {
   stop("DuckDB function strip_accents() is not available in R.")
 }
 
@@ -1915,7 +1915,7 @@ duckdb_fun_strip_accents <- function(string = VARCHAR) {
 #' \dontrun{
 #' strlen('🦆')
 #' }
-duckdb_fun_strlen <- function(string = VARCHAR) {
+strlen <- function(string = VARCHAR) {
   stop("DuckDB function strlen() is not available in R.")
 }
 
@@ -1931,7 +1931,7 @@ duckdb_fun_strlen <- function(string = VARCHAR) {
 #' \dontrun{
 #' instr('test test','es')
 #' }
-duckdb_fun_strpos <- function(haystack = VARCHAR, needle = VARCHAR) {
+strpos <- function(haystack = VARCHAR, needle = VARCHAR) {
   stop("DuckDB function strpos() is not available in R.")
 }
 
@@ -1946,7 +1946,7 @@ duckdb_fun_strpos <- function(haystack = VARCHAR, needle = VARCHAR) {
 #' \dontrun{
 #' tan(90)
 #' }
-duckdb_fun_tan <- function(x = DOUBLE) {
+tan <- function(x = DOUBLE) {
   stop("DuckDB function tan() is not available in R.")
 }
 
@@ -1961,7 +1961,7 @@ duckdb_fun_tan <- function(x = DOUBLE) {
 #' \dontrun{
 #' tanh(1)
 #' }
-duckdb_fun_tanh <- function(x = DOUBLE) {
+tanh <- function(x = DOUBLE) {
   stop("DuckDB function tanh() is not available in R.")
 }
 
@@ -1976,7 +1976,7 @@ duckdb_fun_tanh <- function(x = DOUBLE) {
 #' \dontrun{
 #' timetz_byte_comparable('18:18:16.21-07:00'::TIME_TZ)
 #' }
-duckdb_fun_timetz_byte_comparable <- function(time_tz = `TIME WITH TIME ZONE`) {
+timetz_byte_comparable <- function(time_tz = `TIME WITH TIME ZONE`) {
   stop("DuckDB function timetz_byte_comparable() is not available in R.")
 }
 
@@ -1991,7 +1991,7 @@ duckdb_fun_timetz_byte_comparable <- function(time_tz = `TIME WITH TIME ZONE`) {
 #' \dontrun{
 #' base64('A'::blob)
 #' }
-duckdb_fun_to_base64 <- function(blob = BLOB) {
+to_base64 <- function(blob = BLOB) {
   stop("DuckDB function to_base64() is not available in R.")
 }
 
@@ -2006,7 +2006,7 @@ duckdb_fun_to_base64 <- function(blob = BLOB) {
 #' \dontrun{
 #' to_centuries(5)
 #' }
-duckdb_fun_to_centuries <- function(integer = INTEGER) {
+to_centuries <- function(integer = INTEGER) {
   stop("DuckDB function to_centuries() is not available in R.")
 }
 
@@ -2021,7 +2021,7 @@ duckdb_fun_to_centuries <- function(integer = INTEGER) {
 #' \dontrun{
 #' to_days(5)
 #' }
-duckdb_fun_to_days <- function(integer = INTEGER) {
+to_days <- function(integer = INTEGER) {
   stop("DuckDB function to_days() is not available in R.")
 }
 
@@ -2036,7 +2036,7 @@ duckdb_fun_to_days <- function(integer = INTEGER) {
 #' \dontrun{
 #' to_decades(5)
 #' }
-duckdb_fun_to_decades <- function(integer = INTEGER) {
+to_decades <- function(integer = INTEGER) {
   stop("DuckDB function to_decades() is not available in R.")
 }
 
@@ -2051,7 +2051,7 @@ duckdb_fun_to_decades <- function(integer = INTEGER) {
 #' \dontrun{
 #' to_hours(5)
 #' }
-duckdb_fun_to_hours <- function(integer = BIGINT) {
+to_hours <- function(integer = BIGINT) {
   stop("DuckDB function to_hours() is not available in R.")
 }
 
@@ -2066,7 +2066,7 @@ duckdb_fun_to_hours <- function(integer = BIGINT) {
 #' \dontrun{
 #' to_microseconds(5)
 #' }
-duckdb_fun_to_microseconds <- function(integer = BIGINT) {
+to_microseconds <- function(integer = BIGINT) {
   stop("DuckDB function to_microseconds() is not available in R.")
 }
 
@@ -2081,7 +2081,7 @@ duckdb_fun_to_microseconds <- function(integer = BIGINT) {
 #' \dontrun{
 #' to_millennia(1)
 #' }
-duckdb_fun_to_millennia <- function(integer = INTEGER) {
+to_millennia <- function(integer = INTEGER) {
   stop("DuckDB function to_millennia() is not available in R.")
 }
 
@@ -2096,7 +2096,7 @@ duckdb_fun_to_millennia <- function(integer = INTEGER) {
 #' \dontrun{
 #' to_milliseconds(5.5)
 #' }
-duckdb_fun_to_milliseconds <- function(double = DOUBLE) {
+to_milliseconds <- function(double = DOUBLE) {
   stop("DuckDB function to_milliseconds() is not available in R.")
 }
 
@@ -2111,7 +2111,7 @@ duckdb_fun_to_milliseconds <- function(double = DOUBLE) {
 #' \dontrun{
 #' to_minutes(5)
 #' }
-duckdb_fun_to_minutes <- function(integer = BIGINT) {
+to_minutes <- function(integer = BIGINT) {
   stop("DuckDB function to_minutes() is not available in R.")
 }
 
@@ -2126,7 +2126,7 @@ duckdb_fun_to_minutes <- function(integer = BIGINT) {
 #' \dontrun{
 #' to_months(5)
 #' }
-duckdb_fun_to_months <- function(integer = INTEGER) {
+to_months <- function(integer = INTEGER) {
   stop("DuckDB function to_months() is not available in R.")
 }
 
@@ -2141,7 +2141,7 @@ duckdb_fun_to_months <- function(integer = INTEGER) {
 #' \dontrun{
 #' to_quarters(5)
 #' }
-duckdb_fun_to_quarters <- function(integer = INTEGER) {
+to_quarters <- function(integer = INTEGER) {
   stop("DuckDB function to_quarters() is not available in R.")
 }
 
@@ -2156,7 +2156,7 @@ duckdb_fun_to_quarters <- function(integer = INTEGER) {
 #' \dontrun{
 #' to_seconds(5.5)
 #' }
-duckdb_fun_to_seconds <- function(double = DOUBLE) {
+to_seconds <- function(double = DOUBLE) {
   stop("DuckDB function to_seconds() is not available in R.")
 }
 
@@ -2171,7 +2171,7 @@ duckdb_fun_to_seconds <- function(double = DOUBLE) {
 #' \dontrun{
 #' to_timestamp(1284352323.5)
 #' }
-duckdb_fun_to_timestamp <- function(sec = DOUBLE) {
+to_timestamp <- function(sec = DOUBLE) {
   stop("DuckDB function to_timestamp() is not available in R.")
 }
 
@@ -2186,7 +2186,7 @@ duckdb_fun_to_timestamp <- function(sec = DOUBLE) {
 #' \dontrun{
 #' to_weeks(5)
 #' }
-duckdb_fun_to_weeks <- function(integer = INTEGER) {
+to_weeks <- function(integer = INTEGER) {
   stop("DuckDB function to_weeks() is not available in R.")
 }
 
@@ -2201,7 +2201,7 @@ duckdb_fun_to_weeks <- function(integer = INTEGER) {
 #' \dontrun{
 #' to_years(5)
 #' }
-duckdb_fun_to_years <- function(integer = INTEGER) {
+to_years <- function(integer = INTEGER) {
   stop("DuckDB function to_years() is not available in R.")
 }
 
@@ -2218,7 +2218,7 @@ duckdb_fun_to_years <- function(integer = INTEGER) {
 #' \dontrun{
 #' translate('12345', '143', 'ax')
 #' }
-duckdb_fun_translate <- function(string = VARCHAR, from = VARCHAR, to = VARCHAR) {
+translate <- function(string = VARCHAR, from = VARCHAR, to = VARCHAR) {
   stop("DuckDB function translate() is not available in R.")
 }
 
@@ -2233,7 +2233,7 @@ duckdb_fun_translate <- function(string = VARCHAR, from = VARCHAR, to = VARCHAR)
 #' \dontrun{
 #' typeof('abc')
 #' }
-duckdb_fun_typeof <- function(expression = ANY) {
+typeof <- function(expression = ANY) {
   stop("DuckDB function typeof() is not available in R.")
 }
 
@@ -2248,7 +2248,7 @@ duckdb_fun_typeof <- function(expression = ANY) {
 #' \dontrun{
 #' upper('Hello')
 #' }
-duckdb_fun_ucase <- function(string = VARCHAR) {
+ucase <- function(string = VARCHAR) {
   stop("DuckDB function ucase() is not available in R.")
 }
 
@@ -2263,7 +2263,7 @@ duckdb_fun_ucase <- function(string = VARCHAR) {
 #' \dontrun{
 #' unbin('0110')
 #' }
-duckdb_fun_unbin <- function(value = VARCHAR) {
+unbin <- function(value = VARCHAR) {
   stop("DuckDB function unbin() is not available in R.")
 }
 
@@ -2278,7 +2278,7 @@ duckdb_fun_unbin <- function(value = VARCHAR) {
 #' \dontrun{
 #' unhex('2A')
 #' }
-duckdb_fun_unhex <- function(value = VARCHAR) {
+unhex <- function(value = VARCHAR) {
   stop("DuckDB function unhex() is not available in R.")
 }
 
@@ -2293,7 +2293,7 @@ duckdb_fun_unhex <- function(value = VARCHAR) {
 #' \dontrun{
 #' unicode('ü')
 #' }
-duckdb_fun_unicode <- function(str = VARCHAR) {
+unicode <- function(str = VARCHAR) {
   stop("DuckDB function unicode() is not available in R.")
 }
 
@@ -2309,7 +2309,7 @@ duckdb_fun_unicode <- function(str = VARCHAR) {
 #' \dontrun{
 #' union_extract(s, 'k')
 #' }
-duckdb_fun_union_extract <- function(union = UNION, tag = VARCHAR) {
+union_extract <- function(union = UNION, tag = VARCHAR) {
   stop("DuckDB function union_extract() is not available in R.")
 }
 
@@ -2324,7 +2324,7 @@ duckdb_fun_union_extract <- function(union = UNION, tag = VARCHAR) {
 #' \dontrun{
 #' union_tag(union_value(k := 'foo'))
 #' }
-duckdb_fun_union_tag <- function(union = UNION) {
+union_tag <- function(union = UNION) {
   stop("DuckDB function union_tag() is not available in R.")
 }
 
@@ -2339,7 +2339,7 @@ duckdb_fun_union_tag <- function(union = UNION) {
 #' \dontrun{
 #' upper('Hello')
 #' }
-duckdb_fun_upper <- function(string = VARCHAR) {
+upper <- function(string = VARCHAR) {
   stop("DuckDB function upper() is not available in R.")
 }
 
@@ -2354,7 +2354,7 @@ duckdb_fun_upper <- function(string = VARCHAR) {
 #' \dontrun{
 #' url_decode('this%20string%20is%2BFencoded')
 #' }
-duckdb_fun_url_decode <- function(input = VARCHAR) {
+url_decode <- function(input = VARCHAR) {
   stop("DuckDB function url_decode() is not available in R.")
 }
 
@@ -2369,7 +2369,7 @@ duckdb_fun_url_decode <- function(input = VARCHAR) {
 #' \dontrun{
 #' url_encode('this string has/ special+ characters>')
 #' }
-duckdb_fun_url_encode <- function(input = VARCHAR) {
+url_encode <- function(input = VARCHAR) {
   stop("DuckDB function url_encode() is not available in R.")
 }
 
@@ -2384,7 +2384,7 @@ duckdb_fun_url_encode <- function(input = VARCHAR) {
 #' \dontrun{
 #' vector_type(col)
 #' }
-duckdb_fun_vector_type <- function(col = ANY) {
+vector_type <- function(col = ANY) {
   stop("DuckDB function vector_type() is not available in R.")
 }
 
@@ -2399,7 +2399,7 @@ duckdb_fun_vector_type <- function(col = ANY) {
 #' \dontrun{
 #' version()
 #' }
-duckdb_fun_version <- function() {
+version <- function() {
   stop("DuckDB function version() is not available in R.")
 }
 

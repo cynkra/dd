@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{current_setting}
 \alias{current_setting}
-\alias{duckdb_fun_current_setting}
 \title{DuckDB function current_setting}
 \arguments{
 \item{setting_name}{\code{VARCHAR}}

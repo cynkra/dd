@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{array_where}
 \alias{array_where}
-\alias{duckdb_fun_array_where}
 \title{DuckDB function array_where}
 \arguments{
 \item{value_list}{\code{ANY[]}}

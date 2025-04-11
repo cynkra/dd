@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{unbin}
 \alias{unbin}
-\alias{duckdb_fun_unbin}
 \title{DuckDB function unbin}
 \arguments{
 \item{value}{\code{VARCHAR}}

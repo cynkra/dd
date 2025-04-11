@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{sinh}
 \alias{sinh}
-\alias{duckdb_fun_sinh}
 \title{DuckDB function sinh}
 \arguments{
 \item{x}{\code{DOUBLE}}

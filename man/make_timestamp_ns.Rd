@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{make_timestamp_ns}
 \alias{make_timestamp_ns}
-\alias{duckdb_fun_make_timestamp_ns}
 \title{DuckDB function make_timestamp_ns}
 \arguments{
 \item{nanos}{\code{BIGINT}}

@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_apply}
 \alias{list_apply}
-\alias{duckdb_fun_list_apply}
 \title{DuckDB function list_apply}
 \arguments{
 \item{list}{\code{ANY[]}}

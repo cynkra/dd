@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{to_seconds}
 \alias{to_seconds}
-\alias{duckdb_fun_to_seconds}
 \title{DuckDB function to_seconds}
 \arguments{
 \item{double}{\code{DOUBLE}}

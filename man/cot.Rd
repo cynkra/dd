@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{cot}
 \alias{cot}
-\alias{duckdb_fun_cot}
 \title{DuckDB function cot}
 \arguments{
 \item{x}{\code{DOUBLE}}

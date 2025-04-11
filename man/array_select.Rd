@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{array_select}
 \alias{array_select}
-\alias{duckdb_fun_array_select}
 \title{DuckDB function array_select}
 \arguments{
 \item{value_list}{\code{ANY[]}}

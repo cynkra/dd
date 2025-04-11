@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{editdist3}
 \alias{editdist3}
-\alias{duckdb_fun_editdist3}
 \title{DuckDB function editdist3}
 \arguments{
 \item{str1}{\code{VARCHAR}}

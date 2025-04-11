@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{left_grapheme}
 \alias{left_grapheme}
-\alias{duckdb_fun_left_grapheme}
 \title{DuckDB function left_grapheme}
 \arguments{
 \item{string}{\code{VARCHAR}}

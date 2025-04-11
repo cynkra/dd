@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{to_hours}
 \alias{to_hours}
-\alias{duckdb_fun_to_hours}
 \title{DuckDB function to_hours}
 \arguments{
 \item{integer}{\code{BIGINT}}

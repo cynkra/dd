@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{right}
 \alias{right}
-\alias{duckdb_fun_right}
 \title{DuckDB function right}
 \arguments{
 \item{string}{\code{VARCHAR}}

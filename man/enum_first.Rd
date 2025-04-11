@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{enum_first}
 \alias{enum_first}
-\alias{duckdb_fun_enum_first}
 \title{DuckDB function enum_first}
 \arguments{
 \item{enum}{\code{ANY}}

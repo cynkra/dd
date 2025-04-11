@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{exp}
 \alias{exp}
-\alias{duckdb_fun_exp}
 \title{DuckDB function exp}
 \arguments{
 \item{x}{\code{DOUBLE}}

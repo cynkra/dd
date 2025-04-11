@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{reverse}
 \alias{reverse}
-\alias{duckdb_fun_reverse}
 \title{DuckDB function reverse}
 \arguments{
 \item{string}{\code{VARCHAR}}

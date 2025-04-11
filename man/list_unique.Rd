@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_unique}
 \alias{list_unique}
-\alias{duckdb_fun_list_unique}
 \title{DuckDB function list_unique}
 \arguments{
 \item{list}{\code{ANY[]}}

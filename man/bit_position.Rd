@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{bit_position}
 \alias{bit_position}
-\alias{duckdb_fun_bit_position}
 \title{DuckDB function bit_position}
 \arguments{
 \item{substring}{\code{BIT}}

@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_indexof}
 \alias{list_indexof}
-\alias{duckdb_fun_list_indexof}
 \title{DuckDB function list_indexof}
 \arguments{
 \item{list}{\code{ANY[]}}

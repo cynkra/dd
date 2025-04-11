@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{to_base64}
 \alias{to_base64}
-\alias{duckdb_fun_to_base64}
 \title{DuckDB function to_base64}
 \arguments{
 \item{blob}{\code{BLOB}}

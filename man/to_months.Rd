@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{to_months}
 \alias{to_months}
-\alias{duckdb_fun_to_months}
 \title{DuckDB function to_months}
 \arguments{
 \item{integer}{\code{INTEGER}}

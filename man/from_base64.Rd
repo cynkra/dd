@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{from_base64}
 \alias{from_base64}
-\alias{duckdb_fun_from_base64}
 \title{DuckDB function from_base64}
 \arguments{
 \item{string}{\code{VARCHAR}}

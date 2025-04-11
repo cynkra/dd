@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{reduce}
 \alias{reduce}
-\alias{duckdb_fun_reduce}
 \title{DuckDB function reduce}
 \arguments{
 \item{list}{\code{ANY[]}}

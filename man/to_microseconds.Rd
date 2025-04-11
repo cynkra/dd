@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{to_microseconds}
 \alias{to_microseconds}
-\alias{duckdb_fun_to_microseconds}
 \title{DuckDB function to_microseconds}
 \arguments{
 \item{integer}{\code{BIGINT}}

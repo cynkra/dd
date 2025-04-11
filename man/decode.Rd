@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{decode}
 \alias{decode}
-\alias{duckdb_fun_decode}
 \title{DuckDB function decode}
 \arguments{
 \item{blob}{\code{BLOB}}

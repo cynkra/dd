@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_distinct}
 \alias{list_distinct}
-\alias{duckdb_fun_list_distinct}
 \title{DuckDB function list_distinct}
 \arguments{
 \item{list}{\code{ANY[]}}

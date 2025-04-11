@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{timetz_byte_comparable}
 \alias{timetz_byte_comparable}
-\alias{duckdb_fun_timetz_byte_comparable}
 \title{DuckDB function timetz_byte_comparable}
 \arguments{
 \item{time_tz}{\verb{TIME WITH TIME ZONE}}

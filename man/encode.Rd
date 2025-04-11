@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{encode}
 \alias{encode}
-\alias{duckdb_fun_encode}
 \title{DuckDB function encode}
 \arguments{
 \item{string}{\code{VARCHAR}}

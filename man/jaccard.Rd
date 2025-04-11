@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{jaccard}
 \alias{jaccard}
-\alias{duckdb_fun_jaccard}
 \title{DuckDB function jaccard}
 \arguments{
 \item{str1}{\code{VARCHAR}}

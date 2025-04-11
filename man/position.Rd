@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{position}
 \alias{position}
-\alias{duckdb_fun_position}
 \title{DuckDB function position}
 \arguments{
 \item{haystack}{\code{VARCHAR}}

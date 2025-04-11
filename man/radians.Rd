@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{radians}
 \alias{radians}
-\alias{duckdb_fun_radians}
 \title{DuckDB function radians}
 \arguments{
 \item{x}{\code{DOUBLE}}

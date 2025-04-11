@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{to_millennia}
 \alias{to_millennia}
-\alias{duckdb_fun_to_millennia}
 \title{DuckDB function to_millennia}
 \arguments{
 \item{integer}{\code{INTEGER}}

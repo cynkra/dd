@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{acos}
 \alias{acos}
-\alias{duckdb_fun_acos}
 \title{DuckDB function acos}
 \arguments{
 \item{x}{\code{DOUBLE}}

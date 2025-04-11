@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{tan}
 \alias{tan}
-\alias{duckdb_fun_tan}
 \title{DuckDB function tan}
 \arguments{
 \item{x}{\code{DOUBLE}}

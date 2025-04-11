@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{cbrt}
 \alias{cbrt}
-\alias{duckdb_fun_cbrt}
 \title{DuckDB function cbrt}
 \arguments{
 \item{x}{\code{DOUBLE}}

@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{union_tag}
 \alias{union_tag}
-\alias{duckdb_fun_union_tag}
 \title{DuckDB function union_tag}
 \arguments{
 \item{union}{\code{UNION}}

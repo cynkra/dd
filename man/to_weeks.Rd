@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{to_weeks}
 \alias{to_weeks}
-\alias{duckdb_fun_to_weeks}
 \title{DuckDB function to_weeks}
 \arguments{
 \item{integer}{\code{INTEGER}}

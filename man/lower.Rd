@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{lower}
 \alias{lower}
-\alias{duckdb_fun_lower}
 \title{DuckDB function lower}
 \arguments{
 \item{string}{\code{VARCHAR}}

@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_concat}
 \alias{list_concat}
-\alias{duckdb_fun_list_concat}
 \title{DuckDB function list_concat}
 \arguments{
 \item{list1}{\code{ANY[]}}

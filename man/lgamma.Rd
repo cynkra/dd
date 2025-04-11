@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{lgamma}
 \alias{lgamma}
-\alias{duckdb_fun_lgamma}
 \title{DuckDB function lgamma}
 \arguments{
 \item{x}{\code{DOUBLE}}

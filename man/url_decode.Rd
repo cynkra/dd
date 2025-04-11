@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{url_decode}
 \alias{url_decode}
-\alias{duckdb_fun_url_decode}
 \title{DuckDB function url_decode}
 \arguments{
 \item{input}{\code{VARCHAR}}

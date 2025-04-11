@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{array_contains}
 \alias{array_contains}
-\alias{duckdb_fun_array_contains}
 \title{DuckDB function array_contains}
 \arguments{
 \item{list}{\code{ANY[]}}

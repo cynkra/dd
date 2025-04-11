@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{length_grapheme}
 \alias{length_grapheme}
-\alias{duckdb_fun_length_grapheme}
 \title{DuckDB function length_grapheme}
 \arguments{
 \item{string}{\code{VARCHAR}}

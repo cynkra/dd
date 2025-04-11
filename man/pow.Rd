@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{pow}
 \alias{pow}
-\alias{duckdb_fun_pow}
 \title{DuckDB function pow}
 \arguments{
 \item{x}{\code{DOUBLE}}

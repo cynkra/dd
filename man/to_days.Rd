@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{to_days}
 \alias{to_days}
-\alias{duckdb_fun_to_days}
 \title{DuckDB function to_days}
 \arguments{
 \item{integer}{\code{INTEGER}}

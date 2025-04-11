@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{enum_last}
 \alias{enum_last}
-\alias{duckdb_fun_enum_last}
 \title{DuckDB function enum_last}
 \arguments{
 \item{enum}{\code{ANY}}

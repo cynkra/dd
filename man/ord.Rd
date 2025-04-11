@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{ord}
 \alias{ord}
-\alias{duckdb_fun_ord}
 \title{DuckDB function ord}
 \arguments{
 \item{str}{\code{VARCHAR}}

@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{formatReadableDecimalSize}
 \alias{formatReadableDecimalSize}
-\alias{duckdb_fun_formatReadableDecimalSize}
 \title{DuckDB function formatReadableDecimalSize}
 \arguments{
 \item{bytes}{\code{BIGINT}}

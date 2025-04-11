@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{acosh}
 \alias{acosh}
-\alias{duckdb_fun_acosh}
 \title{DuckDB function acosh}
 \arguments{
 \item{x}{\code{DOUBLE}}

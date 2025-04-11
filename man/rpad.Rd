@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{rpad}
 \alias{rpad}
-\alias{duckdb_fun_rpad}
 \title{DuckDB function rpad}
 \arguments{
 \item{string}{\code{VARCHAR}}

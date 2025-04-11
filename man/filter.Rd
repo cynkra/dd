@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{filter}
 \alias{filter}
-\alias{duckdb_fun_filter}
 \title{DuckDB function filter}
 \arguments{
 \item{list}{\code{ANY[]}}

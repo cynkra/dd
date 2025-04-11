@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{lcase}
 \alias{lcase}
-\alias{duckdb_fun_lcase}
 \title{DuckDB function lcase}
 \arguments{
 \item{string}{\code{VARCHAR}}

@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{flatten}
 \alias{flatten}
-\alias{duckdb_fun_flatten}
 \title{DuckDB function flatten}
 \arguments{
 \item{nested_list}{\code{ANY[][]}}

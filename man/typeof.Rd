@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{typeof}
 \alias{typeof}
-\alias{duckdb_fun_typeof}
 \title{DuckDB function typeof}
 \arguments{
 \item{expression}{\code{ANY}}

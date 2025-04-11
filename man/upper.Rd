@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{upper}
 \alias{upper}
-\alias{duckdb_fun_upper}
 \title{DuckDB function upper}
 \arguments{
 \item{string}{\code{VARCHAR}}

@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{strlen}
 \alias{strlen}
-\alias{duckdb_fun_strlen}
 \title{DuckDB function strlen}
 \arguments{
 \item{string}{\code{VARCHAR}}

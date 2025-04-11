@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{strpos}
 \alias{strpos}
-\alias{duckdb_fun_strpos}
 \title{DuckDB function strpos}
 \arguments{
 \item{haystack}{\code{VARCHAR}}

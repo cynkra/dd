@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{format_bytes}
 \alias{format_bytes}
-\alias{duckdb_fun_format_bytes}
 \title{DuckDB function format_bytes}
 \arguments{
 \item{bytes}{\code{BIGINT}}

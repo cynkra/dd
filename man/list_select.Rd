@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_select}
 \alias{list_select}
-\alias{duckdb_fun_list_select}
 \title{DuckDB function list_select}
 \arguments{
 \item{value_list}{\code{ANY[]}}

@@ -2,7 +2,6 @@
 % Please edit documentation in R/dd-package.R
 \docType{package}
 \name{dd-package}
-\alias{dd}
 \alias{dd-package}
 \title{dd: What the Package Does (One Line, Title Case)}
 \description{

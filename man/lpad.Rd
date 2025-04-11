@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{lpad}
 \alias{lpad}
-\alias{duckdb_fun_lpad}
 \title{DuckDB function lpad}
 \arguments{
 \item{string}{\code{VARCHAR}}

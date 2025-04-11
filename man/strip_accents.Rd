@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{strip_accents}
 \alias{strip_accents}
-\alias{duckdb_fun_strip_accents}
 \title{DuckDB function strip_accents}
 \arguments{
 \item{string}{\code{VARCHAR}}

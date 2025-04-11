@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{alias}
 \alias{alias}
-\alias{duckdb_fun_alias}
 \title{DuckDB function alias}
 \arguments{
 \item{expr}{\code{ANY}}

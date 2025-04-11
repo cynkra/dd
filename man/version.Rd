@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{version}
 \alias{version}
-\alias{duckdb_fun_version}
 \title{DuckDB function version}
 \description{
 Returns the currently active version of DuckDB in this format: v0.3.2	.

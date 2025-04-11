@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{to_centuries}
 \alias{to_centuries}
-\alias{duckdb_fun_to_centuries}
 \title{DuckDB function to_centuries}
 \arguments{
 \item{integer}{\code{INTEGER}}

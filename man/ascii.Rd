@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{ascii}
 \alias{ascii}
-\alias{duckdb_fun_ascii}
 \title{DuckDB function ascii}
 \arguments{
 \item{string}{\code{VARCHAR}}

@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{cosh}
 \alias{cosh}
-\alias{duckdb_fun_cosh}
 \title{DuckDB function cosh}
 \arguments{
 \item{x}{\code{DOUBLE}}

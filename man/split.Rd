@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{split}
 \alias{split}
-\alias{duckdb_fun_split}
 \title{DuckDB function split}
 \arguments{
 \item{string}{\code{VARCHAR}}

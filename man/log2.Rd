@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{log2}
 \alias{log2}
-\alias{duckdb_fun_log2}
 \title{DuckDB function log2}
 \arguments{
 \item{x}{\code{DOUBLE}}

@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{to_decades}
 \alias{to_decades}
-\alias{duckdb_fun_to_decades}
 \title{DuckDB function to_decades}
 \arguments{
 \item{integer}{\code{INTEGER}}

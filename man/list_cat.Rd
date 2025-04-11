@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_cat}
 \alias{list_cat}
-\alias{duckdb_fun_list_cat}
 \title{DuckDB function list_cat}
 \arguments{
 \item{list1}{\code{ANY[]}}

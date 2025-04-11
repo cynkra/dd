@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{mismatches}
 \alias{mismatches}
-\alias{duckdb_fun_mismatches}
 \title{DuckDB function mismatches}
 \arguments{
 \item{str1}{\code{VARCHAR}}

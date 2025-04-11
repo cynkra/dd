@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{formatReadableSize}
 \alias{formatReadableSize}
-\alias{duckdb_fun_formatReadableSize}
 \title{DuckDB function formatReadableSize}
 \arguments{
 \item{bytes}{\code{BIGINT}}

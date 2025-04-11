@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{from_binary}
 \alias{from_binary}
-\alias{duckdb_fun_from_binary}
 \title{DuckDB function from_binary}
 \arguments{
 \item{value}{\code{VARCHAR}}

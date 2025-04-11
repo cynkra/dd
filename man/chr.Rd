@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{chr}
 \alias{chr}
-\alias{duckdb_fun_chr}
 \title{DuckDB function chr}
 \arguments{
 \item{code_point}{\code{INTEGER}}

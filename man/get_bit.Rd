@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{get_bit}
 \alias{get_bit}
-\alias{duckdb_fun_get_bit}
 \title{DuckDB function get_bit}
 \arguments{
 \item{bitstring}{\code{BIT}}

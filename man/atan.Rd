@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{atan}
 \alias{atan}
-\alias{duckdb_fun_atan}
 \title{DuckDB function atan}
 \arguments{
 \item{x}{\code{DOUBLE}}

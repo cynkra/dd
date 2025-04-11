@@ -2,7 +2,6 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{translate}
 \alias{translate}
-\alias{duckdb_fun_translate}
 \title{DuckDB function translate}
 \arguments{
 \item{string}{\code{VARCHAR}}
