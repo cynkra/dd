@@ -41,7 +41,7 @@ fun_def <-
   mutate(
     .keep = "unused",
     name = map(parameters, trimws),
-    type = map(parameter_types, trimws)
+    type = map(parameter_types, trimws),
   ) |>
   mutate(param_data = map2(name, type, ~ tibble(name = .x, type = .y)))
 
