@@ -24,15 +24,21 @@ funs <-
   select(-internal) |>
   filter(stability == "CONSISTENT") |>
   select(-stability) |>
+  # FIXME: What if description is missing
   filter(!is.na(description)) |>
+  # FIXME: Add support if return type is not given.
   filter(!is.na(return_type)) |>
+  # FIXME: Operators
   filter(grepl("^[a-z]", function_name)) |>
+  # FIXME: Description not unique
   mutate(.by = function_name, n_desc = length(unique(description))) |>
   filter(n_desc == 1) |>
   select(-n_desc) |>
+  # FIXME: More than one overload
   mutate(.by = function_name, n = n()) |>
   filter(n == 1) |>
   select(-n) |>
+  # FIXME: Irregular
   filter(!(function_name %in% c("struct_extract_at"))) |>
   arrange(function_name)
 
