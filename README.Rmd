@@ -67,7 +67,7 @@ It is meant to be used in conjunction with [duckplyr](https://duckplyr.tidyverse
 You can install the development version of dd like so:
 
 ``` r
-pak::pak("krlmlr/dd")
+pak::pak("cynkra/dd")
 ```
 
 ## Example
