@@ -7,7 +7,7 @@
 \item{string}{\code{VARCHAR}}
 }
 \description{
-Convert string to Unicode NFC normalized string. Useful for comparisons and ordering if text data is mixed between NFC normalized and not.
+Converts \code{string} to Unicode NFC normalized string. Useful for comparisons and ordering if text data is mixed between NFC normalized and not.
 }
 \examples{
 \dontrun{

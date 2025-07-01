@@ -7,7 +7,7 @@
 \item{string}{\code{VARCHAR}}
 }
 \description{
-Convert string to upper case.
+Converts \code{string} to upper case.
 }
 \examples{
 \dontrun{

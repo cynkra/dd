@@ -7,7 +7,7 @@
 \item{string}{\code{VARCHAR}}
 }
 \description{
-Number of bytes in string.
+Number of bytes in \code{string}.
 }
 \examples{
 \dontrun{

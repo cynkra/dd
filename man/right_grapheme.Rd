@@ -9,7 +9,7 @@
 \item{count}{\code{BIGINT}}
 }
 \description{
-Extract the right-most count grapheme clusters.
+Extracts the right-most count grapheme clusters.
 }
 \examples{
 \dontrun{

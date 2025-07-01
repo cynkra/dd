@@ -7,7 +7,7 @@
 \item{string}{\code{VARCHAR}}
 }
 \description{
-Strips accents from string.
+Strips accents from \code{string}.
 }
 \examples{
 \dontrun{

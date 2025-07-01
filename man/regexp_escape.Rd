@@ -7,7 +7,7 @@
 \item{string}{\code{VARCHAR}}
 }
 \description{
-Escapes all potentially meaningful regexp characters in the input string.
+Escapes special patterns to turn string into a regular expression similarly to Python's re.escape function.
 }
 \examples{
 \dontrun{

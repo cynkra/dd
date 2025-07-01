@@ -7,7 +7,7 @@
 \item{string}{\code{VARCHAR}}
 }
 \description{
-Convert a base64 encoded string to a character string.
+Converts a base64 encoded \code{string} to a character string (\code{BLOB}).
 }
 \examples{
 \dontrun{

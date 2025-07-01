@@ -7,7 +7,7 @@
 \item{string}{\code{VARCHAR}}
 }
 \description{
-Convert varchar to blob. Converts utf-8 characters into literal encoding.
+Converts the \code{string} to \code{BLOB}. Converts UTF-8 characters into literal encoding.
 }
 \examples{
 \dontrun{

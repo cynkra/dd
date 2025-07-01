@@ -11,7 +11,7 @@
 \item{escape_character}{\code{VARCHAR}}
 }
 \description{
-Returns false if the string matches the like_specifier (see Pattern Matching) using case-insensitive matching. escape_character is used to search for wildcard characters in the string.
+Returns false if the \code{string} matches the \code{like_specifier} (see Pattern Matching) using case-insensitive matching. \code{escape_character} is used to search for wildcard characters in the \code{string}.
 }
 \examples{
 \dontrun{

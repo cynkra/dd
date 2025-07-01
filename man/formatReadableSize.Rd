@@ -7,7 +7,7 @@
 \item{bytes}{\code{BIGINT}}
 }
 \description{
-Converts bytes to a human-readable presentation (e.g. 16000 -> 15.6 KiB).
+Converts bytes to a human-readable presentation (e.g., 16000 -> 15.6 KiB).
 }
 \examples{
 \dontrun{

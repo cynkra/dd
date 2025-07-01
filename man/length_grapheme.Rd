@@ -7,7 +7,7 @@
 \item{string}{\code{VARCHAR}}
 }
 \description{
-Number of grapheme clusters in string.
+Number of grapheme clusters in \code{string}.
 }
 \examples{
 \dontrun{

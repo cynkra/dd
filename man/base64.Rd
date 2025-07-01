@@ -7,10 +7,10 @@
 \item{blob}{\code{BLOB}}
 }
 \description{
-Convert a blob to a base64 encoded string.
+Converts a \code{blob} to a base64 encoded \code{string}.
 }
 \examples{
 \dontrun{
-base64('A'::blob)
+base64('A'::BLOB)
 }
 }

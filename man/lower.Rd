@@ -7,7 +7,7 @@
 \item{string}{\code{VARCHAR}}
 }
 \description{
-Convert string to lower case.
+Converts \code{string} to lower case.
 }
 \examples{
 \dontrun{

@@ -9,7 +9,7 @@
 \item{count}{\code{BIGINT}}
 }
 \description{
-Extract the left-most count characters.
+Extracts the left-most count characters.
 }
 \examples{
 \dontrun{

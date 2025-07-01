@@ -9,7 +9,7 @@
 \item{separator}{\code{VARCHAR}}
 }
 \description{
-Splits the string along the separator.
+Splits the \code{string} along the \code{separator}.
 }
 \examples{
 \dontrun{

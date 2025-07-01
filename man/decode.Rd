@@ -7,7 +7,7 @@
 \item{blob}{\code{BLOB}}
 }
 \description{
-Convert blob to varchar. Fails if blob is not valid utf-8.
+Converts \code{blob} to \code{VARCHAR}. Fails if \code{blob} is not valid UTF-8.
 }
 \examples{
 \dontrun{
