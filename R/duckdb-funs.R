@@ -77,38 +77,6 @@ array_apply <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function array_apply() is not available in R.")
 }
 
-#' DuckDB function array_cat
-#'
-#' Concatenates two lists.
-#'
-#' @name array_cat
-#' @usage NULL
-#' @param list1 `ANY[]`
-#' @param list2 `ANY[]`
-#' @examples
-#' \dontrun{
-#' list_concat([2, 3], [4, 5, 6])
-#' }
-array_cat <- function(list1 = `ANY[]`, list2 = `ANY[]`) {
-  stop("DuckDB function array_cat() is not available in R.")
-}
-
-#' DuckDB function array_concat
-#'
-#' Concatenates two lists.
-#'
-#' @name array_concat
-#' @usage NULL
-#' @param list1 `ANY[]`
-#' @param list2 `ANY[]`
-#' @examples
-#' \dontrun{
-#' list_concat([2, 3], [4, 5, 6])
-#' }
-array_concat <- function(list1 = `ANY[]`, list2 = `ANY[]`) {
-  stop("DuckDB function array_concat() is not available in R.")
-}
-
 #' DuckDB function array_contains
 #'
 #' Returns true if the list contains the element.
@@ -234,22 +202,6 @@ array_indexof <- function(list = `ANY[]`, element = ANY) {
 #' }
 array_position <- function(list = `ANY[]`, element = ANY) {
   stop("DuckDB function array_position() is not available in R.")
-}
-
-#' DuckDB function array_reduce
-#'
-#' Returns a single value that is the result of applying the lambda function to each element of the input list, starting with the first element and then repeatedly applying the lambda function to the result of the previous application and the next element of the list.
-#'
-#' @name array_reduce
-#' @usage NULL
-#' @param list `ANY[]`
-#' @param lambda `LAMBDA`
-#' @examples
-#' \dontrun{
-#' list_reduce([1, 2, 3], (x, y) -> x + y)
-#' }
-array_reduce <- function(list = `ANY[]`, lambda = LAMBDA) {
-  stop("DuckDB function array_reduce() is not available in R.")
 }
 
 #' DuckDB function array_select
@@ -408,14 +360,14 @@ atanh <- function(x = DOUBLE) {
 
 #' DuckDB function base64
 #'
-#' Convert a blob to a base64 encoded string.
+#' Converts a `blob` to a base64 encoded `string`.
 #'
 #' @name base64
 #' @usage NULL
 #' @param blob `BLOB`
 #' @examples
 #' \dontrun{
-#' base64('A'::blob)
+#' base64('A'::BLOB)
 #' }
 base64 <- function(blob = BLOB) {
   stop("DuckDB function base64() is not available in R.")
@@ -451,6 +403,22 @@ bit_position <- function(substring = BIT, bitstring = BIT) {
 #' }
 can_cast_implicitly <- function(source_type = ANY, target_type = ANY) {
   stop("DuckDB function can_cast_implicitly() is not available in R.")
+}
+
+#' DuckDB function cast_to_type
+#'
+#' Casts the first argument to the type of the second argument.
+#'
+#' @name cast_to_type
+#' @usage NULL
+#' @param param `ANY`
+#' @param type `ANY`
+#' @examples
+#' \dontrun{
+#' cast_to_type('42', NULL::INTEGER)
+#' }
+cast_to_type <- function(param = ANY, type = ANY) {
+  stop("DuckDB function cast_to_type() is not available in R.")
 }
 
 #' DuckDB function cbrt
@@ -561,7 +529,7 @@ damerau_levenshtein <- function(str1 = VARCHAR, str2 = VARCHAR) {
 
 #' DuckDB function decode
 #'
-#' Convert blob to varchar. Fails if blob is not valid utf-8.
+#' Converts `blob` to `VARCHAR`. Fails if `blob` is not valid UTF-8.
 #'
 #' @name decode
 #' @usage NULL
@@ -607,7 +575,7 @@ editdist3 <- function(str1 = VARCHAR, str2 = VARCHAR) {
 
 #' DuckDB function encode
 #'
-#' Convert varchar to blob. Converts utf-8 characters into literal encoding.
+#' Converts the `string` to `BLOB`. Converts UTF-8 characters into literal encoding.
 #'
 #' @name encode
 #' @usage NULL
@@ -774,7 +742,7 @@ flatten <- function(nested_list = `ANY[][]`) {
 
 #' DuckDB function formatReadableDecimalSize
 #'
-#' Converts bytes to a human-readable presentation (e.g. 16000 -> 16.0 KB).
+#' Converts bytes to a human-readable presentation (e.g., 16000 -> 16.0 KB).
 #'
 #' @name formatReadableDecimalSize
 #' @usage NULL
@@ -789,7 +757,7 @@ formatReadableDecimalSize <- function(bytes = BIGINT) {
 
 #' DuckDB function formatReadableSize
 #'
-#' Converts bytes to a human-readable presentation (e.g. 16000 -> 15.6 KiB).
+#' Converts bytes to a human-readable presentation (e.g., 16000 -> 15.6 KiB).
 #'
 #' @name formatReadableSize
 #' @usage NULL
@@ -804,7 +772,7 @@ formatReadableSize <- function(bytes = BIGINT) {
 
 #' DuckDB function format_bytes
 #'
-#' Converts bytes to a human-readable presentation (e.g. 16000 -> 15.6 KiB).
+#' Converts bytes to a human-readable presentation (e.g., 16000 -> 15.6 KiB).
 #'
 #' @name format_bytes
 #' @usage NULL
@@ -819,7 +787,7 @@ format_bytes <- function(bytes = BIGINT) {
 
 #' DuckDB function from_base64
 #'
-#' Convert a base64 encoded string to a character string.
+#' Converts a base64 encoded `string` to a character string (`BLOB`).
 #'
 #' @name from_base64
 #' @usage NULL
@@ -911,7 +879,7 @@ hamming <- function(str1 = VARCHAR, str2 = VARCHAR) {
 
 #' DuckDB function ilike_escape
 #'
-#' Returns true if the string matches the like_specifier (see Pattern Matching) using case-insensitive matching. escape_character is used to search for wildcard characters in the string.
+#' Returns true if the `string` matches the `like_specifier` (see Pattern Matching) using case-insensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name ilike_escape
 #' @usage NULL
@@ -975,7 +943,7 @@ jaccard <- function(str1 = VARCHAR, str2 = VARCHAR) {
 
 #' DuckDB function lcase
 #'
-#' Convert string to lower case.
+#' Converts `string` to lower case.
 #'
 #' @name lcase
 #' @usage NULL
@@ -990,7 +958,7 @@ lcase <- function(string = VARCHAR) {
 
 #' DuckDB function left
 #'
-#' Extract the left-most count characters.
+#' Extracts the left-most count characters.
 #'
 #' @name left
 #' @usage NULL
@@ -1006,7 +974,7 @@ left <- function(string = VARCHAR, count = BIGINT) {
 
 #' DuckDB function left_grapheme
 #'
-#' Extract the left-most count grapheme clusters.
+#' Extracts the left-most count grapheme clusters.
 #'
 #' @name left_grapheme
 #' @usage NULL
@@ -1022,7 +990,7 @@ left_grapheme <- function(string = VARCHAR, count = BIGINT) {
 
 #' DuckDB function length_grapheme
 #'
-#' Number of grapheme clusters in string.
+#' Number of grapheme clusters in `string`.
 #'
 #' @name length_grapheme
 #' @usage NULL
@@ -1068,7 +1036,7 @@ lgamma <- function(x = DOUBLE) {
 
 #' DuckDB function like_escape
 #'
-#' Returns true if the string matches the like_specifier (see Pattern Matching) using case-sensitive matching. escape_character is used to search for wildcard characters in the string.
+#' Returns true if the `string` matches the `like_specifier` (see Pattern Matching) using case-sensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name like_escape
 #' @usage NULL
@@ -1097,38 +1065,6 @@ like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_chara
 #' }
 list_apply <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function list_apply() is not available in R.")
-}
-
-#' DuckDB function list_cat
-#'
-#' Concatenates two lists.
-#'
-#' @name list_cat
-#' @usage NULL
-#' @param list1 `ANY[]`
-#' @param list2 `ANY[]`
-#' @examples
-#' \dontrun{
-#' list_concat([2, 3], [4, 5, 6])
-#' }
-list_cat <- function(list1 = `ANY[]`, list2 = `ANY[]`) {
-  stop("DuckDB function list_cat() is not available in R.")
-}
-
-#' DuckDB function list_concat
-#'
-#' Concatenates two lists.
-#'
-#' @name list_concat
-#' @usage NULL
-#' @param list1 `ANY[]`
-#' @param list2 `ANY[]`
-#' @examples
-#' \dontrun{
-#' list_concat([2, 3], [4, 5, 6])
-#' }
-list_concat <- function(list1 = `ANY[]`, list2 = `ANY[]`) {
-  stop("DuckDB function list_concat() is not available in R.")
 }
 
 #' DuckDB function list_contains
@@ -1258,22 +1194,6 @@ list_position <- function(list = `ANY[]`, element = ANY) {
   stop("DuckDB function list_position() is not available in R.")
 }
 
-#' DuckDB function list_reduce
-#'
-#' Returns a single value that is the result of applying the lambda function to each element of the input list, starting with the first element and then repeatedly applying the lambda function to the result of the previous application and the next element of the list.
-#'
-#' @name list_reduce
-#' @usage NULL
-#' @param list `ANY[]`
-#' @param lambda `LAMBDA`
-#' @examples
-#' \dontrun{
-#' list_reduce([1, 2, 3], (x, y) -> x + y)
-#' }
-list_reduce <- function(list = `ANY[]`, lambda = LAMBDA) {
-  stop("DuckDB function list_reduce() is not available in R.")
-}
-
 #' DuckDB function list_select
 #'
 #' Returns a list based on the elements selected by the index_list.
@@ -1384,7 +1304,7 @@ log2 <- function(x = DOUBLE) {
 
 #' DuckDB function lower
 #'
-#' Convert string to lower case.
+#' Converts `string` to lower case.
 #'
 #' @name lower
 #' @usage NULL
@@ -1480,7 +1400,7 @@ mismatches <- function(str1 = VARCHAR, str2 = VARCHAR) {
 
 #' DuckDB function nfc_normalize
 #'
-#' Convert string to Unicode NFC normalized string. Useful for comparisons and ordering if text data is mixed between NFC normalized and not.
+#' Converts `string` to Unicode NFC normalized string. Useful for comparisons and ordering if text data is mixed between NFC normalized and not.
 #'
 #' @name nfc_normalize
 #' @usage NULL
@@ -1510,7 +1430,7 @@ normalized_interval <- function(interval = INTERVAL) {
 
 #' DuckDB function not_ilike_escape
 #'
-#' Returns false if the string matches the like_specifier (see Pattern Matching) using case-insensitive matching. escape_character is used to search for wildcard characters in the string.
+#' Returns false if the `string` matches the `like_specifier` (see Pattern Matching) using case-insensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name not_ilike_escape
 #' @usage NULL
@@ -1527,7 +1447,7 @@ not_ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_
 
 #' DuckDB function not_like_escape
 #'
-#' Returns false if the string matches the like_specifier (see Pattern Matching) using case-sensitive matching. escape_character is used to search for wildcard characters in the string.
+#' Returns false if the `string` matches the `like_specifier` (see Pattern Matching) using case-sensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name not_like_escape
 #' @usage NULL
@@ -1555,6 +1475,22 @@ not_like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_c
 #' }
 ord <- function(str = VARCHAR) {
   stop("DuckDB function ord() is not available in R.")
+}
+
+#' DuckDB function parse_duckdb_log_message
+#'
+#' Parse the message into the expected logical type.
+#'
+#' @name parse_duckdb_log_message
+#' @usage NULL
+#' @param type `VARCHAR`
+#' @param message `VARCHAR`
+#' @examples
+#' \dontrun{
+#' parse_duckdb_log_message('FileSystem', log_message)
+#' }
+parse_duckdb_log_message <- function(type = VARCHAR, message = VARCHAR) {
+  stop("DuckDB function parse_duckdb_log_message() is not available in R.")
 }
 
 #' DuckDB function pi
@@ -1635,25 +1571,9 @@ radians <- function(x = DOUBLE) {
   stop("DuckDB function radians() is not available in R.")
 }
 
-#' DuckDB function reduce
-#'
-#' Returns a single value that is the result of applying the lambda function to each element of the input list, starting with the first element and then repeatedly applying the lambda function to the result of the previous application and the next element of the list.
-#'
-#' @name reduce
-#' @usage NULL
-#' @param list `ANY[]`
-#' @param lambda `LAMBDA`
-#' @examples
-#' \dontrun{
-#' list_reduce([1, 2, 3], (x, y) -> x + y)
-#' }
-reduce <- function(list = `ANY[]`, lambda = LAMBDA) {
-  stop("DuckDB function reduce() is not available in R.")
-}
-
 #' DuckDB function regexp_escape
 #'
-#' Escapes all potentially meaningful regexp characters in the input string.
+#' Escapes special patterns to turn string into a regular expression similarly to Python's re.escape function.
 #'
 #' @name regexp_escape
 #' @usage NULL
@@ -1664,6 +1584,24 @@ reduce <- function(list = `ANY[]`, lambda = LAMBDA) {
 #' }
 regexp_escape <- function(string = VARCHAR) {
   stop("DuckDB function regexp_escape() is not available in R.")
+}
+
+#' DuckDB function remap_struct
+#'
+#' Map a struct to another struct type, potentially re-ordering, renaming and casting members and filling in defaults for missing values.
+#'
+#' @name remap_struct
+#' @usage NULL
+#' @param input `ANY`
+#' @param target_type `ANY`
+#' @param mapping `ANY`
+#' @param defaults `ANY`
+#' @examples
+#' \dontrun{
+#' remap_struct({'i': 1, 'j': 2}, NULL::ROW(v1 INT, v2 INT, v3 INT), {'v1': 'j', 'v3': 'i'}, {'v2': NULL::INTEGER})
+#' }
+remap_struct <- function(input = ANY, target_type = ANY, mapping = ANY, defaults = ANY) {
+  stop("DuckDB function remap_struct() is not available in R.")
 }
 
 #' DuckDB function replace
@@ -1716,7 +1654,7 @@ right <- function(string = VARCHAR, count = BIGINT) {
 
 #' DuckDB function right_grapheme
 #'
-#' Extract the right-most count grapheme clusters.
+#' Extracts the right-most count grapheme clusters.
 #'
 #' @name right_grapheme
 #' @usage NULL
@@ -1796,7 +1734,7 @@ sinh <- function(x = DOUBLE) {
 
 #' DuckDB function split
 #'
-#' Splits the string along the separator.
+#' Splits the `string` along the `separator`.
 #'
 #' @name split
 #' @usage NULL
@@ -1843,7 +1781,7 @@ starts_with <- function(string = VARCHAR, search_string = VARCHAR) {
 
 #' DuckDB function str_split
 #'
-#' Splits the string along the separator.
+#' Splits the `string` along the `separator`.
 #'
 #' @name str_split
 #' @usage NULL
@@ -1859,7 +1797,7 @@ str_split <- function(string = VARCHAR, separator = VARCHAR) {
 
 #' DuckDB function string_split
 #'
-#' Splits the string along the separator.
+#' Splits the `string` along the `separator`.
 #'
 #' @name string_split
 #' @usage NULL
@@ -1875,7 +1813,7 @@ string_split <- function(string = VARCHAR, separator = VARCHAR) {
 
 #' DuckDB function string_to_array
 #'
-#' Splits the string along the separator.
+#' Splits the `string` along the `separator`.
 #'
 #' @name string_to_array
 #' @usage NULL
@@ -1891,7 +1829,7 @@ string_to_array <- function(string = VARCHAR, separator = VARCHAR) {
 
 #' DuckDB function strip_accents
 #'
-#' Strips accents from string.
+#' Strips accents from `string`.
 #'
 #' @name strip_accents
 #' @usage NULL
@@ -1906,7 +1844,7 @@ strip_accents <- function(string = VARCHAR) {
 
 #' DuckDB function strlen
 #'
-#' Number of bytes in string.
+#' Number of bytes in `string`.
 #'
 #' @name strlen
 #' @usage NULL
@@ -1974,7 +1912,7 @@ tanh <- function(x = DOUBLE) {
 #' @param time_tz `TIME WITH TIME ZONE`
 #' @examples
 #' \dontrun{
-#' timetz_byte_comparable('18:18:16.21-07:00'::TIME_TZ)
+#' timetz_byte_comparable('18:18:16.21-07:00'::TIMETZ)
 #' }
 timetz_byte_comparable <- function(time_tz = `TIME WITH TIME ZONE`) {
   stop("DuckDB function timetz_byte_comparable() is not available in R.")
@@ -1982,62 +1920,17 @@ timetz_byte_comparable <- function(time_tz = `TIME WITH TIME ZONE`) {
 
 #' DuckDB function to_base64
 #'
-#' Convert a blob to a base64 encoded string.
+#' Converts a `blob` to a base64 encoded `string`.
 #'
 #' @name to_base64
 #' @usage NULL
 #' @param blob `BLOB`
 #' @examples
 #' \dontrun{
-#' base64('A'::blob)
+#' base64('A'::BLOB)
 #' }
 to_base64 <- function(blob = BLOB) {
   stop("DuckDB function to_base64() is not available in R.")
-}
-
-#' DuckDB function to_centuries
-#'
-#' Construct a century interval.
-#'
-#' @name to_centuries
-#' @usage NULL
-#' @param integer `INTEGER`
-#' @examples
-#' \dontrun{
-#' to_centuries(5)
-#' }
-to_centuries <- function(integer = INTEGER) {
-  stop("DuckDB function to_centuries() is not available in R.")
-}
-
-#' DuckDB function to_days
-#'
-#' Construct a day interval.
-#'
-#' @name to_days
-#' @usage NULL
-#' @param integer `INTEGER`
-#' @examples
-#' \dontrun{
-#' to_days(5)
-#' }
-to_days <- function(integer = INTEGER) {
-  stop("DuckDB function to_days() is not available in R.")
-}
-
-#' DuckDB function to_decades
-#'
-#' Construct a decade interval.
-#'
-#' @name to_decades
-#' @usage NULL
-#' @param integer `INTEGER`
-#' @examples
-#' \dontrun{
-#' to_decades(5)
-#' }
-to_decades <- function(integer = INTEGER) {
-  stop("DuckDB function to_decades() is not available in R.")
 }
 
 #' DuckDB function to_hours
@@ -2070,21 +1963,6 @@ to_microseconds <- function(integer = BIGINT) {
   stop("DuckDB function to_microseconds() is not available in R.")
 }
 
-#' DuckDB function to_millennia
-#'
-#' Construct a millenium interval.
-#'
-#' @name to_millennia
-#' @usage NULL
-#' @param integer `INTEGER`
-#' @examples
-#' \dontrun{
-#' to_millennia(1)
-#' }
-to_millennia <- function(integer = INTEGER) {
-  stop("DuckDB function to_millennia() is not available in R.")
-}
-
 #' DuckDB function to_milliseconds
 #'
 #' Construct a millisecond interval.
@@ -2115,36 +1993,6 @@ to_minutes <- function(integer = BIGINT) {
   stop("DuckDB function to_minutes() is not available in R.")
 }
 
-#' DuckDB function to_months
-#'
-#' Construct a month interval.
-#'
-#' @name to_months
-#' @usage NULL
-#' @param integer `INTEGER`
-#' @examples
-#' \dontrun{
-#' to_months(5)
-#' }
-to_months <- function(integer = INTEGER) {
-  stop("DuckDB function to_months() is not available in R.")
-}
-
-#' DuckDB function to_quarters
-#'
-#' Construct a quarter interval.
-#'
-#' @name to_quarters
-#' @usage NULL
-#' @param integer `INTEGER`
-#' @examples
-#' \dontrun{
-#' to_quarters(5)
-#' }
-to_quarters <- function(integer = INTEGER) {
-  stop("DuckDB function to_quarters() is not available in R.")
-}
-
 #' DuckDB function to_seconds
 #'
 #' Construct a second interval.
@@ -2173,36 +2021,6 @@ to_seconds <- function(double = DOUBLE) {
 #' }
 to_timestamp <- function(sec = DOUBLE) {
   stop("DuckDB function to_timestamp() is not available in R.")
-}
-
-#' DuckDB function to_weeks
-#'
-#' Construct a week interval.
-#'
-#' @name to_weeks
-#' @usage NULL
-#' @param integer `INTEGER`
-#' @examples
-#' \dontrun{
-#' to_weeks(5)
-#' }
-to_weeks <- function(integer = INTEGER) {
-  stop("DuckDB function to_weeks() is not available in R.")
-}
-
-#' DuckDB function to_years
-#'
-#' Construct a year interval.
-#'
-#' @name to_years
-#' @usage NULL
-#' @param integer `INTEGER`
-#' @examples
-#' \dontrun{
-#' to_years(5)
-#' }
-to_years <- function(integer = INTEGER) {
-  stop("DuckDB function to_years() is not available in R.")
 }
 
 #' DuckDB function translate
@@ -2239,7 +2057,7 @@ typeof <- function(expression = ANY) {
 
 #' DuckDB function ucase
 #'
-#' Convert string to upper case.
+#' Converts `string` to upper case.
 #'
 #' @name ucase
 #' @usage NULL
@@ -2330,7 +2148,7 @@ union_tag <- function(union = UNION) {
 
 #' DuckDB function upper
 #'
-#' Convert string to upper case.
+#' Converts `string` to upper case.
 #'
 #' @name upper
 #' @usage NULL
@@ -2371,6 +2189,36 @@ url_decode <- function(input = VARCHAR) {
 #' }
 url_encode <- function(input = VARCHAR) {
   stop("DuckDB function url_encode() is not available in R.")
+}
+
+#' DuckDB function uuid_extract_timestamp
+#'
+#' Extract the timestamp for the given UUID v7.
+#'
+#' @name uuid_extract_timestamp
+#' @usage NULL
+#' @param uuid `UUID`
+#' @examples
+#' \dontrun{
+#' uuid_extract_timestamp('019482e4-1441-7aad-8127-eec99573b0a0')
+#' }
+uuid_extract_timestamp <- function(uuid = UUID) {
+  stop("DuckDB function uuid_extract_timestamp() is not available in R.")
+}
+
+#' DuckDB function uuid_extract_version
+#'
+#' Extract a version for the given UUID.
+#'
+#' @name uuid_extract_version
+#' @usage NULL
+#' @param uuid `UUID`
+#' @examples
+#' \dontrun{
+#' uuid_extract_version('019482e4-1441-7aad-8127-eec99573b0a0')
+#' }
+uuid_extract_version <- function(uuid = UUID) {
+  stop("DuckDB function uuid_extract_version() is not available in R.")
 }
 
 #' DuckDB function vector_type
