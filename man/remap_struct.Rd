@@ -19,8 +19,9 @@ Map a struct to another struct type, potentially re-ordering, renaming and casti
 \dontrun{
 remap_struct(
   {'i': 1, 'j': 2},
-  NULL::ROW(v1 INT, v2 INT, v3 INT),
-  {'v1': 'j', 'v3': 'i'}, {'v2': NULL::INTEGER}
+  NULL::ROW(v1 INT, v2 INT, v3 INT),i
+  {'v1': 'j', 'v3': 'i'},i
+  {'v2': NULL::INTEGER}i
 )
 }
 }
