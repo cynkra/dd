@@ -9,8 +9,6 @@
 <url><loc>/reference/alias.html</loc></url>
 <url><loc>/reference/apply.html</loc></url>
 <url><loc>/reference/array_apply.html</loc></url>
-<url><loc>/reference/array_cat.html</loc></url>
-<url><loc>/reference/array_concat.html</loc></url>
 <url><loc>/reference/array_contains.html</loc></url>
 <url><loc>/reference/array_distinct.html</loc></url>
 <url><loc>/reference/array_filter.html</loc></url>
@@ -19,7 +17,6 @@
 <url><loc>/reference/array_has_any.html</loc></url>
 <url><loc>/reference/array_indexof.html</loc></url>
 <url><loc>/reference/array_position.html</loc></url>
-<url><loc>/reference/array_reduce.html</loc></url>
 <url><loc>/reference/array_select.html</loc></url>
 <url><loc>/reference/array_transform.html</loc></url>
 <url><loc>/reference/array_unique.html</loc></url>
@@ -33,6 +30,7 @@
 <url><loc>/reference/base64.html</loc></url>
 <url><loc>/reference/bit_position.html</loc></url>
 <url><loc>/reference/can_cast_implicitly.html</loc></url>
+<url><loc>/reference/cast_to_type.html</loc></url>
 <url><loc>/reference/cbrt.html</loc></url>
 <url><loc>/reference/chr.html</loc></url>
 <url><loc>/reference/cos.html</loc></url>
@@ -78,8 +76,6 @@
 <url><loc>/reference/lgamma.html</loc></url>
 <url><loc>/reference/like_escape.html</loc></url>
 <url><loc>/reference/list_apply.html</loc></url>
-<url><loc>/reference/list_cat.html</loc></url>
-<url><loc>/reference/list_concat.html</loc></url>
 <url><loc>/reference/list_contains.html</loc></url>
 <url><loc>/reference/list_distinct.html</loc></url>
 <url><loc>/reference/list_filter.html</loc></url>
@@ -88,7 +84,6 @@
 <url><loc>/reference/list_has_any.html</loc></url>
 <url><loc>/reference/list_indexof.html</loc></url>
 <url><loc>/reference/list_position.html</loc></url>
-<url><loc>/reference/list_reduce.html</loc></url>
 <url><loc>/reference/list_select.html</loc></url>
 <url><loc>/reference/list_transform.html</loc></url>
 <url><loc>/reference/list_unique.html</loc></url>
@@ -107,13 +102,14 @@
 <url><loc>/reference/not_ilike_escape.html</loc></url>
 <url><loc>/reference/not_like_escape.html</loc></url>
 <url><loc>/reference/ord.html</loc></url>
+<url><loc>/reference/parse_duckdb_log_message.html</loc></url>
 <url><loc>/reference/pi.html</loc></url>
 <url><loc>/reference/position.html</loc></url>
 <url><loc>/reference/pow.html</loc></url>
 <url><loc>/reference/power.html</loc></url>
 <url><loc>/reference/radians.html</loc></url>
-<url><loc>/reference/reduce.html</loc></url>
 <url><loc>/reference/regexp_escape.html</loc></url>
+<url><loc>/reference/remap_struct.html</loc></url>
 <url><loc>/reference/replace.html</loc></url>
 <url><loc>/reference/reverse.html</loc></url>
 <url><loc>/reference/right.html</loc></url>
@@ -135,20 +131,12 @@
 <url><loc>/reference/tanh.html</loc></url>
 <url><loc>/reference/timetz_byte_comparable.html</loc></url>
 <url><loc>/reference/to_base64.html</loc></url>
-<url><loc>/reference/to_centuries.html</loc></url>
-<url><loc>/reference/to_days.html</loc></url>
-<url><loc>/reference/to_decades.html</loc></url>
 <url><loc>/reference/to_hours.html</loc></url>
 <url><loc>/reference/to_microseconds.html</loc></url>
-<url><loc>/reference/to_millennia.html</loc></url>
 <url><loc>/reference/to_milliseconds.html</loc></url>
 <url><loc>/reference/to_minutes.html</loc></url>
-<url><loc>/reference/to_months.html</loc></url>
-<url><loc>/reference/to_quarters.html</loc></url>
 <url><loc>/reference/to_seconds.html</loc></url>
 <url><loc>/reference/to_timestamp.html</loc></url>
-<url><loc>/reference/to_weeks.html</loc></url>
-<url><loc>/reference/to_years.html</loc></url>
 <url><loc>/reference/translate.html</loc></url>
 <url><loc>/reference/typeof.html</loc></url>
 <url><loc>/reference/ucase.html</loc></url>
@@ -160,6 +148,8 @@
 <url><loc>/reference/upper.html</loc></url>
 <url><loc>/reference/url_decode.html</loc></url>
 <url><loc>/reference/url_encode.html</loc></url>
+<url><loc>/reference/uuid_extract_timestamp.html</loc></url>
+<url><loc>/reference/uuid_extract_version.html</loc></url>
 <url><loc>/reference/vector_type.html</loc></url>
 <url><loc>/reference/version.html</loc></url>
 </urlset>
