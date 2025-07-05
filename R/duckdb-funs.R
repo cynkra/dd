@@ -1598,7 +1598,12 @@ regexp_escape <- function(string = VARCHAR) {
 #' @param defaults `ANY`
 #' @examples
 #' \dontrun{
-#' remap_struct({'i': 1, 'j': 2}, NULL::ROW(v1 INT, v2 INT, v3 INT), {'v1': 'j', 'v3': 'i'}, {'v2': NULL::INTEGER})
+#' remap_struct(
+#'   {'i': 1, 'j': 2},
+#'   NULL::ROW(v1 INT, v2 INT, v3 INT),i
+#'   {'v1': 'j', 'v3': 'i'},i
+#'   {'v2': NULL::INTEGER}i
+#' )
 #' }
 remap_struct <- function(input = ANY, target_type = ANY, mapping = ANY, defaults = ANY) {
   stop("DuckDB function remap_struct() is not available in R.")
