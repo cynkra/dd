@@ -3,6 +3,9 @@
 \name{strpos}
 \alias{strpos}
 \title{DuckDB function strpos}
+\usage{
+strpos(string = VARCHAR, search_string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

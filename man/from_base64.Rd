@@ -3,6 +3,9 @@
 \name{from_base64}
 \alias{from_base64}
 \title{DuckDB function from_base64}
+\usage{
+from_base64(string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 }

@@ -3,6 +3,9 @@
 \name{pi}
 \alias{pi}
 \title{DuckDB function pi}
+\usage{
+pi()
+}
 \description{
 Returns the value of pi.
 }

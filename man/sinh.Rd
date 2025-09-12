@@ -3,6 +3,9 @@
 \name{sinh}
 \alias{sinh}
 \title{DuckDB function sinh}
+\usage{
+sinh(x = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 }

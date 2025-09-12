@@ -3,6 +3,9 @@
 \name{map_from_entries}
 \alias{map_from_entries}
 \title{DuckDB function map_from_entries}
+\usage{
+map_from_entries(map = `STRUCT(K, V)[]`)
+}
 \arguments{
 \item{map}{\code{STRUCT(K, V)[]}}
 }

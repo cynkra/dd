@@ -3,6 +3,9 @@
 \name{right}
 \alias{right}
 \title{DuckDB function right}
+\usage{
+right(string = VARCHAR, count = BIGINT)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

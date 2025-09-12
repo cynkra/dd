@@ -3,9 +3,17 @@
 \name{variant_typeof}
 \alias{variant_typeof}
 \title{DuckDB function variant_typeof}
+\usage{
+variant_typeof(input_variant = VARIANT)
+}
 \arguments{
 \item{input_variant}{\code{VARIANT}}
 }
 \description{
 Returns the internal type of the \code{input_variant}.
+}
+\examples{
+\dontrun{
+variant_typeof({'a': 42, 'b': [1,2,3]})
+}
 }

@@ -3,6 +3,9 @@
 \name{unhex}
 \alias{unhex}
 \title{DuckDB function unhex}
+\usage{
+unhex(value = VARCHAR)
+}
 \arguments{
 \item{value}{\code{VARCHAR}}
 }

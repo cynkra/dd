@@ -3,6 +3,9 @@
 \name{array_filter}
 \alias{array_filter}
 \title{DuckDB function array_filter}
+\usage{
+array_filter(list = `ANY[]`, `lambda(x)` = LAMBDA)
+}
 \arguments{
 \item{list}{\code{ANY[]}}
 

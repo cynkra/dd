@@ -3,6 +3,9 @@
 \name{list_select}
 \alias{list_select}
 \title{DuckDB function list_select}
+\usage{
+list_select(value_list = `T[]`, index_list = `BIGINT[]`)
+}
 \arguments{
 \item{value_list}{\code{T[]}}
 

@@ -3,6 +3,9 @@
 \name{make_timestamp_ms}
 \alias{make_timestamp_ms}
 \title{DuckDB function make_timestamp_ms}
+\usage{
+make_timestamp_ms(nanos = BIGINT)
+}
 \arguments{
 \item{nanos}{\code{BIGINT}}
 }

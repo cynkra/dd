@@ -3,6 +3,9 @@
 \name{uuid_extract_version}
 \alias{uuid_extract_version}
 \title{DuckDB function uuid_extract_version}
+\usage{
+uuid_extract_version(uuid = UUID)
+}
 \arguments{
 \item{uuid}{\code{UUID}}
 }

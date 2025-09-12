@@ -3,6 +3,9 @@
 \name{regexp_escape}
 \alias{regexp_escape}
 \title{DuckDB function regexp_escape}
+\usage{
+regexp_escape(string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 }

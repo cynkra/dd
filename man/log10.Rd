@@ -3,6 +3,9 @@
 \name{log10}
 \alias{log10}
 \title{DuckDB function log10}
+\usage{
+log10(x = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 }

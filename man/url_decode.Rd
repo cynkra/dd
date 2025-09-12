@@ -3,6 +3,9 @@
 \name{url_decode}
 \alias{url_decode}
 \title{DuckDB function url_decode}
+\usage{
+url_decode(string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 }

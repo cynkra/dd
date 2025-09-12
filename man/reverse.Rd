@@ -3,6 +3,9 @@
 \name{reverse}
 \alias{reverse}
 \title{DuckDB function reverse}
+\usage{
+reverse(string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 }

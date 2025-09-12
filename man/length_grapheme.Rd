@@ -3,6 +3,9 @@
 \name{length_grapheme}
 \alias{length_grapheme}
 \title{DuckDB function length_grapheme}
+\usage{
+length_grapheme(string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 }

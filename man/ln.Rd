@@ -3,6 +3,9 @@
 \name{ln}
 \alias{ln}
 \title{DuckDB function ln}
+\usage{
+ln(x = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 }

@@ -3,6 +3,9 @@
 \name{cast_to_type}
 \alias{cast_to_type}
 \title{DuckDB function cast_to_type}
+\usage{
+cast_to_type(param = ANY, type = ANY)
+}
 \arguments{
 \item{param}{\code{ANY}}
 

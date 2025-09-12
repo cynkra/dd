@@ -3,6 +3,9 @@
 \name{list_unique}
 \alias{list_unique}
 \title{DuckDB function list_unique}
+\usage{
+list_unique(list = `ANY[]`)
+}
 \arguments{
 \item{list}{\code{ANY[]}}
 }

@@ -3,6 +3,9 @@
 \name{cot}
 \alias{cot}
 \title{DuckDB function cot}
+\usage{
+cot(x = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 }

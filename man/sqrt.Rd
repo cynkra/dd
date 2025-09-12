@@ -3,6 +3,9 @@
 \name{sqrt}
 \alias{sqrt}
 \title{DuckDB function sqrt}
+\usage{
+sqrt(x = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 }

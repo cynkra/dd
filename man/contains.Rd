@@ -3,6 +3,9 @@
 \name{contains}
 \alias{contains}
 \title{DuckDB function contains}
+\usage{
+contains(string = VARCHAR, search_string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

@@ -3,6 +3,9 @@
 \name{suffix}
 \alias{suffix}
 \title{DuckDB function suffix}
+\usage{
+suffix(string = VARCHAR, search_string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

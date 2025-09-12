@@ -3,6 +3,9 @@
 \name{hamming}
 \alias{hamming}
 \title{DuckDB function hamming}
+\usage{
+hamming(s1 = VARCHAR, s2 = VARCHAR)
+}
 \arguments{
 \item{s1}{\code{VARCHAR}}
 

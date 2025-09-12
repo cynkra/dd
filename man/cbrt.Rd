@@ -3,6 +3,9 @@
 \name{cbrt}
 \alias{cbrt}
 \title{DuckDB function cbrt}
+\usage{
+cbrt(x = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 }

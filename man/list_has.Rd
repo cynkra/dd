@@ -3,6 +3,9 @@
 \name{list_has}
 \alias{list_has}
 \title{DuckDB function list_has}
+\usage{
+list_has(list = `T[]`, element = T)
+}
 \arguments{
 \item{list}{\code{T[]}}
 

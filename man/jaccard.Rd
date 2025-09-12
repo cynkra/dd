@@ -3,6 +3,9 @@
 \name{jaccard}
 \alias{jaccard}
 \title{DuckDB function jaccard}
+\usage{
+jaccard(s1 = VARCHAR, s2 = VARCHAR)
+}
 \arguments{
 \item{s1}{\code{VARCHAR}}
 

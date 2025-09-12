@@ -3,6 +3,9 @@
 \name{list_has_any}
 \alias{list_has_any}
 \title{DuckDB function list_has_any}
+\usage{
+list_has_any(list1 = `T[]`, list2 = `T[]`)
+}
 \arguments{
 \item{list1}{\code{T[]}}
 

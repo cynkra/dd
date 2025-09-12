@@ -3,6 +3,9 @@
 \name{split}
 \alias{split}
 \title{DuckDB function split}
+\usage{
+split(string = VARCHAR, separator = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

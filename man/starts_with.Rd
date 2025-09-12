@@ -3,6 +3,9 @@
 \name{starts_with}
 \alias{starts_with}
 \title{DuckDB function starts_with}
+\usage{
+starts_with(string = VARCHAR, search_string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

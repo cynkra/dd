@@ -3,6 +3,9 @@
 \name{struct_position}
 \alias{struct_position}
 \title{DuckDB function struct_position}
+\usage{
+struct_position(struct = STRUCT, `'entry'` = ANY)
+}
 \arguments{
 \item{struct}{\code{STRUCT}}
 

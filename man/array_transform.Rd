@@ -3,6 +3,9 @@
 \name{array_transform}
 \alias{array_transform}
 \title{DuckDB function array_transform}
+\usage{
+array_transform(list = `ANY[]`, `lambda(x)` = LAMBDA)
+}
 \arguments{
 \item{list}{\code{ANY[]}}
 

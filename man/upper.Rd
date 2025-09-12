@@ -3,6 +3,9 @@
 \name{upper}
 \alias{upper}
 \title{DuckDB function upper}
+\usage{
+upper(string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 }

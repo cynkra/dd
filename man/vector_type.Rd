@@ -3,6 +3,9 @@
 \name{vector_type}
 \alias{vector_type}
 \title{DuckDB function vector_type}
+\usage{
+vector_type(col = ANY)
+}
 \arguments{
 \item{col}{\code{ANY}}
 }

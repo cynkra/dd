@@ -3,6 +3,9 @@
 \name{cos}
 \alias{cos}
 \title{DuckDB function cos}
+\usage{
+cos(x = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 }

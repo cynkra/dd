@@ -3,6 +3,9 @@
 \name{nfc_normalize}
 \alias{nfc_normalize}
 \title{DuckDB function nfc_normalize}
+\usage{
+nfc_normalize(string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 }

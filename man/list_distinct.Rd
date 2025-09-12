@@ -3,6 +3,9 @@
 \name{list_distinct}
 \alias{list_distinct}
 \title{DuckDB function list_distinct}
+\usage{
+list_distinct(list = `T[]`)
+}
 \arguments{
 \item{list}{\code{T[]}}
 }

@@ -3,6 +3,9 @@
 \name{list_transform}
 \alias{list_transform}
 \title{DuckDB function list_transform}
+\usage{
+list_transform(list = `ANY[]`, `lambda(x)` = LAMBDA)
+}
 \arguments{
 \item{list}{\code{ANY[]}}
 

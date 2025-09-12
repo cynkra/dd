@@ -3,6 +3,9 @@
 \name{list_contains}
 \alias{list_contains}
 \title{DuckDB function list_contains}
+\usage{
+list_contains(list = `T[]`, element = T)
+}
 \arguments{
 \item{list}{\code{T[]}}
 

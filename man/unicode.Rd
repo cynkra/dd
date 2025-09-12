@@ -3,6 +3,9 @@
 \name{unicode}
 \alias{unicode}
 \title{DuckDB function unicode}
+\usage{
+unicode(string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 }

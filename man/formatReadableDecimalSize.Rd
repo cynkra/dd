@@ -3,6 +3,9 @@
 \name{formatReadableDecimalSize}
 \alias{formatReadableDecimalSize}
 \title{DuckDB function formatReadableDecimalSize}
+\usage{
+formatReadableDecimalSize(integer = BIGINT)
+}
 \arguments{
 \item{integer}{\code{BIGINT}}
 }

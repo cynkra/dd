@@ -3,6 +3,9 @@
 \name{formatReadableSize}
 \alias{formatReadableSize}
 \title{DuckDB function formatReadableSize}
+\usage{
+formatReadableSize(integer = BIGINT)
+}
 \arguments{
 \item{integer}{\code{BIGINT}}
 }

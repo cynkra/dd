@@ -3,6 +3,9 @@
 \name{cosh}
 \alias{cosh}
 \title{DuckDB function cosh}
+\usage{
+cosh(x = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 }

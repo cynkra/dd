@@ -3,6 +3,9 @@
 \name{parse_duckdb_log_message}
 \alias{parse_duckdb_log_message}
 \title{DuckDB function parse_duckdb_log_message}
+\usage{
+parse_duckdb_log_message(type = VARCHAR, message = VARCHAR)
+}
 \arguments{
 \item{type}{\code{VARCHAR}}
 

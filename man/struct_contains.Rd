@@ -3,6 +3,9 @@
 \name{struct_contains}
 \alias{struct_contains}
 \title{DuckDB function struct_contains}
+\usage{
+struct_contains(struct = STRUCT, `'entry'` = ANY)
+}
 \arguments{
 \item{struct}{\code{STRUCT}}
 

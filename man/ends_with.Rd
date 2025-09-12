@@ -3,6 +3,9 @@
 \name{ends_with}
 \alias{ends_with}
 \title{DuckDB function ends_with}
+\usage{
+ends_with(string = VARCHAR, search_string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

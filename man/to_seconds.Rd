@@ -3,6 +3,9 @@
 \name{to_seconds}
 \alias{to_seconds}
 \title{DuckDB function to_seconds}
+\usage{
+to_seconds(double = DOUBLE)
+}
 \arguments{
 \item{double}{\code{DOUBLE}}
 }

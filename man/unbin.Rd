@@ -3,6 +3,9 @@
 \name{unbin}
 \alias{unbin}
 \title{DuckDB function unbin}
+\usage{
+unbin(value = VARCHAR)
+}
 \arguments{
 \item{value}{\code{VARCHAR}}
 }

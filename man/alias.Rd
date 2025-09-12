@@ -3,6 +3,9 @@
 \name{alias}
 \alias{alias}
 \title{DuckDB function alias}
+\usage{
+alias(expr = ANY)
+}
 \arguments{
 \item{expr}{\code{ANY}}
 }

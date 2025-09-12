@@ -3,6 +3,9 @@
 \name{ucase}
 \alias{ucase}
 \title{DuckDB function ucase}
+\usage{
+ucase(string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 }

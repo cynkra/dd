@@ -3,6 +3,9 @@
 \name{list_value}
 \alias{list_value}
 \title{DuckDB function list_value}
+\usage{
+list_value()
+}
 \description{
 Creates a LIST containing the argument values.
 }

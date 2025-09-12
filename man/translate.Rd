@@ -3,6 +3,9 @@
 \name{translate}
 \alias{translate}
 \title{DuckDB function translate}
+\usage{
+translate(string = VARCHAR, from = VARCHAR, to = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

@@ -3,6 +3,9 @@
 \name{remap_struct}
 \alias{remap_struct}
 \title{DuckDB function remap_struct}
+\usage{
+remap_struct(input = ANY, target_type = ANY, mapping = ANY, defaults = ANY)
+}
 \arguments{
 \item{input}{\code{ANY}}
 

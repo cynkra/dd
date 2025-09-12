@@ -3,6 +3,9 @@
 \name{lcase}
 \alias{lcase}
 \title{DuckDB function lcase}
+\usage{
+lcase(string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 }

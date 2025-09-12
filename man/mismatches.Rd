@@ -3,6 +3,9 @@
 \name{mismatches}
 \alias{mismatches}
 \title{DuckDB function mismatches}
+\usage{
+mismatches(s1 = VARCHAR, s2 = VARCHAR)
+}
 \arguments{
 \item{s1}{\code{VARCHAR}}
 

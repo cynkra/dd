@@ -3,6 +3,9 @@
 \name{struct_indexof}
 \alias{struct_indexof}
 \title{DuckDB function struct_indexof}
+\usage{
+struct_indexof(struct = STRUCT, `'entry'` = ANY)
+}
 \arguments{
 \item{struct}{\code{STRUCT}}
 

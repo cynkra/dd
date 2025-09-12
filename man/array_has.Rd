@@ -3,6 +3,9 @@
 \name{array_has}
 \alias{array_has}
 \title{DuckDB function array_has}
+\usage{
+array_has(list = `T[]`, element = T)
+}
 \arguments{
 \item{list}{\code{T[]}}
 

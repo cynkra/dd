@@ -3,6 +3,9 @@
 \name{pow}
 \alias{pow}
 \title{DuckDB function pow}
+\usage{
+pow(x = DOUBLE, y = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 

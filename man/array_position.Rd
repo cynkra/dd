@@ -3,6 +3,9 @@
 \name{array_position}
 \alias{array_position}
 \title{DuckDB function array_position}
+\usage{
+array_position(list = `T[]`, element = T)
+}
 \arguments{
 \item{list}{\code{T[]}}
 

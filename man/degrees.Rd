@@ -3,6 +3,9 @@
 \name{degrees}
 \alias{degrees}
 \title{DuckDB function degrees}
+\usage{
+degrees(x = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 }

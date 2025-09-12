@@ -3,6 +3,9 @@
 \name{acosh}
 \alias{acosh}
 \title{DuckDB function acosh}
+\usage{
+acosh(x = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 }

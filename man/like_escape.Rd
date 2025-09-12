@@ -3,6 +3,9 @@
 \name{like_escape}
 \alias{like_escape}
 \title{DuckDB function like_escape}
+\usage{
+like_escape(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

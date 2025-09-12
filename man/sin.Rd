@@ -3,6 +3,9 @@
 \name{sin}
 \alias{sin}
 \title{DuckDB function sin}
+\usage{
+sin(x = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 }

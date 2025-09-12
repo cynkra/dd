@@ -3,6 +3,9 @@
 \name{array_select}
 \alias{array_select}
 \title{DuckDB function array_select}
+\usage{
+array_select(value_list = `T[]`, index_list = `BIGINT[]`)
+}
 \arguments{
 \item{value_list}{\code{T[]}}
 

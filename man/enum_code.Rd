@@ -3,6 +3,9 @@
 \name{enum_code}
 \alias{enum_code}
 \title{DuckDB function enum_code}
+\usage{
+enum_code(enum = ANY)
+}
 \arguments{
 \item{enum}{\code{ANY}}
 }

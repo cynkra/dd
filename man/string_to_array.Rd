@@ -3,6 +3,9 @@
 \name{string_to_array}
 \alias{string_to_array}
 \title{DuckDB function string_to_array}
+\usage{
+string_to_array(string = VARCHAR, separator = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

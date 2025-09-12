@@ -3,6 +3,9 @@
 \name{map_extract_value}
 \alias{map_extract_value}
 \title{DuckDB function map_extract_value}
+\usage{
+map_extract_value(map = `MAP(K, V)`, key = K)
+}
 \arguments{
 \item{map}{\code{MAP(K, V)}}
 

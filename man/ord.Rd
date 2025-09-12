@@ -3,6 +3,9 @@
 \name{ord}
 \alias{ord}
 \title{DuckDB function ord}
+\usage{
+ord(string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 }

@@ -3,6 +3,9 @@
 \name{array_has_all}
 \alias{array_has_all}
 \title{DuckDB function array_has_all}
+\usage{
+array_has_all(list1 = `T[]`, list2 = `T[]`)
+}
 \arguments{
 \item{list1}{\code{T[]}}
 

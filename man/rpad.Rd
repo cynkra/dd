@@ -3,6 +3,9 @@
 \name{rpad}
 \alias{rpad}
 \title{DuckDB function rpad}
+\usage{
+rpad(string = VARCHAR, count = INTEGER, character = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

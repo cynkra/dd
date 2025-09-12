@@ -3,6 +3,9 @@
 \name{instr}
 \alias{instr}
 \title{DuckDB function instr}
+\usage{
+instr(string = VARCHAR, search_string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

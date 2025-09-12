@@ -3,6 +3,9 @@
 \name{bit_position}
 \alias{bit_position}
 \title{DuckDB function bit_position}
+\usage{
+bit_position(substring = BIT, bitstring = BIT)
+}
 \arguments{
 \item{substring}{\code{BIT}}
 

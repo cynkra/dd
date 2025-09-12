@@ -3,6 +3,9 @@
 \name{format_bytes}
 \alias{format_bytes}
 \title{DuckDB function format_bytes}
+\usage{
+format_bytes(integer = BIGINT)
+}
 \arguments{
 \item{integer}{\code{BIGINT}}
 }

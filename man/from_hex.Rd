@@ -3,6 +3,9 @@
 \name{from_hex}
 \alias{from_hex}
 \title{DuckDB function from_hex}
+\usage{
+from_hex(value = VARCHAR)
+}
 \arguments{
 \item{value}{\code{VARCHAR}}
 }

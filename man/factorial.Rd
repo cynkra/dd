@@ -3,6 +3,9 @@
 \name{factorial}
 \alias{factorial}
 \title{DuckDB function factorial}
+\usage{
+factorial(x = INTEGER)
+}
 \arguments{
 \item{x}{\code{INTEGER}}
 }

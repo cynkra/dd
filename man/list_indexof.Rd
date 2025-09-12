@@ -3,6 +3,9 @@
 \name{list_indexof}
 \alias{list_indexof}
 \title{DuckDB function list_indexof}
+\usage{
+list_indexof(list = `T[]`, element = T)
+}
 \arguments{
 \item{list}{\code{T[]}}
 

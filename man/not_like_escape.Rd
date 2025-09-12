@@ -3,6 +3,9 @@
 \name{not_like_escape}
 \alias{not_like_escape}
 \title{DuckDB function not_like_escape}
+\usage{
+not_like_escape(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

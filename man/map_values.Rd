@@ -3,6 +3,9 @@
 \name{map_values}
 \alias{map_values}
 \title{DuckDB function map_values}
+\usage{
+map_values(map = `MAP(K, V)`)
+}
 \arguments{
 \item{map}{\code{MAP(K, V)}}
 }

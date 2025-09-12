@@ -3,6 +3,9 @@
 \name{acos}
 \alias{acos}
 \title{DuckDB function acos}
+\usage{
+acos(x = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 }

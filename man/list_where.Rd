@@ -3,6 +3,9 @@
 \name{list_where}
 \alias{list_where}
 \title{DuckDB function list_where}
+\usage{
+list_where(value_list = `T[]`, mask_list = `BOOLEAN[]`)
+}
 \arguments{
 \item{value_list}{\code{T[]}}
 

@@ -3,6 +3,9 @@
 \name{union_extract}
 \alias{union_extract}
 \title{DuckDB function union_extract}
+\usage{
+union_extract(union = UNION, tag = VARCHAR)
+}
 \arguments{
 \item{union}{\code{UNION}}
 

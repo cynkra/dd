@@ -3,6 +3,9 @@
 \name{atanh}
 \alias{atanh}
 \title{DuckDB function atanh}
+\usage{
+atanh(x = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 }

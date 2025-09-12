@@ -3,6 +3,9 @@
 \name{get_bit}
 \alias{get_bit}
 \title{DuckDB function get_bit}
+\usage{
+get_bit(bitstring = BIT, index = INTEGER)
+}
 \arguments{
 \item{bitstring}{\code{BIT}}
 

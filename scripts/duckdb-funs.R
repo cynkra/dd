@@ -29,6 +29,35 @@ browse_data <- function(x) {
   x
 }
 
+usage_and_params <- function(function_name, parameters, parameter_types) {
+  usage_doc <- map2_chr(parameters, parameter_types, ~ {
+    if (length(..1) == 0) {
+      signature <- "()" # No parameters
+    } else {
+      signature <- paste0("(", paste0(tibble:::tick_if_needed(..1), " = ", tibble:::tick_if_needed(..2), collapse = ", "), ")")
+    }
+    glue("#' @usage {function_name}{signature}")
+  }) |>
+    glue_collapse(sep = "\n")
+
+  params <-
+    tibble(name = unlist(parameters), type = unlist(parameter_types)) |>
+    summarize(.by = name, type = paste0(unique(type), collapse = " | "))
+
+  param_doc <-
+    params |>
+    mutate(out = glue("#' @param {name} `{type}`")) |>
+    pull() |>
+    glue_collapse(sep = "\n")
+
+  signature <- params |>
+    mutate(out = glue("{tibble:::tick_if_needed(name)} = {tibble:::tick_if_needed(type)}")) |>
+    pull() |>
+    glue_collapse(sep = ", ")
+
+  tibble(usage_doc, param_doc, signature, types = list(unique(unlist(parameter_types))))
+}
+
 funs <-
   DBI::dbGetQuery(con, "FROM duckdb_functions()") |>
   as_tibble() |>
@@ -59,32 +88,32 @@ funs <-
   mutate(.by = function_name, n = n()) |>
   filter_print(n == 1) |>
   select(-n) |>
+  summarize(
+    .by = function_name,
+    alias_of = unique(alias_of),
+    description = paste0(unique(description), collapse = "\n\n"),
+    return_type = paste0(unique(return_type), collapse = " | "),
+    usage_and_params(first(function_name), parameters, parameter_types),
+    examples = paste0(unique(examples), collapse = "\n"),
+    categories = list(unique(unlist(categories))),
+  ) |>
+  # https://github.com/duckdb/duckdb/pull/18977
+  mutate(examples = gsub(r"(^variant_typeof\(\{'a': 42, 'b': \[1,2,3\]\)::VARIANT\)$)", "variant_typeof({'a': 42, 'b': [1,2,3]})", examples)) |>
   # FIXME: Irregular
   filter_print(!(function_name %in% c("struct_extract_at"))) |>
   arrange(function_name)
 
-fun_def <-
-  funs |>
-  mutate(
-    .keep = "unused",
-    name = map(parameters, trimws),
-    type = map(parameter_types, trimws),
-  ) |>
-  mutate(param_data = map2(name, type, ~ tibble(name = .x, type = .y)))
-
 code <-
-  fun_def |>
+  funs |>
   mutate(description = gsub("[.]+$", "", description), ".") |>
-  mutate(params = map_chr(param_data, ~ glue_collapse(glue("#' @param {.x$name} `{.x$type}`"), sep = "\n"))) |>
-  mutate(signature = map_chr(param_data, ~ glue_collapse(glue("{tibble:::tick_if_needed(.x$name)} = {tibble:::tick_if_needed(.x$type)}"), sep = ", "))) |>
   mutate(roxy = glue(r"(
     #' DuckDB function {function_name}
     #'
     #' {description}.
     #'
     #' @name {function_name}
-    #' @usage NULL
-    {params}
+    {usage_doc}
+    {param_doc}
     #' @examples
     #' \dontrun{{
     #' {examples}
@@ -124,7 +153,7 @@ invisible(parse(text = dd_code))
 writeLines(dd_code, "R/zzz-dd.R")
 
 globals <-
-  funs$parameter_types |>
+  funs$types |>
   unlist() |>
   unique() |>
   sort()

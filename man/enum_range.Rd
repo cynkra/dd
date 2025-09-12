@@ -3,6 +3,9 @@
 \name{enum_range}
 \alias{enum_range}
 \title{DuckDB function enum_range}
+\usage{
+enum_range(enum = ANY)
+}
 \arguments{
 \item{enum}{\code{ANY}}
 }

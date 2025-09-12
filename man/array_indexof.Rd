@@ -3,6 +3,9 @@
 \name{array_indexof}
 \alias{array_indexof}
 \title{DuckDB function array_indexof}
+\usage{
+array_indexof(list = `T[]`, element = T)
+}
 \arguments{
 \item{list}{\code{T[]}}
 

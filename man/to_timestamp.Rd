@@ -3,6 +3,9 @@
 \name{to_timestamp}
 \alias{to_timestamp}
 \title{DuckDB function to_timestamp}
+\usage{
+to_timestamp(sec = DOUBLE)
+}
 \arguments{
 \item{sec}{\code{DOUBLE}}
 }

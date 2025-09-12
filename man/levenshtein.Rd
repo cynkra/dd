@@ -3,6 +3,9 @@
 \name{levenshtein}
 \alias{levenshtein}
 \title{DuckDB function levenshtein}
+\usage{
+levenshtein(s1 = VARCHAR, s2 = VARCHAR)
+}
 \arguments{
 \item{s1}{\code{VARCHAR}}
 

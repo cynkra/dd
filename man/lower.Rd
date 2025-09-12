@@ -3,6 +3,9 @@
 \name{lower}
 \alias{lower}
 \title{DuckDB function lower}
+\usage{
+lower(string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 }

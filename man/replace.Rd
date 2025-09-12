@@ -3,6 +3,9 @@
 \name{replace}
 \alias{replace}
 \title{DuckDB function replace}
+\usage{
+replace(string = VARCHAR, source = VARCHAR, target = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

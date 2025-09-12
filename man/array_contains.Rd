@@ -3,6 +3,9 @@
 \name{array_contains}
 \alias{array_contains}
 \title{DuckDB function array_contains}
+\usage{
+array_contains(list = `T[]`, element = T)
+}
 \arguments{
 \item{list}{\code{T[]}}
 

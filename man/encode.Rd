@@ -3,6 +3,9 @@
 \name{encode}
 \alias{encode}
 \title{DuckDB function encode}
+\usage{
+encode(string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 }

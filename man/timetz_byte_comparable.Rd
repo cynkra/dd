@@ -3,6 +3,9 @@
 \name{timetz_byte_comparable}
 \alias{timetz_byte_comparable}
 \title{DuckDB function timetz_byte_comparable}
+\usage{
+timetz_byte_comparable(time_tz = `TIME WITH TIME ZONE`)
+}
 \arguments{
 \item{time_tz}{\verb{TIME WITH TIME ZONE}}
 }

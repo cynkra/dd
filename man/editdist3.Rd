@@ -3,6 +3,9 @@
 \name{editdist3}
 \alias{editdist3}
 \title{DuckDB function editdist3}
+\usage{
+editdist3(s1 = VARCHAR, s2 = VARCHAR)
+}
 \arguments{
 \item{s1}{\code{VARCHAR}}
 

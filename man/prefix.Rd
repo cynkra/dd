@@ -3,6 +3,9 @@
 \name{prefix}
 \alias{prefix}
 \title{DuckDB function prefix}
+\usage{
+prefix(string = VARCHAR, search_string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

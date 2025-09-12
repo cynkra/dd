@@ -3,6 +3,9 @@
 \name{list_position}
 \alias{list_position}
 \title{DuckDB function list_position}
+\usage{
+list_position(list = `T[]`, element = T)
+}
 \arguments{
 \item{list}{\code{T[]}}
 

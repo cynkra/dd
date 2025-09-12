@@ -3,6 +3,9 @@
 \name{list_filter}
 \alias{list_filter}
 \title{DuckDB function list_filter}
+\usage{
+list_filter(list = `ANY[]`, `lambda(x)` = LAMBDA)
+}
 \arguments{
 \item{list}{\code{ANY[]}}
 

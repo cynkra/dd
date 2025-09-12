@@ -3,6 +3,9 @@
 \name{enum_range_boundary}
 \alias{enum_range_boundary}
 \title{DuckDB function enum_range_boundary}
+\usage{
+enum_range_boundary(start = ANY, end = ANY)
+}
 \arguments{
 \item{start}{\code{ANY}}
 

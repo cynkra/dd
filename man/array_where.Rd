@@ -3,6 +3,9 @@
 \name{array_where}
 \alias{array_where}
 \title{DuckDB function array_where}
+\usage{
+array_where(value_list = `T[]`, mask_list = `BOOLEAN[]`)
+}
 \arguments{
 \item{value_list}{\code{T[]}}
 

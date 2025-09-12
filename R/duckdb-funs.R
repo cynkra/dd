@@ -5,7 +5,7 @@
 #' Computes the arccosine of x.
 #'
 #' @name acos
-#' @usage NULL
+#' @usage acos(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -20,7 +20,7 @@ acos <- function(x = DOUBLE) {
 #' Computes the inverse hyperbolic cos of x.
 #'
 #' @name acosh
-#' @usage NULL
+#' @usage acosh(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -35,7 +35,7 @@ acosh <- function(x = DOUBLE) {
 #' Returns the name of a given expression.
 #'
 #' @name alias
-#' @usage NULL
+#' @usage alias(expr = ANY)
 #' @param expr `ANY`
 #' @examples
 #' \dontrun{
@@ -50,7 +50,7 @@ alias <- function(expr = ANY) {
 #' Returns a list that is the result of applying the `lambda` function to each element of the input `list`. The return type is defined by the return type of the `lambda` function.
 #'
 #' @name apply
-#' @usage NULL
+#' @usage apply(list = `ANY[]`, `lambda(x)` = LAMBDA)
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
 #' @examples
@@ -66,7 +66,7 @@ apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' Returns a list that is the result of applying the `lambda` function to each element of the input `list`. The return type is defined by the return type of the `lambda` function.
 #'
 #' @name array_apply
-#' @usage NULL
+#' @usage array_apply(list = `ANY[]`, `lambda(x)` = LAMBDA)
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
 #' @examples
@@ -82,7 +82,7 @@ array_apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' Returns true if the list contains the element.
 #'
 #' @name array_contains
-#' @usage NULL
+#' @usage array_contains(list = `T[]`, element = T)
 #' @param list `T[]`
 #' @param element `T`
 #' @examples
@@ -98,7 +98,7 @@ array_contains <- function(list = `T[]`, element = T) {
 #' Removes all duplicates and `NULL` values from a list. Does not preserve the original order.
 #'
 #' @name array_distinct
-#' @usage NULL
+#' @usage array_distinct(list = `T[]`)
 #' @param list `T[]`
 #' @examples
 #' \dontrun{
@@ -113,7 +113,7 @@ array_distinct <- function(list = `T[]`) {
 #' Constructs a list from those elements of the input `list` for which the `lambda` function returns `true`. DuckDB must be able to cast the `lambda` function's return type to `BOOL`. The return type of `list_filter` is the same as the input list's.
 #'
 #' @name array_filter
-#' @usage NULL
+#' @usage array_filter(list = `ANY[]`, `lambda(x)` = LAMBDA)
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
 #' @examples
@@ -129,7 +129,7 @@ array_filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' Returns true if the list contains the element.
 #'
 #' @name array_has
-#' @usage NULL
+#' @usage array_has(list = `T[]`, element = T)
 #' @param list `T[]`
 #' @param element `T`
 #' @examples
@@ -145,7 +145,7 @@ array_has <- function(list = `T[]`, element = T) {
 #' Returns true if all elements of list2 are in list1. NULLs are ignored.
 #'
 #' @name array_has_all
-#' @usage NULL
+#' @usage array_has_all(list1 = `T[]`, list2 = `T[]`)
 #' @param list1 `T[]`
 #' @param list2 `T[]`
 #' @examples
@@ -161,7 +161,7 @@ array_has_all <- function(list1 = `T[]`, list2 = `T[]`) {
 #' Returns true if the lists have any element in common. NULLs are ignored.
 #'
 #' @name array_has_any
-#' @usage NULL
+#' @usage array_has_any(list1 = `T[]`, list2 = `T[]`)
 #' @param list1 `T[]`
 #' @param list2 `T[]`
 #' @examples
@@ -177,7 +177,7 @@ array_has_any <- function(list1 = `T[]`, list2 = `T[]`) {
 #' Returns the index of the `element` if the `list` contains the `element`. If the `element` is not found, it returns `NULL`.
 #'
 #' @name array_indexof
-#' @usage NULL
+#' @usage array_indexof(list = `T[]`, element = T)
 #' @param list `T[]`
 #' @param element `T`
 #' @examples
@@ -193,7 +193,7 @@ array_indexof <- function(list = `T[]`, element = T) {
 #' Returns the index of the `element` if the `list` contains the `element`. If the `element` is not found, it returns `NULL`.
 #'
 #' @name array_position
-#' @usage NULL
+#' @usage array_position(list = `T[]`, element = T)
 #' @param list `T[]`
 #' @param element `T`
 #' @examples
@@ -209,7 +209,7 @@ array_position <- function(list = `T[]`, element = T) {
 #' Returns a list based on the elements selected by the `index_list`.
 #'
 #' @name array_select
-#' @usage NULL
+#' @usage array_select(value_list = `T[]`, index_list = `BIGINT[]`)
 #' @param value_list `T[]`
 #' @param index_list `BIGINT[]`
 #' @examples
@@ -225,7 +225,7 @@ array_select <- function(value_list = `T[]`, index_list = `BIGINT[]`) {
 #' Returns a list that is the result of applying the `lambda` function to each element of the input `list`. The return type is defined by the return type of the `lambda` function.
 #'
 #' @name array_transform
-#' @usage NULL
+#' @usage array_transform(list = `ANY[]`, `lambda(x)` = LAMBDA)
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
 #' @examples
@@ -241,7 +241,7 @@ array_transform <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' Counts the unique elements of a `list`.
 #'
 #' @name array_unique
-#' @usage NULL
+#' @usage array_unique(list = `ANY[]`)
 #' @param list `ANY[]`
 #' @examples
 #' \dontrun{
@@ -256,7 +256,7 @@ array_unique <- function(list = `ANY[]`) {
 #' Returns a list with the `BOOLEAN`s in `mask_list` applied as a mask to the `value_list`.
 #'
 #' @name array_where
-#' @usage NULL
+#' @usage array_where(value_list = `T[]`, mask_list = `BOOLEAN[]`)
 #' @param value_list `T[]`
 #' @param mask_list `BOOLEAN[]`
 #' @examples
@@ -272,7 +272,7 @@ array_where <- function(value_list = `T[]`, mask_list = `BOOLEAN[]`) {
 #' Returns an integer that represents the Unicode code point of the first character of the `string`.
 #'
 #' @name ascii
-#' @usage NULL
+#' @usage ascii(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -287,7 +287,7 @@ ascii <- function(string = VARCHAR) {
 #' Computes the arcsine of x.
 #'
 #' @name asin
-#' @usage NULL
+#' @usage asin(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -302,7 +302,7 @@ asin <- function(x = DOUBLE) {
 #' Computes the inverse hyperbolic sin of x.
 #'
 #' @name asinh
-#' @usage NULL
+#' @usage asinh(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -317,7 +317,7 @@ asinh <- function(x = DOUBLE) {
 #' Computes the arctangent of x.
 #'
 #' @name atan
-#' @usage NULL
+#' @usage atan(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -332,7 +332,7 @@ atan <- function(x = DOUBLE) {
 #' Computes the arctangent (y, x).
 #'
 #' @name atan2
-#' @usage NULL
+#' @usage atan2(y = DOUBLE, x = DOUBLE)
 #' @param y `DOUBLE`
 #' @param x `DOUBLE`
 #' @examples
@@ -348,7 +348,7 @@ atan2 <- function(y = DOUBLE, x = DOUBLE) {
 #' Computes the inverse hyperbolic tan of x.
 #'
 #' @name atanh
-#' @usage NULL
+#' @usage atanh(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -363,7 +363,7 @@ atanh <- function(x = DOUBLE) {
 #' Converts a `blob` to a base64 encoded string.
 #'
 #' @name base64
-#' @usage NULL
+#' @usage base64(blob = BLOB)
 #' @param blob `BLOB`
 #' @examples
 #' \dontrun{
@@ -378,7 +378,7 @@ base64 <- function(blob = BLOB) {
 #' Returns first starting index of the specified substring within bits, or zero if it is not present. The first (leftmost) bit is indexed 1.
 #'
 #' @name bit_position
-#' @usage NULL
+#' @usage bit_position(substring = BIT, bitstring = BIT)
 #' @param substring `BIT`
 #' @param bitstring `BIT`
 #' @examples
@@ -394,7 +394,7 @@ bit_position <- function(substring = BIT, bitstring = BIT) {
 #' Whether or not we can implicitly cast from the source type to the other type.
 #'
 #' @name can_cast_implicitly
-#' @usage NULL
+#' @usage can_cast_implicitly(source_type = ANY, target_type = ANY)
 #' @param source_type `ANY`
 #' @param target_type `ANY`
 #' @examples
@@ -410,7 +410,7 @@ can_cast_implicitly <- function(source_type = ANY, target_type = ANY) {
 #' Casts the first argument to the type of the second argument.
 #'
 #' @name cast_to_type
-#' @usage NULL
+#' @usage cast_to_type(param = ANY, type = ANY)
 #' @param param `ANY`
 #' @param type `ANY`
 #' @examples
@@ -426,7 +426,7 @@ cast_to_type <- function(param = ANY, type = ANY) {
 #' Returns the cube root of x.
 #'
 #' @name cbrt
-#' @usage NULL
+#' @usage cbrt(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -441,7 +441,7 @@ cbrt <- function(x = DOUBLE) {
 #' Returns a character which is corresponding the ASCII code value or Unicode code point.
 #'
 #' @name chr
-#' @usage NULL
+#' @usage chr(code_point = INTEGER)
 #' @param code_point `INTEGER`
 #' @examples
 #' \dontrun{
@@ -456,7 +456,7 @@ chr <- function(code_point = INTEGER) {
 #' Returns `true` if `search_string` is found within `string`.
 #'
 #' @name contains
-#' @usage NULL
+#' @usage contains(string = VARCHAR, search_string = VARCHAR)
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
 #' @examples
@@ -472,7 +472,7 @@ contains <- function(string = VARCHAR, search_string = VARCHAR) {
 #' Computes the cos of x.
 #'
 #' @name cos
-#' @usage NULL
+#' @usage cos(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -487,7 +487,7 @@ cos <- function(x = DOUBLE) {
 #' Computes the hyperbolic cos of x.
 #'
 #' @name cosh
-#' @usage NULL
+#' @usage cosh(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -502,7 +502,7 @@ cosh <- function(x = DOUBLE) {
 #' Computes the cotangent of x.
 #'
 #' @name cot
-#' @usage NULL
+#' @usage cot(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -517,7 +517,7 @@ cot <- function(x = DOUBLE) {
 #' Returns the current value of the configuration setting.
 #'
 #' @name current_setting
-#' @usage NULL
+#' @usage current_setting(setting_name = VARCHAR)
 #' @param setting_name `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -532,7 +532,7 @@ current_setting <- function(setting_name = VARCHAR) {
 #' Extension of Levenshtein distance to also include transposition of adjacent characters as an allowed edit operation. In other words, the minimum number of edit operations (insertions, deletions, substitutions or transpositions) required to change one string to another. Characters of different cases (e.g., `a` and `A`) are considered different.
 #'
 #' @name damerau_levenshtein
-#' @usage NULL
+#' @usage damerau_levenshtein(s1 = VARCHAR, s2 = VARCHAR)
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
 #' @examples
@@ -548,7 +548,7 @@ damerau_levenshtein <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' Converts `blob` to `VARCHAR`. Fails if `blob` is not valid UTF-8.
 #'
 #' @name decode
-#' @usage NULL
+#' @usage decode(blob = BLOB)
 #' @param blob `BLOB`
 #' @examples
 #' \dontrun{
@@ -563,7 +563,7 @@ decode <- function(blob = BLOB) {
 #' Converts radians to degrees.
 #'
 #' @name degrees
-#' @usage NULL
+#' @usage degrees(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -578,7 +578,7 @@ degrees <- function(x = DOUBLE) {
 #' The minimum number of single-character edits (insertions, deletions or substitutions) required to change one string to the other. Characters of different cases (e.g., `a` and `A`) are considered different.
 #'
 #' @name editdist3
-#' @usage NULL
+#' @usage editdist3(s1 = VARCHAR, s2 = VARCHAR)
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
 #' @examples
@@ -594,7 +594,7 @@ editdist3 <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' Returns a list containing the value for a given key or an empty list if the key is not contained in the map. The type of the key provided in the second parameter must match the type of the map’s keys else an error is returned.
 #'
 #' @name element_at
-#' @usage NULL
+#' @usage element_at(map = `MAP(K, V)`, key = K)
 #' @param map `MAP(K, V)`
 #' @param key `K`
 #' @examples
@@ -610,7 +610,7 @@ element_at <- function(map = `MAP(K, V)`, key = K) {
 #' Converts the `string` to `BLOB`. Converts UTF-8 characters into literal encoding.
 #'
 #' @name encode
-#' @usage NULL
+#' @usage encode(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -625,7 +625,7 @@ encode <- function(string = VARCHAR) {
 #' Returns `true` if `string` ends with `search_string`.
 #'
 #' @name ends_with
-#' @usage NULL
+#' @usage ends_with(string = VARCHAR, search_string = VARCHAR)
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
 #' @examples
@@ -641,7 +641,7 @@ ends_with <- function(string = VARCHAR, search_string = VARCHAR) {
 #' Returns the numeric value backing the given enum value.
 #'
 #' @name enum_code
-#' @usage NULL
+#' @usage enum_code(enum = ANY)
 #' @param enum `ANY`
 #' @examples
 #' \dontrun{
@@ -656,7 +656,7 @@ enum_code <- function(enum = ANY) {
 #' Returns the first value of the input enum type.
 #'
 #' @name enum_first
-#' @usage NULL
+#' @usage enum_first(enum = ANY)
 #' @param enum `ANY`
 #' @examples
 #' \dontrun{
@@ -671,7 +671,7 @@ enum_first <- function(enum = ANY) {
 #' Returns the last value of the input enum type.
 #'
 #' @name enum_last
-#' @usage NULL
+#' @usage enum_last(enum = ANY)
 #' @param enum `ANY`
 #' @examples
 #' \dontrun{
@@ -686,7 +686,7 @@ enum_last <- function(enum = ANY) {
 #' Returns all values of the input enum type as an array.
 #'
 #' @name enum_range
-#' @usage NULL
+#' @usage enum_range(enum = ANY)
 #' @param enum `ANY`
 #' @examples
 #' \dontrun{
@@ -701,7 +701,7 @@ enum_range <- function(enum = ANY) {
 #' Returns the range between the two given enum values as an array. The values must be of the same enum type. When the first parameter is NULL, the result starts with the first value of the enum type. When the second parameter is NULL, the result ends with the last value of the enum type.
 #'
 #' @name enum_range_boundary
-#' @usage NULL
+#' @usage enum_range_boundary(start = ANY, end = ANY)
 #' @param start `ANY`
 #' @param end `ANY`
 #' @examples
@@ -717,7 +717,7 @@ enum_range_boundary <- function(start = ANY, end = ANY) {
 #' Rounds x to next even number by rounding away from zero.
 #'
 #' @name even
-#' @usage NULL
+#' @usage even(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -732,7 +732,7 @@ even <- function(x = DOUBLE) {
 #' Computes e to the power of x.
 #'
 #' @name exp
-#' @usage NULL
+#' @usage exp(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -747,7 +747,7 @@ exp <- function(x = DOUBLE) {
 #' Factorial of x. Computes the product of the current integer and all integers below it.
 #'
 #' @name factorial
-#' @usage NULL
+#' @usage factorial(x = INTEGER)
 #' @param x `INTEGER`
 #' @examples
 #' \dontrun{
@@ -762,7 +762,7 @@ factorial <- function(x = INTEGER) {
 #' Constructs a list from those elements of the input `list` for which the `lambda` function returns `true`. DuckDB must be able to cast the `lambda` function's return type to `BOOL`. The return type of `list_filter` is the same as the input list's.
 #'
 #' @name filter
-#' @usage NULL
+#' @usage filter(list = `ANY[]`, `lambda(x)` = LAMBDA)
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
 #' @examples
@@ -778,7 +778,7 @@ filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' Flattens a nested list by one level.
 #'
 #' @name flatten
-#' @usage NULL
+#' @usage flatten(nested_list = `T[][]`)
 #' @param nested_list `T[][]`
 #' @examples
 #' \dontrun{
@@ -793,7 +793,7 @@ flatten <- function(nested_list = `T[][]`) {
 #' Converts `integer` to a human-readable representation using units based on powers of 10 (KB, MB, GB, etc.).
 #'
 #' @name formatReadableDecimalSize
-#' @usage NULL
+#' @usage formatReadableDecimalSize(integer = BIGINT)
 #' @param integer `BIGINT`
 #' @examples
 #' \dontrun{
@@ -808,7 +808,7 @@ formatReadableDecimalSize <- function(integer = BIGINT) {
 #' Converts `integer` to a human-readable representation using units based on powers of 2 (KiB, MiB, GiB, etc.).
 #'
 #' @name formatReadableSize
-#' @usage NULL
+#' @usage formatReadableSize(integer = BIGINT)
 #' @param integer `BIGINT`
 #' @examples
 #' \dontrun{
@@ -823,7 +823,7 @@ formatReadableSize <- function(integer = BIGINT) {
 #' Converts `integer` to a human-readable representation using units based on powers of 2 (KiB, MiB, GiB, etc.).
 #'
 #' @name format_bytes
-#' @usage NULL
+#' @usage format_bytes(integer = BIGINT)
 #' @param integer `BIGINT`
 #' @examples
 #' \dontrun{
@@ -838,7 +838,7 @@ format_bytes <- function(integer = BIGINT) {
 #' Converts a base64 encoded `string` to a character string (`BLOB`).
 #'
 #' @name from_base64
-#' @usage NULL
+#' @usage from_base64(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -853,7 +853,7 @@ from_base64 <- function(string = VARCHAR) {
 #' Converts a `value` from binary representation to a blob.
 #'
 #' @name from_binary
-#' @usage NULL
+#' @usage from_binary(value = VARCHAR)
 #' @param value `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -868,7 +868,7 @@ from_binary <- function(value = VARCHAR) {
 #' Converts a `value` from hexadecimal representation to a blob.
 #'
 #' @name from_hex
-#' @usage NULL
+#' @usage from_hex(value = VARCHAR)
 #' @param value `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -883,7 +883,7 @@ from_hex <- function(value = VARCHAR) {
 #' Interpolation of (x-1) factorial (so decimal inputs are allowed).
 #'
 #' @name gamma
-#' @usage NULL
+#' @usage gamma(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -898,7 +898,7 @@ gamma <- function(x = DOUBLE) {
 #' Extracts the nth bit from bitstring; the first (leftmost) bit is indexed 0.
 #'
 #' @name get_bit
-#' @usage NULL
+#' @usage get_bit(bitstring = BIT, index = INTEGER)
 #' @param bitstring `BIT`
 #' @param index `INTEGER`
 #' @examples
@@ -914,7 +914,7 @@ get_bit <- function(bitstring = BIT, index = INTEGER) {
 #' The Hamming distance between to strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., `a` and `A`) are considered different.
 #'
 #' @name hamming
-#' @usage NULL
+#' @usage hamming(s1 = VARCHAR, s2 = VARCHAR)
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
 #' @examples
@@ -930,7 +930,7 @@ hamming <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' Returns `true` if the `string` matches the `like_specifier` (see Pattern Matching) using case-insensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name ilike_escape
-#' @usage NULL
+#' @usage ilike_escape(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR)
 #' @param string `VARCHAR`
 #' @param like_specifier `VARCHAR`
 #' @param escape_character `VARCHAR`
@@ -947,7 +947,7 @@ ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_char
 #' Returns location of first occurrence of `search_string` in `string`, counting from 1. Returns 0 if no match found.
 #'
 #' @name instr
-#' @usage NULL
+#' @usage instr(string = VARCHAR, search_string = VARCHAR)
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
 #' @examples
@@ -963,7 +963,7 @@ instr <- function(string = VARCHAR, search_string = VARCHAR) {
 #' Whether or not the provided value is the histogram "other" bin (used for values not belonging to any provided bin).
 #'
 #' @name is_histogram_other_bin
-#' @usage NULL
+#' @usage is_histogram_other_bin(val = ANY)
 #' @param val `ANY`
 #' @examples
 #' \dontrun{
@@ -978,7 +978,7 @@ is_histogram_other_bin <- function(val = ANY) {
 #' The Jaccard similarity between two strings. Characters of different cases (e.g., `a` and `A`) are considered different. Returns a number between 0 and 1.
 #'
 #' @name jaccard
-#' @usage NULL
+#' @usage jaccard(s1 = VARCHAR, s2 = VARCHAR)
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
 #' @examples
@@ -994,7 +994,7 @@ jaccard <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' Converts `string` to lower case.
 #'
 #' @name lcase
-#' @usage NULL
+#' @usage lcase(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -1009,7 +1009,7 @@ lcase <- function(string = VARCHAR) {
 #' Extracts the left-most count characters.
 #'
 #' @name left
-#' @usage NULL
+#' @usage left(string = VARCHAR, count = BIGINT)
 #' @param string `VARCHAR`
 #' @param count `BIGINT`
 #' @examples
@@ -1025,7 +1025,7 @@ left <- function(string = VARCHAR, count = BIGINT) {
 #' Extracts the left-most count grapheme clusters.
 #'
 #' @name left_grapheme
-#' @usage NULL
+#' @usage left_grapheme(string = VARCHAR, count = BIGINT)
 #' @param string `VARCHAR`
 #' @param count `BIGINT`
 #' @examples
@@ -1041,7 +1041,7 @@ left_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #' Number of grapheme clusters in `string`.
 #'
 #' @name length_grapheme
-#' @usage NULL
+#' @usage length_grapheme(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -1056,7 +1056,7 @@ length_grapheme <- function(string = VARCHAR) {
 #' The minimum number of single-character edits (insertions, deletions or substitutions) required to change one string to the other. Characters of different cases (e.g., `a` and `A`) are considered different.
 #'
 #' @name levenshtein
-#' @usage NULL
+#' @usage levenshtein(s1 = VARCHAR, s2 = VARCHAR)
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
 #' @examples
@@ -1072,7 +1072,7 @@ levenshtein <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' Computes the log of the gamma function.
 #'
 #' @name lgamma
-#' @usage NULL
+#' @usage lgamma(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -1087,7 +1087,7 @@ lgamma <- function(x = DOUBLE) {
 #' Returns `true` if the `string` matches the `like_specifier` (see Pattern Matching) using case-sensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name like_escape
-#' @usage NULL
+#' @usage like_escape(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR)
 #' @param string `VARCHAR`
 #' @param like_specifier `VARCHAR`
 #' @param escape_character `VARCHAR`
@@ -1104,7 +1104,7 @@ like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_chara
 #' Returns a list that is the result of applying the `lambda` function to each element of the input `list`. The return type is defined by the return type of the `lambda` function.
 #'
 #' @name list_apply
-#' @usage NULL
+#' @usage list_apply(list = `ANY[]`, `lambda(x)` = LAMBDA)
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
 #' @examples
@@ -1120,7 +1120,7 @@ list_apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' Returns true if the list contains the element.
 #'
 #' @name list_contains
-#' @usage NULL
+#' @usage list_contains(list = `T[]`, element = T)
 #' @param list `T[]`
 #' @param element `T`
 #' @examples
@@ -1136,7 +1136,7 @@ list_contains <- function(list = `T[]`, element = T) {
 #' Removes all duplicates and `NULL` values from a list. Does not preserve the original order.
 #'
 #' @name list_distinct
-#' @usage NULL
+#' @usage list_distinct(list = `T[]`)
 #' @param list `T[]`
 #' @examples
 #' \dontrun{
@@ -1151,7 +1151,7 @@ list_distinct <- function(list = `T[]`) {
 #' Constructs a list from those elements of the input `list` for which the `lambda` function returns `true`. DuckDB must be able to cast the `lambda` function's return type to `BOOL`. The return type of `list_filter` is the same as the input list's.
 #'
 #' @name list_filter
-#' @usage NULL
+#' @usage list_filter(list = `ANY[]`, `lambda(x)` = LAMBDA)
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
 #' @examples
@@ -1167,7 +1167,7 @@ list_filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' Returns true if the list contains the element.
 #'
 #' @name list_has
-#' @usage NULL
+#' @usage list_has(list = `T[]`, element = T)
 #' @param list `T[]`
 #' @param element `T`
 #' @examples
@@ -1183,7 +1183,7 @@ list_has <- function(list = `T[]`, element = T) {
 #' Returns true if all elements of list2 are in list1. NULLs are ignored.
 #'
 #' @name list_has_all
-#' @usage NULL
+#' @usage list_has_all(list1 = `T[]`, list2 = `T[]`)
 #' @param list1 `T[]`
 #' @param list2 `T[]`
 #' @examples
@@ -1199,7 +1199,7 @@ list_has_all <- function(list1 = `T[]`, list2 = `T[]`) {
 #' Returns true if the lists have any element in common. NULLs are ignored.
 #'
 #' @name list_has_any
-#' @usage NULL
+#' @usage list_has_any(list1 = `T[]`, list2 = `T[]`)
 #' @param list1 `T[]`
 #' @param list2 `T[]`
 #' @examples
@@ -1215,7 +1215,7 @@ list_has_any <- function(list1 = `T[]`, list2 = `T[]`) {
 #' Returns the index of the `element` if the `list` contains the `element`. If the `element` is not found, it returns `NULL`.
 #'
 #' @name list_indexof
-#' @usage NULL
+#' @usage list_indexof(list = `T[]`, element = T)
 #' @param list `T[]`
 #' @param element `T`
 #' @examples
@@ -1231,7 +1231,7 @@ list_indexof <- function(list = `T[]`, element = T) {
 #' Creates a LIST containing the argument values.
 #'
 #' @name list_pack
-#' @usage NULL
+#' @usage list_pack()
 
 #' @examples
 #' \dontrun{
@@ -1246,7 +1246,7 @@ list_pack <- function() {
 #' Returns the index of the `element` if the `list` contains the `element`. If the `element` is not found, it returns `NULL`.
 #'
 #' @name list_position
-#' @usage NULL
+#' @usage list_position(list = `T[]`, element = T)
 #' @param list `T[]`
 #' @param element `T`
 #' @examples
@@ -1262,7 +1262,7 @@ list_position <- function(list = `T[]`, element = T) {
 #' Returns a list based on the elements selected by the `index_list`.
 #'
 #' @name list_select
-#' @usage NULL
+#' @usage list_select(value_list = `T[]`, index_list = `BIGINT[]`)
 #' @param value_list `T[]`
 #' @param index_list `BIGINT[]`
 #' @examples
@@ -1278,7 +1278,7 @@ list_select <- function(value_list = `T[]`, index_list = `BIGINT[]`) {
 #' Returns a list that is the result of applying the `lambda` function to each element of the input `list`. The return type is defined by the return type of the `lambda` function.
 #'
 #' @name list_transform
-#' @usage NULL
+#' @usage list_transform(list = `ANY[]`, `lambda(x)` = LAMBDA)
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
 #' @examples
@@ -1294,7 +1294,7 @@ list_transform <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' Counts the unique elements of a `list`.
 #'
 #' @name list_unique
-#' @usage NULL
+#' @usage list_unique(list = `ANY[]`)
 #' @param list `ANY[]`
 #' @examples
 #' \dontrun{
@@ -1309,7 +1309,7 @@ list_unique <- function(list = `ANY[]`) {
 #' Creates a LIST containing the argument values.
 #'
 #' @name list_value
-#' @usage NULL
+#' @usage list_value()
 
 #' @examples
 #' \dontrun{
@@ -1324,7 +1324,7 @@ list_value <- function() {
 #' Returns a list with the `BOOLEAN`s in `mask_list` applied as a mask to the `value_list`.
 #'
 #' @name list_where
-#' @usage NULL
+#' @usage list_where(value_list = `T[]`, mask_list = `BOOLEAN[]`)
 #' @param value_list `T[]`
 #' @param mask_list `BOOLEAN[]`
 #' @examples
@@ -1340,7 +1340,7 @@ list_where <- function(value_list = `T[]`, mask_list = `BOOLEAN[]`) {
 #' Computes the natural logarithm of x.
 #'
 #' @name ln
-#' @usage NULL
+#' @usage ln(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -1355,7 +1355,7 @@ ln <- function(x = DOUBLE) {
 #' Computes the 10-log of x.
 #'
 #' @name log10
-#' @usage NULL
+#' @usage log10(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -1370,7 +1370,7 @@ log10 <- function(x = DOUBLE) {
 #' Computes the 2-log of x.
 #'
 #' @name log2
-#' @usage NULL
+#' @usage log2(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -1385,7 +1385,7 @@ log2 <- function(x = DOUBLE) {
 #' Converts `string` to lower case.
 #'
 #' @name lower
-#' @usage NULL
+#' @usage lower(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -1400,7 +1400,7 @@ lower <- function(string = VARCHAR) {
 #' Pads the `string` with the `character` on the left until it has `count` characters. Truncates the `string` on the right if it has more than `count` characters.
 #'
 #' @name lpad
-#' @usage NULL
+#' @usage lpad(string = VARCHAR, count = INTEGER, character = VARCHAR)
 #' @param string `VARCHAR`
 #' @param count `INTEGER`
 #' @param character `VARCHAR`
@@ -1417,7 +1417,7 @@ lpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #' The time for the given parts.
 #'
 #' @name make_time
-#' @usage NULL
+#' @usage make_time(hour = BIGINT, minute = BIGINT, seconds = DOUBLE)
 #' @param hour `BIGINT`
 #' @param minute `BIGINT`
 #' @param seconds `DOUBLE`
@@ -1434,7 +1434,7 @@ make_time <- function(hour = BIGINT, minute = BIGINT, seconds = DOUBLE) {
 #' The timestamp for the given microseconds since the epoch.
 #'
 #' @name make_timestamp_ms
-#' @usage NULL
+#' @usage make_timestamp_ms(nanos = BIGINT)
 #' @param nanos `BIGINT`
 #' @examples
 #' \dontrun{
@@ -1449,7 +1449,7 @@ make_timestamp_ms <- function(nanos = BIGINT) {
 #' The timestamp for the given nanoseconds since epoch.
 #'
 #' @name make_timestamp_ns
-#' @usage NULL
+#' @usage make_timestamp_ns(nanos = BIGINT)
 #' @param nanos `BIGINT`
 #' @examples
 #' \dontrun{
@@ -1464,7 +1464,7 @@ make_timestamp_ns <- function(nanos = BIGINT) {
 #' Checks if a map contains a given key.
 #'
 #' @name map_contains
-#' @usage NULL
+#' @usage map_contains(map = `MAP(K, V)`, key = K)
 #' @param map `MAP(K, V)`
 #' @param key `K`
 #' @examples
@@ -1480,7 +1480,7 @@ map_contains <- function(map = `MAP(K, V)`, key = K) {
 #' Returns the map entries as a list of keys/values.
 #'
 #' @name map_entries
-#' @usage NULL
+#' @usage map_entries(map = `MAP(K, V)`)
 #' @param map `MAP(K, V)`
 #' @examples
 #' \dontrun{
@@ -1495,7 +1495,7 @@ map_entries <- function(map = `MAP(K, V)`) {
 #' Returns a list containing the value for a given key or an empty list if the key is not contained in the map. The type of the key provided in the second parameter must match the type of the map’s keys else an error is returned.
 #'
 #' @name map_extract
-#' @usage NULL
+#' @usage map_extract(map = `MAP(K, V)`, key = K)
 #' @param map `MAP(K, V)`
 #' @param key `K`
 #' @examples
@@ -1511,7 +1511,7 @@ map_extract <- function(map = `MAP(K, V)`, key = K) {
 #' Returns the value for a given key or NULL if the key is not contained in the map. The type of the key provided in the second parameter must match the type of the map’s keys else an error is returned.
 #'
 #' @name map_extract_value
-#' @usage NULL
+#' @usage map_extract_value(map = `MAP(K, V)`, key = K)
 #' @param map `MAP(K, V)`
 #' @param key `K`
 #' @examples
@@ -1527,7 +1527,7 @@ map_extract_value <- function(map = `MAP(K, V)`, key = K) {
 #' Returns a map created from the entries of the array.
 #'
 #' @name map_from_entries
-#' @usage NULL
+#' @usage map_from_entries(map = `STRUCT(K, V)[]`)
 #' @param map `STRUCT(K, V)[]`
 #' @examples
 #' \dontrun{
@@ -1542,7 +1542,7 @@ map_from_entries <- function(map = `STRUCT(K, V)[]`) {
 #' Returns the keys of a map as a list.
 #'
 #' @name map_keys
-#' @usage NULL
+#' @usage map_keys(map = `MAP(K, V)`)
 #' @param map `MAP(K, V)`
 #' @examples
 #' \dontrun{
@@ -1557,7 +1557,7 @@ map_keys <- function(map = `MAP(K, V)`) {
 #' Returns the values of a map as a list.
 #'
 #' @name map_values
-#' @usage NULL
+#' @usage map_values(map = `MAP(K, V)`)
 #' @param map `MAP(K, V)`
 #' @examples
 #' \dontrun{
@@ -1572,7 +1572,7 @@ map_values <- function(map = `MAP(K, V)`) {
 #' The Hamming distance between to strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., `a` and `A`) are considered different.
 #'
 #' @name mismatches
-#' @usage NULL
+#' @usage mismatches(s1 = VARCHAR, s2 = VARCHAR)
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
 #' @examples
@@ -1588,7 +1588,7 @@ mismatches <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' Converts `string` to Unicode NFC normalized string. Useful for comparisons and ordering if text data is mixed between NFC normalized and not.
 #'
 #' @name nfc_normalize
-#' @usage NULL
+#' @usage nfc_normalize(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -1603,7 +1603,7 @@ nfc_normalize <- function(string = VARCHAR) {
 #' Normalizes an INTERVAL to an equivalent interval.
 #'
 #' @name normalized_interval
-#' @usage NULL
+#' @usage normalized_interval(interval = INTERVAL)
 #' @param interval `INTERVAL`
 #' @examples
 #' \dontrun{
@@ -1618,7 +1618,7 @@ normalized_interval <- function(interval = INTERVAL) {
 #' Returns `false` if the `string` matches the `like_specifier` (see Pattern Matching) using case-insensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name not_ilike_escape
-#' @usage NULL
+#' @usage not_ilike_escape(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR)
 #' @param string `VARCHAR`
 #' @param like_specifier `VARCHAR`
 #' @param escape_character `VARCHAR`
@@ -1635,7 +1635,7 @@ not_ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_
 #' Returns `false` if the `string` matches the `like_specifier` (see Pattern Matching) using case-sensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name not_like_escape
-#' @usage NULL
+#' @usage not_like_escape(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR)
 #' @param string `VARCHAR`
 #' @param like_specifier `VARCHAR`
 #' @param escape_character `VARCHAR`
@@ -1652,7 +1652,7 @@ not_like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_c
 #' Returns an `INTEGER` representing the `unicode` codepoint of the first character in the `string`.
 #'
 #' @name ord
-#' @usage NULL
+#' @usage ord(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -1667,7 +1667,7 @@ ord <- function(string = VARCHAR) {
 #' Parse the message into the expected logical type.
 #'
 #' @name parse_duckdb_log_message
-#' @usage NULL
+#' @usage parse_duckdb_log_message(type = VARCHAR, message = VARCHAR)
 #' @param type `VARCHAR`
 #' @param message `VARCHAR`
 #' @examples
@@ -1683,7 +1683,7 @@ parse_duckdb_log_message <- function(type = VARCHAR, message = VARCHAR) {
 #' Returns the value of pi.
 #'
 #' @name pi
-#' @usage NULL
+#' @usage pi()
 
 #' @examples
 #' \dontrun{
@@ -1698,7 +1698,7 @@ pi <- function() {
 #' Returns location of first occurrence of `search_string` in `string`, counting from 1. Returns 0 if no match found.
 #'
 #' @name position
-#' @usage NULL
+#' @usage position(string = VARCHAR, search_string = VARCHAR)
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
 #' @examples
@@ -1714,7 +1714,7 @@ position <- function(string = VARCHAR, search_string = VARCHAR) {
 #' Computes x to the power of y.
 #'
 #' @name pow
-#' @usage NULL
+#' @usage pow(x = DOUBLE, y = DOUBLE)
 #' @param x `DOUBLE`
 #' @param y `DOUBLE`
 #' @examples
@@ -1730,7 +1730,7 @@ pow <- function(x = DOUBLE, y = DOUBLE) {
 #' Computes x to the power of y.
 #'
 #' @name power
-#' @usage NULL
+#' @usage power(x = DOUBLE, y = DOUBLE)
 #' @param x `DOUBLE`
 #' @param y `DOUBLE`
 #' @examples
@@ -1746,7 +1746,7 @@ power <- function(x = DOUBLE, y = DOUBLE) {
 #' Returns `true` if `string` starts with `search_string`.
 #'
 #' @name prefix
-#' @usage NULL
+#' @usage prefix(string = VARCHAR, search_string = VARCHAR)
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
 #' @examples
@@ -1762,7 +1762,7 @@ prefix <- function(string = VARCHAR, search_string = VARCHAR) {
 #' Converts degrees to radians.
 #'
 #' @name radians
-#' @usage NULL
+#' @usage radians(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -1777,7 +1777,7 @@ radians <- function(x = DOUBLE) {
 #' Escapes special patterns to turn `string` into a regular expression similarly to Python's `re.escape` function.
 #'
 #' @name regexp_escape
-#' @usage NULL
+#' @usage regexp_escape(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -1792,7 +1792,7 @@ regexp_escape <- function(string = VARCHAR) {
 #' Map a struct to another struct type, potentially re-ordering, renaming and casting members and filling in defaults for missing values.
 #'
 #' @name remap_struct
-#' @usage NULL
+#' @usage remap_struct(input = ANY, target_type = ANY, mapping = ANY, defaults = ANY)
 #' @param input `ANY`
 #' @param target_type `ANY`
 #' @param mapping `ANY`
@@ -1810,7 +1810,7 @@ remap_struct <- function(input = ANY, target_type = ANY, mapping = ANY, defaults
 #' Replaces any occurrences of the `source` with `target` in `string`.
 #'
 #' @name replace
-#' @usage NULL
+#' @usage replace(string = VARCHAR, source = VARCHAR, target = VARCHAR)
 #' @param string `VARCHAR`
 #' @param source `VARCHAR`
 #' @param target `VARCHAR`
@@ -1827,7 +1827,7 @@ replace <- function(string = VARCHAR, source = VARCHAR, target = VARCHAR) {
 #' Casts all fields of type1 to type2.
 #'
 #' @name replace_type
-#' @usage NULL
+#' @usage replace_type(param = ANY, type1 = ANY, type2 = ANY)
 #' @param param `ANY`
 #' @param type1 `ANY`
 #' @param type2 `ANY`
@@ -1844,7 +1844,7 @@ replace_type <- function(param = ANY, type1 = ANY, type2 = ANY) {
 #' Reverses the `string`.
 #'
 #' @name reverse
-#' @usage NULL
+#' @usage reverse(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -1859,7 +1859,7 @@ reverse <- function(string = VARCHAR) {
 #' Extract the right-most `count` characters.
 #'
 #' @name right
-#' @usage NULL
+#' @usage right(string = VARCHAR, count = BIGINT)
 #' @param string `VARCHAR`
 #' @param count `BIGINT`
 #' @examples
@@ -1875,7 +1875,7 @@ right <- function(string = VARCHAR, count = BIGINT) {
 #' Extracts the right-most `count` grapheme clusters.
 #'
 #' @name right_grapheme
-#' @usage NULL
+#' @usage right_grapheme(string = VARCHAR, count = BIGINT)
 #' @param string `VARCHAR`
 #' @param count `BIGINT`
 #' @examples
@@ -1891,7 +1891,7 @@ right_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #' Pads the `string` with the `character` on the right until it has `count` characters. Truncates the `string` on the right if it has more than `count` characters.
 #'
 #' @name rpad
-#' @usage NULL
+#' @usage rpad(string = VARCHAR, count = INTEGER, character = VARCHAR)
 #' @param string `VARCHAR`
 #' @param count `INTEGER`
 #' @param character `VARCHAR`
@@ -1908,7 +1908,7 @@ rpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #' Sets the nth bit in bitstring to newvalue; the first (leftmost) bit is indexed 0. Returns a new bitstring.
 #'
 #' @name set_bit
-#' @usage NULL
+#' @usage set_bit(bitstring = BIT, index = INTEGER, new_value = INTEGER)
 #' @param bitstring `BIT`
 #' @param index `INTEGER`
 #' @param new_value `INTEGER`
@@ -1925,7 +1925,7 @@ set_bit <- function(bitstring = BIT, index = INTEGER, new_value = INTEGER) {
 #' Computes the sin of x.
 #'
 #' @name sin
-#' @usage NULL
+#' @usage sin(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -1940,7 +1940,7 @@ sin <- function(x = DOUBLE) {
 #' Computes the hyperbolic sin of x.
 #'
 #' @name sinh
-#' @usage NULL
+#' @usage sinh(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -1955,7 +1955,7 @@ sinh <- function(x = DOUBLE) {
 #' Splits the `string` along the `separator`.
 #'
 #' @name split
-#' @usage NULL
+#' @usage split(string = VARCHAR, separator = VARCHAR)
 #' @param string `VARCHAR`
 #' @param separator `VARCHAR`
 #' @examples
@@ -1971,7 +1971,7 @@ split <- function(string = VARCHAR, separator = VARCHAR) {
 #' Returns the square root of x.
 #'
 #' @name sqrt
-#' @usage NULL
+#' @usage sqrt(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -1986,7 +1986,7 @@ sqrt <- function(x = DOUBLE) {
 #' Returns `true` if `string` begins with `search_string`.
 #'
 #' @name starts_with
-#' @usage NULL
+#' @usage starts_with(string = VARCHAR, search_string = VARCHAR)
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
 #' @examples
@@ -2002,7 +2002,7 @@ starts_with <- function(string = VARCHAR, search_string = VARCHAR) {
 #' Splits the `string` along the `separator`.
 #'
 #' @name str_split
-#' @usage NULL
+#' @usage str_split(string = VARCHAR, separator = VARCHAR)
 #' @param string `VARCHAR`
 #' @param separator `VARCHAR`
 #' @examples
@@ -2018,7 +2018,7 @@ str_split <- function(string = VARCHAR, separator = VARCHAR) {
 #' Splits the `string` along the `separator`.
 #'
 #' @name string_split
-#' @usage NULL
+#' @usage string_split(string = VARCHAR, separator = VARCHAR)
 #' @param string `VARCHAR`
 #' @param separator `VARCHAR`
 #' @examples
@@ -2034,7 +2034,7 @@ string_split <- function(string = VARCHAR, separator = VARCHAR) {
 #' Splits the `string` along the `separator`.
 #'
 #' @name string_to_array
-#' @usage NULL
+#' @usage string_to_array(string = VARCHAR, separator = VARCHAR)
 #' @param string `VARCHAR`
 #' @param separator `VARCHAR`
 #' @examples
@@ -2050,7 +2050,7 @@ string_to_array <- function(string = VARCHAR, separator = VARCHAR) {
 #' Strips accents from `string`.
 #'
 #' @name strip_accents
-#' @usage NULL
+#' @usage strip_accents(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -2065,7 +2065,7 @@ strip_accents <- function(string = VARCHAR) {
 #' Number of bytes in `string`.
 #'
 #' @name strlen
-#' @usage NULL
+#' @usage strlen(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -2080,7 +2080,7 @@ strlen <- function(string = VARCHAR) {
 #' Returns location of first occurrence of `search_string` in `string`, counting from 1. Returns 0 if no match found.
 #'
 #' @name strpos
-#' @usage NULL
+#' @usage strpos(string = VARCHAR, search_string = VARCHAR)
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
 #' @examples
@@ -2096,7 +2096,7 @@ strpos <- function(string = VARCHAR, search_string = VARCHAR) {
 #' Check if an unnamed STRUCT contains the value.
 #'
 #' @name struct_contains
-#' @usage NULL
+#' @usage struct_contains(struct = STRUCT, `'entry'` = ANY)
 #' @param struct `STRUCT`
 #' @param 'entry' `ANY`
 #' @examples
@@ -2112,7 +2112,7 @@ struct_contains <- function(struct = STRUCT, `'entry'` = ANY) {
 #' Check if an unnamed STRUCT contains the value.
 #'
 #' @name struct_has
-#' @usage NULL
+#' @usage struct_has(struct = STRUCT, `'entry'` = ANY)
 #' @param struct `STRUCT`
 #' @param 'entry' `ANY`
 #' @examples
@@ -2128,7 +2128,7 @@ struct_has <- function(struct = STRUCT, `'entry'` = ANY) {
 #' Get the position of the entry in an unnamed STRUCT, starting at 1.
 #'
 #' @name struct_indexof
-#' @usage NULL
+#' @usage struct_indexof(struct = STRUCT, `'entry'` = ANY)
 #' @param struct `STRUCT`
 #' @param 'entry' `ANY`
 #' @examples
@@ -2144,7 +2144,7 @@ struct_indexof <- function(struct = STRUCT, `'entry'` = ANY) {
 #' Get the position of the entry in an unnamed STRUCT, starting at 1.
 #'
 #' @name struct_position
-#' @usage NULL
+#' @usage struct_position(struct = STRUCT, `'entry'` = ANY)
 #' @param struct `STRUCT`
 #' @param 'entry' `ANY`
 #' @examples
@@ -2160,7 +2160,7 @@ struct_position <- function(struct = STRUCT, `'entry'` = ANY) {
 #' Returns `true` if `string` ends with `search_string`.
 #'
 #' @name suffix
-#' @usage NULL
+#' @usage suffix(string = VARCHAR, search_string = VARCHAR)
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
 #' @examples
@@ -2176,7 +2176,7 @@ suffix <- function(string = VARCHAR, search_string = VARCHAR) {
 #' Computes the tan of x.
 #'
 #' @name tan
-#' @usage NULL
+#' @usage tan(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -2191,7 +2191,7 @@ tan <- function(x = DOUBLE) {
 #' Computes the hyperbolic tan of x.
 #'
 #' @name tanh
-#' @usage NULL
+#' @usage tanh(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -2206,7 +2206,7 @@ tanh <- function(x = DOUBLE) {
 #' Converts a TIME WITH TIME ZONE to an integer sort key.
 #'
 #' @name timetz_byte_comparable
-#' @usage NULL
+#' @usage timetz_byte_comparable(time_tz = `TIME WITH TIME ZONE`)
 #' @param time_tz `TIME WITH TIME ZONE`
 #' @examples
 #' \dontrun{
@@ -2221,7 +2221,7 @@ timetz_byte_comparable <- function(time_tz = `TIME WITH TIME ZONE`) {
 #' Converts a `blob` to a base64 encoded string.
 #'
 #' @name to_base64
-#' @usage NULL
+#' @usage to_base64(blob = BLOB)
 #' @param blob `BLOB`
 #' @examples
 #' \dontrun{
@@ -2236,7 +2236,7 @@ to_base64 <- function(blob = BLOB) {
 #' Construct a hour interval.
 #'
 #' @name to_hours
-#' @usage NULL
+#' @usage to_hours(integer = BIGINT)
 #' @param integer `BIGINT`
 #' @examples
 #' \dontrun{
@@ -2251,7 +2251,7 @@ to_hours <- function(integer = BIGINT) {
 #' Construct a microsecond interval.
 #'
 #' @name to_microseconds
-#' @usage NULL
+#' @usage to_microseconds(integer = BIGINT)
 #' @param integer `BIGINT`
 #' @examples
 #' \dontrun{
@@ -2266,7 +2266,7 @@ to_microseconds <- function(integer = BIGINT) {
 #' Construct a millisecond interval.
 #'
 #' @name to_milliseconds
-#' @usage NULL
+#' @usage to_milliseconds(double = DOUBLE)
 #' @param double `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -2281,7 +2281,7 @@ to_milliseconds <- function(double = DOUBLE) {
 #' Construct a minute interval.
 #'
 #' @name to_minutes
-#' @usage NULL
+#' @usage to_minutes(integer = BIGINT)
 #' @param integer `BIGINT`
 #' @examples
 #' \dontrun{
@@ -2296,7 +2296,7 @@ to_minutes <- function(integer = BIGINT) {
 #' Construct a second interval.
 #'
 #' @name to_seconds
-#' @usage NULL
+#' @usage to_seconds(double = DOUBLE)
 #' @param double `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -2311,7 +2311,7 @@ to_seconds <- function(double = DOUBLE) {
 #' Converts secs since epoch to a timestamp with time zone.
 #'
 #' @name to_timestamp
-#' @usage NULL
+#' @usage to_timestamp(sec = DOUBLE)
 #' @param sec `DOUBLE`
 #' @examples
 #' \dontrun{
@@ -2326,7 +2326,7 @@ to_timestamp <- function(sec = DOUBLE) {
 #' Replaces each character in `string` that matches a character in the `from` set with the corresponding character in the `to` set. If `from` is longer than `to`, occurrences of the extra characters in `from` are deleted.
 #'
 #' @name translate
-#' @usage NULL
+#' @usage translate(string = VARCHAR, from = VARCHAR, to = VARCHAR)
 #' @param string `VARCHAR`
 #' @param from `VARCHAR`
 #' @param to `VARCHAR`
@@ -2343,7 +2343,7 @@ translate <- function(string = VARCHAR, from = VARCHAR, to = VARCHAR) {
 #' Returns the name of the data type of the result of the expression.
 #'
 #' @name typeof
-#' @usage NULL
+#' @usage typeof(expression = ANY)
 #' @param expression `ANY`
 #' @examples
 #' \dontrun{
@@ -2358,7 +2358,7 @@ typeof <- function(expression = ANY) {
 #' Converts `string` to upper case.
 #'
 #' @name ucase
-#' @usage NULL
+#' @usage ucase(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -2373,7 +2373,7 @@ ucase <- function(string = VARCHAR) {
 #' Converts a `value` from binary representation to a blob.
 #'
 #' @name unbin
-#' @usage NULL
+#' @usage unbin(value = VARCHAR)
 #' @param value `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -2388,7 +2388,7 @@ unbin <- function(value = VARCHAR) {
 #' Converts a `value` from hexadecimal representation to a blob.
 #'
 #' @name unhex
-#' @usage NULL
+#' @usage unhex(value = VARCHAR)
 #' @param value `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -2403,7 +2403,7 @@ unhex <- function(value = VARCHAR) {
 #' Returns an `INTEGER` representing the `unicode` codepoint of the first character in the `string`.
 #'
 #' @name unicode
-#' @usage NULL
+#' @usage unicode(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -2418,7 +2418,7 @@ unicode <- function(string = VARCHAR) {
 #' Extract the value with the named tags from the union. NULL if the tag is not currently selected.
 #'
 #' @name union_extract
-#' @usage NULL
+#' @usage union_extract(union = UNION, tag = VARCHAR)
 #' @param union `UNION`
 #' @param tag `VARCHAR`
 #' @examples
@@ -2434,7 +2434,7 @@ union_extract <- function(union = UNION, tag = VARCHAR) {
 #' Retrieve the currently selected tag of the union as an ENUM.
 #'
 #' @name union_tag
-#' @usage NULL
+#' @usage union_tag(union = UNION)
 #' @param union `UNION`
 #' @examples
 #' \dontrun{
@@ -2449,7 +2449,7 @@ union_tag <- function(union = UNION) {
 #' Converts `string` to upper case.
 #'
 #' @name upper
-#' @usage NULL
+#' @usage upper(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -2464,7 +2464,7 @@ upper <- function(string = VARCHAR) {
 #' Decodes a URL from a representation using Percent-Encoding.
 #'
 #' @name url_decode
-#' @usage NULL
+#' @usage url_decode(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -2479,7 +2479,7 @@ url_decode <- function(string = VARCHAR) {
 #' Encodes a URL to a representation using Percent-Encoding.
 #'
 #' @name url_encode
-#' @usage NULL
+#' @usage url_encode(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
@@ -2494,7 +2494,7 @@ url_encode <- function(string = VARCHAR) {
 #' Extract the timestamp for the given UUID v7.
 #'
 #' @name uuid_extract_timestamp
-#' @usage NULL
+#' @usage uuid_extract_timestamp(uuid = UUID)
 #' @param uuid `UUID`
 #' @examples
 #' \dontrun{
@@ -2509,7 +2509,7 @@ uuid_extract_timestamp <- function(uuid = UUID) {
 #' Extract a version for the given UUID.
 #'
 #' @name uuid_extract_version
-#' @usage NULL
+#' @usage uuid_extract_version(uuid = UUID)
 #' @param uuid `UUID`
 #' @examples
 #' \dontrun{
@@ -2524,11 +2524,11 @@ uuid_extract_version <- function(uuid = UUID) {
 #' Returns the internal type of the `input_variant`.
 #'
 #' @name variant_typeof
-#' @usage NULL
+#' @usage variant_typeof(input_variant = VARIANT)
 #' @param input_variant `VARIANT`
 #' @examples
 #' \dontrun{
-#' variant_typeof({'a': 42, 'b': [1,2,3])::VARIANT)
+#' variant_typeof({'a': 42, 'b': [1,2,3]})
 #' }
 variant_typeof <- function(input_variant = VARIANT) {
   stop("DuckDB function variant_typeof() is not available in R.")
@@ -2539,7 +2539,7 @@ variant_typeof <- function(input_variant = VARIANT) {
 #' Returns the VectorType of a given column.
 #'
 #' @name vector_type
-#' @usage NULL
+#' @usage vector_type(col = ANY)
 #' @param col `ANY`
 #' @examples
 #' \dontrun{
@@ -2554,7 +2554,7 @@ vector_type <- function(col = ANY) {
 #' Returns the currently active version of DuckDB in this format: v0.3.2	.
 #'
 #' @name version
-#' @usage NULL
+#' @usage version()
 
 #' @examples
 #' \dontrun{

@@ -3,6 +3,9 @@
 \name{apply}
 \alias{apply}
 \title{DuckDB function apply}
+\usage{
+apply(list = `ANY[]`, `lambda(x)` = LAMBDA)
+}
 \arguments{
 \item{list}{\code{ANY[]}}
 

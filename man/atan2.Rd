@@ -3,6 +3,9 @@
 \name{atan2}
 \alias{atan2}
 \title{DuckDB function atan2}
+\usage{
+atan2(y = DOUBLE, x = DOUBLE)
+}
 \arguments{
 \item{y}{\code{DOUBLE}}
 

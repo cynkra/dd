@@ -3,6 +3,9 @@
 \name{power}
 \alias{power}
 \title{DuckDB function power}
+\usage{
+power(x = DOUBLE, y = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 

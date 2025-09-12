@@ -3,6 +3,9 @@
 \name{ascii}
 \alias{ascii}
 \title{DuckDB function ascii}
+\usage{
+ascii(string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 }

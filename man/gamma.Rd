@@ -3,6 +3,9 @@
 \name{gamma}
 \alias{gamma}
 \title{DuckDB function gamma}
+\usage{
+gamma(x = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 }

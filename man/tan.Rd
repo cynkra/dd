@@ -3,6 +3,9 @@
 \name{tan}
 \alias{tan}
 \title{DuckDB function tan}
+\usage{
+tan(x = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 }

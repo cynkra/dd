@@ -3,6 +3,9 @@
 \name{element_at}
 \alias{element_at}
 \title{DuckDB function element_at}
+\usage{
+element_at(map = `MAP(K, V)`, key = K)
+}
 \arguments{
 \item{map}{\code{MAP(K, V)}}
 

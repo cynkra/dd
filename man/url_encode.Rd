@@ -3,6 +3,9 @@
 \name{url_encode}
 \alias{url_encode}
 \title{DuckDB function url_encode}
+\usage{
+url_encode(string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 }

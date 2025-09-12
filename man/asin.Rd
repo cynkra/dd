@@ -3,6 +3,9 @@
 \name{asin}
 \alias{asin}
 \title{DuckDB function asin}
+\usage{
+asin(x = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 }

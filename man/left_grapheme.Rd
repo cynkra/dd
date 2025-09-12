@@ -3,6 +3,9 @@
 \name{left_grapheme}
 \alias{left_grapheme}
 \title{DuckDB function left_grapheme}
+\usage{
+left_grapheme(string = VARCHAR, count = BIGINT)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

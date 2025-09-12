@@ -3,6 +3,9 @@
 \name{struct_has}
 \alias{struct_has}
 \title{DuckDB function struct_has}
+\usage{
+struct_has(struct = STRUCT, `'entry'` = ANY)
+}
 \arguments{
 \item{struct}{\code{STRUCT}}
 

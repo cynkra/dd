@@ -3,6 +3,9 @@
 \name{damerau_levenshtein}
 \alias{damerau_levenshtein}
 \title{DuckDB function damerau_levenshtein}
+\usage{
+damerau_levenshtein(s1 = VARCHAR, s2 = VARCHAR)
+}
 \arguments{
 \item{s1}{\code{VARCHAR}}
 

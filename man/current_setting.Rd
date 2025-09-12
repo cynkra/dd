@@ -3,6 +3,9 @@
 \name{current_setting}
 \alias{current_setting}
 \title{DuckDB function current_setting}
+\usage{
+current_setting(setting_name = VARCHAR)
+}
 \arguments{
 \item{setting_name}{\code{VARCHAR}}
 }

@@ -3,6 +3,9 @@
 \name{to_hours}
 \alias{to_hours}
 \title{DuckDB function to_hours}
+\usage{
+to_hours(integer = BIGINT)
+}
 \arguments{
 \item{integer}{\code{BIGINT}}
 }

@@ -3,6 +3,9 @@
 \name{position}
 \alias{position}
 \title{DuckDB function position}
+\usage{
+position(string = VARCHAR, search_string = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

@@ -3,6 +3,9 @@
 \name{from_binary}
 \alias{from_binary}
 \title{DuckDB function from_binary}
+\usage{
+from_binary(value = VARCHAR)
+}
 \arguments{
 \item{value}{\code{VARCHAR}}
 }

@@ -3,6 +3,9 @@
 \name{map_contains}
 \alias{map_contains}
 \title{DuckDB function map_contains}
+\usage{
+map_contains(map = `MAP(K, V)`, key = K)
+}
 \arguments{
 \item{map}{\code{MAP(K, V)}}
 

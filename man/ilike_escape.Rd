@@ -3,6 +3,9 @@
 \name{ilike_escape}
 \alias{ilike_escape}
 \title{DuckDB function ilike_escape}
+\usage{
+ilike_escape(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

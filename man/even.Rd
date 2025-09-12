@@ -3,6 +3,9 @@
 \name{even}
 \alias{even}
 \title{DuckDB function even}
+\usage{
+even(x = DOUBLE)
+}
 \arguments{
 \item{x}{\code{DOUBLE}}
 }
