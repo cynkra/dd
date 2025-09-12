@@ -8,38 +8,52 @@ conflicts_prefer(dplyr::filter)
 
 con <- DBI::dbConnect(duckdb::duckdb())
 
+filter_print <- function(.data, expr) {
+  quo <- rlang::enquo(expr)
+  out <-
+    .data |>
+    filter(!!quo)
+
+  cli::cli_inform(c(
+    "{.expr {rlang::quo_text(quo)}}",
+    i = "{nrow(.data)} -> {nrow(out)}"
+  ))
+
+  out
+}
+
 funs <-
   DBI::dbGetQuery(con, "FROM duckdb_functions()") |>
   as_tibble() |>
   select(-database_name, -database_oid, -schema_name, -function_oid, -comment, -tags) |>
-  filter(function_type == "scalar") |>
+  filter_print(function_type == "scalar") |>
   select(-function_type) |>
-  filter(is.na(varargs)) |>
+  filter_print(is.na(varargs)) |>
   select(-varargs) |>
-  filter(!has_side_effects) |>
+  filter_print(!has_side_effects) |>
   select(-has_side_effects) |>
-  filter(is.na(macro_definition)) |>
+  filter_print(is.na(macro_definition)) |>
   select(-macro_definition) |>
-  filter(internal) |>
+  filter_print(internal) |>
   select(-internal) |>
-  filter(stability == "CONSISTENT") |>
+  filter_print(stability == "CONSISTENT") |>
   select(-stability) |>
   # FIXME: What if description is missing
-  filter(!is.na(description)) |>
+  filter_print(!is.na(description)) |>
   # FIXME: Add support if return type is not given.
-  filter(!is.na(return_type)) |>
+  filter_print(!is.na(return_type)) |>
   # FIXME: Operators
-  filter(grepl("^[a-z]", function_name)) |>
+  filter_print(grepl("^[a-z]", function_name)) |>
   # FIXME: Description not unique
   mutate(.by = function_name, n_desc = length(unique(description))) |>
-  filter(n_desc == 1) |>
+  filter_print(n_desc == 1) |>
   select(-n_desc) |>
   # FIXME: More than one overload
   mutate(.by = function_name, n = n()) |>
-  filter(n == 1) |>
+  filter_print(n == 1) |>
   select(-n) |>
   # FIXME: Irregular
-  filter(!(function_name %in% c("struct_extract_at"))) |>
+  filter_print(!(function_name %in% c("struct_extract_at"))) |>
   arrange(function_name)
 
 fun_def <-
@@ -55,7 +69,7 @@ code <-
   fun_def |>
   mutate(description = gsub("[.]+$", "", description), ".") |>
   mutate(params = map_chr(param_data, ~ glue_collapse(glue("#' @param {.x$name} `{.x$type}`"), sep = "\n"))) |>
-  mutate(signature = map_chr(param_data, ~ glue_collapse(glue("{.x$name} = {tibble:::tick_if_needed(.x$type)}"), sep = ", "))) |>
+  mutate(signature = map_chr(param_data, ~ glue_collapse(glue("{tibble:::tick_if_needed(.x$name)} = {tibble:::tick_if_needed(.x$type)}"), sep = ", "))) |>
   mutate(roxy = glue(r"(
     #' DuckDB function {function_name}
     #'
