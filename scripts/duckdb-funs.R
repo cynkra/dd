@@ -22,6 +22,13 @@ filter_print <- function(.data, expr) {
   out
 }
 
+browse_data <- function(x) {
+  print(x)
+  View(x)
+  browser()
+  x
+}
+
 funs <-
   DBI::dbGetQuery(con, "FROM duckdb_functions()") |>
   as_tibble() |>
