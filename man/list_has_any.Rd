@@ -4,9 +4,9 @@
 \alias{list_has_any}
 \title{DuckDB function list_has_any}
 \arguments{
-\item{l1}{\code{ANY[]}}
+\item{list1}{\code{T[]}}
 
-\item{l2}{\code{ANY[]}}
+\item{list2}{\code{T[]}}
 }
 \description{
 Returns true if the lists have any element in common. NULLs are ignored.

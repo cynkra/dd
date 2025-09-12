@@ -4,15 +4,15 @@
 \alias{array_has_any}
 \title{DuckDB function array_has_any}
 \arguments{
-\item{l1}{\code{ANY[]}}
+\item{list1}{\code{T[]}}
 
-\item{l2}{\code{ANY[]}}
+\item{list2}{\code{T[]}}
 }
 \description{
 Returns true if the lists have any element in common. NULLs are ignored.
 }
 \examples{
 \dontrun{
-list_has_any([1, 2, 3], [2, 3, 4])
+array_has_any([1, 2, 3], [2, 3, 4])
 }
 }

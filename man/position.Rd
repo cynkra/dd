@@ -4,15 +4,15 @@
 \alias{position}
 \title{DuckDB function position}
 \arguments{
-\item{haystack}{\code{VARCHAR}}
+\item{string}{\code{VARCHAR}}
 
-\item{needle}{\code{VARCHAR}}
+\item{search_string}{\code{VARCHAR}}
 }
 \description{
-Returns location of first occurrence of needle in haystack, counting from 1. Returns 0 if no match found.
+Returns location of first occurrence of \code{search_string} in \code{string}, counting from 1. Returns 0 if no match found.
 }
 \examples{
 \dontrun{
-instr('test test','es')
+position('b' IN 'abc')
 }
 }

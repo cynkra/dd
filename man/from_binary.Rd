@@ -7,10 +7,10 @@
 \item{value}{\code{VARCHAR}}
 }
 \description{
-Converts a value from binary representation to a blob.
+Converts a \code{value} from binary representation to a blob.
 }
 \examples{
 \dontrun{
-unbin('0110')
+from_binary('0110')
 }
 }

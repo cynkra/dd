@@ -4,15 +4,15 @@
 \alias{array_has_all}
 \title{DuckDB function array_has_all}
 \arguments{
-\item{l1}{\code{ANY[]}}
+\item{list1}{\code{T[]}}
 
-\item{l2}{\code{ANY[]}}
+\item{list2}{\code{T[]}}
 }
 \description{
-Returns true if all elements of l2 are in l1. NULLs are ignored.
+Returns true if all elements of list2 are in list1. NULLs are ignored.
 }
 \examples{
 \dontrun{
-list_has_all([1, 2, 3], [2, 3])
+array_has_all([1, 2, 3], [2, 3])
 }
 }

@@ -4,10 +4,10 @@
 \alias{flatten}
 \title{DuckDB function flatten}
 \arguments{
-\item{nested_list}{\code{ANY[][]}}
+\item{nested_list}{\code{T[][]}}
 }
 \description{
-Flatten a nested list by one level.
+Flattens a nested list by one level.
 }
 \examples{
 \dontrun{

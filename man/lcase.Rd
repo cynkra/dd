@@ -11,6 +11,6 @@ Converts \code{string} to lower case.
 }
 \examples{
 \dontrun{
-lower('Hello')
+lcase('Hello')
 }
 }

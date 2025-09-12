@@ -4,15 +4,15 @@
 \alias{array_where}
 \title{DuckDB function array_where}
 \arguments{
-\item{value_list}{\code{ANY[]}}
+\item{value_list}{\code{T[]}}
 
 \item{mask_list}{\code{BOOLEAN[]}}
 }
 \description{
-Returns a list with the BOOLEANs in mask_list applied as a mask to the value_list.
+Returns a list with the \code{BOOLEAN}s in \code{mask_list} applied as a mask to the \code{value_list}.
 }
 \examples{
 \dontrun{
-list_where([10, 20, 30, 40], [true, false, false, true])
+array_where([10, 20, 30, 40], [true, false, false, true])
 }
 }

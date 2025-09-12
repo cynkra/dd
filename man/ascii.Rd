@@ -7,7 +7,7 @@
 \item{string}{\code{VARCHAR}}
 }
 \description{
-Returns an integer that represents the Unicode code point of the first character of the string.
+Returns an integer that represents the Unicode code point of the first character of the \code{string}.
 }
 \examples{
 \dontrun{

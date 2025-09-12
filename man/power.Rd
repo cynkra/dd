@@ -13,6 +13,6 @@ Computes x to the power of y.
 }
 \examples{
 \dontrun{
-pow(2, 3)
+power(2, 3)
 }
 }

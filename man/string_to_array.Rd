@@ -13,6 +13,6 @@ Splits the \code{string} along the \code{separator}.
 }
 \examples{
 \dontrun{
-string_split('hello-world', '-')
+string_to_array('hello-world', '-')
 }
 }

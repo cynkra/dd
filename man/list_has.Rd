@@ -4,15 +4,15 @@
 \alias{list_has}
 \title{DuckDB function list_has}
 \arguments{
-\item{list}{\code{ANY[]}}
+\item{list}{\code{T[]}}
 
-\item{element}{\code{ANY}}
+\item{element}{\code{T}}
 }
 \description{
 Returns true if the list contains the element.
 }
 \examples{
 \dontrun{
-list_contains([1, 2, NULL], 1)
+list_has([1, 2, NULL], 1)
 }
 }

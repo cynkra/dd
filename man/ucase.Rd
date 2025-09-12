@@ -11,6 +11,6 @@ Converts \code{string} to upper case.
 }
 \examples{
 \dontrun{
-upper('Hello')
+ucase('Hello')
 }
 }

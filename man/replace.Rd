@@ -11,7 +11,7 @@
 \item{target}{\code{VARCHAR}}
 }
 \description{
-Replaces any occurrences of the source with target in string.
+Replaces any occurrences of the \code{source} with \code{target} in \code{string}.
 }
 \examples{
 \dontrun{

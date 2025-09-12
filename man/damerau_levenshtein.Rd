@@ -4,15 +4,15 @@
 \alias{damerau_levenshtein}
 \title{DuckDB function damerau_levenshtein}
 \arguments{
-\item{str1}{\code{VARCHAR}}
+\item{s1}{\code{VARCHAR}}
 
-\item{str2}{\code{VARCHAR}}
+\item{s2}{\code{VARCHAR}}
 }
 \description{
-Extension of Levenshtein distance to also include transposition of adjacent characters as an allowed edit operation. In other words, the minimum number of edit operations (insertions, deletions, substitutions or transpositions) required to change one string to another. Different case is considered different.
+Extension of Levenshtein distance to also include transposition of adjacent characters as an allowed edit operation. In other words, the minimum number of edit operations (insertions, deletions, substitutions or transpositions) required to change one string to another. Characters of different cases (e.g., \code{a} and \code{A}) are considered different.
 }
 \examples{
 \dontrun{
-damerau_levenshtein('hello', 'world')
+damerau_levenshtein('duckdb', 'udckbd')
 }
 }

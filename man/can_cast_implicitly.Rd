@@ -13,6 +13,6 @@ Whether or not we can implicitly cast from the source type to the other type.
 }
 \examples{
 \dontrun{
-can_implicitly_cast(NULL::INTEGER, NULL::BIGINT)
+can_cast_implicitly(NULL::INTEGER, NULL::BIGINT)
 }
 }

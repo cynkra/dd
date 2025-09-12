@@ -7,7 +7,7 @@
 \item{value}{\code{VARCHAR}}
 }
 \description{
-Converts a value from hexadecimal representation to a blob.
+Converts a \code{value} from hexadecimal representation to a blob.
 }
 \examples{
 \dontrun{

@@ -11,6 +11,6 @@ The timestamp for the given nanoseconds since epoch.
 }
 \examples{
 \dontrun{
-make_timestamp(1732117793000000000)
+make_timestamp_ns(1732117793000000000)
 }
 }

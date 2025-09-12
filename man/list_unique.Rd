@@ -7,7 +7,7 @@
 \item{list}{\code{ANY[]}}
 }
 \description{
-Counts the unique elements of a list.
+Counts the unique elements of a \code{list}.
 }
 \examples{
 \dontrun{

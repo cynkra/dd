@@ -4,13 +4,13 @@
 \alias{url_decode}
 \title{DuckDB function url_decode}
 \arguments{
-\item{input}{\code{VARCHAR}}
+\item{string}{\code{VARCHAR}}
 }
 \description{
-Unescapes the URL encoded input.
+Decodes a URL from a representation using Percent-Encoding.
 }
 \examples{
 \dontrun{
-url_decode('this\%20string\%20is\%2BFencoded')
+url_decode('https\%3A\%2F\%2Fduckdb.org\%2Fwhy_duckdb\%23portable')
 }
 }

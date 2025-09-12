@@ -4,9 +4,9 @@
 \alias{list_contains}
 \title{DuckDB function list_contains}
 \arguments{
-\item{list}{\code{ANY[]}}
+\item{list}{\code{T[]}}
 
-\item{element}{\code{ANY}}
+\item{element}{\code{T}}
 }
 \description{
 Returns true if the list contains the element.

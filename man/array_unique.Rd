@@ -7,10 +7,10 @@
 \item{list}{\code{ANY[]}}
 }
 \description{
-Counts the unique elements of a list.
+Counts the unique elements of a \code{list}.
 }
 \examples{
 \dontrun{
-list_unique([1, 1, NULL, -3, 1, 5])
+array_unique([1, 1, NULL, -3, 1, 5])
 }
 }

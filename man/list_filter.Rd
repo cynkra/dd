@@ -6,13 +6,13 @@
 \arguments{
 \item{list}{\code{ANY[]}}
 
-\item{lambda}{\code{LAMBDA}}
+\item{lambda(x)}{\code{LAMBDA}}
 }
 \description{
-Constructs a list from those elements of the input list for which the lambda function returns true.
+Constructs a list from those elements of the input \code{list} for which the \code{lambda} function returns \code{true}. DuckDB must be able to cast the \code{lambda} function's return type to \code{BOOL}. The return type of \code{list_filter} is the same as the input list's.
 }
 \examples{
 \dontrun{
-list_filter([3, 4, 5], x -> x > 4)
+list_filter([3, 4, 5], lambda x : x > 4)
 }
 }

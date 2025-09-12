@@ -4,13 +4,13 @@
 \alias{formatReadableDecimalSize}
 \title{DuckDB function formatReadableDecimalSize}
 \arguments{
-\item{bytes}{\code{BIGINT}}
+\item{integer}{\code{BIGINT}}
 }
 \description{
-Converts bytes to a human-readable presentation (e.g., 16000 -> 16.0 KB).
+Converts \code{integer} to a human-readable representation using units based on powers of 10 (KB, MB, GB, etc.).
 }
 \examples{
 \dontrun{
-format_bytes(1000 * 16)
+formatReadableDecimalSize(16_000)
 }
 }

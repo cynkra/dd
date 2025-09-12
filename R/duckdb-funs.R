@@ -47,33 +47,33 @@ alias <- function(expr = ANY) {
 
 #' DuckDB function apply
 #'
-#' Returns a list that is the result of applying the lambda function to each element of the input list. See the Lambda Functions section for more details.
+#' Returns a list that is the result of applying the `lambda` function to each element of the input `list`. The return type is defined by the return type of the `lambda` function.
 #'
 #' @name apply
 #' @usage NULL
 #' @param list `ANY[]`
-#' @param lambda `LAMBDA`
+#' @param lambda(x) `LAMBDA`
 #' @examples
 #' \dontrun{
-#' list_transform([1, 2, 3], x -> x + 1)
+#' apply([1, 2, 3], lambda x : x + 1)
 #' }
-apply <- function(list = `ANY[]`, lambda = LAMBDA) {
+apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function apply() is not available in R.")
 }
 
 #' DuckDB function array_apply
 #'
-#' Returns a list that is the result of applying the lambda function to each element of the input list. See the Lambda Functions section for more details.
+#' Returns a list that is the result of applying the `lambda` function to each element of the input `list`. The return type is defined by the return type of the `lambda` function.
 #'
 #' @name array_apply
 #' @usage NULL
 #' @param list `ANY[]`
-#' @param lambda `LAMBDA`
+#' @param lambda(x) `LAMBDA`
 #' @examples
 #' \dontrun{
-#' list_transform([1, 2, 3], x -> x + 1)
+#' array_apply([1, 2, 3], lambda x : x + 1)
 #' }
-array_apply <- function(list = `ANY[]`, lambda = LAMBDA) {
+array_apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function array_apply() is not available in R.")
 }
 
@@ -83,44 +83,44 @@ array_apply <- function(list = `ANY[]`, lambda = LAMBDA) {
 #'
 #' @name array_contains
 #' @usage NULL
-#' @param list `ANY[]`
-#' @param element `ANY`
+#' @param list `T[]`
+#' @param element `T`
 #' @examples
 #' \dontrun{
-#' list_contains([1, 2, NULL], 1)
+#' array_contains([1, 2, NULL], 1)
 #' }
-array_contains <- function(list = `ANY[]`, element = ANY) {
+array_contains <- function(list = `T[]`, element = T) {
   stop("DuckDB function array_contains() is not available in R.")
 }
 
 #' DuckDB function array_distinct
 #'
-#' Removes all duplicates and NULLs from a list. Does not preserve the original order.
+#' Removes all duplicates and `NULL` values from a list. Does not preserve the original order.
 #'
 #' @name array_distinct
 #' @usage NULL
-#' @param list `ANY[]`
+#' @param list `T[]`
 #' @examples
 #' \dontrun{
-#' list_distinct([1, 1, NULL, -3, 1, 5])
+#' array_distinct([1, 1, NULL, -3, 1, 5])
 #' }
-array_distinct <- function(list = `ANY[]`) {
+array_distinct <- function(list = `T[]`) {
   stop("DuckDB function array_distinct() is not available in R.")
 }
 
 #' DuckDB function array_filter
 #'
-#' Constructs a list from those elements of the input list for which the lambda function returns true.
+#' Constructs a list from those elements of the input `list` for which the `lambda` function returns `true`. DuckDB must be able to cast the `lambda` function's return type to `BOOL`. The return type of `list_filter` is the same as the input list's.
 #'
 #' @name array_filter
 #' @usage NULL
 #' @param list `ANY[]`
-#' @param lambda `LAMBDA`
+#' @param lambda(x) `LAMBDA`
 #' @examples
 #' \dontrun{
-#' list_filter([3, 4, 5], x -> x > 4)
+#' array_filter([3, 4, 5], lambda x : x > 4)
 #' }
-array_filter <- function(list = `ANY[]`, lambda = LAMBDA) {
+array_filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function array_filter() is not available in R.")
 }
 
@@ -130,29 +130,29 @@ array_filter <- function(list = `ANY[]`, lambda = LAMBDA) {
 #'
 #' @name array_has
 #' @usage NULL
-#' @param list `ANY[]`
-#' @param element `ANY`
+#' @param list `T[]`
+#' @param element `T`
 #' @examples
 #' \dontrun{
-#' list_contains([1, 2, NULL], 1)
+#' array_has([1, 2, NULL], 1)
 #' }
-array_has <- function(list = `ANY[]`, element = ANY) {
+array_has <- function(list = `T[]`, element = T) {
   stop("DuckDB function array_has() is not available in R.")
 }
 
 #' DuckDB function array_has_all
 #'
-#' Returns true if all elements of l2 are in l1. NULLs are ignored.
+#' Returns true if all elements of list2 are in list1. NULLs are ignored.
 #'
 #' @name array_has_all
 #' @usage NULL
-#' @param l1 `ANY[]`
-#' @param l2 `ANY[]`
+#' @param list1 `T[]`
+#' @param list2 `T[]`
 #' @examples
 #' \dontrun{
-#' list_has_all([1, 2, 3], [2, 3])
+#' array_has_all([1, 2, 3], [2, 3])
 #' }
-array_has_all <- function(l1 = `ANY[]`, l2 = `ANY[]`) {
+array_has_all <- function(list1 = `T[]`, list2 = `T[]`) {
   stop("DuckDB function array_has_all() is not available in R.")
 }
 
@@ -162,90 +162,90 @@ array_has_all <- function(l1 = `ANY[]`, l2 = `ANY[]`) {
 #'
 #' @name array_has_any
 #' @usage NULL
-#' @param l1 `ANY[]`
-#' @param l2 `ANY[]`
+#' @param list1 `T[]`
+#' @param list2 `T[]`
 #' @examples
 #' \dontrun{
-#' list_has_any([1, 2, 3], [2, 3, 4])
+#' array_has_any([1, 2, 3], [2, 3, 4])
 #' }
-array_has_any <- function(l1 = `ANY[]`, l2 = `ANY[]`) {
+array_has_any <- function(list1 = `T[]`, list2 = `T[]`) {
   stop("DuckDB function array_has_any() is not available in R.")
 }
 
 #' DuckDB function array_indexof
 #'
-#' Returns the index of the element if the list contains the element. If the element is not found, it returns NULL.
+#' Returns the index of the `element` if the `list` contains the `element`. If the `element` is not found, it returns `NULL`.
 #'
 #' @name array_indexof
 #' @usage NULL
-#' @param list `ANY[]`
-#' @param element `ANY`
+#' @param list `T[]`
+#' @param element `T`
 #' @examples
 #' \dontrun{
-#' list_position([1, 2, NULL], 2)
+#' array_indexof([1, 2, NULL], 2)
 #' }
-array_indexof <- function(list = `ANY[]`, element = ANY) {
+array_indexof <- function(list = `T[]`, element = T) {
   stop("DuckDB function array_indexof() is not available in R.")
 }
 
 #' DuckDB function array_position
 #'
-#' Returns the index of the element if the list contains the element. If the element is not found, it returns NULL.
+#' Returns the index of the `element` if the `list` contains the `element`. If the `element` is not found, it returns `NULL`.
 #'
 #' @name array_position
 #' @usage NULL
-#' @param list `ANY[]`
-#' @param element `ANY`
+#' @param list `T[]`
+#' @param element `T`
 #' @examples
 #' \dontrun{
-#' list_position([1, 2, NULL], 2)
+#' array_position([1, 2, NULL], 2)
 #' }
-array_position <- function(list = `ANY[]`, element = ANY) {
+array_position <- function(list = `T[]`, element = T) {
   stop("DuckDB function array_position() is not available in R.")
 }
 
 #' DuckDB function array_select
 #'
-#' Returns a list based on the elements selected by the index_list.
+#' Returns a list based on the elements selected by the `index_list`.
 #'
 #' @name array_select
 #' @usage NULL
-#' @param value_list `ANY[]`
+#' @param value_list `T[]`
 #' @param index_list `BIGINT[]`
 #' @examples
 #' \dontrun{
-#' list_select([10, 20, 30, 40], [1, 4])
+#' array_select([10, 20, 30, 40], [1, 4])
 #' }
-array_select <- function(value_list = `ANY[]`, index_list = `BIGINT[]`) {
+array_select <- function(value_list = `T[]`, index_list = `BIGINT[]`) {
   stop("DuckDB function array_select() is not available in R.")
 }
 
 #' DuckDB function array_transform
 #'
-#' Returns a list that is the result of applying the lambda function to each element of the input list. See the Lambda Functions section for more details.
+#' Returns a list that is the result of applying the `lambda` function to each element of the input `list`. The return type is defined by the return type of the `lambda` function.
 #'
 #' @name array_transform
 #' @usage NULL
 #' @param list `ANY[]`
-#' @param lambda `LAMBDA`
+#' @param lambda(x) `LAMBDA`
 #' @examples
 #' \dontrun{
-#' list_transform([1, 2, 3], x -> x + 1)
+#' array_transform([1, 2, 3], lambda x : x + 1)
 #' }
-array_transform <- function(list = `ANY[]`, lambda = LAMBDA) {
+array_transform <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function array_transform() is not available in R.")
 }
 
 #' DuckDB function array_unique
 #'
-#' Counts the unique elements of a list.
+#' Counts the unique elements of a `list`.
 #'
 #' @name array_unique
 #' @usage NULL
 #' @param list `ANY[]`
 #' @examples
 #' \dontrun{
-#' list_unique([1, 1, NULL, -3, 1, 5])
+#' array_unique([1, 1, NULL, -3, 1, 5])
 #' }
 array_unique <- function(list = `ANY[]`) {
   stop("DuckDB function array_unique() is not available in R.")
@@ -253,23 +253,23 @@ array_unique <- function(list = `ANY[]`) {
 
 #' DuckDB function array_where
 #'
-#' Returns a list with the BOOLEANs in mask_list applied as a mask to the value_list.
+#' Returns a list with the `BOOLEAN`s in `mask_list` applied as a mask to the `value_list`.
 #'
 #' @name array_where
 #' @usage NULL
-#' @param value_list `ANY[]`
+#' @param value_list `T[]`
 #' @param mask_list `BOOLEAN[]`
 #' @examples
 #' \dontrun{
-#' list_where([10, 20, 30, 40], [true, false, false, true])
+#' array_where([10, 20, 30, 40], [true, false, false, true])
 #' }
-array_where <- function(value_list = `ANY[]`, mask_list = `BOOLEAN[]`) {
+array_where <- function(value_list = `T[]`, mask_list = `BOOLEAN[]`) {
   stop("DuckDB function array_where() is not available in R.")
 }
 
 #' DuckDB function ascii
 #'
-#' Returns an integer that represents the Unicode code point of the first character of the string.
+#' Returns an integer that represents the Unicode code point of the first character of the `string`.
 #'
 #' @name ascii
 #' @usage NULL
@@ -360,7 +360,7 @@ atanh <- function(x = DOUBLE) {
 
 #' DuckDB function base64
 #'
-#' Converts a `blob` to a base64 encoded `string`.
+#' Converts a `blob` to a base64 encoded string.
 #'
 #' @name base64
 #' @usage NULL
@@ -399,7 +399,7 @@ bit_position <- function(substring = BIT, bitstring = BIT) {
 #' @param target_type `ANY`
 #' @examples
 #' \dontrun{
-#' can_implicitly_cast(NULL::INTEGER, NULL::BIGINT)
+#' can_cast_implicitly(NULL::INTEGER, NULL::BIGINT)
 #' }
 can_cast_implicitly <- function(source_type = ANY, target_type = ANY) {
   stop("DuckDB function can_cast_implicitly() is not available in R.")
@@ -449,6 +449,22 @@ cbrt <- function(x = DOUBLE) {
 #' }
 chr <- function(code_point = INTEGER) {
   stop("DuckDB function chr() is not available in R.")
+}
+
+#' DuckDB function contains
+#'
+#' Returns `true` if `search_string` is found within `string`.
+#'
+#' @name contains
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param search_string `VARCHAR`
+#' @examples
+#' \dontrun{
+#' contains('abc', 'a')
+#' }
+contains <- function(string = VARCHAR, search_string = VARCHAR) {
+  stop("DuckDB function contains() is not available in R.")
 }
 
 #' DuckDB function cos
@@ -513,17 +529,17 @@ current_setting <- function(setting_name = VARCHAR) {
 
 #' DuckDB function damerau_levenshtein
 #'
-#' Extension of Levenshtein distance to also include transposition of adjacent characters as an allowed edit operation. In other words, the minimum number of edit operations (insertions, deletions, substitutions or transpositions) required to change one string to another. Different case is considered different.
+#' Extension of Levenshtein distance to also include transposition of adjacent characters as an allowed edit operation. In other words, the minimum number of edit operations (insertions, deletions, substitutions or transpositions) required to change one string to another. Characters of different cases (e.g., `a` and `A`) are considered different.
 #'
 #' @name damerau_levenshtein
 #' @usage NULL
-#' @param str1 `VARCHAR`
-#' @param str2 `VARCHAR`
+#' @param s1 `VARCHAR`
+#' @param s2 `VARCHAR`
 #' @examples
 #' \dontrun{
-#' damerau_levenshtein('hello', 'world')
+#' damerau_levenshtein('duckdb', 'udckbd')
 #' }
-damerau_levenshtein <- function(str1 = VARCHAR, str2 = VARCHAR) {
+damerau_levenshtein <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function damerau_levenshtein() is not available in R.")
 }
 
@@ -559,18 +575,34 @@ degrees <- function(x = DOUBLE) {
 
 #' DuckDB function editdist3
 #'
-#' The minimum number of single-character edits (insertions, deletions or substitutions) required to change one string to the other. Different case is considered different.
+#' The minimum number of single-character edits (insertions, deletions or substitutions) required to change one string to the other. Characters of different cases (e.g., `a` and `A`) are considered different.
 #'
 #' @name editdist3
 #' @usage NULL
-#' @param str1 `VARCHAR`
-#' @param str2 `VARCHAR`
+#' @param s1 `VARCHAR`
+#' @param s2 `VARCHAR`
 #' @examples
 #' \dontrun{
-#' levenshtein('duck','db')
+#' editdist3('duck', 'db')
 #' }
-editdist3 <- function(str1 = VARCHAR, str2 = VARCHAR) {
+editdist3 <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function editdist3() is not available in R.")
+}
+
+#' DuckDB function element_at
+#'
+#' Returns a list containing the value for a given key or an empty list if the key is not contained in the map. The type of the key provided in the second parameter must match the type of the map’s keys else an error is returned.
+#'
+#' @name element_at
+#' @usage NULL
+#' @param map `MAP(K, V)`
+#' @param key `K`
+#' @examples
+#' \dontrun{
+#' element_at(map(['key'], ['val']), 'key')
+#' }
+element_at <- function(map = `MAP(K, V)`, key = K) {
+  stop("DuckDB function element_at() is not available in R.")
 }
 
 #' DuckDB function encode
@@ -586,6 +618,22 @@ editdist3 <- function(str1 = VARCHAR, str2 = VARCHAR) {
 #' }
 encode <- function(string = VARCHAR) {
   stop("DuckDB function encode() is not available in R.")
+}
+
+#' DuckDB function ends_with
+#'
+#' Returns `true` if `string` ends with `search_string`.
+#'
+#' @name ends_with
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param search_string `VARCHAR`
+#' @examples
+#' \dontrun{
+#' ends_with('abc', 'bc')
+#' }
+ends_with <- function(string = VARCHAR, search_string = VARCHAR) {
+  stop("DuckDB function ends_with() is not available in R.")
 }
 
 #' DuckDB function enum_code
@@ -711,77 +759,77 @@ factorial <- function(x = INTEGER) {
 
 #' DuckDB function filter
 #'
-#' Constructs a list from those elements of the input list for which the lambda function returns true.
+#' Constructs a list from those elements of the input `list` for which the `lambda` function returns `true`. DuckDB must be able to cast the `lambda` function's return type to `BOOL`. The return type of `list_filter` is the same as the input list's.
 #'
 #' @name filter
 #' @usage NULL
 #' @param list `ANY[]`
-#' @param lambda `LAMBDA`
+#' @param lambda(x) `LAMBDA`
 #' @examples
 #' \dontrun{
-#' list_filter([3, 4, 5], x -> x > 4)
+#' filter([3, 4, 5], lambda x : x > 4)
 #' }
-filter <- function(list = `ANY[]`, lambda = LAMBDA) {
+filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function filter() is not available in R.")
 }
 
 #' DuckDB function flatten
 #'
-#' Flatten a nested list by one level.
+#' Flattens a nested list by one level.
 #'
 #' @name flatten
 #' @usage NULL
-#' @param nested_list `ANY[][]`
+#' @param nested_list `T[][]`
 #' @examples
 #' \dontrun{
 #' flatten([[1, 2, 3], [4, 5]])
 #' }
-flatten <- function(nested_list = `ANY[][]`) {
+flatten <- function(nested_list = `T[][]`) {
   stop("DuckDB function flatten() is not available in R.")
 }
 
 #' DuckDB function formatReadableDecimalSize
 #'
-#' Converts bytes to a human-readable presentation (e.g., 16000 -> 16.0 KB).
+#' Converts `integer` to a human-readable representation using units based on powers of 10 (KB, MB, GB, etc.).
 #'
 #' @name formatReadableDecimalSize
 #' @usage NULL
-#' @param bytes `BIGINT`
+#' @param integer `BIGINT`
 #' @examples
 #' \dontrun{
-#' format_bytes(1000 * 16)
+#' formatReadableDecimalSize(16_000)
 #' }
-formatReadableDecimalSize <- function(bytes = BIGINT) {
+formatReadableDecimalSize <- function(integer = BIGINT) {
   stop("DuckDB function formatReadableDecimalSize() is not available in R.")
 }
 
 #' DuckDB function formatReadableSize
 #'
-#' Converts bytes to a human-readable presentation (e.g., 16000 -> 15.6 KiB).
+#' Converts `integer` to a human-readable representation using units based on powers of 2 (KiB, MiB, GiB, etc.).
 #'
 #' @name formatReadableSize
 #' @usage NULL
-#' @param bytes `BIGINT`
+#' @param integer `BIGINT`
 #' @examples
 #' \dontrun{
-#' format_bytes(1000 * 16)
+#' formatReadableSize(16_000)
 #' }
-formatReadableSize <- function(bytes = BIGINT) {
+formatReadableSize <- function(integer = BIGINT) {
   stop("DuckDB function formatReadableSize() is not available in R.")
 }
 
 #' DuckDB function format_bytes
 #'
-#' Converts bytes to a human-readable presentation (e.g., 16000 -> 15.6 KiB).
+#' Converts `integer` to a human-readable representation using units based on powers of 2 (KiB, MiB, GiB, etc.).
 #'
 #' @name format_bytes
 #' @usage NULL
-#' @param bytes `BIGINT`
+#' @param integer `BIGINT`
 #' @examples
 #' \dontrun{
-#' format_bytes(1000 * 16)
+#' format_bytes(16_000)
 #' }
-format_bytes <- function(bytes = BIGINT) {
+format_bytes <- function(integer = BIGINT) {
   stop("DuckDB function format_bytes() is not available in R.")
 }
 
@@ -802,14 +850,14 @@ from_base64 <- function(string = VARCHAR) {
 
 #' DuckDB function from_binary
 #'
-#' Converts a value from binary representation to a blob.
+#' Converts a `value` from binary representation to a blob.
 #'
 #' @name from_binary
 #' @usage NULL
 #' @param value `VARCHAR`
 #' @examples
 #' \dontrun{
-#' unbin('0110')
+#' from_binary('0110')
 #' }
 from_binary <- function(value = VARCHAR) {
   stop("DuckDB function from_binary() is not available in R.")
@@ -817,14 +865,14 @@ from_binary <- function(value = VARCHAR) {
 
 #' DuckDB function from_hex
 #'
-#' Converts a value from hexadecimal representation to a blob.
+#' Converts a `value` from hexadecimal representation to a blob.
 #'
 #' @name from_hex
 #' @usage NULL
 #' @param value `VARCHAR`
 #' @examples
 #' \dontrun{
-#' unhex('2A')
+#' from_hex('2A')
 #' }
 from_hex <- function(value = VARCHAR) {
   stop("DuckDB function from_hex() is not available in R.")
@@ -863,23 +911,23 @@ get_bit <- function(bitstring = BIT, index = INTEGER) {
 
 #' DuckDB function hamming
 #'
-#' The number of positions with different characters for 2 strings of equal length. Different case is considered different.
+#' The Hamming distance between to strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., `a` and `A`) are considered different.
 #'
 #' @name hamming
 #' @usage NULL
-#' @param str1 `VARCHAR`
-#' @param str2 `VARCHAR`
+#' @param s1 `VARCHAR`
+#' @param s2 `VARCHAR`
 #' @examples
 #' \dontrun{
-#' hamming('duck','luck')
+#' hamming('duck', 'luck')
 #' }
-hamming <- function(str1 = VARCHAR, str2 = VARCHAR) {
+hamming <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function hamming() is not available in R.")
 }
 
 #' DuckDB function ilike_escape
 #'
-#' Returns true if the `string` matches the `like_specifier` (see Pattern Matching) using case-insensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
+#' Returns `true` if the `string` matches the `like_specifier` (see Pattern Matching) using case-insensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name ilike_escape
 #' @usage NULL
@@ -896,17 +944,17 @@ ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_char
 
 #' DuckDB function instr
 #'
-#' Returns location of first occurrence of needle in haystack, counting from 1. Returns 0 if no match found.
+#' Returns location of first occurrence of `search_string` in `string`, counting from 1. Returns 0 if no match found.
 #'
 #' @name instr
 #' @usage NULL
-#' @param haystack `VARCHAR`
-#' @param needle `VARCHAR`
+#' @param string `VARCHAR`
+#' @param search_string `VARCHAR`
 #' @examples
 #' \dontrun{
-#' instr('test test','es')
+#' instr('test test', 'es')
 #' }
-instr <- function(haystack = VARCHAR, needle = VARCHAR) {
+instr <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function instr() is not available in R.")
 }
 
@@ -927,17 +975,17 @@ is_histogram_other_bin <- function(val = ANY) {
 
 #' DuckDB function jaccard
 #'
-#' The Jaccard similarity between two strings. Different case is considered different. Returns a number between 0 and 1.
+#' The Jaccard similarity between two strings. Characters of different cases (e.g., `a` and `A`) are considered different. Returns a number between 0 and 1.
 #'
 #' @name jaccard
 #' @usage NULL
-#' @param str1 `VARCHAR`
-#' @param str2 `VARCHAR`
+#' @param s1 `VARCHAR`
+#' @param s2 `VARCHAR`
 #' @examples
 #' \dontrun{
-#' jaccard('duck','luck')
+#' jaccard('duck', 'luck')
 #' }
-jaccard <- function(str1 = VARCHAR, str2 = VARCHAR) {
+jaccard <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function jaccard() is not available in R.")
 }
 
@@ -950,7 +998,7 @@ jaccard <- function(str1 = VARCHAR, str2 = VARCHAR) {
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
-#' lower('Hello')
+#' lcase('Hello')
 #' }
 lcase <- function(string = VARCHAR) {
   stop("DuckDB function lcase() is not available in R.")
@@ -1005,17 +1053,17 @@ length_grapheme <- function(string = VARCHAR) {
 
 #' DuckDB function levenshtein
 #'
-#' The minimum number of single-character edits (insertions, deletions or substitutions) required to change one string to the other. Different case is considered different.
+#' The minimum number of single-character edits (insertions, deletions or substitutions) required to change one string to the other. Characters of different cases (e.g., `a` and `A`) are considered different.
 #'
 #' @name levenshtein
 #' @usage NULL
-#' @param str1 `VARCHAR`
-#' @param str2 `VARCHAR`
+#' @param s1 `VARCHAR`
+#' @param s2 `VARCHAR`
 #' @examples
 #' \dontrun{
-#' levenshtein('duck','db')
+#' levenshtein('duck', 'db')
 #' }
-levenshtein <- function(str1 = VARCHAR, str2 = VARCHAR) {
+levenshtein <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function levenshtein() is not available in R.")
 }
 
@@ -1036,7 +1084,7 @@ lgamma <- function(x = DOUBLE) {
 
 #' DuckDB function like_escape
 #'
-#' Returns true if the `string` matches the `like_specifier` (see Pattern Matching) using case-sensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
+#' Returns `true` if the `string` matches the `like_specifier` (see Pattern Matching) using case-sensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name like_escape
 #' @usage NULL
@@ -1053,17 +1101,17 @@ like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_chara
 
 #' DuckDB function list_apply
 #'
-#' Returns a list that is the result of applying the lambda function to each element of the input list. See the Lambda Functions section for more details.
+#' Returns a list that is the result of applying the `lambda` function to each element of the input `list`. The return type is defined by the return type of the `lambda` function.
 #'
 #' @name list_apply
 #' @usage NULL
 #' @param list `ANY[]`
-#' @param lambda `LAMBDA`
+#' @param lambda(x) `LAMBDA`
 #' @examples
 #' \dontrun{
-#' list_transform([1, 2, 3], x -> x + 1)
+#' list_apply([1, 2, 3], lambda x : x + 1)
 #' }
-list_apply <- function(list = `ANY[]`, lambda = LAMBDA) {
+list_apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function list_apply() is not available in R.")
 }
 
@@ -1073,44 +1121,44 @@ list_apply <- function(list = `ANY[]`, lambda = LAMBDA) {
 #'
 #' @name list_contains
 #' @usage NULL
-#' @param list `ANY[]`
-#' @param element `ANY`
+#' @param list `T[]`
+#' @param element `T`
 #' @examples
 #' \dontrun{
 #' list_contains([1, 2, NULL], 1)
 #' }
-list_contains <- function(list = `ANY[]`, element = ANY) {
+list_contains <- function(list = `T[]`, element = T) {
   stop("DuckDB function list_contains() is not available in R.")
 }
 
 #' DuckDB function list_distinct
 #'
-#' Removes all duplicates and NULLs from a list. Does not preserve the original order.
+#' Removes all duplicates and `NULL` values from a list. Does not preserve the original order.
 #'
 #' @name list_distinct
 #' @usage NULL
-#' @param list `ANY[]`
+#' @param list `T[]`
 #' @examples
 #' \dontrun{
 #' list_distinct([1, 1, NULL, -3, 1, 5])
 #' }
-list_distinct <- function(list = `ANY[]`) {
+list_distinct <- function(list = `T[]`) {
   stop("DuckDB function list_distinct() is not available in R.")
 }
 
 #' DuckDB function list_filter
 #'
-#' Constructs a list from those elements of the input list for which the lambda function returns true.
+#' Constructs a list from those elements of the input `list` for which the `lambda` function returns `true`. DuckDB must be able to cast the `lambda` function's return type to `BOOL`. The return type of `list_filter` is the same as the input list's.
 #'
 #' @name list_filter
 #' @usage NULL
 #' @param list `ANY[]`
-#' @param lambda `LAMBDA`
+#' @param lambda(x) `LAMBDA`
 #' @examples
 #' \dontrun{
-#' list_filter([3, 4, 5], x -> x > 4)
+#' list_filter([3, 4, 5], lambda x : x > 4)
 #' }
-list_filter <- function(list = `ANY[]`, lambda = LAMBDA) {
+list_filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function list_filter() is not available in R.")
 }
 
@@ -1120,29 +1168,29 @@ list_filter <- function(list = `ANY[]`, lambda = LAMBDA) {
 #'
 #' @name list_has
 #' @usage NULL
-#' @param list `ANY[]`
-#' @param element `ANY`
+#' @param list `T[]`
+#' @param element `T`
 #' @examples
 #' \dontrun{
-#' list_contains([1, 2, NULL], 1)
+#' list_has([1, 2, NULL], 1)
 #' }
-list_has <- function(list = `ANY[]`, element = ANY) {
+list_has <- function(list = `T[]`, element = T) {
   stop("DuckDB function list_has() is not available in R.")
 }
 
 #' DuckDB function list_has_all
 #'
-#' Returns true if all elements of l2 are in l1. NULLs are ignored.
+#' Returns true if all elements of list2 are in list1. NULLs are ignored.
 #'
 #' @name list_has_all
 #' @usage NULL
-#' @param l1 `ANY[]`
-#' @param l2 `ANY[]`
+#' @param list1 `T[]`
+#' @param list2 `T[]`
 #' @examples
 #' \dontrun{
 #' list_has_all([1, 2, 3], [2, 3])
 #' }
-list_has_all <- function(l1 = `ANY[]`, l2 = `ANY[]`) {
+list_has_all <- function(list1 = `T[]`, list2 = `T[]`) {
   stop("DuckDB function list_has_all() is not available in R.")
 }
 
@@ -1152,83 +1200,98 @@ list_has_all <- function(l1 = `ANY[]`, l2 = `ANY[]`) {
 #'
 #' @name list_has_any
 #' @usage NULL
-#' @param l1 `ANY[]`
-#' @param l2 `ANY[]`
+#' @param list1 `T[]`
+#' @param list2 `T[]`
 #' @examples
 #' \dontrun{
 #' list_has_any([1, 2, 3], [2, 3, 4])
 #' }
-list_has_any <- function(l1 = `ANY[]`, l2 = `ANY[]`) {
+list_has_any <- function(list1 = `T[]`, list2 = `T[]`) {
   stop("DuckDB function list_has_any() is not available in R.")
 }
 
 #' DuckDB function list_indexof
 #'
-#' Returns the index of the element if the list contains the element. If the element is not found, it returns NULL.
+#' Returns the index of the `element` if the `list` contains the `element`. If the `element` is not found, it returns `NULL`.
 #'
 #' @name list_indexof
 #' @usage NULL
-#' @param list `ANY[]`
-#' @param element `ANY`
+#' @param list `T[]`
+#' @param element `T`
 #' @examples
 #' \dontrun{
-#' list_position([1, 2, NULL], 2)
+#' list_indexof([1, 2, NULL], 2)
 #' }
-list_indexof <- function(list = `ANY[]`, element = ANY) {
+list_indexof <- function(list = `T[]`, element = T) {
   stop("DuckDB function list_indexof() is not available in R.")
+}
+
+#' DuckDB function list_pack
+#'
+#' Creates a LIST containing the argument values.
+#'
+#' @name list_pack
+#' @usage NULL
+
+#' @examples
+#' \dontrun{
+#' list_pack(4, 5, 6)
+#' }
+list_pack <- function() {
+  stop("DuckDB function list_pack() is not available in R.")
 }
 
 #' DuckDB function list_position
 #'
-#' Returns the index of the element if the list contains the element. If the element is not found, it returns NULL.
+#' Returns the index of the `element` if the `list` contains the `element`. If the `element` is not found, it returns `NULL`.
 #'
 #' @name list_position
 #' @usage NULL
-#' @param list `ANY[]`
-#' @param element `ANY`
+#' @param list `T[]`
+#' @param element `T`
 #' @examples
 #' \dontrun{
 #' list_position([1, 2, NULL], 2)
 #' }
-list_position <- function(list = `ANY[]`, element = ANY) {
+list_position <- function(list = `T[]`, element = T) {
   stop("DuckDB function list_position() is not available in R.")
 }
 
 #' DuckDB function list_select
 #'
-#' Returns a list based on the elements selected by the index_list.
+#' Returns a list based on the elements selected by the `index_list`.
 #'
 #' @name list_select
 #' @usage NULL
-#' @param value_list `ANY[]`
+#' @param value_list `T[]`
 #' @param index_list `BIGINT[]`
 #' @examples
 #' \dontrun{
 #' list_select([10, 20, 30, 40], [1, 4])
 #' }
-list_select <- function(value_list = `ANY[]`, index_list = `BIGINT[]`) {
+list_select <- function(value_list = `T[]`, index_list = `BIGINT[]`) {
   stop("DuckDB function list_select() is not available in R.")
 }
 
 #' DuckDB function list_transform
 #'
-#' Returns a list that is the result of applying the lambda function to each element of the input list. See the Lambda Functions section for more details.
+#' Returns a list that is the result of applying the `lambda` function to each element of the input `list`. The return type is defined by the return type of the `lambda` function.
 #'
 #' @name list_transform
 #' @usage NULL
 #' @param list `ANY[]`
-#' @param lambda `LAMBDA`
+#' @param lambda(x) `LAMBDA`
 #' @examples
 #' \dontrun{
-#' list_transform([1, 2, 3], x -> x + 1)
+#' list_transform([1, 2, 3], lambda x : x + 1)
 #' }
-list_transform <- function(list = `ANY[]`, lambda = LAMBDA) {
+list_transform <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function list_transform() is not available in R.")
 }
 
 #' DuckDB function list_unique
 #'
-#' Counts the unique elements of a list.
+#' Counts the unique elements of a `list`.
 #'
 #' @name list_unique
 #' @usage NULL
@@ -1241,19 +1304,34 @@ list_unique <- function(list = `ANY[]`) {
   stop("DuckDB function list_unique() is not available in R.")
 }
 
+#' DuckDB function list_value
+#'
+#' Creates a LIST containing the argument values.
+#'
+#' @name list_value
+#' @usage NULL
+
+#' @examples
+#' \dontrun{
+#' list_value(4, 5, 6)
+#' }
+list_value <- function() {
+  stop("DuckDB function list_value() is not available in R.")
+}
+
 #' DuckDB function list_where
 #'
-#' Returns a list with the BOOLEANs in mask_list applied as a mask to the value_list.
+#' Returns a list with the `BOOLEAN`s in `mask_list` applied as a mask to the `value_list`.
 #'
 #' @name list_where
 #' @usage NULL
-#' @param value_list `ANY[]`
+#' @param value_list `T[]`
 #' @param mask_list `BOOLEAN[]`
 #' @examples
 #' \dontrun{
 #' list_where([10, 20, 30, 40], [true, false, false, true])
 #' }
-list_where <- function(value_list = `ANY[]`, mask_list = `BOOLEAN[]`) {
+list_where <- function(value_list = `T[]`, mask_list = `BOOLEAN[]`) {
   stop("DuckDB function list_where() is not available in R.")
 }
 
@@ -1319,7 +1397,7 @@ lower <- function(string = VARCHAR) {
 
 #' DuckDB function lpad
 #'
-#' Pads the string with the character from the left until it has count characters.
+#' Pads the `string` with the `character` on the left until it has `count` characters. Truncates the `string` on the right if it has more than `count` characters.
 #'
 #' @name lpad
 #' @usage NULL
@@ -1328,7 +1406,7 @@ lower <- function(string = VARCHAR) {
 #' @param character `VARCHAR`
 #' @examples
 #' \dontrun{
-#' lpad('hello', 10, '>')
+#' lpad('hello', 8, '>')
 #' }
 lpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
   stop("DuckDB function lpad() is not available in R.")
@@ -1351,6 +1429,21 @@ make_time <- function(hour = BIGINT, minute = BIGINT, seconds = DOUBLE) {
   stop("DuckDB function make_time() is not available in R.")
 }
 
+#' DuckDB function make_timestamp_ms
+#'
+#' The timestamp for the given microseconds since the epoch.
+#'
+#' @name make_timestamp_ms
+#' @usage NULL
+#' @param nanos `BIGINT`
+#' @examples
+#' \dontrun{
+#' make_timestamp_ms(1732117793000000)
+#' }
+make_timestamp_ms <- function(nanos = BIGINT) {
+  stop("DuckDB function make_timestamp_ms() is not available in R.")
+}
+
 #' DuckDB function make_timestamp_ns
 #'
 #' The timestamp for the given nanoseconds since epoch.
@@ -1360,7 +1453,7 @@ make_time <- function(hour = BIGINT, minute = BIGINT, seconds = DOUBLE) {
 #' @param nanos `BIGINT`
 #' @examples
 #' \dontrun{
-#' make_timestamp(1732117793000000000)
+#' make_timestamp_ns(1732117793000000000)
 #' }
 make_timestamp_ns <- function(nanos = BIGINT) {
   stop("DuckDB function make_timestamp_ns() is not available in R.")
@@ -1372,29 +1465,121 @@ make_timestamp_ns <- function(nanos = BIGINT) {
 #'
 #' @name map_contains
 #' @usage NULL
-#' @param map `MAP(ANY, ANY)`
-#' @param key `ANY`
+#' @param map `MAP(K, V)`
+#' @param key `K`
 #' @examples
 #' \dontrun{
 #' map_contains(MAP {'key1': 10, 'key2': 20, 'key3': 30}, 'key2')
 #' }
-map_contains <- function(map = `MAP(ANY, ANY)`, key = ANY) {
+map_contains <- function(map = `MAP(K, V)`, key = K) {
   stop("DuckDB function map_contains() is not available in R.")
+}
+
+#' DuckDB function map_entries
+#'
+#' Returns the map entries as a list of keys/values.
+#'
+#' @name map_entries
+#' @usage NULL
+#' @param map `MAP(K, V)`
+#' @examples
+#' \dontrun{
+#' map_entries(map(['key'], ['val']))
+#' }
+map_entries <- function(map = `MAP(K, V)`) {
+  stop("DuckDB function map_entries() is not available in R.")
+}
+
+#' DuckDB function map_extract
+#'
+#' Returns a list containing the value for a given key or an empty list if the key is not contained in the map. The type of the key provided in the second parameter must match the type of the map’s keys else an error is returned.
+#'
+#' @name map_extract
+#' @usage NULL
+#' @param map `MAP(K, V)`
+#' @param key `K`
+#' @examples
+#' \dontrun{
+#' map_extract(map(['key'], ['val']), 'key')
+#' }
+map_extract <- function(map = `MAP(K, V)`, key = K) {
+  stop("DuckDB function map_extract() is not available in R.")
+}
+
+#' DuckDB function map_extract_value
+#'
+#' Returns the value for a given key or NULL if the key is not contained in the map. The type of the key provided in the second parameter must match the type of the map’s keys else an error is returned.
+#'
+#' @name map_extract_value
+#' @usage NULL
+#' @param map `MAP(K, V)`
+#' @param key `K`
+#' @examples
+#' \dontrun{
+#' map_extract_value(map(['key'], ['val']), 'key')
+#' }
+map_extract_value <- function(map = `MAP(K, V)`, key = K) {
+  stop("DuckDB function map_extract_value() is not available in R.")
+}
+
+#' DuckDB function map_from_entries
+#'
+#' Returns a map created from the entries of the array.
+#'
+#' @name map_from_entries
+#' @usage NULL
+#' @param map `STRUCT(K, V)[]`
+#' @examples
+#' \dontrun{
+#' map_from_entries([{k: 5, v: 'val1'}, {k: 3, v: 'val2'}]);
+#' }
+map_from_entries <- function(map = `STRUCT(K, V)[]`) {
+  stop("DuckDB function map_from_entries() is not available in R.")
+}
+
+#' DuckDB function map_keys
+#'
+#' Returns the keys of a map as a list.
+#'
+#' @name map_keys
+#' @usage NULL
+#' @param map `MAP(K, V)`
+#' @examples
+#' \dontrun{
+#' map_keys(map(['key'], ['val']))
+#' }
+map_keys <- function(map = `MAP(K, V)`) {
+  stop("DuckDB function map_keys() is not available in R.")
+}
+
+#' DuckDB function map_values
+#'
+#' Returns the values of a map as a list.
+#'
+#' @name map_values
+#' @usage NULL
+#' @param map `MAP(K, V)`
+#' @examples
+#' \dontrun{
+#' map_values(map(['key'], ['val']))
+#' }
+map_values <- function(map = `MAP(K, V)`) {
+  stop("DuckDB function map_values() is not available in R.")
 }
 
 #' DuckDB function mismatches
 #'
-#' The number of positions with different characters for 2 strings of equal length. Different case is considered different.
+#' The Hamming distance between to strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., `a` and `A`) are considered different.
 #'
 #' @name mismatches
 #' @usage NULL
-#' @param str1 `VARCHAR`
-#' @param str2 `VARCHAR`
+#' @param s1 `VARCHAR`
+#' @param s2 `VARCHAR`
 #' @examples
 #' \dontrun{
-#' hamming('duck','luck')
+#' mismatches('duck', 'luck')
 #' }
-mismatches <- function(str1 = VARCHAR, str2 = VARCHAR) {
+mismatches <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function mismatches() is not available in R.")
 }
 
@@ -1407,7 +1592,7 @@ mismatches <- function(str1 = VARCHAR, str2 = VARCHAR) {
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
-#' nfc_normalize('ardèch')
+#' nfc_normalize('ardèch')
 #' }
 nfc_normalize <- function(string = VARCHAR) {
   stop("DuckDB function nfc_normalize() is not available in R.")
@@ -1430,7 +1615,7 @@ normalized_interval <- function(interval = INTERVAL) {
 
 #' DuckDB function not_ilike_escape
 #'
-#' Returns false if the `string` matches the `like_specifier` (see Pattern Matching) using case-insensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
+#' Returns `false` if the `string` matches the `like_specifier` (see Pattern Matching) using case-insensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name not_ilike_escape
 #' @usage NULL
@@ -1447,7 +1632,7 @@ not_ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_
 
 #' DuckDB function not_like_escape
 #'
-#' Returns false if the `string` matches the `like_specifier` (see Pattern Matching) using case-sensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
+#' Returns `false` if the `string` matches the `like_specifier` (see Pattern Matching) using case-sensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name not_like_escape
 #' @usage NULL
@@ -1464,16 +1649,16 @@ not_like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_c
 
 #' DuckDB function ord
 #'
-#' Returns the unicode codepoint of the first character of the string.
+#' Returns an `INTEGER` representing the `unicode` codepoint of the first character in the `string`.
 #'
 #' @name ord
 #' @usage NULL
-#' @param str `VARCHAR`
+#' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
-#' unicode('ü')
+#' [unicode('âbcd'), unicode('â'), unicode(''), unicode(NULL)]
 #' }
-ord <- function(str = VARCHAR) {
+ord <- function(string = VARCHAR) {
   stop("DuckDB function ord() is not available in R.")
 }
 
@@ -1510,17 +1695,17 @@ pi <- function() {
 
 #' DuckDB function position
 #'
-#' Returns location of first occurrence of needle in haystack, counting from 1. Returns 0 if no match found.
+#' Returns location of first occurrence of `search_string` in `string`, counting from 1. Returns 0 if no match found.
 #'
 #' @name position
 #' @usage NULL
-#' @param haystack `VARCHAR`
-#' @param needle `VARCHAR`
+#' @param string `VARCHAR`
+#' @param search_string `VARCHAR`
 #' @examples
 #' \dontrun{
-#' instr('test test','es')
+#' position('b' IN 'abc')
 #' }
-position <- function(haystack = VARCHAR, needle = VARCHAR) {
+position <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function position() is not available in R.")
 }
 
@@ -1534,7 +1719,7 @@ position <- function(haystack = VARCHAR, needle = VARCHAR) {
 #' @param y `DOUBLE`
 #' @examples
 #' \dontrun{
-#' pow(2, 3)
+#' c("pow(2, 3)", "power(2, 3)")
 #' }
 pow <- function(x = DOUBLE, y = DOUBLE) {
   stop("DuckDB function pow() is not available in R.")
@@ -1550,10 +1735,26 @@ pow <- function(x = DOUBLE, y = DOUBLE) {
 #' @param y `DOUBLE`
 #' @examples
 #' \dontrun{
-#' pow(2, 3)
+#' power(2, 3)
 #' }
 power <- function(x = DOUBLE, y = DOUBLE) {
   stop("DuckDB function power() is not available in R.")
+}
+
+#' DuckDB function prefix
+#'
+#' Returns `true` if `string` starts with `search_string`.
+#'
+#' @name prefix
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param search_string `VARCHAR`
+#' @examples
+#' \dontrun{
+#' prefix('abc', 'ab')
+#' }
+prefix <- function(string = VARCHAR, search_string = VARCHAR) {
+  stop("DuckDB function prefix() is not available in R.")
 }
 
 #' DuckDB function radians
@@ -1573,7 +1774,7 @@ radians <- function(x = DOUBLE) {
 
 #' DuckDB function regexp_escape
 #'
-#' Escapes special patterns to turn string into a regular expression similarly to Python's re.escape function.
+#' Escapes special patterns to turn `string` into a regular expression similarly to Python's `re.escape` function.
 #'
 #' @name regexp_escape
 #' @usage NULL
@@ -1598,12 +1799,7 @@ regexp_escape <- function(string = VARCHAR) {
 #' @param defaults `ANY`
 #' @examples
 #' \dontrun{
-#' remap_struct(
-#'   {'i': 1, 'j': 2},
-#'   NULL::ROW(v1 INT, v2 INT, v3 INT),i
-#'   {'v1': 'j', 'v3': 'i'},i
-#'   {'v2': NULL::INTEGER}i
-#' )
+#' remap_struct({'i': 1, 'j': 2}, NULL::ROW(v1 INT, v2 INT, v3 INT), {'v1': 'j', 'v3': 'i'}, {'v2': NULL::INTEGER})
 #' }
 remap_struct <- function(input = ANY, target_type = ANY, mapping = ANY, defaults = ANY) {
   stop("DuckDB function remap_struct() is not available in R.")
@@ -1611,7 +1807,7 @@ remap_struct <- function(input = ANY, target_type = ANY, mapping = ANY, defaults
 
 #' DuckDB function replace
 #'
-#' Replaces any occurrences of the source with target in string.
+#' Replaces any occurrences of the `source` with `target` in `string`.
 #'
 #' @name replace
 #' @usage NULL
@@ -1626,9 +1822,26 @@ replace <- function(string = VARCHAR, source = VARCHAR, target = VARCHAR) {
   stop("DuckDB function replace() is not available in R.")
 }
 
+#' DuckDB function replace_type
+#'
+#' Casts all fields of type1 to type2.
+#'
+#' @name replace_type
+#' @usage NULL
+#' @param param `ANY`
+#' @param type1 `ANY`
+#' @param type2 `ANY`
+#' @examples
+#' \dontrun{
+#' replace_type({duck: 3.141592653589793::DOUBLE}, NULL::DOUBLE, NULL::DECIMAL(15,2))
+#' }
+replace_type <- function(param = ANY, type1 = ANY, type2 = ANY) {
+  stop("DuckDB function replace_type() is not available in R.")
+}
+
 #' DuckDB function reverse
 #'
-#' Reverses the string.
+#' Reverses the `string`.
 #'
 #' @name reverse
 #' @usage NULL
@@ -1643,7 +1856,7 @@ reverse <- function(string = VARCHAR) {
 
 #' DuckDB function right
 #'
-#' Extract the right-most count characters.
+#' Extract the right-most `count` characters.
 #'
 #' @name right
 #' @usage NULL
@@ -1659,7 +1872,7 @@ right <- function(string = VARCHAR, count = BIGINT) {
 
 #' DuckDB function right_grapheme
 #'
-#' Extracts the right-most count grapheme clusters.
+#' Extracts the right-most `count` grapheme clusters.
 #'
 #' @name right_grapheme
 #' @usage NULL
@@ -1675,7 +1888,7 @@ right_grapheme <- function(string = VARCHAR, count = BIGINT) {
 
 #' DuckDB function rpad
 #'
-#' Pads the string with the character from the right until it has count characters.
+#' Pads the `string` with the `character` on the right until it has `count` characters. Truncates the `string` on the right if it has more than `count` characters.
 #'
 #' @name rpad
 #' @usage NULL
@@ -1747,7 +1960,7 @@ sinh <- function(x = DOUBLE) {
 #' @param separator `VARCHAR`
 #' @examples
 #' \dontrun{
-#' string_split('hello-world', '-')
+#' split('hello-world', '-')
 #' }
 split <- function(string = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function split() is not available in R.")
@@ -1770,7 +1983,7 @@ sqrt <- function(x = DOUBLE) {
 
 #' DuckDB function starts_with
 #'
-#' Returns true if string begins with search_string.
+#' Returns `true` if `string` begins with `search_string`.
 #'
 #' @name starts_with
 #' @usage NULL
@@ -1778,7 +1991,7 @@ sqrt <- function(x = DOUBLE) {
 #' @param search_string `VARCHAR`
 #' @examples
 #' \dontrun{
-#' starts_with('abc','a')
+#' starts_with('abc', 'a')
 #' }
 starts_with <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function starts_with() is not available in R.")
@@ -1794,7 +2007,7 @@ starts_with <- function(string = VARCHAR, search_string = VARCHAR) {
 #' @param separator `VARCHAR`
 #' @examples
 #' \dontrun{
-#' string_split('hello-world', '-')
+#' str_split('hello-world', '-')
 #' }
 str_split <- function(string = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function str_split() is not available in R.")
@@ -1826,7 +2039,7 @@ string_split <- function(string = VARCHAR, separator = VARCHAR) {
 #' @param separator `VARCHAR`
 #' @examples
 #' \dontrun{
-#' string_split('hello-world', '-')
+#' string_to_array('hello-world', '-')
 #' }
 string_to_array <- function(string = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function string_to_array() is not available in R.")
@@ -1864,18 +2077,98 @@ strlen <- function(string = VARCHAR) {
 
 #' DuckDB function strpos
 #'
-#' Returns location of first occurrence of needle in haystack, counting from 1. Returns 0 if no match found.
+#' Returns location of first occurrence of `search_string` in `string`, counting from 1. Returns 0 if no match found.
 #'
 #' @name strpos
 #' @usage NULL
-#' @param haystack `VARCHAR`
-#' @param needle `VARCHAR`
+#' @param string `VARCHAR`
+#' @param search_string `VARCHAR`
 #' @examples
 #' \dontrun{
-#' instr('test test','es')
+#' strpos('test test', 'es')
 #' }
-strpos <- function(haystack = VARCHAR, needle = VARCHAR) {
+strpos <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function strpos() is not available in R.")
+}
+
+#' DuckDB function struct_contains
+#'
+#' Check if an unnamed STRUCT contains the value.
+#'
+#' @name struct_contains
+#' @usage NULL
+#' @param struct `STRUCT`
+#' @param 'entry' `ANY`
+#' @examples
+#' \dontrun{
+#' struct_contains(ROW(3, 3, 0), 3)
+#' }
+struct_contains <- function(struct = STRUCT, `'entry'` = ANY) {
+  stop("DuckDB function struct_contains() is not available in R.")
+}
+
+#' DuckDB function struct_has
+#'
+#' Check if an unnamed STRUCT contains the value.
+#'
+#' @name struct_has
+#' @usage NULL
+#' @param struct `STRUCT`
+#' @param 'entry' `ANY`
+#' @examples
+#' \dontrun{
+#' struct_has(ROW(3, 3, 0), 3)
+#' }
+struct_has <- function(struct = STRUCT, `'entry'` = ANY) {
+  stop("DuckDB function struct_has() is not available in R.")
+}
+
+#' DuckDB function struct_indexof
+#'
+#' Get the position of the entry in an unnamed STRUCT, starting at 1.
+#'
+#' @name struct_indexof
+#' @usage NULL
+#' @param struct `STRUCT`
+#' @param 'entry' `ANY`
+#' @examples
+#' \dontrun{
+#' struct_indexof(ROW(3, 3, 0), 3)
+#' }
+struct_indexof <- function(struct = STRUCT, `'entry'` = ANY) {
+  stop("DuckDB function struct_indexof() is not available in R.")
+}
+
+#' DuckDB function struct_position
+#'
+#' Get the position of the entry in an unnamed STRUCT, starting at 1.
+#'
+#' @name struct_position
+#' @usage NULL
+#' @param struct `STRUCT`
+#' @param 'entry' `ANY`
+#' @examples
+#' \dontrun{
+#' struct_position(ROW(3, 3, 0), 3)
+#' }
+struct_position <- function(struct = STRUCT, `'entry'` = ANY) {
+  stop("DuckDB function struct_position() is not available in R.")
+}
+
+#' DuckDB function suffix
+#'
+#' Returns `true` if `string` ends with `search_string`.
+#'
+#' @name suffix
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param search_string `VARCHAR`
+#' @examples
+#' \dontrun{
+#' suffix('abc', 'bc')
+#' }
+suffix <- function(string = VARCHAR, search_string = VARCHAR) {
+  stop("DuckDB function suffix() is not available in R.")
 }
 
 #' DuckDB function tan
@@ -1925,14 +2218,14 @@ timetz_byte_comparable <- function(time_tz = `TIME WITH TIME ZONE`) {
 
 #' DuckDB function to_base64
 #'
-#' Converts a `blob` to a base64 encoded `string`.
+#' Converts a `blob` to a base64 encoded string.
 #'
 #' @name to_base64
 #' @usage NULL
 #' @param blob `BLOB`
 #' @examples
 #' \dontrun{
-#' base64('A'::BLOB)
+#' to_base64('A'::BLOB)
 #' }
 to_base64 <- function(blob = BLOB) {
   stop("DuckDB function to_base64() is not available in R.")
@@ -2030,7 +2323,7 @@ to_timestamp <- function(sec = DOUBLE) {
 
 #' DuckDB function translate
 #'
-#' Replaces each character in string that matches a character in the from set with the corresponding character in the to set. If from is longer than to, occurrences of the extra characters in from are deleted.
+#' Replaces each character in `string` that matches a character in the `from` set with the corresponding character in the `to` set. If `from` is longer than `to`, occurrences of the extra characters in `from` are deleted.
 #'
 #' @name translate
 #' @usage NULL
@@ -2069,7 +2362,7 @@ typeof <- function(expression = ANY) {
 #' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
-#' upper('Hello')
+#' ucase('Hello')
 #' }
 ucase <- function(string = VARCHAR) {
   stop("DuckDB function ucase() is not available in R.")
@@ -2077,7 +2370,7 @@ ucase <- function(string = VARCHAR) {
 
 #' DuckDB function unbin
 #'
-#' Converts a value from binary representation to a blob.
+#' Converts a `value` from binary representation to a blob.
 #'
 #' @name unbin
 #' @usage NULL
@@ -2092,7 +2385,7 @@ unbin <- function(value = VARCHAR) {
 
 #' DuckDB function unhex
 #'
-#' Converts a value from hexadecimal representation to a blob.
+#' Converts a `value` from hexadecimal representation to a blob.
 #'
 #' @name unhex
 #' @usage NULL
@@ -2107,16 +2400,16 @@ unhex <- function(value = VARCHAR) {
 
 #' DuckDB function unicode
 #'
-#' Returns the unicode codepoint of the first character of the string.
+#' Returns an `INTEGER` representing the `unicode` codepoint of the first character in the `string`.
 #'
 #' @name unicode
 #' @usage NULL
-#' @param str `VARCHAR`
+#' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
-#' unicode('ü')
+#' [unicode('âbcd'), unicode('â'), unicode(''), unicode(NULL)]
 #' }
-unicode <- function(str = VARCHAR) {
+unicode <- function(string = VARCHAR) {
   stop("DuckDB function unicode() is not available in R.")
 }
 
@@ -2168,31 +2461,31 @@ upper <- function(string = VARCHAR) {
 
 #' DuckDB function url_decode
 #'
-#' Unescapes the URL encoded input.
+#' Decodes a URL from a representation using Percent-Encoding.
 #'
 #' @name url_decode
 #' @usage NULL
-#' @param input `VARCHAR`
+#' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
-#' url_decode('this%20string%20is%2BFencoded')
+#' url_decode('https%3A%2F%2Fduckdb.org%2Fwhy_duckdb%23portable')
 #' }
-url_decode <- function(input = VARCHAR) {
+url_decode <- function(string = VARCHAR) {
   stop("DuckDB function url_decode() is not available in R.")
 }
 
 #' DuckDB function url_encode
 #'
-#' Escapes the input string by encoding it so that it can be included in a URL query parameter.
+#' Encodes a URL to a representation using Percent-Encoding.
 #'
 #' @name url_encode
 #' @usage NULL
-#' @param input `VARCHAR`
+#' @param string `VARCHAR`
 #' @examples
 #' \dontrun{
 #' url_encode('this string has/ special+ characters>')
 #' }
-url_encode <- function(input = VARCHAR) {
+url_encode <- function(string = VARCHAR) {
   stop("DuckDB function url_encode() is not available in R.")
 }
 
@@ -2224,6 +2517,21 @@ uuid_extract_timestamp <- function(uuid = UUID) {
 #' }
 uuid_extract_version <- function(uuid = UUID) {
   stop("DuckDB function uuid_extract_version() is not available in R.")
+}
+
+#' DuckDB function variant_typeof
+#'
+#' Returns the internal type of the `input_variant`.
+#'
+#' @name variant_typeof
+#' @usage NULL
+#' @param input_variant `VARIANT`
+#' @examples
+#' \dontrun{
+#' variant_typeof({'a': 42, 'b': [1,2,3])::VARIANT)
+#' }
+variant_typeof <- function(input_variant = VARIANT) {
+  stop("DuckDB function variant_typeof() is not available in R.")
 }
 
 #' DuckDB function vector_type

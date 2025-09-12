@@ -4,12 +4,12 @@
 \alias{list_position}
 \title{DuckDB function list_position}
 \arguments{
-\item{list}{\code{ANY[]}}
+\item{list}{\code{T[]}}
 
-\item{element}{\code{ANY}}
+\item{element}{\code{T}}
 }
 \description{
-Returns the index of the element if the list contains the element. If the element is not found, it returns NULL.
+Returns the index of the \code{element} if the \code{list} contains the \code{element}. If the \code{element} is not found, it returns \code{NULL}.
 }
 \examples{
 \dontrun{

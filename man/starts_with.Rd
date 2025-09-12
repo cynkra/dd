@@ -9,10 +9,10 @@
 \item{search_string}{\code{VARCHAR}}
 }
 \description{
-Returns true if string begins with search_string.
+Returns \code{true} if \code{string} begins with \code{search_string}.
 }
 \examples{
 \dontrun{
-starts_with('abc','a')
+starts_with('abc', 'a')
 }
 }

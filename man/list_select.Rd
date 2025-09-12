@@ -4,12 +4,12 @@
 \alias{list_select}
 \title{DuckDB function list_select}
 \arguments{
-\item{value_list}{\code{ANY[]}}
+\item{value_list}{\code{T[]}}
 
 \item{index_list}{\code{BIGINT[]}}
 }
 \description{
-Returns a list based on the elements selected by the index_list.
+Returns a list based on the elements selected by the \code{index_list}.
 }
 \examples{
 \dontrun{

@@ -4,13 +4,13 @@
 \alias{unicode}
 \title{DuckDB function unicode}
 \arguments{
-\item{str}{\code{VARCHAR}}
+\item{string}{\code{VARCHAR}}
 }
 \description{
-Returns the unicode codepoint of the first character of the string.
+Returns an \code{INTEGER} representing the \code{unicode} codepoint of the first character in the \code{string}.
 }
 \examples{
 \dontrun{
-unicode('ü')
+[unicode('âbcd'), unicode('â'), unicode(''), unicode(NULL)]
 }
 }

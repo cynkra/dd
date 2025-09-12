@@ -4,9 +4,9 @@
 \alias{map_contains}
 \title{DuckDB function map_contains}
 \arguments{
-\item{map}{\code{MAP(ANY, ANY)}}
+\item{map}{\code{MAP(K, V)}}
 
-\item{key}{\code{ANY}}
+\item{key}{\code{K}}
 }
 \description{
 Checks if a map contains a given key.

@@ -7,10 +7,10 @@
 \item{value}{\code{VARCHAR}}
 }
 \description{
-Converts a value from hexadecimal representation to a blob.
+Converts a \code{value} from hexadecimal representation to a blob.
 }
 \examples{
 \dontrun{
-unhex('2A')
+from_hex('2A')
 }
 }

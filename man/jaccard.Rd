@@ -4,15 +4,15 @@
 \alias{jaccard}
 \title{DuckDB function jaccard}
 \arguments{
-\item{str1}{\code{VARCHAR}}
+\item{s1}{\code{VARCHAR}}
 
-\item{str2}{\code{VARCHAR}}
+\item{s2}{\code{VARCHAR}}
 }
 \description{
-The Jaccard similarity between two strings. Different case is considered different. Returns a number between 0 and 1.
+The Jaccard similarity between two strings. Characters of different cases (e.g., \code{a} and \code{A}) are considered different. Returns a number between 0 and 1.
 }
 \examples{
 \dontrun{
-jaccard('duck','luck')
+jaccard('duck', 'luck')
 }
 }

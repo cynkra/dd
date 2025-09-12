@@ -11,6 +11,6 @@ Converts \code{string} to Unicode NFC normalized string. Useful for comparisons 
 }
 \examples{
 \dontrun{
-nfc_normalize('ardèch')
+nfc_normalize('ardèch')
 }
 }

@@ -9,7 +9,7 @@
 \item{count}{\code{BIGINT}}
 }
 \description{
-Extract the right-most count characters.
+Extract the right-most \code{count} characters.
 }
 \examples{
 \dontrun{

@@ -4,13 +4,13 @@
 \alias{formatReadableSize}
 \title{DuckDB function formatReadableSize}
 \arguments{
-\item{bytes}{\code{BIGINT}}
+\item{integer}{\code{BIGINT}}
 }
 \description{
-Converts bytes to a human-readable presentation (e.g., 16000 -> 15.6 KiB).
+Converts \code{integer} to a human-readable representation using units based on powers of 2 (KiB, MiB, GiB, etc.).
 }
 \examples{
 \dontrun{
-format_bytes(1000 * 16)
+formatReadableSize(16_000)
 }
 }

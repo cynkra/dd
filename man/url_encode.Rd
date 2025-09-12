@@ -4,10 +4,10 @@
 \alias{url_encode}
 \title{DuckDB function url_encode}
 \arguments{
-\item{input}{\code{VARCHAR}}
+\item{string}{\code{VARCHAR}}
 }
 \description{
-Escapes the input string by encoding it so that it can be included in a URL query parameter.
+Encodes a URL to a representation using Percent-Encoding.
 }
 \examples{
 \dontrun{

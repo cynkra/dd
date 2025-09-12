@@ -4,10 +4,10 @@
 \alias{list_distinct}
 \title{DuckDB function list_distinct}
 \arguments{
-\item{list}{\code{ANY[]}}
+\item{list}{\code{T[]}}
 }
 \description{
-Removes all duplicates and NULLs from a list. Does not preserve the original order.
+Removes all duplicates and \code{NULL} values from a list. Does not preserve the original order.
 }
 \examples{
 \dontrun{

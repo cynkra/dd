@@ -4,15 +4,15 @@
 \alias{levenshtein}
 \title{DuckDB function levenshtein}
 \arguments{
-\item{str1}{\code{VARCHAR}}
+\item{s1}{\code{VARCHAR}}
 
-\item{str2}{\code{VARCHAR}}
+\item{s2}{\code{VARCHAR}}
 }
 \description{
-The minimum number of single-character edits (insertions, deletions or substitutions) required to change one string to the other. Different case is considered different.
+The minimum number of single-character edits (insertions, deletions or substitutions) required to change one string to the other. Characters of different cases (e.g., \code{a} and \code{A}) are considered different.
 }
 \examples{
 \dontrun{
-levenshtein('duck','db')
+levenshtein('duck', 'db')
 }
 }

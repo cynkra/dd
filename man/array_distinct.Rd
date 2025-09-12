@@ -4,13 +4,13 @@
 \alias{array_distinct}
 \title{DuckDB function array_distinct}
 \arguments{
-\item{list}{\code{ANY[]}}
+\item{list}{\code{T[]}}
 }
 \description{
-Removes all duplicates and NULLs from a list. Does not preserve the original order.
+Removes all duplicates and \code{NULL} values from a list. Does not preserve the original order.
 }
 \examples{
 \dontrun{
-list_distinct([1, 1, NULL, -3, 1, 5])
+array_distinct([1, 1, NULL, -3, 1, 5])
 }
 }

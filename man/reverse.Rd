@@ -7,7 +7,7 @@
 \item{string}{\code{VARCHAR}}
 }
 \description{
-Reverses the string.
+Reverses the \code{string}.
 }
 \examples{
 \dontrun{

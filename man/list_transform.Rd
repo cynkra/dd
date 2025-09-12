@@ -6,13 +6,13 @@
 \arguments{
 \item{list}{\code{ANY[]}}
 
-\item{lambda}{\code{LAMBDA}}
+\item{lambda(x)}{\code{LAMBDA}}
 }
 \description{
-Returns a list that is the result of applying the lambda function to each element of the input list. See the Lambda Functions section for more details.
+Returns a list that is the result of applying the \code{lambda} function to each element of the input \code{list}. The return type is defined by the return type of the \code{lambda} function.
 }
 \examples{
 \dontrun{
-list_transform([1, 2, 3], x -> x + 1)
+list_transform([1, 2, 3], lambda x : x + 1)
 }
 }

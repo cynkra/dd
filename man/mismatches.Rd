@@ -4,15 +4,15 @@
 \alias{mismatches}
 \title{DuckDB function mismatches}
 \arguments{
-\item{str1}{\code{VARCHAR}}
+\item{s1}{\code{VARCHAR}}
 
-\item{str2}{\code{VARCHAR}}
+\item{s2}{\code{VARCHAR}}
 }
 \description{
-The number of positions with different characters for 2 strings of equal length. Different case is considered different.
+The Hamming distance between to strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., \code{a} and \code{A}) are considered different.
 }
 \examples{
 \dontrun{
-hamming('duck','luck')
+mismatches('duck', 'luck')
 }
 }
