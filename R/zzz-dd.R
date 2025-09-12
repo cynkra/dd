@@ -121,7 +121,6 @@ dd <- list(
   prefix = prefix,
   radians = radians,
   regexp_escape = regexp_escape,
-  remap_struct = remap_struct,
   replace = replace,
   replace_type = replace_type,
   reverse = reverse,

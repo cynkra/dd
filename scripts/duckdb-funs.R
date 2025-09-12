@@ -101,6 +101,8 @@ funs <-
   mutate(examples = gsub(r"(^variant_typeof\(\{'a': 42, 'b': \[1,2,3\]\)::VARIANT\)$)", "variant_typeof({'a': 42, 'b': [1,2,3]})", examples)) |>
   # FIXME: Irregular
   filter_print(!(function_name %in% c("struct_extract_at"))) |>
+  # FIXME: Example too long
+  filter_print(!(function_name %in% c("remap_struct"))) |>
   arrange(function_name)
 
 code <-
