@@ -408,6 +408,24 @@ atanh <- function(x = DOUBLE) {
   stop("DuckDB function atanh() is not available in R.")
 }
 
+#' DuckDB function bar
+#'
+#' Draws a band whose width is proportional to (`x - min`) and equal to `width` characters when `x` = `max`. `width` defaults to 80.
+#'
+#' @name bar
+#' @usage NULL
+#' @param x `DOUBLE`
+#' @param min `DOUBLE`
+#' @param max `DOUBLE`
+#' @param width `DOUBLE`
+#' @examples
+#' \dontrun{
+#' bar(5, 0, 20, 10)
+#' }
+bar <- function(x = DOUBLE, min = DOUBLE, max = DOUBLE, width = DOUBLE) {
+  stop("DuckDB function bar() is not available in R.")
+}
+
 #' DuckDB function base64
 #'
 #' Converts a `blob` to a base64 encoded string.
@@ -437,6 +455,22 @@ base64 <- function(blob = BLOB) {
 #' }
 bit_position <- function(substring = BIT, bitstring = BIT) {
   stop("DuckDB function bit_position() is not available in R.")
+}
+
+#' DuckDB function bitstring
+#'
+#' Pads the bitstring until the specified length.
+#'
+#' @name bitstring
+#' @usage NULL
+#' @param bitstring `VARCHAR | BIT`
+#' @param length `INTEGER`
+#' @examples
+#' \dontrun{
+#' bitstring('1010'::BIT, 7)
+#' }
+bitstring <- function(bitstring = `VARCHAR | BIT`, length = INTEGER) {
+  stop("DuckDB function bitstring() is not available in R.")
 }
 
 #' DuckDB function can_cast_implicitly
