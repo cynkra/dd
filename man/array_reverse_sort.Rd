@@ -3,11 +3,10 @@
 \name{array_reverse_sort}
 \alias{array_reverse_sort}
 \title{DuckDB function array_reverse_sort}
-\usage{
-array_reverse_sort(list = `ANY[]`)
-}
 \arguments{
 \item{list}{\code{ANY[]}}
+
+\item{col1}{\code{VARCHAR}}
 }
 \description{
 Sorts the elements of the list in reverse order.

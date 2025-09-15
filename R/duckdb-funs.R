@@ -243,13 +243,14 @@ array_resize <- function(list = `ANY[]`, `size[` = ANY, `value]` = ANY) {
 #' Sorts the elements of the list in reverse order.
 #'
 #' @name array_reverse_sort
-#' @usage array_reverse_sort(list = `ANY[]`)
+#' @usage NULL
 #' @param list `ANY[]`
+#' @param col1 `VARCHAR`
 #' @examples
 #' \dontrun{
 #' array_reverse_sort([3, 6, 1, 2])
 #' }
-array_reverse_sort <- function(list = `ANY[]`) {
+array_reverse_sort <- function(list = `ANY[]`, col1 = VARCHAR) {
   stop("DuckDB function array_reverse_sort() is not available in R.")
 }
 
