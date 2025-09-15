@@ -93,6 +93,69 @@ array_contains <- function(list = `T[]`, element = T) {
   stop("DuckDB function array_contains() is not available in R.")
 }
 
+#' DuckDB function array_cosine_distance
+#'
+#' Computes the cosine distance between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
+#'
+#' @name array_cosine_distance
+#' @usage NULL
+#' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @examples
+#' \dontrun{
+#' array_cosine_distance(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
+#' }
+array_cosine_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[ANY] | DOUBLE[ANY]`) {
+  stop("DuckDB function array_cosine_distance() is not available in R.")
+}
+
+#' DuckDB function array_cosine_similarity
+#'
+#' Computes the cosine similarity between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
+#'
+#' @name array_cosine_similarity
+#' @usage NULL
+#' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @examples
+#' \dontrun{
+#' array_cosine_similarity(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
+#' }
+array_cosine_similarity <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[ANY] | DOUBLE[ANY]`) {
+  stop("DuckDB function array_cosine_similarity() is not available in R.")
+}
+
+#' DuckDB function array_cross_product
+#'
+#' Computes the cross product of two arrays of size 3. The array elements can not be `NULL`.
+#'
+#' @name array_cross_product
+#' @usage NULL
+#' @param array `FLOAT[3] | DOUBLE[3]`
+#' @examples
+#' \dontrun{
+#' array_cross_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
+#' }
+array_cross_product <- function(array = `FLOAT[3] | DOUBLE[3]`) {
+  stop("DuckDB function array_cross_product() is not available in R.")
+}
+
+#' DuckDB function array_distance
+#'
+#' Computes the distance between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
+#'
+#' @name array_distance
+#' @usage NULL
+#' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @examples
+#' \dontrun{
+#' array_distance(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
+#' }
+array_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[ANY] | DOUBLE[ANY]`) {
+  stop("DuckDB function array_distance() is not available in R.")
+}
+
 #' DuckDB function array_distinct
 #'
 #' Removes all duplicates and `NULL` values from a list. Does not preserve the original order.
@@ -106,6 +169,22 @@ array_contains <- function(list = `T[]`, element = T) {
 #' }
 array_distinct <- function(list = `T[]`) {
   stop("DuckDB function array_distinct() is not available in R.")
+}
+
+#' DuckDB function array_dot_product
+#'
+#' Computes the inner product between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
+#'
+#' @name array_dot_product
+#' @usage NULL
+#' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @examples
+#' \dontrun{
+#' array_dot_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
+#' }
+array_dot_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[ANY] | DOUBLE[ANY]`) {
+  stop("DuckDB function array_dot_product() is not available in R.")
 }
 
 #' DuckDB function array_filter
@@ -186,6 +265,54 @@ array_has_any <- function(list1 = `T[]`, list2 = `T[]`) {
 #' }
 array_indexof <- function(list = `T[]`, element = T) {
   stop("DuckDB function array_indexof() is not available in R.")
+}
+
+#' DuckDB function array_inner_product
+#'
+#' Computes the inner product between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
+#'
+#' @name array_inner_product
+#' @usage NULL
+#' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @examples
+#' \dontrun{
+#' array_inner_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
+#' }
+array_inner_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[ANY] | DOUBLE[ANY]`) {
+  stop("DuckDB function array_inner_product() is not available in R.")
+}
+
+#' DuckDB function array_negative_dot_product
+#'
+#' Computes the negative inner product between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
+#'
+#' @name array_negative_dot_product
+#' @usage NULL
+#' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @examples
+#' \dontrun{
+#' array_negative_dot_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
+#' }
+array_negative_dot_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[ANY] | DOUBLE[ANY]`) {
+  stop("DuckDB function array_negative_dot_product() is not available in R.")
+}
+
+#' DuckDB function array_negative_inner_product
+#'
+#' Computes the negative inner product between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
+#'
+#' @name array_negative_inner_product
+#' @usage NULL
+#' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @examples
+#' \dontrun{
+#' array_negative_inner_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
+#' }
+array_negative_inner_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[ANY] | DOUBLE[ANY]`) {
+  stop("DuckDB function array_negative_inner_product() is not available in R.")
 }
 
 #' DuckDB function array_position
@@ -977,6 +1104,22 @@ gamma <- function(x = DOUBLE) {
   stop("DuckDB function gamma() is not available in R.")
 }
 
+#' DuckDB function gcd
+#'
+#' Computes the greatest common divisor of x and y.
+#'
+#' @name gcd
+#' @usage NULL
+#' @param x `BIGINT | HUGEINT`
+#' @param y `BIGINT | HUGEINT`
+#' @examples
+#' \dontrun{
+#' gcd(42, 57)
+#' }
+gcd <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
+  stop("DuckDB function gcd() is not available in R.")
+}
+
 #' DuckDB function get_bit
 #'
 #' Extracts the nth bit from bitstring; the first (leftmost) bit is indexed 0.
@@ -991,6 +1134,22 @@ gamma <- function(x = DOUBLE) {
 #' }
 get_bit <- function(bitstring = BIT, index = INTEGER) {
   stop("DuckDB function get_bit() is not available in R.")
+}
+
+#' DuckDB function greatest_common_divisor
+#'
+#' Computes the greatest common divisor of x and y.
+#'
+#' @name greatest_common_divisor
+#' @usage NULL
+#' @param x `BIGINT | HUGEINT`
+#' @param y `BIGINT | HUGEINT`
+#' @examples
+#' \dontrun{
+#' greatest_common_divisor(42, 57)
+#' }
+greatest_common_divisor <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
+  stop("DuckDB function greatest_common_divisor() is not available in R.")
 }
 
 #' DuckDB function hamming
@@ -1057,6 +1216,21 @@ is_histogram_other_bin <- function(val = ANY) {
   stop("DuckDB function is_histogram_other_bin() is not available in R.")
 }
 
+#' DuckDB function isnan
+#'
+#' Returns true if the floating point value is not a number, false otherwise.
+#'
+#' @name isnan
+#' @usage NULL
+#' @param x `FLOAT | DOUBLE`
+#' @examples
+#' \dontrun{
+#' isnan('NaN'::FLOAT)
+#' }
+isnan <- function(x = `FLOAT | DOUBLE`) {
+  stop("DuckDB function isnan() is not available in R.")
+}
+
 #' DuckDB function jaccard
 #'
 #' The Jaccard similarity between two strings. Characters of different cases (e.g., `a` and `A`) are considered different. Returns a number between 0 and 1.
@@ -1073,6 +1247,40 @@ jaccard <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function jaccard() is not available in R.")
 }
 
+#' DuckDB function jaro_similarity
+#'
+#' The Jaro similarity between two strings. Characters of different cases (e.g., `a` and `A`) are considered different. Returns a number between 0 and 1. For similarity < `score_cutoff`, 0 is returned instead. `score_cutoff` defaults to 0.
+#'
+#' @name jaro_similarity
+#' @usage NULL
+#' @param s1 `VARCHAR`
+#' @param s2 `VARCHAR`
+#' @param score_cutoff `DOUBLE`
+#' @examples
+#' \dontrun{
+#' jaro_similarity('duck', 'duckdb')
+#' }
+jaro_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE) {
+  stop("DuckDB function jaro_similarity() is not available in R.")
+}
+
+#' DuckDB function jaro_winkler_similarity
+#'
+#' The Jaro-Winkler similarity between two strings. Characters of different cases (e.g., `a` and `A`) are considered different. Returns a number between 0 and 1. For similarity < `score_cutoff`, 0 is returned instead. `score_cutoff` defaults to 0.
+#'
+#' @name jaro_winkler_similarity
+#' @usage NULL
+#' @param s1 `VARCHAR`
+#' @param s2 `VARCHAR`
+#' @param score_cutoff `DOUBLE`
+#' @examples
+#' \dontrun{
+#' jaro_winkler_similarity('duck', 'duckdb')
+#' }
+jaro_winkler_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE) {
+  stop("DuckDB function jaro_winkler_similarity() is not available in R.")
+}
+
 #' DuckDB function lcase
 #'
 #' Converts `string` to lower case.
@@ -1086,6 +1294,38 @@ jaccard <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' }
 lcase <- function(string = VARCHAR) {
   stop("DuckDB function lcase() is not available in R.")
+}
+
+#' DuckDB function lcm
+#'
+#' Computes the least common multiple of x and y.
+#'
+#' @name lcm
+#' @usage NULL
+#' @param x `BIGINT | HUGEINT`
+#' @param y `BIGINT | HUGEINT`
+#' @examples
+#' \dontrun{
+#' lcm(42, 57)
+#' }
+lcm <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
+  stop("DuckDB function lcm() is not available in R.")
+}
+
+#' DuckDB function least_common_multiple
+#'
+#' Computes the least common multiple of x and y.
+#'
+#' @name least_common_multiple
+#' @usage NULL
+#' @param x `BIGINT | HUGEINT`
+#' @param y `BIGINT | HUGEINT`
+#' @examples
+#' \dontrun{
+#' least_common_multiple(42, 57)
+#' }
+least_common_multiple <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
+  stop("DuckDB function least_common_multiple() is not available in R.")
 }
 
 #' DuckDB function left
@@ -1215,6 +1455,54 @@ list_contains <- function(list = `T[]`, element = T) {
   stop("DuckDB function list_contains() is not available in R.")
 }
 
+#' DuckDB function list_cosine_distance
+#'
+#' Computes the cosine distance between two same-sized lists.
+#'
+#' @name list_cosine_distance
+#' @usage NULL
+#' @param list1 `FLOAT[] | DOUBLE[]`
+#' @param list2 `FLOAT[] | DOUBLE[]`
+#' @examples
+#' \dontrun{
+#' list_cosine_distance([1, 2, 3], [1, 2, 3])
+#' }
+list_cosine_distance <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBLE[]`) {
+  stop("DuckDB function list_cosine_distance() is not available in R.")
+}
+
+#' DuckDB function list_cosine_similarity
+#'
+#' Computes the cosine similarity between two same-sized lists.
+#'
+#' @name list_cosine_similarity
+#' @usage NULL
+#' @param list1 `FLOAT[] | DOUBLE[]`
+#' @param list2 `FLOAT[] | DOUBLE[]`
+#' @examples
+#' \dontrun{
+#' list_cosine_similarity([1, 2, 3], [1, 2, 3])
+#' }
+list_cosine_similarity <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBLE[]`) {
+  stop("DuckDB function list_cosine_similarity() is not available in R.")
+}
+
+#' DuckDB function list_distance
+#'
+#' Calculates the Euclidean distance between two points with coordinates given in two inputs lists of equal length.
+#'
+#' @name list_distance
+#' @usage NULL
+#' @param list1 `FLOAT[] | DOUBLE[]`
+#' @param list2 `FLOAT[] | DOUBLE[]`
+#' @examples
+#' \dontrun{
+#' list_distance([1, 2, 3], [1, 2, 5])
+#' }
+list_distance <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBLE[]`) {
+  stop("DuckDB function list_distance() is not available in R.")
+}
+
 #' DuckDB function list_distinct
 #'
 #' Removes all duplicates and `NULL` values from a list. Does not preserve the original order.
@@ -1228,6 +1516,54 @@ list_contains <- function(list = `T[]`, element = T) {
 #' }
 list_distinct <- function(list = `T[]`) {
   stop("DuckDB function list_distinct() is not available in R.")
+}
+
+#' DuckDB function list_dot_product
+#'
+#' Computes the inner product between two same-sized lists.
+#'
+#' @name list_dot_product
+#' @usage NULL
+#' @param list1 `FLOAT[] | DOUBLE[]`
+#' @param list2 `FLOAT[] | DOUBLE[]`
+#' @examples
+#' \dontrun{
+#' list_dot_product([1, 2, 3], [1, 2, 3])
+#' }
+list_dot_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBLE[]`) {
+  stop("DuckDB function list_dot_product() is not available in R.")
+}
+
+#' DuckDB function list_element
+#'
+#' Extract the `index`th (1-based) value from the list.
+#'
+#' @name list_element
+#' @usage NULL
+#' @param list `T[] | VARCHAR`
+#' @param index `BIGINT`
+#' @examples
+#' \dontrun{
+#' list_element([4, 5, 6], 3)
+#' }
+list_element <- function(list = `T[] | VARCHAR`, index = BIGINT) {
+  stop("DuckDB function list_element() is not available in R.")
+}
+
+#' DuckDB function list_extract
+#'
+#' Extract the `index`th (1-based) value from the list.
+#'
+#' @name list_extract
+#' @usage NULL
+#' @param list `T[] | VARCHAR`
+#' @param index `BIGINT`
+#' @examples
+#' \dontrun{
+#' list_extract([4, 5, 6], 3)
+#' }
+list_extract <- function(list = `T[] | VARCHAR`, index = BIGINT) {
+  stop("DuckDB function list_extract() is not available in R.")
 }
 
 #' DuckDB function list_filter
@@ -1310,6 +1646,54 @@ list_indexof <- function(list = `T[]`, element = T) {
   stop("DuckDB function list_indexof() is not available in R.")
 }
 
+#' DuckDB function list_inner_product
+#'
+#' Computes the inner product between two same-sized lists.
+#'
+#' @name list_inner_product
+#' @usage NULL
+#' @param list1 `FLOAT[] | DOUBLE[]`
+#' @param list2 `FLOAT[] | DOUBLE[]`
+#' @examples
+#' \dontrun{
+#' list_inner_product([1, 2, 3], [1, 2, 3])
+#' }
+list_inner_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBLE[]`) {
+  stop("DuckDB function list_inner_product() is not available in R.")
+}
+
+#' DuckDB function list_negative_dot_product
+#'
+#' Computes the negative inner product between two same-sized lists.
+#'
+#' @name list_negative_dot_product
+#' @usage NULL
+#' @param list1 `FLOAT[] | DOUBLE[]`
+#' @param list2 `FLOAT[] | DOUBLE[]`
+#' @examples
+#' \dontrun{
+#' list_negative_dot_product([1, 2, 3], [1, 2, 3])
+#' }
+list_negative_dot_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBLE[]`) {
+  stop("DuckDB function list_negative_dot_product() is not available in R.")
+}
+
+#' DuckDB function list_negative_inner_product
+#'
+#' Computes the negative inner product between two same-sized lists.
+#'
+#' @name list_negative_inner_product
+#' @usage NULL
+#' @param list1 `FLOAT[] | DOUBLE[]`
+#' @param list2 `FLOAT[] | DOUBLE[]`
+#' @examples
+#' \dontrun{
+#' list_negative_inner_product([1, 2, 3], [1, 2, 3])
+#' }
+list_negative_inner_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBLE[]`) {
+  stop("DuckDB function list_negative_inner_product() is not available in R.")
+}
+
 #' DuckDB function list_pack
 #'
 #' Creates a LIST containing the argument values.
@@ -1339,6 +1723,56 @@ list_pack <- function() {
 #' }
 list_position <- function(list = `T[]`, element = T) {
   stop("DuckDB function list_position() is not available in R.")
+}
+
+#' DuckDB function list_reduce
+#'
+#' Reduces all elements of the input `list` into a single scalar value by executing the `lambda` function on a running result and the next list element. The `lambda` function has an optional `initial_value` argument.
+#'
+#' @name list_reduce
+#' @usage NULL
+#' @param list `ANY[]`
+#' @param lambda(x,y) `LAMBDA`
+#' @param initial_value `ANY`
+#' @examples
+#' \dontrun{
+#' list_reduce([1, 2, 3], lambda x, y : x + y)
+#' }
+list_reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY) {
+  stop("DuckDB function list_reduce() is not available in R.")
+}
+
+#' DuckDB function list_resize
+#'
+#' Resizes the `list` to contain `size` elements. Initializes new elements with `value` or `NULL` if `value` is not set.
+#'
+#' @name list_resize
+#' @usage NULL
+#' @param list `ANY[]`
+#' @param size[ `ANY`
+#' @param value] `ANY`
+#' @examples
+#' \dontrun{
+#' list_resize([1, 2, 3], 5, 0)
+#' }
+list_resize <- function(list = `ANY[]`, `size[` = ANY, `value]` = ANY) {
+  stop("DuckDB function list_resize() is not available in R.")
+}
+
+#' DuckDB function list_reverse_sort
+#'
+#' Sorts the elements of the list in reverse order.
+#'
+#' @name list_reverse_sort
+#' @usage NULL
+#' @param list `ANY[]`
+#' @param col1 `VARCHAR`
+#' @examples
+#' \dontrun{
+#' list_reverse_sort([3, 6, 1, 2])
+#' }
+list_reverse_sort <- function(list = `ANY[]`, col1 = VARCHAR) {
+  stop("DuckDB function list_reverse_sort() is not available in R.")
 }
 
 #' DuckDB function list_select
@@ -1434,6 +1868,22 @@ ln <- function(x = DOUBLE) {
   stop("DuckDB function ln() is not available in R.")
 }
 
+#' DuckDB function log
+#'
+#' Computes the logarithm of x to base b. b may be omitted, in which case the default 10.
+#'
+#' @name log
+#' @usage NULL
+#' @param b `DOUBLE`
+#' @param x `DOUBLE`
+#' @examples
+#' \dontrun{
+#' log(2, 64)
+#' }
+log <- function(b = DOUBLE, x = DOUBLE) {
+  stop("DuckDB function log() is not available in R.")
+}
+
 #' DuckDB function log10
 #'
 #' Computes the 10-log of x.
@@ -1496,6 +1946,22 @@ lpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
   stop("DuckDB function lpad() is not available in R.")
 }
 
+#' DuckDB function ltrim
+#'
+#' Removes any occurrences of any of the `characters` from the left side of the `string`. `characters` defaults to `space`.
+#'
+#' @name ltrim
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param characters `VARCHAR`
+#' @examples
+#' \dontrun{
+#' c("ltrim('    test  ')", "ltrim('>>>>test<<', '><')")
+#' }
+ltrim <- function(string = VARCHAR, characters = VARCHAR) {
+  stop("DuckDB function ltrim() is not available in R.")
+}
+
 #' DuckDB function make_time
 #'
 #' The time for the given parts.
@@ -1511,6 +1977,26 @@ lpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #' }
 make_time <- function(hour = BIGINT, minute = BIGINT, seconds = DOUBLE) {
   stop("DuckDB function make_time() is not available in R.")
+}
+
+#' DuckDB function make_timestamp
+#'
+#' The timestamp for the given parts.
+#'
+#' @name make_timestamp
+#' @usage NULL
+#' @param year `BIGINT`
+#' @param month `BIGINT`
+#' @param day `BIGINT`
+#' @param hour `BIGINT`
+#' @param minute `BIGINT`
+#' @param seconds `DOUBLE`
+#' @examples
+#' \dontrun{
+#' make_timestamp(1992, 9, 20, 13, 34, 27.123456)
+#' }
+make_timestamp <- function(year = BIGINT, month = BIGINT, day = BIGINT, hour = BIGINT, minute = BIGINT, seconds = DOUBLE) {
+  stop("DuckDB function make_timestamp() is not available in R.")
 }
 
 #' DuckDB function make_timestamp_ms
@@ -1541,6 +2027,22 @@ make_timestamp_ms <- function(nanos = BIGINT) {
 #' }
 make_timestamp_ns <- function(nanos = BIGINT) {
   stop("DuckDB function make_timestamp_ns() is not available in R.")
+}
+
+#' DuckDB function map
+#'
+#' Creates a map from a set of keys and values.
+#'
+#' @name map
+#' @usage NULL
+#' @param keys `K[]`
+#' @param values `V[]`
+#' @examples
+#' \dontrun{
+#' map(['key1', 'key2'], ['val1', 'val2'])
+#' }
+map <- function(keys = `K[]`, values = `V[]`) {
+  stop("DuckDB function map() is not available in R.")
 }
 
 #' DuckDB function map_contains
@@ -1762,6 +2264,38 @@ ord <- function(string = VARCHAR) {
   stop("DuckDB function ord() is not available in R.")
 }
 
+#' DuckDB function parse_dirname
+#'
+#' Returns the top-level directory name from the given `path`. `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
+#'
+#' @name parse_dirname
+#' @usage NULL
+#' @param path `VARCHAR`
+#' @param separator `VARCHAR`
+#' @examples
+#' \dontrun{
+#' parse_dirname('path/to/file.csv', 'system')
+#' }
+parse_dirname <- function(path = VARCHAR, separator = VARCHAR) {
+  stop("DuckDB function parse_dirname() is not available in R.")
+}
+
+#' DuckDB function parse_dirpath
+#'
+#' Returns the head of the `path` (the pathname until the last slash) similarly to Python's `os.path.dirname`. `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
+#'
+#' @name parse_dirpath
+#' @usage NULL
+#' @param path `VARCHAR`
+#' @param separator `VARCHAR`
+#' @examples
+#' \dontrun{
+#' parse_dirpath('path/to/file.csv', 'forward_slash')
+#' }
+parse_dirpath <- function(path = VARCHAR, separator = VARCHAR) {
+  stop("DuckDB function parse_dirpath() is not available in R.")
+}
+
 #' DuckDB function parse_duckdb_log_message
 #'
 #' Parse the message into the expected logical type.
@@ -1776,6 +2310,22 @@ ord <- function(string = VARCHAR) {
 #' }
 parse_duckdb_log_message <- function(type = VARCHAR, message = VARCHAR) {
   stop("DuckDB function parse_duckdb_log_message() is not available in R.")
+}
+
+#' DuckDB function parse_path
+#'
+#' Returns a list of the components (directories and filename) in the `path` similarly to Python's `pathlib.parts` function. `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
+#'
+#' @name parse_path
+#' @usage NULL
+#' @param path `VARCHAR`
+#' @param separator `VARCHAR`
+#' @examples
+#' \dontrun{
+#' parse_path('path/to/file.csv', 'system')
+#' }
+parse_path <- function(path = VARCHAR, separator = VARCHAR) {
+  stop("DuckDB function parse_path() is not available in R.")
 }
 
 #' DuckDB function pi
@@ -1872,6 +2422,23 @@ radians <- function(x = DOUBLE) {
   stop("DuckDB function radians() is not available in R.")
 }
 
+#' DuckDB function reduce
+#'
+#' Reduces all elements of the input `list` into a single scalar value by executing the `lambda` function on a running result and the next list element. The `lambda` function has an optional `initial_value` argument.
+#'
+#' @name reduce
+#' @usage NULL
+#' @param list `ANY[]`
+#' @param lambda(x,y) `LAMBDA`
+#' @param initial_value `ANY`
+#' @examples
+#' \dontrun{
+#' reduce([1, 2, 3], lambda x, y : x + y)
+#' }
+reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY) {
+  stop("DuckDB function reduce() is not available in R.")
+}
+
 #' DuckDB function regexp_escape
 #'
 #' Escapes special patterns to turn `string` into a regular expression similarly to Python's `re.escape` function.
@@ -1885,6 +2452,75 @@ radians <- function(x = DOUBLE) {
 #' }
 regexp_escape <- function(string = VARCHAR) {
   stop("DuckDB function regexp_escape() is not available in R.")
+}
+
+#' DuckDB function regexp_full_match
+#'
+#' Returns `true` if the entire `string` matches the `regex`. A set of optional regex `options` can be set.
+#'
+#' @name regexp_full_match
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param regex `VARCHAR`
+#' @param col2 `VARCHAR`
+#' @examples
+#' \dontrun{
+#' regexp_full_match('anabanana', '(an)*')
+#' }
+regexp_full_match <- function(string = VARCHAR, regex = VARCHAR, col2 = VARCHAR) {
+  stop("DuckDB function regexp_full_match() is not available in R.")
+}
+
+#' DuckDB function regexp_matches
+#'
+#' Returns `true` if `string` contains the `regex`, `false` otherwise. A set of optional regex `options` can be set.
+#'
+#' @name regexp_matches
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param regex `VARCHAR`
+#' @param options `VARCHAR`
+#' @examples
+#' \dontrun{
+#' regexp_matches('anabanana', '(an)*')
+#' }
+regexp_matches <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR) {
+  stop("DuckDB function regexp_matches() is not available in R.")
+}
+
+#' DuckDB function regexp_replace
+#'
+#' If `string` contains the `regex`, replaces the matching part with `replacement`. A set of optional regex `options` can be set.
+#'
+#' @name regexp_replace
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param regex `VARCHAR`
+#' @param replacement `VARCHAR`
+#' @param options `VARCHAR`
+#' @examples
+#' \dontrun{
+#' regexp_replace('hello', '[lo]', '-')
+#' }
+regexp_replace <- function(string = VARCHAR, regex = VARCHAR, replacement = VARCHAR, options = VARCHAR) {
+  stop("DuckDB function regexp_replace() is not available in R.")
+}
+
+#' DuckDB function regexp_split_to_array
+#'
+#' Splits the `string` along the `regex`. A set of optional regex `options` can be set.
+#'
+#' @name regexp_split_to_array
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param regex `VARCHAR`
+#' @param options `VARCHAR`
+#' @examples
+#' \dontrun{
+#' regexp_split_to_array('hello world; 42', ';? ')
+#' }
+regexp_split_to_array <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR) {
+  stop("DuckDB function regexp_split_to_array() is not available in R.")
 }
 
 #' DuckDB function replace
@@ -1985,6 +2621,22 @@ rpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
   stop("DuckDB function rpad() is not available in R.")
 }
 
+#' DuckDB function rtrim
+#'
+#' Removes any occurrences of any of the `characters` from the right side of the `string`. `characters` defaults to `space`.
+#'
+#' @name rtrim
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param characters `VARCHAR`
+#' @examples
+#' \dontrun{
+#' c("rtrim('    test  ')", "rtrim('>>>>test<<', '><')")
+#' }
+rtrim <- function(string = VARCHAR, characters = VARCHAR) {
+  stop("DuckDB function rtrim() is not available in R.")
+}
+
 #' DuckDB function set_bit
 #'
 #' Sets the nth bit in bitstring to newvalue; the first (leftmost) bit is indexed 0. Returns a new bitstring.
@@ -2000,6 +2652,21 @@ rpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #' }
 set_bit <- function(bitstring = BIT, index = INTEGER, new_value = INTEGER) {
   stop("DuckDB function set_bit() is not available in R.")
+}
+
+#' DuckDB function signbit
+#'
+#' Returns whether the signbit is set or not.
+#'
+#' @name signbit
+#' @usage NULL
+#' @param x `FLOAT | DOUBLE`
+#' @examples
+#' \dontrun{
+#' signbit(-0.0)
+#' }
+signbit <- function(x = `FLOAT | DOUBLE`) {
+  stop("DuckDB function signbit() is not available in R.")
 }
 
 #' DuckDB function sin
@@ -2095,6 +2762,23 @@ str_split <- function(string = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function str_split() is not available in R.")
 }
 
+#' DuckDB function str_split_regex
+#'
+#' Splits the `string` along the `regex`. A set of optional regex `options` can be set.
+#'
+#' @name str_split_regex
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param regex `VARCHAR`
+#' @param options `VARCHAR`
+#' @examples
+#' \dontrun{
+#' str_split_regex('hello world; 42', ';? ')
+#' }
+str_split_regex <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR) {
+  stop("DuckDB function str_split_regex() is not available in R.")
+}
+
 #' DuckDB function string_split
 #'
 #' Splits the `string` along the `separator`.
@@ -2109,6 +2793,23 @@ str_split <- function(string = VARCHAR, separator = VARCHAR) {
 #' }
 string_split <- function(string = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function string_split() is not available in R.")
+}
+
+#' DuckDB function string_split_regex
+#'
+#' Splits the `string` along the `regex`. A set of optional regex `options` can be set.
+#'
+#' @name string_split_regex
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param regex `VARCHAR`
+#' @param options `VARCHAR`
+#' @examples
+#' \dontrun{
+#' string_split_regex('hello world; 42', ';? ')
+#' }
+string_split_regex <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR) {
+  stop("DuckDB function string_split_regex() is not available in R.")
 }
 
 #' DuckDB function string_to_array
@@ -2189,6 +2890,22 @@ struct_contains <- function(struct = STRUCT, `'entry'` = ANY) {
   stop("DuckDB function struct_contains() is not available in R.")
 }
 
+#' DuckDB function struct_extract
+#'
+#' Extract the named entry from the STRUCT.
+#'
+#' @name struct_extract
+#' @usage NULL
+#' @param struct `STRUCT`
+#' @param 'entry' `VARCHAR | BIGINT`
+#' @examples
+#' \dontrun{
+#' struct_extract({'i': 3, 'v2': 3, 'v3': 0}, 'i')
+#' }
+struct_extract <- function(struct = STRUCT, `'entry'` = `VARCHAR | BIGINT`) {
+  stop("DuckDB function struct_extract() is not available in R.")
+}
+
 #' DuckDB function struct_has
 #'
 #' Check if an unnamed STRUCT contains the value.
@@ -2235,6 +2952,57 @@ struct_indexof <- function(struct = STRUCT, `'entry'` = ANY) {
 #' }
 struct_position <- function(struct = STRUCT, `'entry'` = ANY) {
   stop("DuckDB function struct_position() is not available in R.")
+}
+
+#' DuckDB function substr
+#'
+#' Extracts substring starting from character `start` up to the end of the string. If optional argument `length` is set, extracts a substring of `length` characters instead. Note that a `start` value of `1` refers to the first character of the `string`.
+#'
+#' @name substr
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param start `BIGINT`
+#' @param length `BIGINT`
+#' @examples
+#' \dontrun{
+#' c("substring('Hello', 2)", "substring('Hello', 2, 2)")
+#' }
+substr <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
+  stop("DuckDB function substr() is not available in R.")
+}
+
+#' DuckDB function substring
+#'
+#' Extracts substring starting from character `start` up to the end of the string. If optional argument `length` is set, extracts a substring of `length` characters instead. Note that a `start` value of `1` refers to the first character of the `string`.
+#'
+#' @name substring
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param start `BIGINT`
+#' @param length `BIGINT`
+#' @examples
+#' \dontrun{
+#' c("substring('Hello', 2)", "substring('Hello', 2, 2)")
+#' }
+substring <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
+  stop("DuckDB function substring() is not available in R.")
+}
+
+#' DuckDB function substring_grapheme
+#'
+#' Extracts substring starting from grapheme clusters `start` up to the end of the string. If optional argument `length` is set, extracts a substring of `length` grapheme clusters instead. Note that a `start` value of `1` refers to the `first` character of the `string`.
+#'
+#' @name substring_grapheme
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param start `BIGINT`
+#' @param length `BIGINT`
+#' @examples
+#' \dontrun{
+#' c("substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3)", "substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3, 2)")
+#' }
+substring_grapheme <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
+  stop("DuckDB function substring_grapheme() is not available in R.")
 }
 
 #' DuckDB function suffix
@@ -2298,6 +3066,23 @@ timetz_byte_comparable <- function(time_tz = `TIME WITH TIME ZONE`) {
   stop("DuckDB function timetz_byte_comparable() is not available in R.")
 }
 
+#' DuckDB function to_base
+#'
+#' Converts `number` to a string in the given base `radix`, optionally padding with leading zeros to `min_length`.
+#'
+#' @name to_base
+#' @usage NULL
+#' @param number `BIGINT`
+#' @param radix `INTEGER`
+#' @param min_length `INTEGER`
+#' @examples
+#' \dontrun{
+#' to_base(42, 16, 5)
+#' }
+to_base <- function(number = BIGINT, radix = INTEGER, min_length = INTEGER) {
+  stop("DuckDB function to_base() is not available in R.")
+}
+
 #' DuckDB function to_base64
 #'
 #' Converts a `blob` to a base64 encoded string.
@@ -2311,6 +3096,51 @@ timetz_byte_comparable <- function(time_tz = `TIME WITH TIME ZONE`) {
 #' }
 to_base64 <- function(blob = BLOB) {
   stop("DuckDB function to_base64() is not available in R.")
+}
+
+#' DuckDB function to_centuries
+#'
+#' Construct a century interval.
+#'
+#' @name to_centuries
+#' @usage NULL
+#' @param integer `INTEGER | BIGINT`
+#' @examples
+#' \dontrun{
+#' to_centuries(5)
+#' }
+to_centuries <- function(integer = `INTEGER | BIGINT`) {
+  stop("DuckDB function to_centuries() is not available in R.")
+}
+
+#' DuckDB function to_days
+#'
+#' Construct a day interval.
+#'
+#' @name to_days
+#' @usage NULL
+#' @param integer `INTEGER | BIGINT`
+#' @examples
+#' \dontrun{
+#' to_days(5)
+#' }
+to_days <- function(integer = `INTEGER | BIGINT`) {
+  stop("DuckDB function to_days() is not available in R.")
+}
+
+#' DuckDB function to_decades
+#'
+#' Construct a decade interval.
+#'
+#' @name to_decades
+#' @usage NULL
+#' @param integer `INTEGER | BIGINT`
+#' @examples
+#' \dontrun{
+#' to_decades(5)
+#' }
+to_decades <- function(integer = `INTEGER | BIGINT`) {
+  stop("DuckDB function to_decades() is not available in R.")
 }
 
 #' DuckDB function to_hours
@@ -2343,6 +3173,21 @@ to_microseconds <- function(integer = BIGINT) {
   stop("DuckDB function to_microseconds() is not available in R.")
 }
 
+#' DuckDB function to_millennia
+#'
+#' Construct a millenium interval.
+#'
+#' @name to_millennia
+#' @usage NULL
+#' @param integer `INTEGER | BIGINT`
+#' @examples
+#' \dontrun{
+#' to_millennia(1)
+#' }
+to_millennia <- function(integer = `INTEGER | BIGINT`) {
+  stop("DuckDB function to_millennia() is not available in R.")
+}
+
 #' DuckDB function to_milliseconds
 #'
 #' Construct a millisecond interval.
@@ -2371,6 +3216,21 @@ to_milliseconds <- function(double = DOUBLE) {
 #' }
 to_minutes <- function(integer = BIGINT) {
   stop("DuckDB function to_minutes() is not available in R.")
+}
+
+#' DuckDB function to_months
+#'
+#' Construct a month interval.
+#'
+#' @name to_months
+#' @usage NULL
+#' @param integer `INTEGER | BIGINT`
+#' @examples
+#' \dontrun{
+#' to_months(5)
+#' }
+to_months <- function(integer = `INTEGER | BIGINT`) {
+  stop("DuckDB function to_months() is not available in R.")
 }
 
 #' DuckDB function to_quarters
@@ -2418,6 +3278,36 @@ to_timestamp <- function(sec = DOUBLE) {
   stop("DuckDB function to_timestamp() is not available in R.")
 }
 
+#' DuckDB function to_weeks
+#'
+#' Construct a week interval.
+#'
+#' @name to_weeks
+#' @usage NULL
+#' @param integer `INTEGER | BIGINT`
+#' @examples
+#' \dontrun{
+#' to_weeks(5)
+#' }
+to_weeks <- function(integer = `INTEGER | BIGINT`) {
+  stop("DuckDB function to_weeks() is not available in R.")
+}
+
+#' DuckDB function to_years
+#'
+#' Construct a year interval.
+#'
+#' @name to_years
+#' @usage NULL
+#' @param integer `INTEGER | BIGINT`
+#' @examples
+#' \dontrun{
+#' to_years(5)
+#' }
+to_years <- function(integer = `INTEGER | BIGINT`) {
+  stop("DuckDB function to_years() is not available in R.")
+}
+
 #' DuckDB function translate
 #'
 #' Replaces each character in `string` that matches a character in the `from` set with the corresponding character in the `to` set. If `from` is longer than `to`, occurrences of the extra characters in `from` are deleted.
@@ -2433,6 +3323,38 @@ to_timestamp <- function(sec = DOUBLE) {
 #' }
 translate <- function(string = VARCHAR, from = VARCHAR, to = VARCHAR) {
   stop("DuckDB function translate() is not available in R.")
+}
+
+#' DuckDB function trim
+#'
+#' Removes any occurrences of any of the `characters` from either side of the `string`. `characters` defaults to `space`.
+#'
+#' @name trim
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param characters `VARCHAR`
+#' @examples
+#' \dontrun{
+#' c("trim('    test  ')", "trim('>>>>test<<', '><')")
+#' }
+trim <- function(string = VARCHAR, characters = VARCHAR) {
+  stop("DuckDB function trim() is not available in R.")
+}
+
+#' DuckDB function try_strptime
+#'
+#' Converts the `string` text to timestamp according to the format string. Returns `NULL` on failure.
+#'
+#' @name try_strptime
+#' @usage NULL
+#' @param text `VARCHAR`
+#' @param format `VARCHAR | VARCHAR[]`
+#' @examples
+#' \dontrun{
+#' try_strptime('Wed, 1 January 1992 - 08:38:40 PM', '%a, %-d %B %Y - %I:%M:%S %p')
+#' }
+try_strptime <- function(text = VARCHAR, format = `VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function try_strptime() is not available in R.")
 }
 
 #' DuckDB function typeof
