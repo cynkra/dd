@@ -17,8 +17,8 @@ Computes the cosine distance between two same-sized lists.
 \section{Overloads}{
 
 \itemize{
-\item ```<=>\verb{(list1 = }FLOAT[]`, list2 = `FLOAT[]`)``
-\item ```<=>\verb{(list1 = }DOUBLE[]`, list2 = `DOUBLE[]`)``
+\item \code{`<=>`(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}
+\item \code{`<=>`(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}
 }
 }
 

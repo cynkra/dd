@@ -25,10 +25,10 @@ Repeats the \code{blob} \code{count} number of times.
 \section{Overloads}{
 
 \itemize{
-\item ```repeat`(col0 = ANY, col1 = BIGINT)``
-\item ```repeat`(string = VARCHAR, count = BIGINT)``
-\item ```repeat`(blob = BLOB, count = BIGINT)``
-\item ```repeat\verb{(col0 = }T[]`, col1 = BIGINT)``
+\item \code{`repeat`(col0 = ANY, col1 = BIGINT)}
+\item \code{`repeat`(string = VARCHAR, count = BIGINT)}
+\item \code{`repeat`(blob = BLOB, count = BIGINT)}
+\item \code{`repeat`(col0 = `T[]`, col1 = BIGINT)}
 }
 }
 

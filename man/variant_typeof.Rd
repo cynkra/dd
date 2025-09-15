@@ -15,3 +15,8 @@ variant_typeof(input_variant = VARIANT)
 \description{
 Returns the internal type of the \code{input_variant}.
 }
+\examples{
+\dontrun{
+variant_typeof({'a': 42, 'b': [1,2,3]})::VARIANT)
+}
+}

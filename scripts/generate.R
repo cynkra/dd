@@ -47,11 +47,16 @@ usage_and_params <- function(function_name, parameters, parameter_types, descrip
   })
   if (length(parameters) == 1) {
     usage_doc <- glue("#' @usage {signatures}")
+  } else if (function_name == "%") {
+    # FIXME: roxygen2 generates bad .Rd here
+    usage_doc <- "#' @usage NULL\n"
   } else {
     usage_doc <- paste0(
       "#' @usage NULL\n",
       "#' @section Overloads:\n",
-      paste0("#' - ``", signatures, "``", collapse = "\n")
+      "#' \\itemize{\n",
+      paste0("#' \\item \\code{", signatures, "}\n", collapse = ""),
+      "#' }"
     )
   }
 
@@ -132,7 +137,7 @@ funs <-
     categories = list(unique(unlist(categories))),
   ) |>
   # https://github.com/duckdb/duckdb/pull/18977
-  mutate(examples = gsub(r"(^variant_typeof\(\{'a': 42, 'b': \[1,2,3\]\)::VARIANT\)$)", "variant_typeof({'a': 42, 'b': [1,2,3]})", examples)) |>
+  mutate(examples = gsub(r"(variant_typeof\(\{'a': 42, 'b': \[1,2,3\]\)::VARIANT\))", "variant_typeof({'a': 42, 'b': [1,2,3]})::VARIANT)", examples)) |>
   # FIXME: Irregular
   filter_print(!(function_name %in% c("struct_extract_at"))) |>
   # FIXME: Example too long

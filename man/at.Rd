@@ -16,19 +16,19 @@ Absolute value.
 \section{Overloads}{
 
 \itemize{
-\item ```@`(x = TINYINT)``
-\item ```@`(x = SMALLINT)``
-\item ```@`(x = INTEGER)``
-\item ```@`(x = BIGINT)``
-\item ```@`(x = HUGEINT)``
-\item ```@`(x = FLOAT)``
-\item ```@`(x = DOUBLE)``
-\item ```@`(x = DECIMAL)``
-\item ```@`(x = UTINYINT)``
-\item ```@`(x = USMALLINT)``
-\item ```@`(x = UINTEGER)``
-\item ```@`(x = UBIGINT)``
-\item ```@`(x = UHUGEINT)``
+\item \code{`@`(x = TINYINT)}
+\item \code{`@`(x = SMALLINT)}
+\item \code{`@`(x = INTEGER)}
+\item \code{`@`(x = BIGINT)}
+\item \code{`@`(x = HUGEINT)}
+\item \code{`@`(x = FLOAT)}
+\item \code{`@`(x = DOUBLE)}
+\item \code{`@`(x = DECIMAL)}
+\item \code{`@`(x = UTINYINT)}
+\item \code{`@`(x = USMALLINT)}
+\item \code{`@`(x = UINTEGER)}
+\item \code{`@`(x = UBIGINT)}
+\item \code{`@`(x = UHUGEINT)}
 }
 }
 

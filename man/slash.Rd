@@ -17,9 +17,9 @@ DuckDB function \verb{/()}.
 \section{Overloads}{
 
 \itemize{
-\item ```/`(col0 = FLOAT, col1 = FLOAT)``
-\item ```/`(col0 = DOUBLE, col1 = DOUBLE)``
-\item ```/`(col0 = INTERVAL, col1 = DOUBLE)``
+\item \code{`/`(col0 = FLOAT, col1 = FLOAT)}
+\item \code{`/`(col0 = DOUBLE, col1 = DOUBLE)}
+\item \code{`/`(col0 = INTERVAL, col1 = DOUBLE)}
 }
 }
 

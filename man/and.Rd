@@ -17,17 +17,17 @@ Bitwise AND.
 \section{Overloads}{
 
 \itemize{
-\item ```&`(left = TINYINT, right = TINYINT)``
-\item ```&`(left = SMALLINT, right = SMALLINT)``
-\item ```&`(left = INTEGER, right = INTEGER)``
-\item ```&`(left = BIGINT, right = BIGINT)``
-\item ```&`(left = HUGEINT, right = HUGEINT)``
-\item ```&`(left = UTINYINT, right = UTINYINT)``
-\item ```&`(left = USMALLINT, right = USMALLINT)``
-\item ```&`(left = UINTEGER, right = UINTEGER)``
-\item ```&`(left = UBIGINT, right = UBIGINT)``
-\item ```&`(left = UHUGEINT, right = UHUGEINT)``
-\item ```&`(left = BIT, right = BIT)``
+\item \code{`&`(left = TINYINT, right = TINYINT)}
+\item \code{`&`(left = SMALLINT, right = SMALLINT)}
+\item \code{`&`(left = INTEGER, right = INTEGER)}
+\item \code{`&`(left = BIGINT, right = BIGINT)}
+\item \code{`&`(left = HUGEINT, right = HUGEINT)}
+\item \code{`&`(left = UTINYINT, right = UTINYINT)}
+\item \code{`&`(left = USMALLINT, right = USMALLINT)}
+\item \code{`&`(left = UINTEGER, right = UINTEGER)}
+\item \code{`&`(left = UBIGINT, right = UBIGINT)}
+\item \code{`&`(left = UHUGEINT, right = UHUGEINT)}
+\item \code{`&`(left = BIT, right = BIT)}
 }
 }
 
