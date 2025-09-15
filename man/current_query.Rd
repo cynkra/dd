@@ -3,9 +3,6 @@
 \name{current_query}
 \alias{current_query}
 \title{DuckDB function current_query}
-\usage{
-current_query()
-}
 \value{
 \code{VARCHAR}
 }

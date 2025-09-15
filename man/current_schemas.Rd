@@ -3,9 +3,6 @@
 \name{current_schemas}
 \alias{current_schemas}
 \title{DuckDB function current_schemas}
-\usage{
-current_schemas(include_implicit = BOOLEAN)
-}
 \arguments{
 \item{include_implicit}{\code{BOOLEAN}}
 }

@@ -1,3 +1,4 @@
+utils::globalVariables("")
 utils::globalVariables("AGGREGATE_STATE<?>")
 utils::globalVariables("ANY")
 utils::globalVariables("ANY | T[]")

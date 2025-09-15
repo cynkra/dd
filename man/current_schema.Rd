@@ -3,9 +3,6 @@
 \name{current_schema}
 \alias{current_schema}
 \title{DuckDB function current_schema}
-\usage{
-current_schema()
-}
 \value{
 \code{VARCHAR}
 }

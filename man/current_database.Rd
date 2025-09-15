@@ -3,9 +3,6 @@
 \name{current_database}
 \alias{current_database}
 \title{DuckDB function current_database}
-\usage{
-current_database()
-}
 \value{
 \code{VARCHAR}
 }

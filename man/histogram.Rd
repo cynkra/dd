@@ -7,6 +7,14 @@
 \item{arg}{\code{ANY}}
 
 \item{col1}{\code{ANY[]}}
+
+\item{source}{Unspecified.}
+
+\item{col_name}{Unspecified.}
+
+\item{bin_count}{Unspecified.}
+
+\item{technique}{Unspecified.}
 }
 \value{
 \code{MAP}

@@ -995,6 +995,20 @@ array_aggregate <- function(list = `ANY[]`, function_name = VARCHAR) {
   stop("DuckDB function array_aggregate() is not available in R.")
 }
 
+#' DuckDB function array_append
+#'
+#' @description
+#' DuckDB macro `array_append()`.
+#'
+#' @name array_append
+#' @usage array_append(arr, el)
+#' @param arr Unspecified.
+#' @param el Unspecified.
+#' @return Unspecified.
+array_append <- function(arr, el) {
+  stop("DuckDB function array_append() is not available in R.")
+}
+
 #' DuckDB function array_apply
 #'
 #' @description
@@ -1326,6 +1340,20 @@ array_inner_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `F
   stop("DuckDB function array_inner_product() is not available in R.")
 }
 
+#' DuckDB function array_intersect
+#'
+#' @description
+#' DuckDB macro `array_intersect()`.
+#'
+#' @name array_intersect
+#' @usage array_intersect(l1, l2)
+#' @param l1 Unspecified.
+#' @param l2 Unspecified.
+#' @return Unspecified.
+array_intersect <- function(l1, l2) {
+  stop("DuckDB function array_intersect() is not available in R.")
+}
+
 #' DuckDB function array_length
 #'
 #' @description
@@ -1382,6 +1410,32 @@ array_negative_inner_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, ar
   stop("DuckDB function array_negative_inner_product() is not available in R.")
 }
 
+#' DuckDB function array_pop_back
+#'
+#' @description
+#' DuckDB macro `array_pop_back()`.
+#'
+#' @name array_pop_back
+#' @usage array_pop_back(arr)
+#' @param arr Unspecified.
+#' @return Unspecified.
+array_pop_back <- function(arr) {
+  stop("DuckDB function array_pop_back() is not available in R.")
+}
+
+#' DuckDB function array_pop_front
+#'
+#' @description
+#' DuckDB macro `array_pop_front()`.
+#'
+#' @name array_pop_front
+#' @usage array_pop_front(arr)
+#' @param arr Unspecified.
+#' @return Unspecified.
+array_pop_front <- function(arr) {
+  stop("DuckDB function array_pop_front() is not available in R.")
+}
+
 #' DuckDB function array_position
 #'
 #' @description
@@ -1398,6 +1452,48 @@ array_negative_inner_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, ar
 #' }
 array_position <- function(list = `T[]`, element = T) {
   stop("DuckDB function array_position() is not available in R.")
+}
+
+#' DuckDB function array_prepend
+#'
+#' @description
+#' DuckDB macro `array_prepend()`.
+#'
+#' @name array_prepend
+#' @usage array_prepend(el, arr)
+#' @param el Unspecified.
+#' @param arr Unspecified.
+#' @return Unspecified.
+array_prepend <- function(el, arr) {
+  stop("DuckDB function array_prepend() is not available in R.")
+}
+
+#' DuckDB function array_push_back
+#'
+#' @description
+#' DuckDB macro `array_push_back()`.
+#'
+#' @name array_push_back
+#' @usage array_push_back(arr, e)
+#' @param arr Unspecified.
+#' @param e Unspecified.
+#' @return Unspecified.
+array_push_back <- function(arr, e) {
+  stop("DuckDB function array_push_back() is not available in R.")
+}
+
+#' DuckDB function array_push_front
+#'
+#' @description
+#' DuckDB macro `array_push_front()`.
+#'
+#' @name array_push_front
+#' @usage array_push_front(arr, e)
+#' @param arr Unspecified.
+#' @param e Unspecified.
+#' @return Unspecified.
+array_push_front <- function(arr, e) {
+  stop("DuckDB function array_push_front() is not available in R.")
 }
 
 #' DuckDB function array_reduce
@@ -1436,6 +1532,19 @@ array_reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value =
 #' }
 array_resize <- function(list = `ANY[]`, `size[` = ANY, `value]` = ANY) {
   stop("DuckDB function array_resize() is not available in R.")
+}
+
+#' DuckDB function array_reverse
+#'
+#' @description
+#' DuckDB macro `array_reverse()`.
+#'
+#' @name array_reverse
+#' @usage array_reverse(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+array_reverse <- function(l) {
+  stop("DuckDB function array_reverse() is not available in R.")
 }
 
 #' DuckDB function array_reverse_sort
@@ -1516,6 +1625,34 @@ array_slice <- function(list = ANY, begin = ANY, end = ANY, step = BIGINT) {
 #' }
 array_sort <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
   stop("DuckDB function array_sort() is not available in R.")
+}
+
+#' DuckDB function array_to_string
+#'
+#' @description
+#' DuckDB macro `array_to_string()`.
+#'
+#' @name array_to_string
+#' @usage array_to_string(arr, sep)
+#' @param arr Unspecified.
+#' @param sep Unspecified.
+#' @return Unspecified.
+array_to_string <- function(arr, sep) {
+  stop("DuckDB function array_to_string() is not available in R.")
+}
+
+#' DuckDB function array_to_string_comma_default
+#'
+#' @description
+#' DuckDB macro `array_to_string_comma_default()`.
+#'
+#' @name array_to_string_comma_default
+#' @usage array_to_string_comma_default(arr, sep)
+#' @param arr Unspecified.
+#' @param sep Unspecified.
+#' @return Unspecified.
+array_to_string_comma_default <- function(arr, sep) {
+  stop("DuckDB function array_to_string_comma_default() is not available in R.")
 }
 
 #' DuckDB function array_transform
@@ -2194,6 +2331,20 @@ chr <- function(code_point = INTEGER) {
   stop("DuckDB function chr() is not available in R.")
 }
 
+#' DuckDB function col_description
+#'
+#' @description
+#' DuckDB macro `col_description()`.
+#'
+#' @name col_description
+#' @usage col_description(table_oid, column_number)
+#' @param table_oid Unspecified.
+#' @param column_number Unspecified.
+#' @return Unspecified.
+col_description <- function(table_oid, column_number) {
+  stop("DuckDB function col_description() is not available in R.")
+}
+
 #' DuckDB function collations
 #'
 #' @description
@@ -2495,6 +2646,19 @@ create_sort_key <- function(parameters... = ANY) {
   stop("DuckDB function create_sort_key() is not available in R.")
 }
 
+#' DuckDB function current_catalog
+#'
+#' @description
+#' DuckDB macro `current_catalog()`.
+#'
+#' @name current_catalog
+#' @usage current_catalog()
+
+#' @return Unspecified.
+current_catalog <- function() {
+  stop("DuckDB function current_catalog() is not available in R.")
+}
+
 #' DuckDB function current_connection_id
 #'
 #' @description
@@ -2518,7 +2682,7 @@ current_connection_id <- function() {
 #' Returns the name of the currently active database.
 #'
 #' @name current_database
-#' @usage current_database()
+#' @usage NULL
 
 #' @return `VARCHAR`
 #' @examples
@@ -2535,7 +2699,7 @@ current_database <- function() {
 #' Returns the current query as a string.
 #'
 #' @name current_query
-#' @usage current_query()
+#' @usage NULL
 
 #' @return `VARCHAR`
 #' @examples
@@ -2563,13 +2727,26 @@ current_query_id <- function() {
   stop("DuckDB function current_query_id() is not available in R.")
 }
 
+#' DuckDB function current_role
+#'
+#' @description
+#' DuckDB macro `current_role()`.
+#'
+#' @name current_role
+#' @usage current_role()
+
+#' @return Unspecified.
+current_role <- function() {
+  stop("DuckDB function current_role() is not available in R.")
+}
+
 #' DuckDB function current_schema
 #'
 #' @description
 #' Returns the name of the currently active schema. Default is main.
 #'
 #' @name current_schema
-#' @usage current_schema()
+#' @usage NULL
 
 #' @return `VARCHAR`
 #' @examples
@@ -2586,7 +2763,7 @@ current_schema <- function() {
 #' Returns list of schemas. Pass a parameter of True to include implicit schemas.
 #'
 #' @name current_schemas
-#' @usage current_schemas(include_implicit = BOOLEAN)
+#' @usage NULL
 #' @param include_implicit `BOOLEAN`
 #' @return `VARCHAR[]`
 #' @examples
@@ -2629,6 +2806,19 @@ current_setting <- function(setting_name = VARCHAR) {
 #' }
 current_transaction_id <- function() {
   stop("DuckDB function current_transaction_id() is not available in R.")
+}
+
+#' DuckDB function current_user
+#'
+#' @description
+#' DuckDB macro `current_user()`.
+#'
+#' @name current_user
+#' @usage current_user()
+
+#' @return Unspecified.
+current_user <- function() {
+  stop("DuckDB function current_user() is not available in R.")
 }
 
 #' DuckDB function currval
@@ -2690,6 +2880,20 @@ database_list <- function() {
 #' @return Unspecified.
 database_size <- function() {
   stop("DuckDB function database_size() is not available in R.")
+}
+
+#' DuckDB function date_add
+#'
+#' @description
+#' DuckDB macro `date_add()`.
+#'
+#' @name date_add
+#' @usage date_add(date, interval)
+#' @param date Unspecified.
+#' @param interval Unspecified.
+#' @return Unspecified.
+date_add <- function(date, interval) {
+  stop("DuckDB function date_add() is not available in R.")
 }
 
 #' DuckDB function date_diff
@@ -3313,6 +3517,19 @@ duckdb_log_contexts <- function() {
 #' @return Unspecified.
 duckdb_logs <- function(denormalized_table = BOOLEAN) {
   stop("DuckDB function duckdb_logs() is not available in R.")
+}
+
+#' DuckDB function duckdb_logs_parsed
+#'
+#' @description
+#' DuckDB macro `duckdb_logs_parsed()`.
+#'
+#' @name duckdb_logs_parsed
+#' @usage duckdb_logs_parsed(log_type)
+#' @param log_type Unspecified.
+#' @return Unspecified.
+duckdb_logs_parsed <- function(log_type) {
+  stop("DuckDB function duckdb_logs_parsed() is not available in R.")
 }
 
 #' DuckDB function duckdb_memory
@@ -3992,6 +4209,20 @@ favg <- function(x = DOUBLE) {
   stop("DuckDB function favg() is not available in R.")
 }
 
+#' DuckDB function fdiv
+#'
+#' @description
+#' DuckDB macro `fdiv()`.
+#'
+#' @name fdiv
+#' @usage fdiv(x, y)
+#' @param x Unspecified.
+#' @param y Unspecified.
+#' @return Unspecified.
+fdiv <- function(x, y) {
+  stop("DuckDB function fdiv() is not available in R.")
+}
+
 #' DuckDB function filter
 #'
 #' @description
@@ -4074,6 +4305,20 @@ floor <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
   stop("DuckDB function floor() is not available in R.")
 }
 
+#' DuckDB function fmod
+#'
+#' @description
+#' DuckDB macro `fmod()`.
+#'
+#' @name fmod
+#' @usage fmod(x, y)
+#' @param x Unspecified.
+#' @param y Unspecified.
+#' @return Unspecified.
+fmod <- function(x, y) {
+  stop("DuckDB function fmod() is not available in R.")
+}
+
 #' DuckDB function force_checkpoint
 #'
 #' @description
@@ -4153,6 +4398,34 @@ formatReadableSize <- function(integer = BIGINT) {
 #' }
 format_bytes <- function(integer = BIGINT) {
   stop("DuckDB function format_bytes() is not available in R.")
+}
+
+#' DuckDB function format_pg_type
+#'
+#' @description
+#' DuckDB macro `format_pg_type()`.
+#'
+#' @name format_pg_type
+#' @usage format_pg_type(logical_type, type_name)
+#' @param logical_type Unspecified.
+#' @param type_name Unspecified.
+#' @return Unspecified.
+format_pg_type <- function(logical_type, type_name) {
+  stop("DuckDB function format_pg_type() is not available in R.")
+}
+
+#' DuckDB function format_type
+#'
+#' @description
+#' DuckDB macro `format_type()`.
+#'
+#' @name format_type
+#' @usage format_type(type_oid, typemod)
+#' @param type_oid Unspecified.
+#' @param typemod Unspecified.
+#' @return Unspecified.
+format_type <- function(type_oid, typemod) {
+  stop("DuckDB function format_type() is not available in R.")
 }
 
 #' DuckDB function from_base64
@@ -4310,6 +4583,46 @@ generate_series <- function(col0 = `BIGINT | TIMESTAMP`, col1 = `BIGINT | TIMEST
   stop("DuckDB function generate_series() is not available in R.")
 }
 
+#' DuckDB function generate_subscripts
+#'
+#' @description
+#' DuckDB macro `generate_subscripts()`.
+#'
+#' @name generate_subscripts
+#' @usage generate_subscripts(arr, dim)
+#' @param arr Unspecified.
+#' @param dim Unspecified.
+#' @return Unspecified.
+generate_subscripts <- function(arr, dim) {
+  stop("DuckDB function generate_subscripts() is not available in R.")
+}
+
+#' DuckDB function geomean
+#'
+#' @description
+#' DuckDB macro `geomean()`.
+#'
+#' @name geomean
+#' @usage geomean(x)
+#' @param x Unspecified.
+#' @return Unspecified.
+geomean <- function(x) {
+  stop("DuckDB function geomean() is not available in R.")
+}
+
+#' DuckDB function geometric_mean
+#'
+#' @description
+#' DuckDB macro `geometric_mean()`.
+#'
+#' @name geometric_mean
+#' @usage geometric_mean(x)
+#' @param x Unspecified.
+#' @return Unspecified.
+geometric_mean <- function(x) {
+  stop("DuckDB function geometric_mean() is not available in R.")
+}
+
 #' DuckDB function get_bit
 #'
 #' @description
@@ -4326,6 +4639,19 @@ generate_series <- function(col0 = `BIGINT | TIMESTAMP`, col1 = `BIGINT | TIMEST
 #' }
 get_bit <- function(bitstring = BIT, index = INTEGER) {
   stop("DuckDB function get_bit() is not available in R.")
+}
+
+#' DuckDB function get_block_size
+#'
+#' @description
+#' DuckDB macro `get_block_size()`.
+#'
+#' @name get_block_size
+#' @usage get_block_size(db_name)
+#' @param db_name Unspecified.
+#' @return Unspecified.
+get_block_size <- function(db_name) {
+  stop("DuckDB function get_block_size() is not available in R.")
 }
 
 #' DuckDB function get_current_timestamp
@@ -4462,6 +4788,172 @@ hamming <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function hamming() is not available in R.")
 }
 
+#' DuckDB function has_any_column_privilege
+#'
+#' @description
+#' DuckDB function `has_any_column_privilege()`.
+#'
+#' @name has_any_column_privilege
+#' @usage NULL
+#' @param table Unspecified.
+#' @param privilege Unspecified.
+#' @param user Unspecified.
+#' @return Unspecified.
+has_any_column_privilege <- function(table, privilege, user) {
+  stop("DuckDB function has_any_column_privilege() is not available in R.")
+}
+
+#' DuckDB function has_column_privilege
+#'
+#' @description
+#' DuckDB function `has_column_privilege()`.
+#'
+#' @name has_column_privilege
+#' @usage NULL
+#' @param table Unspecified.
+#' @param column Unspecified.
+#' @param privilege Unspecified.
+#' @param user Unspecified.
+#' @return Unspecified.
+has_column_privilege <- function(table, column, privilege, user) {
+  stop("DuckDB function has_column_privilege() is not available in R.")
+}
+
+#' DuckDB function has_database_privilege
+#'
+#' @description
+#' DuckDB function `has_database_privilege()`.
+#'
+#' @name has_database_privilege
+#' @usage NULL
+#' @param database Unspecified.
+#' @param privilege Unspecified.
+#' @param user Unspecified.
+#' @return Unspecified.
+has_database_privilege <- function(database, privilege, user) {
+  stop("DuckDB function has_database_privilege() is not available in R.")
+}
+
+#' DuckDB function has_foreign_data_wrapper_privilege
+#'
+#' @description
+#' DuckDB function `has_foreign_data_wrapper_privilege()`.
+#'
+#' @name has_foreign_data_wrapper_privilege
+#' @usage NULL
+#' @param fdw Unspecified.
+#' @param privilege Unspecified.
+#' @param user Unspecified.
+#' @return Unspecified.
+has_foreign_data_wrapper_privilege <- function(fdw, privilege, user) {
+  stop("DuckDB function has_foreign_data_wrapper_privilege() is not available in R.")
+}
+
+#' DuckDB function has_function_privilege
+#'
+#' @description
+#' DuckDB function `has_function_privilege()`.
+#'
+#' @name has_function_privilege
+#' @usage NULL
+#' @param function Unspecified.
+#' @param privilege Unspecified.
+#' @param user Unspecified.
+#' @return Unspecified.
+has_function_privilege <- function(`function`, privilege, user) {
+  stop("DuckDB function has_function_privilege() is not available in R.")
+}
+
+#' DuckDB function has_language_privilege
+#'
+#' @description
+#' DuckDB function `has_language_privilege()`.
+#'
+#' @name has_language_privilege
+#' @usage NULL
+#' @param language Unspecified.
+#' @param privilege Unspecified.
+#' @param user Unspecified.
+#' @return Unspecified.
+has_language_privilege <- function(language, privilege, user) {
+  stop("DuckDB function has_language_privilege() is not available in R.")
+}
+
+#' DuckDB function has_schema_privilege
+#'
+#' @description
+#' DuckDB function `has_schema_privilege()`.
+#'
+#' @name has_schema_privilege
+#' @usage NULL
+#' @param schema Unspecified.
+#' @param privilege Unspecified.
+#' @param user Unspecified.
+#' @return Unspecified.
+has_schema_privilege <- function(schema, privilege, user) {
+  stop("DuckDB function has_schema_privilege() is not available in R.")
+}
+
+#' DuckDB function has_sequence_privilege
+#'
+#' @description
+#' DuckDB function `has_sequence_privilege()`.
+#'
+#' @name has_sequence_privilege
+#' @usage NULL
+#' @param sequence Unspecified.
+#' @param privilege Unspecified.
+#' @param user Unspecified.
+#' @return Unspecified.
+has_sequence_privilege <- function(sequence, privilege, user) {
+  stop("DuckDB function has_sequence_privilege() is not available in R.")
+}
+
+#' DuckDB function has_server_privilege
+#'
+#' @description
+#' DuckDB function `has_server_privilege()`.
+#'
+#' @name has_server_privilege
+#' @usage NULL
+#' @param server Unspecified.
+#' @param privilege Unspecified.
+#' @param user Unspecified.
+#' @return Unspecified.
+has_server_privilege <- function(server, privilege, user) {
+  stop("DuckDB function has_server_privilege() is not available in R.")
+}
+
+#' DuckDB function has_table_privilege
+#'
+#' @description
+#' DuckDB function `has_table_privilege()`.
+#'
+#' @name has_table_privilege
+#' @usage NULL
+#' @param table Unspecified.
+#' @param privilege Unspecified.
+#' @param user Unspecified.
+#' @return Unspecified.
+has_table_privilege <- function(table, privilege, user) {
+  stop("DuckDB function has_table_privilege() is not available in R.")
+}
+
+#' DuckDB function has_tablespace_privilege
+#'
+#' @description
+#' DuckDB function `has_tablespace_privilege()`.
+#'
+#' @name has_tablespace_privilege
+#' @usage NULL
+#' @param tablespace Unspecified.
+#' @param privilege Unspecified.
+#' @param user Unspecified.
+#' @return Unspecified.
+has_tablespace_privilege <- function(tablespace, privilege, user) {
+  stop("DuckDB function has_tablespace_privilege() is not available in R.")
+}
+
 #' DuckDB function hash
 #'
 #' @description
@@ -4513,12 +5005,16 @@ hex <- function(string = VARCHAR, value = `BIGNUM | BIGINT | UBIGINT | HUGEINT |
 #' @usage NULL
 #' @param arg `ANY`
 #' @param col1 `ANY[]`
+#' @param source Unspecified.
+#' @param col_name Unspecified.
+#' @param bin_count Unspecified.
+#' @param technique Unspecified.
 #' @return `MAP`
 #' @examples
 #' \dontrun{
 #' histogram(A)
 #' }
-histogram <- function(arg = ANY, col1 = `ANY[]`) {
+histogram <- function(arg = ANY, col1 = `ANY[]`, source, col_name, bin_count, technique) {
   stop("DuckDB function histogram() is not available in R.")
 }
 
@@ -4538,6 +5034,22 @@ histogram <- function(arg = ANY, col1 = `ANY[]`) {
 #' }
 histogram_exact <- function(arg = ANY, bins = `ANY[]`) {
   stop("DuckDB function histogram_exact() is not available in R.")
+}
+
+#' DuckDB function histogram_values
+#'
+#' @description
+#' DuckDB macro `histogram_values()`.
+#'
+#' @name histogram_values
+#' @usage histogram_values(source, col_name, bin_count, technique)
+#' @param source Unspecified.
+#' @param col_name Unspecified.
+#' @param bin_count Unspecified.
+#' @param technique Unspecified.
+#' @return Unspecified.
+histogram_values <- function(source, col_name, bin_count, technique) {
+  stop("DuckDB function histogram_values() is not available in R.")
 }
 
 #' DuckDB function hour
@@ -4605,6 +5117,58 @@ import_database <- function(col0 = VARCHAR) {
 #' }
 in_search_path <- function(database_name = VARCHAR, schema_name = VARCHAR) {
   stop("DuckDB function in_search_path() is not available in R.")
+}
+
+#' DuckDB function inet_client_addr
+#'
+#' @description
+#' DuckDB macro `inet_client_addr()`.
+#'
+#' @name inet_client_addr
+#' @usage inet_client_addr()
+
+#' @return Unspecified.
+inet_client_addr <- function() {
+  stop("DuckDB function inet_client_addr() is not available in R.")
+}
+
+#' DuckDB function inet_client_port
+#'
+#' @description
+#' DuckDB macro `inet_client_port()`.
+#'
+#' @name inet_client_port
+#' @usage inet_client_port()
+
+#' @return Unspecified.
+inet_client_port <- function() {
+  stop("DuckDB function inet_client_port() is not available in R.")
+}
+
+#' DuckDB function inet_server_addr
+#'
+#' @description
+#' DuckDB macro `inet_server_addr()`.
+#'
+#' @name inet_server_addr
+#' @usage inet_server_addr()
+
+#' @return Unspecified.
+inet_server_addr <- function() {
+  stop("DuckDB function inet_server_addr() is not available in R.")
+}
+
+#' DuckDB function inet_server_port
+#'
+#' @description
+#' DuckDB macro `inet_server_port()`.
+#'
+#' @name inet_server_port
+#' @usage inet_server_port()
+
+#' @return Unspecified.
+inet_server_port <- function() {
+  stop("DuckDB function inet_server_port() is not available in R.")
 }
 
 #' DuckDB function instr
@@ -5133,6 +5697,33 @@ list_aggregate <- function(list = `ANY[]`, function_name = VARCHAR) {
   stop("DuckDB function list_aggregate() is not available in R.")
 }
 
+#' DuckDB function list_any_value
+#'
+#' @description
+#' DuckDB macro `list_any_value()`.
+#'
+#' @name list_any_value
+#' @usage list_any_value(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_any_value <- function(l) {
+  stop("DuckDB function list_any_value() is not available in R.")
+}
+
+#' DuckDB function list_append
+#'
+#' @description
+#' DuckDB macro `list_append()`.
+#'
+#' @name list_append
+#' @usage list_append(l, e)
+#' @param l Unspecified.
+#' @param e Unspecified.
+#' @return Unspecified.
+list_append <- function(l, e) {
+  stop("DuckDB function list_append() is not available in R.")
+}
+
 #' DuckDB function list_apply
 #'
 #' @description
@@ -5149,6 +5740,97 @@ list_aggregate <- function(list = `ANY[]`, function_name = VARCHAR) {
 #' }
 list_apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function list_apply() is not available in R.")
+}
+
+#' DuckDB function list_approx_count_distinct
+#'
+#' @description
+#' DuckDB macro `list_approx_count_distinct()`.
+#'
+#' @name list_approx_count_distinct
+#' @usage list_approx_count_distinct(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_approx_count_distinct <- function(l) {
+  stop("DuckDB function list_approx_count_distinct() is not available in R.")
+}
+
+#' DuckDB function list_avg
+#'
+#' @description
+#' DuckDB macro `list_avg()`.
+#'
+#' @name list_avg
+#' @usage list_avg(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_avg <- function(l) {
+  stop("DuckDB function list_avg() is not available in R.")
+}
+
+#' DuckDB function list_bit_and
+#'
+#' @description
+#' DuckDB macro `list_bit_and()`.
+#'
+#' @name list_bit_and
+#' @usage list_bit_and(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_bit_and <- function(l) {
+  stop("DuckDB function list_bit_and() is not available in R.")
+}
+
+#' DuckDB function list_bit_or
+#'
+#' @description
+#' DuckDB macro `list_bit_or()`.
+#'
+#' @name list_bit_or
+#' @usage list_bit_or(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_bit_or <- function(l) {
+  stop("DuckDB function list_bit_or() is not available in R.")
+}
+
+#' DuckDB function list_bit_xor
+#'
+#' @description
+#' DuckDB macro `list_bit_xor()`.
+#'
+#' @name list_bit_xor
+#' @usage list_bit_xor(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_bit_xor <- function(l) {
+  stop("DuckDB function list_bit_xor() is not available in R.")
+}
+
+#' DuckDB function list_bool_and
+#'
+#' @description
+#' DuckDB macro `list_bool_and()`.
+#'
+#' @name list_bool_and
+#' @usage list_bool_and(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_bool_and <- function(l) {
+  stop("DuckDB function list_bool_and() is not available in R.")
+}
+
+#' DuckDB function list_bool_or
+#'
+#' @description
+#' DuckDB macro `list_bool_or()`.
+#'
+#' @name list_bool_or
+#' @usage list_bool_or(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_bool_or <- function(l) {
+  stop("DuckDB function list_bool_or() is not available in R.")
 }
 
 #' DuckDB function list_cat
@@ -5239,6 +5921,19 @@ list_cosine_similarity <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[
   stop("DuckDB function list_cosine_similarity() is not available in R.")
 }
 
+#' DuckDB function list_count
+#'
+#' @description
+#' DuckDB macro `list_count()`.
+#'
+#' @name list_count
+#' @usage list_count(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_count <- function(l) {
+  stop("DuckDB function list_count() is not available in R.")
+}
+
 #' DuckDB function list_distance
 #'
 #' @description
@@ -5310,6 +6005,19 @@ list_element <- function(list = `T[] | VARCHAR`, index = BIGINT) {
   stop("DuckDB function list_element() is not available in R.")
 }
 
+#' DuckDB function list_entropy
+#'
+#' @description
+#' DuckDB macro `list_entropy()`.
+#'
+#' @name list_entropy
+#' @usage list_entropy(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_entropy <- function(l) {
+  stop("DuckDB function list_entropy() is not available in R.")
+}
+
 #' DuckDB function list_extract
 #'
 #' @description
@@ -5344,6 +6052,19 @@ list_extract <- function(list = `T[] | VARCHAR`, index = BIGINT) {
 #' }
 list_filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function list_filter() is not available in R.")
+}
+
+#' DuckDB function list_first
+#'
+#' @description
+#' DuckDB macro `list_first()`.
+#'
+#' @name list_first
+#' @usage list_first(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_first <- function(l) {
+  stop("DuckDB function list_first() is not available in R.")
 }
 
 #' DuckDB function list_grade_up
@@ -5419,6 +6140,19 @@ list_has_any <- function(list1 = `T[]`, list2 = `T[]`) {
   stop("DuckDB function list_has_any() is not available in R.")
 }
 
+#' DuckDB function list_histogram
+#'
+#' @description
+#' DuckDB macro `list_histogram()`.
+#'
+#' @name list_histogram
+#' @usage list_histogram(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_histogram <- function(l) {
+  stop("DuckDB function list_histogram() is not available in R.")
+}
+
 #' DuckDB function list_indexof
 #'
 #' @description
@@ -5453,6 +6187,124 @@ list_indexof <- function(list = `T[]`, element = T) {
 #' }
 list_inner_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBLE[]`) {
   stop("DuckDB function list_inner_product() is not available in R.")
+}
+
+#' DuckDB function list_intersect
+#'
+#' @description
+#' DuckDB macro `list_intersect()`.
+#'
+#' @name list_intersect
+#' @usage list_intersect(l1, l2)
+#' @param l1 Unspecified.
+#' @param l2 Unspecified.
+#' @return Unspecified.
+list_intersect <- function(l1, l2) {
+  stop("DuckDB function list_intersect() is not available in R.")
+}
+
+#' DuckDB function list_kurtosis
+#'
+#' @description
+#' DuckDB macro `list_kurtosis()`.
+#'
+#' @name list_kurtosis
+#' @usage list_kurtosis(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_kurtosis <- function(l) {
+  stop("DuckDB function list_kurtosis() is not available in R.")
+}
+
+#' DuckDB function list_kurtosis_pop
+#'
+#' @description
+#' DuckDB macro `list_kurtosis_pop()`.
+#'
+#' @name list_kurtosis_pop
+#' @usage list_kurtosis_pop(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_kurtosis_pop <- function(l) {
+  stop("DuckDB function list_kurtosis_pop() is not available in R.")
+}
+
+#' DuckDB function list_last
+#'
+#' @description
+#' DuckDB macro `list_last()`.
+#'
+#' @name list_last
+#' @usage list_last(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_last <- function(l) {
+  stop("DuckDB function list_last() is not available in R.")
+}
+
+#' DuckDB function list_mad
+#'
+#' @description
+#' DuckDB macro `list_mad()`.
+#'
+#' @name list_mad
+#' @usage list_mad(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_mad <- function(l) {
+  stop("DuckDB function list_mad() is not available in R.")
+}
+
+#' DuckDB function list_max
+#'
+#' @description
+#' DuckDB macro `list_max()`.
+#'
+#' @name list_max
+#' @usage list_max(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_max <- function(l) {
+  stop("DuckDB function list_max() is not available in R.")
+}
+
+#' DuckDB function list_median
+#'
+#' @description
+#' DuckDB macro `list_median()`.
+#'
+#' @name list_median
+#' @usage list_median(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_median <- function(l) {
+  stop("DuckDB function list_median() is not available in R.")
+}
+
+#' DuckDB function list_min
+#'
+#' @description
+#' DuckDB macro `list_min()`.
+#'
+#' @name list_min
+#' @usage list_min(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_min <- function(l) {
+  stop("DuckDB function list_min() is not available in R.")
+}
+
+#' DuckDB function list_mode
+#'
+#' @description
+#' DuckDB macro `list_mode()`.
+#'
+#' @name list_mode
+#' @usage list_mode(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_mode <- function(l) {
+  stop("DuckDB function list_mode() is not available in R.")
 }
 
 #' DuckDB function list_negative_dot_product
@@ -5526,6 +6378,33 @@ list_position <- function(list = `T[]`, element = T) {
   stop("DuckDB function list_position() is not available in R.")
 }
 
+#' DuckDB function list_prepend
+#'
+#' @description
+#' DuckDB macro `list_prepend()`.
+#'
+#' @name list_prepend
+#' @usage list_prepend(e, l)
+#' @param e Unspecified.
+#' @param l Unspecified.
+#' @return Unspecified.
+list_prepend <- function(e, l) {
+  stop("DuckDB function list_prepend() is not available in R.")
+}
+
+#' DuckDB function list_product
+#'
+#' @description
+#' DuckDB macro `list_product()`.
+#'
+#' @name list_product
+#' @usage list_product(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_product <- function(l) {
+  stop("DuckDB function list_product() is not available in R.")
+}
+
 #' DuckDB function list_reduce
 #'
 #' @description
@@ -5564,6 +6443,19 @@ list_resize <- function(list = `ANY[]`, `size[` = ANY, `value]` = ANY) {
   stop("DuckDB function list_resize() is not available in R.")
 }
 
+#' DuckDB function list_reverse
+#'
+#' @description
+#' DuckDB macro `list_reverse()`.
+#'
+#' @name list_reverse
+#' @usage list_reverse(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_reverse <- function(l) {
+  stop("DuckDB function list_reverse() is not available in R.")
+}
+
 #' DuckDB function list_reverse_sort
 #'
 #' @description
@@ -5598,6 +6490,32 @@ list_reverse_sort <- function(list = `ANY[]`, col1 = VARCHAR) {
 #' }
 list_select <- function(value_list = `T[]`, index_list = `BIGINT[]`) {
   stop("DuckDB function list_select() is not available in R.")
+}
+
+#' DuckDB function list_sem
+#'
+#' @description
+#' DuckDB macro `list_sem()`.
+#'
+#' @name list_sem
+#' @usage list_sem(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_sem <- function(l) {
+  stop("DuckDB function list_sem() is not available in R.")
+}
+
+#' DuckDB function list_skewness
+#'
+#' @description
+#' DuckDB macro `list_skewness()`.
+#'
+#' @name list_skewness
+#' @usage list_skewness(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_skewness <- function(l) {
+  stop("DuckDB function list_skewness() is not available in R.")
 }
 
 #' DuckDB function list_slice
@@ -5640,6 +6558,58 @@ list_slice <- function(list = ANY, begin = ANY, end = ANY, step = BIGINT) {
 #' }
 list_sort <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
   stop("DuckDB function list_sort() is not available in R.")
+}
+
+#' DuckDB function list_stddev_pop
+#'
+#' @description
+#' DuckDB macro `list_stddev_pop()`.
+#'
+#' @name list_stddev_pop
+#' @usage list_stddev_pop(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_stddev_pop <- function(l) {
+  stop("DuckDB function list_stddev_pop() is not available in R.")
+}
+
+#' DuckDB function list_stddev_samp
+#'
+#' @description
+#' DuckDB macro `list_stddev_samp()`.
+#'
+#' @name list_stddev_samp
+#' @usage list_stddev_samp(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_stddev_samp <- function(l) {
+  stop("DuckDB function list_stddev_samp() is not available in R.")
+}
+
+#' DuckDB function list_string_agg
+#'
+#' @description
+#' DuckDB macro `list_string_agg()`.
+#'
+#' @name list_string_agg
+#' @usage list_string_agg(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_string_agg <- function(l) {
+  stop("DuckDB function list_string_agg() is not available in R.")
+}
+
+#' DuckDB function list_sum
+#'
+#' @description
+#' DuckDB macro `list_sum()`.
+#'
+#' @name list_sum
+#' @usage list_sum(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_sum <- function(l) {
+  stop("DuckDB function list_sum() is not available in R.")
 }
 
 #' DuckDB function list_transform
@@ -5692,6 +6662,32 @@ list_unique <- function(list = `ANY[]`) {
 #' }
 list_value <- function(any = T) {
   stop("DuckDB function list_value() is not available in R.")
+}
+
+#' DuckDB function list_var_pop
+#'
+#' @description
+#' DuckDB macro `list_var_pop()`.
+#'
+#' @name list_var_pop
+#' @usage list_var_pop(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_var_pop <- function(l) {
+  stop("DuckDB function list_var_pop() is not available in R.")
+}
+
+#' DuckDB function list_var_samp
+#'
+#' @description
+#' DuckDB macro `list_var_samp()`.
+#'
+#' @name list_var_samp
+#' @usage list_var_samp(l)
+#' @param l Unspecified.
+#' @return Unspecified.
+list_var_samp <- function(l) {
+  stop("DuckDB function list_var_samp() is not available in R.")
 }
 
 #' DuckDB function list_where
@@ -6042,6 +7038,35 @@ map_contains <- function(map = `MAP(K, V)`, key = K) {
   stop("DuckDB function map_contains() is not available in R.")
 }
 
+#' DuckDB function map_contains_entry
+#'
+#' @description
+#' DuckDB macro `map_contains_entry()`.
+#'
+#' @name map_contains_entry
+#' @usage map_contains_entry(map, key, value)
+#' @param map Unspecified.
+#' @param key Unspecified.
+#' @param value Unspecified.
+#' @return Unspecified.
+map_contains_entry <- function(map, key, value) {
+  stop("DuckDB function map_contains_entry() is not available in R.")
+}
+
+#' DuckDB function map_contains_value
+#'
+#' @description
+#' DuckDB macro `map_contains_value()`.
+#'
+#' @name map_contains_value
+#' @usage map_contains_value(map, value)
+#' @param map Unspecified.
+#' @param value Unspecified.
+#' @return Unspecified.
+map_contains_value <- function(map, value) {
+  stop("DuckDB function map_contains_value() is not available in R.")
+}
+
 #' DuckDB function map_entries
 #'
 #' @description
@@ -6127,6 +7152,19 @@ map_from_entries <- function(map = `STRUCT(K, V)[]`) {
 #' }
 map_keys <- function(map = `MAP(K, V)`) {
   stop("DuckDB function map_keys() is not available in R.")
+}
+
+#' DuckDB function map_to_pg_oid
+#'
+#' @description
+#' DuckDB macro `map_to_pg_oid()`.
+#'
+#' @name map_to_pg_oid
+#' @usage map_to_pg_oid(type_name)
+#' @param type_name Unspecified.
+#' @return Unspecified.
+map_to_pg_oid <- function(type_name) {
+  stop("DuckDB function map_to_pg_oid() is not available in R.")
 }
 
 #' DuckDB function map_values
@@ -6223,6 +7261,32 @@ md5 <- function(string = VARCHAR, blob = BLOB) {
 #' }
 md5_number <- function(string = VARCHAR, blob = BLOB) {
   stop("DuckDB function md5_number() is not available in R.")
+}
+
+#' DuckDB function md5_number_lower
+#'
+#' @description
+#' DuckDB macro `md5_number_lower()`.
+#'
+#' @name md5_number_lower
+#' @usage md5_number_lower(param)
+#' @param param Unspecified.
+#' @return Unspecified.
+md5_number_lower <- function(param) {
+  stop("DuckDB function md5_number_lower() is not available in R.")
+}
+
+#' DuckDB function md5_number_upper
+#'
+#' @description
+#' DuckDB macro `md5_number_upper()`.
+#'
+#' @name md5_number_upper
+#' @usage md5_number_upper(param)
+#' @param param Unspecified.
+#' @return Unspecified.
+md5_number_upper <- function(param) {
+  stop("DuckDB function md5_number_upper() is not available in R.")
 }
 
 #' DuckDB function mean
@@ -6611,6 +7675,34 @@ now <- function() {
   stop("DuckDB function now() is not available in R.")
 }
 
+#' DuckDB function nullif
+#'
+#' @description
+#' DuckDB macro `nullif()`.
+#'
+#' @name nullif
+#' @usage nullif(a, b)
+#' @param a Unspecified.
+#' @param b Unspecified.
+#' @return Unspecified.
+nullif <- function(a, b) {
+  stop("DuckDB function nullif() is not available in R.")
+}
+
+#' DuckDB function obj_description
+#'
+#' @description
+#' DuckDB macro `obj_description()`.
+#'
+#' @name obj_description
+#' @usage obj_description(object_oid, catalog_name)
+#' @param object_oid Unspecified.
+#' @param catalog_name Unspecified.
+#' @return Unspecified.
+obj_description <- function(object_oid, catalog_name) {
+  stop("DuckDB function obj_description() is not available in R.")
+}
+
 #' DuckDB function octet_length
 #'
 #' @description
@@ -6832,6 +7924,296 @@ parse_filename <- function(string = VARCHAR, trim_extension = `VARCHAR | BOOLEAN
 #' }
 parse_path <- function(path = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function parse_path() is not available in R.")
+}
+
+#' DuckDB function pg_collation_is_visible
+#'
+#' @description
+#' DuckDB macro `pg_collation_is_visible()`.
+#'
+#' @name pg_collation_is_visible
+#' @usage pg_collation_is_visible(collation_oid)
+#' @param collation_oid Unspecified.
+#' @return Unspecified.
+pg_collation_is_visible <- function(collation_oid) {
+  stop("DuckDB function pg_collation_is_visible() is not available in R.")
+}
+
+#' DuckDB function pg_conf_load_time
+#'
+#' @description
+#' DuckDB macro `pg_conf_load_time()`.
+#'
+#' @name pg_conf_load_time
+#' @usage pg_conf_load_time()
+
+#' @return Unspecified.
+pg_conf_load_time <- function() {
+  stop("DuckDB function pg_conf_load_time() is not available in R.")
+}
+
+#' DuckDB function pg_conversion_is_visible
+#'
+#' @description
+#' DuckDB macro `pg_conversion_is_visible()`.
+#'
+#' @name pg_conversion_is_visible
+#' @usage pg_conversion_is_visible(conversion_oid)
+#' @param conversion_oid Unspecified.
+#' @return Unspecified.
+pg_conversion_is_visible <- function(conversion_oid) {
+  stop("DuckDB function pg_conversion_is_visible() is not available in R.")
+}
+
+#' DuckDB function pg_function_is_visible
+#'
+#' @description
+#' DuckDB macro `pg_function_is_visible()`.
+#'
+#' @name pg_function_is_visible
+#' @usage pg_function_is_visible(function_oid)
+#' @param function_oid Unspecified.
+#' @return Unspecified.
+pg_function_is_visible <- function(function_oid) {
+  stop("DuckDB function pg_function_is_visible() is not available in R.")
+}
+
+#' DuckDB function pg_get_constraintdef
+#'
+#' @description
+#' DuckDB function `pg_get_constraintdef()`.
+#'
+#' @name pg_get_constraintdef
+#' @usage NULL
+#' @param constraint_oid Unspecified.
+#' @param pretty_bool Unspecified.
+#' @return Unspecified.
+pg_get_constraintdef <- function(constraint_oid, pretty_bool) {
+  stop("DuckDB function pg_get_constraintdef() is not available in R.")
+}
+
+#' DuckDB function pg_get_expr
+#'
+#' @description
+#' DuckDB macro `pg_get_expr()`.
+#'
+#' @name pg_get_expr
+#' @usage pg_get_expr(pg_node_tree, relation_oid)
+#' @param pg_node_tree Unspecified.
+#' @param relation_oid Unspecified.
+#' @return Unspecified.
+pg_get_expr <- function(pg_node_tree, relation_oid) {
+  stop("DuckDB function pg_get_expr() is not available in R.")
+}
+
+#' DuckDB function pg_get_viewdef
+#'
+#' @description
+#' DuckDB macro `pg_get_viewdef()`.
+#'
+#' @name pg_get_viewdef
+#' @usage pg_get_viewdef(oid)
+#' @param oid Unspecified.
+#' @return Unspecified.
+pg_get_viewdef <- function(oid) {
+  stop("DuckDB function pg_get_viewdef() is not available in R.")
+}
+
+#' DuckDB function pg_has_role
+#'
+#' @description
+#' DuckDB function `pg_has_role()`.
+#'
+#' @name pg_has_role
+#' @usage NULL
+#' @param user Unspecified.
+#' @param role Unspecified.
+#' @param privilege Unspecified.
+#' @return Unspecified.
+pg_has_role <- function(user, role, privilege) {
+  stop("DuckDB function pg_has_role() is not available in R.")
+}
+
+#' DuckDB function pg_is_other_temp_schema
+#'
+#' @description
+#' DuckDB macro `pg_is_other_temp_schema()`.
+#'
+#' @name pg_is_other_temp_schema
+#' @usage pg_is_other_temp_schema(schema_id)
+#' @param schema_id Unspecified.
+#' @return Unspecified.
+pg_is_other_temp_schema <- function(schema_id) {
+  stop("DuckDB function pg_is_other_temp_schema() is not available in R.")
+}
+
+#' DuckDB function pg_my_temp_schema
+#'
+#' @description
+#' DuckDB macro `pg_my_temp_schema()`.
+#'
+#' @name pg_my_temp_schema
+#' @usage pg_my_temp_schema()
+
+#' @return Unspecified.
+pg_my_temp_schema <- function() {
+  stop("DuckDB function pg_my_temp_schema() is not available in R.")
+}
+
+#' DuckDB function pg_opclass_is_visible
+#'
+#' @description
+#' DuckDB macro `pg_opclass_is_visible()`.
+#'
+#' @name pg_opclass_is_visible
+#' @usage pg_opclass_is_visible(opclass_oid)
+#' @param opclass_oid Unspecified.
+#' @return Unspecified.
+pg_opclass_is_visible <- function(opclass_oid) {
+  stop("DuckDB function pg_opclass_is_visible() is not available in R.")
+}
+
+#' DuckDB function pg_operator_is_visible
+#'
+#' @description
+#' DuckDB macro `pg_operator_is_visible()`.
+#'
+#' @name pg_operator_is_visible
+#' @usage pg_operator_is_visible(operator_oid)
+#' @param operator_oid Unspecified.
+#' @return Unspecified.
+pg_operator_is_visible <- function(operator_oid) {
+  stop("DuckDB function pg_operator_is_visible() is not available in R.")
+}
+
+#' DuckDB function pg_opfamily_is_visible
+#'
+#' @description
+#' DuckDB macro `pg_opfamily_is_visible()`.
+#'
+#' @name pg_opfamily_is_visible
+#' @usage pg_opfamily_is_visible(opclass_oid)
+#' @param opclass_oid Unspecified.
+#' @return Unspecified.
+pg_opfamily_is_visible <- function(opclass_oid) {
+  stop("DuckDB function pg_opfamily_is_visible() is not available in R.")
+}
+
+#' DuckDB function pg_postmaster_start_time
+#'
+#' @description
+#' DuckDB macro `pg_postmaster_start_time()`.
+#'
+#' @name pg_postmaster_start_time
+#' @usage pg_postmaster_start_time()
+
+#' @return Unspecified.
+pg_postmaster_start_time <- function() {
+  stop("DuckDB function pg_postmaster_start_time() is not available in R.")
+}
+
+#' DuckDB function pg_size_pretty
+#'
+#' @description
+#' DuckDB macro `pg_size_pretty()`.
+#'
+#' @name pg_size_pretty
+#' @usage pg_size_pretty(bytes)
+#' @param bytes Unspecified.
+#' @return Unspecified.
+pg_size_pretty <- function(bytes) {
+  stop("DuckDB function pg_size_pretty() is not available in R.")
+}
+
+#' DuckDB function pg_table_is_visible
+#'
+#' @description
+#' DuckDB macro `pg_table_is_visible()`.
+#'
+#' @name pg_table_is_visible
+#' @usage pg_table_is_visible(table_oid)
+#' @param table_oid Unspecified.
+#' @return Unspecified.
+pg_table_is_visible <- function(table_oid) {
+  stop("DuckDB function pg_table_is_visible() is not available in R.")
+}
+
+#' DuckDB function pg_ts_config_is_visible
+#'
+#' @description
+#' DuckDB macro `pg_ts_config_is_visible()`.
+#'
+#' @name pg_ts_config_is_visible
+#' @usage pg_ts_config_is_visible(config_oid)
+#' @param config_oid Unspecified.
+#' @return Unspecified.
+pg_ts_config_is_visible <- function(config_oid) {
+  stop("DuckDB function pg_ts_config_is_visible() is not available in R.")
+}
+
+#' DuckDB function pg_ts_dict_is_visible
+#'
+#' @description
+#' DuckDB macro `pg_ts_dict_is_visible()`.
+#'
+#' @name pg_ts_dict_is_visible
+#' @usage pg_ts_dict_is_visible(dict_oid)
+#' @param dict_oid Unspecified.
+#' @return Unspecified.
+pg_ts_dict_is_visible <- function(dict_oid) {
+  stop("DuckDB function pg_ts_dict_is_visible() is not available in R.")
+}
+
+#' DuckDB function pg_ts_parser_is_visible
+#'
+#' @description
+#' DuckDB macro `pg_ts_parser_is_visible()`.
+#'
+#' @name pg_ts_parser_is_visible
+#' @usage pg_ts_parser_is_visible(parser_oid)
+#' @param parser_oid Unspecified.
+#' @return Unspecified.
+pg_ts_parser_is_visible <- function(parser_oid) {
+  stop("DuckDB function pg_ts_parser_is_visible() is not available in R.")
+}
+
+#' DuckDB function pg_ts_template_is_visible
+#'
+#' @description
+#' DuckDB macro `pg_ts_template_is_visible()`.
+#'
+#' @name pg_ts_template_is_visible
+#' @usage pg_ts_template_is_visible(template_oid)
+#' @param template_oid Unspecified.
+#' @return Unspecified.
+pg_ts_template_is_visible <- function(template_oid) {
+  stop("DuckDB function pg_ts_template_is_visible() is not available in R.")
+}
+
+#' DuckDB function pg_type_is_visible
+#'
+#' @description
+#' DuckDB macro `pg_type_is_visible()`.
+#'
+#' @name pg_type_is_visible
+#' @usage pg_type_is_visible(type_oid)
+#' @param type_oid Unspecified.
+#' @return Unspecified.
+pg_type_is_visible <- function(type_oid) {
+  stop("DuckDB function pg_type_is_visible() is not available in R.")
+}
+
+#' DuckDB function pg_typeof
+#'
+#' @description
+#' DuckDB macro `pg_typeof()`.
+#'
+#' @name pg_typeof
+#' @usage pg_typeof(expression)
+#' @param expression Unspecified.
+#' @return Unspecified.
+pg_typeof <- function(expression) {
+  stop("DuckDB function pg_typeof() is not available in R.")
 }
 
 #' DuckDB function pi
@@ -7596,6 +8978,20 @@ regexp_split_to_array <- function(string = VARCHAR, regex = VARCHAR, options = V
   stop("DuckDB function regexp_split_to_array() is not available in R.")
 }
 
+#' DuckDB function regexp_split_to_table
+#'
+#' @description
+#' DuckDB macro `regexp_split_to_table()`.
+#'
+#' @name regexp_split_to_table
+#' @usage regexp_split_to_table(text, pattern)
+#' @param text Unspecified.
+#' @param pattern Unspecified.
+#' @return Unspecified.
+regexp_split_to_table <- function(text, pattern) {
+  stop("DuckDB function regexp_split_to_table() is not available in R.")
+}
+
 #' DuckDB function regr_avgx
 #'
 #' @description
@@ -7911,6 +9307,34 @@ round <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT |
   stop("DuckDB function round() is not available in R.")
 }
 
+#' DuckDB function round_even
+#'
+#' @description
+#' DuckDB macro `round_even()`.
+#'
+#' @name round_even
+#' @usage round_even(x, n)
+#' @param x Unspecified.
+#' @param n Unspecified.
+#' @return Unspecified.
+round_even <- function(x, n) {
+  stop("DuckDB function round_even() is not available in R.")
+}
+
+#' DuckDB function roundbankers
+#'
+#' @description
+#' DuckDB macro `roundbankers()`.
+#'
+#' @name roundbankers
+#' @usage roundbankers(x, n)
+#' @param x Unspecified.
+#' @param n Unspecified.
+#' @return Unspecified.
+roundbankers <- function(x, n) {
+  stop("DuckDB function roundbankers() is not available in R.")
+}
+
 #' DuckDB function row
 #'
 #' @description
@@ -8009,6 +9433,19 @@ seq_scan <- function() {
   stop("DuckDB function seq_scan() is not available in R.")
 }
 
+#' DuckDB function session_user
+#'
+#' @description
+#' DuckDB macro `session_user()`.
+#'
+#' @name session_user
+#' @usage session_user()
+
+#' @return Unspecified.
+session_user <- function() {
+  stop("DuckDB function session_user() is not available in R.")
+}
+
 #' DuckDB function set_bit
 #'
 #' @description
@@ -8085,6 +9522,20 @@ sha1 <- function(value = VARCHAR, blob = BLOB) {
 #' }
 sha256 <- function(value = VARCHAR, blob = BLOB) {
   stop("DuckDB function sha256() is not available in R.")
+}
+
+#' DuckDB function shobj_description
+#'
+#' @description
+#' DuckDB macro `shobj_description()`.
+#'
+#' @name shobj_description
+#' @usage shobj_description(object_oid, catalog_name)
+#' @param object_oid Unspecified.
+#' @param catalog_name Unspecified.
+#' @return Unspecified.
+shobj_description <- function(object_oid, catalog_name) {
+  stop("DuckDB function shobj_description() is not available in R.")
 }
 
 #' DuckDB function show
@@ -8299,6 +9750,21 @@ sniff_csv <- function(col0 = VARCHAR, delim = VARCHAR, dateformat = VARCHAR, col
 #' }
 split <- function(string = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function split() is not available in R.")
+}
+
+#' DuckDB function split_part
+#'
+#' @description
+#' DuckDB macro `split_part()`.
+#'
+#' @name split_part
+#' @usage split_part(string, delimiter, position)
+#' @param string Unspecified.
+#' @param delimiter Unspecified.
+#' @param position Unspecified.
+#' @return Unspecified.
+split_part <- function(string, delimiter, position) {
+  stop("DuckDB function split_part() is not available in R.")
 }
 
 #' DuckDB function sqrt
@@ -9755,6 +11221,19 @@ url_encode <- function(string = VARCHAR) {
   stop("DuckDB function url_encode() is not available in R.")
 }
 
+#' DuckDB function user
+#'
+#' @description
+#' DuckDB macro `user()`.
+#'
+#' @name user
+#' @usage user()
+
+#' @return Unspecified.
+user <- function() {
+  stop("DuckDB function user() is not available in R.")
+}
+
 #' DuckDB function user_agent
 #'
 #' @description
@@ -10017,6 +11496,20 @@ version <- function() {
   stop("DuckDB function version() is not available in R.")
 }
 
+#' DuckDB function wavg
+#'
+#' @description
+#' DuckDB macro `wavg()`.
+#'
+#' @name wavg
+#' @usage wavg(value, weight)
+#' @param value Unspecified.
+#' @param weight Unspecified.
+#' @return Unspecified.
+wavg <- function(value, weight) {
+  stop("DuckDB function wavg() is not available in R.")
+}
+
 #' DuckDB function week
 #'
 #' @description
@@ -10066,6 +11559,20 @@ weekday <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' }
 weekofyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function weekofyear() is not available in R.")
+}
+
+#' DuckDB function weighted_avg
+#'
+#' @description
+#' DuckDB macro `weighted_avg()`.
+#'
+#' @name weighted_avg
+#' @usage weighted_avg(value, weight)
+#' @param value Unspecified.
+#' @param weight Unspecified.
+#' @return Unspecified.
+weighted_avg <- function(value, weight) {
+  stop("DuckDB function weighted_avg() is not available in R.")
 }
 
 #' DuckDB function which_secret

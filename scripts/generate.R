@@ -32,42 +32,49 @@ browse_data <- function(x) {
   x
 }
 
+param_type_tick_if_needed <- function(x) {
+  x[x != ""] <- paste0(" = ", tibble:::tick_if_needed(x[x != ""]))
+  x
+}
+
 usage_and_params <- function(function_name, parameters, parameter_types, description, macro_definition, examples) {
   if (length(parameters) == 1) {
     if (length(parameters[[1]]) == 0) {
-      usage_signature <- "()" # No parameters
+      usage_signature <- "" # No parameters
     } else if (!is.na(macro_definition)) {
-      usage_signature <- paste0("(", paste0(tibble:::tick_if_needed(parameters[[1]]), collapse = ", "), ")")
+      usage_signature <- paste0(tibble:::tick_if_needed(parameters[[1]]), collapse = ", ")
     } else {
-      usage_signature <- paste0("(", paste0(tibble:::tick_if_needed(parameters[[1]]), " = ", tibble:::tick_if_needed(parameter_types[[1]]), collapse = ", "), ")")
+      usage_signature <- paste0(tibble:::tick_if_needed(parameters[[1]]), " = ", tibble:::tick_if_needed(parameter_types[[1]]), collapse = ", ")
     }
-    usage_doc <- glue("#' @usage {tibble:::tick_if_needed(function_name)}{usage_signature}")
+    usage_doc <- glue("#' @usage {tibble:::tick_if_needed(function_name)}({usage_signature})")
   } else {
     usage_doc <- "#' @usage NULL"
   }
 
   params <-
     tibble(name = unlist(parameters), type = unlist(parameter_types)) |>
-    summarize(.by = name, type = paste0(unique(type), collapse = " | "))
+    summarize(.by = name, type = paste0(na.omit(unique(type)), collapse = " | "))
 
   param_doc <-
     params |>
-    mutate(out = glue("#' @param {name} `{type}`")) |>
+    mutate(type = if_else(type == "", "Unspecified.", paste0("`", type, "`"))) |>
+    mutate(out = glue("#' @param {name} {type}")) |>
     pull() |>
     glue_collapse(sep = "\n")
 
-  if (length(macro_definition) != 1 || is.na(macro_definition)) {
+  is_macro <- length(macro_definition) == 1 && !is.na(macro_definition)
+  if (is_macro) {
+    signature <- usage_signature
+  } else {
     signature <- params |>
-      mutate(out = glue("{tibble:::tick_if_needed(name)} = {tibble:::tick_if_needed(type)}")) |>
+      mutate(out = glue("{tibble:::tick_if_needed(name)}{param_type_tick_if_needed(type)}")) |>
       pull() |>
       glue_collapse(sep = ", ")
-  } else {
-    signature <- usage_signature
   }
 
   description <- na.omit(description)
   if (length(description) == 0) {
-    description <- paste0("#' DuckDB function `", function_name, "()`.")
+    description <- paste0("#' DuckDB ", if (is_macro) "macro" else "function", " `", function_name, "()`.")
   } else {
     description <- unique(description)
     description <- gsub("[.]*$", ".", description)
@@ -115,7 +122,6 @@ funs <-
   select(-database_name, -database_oid, -schema_name, -function_oid, -comment, -tags) |>
   # FIXME: Understand meaning of `varargs`
   # FIXME: Why is this called `has_side_effects`? Called "deterministic" elsewhere.
-  filter_print(is.na(macro_definition)) |>
   filter_print(internal) |>
   select(-internal) |>
   summarize(
@@ -186,7 +192,7 @@ dd_code <- glue(r"(
   #' @examples
   #' dd[1:3]
   dd <- base::list(
-  {paste0("  ", tibble:::tick_if_needed(funs$function_name), " = ", tibble:::tick_if_needed(funs$function_name), collapse = ",\n")}
+  {paste0("  ", tibble:::tick_if_needed(funs$function_name[parsed]), " = ", tibble:::tick_if_needed(funs$function_name[parsed]), collapse = ",\n")}
   )
   )")
 
