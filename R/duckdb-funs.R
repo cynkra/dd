@@ -103,6 +103,23 @@ alias <- function(expr = ANY) {
   stop("DuckDB function alias() is not available in R.")
 }
 
+#' DuckDB function any_value
+#'
+#' @description
+#' Returns the first non-NULL value from arg. This function is affected by ordering.
+#'
+#' @name any_value
+#' @usage NULL
+#' @param arg `DECIMAL | ANY`
+#' @return `DECIMAL | ANY`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+any_value <- function(arg = `DECIMAL | ANY`) {
+  stop("DuckDB function any_value() is not available in R.")
+}
+
 #' DuckDB function apply
 #'
 #' @description
@@ -119,6 +136,205 @@ alias <- function(expr = ANY) {
 #' }
 apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function apply() is not available in R.")
+}
+
+#' DuckDB function approx_count_distinct
+#'
+#' @description
+#' Computes the approximate count of distinct elements using HyperLogLog.
+#'
+#' @name approx_count_distinct
+#' @usage approx_count_distinct(any = ANY)
+#' @param any `ANY`
+#' @return `BIGINT`
+#' @examples
+#' \dontrun{
+#' approx_count_distinct(A)
+#' }
+approx_count_distinct <- function(any = ANY) {
+  stop("DuckDB function approx_count_distinct() is not available in R.")
+}
+
+#' DuckDB function approx_quantile
+#'
+#' @description
+#' Computes the approximate quantile using T-Digest.
+#'
+#' @name approx_quantile
+#' @usage NULL
+#' @param x `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | DATE | TIME | TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TINYINT | FLOAT`
+#' @param pos `FLOAT | FLOAT[]`
+#' @return `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | DATE | TIME | TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | DECIMAL[] | TINYINT[] | SMALLINT[] | INTEGER[] | BIGINT[] | HUGEINT[] | FLOAT[] | DOUBLE[] | DATE[] | TIME[] | TIME WITH TIME ZONE[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
+#' @examples
+#' \dontrun{
+#' approx_quantile(x, 0.5)
+#' }
+approx_quantile <- function(x = `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | DATE | TIME | TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TINYINT | FLOAT`, pos = `FLOAT | FLOAT[]`) {
+  stop("DuckDB function approx_quantile() is not available in R.")
+}
+
+#' DuckDB function approx_top_k
+#'
+#' @description
+#' Finds the k approximately most occurring values in the data set.
+#'
+#' @name approx_top_k
+#' @usage approx_top_k(val = ANY, k = BIGINT)
+#' @param val `ANY`
+#' @param k `BIGINT`
+#' @return `ANY[]`
+#' @examples
+#' \dontrun{
+#' approx_top_k(x, 5)
+#' }
+approx_top_k <- function(val = ANY, k = BIGINT) {
+  stop("DuckDB function approx_top_k() is not available in R.")
+}
+
+#' DuckDB function arbitrary
+#'
+#' @description
+#' Returns the first value (NULL or non-NULL) from arg. This function is affected by ordering.
+#'
+#' @name arbitrary
+#' @usage NULL
+#' @param arg `DECIMAL | ANY`
+#' @return `DECIMAL | ANY`
+#' @examples
+#' \dontrun{
+#' arbitrary(A)
+#' }
+arbitrary <- function(arg = `DECIMAL | ANY`) {
+  stop("DuckDB function arbitrary() is not available in R.")
+}
+
+#' DuckDB function arg_max
+#'
+#' @description
+#' Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#'
+#' @name arg_max
+#' @usage NULL
+#' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
+#' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
+#' @param col2 `BIGINT`
+#' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
+#' @examples
+#' \dontrun{
+#' arg_max(A, B)
+#' }
+arg_max <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, col2 = BIGINT) {
+  stop("DuckDB function arg_max() is not available in R.")
+}
+
+#' DuckDB function arg_max_null
+#'
+#' @description
+#' Finds the row with the maximum val. Calculates the arg expression at that row.
+#'
+#' @name arg_max_null
+#' @usage NULL
+#' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
+#' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
+#' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
+#' @examples
+#' \dontrun{
+#' arg_max_null(A, B)
+#' }
+arg_max_null <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`) {
+  stop("DuckDB function arg_max_null() is not available in R.")
+}
+
+#' DuckDB function arg_min
+#'
+#' @description
+#' Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#'
+#' @name arg_min
+#' @usage NULL
+#' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
+#' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
+#' @param col2 `BIGINT`
+#' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
+#' @examples
+#' \dontrun{
+#' arg_min(A, B)
+#' }
+arg_min <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, col2 = BIGINT) {
+  stop("DuckDB function arg_min() is not available in R.")
+}
+
+#' DuckDB function arg_min_null
+#'
+#' @description
+#' Finds the row with the minimum val. Calculates the arg expression at that row.
+#'
+#' @name arg_min_null
+#' @usage NULL
+#' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
+#' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
+#' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
+#' @examples
+#' \dontrun{
+#' arg_min_null(A, B)
+#' }
+arg_min_null <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`) {
+  stop("DuckDB function arg_min_null() is not available in R.")
+}
+
+#' DuckDB function argmax
+#'
+#' @description
+#' Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#'
+#' @name argmax
+#' @usage NULL
+#' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
+#' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
+#' @param col2 `BIGINT`
+#' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
+#' @examples
+#' \dontrun{
+#' argmax(A, B)
+#' }
+argmax <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, col2 = BIGINT) {
+  stop("DuckDB function argmax() is not available in R.")
+}
+
+#' DuckDB function argmin
+#'
+#' @description
+#' Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#'
+#' @name argmin
+#' @usage NULL
+#' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
+#' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
+#' @param col2 `BIGINT`
+#' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
+#' @examples
+#' \dontrun{
+#' argmin(A, B)
+#' }
+argmin <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, col2 = BIGINT) {
+  stop("DuckDB function argmin() is not available in R.")
+}
+
+#' DuckDB function array_agg
+#'
+#' @description
+#' Returns a LIST containing all the values of a column.
+#'
+#' @name array_agg
+#' @usage array_agg(arg = T)
+#' @param arg `T`
+#' @return `T[]`
+#' @examples
+#' \dontrun{
+#' array_agg(A)
+#' }
+array_agg <- function(arg = T) {
+  stop("DuckDB function array_agg() is not available in R.")
 }
 
 #' DuckDB function array_apply
@@ -765,6 +981,23 @@ atanh <- function(x = DOUBLE) {
   stop("DuckDB function atanh() is not available in R.")
 }
 
+#' DuckDB function avg
+#'
+#' @description
+#' Calculates the average value for all tuples in x.
+#'
+#' @name avg
+#' @usage NULL
+#' @param x `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL | DOUBLE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`
+#' @return `DECIMAL | DOUBLE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' SUM(x) / COUNT(*)
+#' }
+avg <- function(x = `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL | DOUBLE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`) {
+  stop("DuckDB function avg() is not available in R.")
+}
+
 #' DuckDB function bar
 #'
 #' @description
@@ -823,6 +1056,23 @@ bin <- function(string = VARCHAR, value = `BIGNUM | UBIGINT | BIGINT | HUGEINT |
   stop("DuckDB function bin() is not available in R.")
 }
 
+#' DuckDB function bit_and
+#'
+#' @description
+#' Returns the bitwise AND of all bits in a given expression.
+#'
+#' @name bit_and
+#' @usage NULL
+#' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
+#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
+#' @examples
+#' \dontrun{
+#' bit_and(A)
+#' }
+bit_and <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`) {
+  stop("DuckDB function bit_and() is not available in R.")
+}
+
 #' DuckDB function bit_count
 #'
 #' @description
@@ -861,6 +1111,23 @@ bit_length <- function(string = VARCHAR, bit = BIT) {
   stop("DuckDB function bit_length() is not available in R.")
 }
 
+#' DuckDB function bit_or
+#'
+#' @description
+#' Returns the bitwise OR of all bits in a given expression.
+#'
+#' @name bit_or
+#' @usage NULL
+#' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
+#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
+#' @examples
+#' \dontrun{
+#' bit_or(A)
+#' }
+bit_or <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`) {
+  stop("DuckDB function bit_or() is not available in R.")
+}
+
 #' DuckDB function bit_position
 #'
 #' @description
@@ -879,6 +1146,23 @@ bit_position <- function(substring = BIT, bitstring = BIT) {
   stop("DuckDB function bit_position() is not available in R.")
 }
 
+#' DuckDB function bit_xor
+#'
+#' @description
+#' Returns the bitwise XOR of all bits in a given expression.
+#'
+#' @name bit_xor
+#' @usage NULL
+#' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
+#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
+#' @examples
+#' \dontrun{
+#' bit_xor(A)
+#' }
+bit_xor <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`) {
+  stop("DuckDB function bit_xor() is not available in R.")
+}
+
 #' DuckDB function bitstring
 #'
 #' @description
@@ -895,6 +1179,59 @@ bit_position <- function(substring = BIT, bitstring = BIT) {
 #' }
 bitstring <- function(bitstring = `VARCHAR | BIT`, length = INTEGER) {
   stop("DuckDB function bitstring() is not available in R.")
+}
+
+#' DuckDB function bitstring_agg
+#'
+#' @description
+#' Returns a bitstring with bits set for each distinct value.
+#'
+#' @name bitstring_agg
+#' @usage NULL
+#' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
+#' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
+#' @param col2 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
+#' @return `BIT`
+#' @examples
+#' \dontrun{
+#' bitstring_agg(A)
+#' }
+bitstring_agg <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`, col2 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
+  stop("DuckDB function bitstring_agg() is not available in R.")
+}
+
+#' DuckDB function bool_and
+#'
+#' @description
+#' Returns TRUE if every input value is TRUE, otherwise FALSE.
+#'
+#' @name bool_and
+#' @usage bool_and(arg = BOOLEAN)
+#' @param arg `BOOLEAN`
+#' @return `BOOLEAN`
+#' @examples
+#' \dontrun{
+#' bool_and(A)
+#' }
+bool_and <- function(arg = BOOLEAN) {
+  stop("DuckDB function bool_and() is not available in R.")
+}
+
+#' DuckDB function bool_or
+#'
+#' @description
+#' Returns TRUE if any input value is TRUE, otherwise FALSE.
+#'
+#' @name bool_or
+#' @usage bool_or(arg = BOOLEAN)
+#' @param arg `BOOLEAN`
+#' @return `BOOLEAN`
+#' @examples
+#' \dontrun{
+#' bool_or(A)
+#' }
+bool_or <- function(arg = BOOLEAN) {
+  stop("DuckDB function bool_or() is not available in R.")
 }
 
 #' DuckDB function can_cast_implicitly
@@ -1107,6 +1444,24 @@ contains <- function(string = VARCHAR, search_string = VARCHAR, col0 = `T[] | MA
   stop("DuckDB function contains() is not available in R.")
 }
 
+#' DuckDB function corr
+#'
+#' @description
+#' Returns the correlation coefficient for non-NULL pairs in a group.
+#'
+#' @name corr
+#' @usage corr(y = DOUBLE, x = DOUBLE)
+#' @param y `DOUBLE`
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' COVAR_POP(y, x) / (STDDEV_POP(x) * STDDEV_POP(y))
+#' }
+corr <- function(y = DOUBLE, x = DOUBLE) {
+  stop("DuckDB function corr() is not available in R.")
+}
+
 #' DuckDB function cos
 #'
 #' @description
@@ -1156,6 +1511,110 @@ cosh <- function(x = DOUBLE) {
 #' }
 cot <- function(x = DOUBLE) {
   stop("DuckDB function cot() is not available in R.")
+}
+
+#' DuckDB function count
+#'
+#' @description
+#' Returns the number of non-NULL values in arg.
+#'
+#' @name count
+#' @usage NULL
+#' @param arg `ANY`
+#' @return `BIGINT`
+#' @examples
+#' \dontrun{
+#' count(A)
+#' }
+count <- function(arg = ANY) {
+  stop("DuckDB function count() is not available in R.")
+}
+
+#' DuckDB function count_if
+#'
+#' @description
+#' Counts the total number of TRUE values for a boolean column.
+#'
+#' @name count_if
+#' @usage count_if(arg = BOOLEAN)
+#' @param arg `BOOLEAN`
+#' @return `HUGEINT`
+#' @examples
+#' \dontrun{
+#' count_if(A)
+#' }
+count_if <- function(arg = BOOLEAN) {
+  stop("DuckDB function count_if() is not available in R.")
+}
+
+#' DuckDB function count_star
+#'
+#' @description
+#' DuckDB function `count_star()`.
+#'
+#' @name count_star
+#' @usage count_star()
+
+#' @return `BIGINT`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+count_star <- function() {
+  stop("DuckDB function count_star() is not available in R.")
+}
+
+#' DuckDB function countif
+#'
+#' @description
+#' Counts the total number of TRUE values for a boolean column.
+#'
+#' @name countif
+#' @usage countif(arg = BOOLEAN)
+#' @param arg `BOOLEAN`
+#' @return `HUGEINT`
+#' @examples
+#' \dontrun{
+#' countif(A)
+#' }
+countif <- function(arg = BOOLEAN) {
+  stop("DuckDB function countif() is not available in R.")
+}
+
+#' DuckDB function covar_pop
+#'
+#' @description
+#' Returns the population covariance of input values.
+#'
+#' @name covar_pop
+#' @usage covar_pop(y = DOUBLE, x = DOUBLE)
+#' @param y `DOUBLE`
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' (SUM(x*y) - SUM(x) * SUM(y) / COUNT(*)) / COUNT(*)
+#' }
+covar_pop <- function(y = DOUBLE, x = DOUBLE) {
+  stop("DuckDB function covar_pop() is not available in R.")
+}
+
+#' DuckDB function covar_samp
+#'
+#' @description
+#' Returns the sample covariance for non-NULL pairs in a group.
+#'
+#' @name covar_samp
+#' @usage covar_samp(y = DOUBLE, x = DOUBLE)
+#' @param y `DOUBLE`
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' (SUM(x*y) - SUM(x) * SUM(y) / COUNT(*)) / (COUNT(*) - 1)
+#' }
+covar_samp <- function(y = DOUBLE, x = DOUBLE) {
+  stop("DuckDB function covar_samp() is not available in R.")
 }
 
 #' DuckDB function current_setting
@@ -1566,6 +2025,23 @@ ends_with <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function ends_with() is not available in R.")
 }
 
+#' DuckDB function entropy
+#'
+#' @description
+#' Returns the log-2 entropy of count input-values.
+#'
+#' @name entropy
+#' @usage entropy(x = ANY)
+#' @param x `ANY`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+entropy <- function(x = ANY) {
+  stop("DuckDB function entropy() is not available in R.")
+}
+
 #' DuckDB function enum_code
 #'
 #' @description
@@ -1808,6 +2284,23 @@ factorial <- function(x = INTEGER) {
   stop("DuckDB function factorial() is not available in R.")
 }
 
+#' DuckDB function favg
+#'
+#' @description
+#' Calculates the average using a more accurate floating point summation (Kahan Sum).
+#'
+#' @name favg
+#' @usage favg(x = DOUBLE)
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' favg(A)
+#' }
+favg <- function(x = DOUBLE) {
+  stop("DuckDB function favg() is not available in R.")
+}
+
 #' DuckDB function filter
 #'
 #' @description
@@ -1841,6 +2334,23 @@ filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' }
 finalize <- function(col0 = `AGGREGATE_STATE<?>`) {
   stop("DuckDB function finalize() is not available in R.")
+}
+
+#' DuckDB function first
+#'
+#' @description
+#' Returns the first value (NULL or non-NULL) from arg. This function is affected by ordering.
+#'
+#' @name first
+#' @usage NULL
+#' @param arg `DECIMAL | ANY`
+#' @return `DECIMAL | ANY`
+#' @examples
+#' \dontrun{
+#' first(A)
+#' }
+first <- function(arg = `DECIMAL | ANY`) {
+  stop("DuckDB function first() is not available in R.")
 }
 
 #' DuckDB function flatten
@@ -1979,6 +2489,23 @@ from_hex <- function(value = VARCHAR) {
   stop("DuckDB function from_hex() is not available in R.")
 }
 
+#' DuckDB function fsum
+#'
+#' @description
+#' Calculates the sum using a more accurate floating point summation (Kahan Sum).
+#'
+#' @name fsum
+#' @usage fsum(arg = DOUBLE)
+#' @param arg `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' fsum(A)
+#' }
+fsum <- function(arg = DOUBLE) {
+  stop("DuckDB function fsum() is not available in R.")
+}
+
 #' DuckDB function gamma
 #'
 #' @description
@@ -2105,6 +2632,24 @@ greatest_common_divisor <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEIN
   stop("DuckDB function greatest_common_divisor() is not available in R.")
 }
 
+#' DuckDB function group_concat
+#'
+#' @description
+#' Concatenates the column string values with an optional separator.
+#'
+#' @name group_concat
+#' @usage NULL
+#' @param str `ANY`
+#' @param arg `VARCHAR`
+#' @return `VARCHAR`
+#' @examples
+#' \dontrun{
+#' group_concat(A, '-')
+#' }
+group_concat <- function(str = ANY, arg = VARCHAR) {
+  stop("DuckDB function group_concat() is not available in R.")
+}
+
 #' DuckDB function hamming
 #'
 #' @description
@@ -2146,6 +2691,42 @@ hamming <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' }
 hex <- function(string = VARCHAR, value = `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`, blob = BLOB) {
   stop("DuckDB function hex() is not available in R.")
+}
+
+#' DuckDB function histogram
+#'
+#' @description
+#' Returns a LIST of STRUCTs with the fields bucket and count.
+#'
+#' @name histogram
+#' @usage NULL
+#' @param arg `ANY`
+#' @param col1 `ANY[]`
+#' @return `MAP`
+#' @examples
+#' \dontrun{
+#' histogram(A)
+#' }
+histogram <- function(arg = ANY, col1 = `ANY[]`) {
+  stop("DuckDB function histogram() is not available in R.")
+}
+
+#' DuckDB function histogram_exact
+#'
+#' @description
+#' Returns a LIST of STRUCTs with the fields bucket and count matching the buckets exactly.
+#'
+#' @name histogram_exact
+#' @usage histogram_exact(arg = ANY, bins = `ANY[]`)
+#' @param arg `ANY`
+#' @param bins `ANY[]`
+#' @return `MAP`
+#' @examples
+#' \dontrun{
+#' histogram_exact(A, [0, 1, 2])
+#' }
+histogram_exact <- function(arg = ANY, bins = `ANY[]`) {
+  stop("DuckDB function histogram_exact() is not available in R.")
 }
 
 #' DuckDB function hour
@@ -2377,6 +2958,74 @@ julian <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function julian() is not available in R.")
 }
 
+#' DuckDB function kahan_sum
+#'
+#' @description
+#' Calculates the sum using a more accurate floating point summation (Kahan Sum).
+#'
+#' @name kahan_sum
+#' @usage kahan_sum(arg = DOUBLE)
+#' @param arg `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' kahan_sum(A)
+#' }
+kahan_sum <- function(arg = DOUBLE) {
+  stop("DuckDB function kahan_sum() is not available in R.")
+}
+
+#' DuckDB function kurtosis
+#'
+#' @description
+#' Returns the excess kurtosis (Fisher’s definition) of all input values, with a bias correction according to the sample size.
+#'
+#' @name kurtosis
+#' @usage kurtosis(x = DOUBLE)
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+kurtosis <- function(x = DOUBLE) {
+  stop("DuckDB function kurtosis() is not available in R.")
+}
+
+#' DuckDB function kurtosis_pop
+#'
+#' @description
+#' Returns the excess kurtosis (Fisher’s definition) of all input values, without bias correction.
+#'
+#' @name kurtosis_pop
+#' @usage kurtosis_pop(x = DOUBLE)
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+kurtosis_pop <- function(x = DOUBLE) {
+  stop("DuckDB function kurtosis_pop() is not available in R.")
+}
+
+#' DuckDB function last
+#'
+#' @description
+#' Returns the last value of a column. This function is affected by ordering.
+#'
+#' @name last
+#' @usage NULL
+#' @param arg `DECIMAL | ANY`
+#' @return `DECIMAL | ANY`
+#' @examples
+#' \dontrun{
+#' last(A)
+#' }
+last <- function(arg = `DECIMAL | ANY`) {
+  stop("DuckDB function last() is not available in R.")
+}
+
 #' DuckDB function last_day
 #'
 #' @description
@@ -2577,6 +3226,23 @@ lgamma <- function(x = DOUBLE) {
 #' }
 like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
   stop("DuckDB function like_escape() is not available in R.")
+}
+
+#' DuckDB function list
+#'
+#' @description
+#' Returns a LIST containing all the values of a column.
+#'
+#' @name list
+#' @usage list(arg = T)
+#' @param arg `T`
+#' @return `T[]`
+#' @examples
+#' \dontrun{
+#' list(A)
+#' }
+list <- function(arg = T) {
+  stop("DuckDB function list() is not available in R.")
 }
 
 #' DuckDB function list_apply
@@ -3124,6 +3790,24 @@ list_where <- function(value_list = `T[]`, mask_list = `BOOLEAN[]`) {
   stop("DuckDB function list_where() is not available in R.")
 }
 
+#' DuckDB function listagg
+#'
+#' @description
+#' Concatenates the column string values with an optional separator.
+#'
+#' @name listagg
+#' @usage NULL
+#' @param str `ANY`
+#' @param arg `VARCHAR`
+#' @return `VARCHAR`
+#' @examples
+#' \dontrun{
+#' listagg(A, '-')
+#' }
+listagg <- function(str = ANY, arg = VARCHAR) {
+  stop("DuckDB function listagg() is not available in R.")
+}
+
 #' DuckDB function ln
 #'
 #' @description
@@ -3245,6 +3929,23 @@ lpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #' }
 ltrim <- function(string = VARCHAR, characters = VARCHAR) {
   stop("DuckDB function ltrim() is not available in R.")
+}
+
+#' DuckDB function mad
+#'
+#' @description
+#' Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
+#'
+#' @name mad
+#' @usage NULL
+#' @param x `DECIMAL | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE`
+#' @return `DECIMAL | FLOAT | DOUBLE | INTERVAL`
+#' @examples
+#' \dontrun{
+#' mad(x)
+#' }
+mad <- function(x = `DECIMAL | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE`) {
+  stop("DuckDB function mad() is not available in R.")
 }
 
 #' DuckDB function make_date
@@ -3487,6 +4188,43 @@ map_values <- function(map = `MAP(K, V)`) {
   stop("DuckDB function map_values() is not available in R.")
 }
 
+#' DuckDB function max
+#'
+#' @description
+#' Returns the maximum value present in arg.
+#'
+#' @name max
+#' @usage NULL
+#' @param arg `ANY`
+#' @param col1 `BIGINT`
+#' @return `ANY | ANY[]`
+#' @examples
+#' \dontrun{
+#' max(A)
+#' }
+max <- function(arg = ANY, col1 = BIGINT) {
+  stop("DuckDB function max() is not available in R.")
+}
+
+#' DuckDB function max_by
+#'
+#' @description
+#' Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#'
+#' @name max_by
+#' @usage NULL
+#' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
+#' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
+#' @param col2 `BIGINT`
+#' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
+#' @examples
+#' \dontrun{
+#' max_by(A, B)
+#' }
+max_by <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, col2 = BIGINT) {
+  stop("DuckDB function max_by() is not available in R.")
+}
+
 #' DuckDB function md5
 #'
 #' @description
@@ -3527,6 +4265,40 @@ md5 <- function(string = VARCHAR, blob = BLOB) {
 #' }
 md5_number <- function(string = VARCHAR, blob = BLOB) {
   stop("DuckDB function md5_number() is not available in R.")
+}
+
+#' DuckDB function mean
+#'
+#' @description
+#' Calculates the average value for all tuples in x.
+#'
+#' @name mean
+#' @usage NULL
+#' @param x `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL | DOUBLE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`
+#' @return `DECIMAL | DOUBLE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' SUM(x) / COUNT(*)
+#' }
+mean <- function(x = `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL | DOUBLE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`) {
+  stop("DuckDB function mean() is not available in R.")
+}
+
+#' DuckDB function median
+#'
+#' @description
+#' Returns the middle value of the set. NULL values are ignored. For even value counts, interpolate-able types (numeric, date/time) return the average of the two middle values. Non-interpolate-able types (everything else) return the lower of the two middle values.
+#'
+#' @name median
+#' @usage median(x = ANY)
+#' @param x `ANY`
+#' @return `ANY`
+#' @examples
+#' \dontrun{
+#' median(x)
+#' }
+median <- function(x = ANY) {
+  stop("DuckDB function median() is not available in R.")
 }
 
 #' DuckDB function microsecond
@@ -3580,6 +4352,43 @@ millisecond <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
   stop("DuckDB function millisecond() is not available in R.")
 }
 
+#' DuckDB function min
+#'
+#' @description
+#' Returns the minimum value present in arg.
+#'
+#' @name min
+#' @usage NULL
+#' @param arg `ANY`
+#' @param col1 `BIGINT`
+#' @return `ANY | ANY[]`
+#' @examples
+#' \dontrun{
+#' min(A)
+#' }
+min <- function(arg = ANY, col1 = BIGINT) {
+  stop("DuckDB function min() is not available in R.")
+}
+
+#' DuckDB function min_by
+#'
+#' @description
+#' Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#'
+#' @name min_by
+#' @usage NULL
+#' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
+#' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
+#' @param col2 `BIGINT`
+#' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
+#' @examples
+#' \dontrun{
+#' min_by(A, B)
+#' }
+min_by <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, col2 = BIGINT) {
+  stop("DuckDB function min_by() is not available in R.")
+}
+
 #' DuckDB function minute
 #'
 #' @description
@@ -3631,6 +4440,23 @@ mismatches <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' }
 mod <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
   stop("DuckDB function mod() is not available in R.")
+}
+
+#' DuckDB function mode
+#'
+#' @description
+#' Returns the most frequent value for the values within x. NULL values are ignored.
+#'
+#' @name mode
+#' @usage mode(x = ANY)
+#' @param x `ANY`
+#' @return `ANY`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+mode <- function(x = ANY) {
+  stop("DuckDB function mode() is not available in R.")
 }
 
 #' DuckDB function month
@@ -4010,6 +4836,77 @@ prefix <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function prefix() is not available in R.")
 }
 
+#' DuckDB function product
+#'
+#' @description
+#' Calculates the product of all tuples in arg.
+#'
+#' @name product
+#' @usage product(arg = DOUBLE)
+#' @param arg `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' product(A)
+#' }
+product <- function(arg = DOUBLE) {
+  stop("DuckDB function product() is not available in R.")
+}
+
+#' DuckDB function quantile
+#'
+#' @description
+#' Returns the exact quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding exact quantiles.
+#'
+#' @name quantile
+#' @usage NULL
+#' @param x `ANY`
+#' @param pos `DOUBLE | DOUBLE[]`
+#' @return `ANY`
+#' @examples
+#' \dontrun{
+#' quantile_disc(x, 0.5)
+#' }
+quantile <- function(x = ANY, pos = `DOUBLE | DOUBLE[]`) {
+  stop("DuckDB function quantile() is not available in R.")
+}
+
+#' DuckDB function quantile_cont
+#'
+#' @description
+#' Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#'
+#' @name quantile_cont
+#' @usage NULL
+#' @param x `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE`
+#' @param pos `DOUBLE | DOUBLE[]`
+#' @return `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' quantile_cont(x, 0.5)
+#' }
+quantile_cont <- function(x = `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE`, pos = `DOUBLE | DOUBLE[]`) {
+  stop("DuckDB function quantile_cont() is not available in R.")
+}
+
+#' DuckDB function quantile_disc
+#'
+#' @description
+#' Returns the exact quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding exact quantiles.
+#'
+#' @name quantile_disc
+#' @usage NULL
+#' @param x `ANY`
+#' @param pos `DOUBLE | DOUBLE[]`
+#' @return `ANY`
+#' @examples
+#' \dontrun{
+#' quantile_disc(x, 0.5)
+#' }
+quantile_disc <- function(x = ANY, pos = `DOUBLE | DOUBLE[]`) {
+  stop("DuckDB function quantile_disc() is not available in R.")
+}
+
 #' DuckDB function quarter
 #'
 #' @description
@@ -4223,6 +5120,168 @@ regexp_split_to_array <- function(string = VARCHAR, regex = VARCHAR, options = V
   stop("DuckDB function regexp_split_to_array() is not available in R.")
 }
 
+#' DuckDB function regr_avgx
+#'
+#' @description
+#' Returns the average of the independent variable for non-NULL pairs in a group, where x is the independent variable and y is the dependent variable.
+#'
+#' @name regr_avgx
+#' @usage regr_avgx(y = DOUBLE, x = DOUBLE)
+#' @param y `DOUBLE`
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+regr_avgx <- function(y = DOUBLE, x = DOUBLE) {
+  stop("DuckDB function regr_avgx() is not available in R.")
+}
+
+#' DuckDB function regr_avgy
+#'
+#' @description
+#' Returns the average of the dependent variable for non-NULL pairs in a group, where x is the independent variable and y is the dependent variable.
+#'
+#' @name regr_avgy
+#' @usage regr_avgy(y = DOUBLE, x = DOUBLE)
+#' @param y `DOUBLE`
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+regr_avgy <- function(y = DOUBLE, x = DOUBLE) {
+  stop("DuckDB function regr_avgy() is not available in R.")
+}
+
+#' DuckDB function regr_count
+#'
+#' @description
+#' Returns the number of non-NULL number pairs in a group.
+#'
+#' @name regr_count
+#' @usage regr_count(y = DOUBLE, x = DOUBLE)
+#' @param y `DOUBLE`
+#' @param x `DOUBLE`
+#' @return `UINTEGER`
+#' @examples
+#' \dontrun{
+#' (SUM(x*y) - SUM(x) * SUM(y) / COUNT(*)) / COUNT(*)
+#' }
+regr_count <- function(y = DOUBLE, x = DOUBLE) {
+  stop("DuckDB function regr_count() is not available in R.")
+}
+
+#' DuckDB function regr_intercept
+#'
+#' @description
+#' Returns the intercept of the univariate linear regression line for non-NULL pairs in a group.
+#'
+#' @name regr_intercept
+#' @usage regr_intercept(y = DOUBLE, x = DOUBLE)
+#' @param y `DOUBLE`
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' AVG(y)-REGR_SLOPE(y, x)*AVG(x)
+#' }
+regr_intercept <- function(y = DOUBLE, x = DOUBLE) {
+  stop("DuckDB function regr_intercept() is not available in R.")
+}
+
+#' DuckDB function regr_r2
+#'
+#' @description
+#' Returns the coefficient of determination for non-NULL pairs in a group.
+#'
+#' @name regr_r2
+#' @usage regr_r2(y = DOUBLE, x = DOUBLE)
+#' @param y `DOUBLE`
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+regr_r2 <- function(y = DOUBLE, x = DOUBLE) {
+  stop("DuckDB function regr_r2() is not available in R.")
+}
+
+#' DuckDB function regr_slope
+#'
+#' @description
+#' Returns the slope of the linear regression line for non-NULL pairs in a group.
+#'
+#' @name regr_slope
+#' @usage regr_slope(y = DOUBLE, x = DOUBLE)
+#' @param y `DOUBLE`
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' COVAR_POP(x, y) / VAR_POP(x)
+#' }
+regr_slope <- function(y = DOUBLE, x = DOUBLE) {
+  stop("DuckDB function regr_slope() is not available in R.")
+}
+
+#' DuckDB function regr_sxx
+#'
+#' @description
+#' DuckDB function `regr_sxx()`.
+#'
+#' @name regr_sxx
+#' @usage regr_sxx(y = DOUBLE, x = DOUBLE)
+#' @param y `DOUBLE`
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' REGR_COUNT(y, x) * VAR_POP(x)
+#' }
+regr_sxx <- function(y = DOUBLE, x = DOUBLE) {
+  stop("DuckDB function regr_sxx() is not available in R.")
+}
+
+#' DuckDB function regr_sxy
+#'
+#' @description
+#' Returns the population covariance of input values.
+#'
+#' @name regr_sxy
+#' @usage regr_sxy(y = DOUBLE, x = DOUBLE)
+#' @param y `DOUBLE`
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' REGR_COUNT(y, x) * COVAR_POP(y, x)
+#' }
+regr_sxy <- function(y = DOUBLE, x = DOUBLE) {
+  stop("DuckDB function regr_sxy() is not available in R.")
+}
+
+#' DuckDB function regr_syy
+#'
+#' @description
+#' DuckDB function `regr_syy()`.
+#'
+#' @name regr_syy
+#' @usage regr_syy(y = DOUBLE, x = DOUBLE)
+#' @param y `DOUBLE`
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' REGR_COUNT(y, x) * VAR_POP(y)
+#' }
+regr_syy <- function(y = DOUBLE, x = DOUBLE) {
+  stop("DuckDB function regr_syy() is not available in R.")
+}
+
 #' DuckDB function replace
 #'
 #' @description
@@ -4259,6 +5318,25 @@ replace <- function(string = VARCHAR, source = VARCHAR, target = VARCHAR) {
 #' }
 replace_type <- function(param = ANY, type1 = ANY, type2 = ANY) {
   stop("DuckDB function replace_type() is not available in R.")
+}
+
+#' DuckDB function reservoir_quantile
+#'
+#' @description
+#' Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#'
+#' @name reservoir_quantile
+#' @usage NULL
+#' @param x `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE`
+#' @param quantile `DOUBLE | DOUBLE[]`
+#' @param sample_size `INTEGER`
+#' @return `DECIMAL | DECIMAL[] | TINYINT | TINYINT[] | SMALLINT | SMALLINT[] | INTEGER | INTEGER[] | BIGINT | BIGINT[] | HUGEINT | HUGEINT[] | FLOAT | FLOAT[] | DOUBLE | DOUBLE[]`
+#' @examples
+#' \dontrun{
+#' reservoir_quantile(A, 0.5, 1024)
+#' }
+reservoir_quantile <- function(x = `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE`, quantile = `DOUBLE | DOUBLE[]`, sample_size = INTEGER) {
+  stop("DuckDB function reservoir_quantile() is not available in R.")
 }
 
 #' DuckDB function reverse
@@ -4384,6 +5462,23 @@ rtrim <- function(string = VARCHAR, characters = VARCHAR) {
 #' }
 second <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function second() is not available in R.")
+}
+
+#' DuckDB function sem
+#'
+#' @description
+#' Returns the standard error of the mean.
+#'
+#' @name sem
+#' @usage sem(x = DOUBLE)
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+sem <- function(x = DOUBLE) {
+  stop("DuckDB function sem() is not available in R.")
 }
 
 #' DuckDB function set_bit
@@ -4515,6 +5610,23 @@ sinh <- function(x = DOUBLE) {
   stop("DuckDB function sinh() is not available in R.")
 }
 
+#' DuckDB function skewness
+#'
+#' @description
+#' Returns the skewness of all input values.
+#'
+#' @name skewness
+#' @usage skewness(x = DOUBLE)
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' skewness(A)
+#' }
+skewness <- function(x = DOUBLE) {
+  stop("DuckDB function skewness() is not available in R.")
+}
+
 #' DuckDB function split
 #'
 #' @description
@@ -4566,6 +5678,57 @@ sqrt <- function(x = DOUBLE) {
 #' }
 starts_with <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function starts_with() is not available in R.")
+}
+
+#' DuckDB function stddev
+#'
+#' @description
+#' Returns the sample standard deviation.
+#'
+#' @name stddev
+#' @usage stddev(x = DOUBLE)
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' sqrt(var_samp(x))
+#' }
+stddev <- function(x = DOUBLE) {
+  stop("DuckDB function stddev() is not available in R.")
+}
+
+#' DuckDB function stddev_pop
+#'
+#' @description
+#' Returns the population standard deviation.
+#'
+#' @name stddev_pop
+#' @usage stddev_pop(x = DOUBLE)
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' sqrt(var_pop(x))
+#' }
+stddev_pop <- function(x = DOUBLE) {
+  stop("DuckDB function stddev_pop() is not available in R.")
+}
+
+#' DuckDB function stddev_samp
+#'
+#' @description
+#' Returns the sample standard deviation.
+#'
+#' @name stddev_samp
+#' @usage stddev_samp(x = DOUBLE)
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' sqrt(var_samp(x))
+#' }
+stddev_samp <- function(x = DOUBLE) {
+  stop("DuckDB function stddev_samp() is not available in R.")
 }
 
 #' DuckDB function str_split
@@ -4621,6 +5784,24 @@ str_split_regex <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR
 #' }
 strftime <- function(data = `DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR`, format = `VARCHAR | DATE | TIMESTAMP | TIMESTAMP_NS`) {
   stop("DuckDB function strftime() is not available in R.")
+}
+
+#' DuckDB function string_agg
+#'
+#' @description
+#' Concatenates the column string values with an optional separator.
+#'
+#' @name string_agg
+#' @usage NULL
+#' @param str `ANY`
+#' @param arg `VARCHAR`
+#' @return `VARCHAR`
+#' @examples
+#' \dontrun{
+#' string_agg(A, '-')
+#' }
+string_agg <- function(str = ANY, arg = VARCHAR) {
+  stop("DuckDB function string_agg() is not available in R.")
 }
 
 #' DuckDB function string_split
@@ -4933,6 +6114,57 @@ subtract <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | F
 #' }
 suffix <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function suffix() is not available in R.")
+}
+
+#' DuckDB function sum
+#'
+#' @description
+#' Calculates the sum value for all tuples in arg.
+#'
+#' @name sum
+#' @usage NULL
+#' @param arg `DECIMAL | BOOLEAN | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | BIGNUM`
+#' @return `DECIMAL | HUGEINT | DOUBLE | BIGNUM`
+#' @examples
+#' \dontrun{
+#' sum(A)
+#' }
+sum <- function(arg = `DECIMAL | BOOLEAN | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | BIGNUM`) {
+  stop("DuckDB function sum() is not available in R.")
+}
+
+#' DuckDB function sum_no_overflow
+#'
+#' @description
+#' Internal only. Calculates the sum value for all tuples in arg without overflow checks.
+#'
+#' @name sum_no_overflow
+#' @usage NULL
+#' @param arg `INTEGER | BIGINT | DECIMAL`
+#' @return `HUGEINT | DECIMAL`
+#' @examples
+#' \dontrun{
+#' sum_no_overflow(A)
+#' }
+sum_no_overflow <- function(arg = `INTEGER | BIGINT | DECIMAL`) {
+  stop("DuckDB function sum_no_overflow() is not available in R.")
+}
+
+#' DuckDB function sumkahan
+#'
+#' @description
+#' Calculates the sum using a more accurate floating point summation (Kahan Sum).
+#'
+#' @name sumkahan
+#' @usage sumkahan(arg = DOUBLE)
+#' @param arg `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' sumkahan(A)
+#' }
+sumkahan <- function(arg = DOUBLE) {
+  stop("DuckDB function sumkahan() is not available in R.")
 }
 
 #' DuckDB function tan
@@ -5653,6 +6885,57 @@ uuid_extract_timestamp <- function(uuid = UUID) {
 #' }
 uuid_extract_version <- function(uuid = UUID) {
   stop("DuckDB function uuid_extract_version() is not available in R.")
+}
+
+#' DuckDB function var_pop
+#'
+#' @description
+#' Returns the population variance.
+#'
+#' @name var_pop
+#' @usage var_pop(x = DOUBLE)
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+var_pop <- function(x = DOUBLE) {
+  stop("DuckDB function var_pop() is not available in R.")
+}
+
+#' DuckDB function var_samp
+#'
+#' @description
+#' Returns the sample variance of all input values.
+#'
+#' @name var_samp
+#' @usage var_samp(x = DOUBLE)
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' (SUM(x^2) - SUM(x)^2 / COUNT(x)) / (COUNT(x) - 1)
+#' }
+var_samp <- function(x = DOUBLE) {
+  stop("DuckDB function var_samp() is not available in R.")
+}
+
+#' DuckDB function variance
+#'
+#' @description
+#' Returns the sample variance of all input values.
+#'
+#' @name variance
+#' @usage variance(x = DOUBLE)
+#' @param x `DOUBLE`
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' (SUM(x^2) - SUM(x)^2 / COUNT(x)) / (COUNT(x) - 1)
+#' }
+variance <- function(x = DOUBLE) {
+  stop("DuckDB function variance() is not available in R.")
 }
 
 #' DuckDB function variant_extract

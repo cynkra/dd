@@ -78,8 +78,6 @@ funs <-
   DBI::dbGetQuery(con, "FROM duckdb_functions()") |>
   as_tibble() |>
   select(-database_name, -database_oid, -schema_name, -function_oid, -comment, -tags) |>
-  filter_print(function_type == "scalar") |>
-  select(-function_type) |>
   filter_print(is.na(varargs)) |>
   select(-varargs) |>
   filter_print(!has_side_effects) |>
