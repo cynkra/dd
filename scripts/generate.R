@@ -32,14 +32,16 @@ browse_data <- function(x) {
   x
 }
 
-usage_and_params <- function(function_name, parameters, parameter_types, description) {
+usage_and_params <- function(function_name, parameters, parameter_types, description, macro_definition) {
   if (length(parameters) == 1) {
     if (length(parameters[[1]]) == 0) {
-      signature <- "()" # No parameters
+      usage_signature <- "()" # No parameters
+    } else if (!is.na(macro_definition)) {
+      usage_signature <- paste0("(", paste0(tibble:::tick_if_needed(parameters[[1]]), collapse = ", "), ")")
     } else {
-      signature <- paste0("(", paste0(tibble:::tick_if_needed(parameters[[1]]), " = ", tibble:::tick_if_needed(parameter_types[[1]]), collapse = ", "), ")")
+      usage_signature <- paste0("(", paste0(tibble:::tick_if_needed(parameters[[1]]), " = ", tibble:::tick_if_needed(parameter_types[[1]]), collapse = ", "), ")")
     }
-    usage_doc <- glue("#' @usage {tibble:::tick_if_needed(function_name)}{signature}")
+    usage_doc <- glue("#' @usage {tibble:::tick_if_needed(function_name)}{usage_signature}")
   } else {
     usage_doc <- "#' @usage NULL"
   }
@@ -54,10 +56,14 @@ usage_and_params <- function(function_name, parameters, parameter_types, descrip
     pull() |>
     glue_collapse(sep = "\n")
 
-  signature <- params |>
-    mutate(out = glue("{tibble:::tick_if_needed(name)} = {tibble:::tick_if_needed(type)}")) |>
-    pull() |>
-    glue_collapse(sep = ", ")
+  if (length(macro_definition) != 1 || is.na(macro_definition)) {
+    signature <- params |>
+      mutate(out = glue("{tibble:::tick_if_needed(name)} = {tibble:::tick_if_needed(type)}")) |>
+      pull() |>
+      glue_collapse(sep = ", ")
+  } else {
+    signature <- usage_signature
+  }
 
   description <- na.omit(description)
   if (length(description) == 0) {
@@ -96,14 +102,13 @@ funs <-
   # FIXME: Understand meaning of `varargs`
   # FIXME: Why is this called `has_side_effects`? Called "deterministic" elsewhere.
   filter_print(is.na(macro_definition)) |>
-  select(-macro_definition) |>
   filter_print(internal) |>
   select(-internal) |>
   summarize(
     .by = function_name,
     alias_of = unique(alias_of),
     return_type = paste0(unique(na.omit(return_type)), collapse = " | "),
-    usage_and_params(first(function_name), parameters, parameter_types, description),
+    usage_and_params(first(function_name), parameters, parameter_types, description, macro_definition),
     examples = paste0("#' ", unique(examples), collapse = "\n"),
     categories = list(unique(unlist(categories))),
   ) |>
