@@ -28,9 +28,11 @@ list_slice with added step feature.
 }
 }
 
-\examples{
-\dontrun{
-list_slice([4, 5, 6], 2, 3)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{list_slice([4, 5, 6], 2, 3)
 list_slice([4, 5, 6], 1, 3, 2)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -17,8 +17,10 @@ Returns the current query as a string.
 }
 }
 
-\examples{
-\dontrun{
-current_query()
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{current_query()
+}\if{html}{\out{</div>}}
 }
-}
+

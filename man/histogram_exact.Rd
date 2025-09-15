@@ -17,8 +17,10 @@ histogram_exact(arg = ANY, bins = `ANY[]`)
 \description{
 Returns a LIST of STRUCTs with the fields bucket and count matching the buckets exactly.
 }
-\examples{
-\dontrun{
-histogram_exact(A, [0, 1, 2])
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{histogram_exact(A, [0, 1, 2])
+}\if{html}{\out{</div>}}
 }
-}
+

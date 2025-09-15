@@ -36,8 +36,10 @@ Rounds x to s decimal places.
 }
 }
 
-\examples{
-\dontrun{
-round(42.4332, 2)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{round(42.4332, 2)
+}\if{html}{\out{</div>}}
 }
-}
+

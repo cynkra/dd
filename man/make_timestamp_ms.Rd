@@ -15,8 +15,10 @@ make_timestamp_ms(nanos = BIGINT)
 \description{
 The timestamp for the given microseconds since the epoch.
 }
-\examples{
-\dontrun{
-make_timestamp_ms(1732117793000000)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{make_timestamp_ms(1732117793000000)
+}\if{html}{\out{</div>}}
 }
-}
+

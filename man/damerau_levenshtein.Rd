@@ -17,8 +17,10 @@ damerau_levenshtein(s1 = VARCHAR, s2 = VARCHAR)
 \description{
 Extension of Levenshtein distance to also include transposition of adjacent characters as an allowed edit operation. In other words, the minimum number of edit operations (insertions, deletions, substitutions or transpositions) required to change one string to another. Characters of different cases (e.g., \code{a} and \code{A}) are considered different.
 }
-\examples{
-\dontrun{
-damerau_levenshtein('duckdb', 'udckbd')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{damerau_levenshtein('duckdb', 'udckbd')
+}\if{html}{\out{</div>}}
 }
-}
+

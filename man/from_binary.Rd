@@ -15,8 +15,10 @@ from_binary(value = VARCHAR)
 \description{
 Converts a \code{value} from binary representation to a blob.
 }
-\examples{
-\dontrun{
-from_binary('0110')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{from_binary('0110')
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -17,8 +17,10 @@ list_has_all(list1 = `T[]`, list2 = `T[]`)
 \description{
 Returns true if all elements of list2 are in list1. NULLs are ignored.
 }
-\examples{
-\dontrun{
-list_has_all([1, 2, 3], [2, 3])
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{list_has_all([1, 2, 3], [2, 3])
+}\if{html}{\out{</div>}}
 }
-}
+

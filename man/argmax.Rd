@@ -114,8 +114,10 @@ Finds the row with the maximum val. Calculates the non-NULL arg expression at th
 }
 }
 
-\examples{
-\dontrun{
-argmax(A, B)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{argmax(A, B)
+}\if{html}{\out{</div>}}
 }
-}
+

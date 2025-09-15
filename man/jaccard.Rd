@@ -17,8 +17,10 @@ jaccard(s1 = VARCHAR, s2 = VARCHAR)
 \description{
 The Jaccard similarity between two strings. Characters of different cases (e.g., \code{a} and \code{A}) are considered different. Returns a number between 0 and 1.
 }
-\examples{
-\dontrun{
-jaccard('duck', 'luck')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{jaccard('duck', 'luck')
+}\if{html}{\out{</div>}}
 }
-}
+

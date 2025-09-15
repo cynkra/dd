@@ -22,8 +22,10 @@ Extract the \code{index}th (1-based) value from the list.
 }
 }
 
-\examples{
-\dontrun{
-list_element([4, 5, 6], 3)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{list_element([4, 5, 6], 3)
+}\if{html}{\out{</div>}}
 }
-}
+

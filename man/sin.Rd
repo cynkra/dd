@@ -15,8 +15,10 @@ sin(x = DOUBLE)
 \description{
 Computes the sin of x.
 }
-\examples{
-\dontrun{
-sin(90)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{sin(90)
+}\if{html}{\out{</div>}}
 }
-}
+

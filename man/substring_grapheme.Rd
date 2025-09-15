@@ -24,9 +24,11 @@ Extracts substring starting from grapheme clusters \code{start} up to the end of
 }
 }
 
-\examples{
-\dontrun{
-substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3)
 substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3, 2)
+}\if{html}{\out{</div>}}
 }
-}
+

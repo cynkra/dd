@@ -12,8 +12,10 @@ gen_random_uuid()
 \description{
 Returns a random UUID v4 similar to this: eeccb8c5-9943-b2bb-bb5e-222f4e14b687.
 }
-\examples{
-\dontrun{
-gen_random_uuid()
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{gen_random_uuid()
+}\if{html}{\out{</div>}}
 }
-}
+

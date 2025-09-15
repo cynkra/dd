@@ -26,8 +26,10 @@ Extract the nanosecond component from a date or timestamp.
 }
 }
 
-\examples{
-\dontrun{
-nanosecond(timestamp_ns '2021-08-03 11:59:44.123456789')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{nanosecond(timestamp_ns '2021-08-03 11:59:44.123456789')
+}\if{html}{\out{</div>}}
 }
-}
+

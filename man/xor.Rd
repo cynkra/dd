@@ -31,8 +31,10 @@ Bitwise XOR.
 }
 }
 
-\examples{
-\dontrun{
-xor(17, 5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{xor(17, 5)
+}\if{html}{\out{</div>}}
 }
-}
+

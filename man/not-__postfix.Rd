@@ -16,8 +16,10 @@
 \description{
 Factorial of x. Computes the product of the current integer and all integers below it.
 }
-\examples{
-\dontrun{
-4!
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{4!
+}\if{html}{\out{</div>}}
 }
-}
+

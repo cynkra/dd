@@ -20,8 +20,10 @@ Returns list of schemas. Pass a parameter of True to include implicit schemas.
 }
 }
 
-\examples{
-\dontrun{
-current_schemas(true)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{current_schemas(true)
+}\if{html}{\out{</div>}}
 }
-}
+

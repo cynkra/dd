@@ -12,8 +12,10 @@ now()
 \description{
 Returns the current timestamp.
 }
-\examples{
-\dontrun{
-now()
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{now()
+}\if{html}{\out{</div>}}
 }
-}
+

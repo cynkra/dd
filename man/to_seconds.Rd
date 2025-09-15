@@ -15,8 +15,10 @@ to_seconds(double = DOUBLE)
 \description{
 Construct a second interval.
 }
-\examples{
-\dontrun{
-to_seconds(5.5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{to_seconds(5.5)
+}\if{html}{\out{</div>}}
 }
-}
+

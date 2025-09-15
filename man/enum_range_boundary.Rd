@@ -17,8 +17,10 @@ enum_range_boundary(start = ANY, end = ANY)
 \description{
 Returns the range between the two given enum values as an array. The values must be of the same enum type. When the first parameter is NULL, the result starts with the first value of the enum type. When the second parameter is NULL, the result ends with the last value of the enum type.
 }
-\examples{
-\dontrun{
-enum_range_boundary(NULL, 'happy'::mood)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{enum_range_boundary(NULL, 'happy'::mood)
+}\if{html}{\out{</div>}}
 }
-}
+

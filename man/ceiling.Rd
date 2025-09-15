@@ -21,8 +21,10 @@ Rounds the number up.
 }
 }
 
-\examples{
-\dontrun{
-ceiling(17.4)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{ceiling(17.4)
+}\if{html}{\out{</div>}}
 }
-}
+

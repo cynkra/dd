@@ -29,8 +29,10 @@ Bitwise NOT.
 }
 }
 
-\examples{
-\dontrun{
-~15
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{~15
+}\if{html}{\out{</div>}}
 }
-}
+

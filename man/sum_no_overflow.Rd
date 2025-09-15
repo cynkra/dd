@@ -21,8 +21,10 @@ Internal only. Calculates the sum value for all tuples in arg without overflow c
 }
 }
 
-\examples{
-\dontrun{
-sum_no_overflow(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{sum_no_overflow(A)
+}\if{html}{\out{</div>}}
 }
-}
+

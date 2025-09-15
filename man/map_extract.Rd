@@ -17,8 +17,10 @@ map_extract(map = `MAP(K, V)`, key = K)
 \description{
 Returns a list containing the value for a given key or an empty list if the key is not contained in the map. The type of the key provided in the second parameter must match the type of the map’s keys else an error is returned.
 }
-\examples{
-\dontrun{
-map_extract(map(['key'], ['val']), 'key')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{map_extract(map(['key'], ['val']), 'key')
+}\if{html}{\out{</div>}}
 }
-}
+

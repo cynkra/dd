@@ -15,8 +15,10 @@ bool_or(arg = BOOLEAN)
 \description{
 Returns TRUE if any input value is TRUE, otherwise FALSE.
 }
-\examples{
-\dontrun{
-bool_or(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{bool_or(A)
+}\if{html}{\out{</div>}}
 }
-}
+

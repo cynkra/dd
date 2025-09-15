@@ -15,8 +15,10 @@ stats(expression = ANY)
 \description{
 Returns a string with statistics about the expression. Expression can be a column, constant, or SQL expression.
 }
-\examples{
-\dontrun{
-stats(5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{stats(5)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -15,8 +15,10 @@ log10(x = DOUBLE)
 \description{
 Computes the 10-log of x.
 }
-\examples{
-\dontrun{
-log10(1000)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{log10(1000)
+}\if{html}{\out{</div>}}
 }
-}
+

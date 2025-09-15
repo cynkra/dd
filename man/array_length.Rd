@@ -24,8 +24,10 @@ Returns the length of the \code{list}.
 }
 }
 
-\examples{
-\dontrun{
-array_length([1, 2, 3])
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{array_length([1, 2, 3])
+}\if{html}{\out{</div>}}
 }
-}
+

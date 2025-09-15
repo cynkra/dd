@@ -24,9 +24,11 @@ Returns a \code{VARCHAR} with the SHA-256 hash of the \code{blob}.
 }
 }
 
-\examples{
-\dontrun{
-sha256('🦆')
-sha256('\xAA\xBB'::BLOB)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{sha256('🦆')
+sha256('\\xAA\\xBB'::BLOB)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -24,12 +24,16 @@ Computes x to the power of y.
 
 Computes x to the power of y.
 }
-\examples{
-\dontrun{
-2 ^ 3
-}
-\dontrun{
-pow(2, 3)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{2 ^ 3
+}\if{html}{\out{</div>}}
+
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{pow(2, 3)
 power(2, 3)
+}\if{html}{\out{</div>}}
 }
-}
+

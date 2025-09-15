@@ -26,8 +26,10 @@ Calculates the sum value for all tuples in arg.
 }
 }
 
-\examples{
-\dontrun{
-sum(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{sum(A)
+}\if{html}{\out{</div>}}
 }
-}
+

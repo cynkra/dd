@@ -15,8 +15,10 @@ nfc_normalize(string = VARCHAR)
 \description{
 Converts \code{string} to Unicode NFC normalized string. Useful for comparisons and ordering if text data is mixed between NFC normalized and not.
 }
-\examples{
-\dontrun{
-nfc_normalize('ardèch')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{nfc_normalize('ardèch')
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -17,8 +17,10 @@ left_grapheme(string = VARCHAR, count = BIGINT)
 \description{
 Extracts the left-most count grapheme clusters.
 }
-\examples{
-\dontrun{
-left_grapheme('🤦🏼‍♂️🤦🏽‍♀️', 1)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{left_grapheme('🤦🏼‍♂️🤦🏽‍♀️', 1)
+}\if{html}{\out{</div>}}
 }
-}
+

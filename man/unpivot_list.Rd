@@ -12,8 +12,10 @@ unpivot_list()
 \description{
 Identical to list_value, but generated as part of unpivot for better error messages.
 }
-\examples{
-\dontrun{
-unpivot_list(4, 5, 6)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{unpivot_list(4, 5, 6)
+}\if{html}{\out{</div>}}
 }
-}
+

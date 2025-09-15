@@ -24,9 +24,11 @@ Returns the MD5 hash of the \code{blob} as a \code{VARCHAR}.
 }
 }
 
-\examples{
-\dontrun{
-md5('abc')
-md5('\xAA\xBB'::BLOB)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{md5('abc')
+md5('\\xAA\\xBB'::BLOB)
+}\if{html}{\out{</div>}}
 }
-}
+

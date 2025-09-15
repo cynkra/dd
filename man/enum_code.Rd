@@ -15,8 +15,10 @@ enum_code(enum = ANY)
 \description{
 Returns the numeric value backing the given enum value.
 }
-\examples{
-\dontrun{
-enum_code('happy'::mood)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{enum_code('happy'::mood)
+}\if{html}{\out{</div>}}
 }
-}
+

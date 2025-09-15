@@ -19,8 +19,10 @@ rpad(string = VARCHAR, count = INTEGER, character = VARCHAR)
 \description{
 Pads the \code{string} with the \code{character} on the right until it has \code{count} characters. Truncates the \code{string} on the right if it has more than \code{count} characters.
 }
-\examples{
-\dontrun{
-rpad('hello', 10, '<')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{rpad('hello', 10, '<')
+}\if{html}{\out{</div>}}
 }
-}
+

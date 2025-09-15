@@ -15,8 +15,10 @@ sqrt(x = DOUBLE)
 \description{
 Returns the square root of x.
 }
-\examples{
-\dontrun{
-sqrt(4)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{sqrt(4)
+}\if{html}{\out{</div>}}
 }
-}
+

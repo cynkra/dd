@@ -24,8 +24,10 @@ Returns the number of bits that are set.
 }
 }
 
-\examples{
-\dontrun{
-bit_count(31)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{bit_count(31)
+}\if{html}{\out{</div>}}
 }
-}
+

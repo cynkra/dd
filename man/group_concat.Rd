@@ -22,8 +22,10 @@ Concatenates the column string values with an optional separator.
 }
 }
 
-\examples{
-\dontrun{
-group_concat(A, '-')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{group_concat(A, '-')
+}\if{html}{\out{</div>}}
 }
-}
+

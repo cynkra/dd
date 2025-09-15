@@ -17,8 +17,10 @@ prefix(string = VARCHAR, search_string = VARCHAR)
 \description{
 Returns \code{true} if \code{string} starts with \code{search_string}.
 }
-\examples{
-\dontrun{
-prefix('abc', 'ab')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{prefix('abc', 'ab')
+}\if{html}{\out{</div>}}
 }
-}
+

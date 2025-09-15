@@ -12,8 +12,10 @@ txid_current()
 \description{
 Returns the current transaction’s ID (a BIGINT). It will assign a new one if the current transaction does not have one already.
 }
-\examples{
-\dontrun{
-txid_current()
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{txid_current()
+}\if{html}{\out{</div>}}
 }
-}
+

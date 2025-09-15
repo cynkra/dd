@@ -22,8 +22,10 @@ Concatenates the column string values with an optional separator.
 }
 }
 
-\examples{
-\dontrun{
-listagg(A, '-')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{listagg(A, '-')
+}\if{html}{\out{</div>}}
 }
-}
+

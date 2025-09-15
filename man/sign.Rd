@@ -30,8 +30,10 @@ Returns the sign of x as -1, 0 or 1.
 }
 }
 
-\examples{
-\dontrun{
-sign(-349)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{sign(-349)
+}\if{html}{\out{</div>}}
 }
-}
+

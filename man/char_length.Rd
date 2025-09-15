@@ -29,10 +29,12 @@ Returns the length of the \code{list}.
 }
 }
 
-\examples{
-\dontrun{
-char_length('Hello🦆')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{char_length('Hello🦆')
 char_length(42::TINYINT::BIT)
 char_length([1,2,3])
+}\if{html}{\out{</div>}}
 }
-}
+

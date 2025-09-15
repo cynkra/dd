@@ -15,8 +15,10 @@ error(message = VARCHAR)
 \description{
 Throws the given error message.
 }
-\examples{
-\dontrun{
-error('access_mode')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{error('access_mode')
+}\if{html}{\out{</div>}}
 }
-}
+

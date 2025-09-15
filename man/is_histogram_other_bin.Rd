@@ -15,8 +15,10 @@ is_histogram_other_bin(val = ANY)
 \description{
 Whether or not the provided value is the histogram "other" bin (used for values not belonging to any provided bin).
 }
-\examples{
-\dontrun{
-is_histogram_other_bin(v)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{is_histogram_other_bin(v)
+}\if{html}{\out{</div>}}
 }
-}
+

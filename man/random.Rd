@@ -12,8 +12,10 @@ random()
 \description{
 Returns a random number between 0 and 1.
 }
-\examples{
-\dontrun{
-random()
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{random()
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -24,8 +24,10 @@ Converts \code{number} to a string in the given base \code{radix}, optionally pa
 }
 }
 
-\examples{
-\dontrun{
-to_base(42, 16, 5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{to_base(42, 16, 5)
+}\if{html}{\out{</div>}}
 }
-}
+

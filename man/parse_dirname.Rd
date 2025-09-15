@@ -22,8 +22,10 @@ Returns the top-level directory name from the given \code{path}. \code{separator
 }
 }
 
-\examples{
-\dontrun{
-parse_dirname('path/to/file.csv', 'system')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{parse_dirname('path/to/file.csv', 'system')
+}\if{html}{\out{</div>}}
 }
-}
+

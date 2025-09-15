@@ -15,8 +15,10 @@ atan(x = DOUBLE)
 \description{
 Computes the arctangent of x.
 }
-\examples{
-\dontrun{
-atan(0.5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{atan(0.5)
+}\if{html}{\out{</div>}}
 }
-}
+

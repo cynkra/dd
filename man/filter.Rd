@@ -17,8 +17,10 @@ filter(list = `ANY[]`, `lambda(x)` = LAMBDA)
 \description{
 Constructs a list from those elements of the input \code{list} for which the \code{lambda} function returns \code{true}. DuckDB must be able to cast the \code{lambda} function's return type to \code{BOOL}. The return type of \code{list_filter} is the same as the input list's.
 }
-\examples{
-\dontrun{
-filter([3, 4, 5], lambda x : x > 4)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{filter([3, 4, 5], lambda x : x > 4)
+}\if{html}{\out{</div>}}
 }
-}
+

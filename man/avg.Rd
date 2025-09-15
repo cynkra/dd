@@ -29,8 +29,10 @@ Calculates the average value for all tuples in x.
 }
 }
 
-\examples{
-\dontrun{
-SUM(x) / COUNT(*)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{SUM(x) / COUNT(*)
+}\if{html}{\out{</div>}}
 }
-}
+

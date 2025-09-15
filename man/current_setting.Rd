@@ -15,8 +15,10 @@ current_setting(setting_name = VARCHAR)
 \description{
 Returns the current value of the configuration setting.
 }
-\examples{
-\dontrun{
-current_setting('access_mode')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{current_setting('access_mode')
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -17,8 +17,10 @@ regr_syy(y = DOUBLE, x = DOUBLE)
 \description{
 DuckDB function \code{regr_syy()}.
 }
-\examples{
-\dontrun{
-REGR_COUNT(y, x) * VAR_POP(y)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{REGR_COUNT(y, x) * VAR_POP(y)
+}\if{html}{\out{</div>}}
 }
-}
+

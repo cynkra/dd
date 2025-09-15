@@ -15,8 +15,10 @@ url_encode(string = VARCHAR)
 \description{
 Encodes a URL to a representation using Percent-Encoding.
 }
-\examples{
-\dontrun{
-url_encode('this string has/ special+ characters>')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{url_encode('this string has/ special+ characters>')
+}\if{html}{\out{</div>}}
 }
-}
+

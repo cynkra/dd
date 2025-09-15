@@ -15,8 +15,10 @@ stddev(x = DOUBLE)
 \description{
 Returns the sample standard deviation.
 }
-\examples{
-\dontrun{
-sqrt(var_samp(x))
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{sqrt(var_samp(x))
+}\if{html}{\out{</div>}}
 }
-}
+

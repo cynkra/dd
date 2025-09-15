@@ -15,8 +15,10 @@ hash(value = ANY)
 \description{
 Returns a \code{UBIGINT} with the hash of the \code{value}. Note that this is not a cryptographic hash.
 }
-\examples{
-\dontrun{
-hash('🦆')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{hash('🦆')
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -17,8 +17,10 @@ constant_or_null(arg1 = ANY, arg2 = ANY)
 \description{
 If arg2 is NULL, return NULL. Otherwise, return arg1.
 }
-\examples{
-\dontrun{
-constant_or_null(42, NULL)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{constant_or_null(42, NULL)
+}\if{html}{\out{</div>}}
 }
-}
+

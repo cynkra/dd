@@ -15,8 +15,10 @@ cos(x = DOUBLE)
 \description{
 Computes the cos of x.
 }
-\examples{
-\dontrun{
-cos(90)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{cos(90)
+}\if{html}{\out{</div>}}
 }
-}
+

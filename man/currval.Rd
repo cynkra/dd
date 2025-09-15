@@ -15,8 +15,10 @@ currval(`'sequence_name'` = VARCHAR)
 \description{
 Return the current value of the sequence. Note that nextval must be called at least once prior to calling currval.
 }
-\examples{
-\dontrun{
-currval('my_sequence_name')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{currval('my_sequence_name')
+}\if{html}{\out{</div>}}
 }
-}
+

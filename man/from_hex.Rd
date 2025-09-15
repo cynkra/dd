@@ -15,8 +15,10 @@ from_hex(value = VARCHAR)
 \description{
 Converts a \code{value} from hexadecimal representation to a blob.
 }
-\examples{
-\dontrun{
-from_hex('2A')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{from_hex('2A')
+}\if{html}{\out{</div>}}
 }
-}
+

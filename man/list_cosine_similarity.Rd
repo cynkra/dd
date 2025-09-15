@@ -22,8 +22,10 @@ Computes the cosine similarity between two same-sized lists.
 }
 }
 
-\examples{
-\dontrun{
-list_cosine_similarity([1, 2, 3], [1, 2, 3])
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{list_cosine_similarity([1, 2, 3], [1, 2, 3])
+}\if{html}{\out{</div>}}
 }
-}
+

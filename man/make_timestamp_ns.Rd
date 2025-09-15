@@ -15,8 +15,10 @@ make_timestamp_ns(nanos = BIGINT)
 \description{
 The timestamp for the given nanoseconds since epoch.
 }
-\examples{
-\dontrun{
-make_timestamp_ns(1732117793000000000)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{make_timestamp_ns(1732117793000000000)
+}\if{html}{\out{</div>}}
 }
-}
+

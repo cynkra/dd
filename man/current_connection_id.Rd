@@ -12,8 +12,10 @@ current_connection_id()
 \description{
 Get the current connection_id.
 }
-\examples{
-\dontrun{
-current_connection_id()
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{current_connection_id()
+}\if{html}{\out{</div>}}
 }
-}
+

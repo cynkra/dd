@@ -20,8 +20,10 @@ Computes the cross product of two arrays of size 3. The array elements can not b
 }
 }
 
-\examples{
-\dontrun{
-array_cross_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{array_cross_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
+}\if{html}{\out{</div>}}
 }
-}
+

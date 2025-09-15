@@ -15,8 +15,10 @@ stddev_pop(x = DOUBLE)
 \description{
 Returns the population standard deviation.
 }
-\examples{
-\dontrun{
-sqrt(var_pop(x))
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{sqrt(var_pop(x))
+}\if{html}{\out{</div>}}
 }
-}
+

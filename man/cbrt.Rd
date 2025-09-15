@@ -15,8 +15,10 @@ cbrt(x = DOUBLE)
 \description{
 Returns the cube root of x.
 }
-\examples{
-\dontrun{
-cbrt(8)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{cbrt(8)
+}\if{html}{\out{</div>}}
 }
-}
+

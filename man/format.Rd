@@ -15,8 +15,10 @@ format(format = VARCHAR)
 \description{
 Formats a string using the fmt syntax.
 }
-\examples{
-\dontrun{
-format('Benchmark "{}" took {} seconds', 'CSV', 42)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{format('Benchmark "\{\}" took \{\} seconds', 'CSV', 42)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -15,8 +15,10 @@ enum_range(enum = ANY)
 \description{
 Returns all values of the input enum type as an array.
 }
-\examples{
-\dontrun{
-enum_range(NULL::mood)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{enum_range(NULL::mood)
+}\if{html}{\out{</div>}}
 }
-}
+

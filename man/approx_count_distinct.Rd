@@ -15,8 +15,10 @@ approx_count_distinct(any = ANY)
 \description{
 Computes the approximate count of distinct elements using HyperLogLog.
 }
-\examples{
-\dontrun{
-approx_count_distinct(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{approx_count_distinct(A)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -15,8 +15,10 @@ to_hours(integer = BIGINT)
 \description{
 Construct a hour interval.
 }
-\examples{
-\dontrun{
-to_hours(5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{to_hours(5)
+}\if{html}{\out{</div>}}
 }
-}
+

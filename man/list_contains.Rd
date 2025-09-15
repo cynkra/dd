@@ -17,8 +17,10 @@ list_contains(list = `T[]`, element = T)
 \description{
 Returns true if the list contains the element.
 }
-\examples{
-\dontrun{
-list_contains([1, 2, NULL], 1)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{list_contains([1, 2, NULL], 1)
+}\if{html}{\out{</div>}}
 }
-}
+

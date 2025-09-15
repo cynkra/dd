@@ -15,8 +15,10 @@ timetz_byte_comparable(time_tz = `TIME WITH TIME ZONE`)
 \description{
 Converts a TIME WITH TIME ZONE to an integer sort key.
 }
-\examples{
-\dontrun{
-timetz_byte_comparable('18:18:16.21-07:00'::TIMETZ)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{timetz_byte_comparable('18:18:16.21-07:00'::TIMETZ)
+}\if{html}{\out{</div>}}
 }
-}
+

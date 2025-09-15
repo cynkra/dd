@@ -32,8 +32,10 @@ Truncate TIMESTAMPTZ by the specified interval bucket_width. Buckets are aligned
 }
 }
 
-\examples{
-\dontrun{
-time_bucket(INTERVAL '2 weeks', TIMESTAMP '1992-04-20 15:26:00-07', TIMESTAMP '1992-04-01 00:00:00-07')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{time_bucket(INTERVAL '2 weeks', TIMESTAMP '1992-04-20 15:26:00-07', TIMESTAMP '1992-04-01 00:00:00-07')
+}\if{html}{\out{</div>}}
 }
-}
+

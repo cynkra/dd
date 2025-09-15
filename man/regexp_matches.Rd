@@ -24,8 +24,10 @@ Returns \code{true} if \code{string} contains the \code{regex}, \code{false} oth
 }
 }
 
-\examples{
-\dontrun{
-regexp_matches('anabanana', '(an)*')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{regexp_matches('anabanana', '(an)*')
+}\if{html}{\out{</div>}}
 }
-}
+

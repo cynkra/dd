@@ -12,8 +12,10 @@ current_transaction_id()
 \description{
 Get the current global transaction_id.
 }
-\examples{
-\dontrun{
-current_transaction_id()
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{current_transaction_id()
+}\if{html}{\out{</div>}}
 }
-}
+

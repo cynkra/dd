@@ -15,8 +15,10 @@ product(arg = DOUBLE)
 \description{
 Calculates the product of all tuples in arg.
 }
-\examples{
-\dontrun{
-product(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{product(A)
+}\if{html}{\out{</div>}}
 }
-}
+

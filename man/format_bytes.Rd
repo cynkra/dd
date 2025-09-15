@@ -15,8 +15,10 @@ format_bytes(integer = BIGINT)
 \description{
 Converts \code{integer} to a human-readable representation using units based on powers of 2 (KiB, MiB, GiB, etc.).
 }
-\examples{
-\dontrun{
-format_bytes(16_000)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{format_bytes(16_000)
+}\if{html}{\out{</div>}}
 }
-}
+

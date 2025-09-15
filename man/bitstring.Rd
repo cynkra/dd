@@ -22,8 +22,10 @@ Pads the bitstring until the specified length.
 }
 }
 
-\examples{
-\dontrun{
-bitstring('1010'::BIT, 7)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{bitstring('1010'::BIT, 7)
+}\if{html}{\out{</div>}}
 }
-}
+

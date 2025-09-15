@@ -17,8 +17,10 @@ power(x = DOUBLE, y = DOUBLE)
 \description{
 Computes x to the power of y.
 }
-\examples{
-\dontrun{
-power(2, 3)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{power(2, 3)
+}\if{html}{\out{</div>}}
 }
-}
+

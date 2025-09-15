@@ -15,8 +15,10 @@ kahan_sum(arg = DOUBLE)
 \description{
 Calculates the sum using a more accurate floating point summation (Kahan Sum).
 }
-\examples{
-\dontrun{
-kahan_sum(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{kahan_sum(A)
+}\if{html}{\out{</div>}}
 }
-}
+

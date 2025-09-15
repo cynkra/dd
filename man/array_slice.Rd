@@ -28,11 +28,13 @@ list_slice with added step feature.
 }
 }
 
-\examples{
-\dontrun{
-array_slice('DuckDB', 3, 4)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{array_slice('DuckDB', 3, 4)
 array_slice('DuckDB', 3, NULL)
 array_slice('DuckDB', 0, -3)
 array_slice([4, 5, 6], 1, 3, 2)
+}\if{html}{\out{</div>}}
 }
-}
+

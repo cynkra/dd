@@ -12,8 +12,10 @@ map_concat()
 \description{
 Returns a map created from merging the input maps, on key collision the value is taken from the last map with that key.
 }
-\examples{
-\dontrun{
-map_concat(map([1, 2], ['a', 'b']), map([2, 3], ['c', 'd']));
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{map_concat(map([1, 2], ['a', 'b']), map([2, 3], ['c', 'd']));
+}\if{html}{\out{</div>}}
 }
-}
+

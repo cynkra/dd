@@ -15,8 +15,10 @@ regexp_escape(string = VARCHAR)
 \description{
 Escapes special patterns to turn \code{string} into a regular expression similarly to Python's \code{re.escape} function.
 }
-\examples{
-\dontrun{
-regexp_escape('https://duckdb.org')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{regexp_escape('https://duckdb.org')
+}\if{html}{\out{</div>}}
 }
-}
+

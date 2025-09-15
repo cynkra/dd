@@ -12,8 +12,10 @@ pi()
 \description{
 Returns the value of pi.
 }
-\examples{
-\dontrun{
-pi()
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{pi()
+}\if{html}{\out{</div>}}
 }
-}
+

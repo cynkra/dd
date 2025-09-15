@@ -15,8 +15,10 @@ base64(blob = BLOB)
 \description{
 Converts a \code{blob} to a base64 encoded string.
 }
-\examples{
-\dontrun{
-base64('A'::BLOB)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{base64('A'::BLOB)
+}\if{html}{\out{</div>}}
 }
-}
+

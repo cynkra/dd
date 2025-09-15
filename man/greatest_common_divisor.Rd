@@ -22,8 +22,10 @@ Computes the greatest common divisor of x and y.
 }
 }
 
-\examples{
-\dontrun{
-greatest_common_divisor(42, 57)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{greatest_common_divisor(42, 57)
+}\if{html}{\out{</div>}}
 }
-}
+

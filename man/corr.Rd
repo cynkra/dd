@@ -17,8 +17,10 @@ corr(y = DOUBLE, x = DOUBLE)
 \description{
 Returns the correlation coefficient for non-NULL pairs in a group.
 }
-\examples{
-\dontrun{
-COVAR_POP(y, x) / (STDDEV_POP(x) * STDDEV_POP(y))
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{COVAR_POP(y, x) / (STDDEV_POP(x) * STDDEV_POP(y))
+}\if{html}{\out{</div>}}
 }
-}
+

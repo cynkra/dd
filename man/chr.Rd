@@ -15,8 +15,10 @@ chr(code_point = INTEGER)
 \description{
 Returns a character which is corresponding the ASCII code value or Unicode code point.
 }
-\examples{
-\dontrun{
-chr(65)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{chr(65)
+}\if{html}{\out{</div>}}
 }
-}
+

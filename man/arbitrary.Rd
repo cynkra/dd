@@ -20,8 +20,10 @@ Returns the first value (NULL or non-NULL) from arg. This function is affected b
 }
 }
 
-\examples{
-\dontrun{
-arbitrary(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{arbitrary(A)
+}\if{html}{\out{</div>}}
 }
-}
+

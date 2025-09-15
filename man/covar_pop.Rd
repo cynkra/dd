@@ -17,8 +17,10 @@ covar_pop(y = DOUBLE, x = DOUBLE)
 \description{
 Returns the population covariance of input values.
 }
-\examples{
-\dontrun{
-(SUM(x*y) - SUM(x) * SUM(y) / COUNT(*)) / COUNT(*)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{(SUM(x*y) - SUM(x) * SUM(y) / COUNT(*)) / COUNT(*)
+}\if{html}{\out{</div>}}
 }
-}
+

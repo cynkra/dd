@@ -15,8 +15,10 @@ map_entries(map = `MAP(K, V)`)
 \description{
 Returns the map entries as a list of keys/values.
 }
-\examples{
-\dontrun{
-map_entries(map(['key'], ['val']))
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{map_entries(map(['key'], ['val']))
+}\if{html}{\out{</div>}}
 }
-}
+

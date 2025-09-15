@@ -15,9 +15,11 @@ greatest(arg1 = ANY)
 \description{
 Returns the largest value. For strings lexicographical ordering is used. Note that lowercase characters are considered “larger” than uppercase characters and collations are not supported.
 }
-\examples{
-\dontrun{
-greatest(42, 84)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{greatest(42, 84)
 greatest('abc', 'bcd', 'cde', 'EFG')
+}\if{html}{\out{</div>}}
 }
-}
+

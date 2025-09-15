@@ -20,8 +20,10 @@ Returns true if the floating point value is not a number, false otherwise.
 }
 }
 
-\examples{
-\dontrun{
-isnan('NaN'::FLOAT)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{isnan('NaN'::FLOAT)
+}\if{html}{\out{</div>}}
 }
-}
+

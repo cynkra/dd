@@ -34,8 +34,10 @@ Get subfield (equivalent to extract).
 }
 }
 
-\examples{
-\dontrun{
-datepart('minute', TIMESTAMP '1992-09-20 20:38:40')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{datepart('minute', TIMESTAMP '1992-09-20 20:38:40')
+}\if{html}{\out{</div>}}
 }
-}
+

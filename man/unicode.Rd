@@ -15,8 +15,10 @@ unicode(string = VARCHAR)
 \description{
 Returns an \code{INTEGER} representing the \code{unicode} codepoint of the first character in the \code{string}.
 }
-\examples{
-\dontrun{
-[unicode('âbcd'), unicode('â'), unicode(''), unicode(NULL)]
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{[unicode('âbcd'), unicode('â'), unicode(''), unicode(NULL)]
+}\if{html}{\out{</div>}}
 }
-}
+

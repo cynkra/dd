@@ -15,8 +15,10 @@ strlen(string = VARCHAR)
 \description{
 Number of bytes in \code{string}.
 }
-\examples{
-\dontrun{
-strlen('🦆')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{strlen('🦆')
+}\if{html}{\out{</div>}}
 }
-}
+

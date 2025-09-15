@@ -12,8 +12,10 @@ struct_pack()
 \description{
 Create a STRUCT containing the argument values. The entry name will be the bound variable name.
 }
-\examples{
-\dontrun{
-struct_pack(i := 4, s := 'string')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{struct_pack(i := 4, s := 'string')
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -26,9 +26,11 @@ Converts the \code{string} text to timestamp applying the format strings in the 
 }
 }
 
-\examples{
-\dontrun{
-strptime('Wed, 1 January 1992 - 08:38:40 PM', '\%a, \%-d \%B \%Y - \%I:\%M:\%S \%p')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{strptime('Wed, 1 January 1992 - 08:38:40 PM', '\%a, \%-d \%B \%Y - \%I:\%M:\%S \%p')
 strptime('4/15/2023 10:56:00', ['\%d/\%m/\%Y \%H:\%M:\%S', '\%m/\%d/\%Y \%H:\%M:\%S'])
+}\if{html}{\out{</div>}}
 }
-}
+

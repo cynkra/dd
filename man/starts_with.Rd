@@ -17,8 +17,10 @@ starts_with(string = VARCHAR, search_string = VARCHAR)
 \description{
 Returns \code{true} if \code{string} begins with \code{search_string}.
 }
-\examples{
-\dontrun{
-starts_with('abc', 'a')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{starts_with('abc', 'a')
+}\if{html}{\out{</div>}}
 }
-}
+

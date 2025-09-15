@@ -15,8 +15,10 @@ acosh(x = DOUBLE)
 \description{
 Computes the inverse hyperbolic cos of x.
 }
-\examples{
-\dontrun{
-acosh(2.3)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{acosh(2.3)
+}\if{html}{\out{</div>}}
 }
-}
+

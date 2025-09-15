@@ -12,10 +12,12 @@ array_zip()
 \description{
 Zips n \code{LIST}s to a new \code{LIST} whose length will be that of the longest list. Its elements are structs of n elements from each list \code{list_1}, …, \code{list_n}, missing elements are replaced with \code{NULL}. If \code{truncate} is set, all lists are truncated to the smallest list length.
 }
-\examples{
-\dontrun{
-array_zip([1, 2], [3, 4], [5, 6])
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{array_zip([1, 2], [3, 4], [5, 6])
 array_zip([1, 2], [3, 4], [5, 6, 7])
 array_zip([1, 2], [3, 4], [5, 6, 7], true)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -24,8 +24,10 @@ Resizes the \code{list} to contain \code{size} elements. Initializes new element
 }
 }
 
-\examples{
-\dontrun{
-array_resize([1, 2, 3], 5, 0)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{array_resize([1, 2, 3], 5, 0)
+}\if{html}{\out{</div>}}
 }
-}
+

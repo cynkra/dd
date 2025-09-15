@@ -15,8 +15,10 @@ tan(x = DOUBLE)
 \description{
 Computes the tan of x.
 }
-\examples{
-\dontrun{
-tan(90)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{tan(90)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -19,8 +19,10 @@ not_like_escape(string = VARCHAR, like_specifier = VARCHAR, escape_character = V
 \description{
 Returns \code{false} if the \code{string} matches the \code{like_specifier} (see Pattern Matching) using case-sensitive matching. \code{escape_character} is used to search for wildcard characters in the \code{string}.
 }
-\examples{
-\dontrun{
-not_like_escape('a\%c', 'a$\%c', '$')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{not_like_escape('a\%c', 'a$\%c', '$')
+}\if{html}{\out{</div>}}
 }
-}
+

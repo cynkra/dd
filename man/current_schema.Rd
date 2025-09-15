@@ -17,8 +17,10 @@ Returns the name of the currently active schema. Default is main.
 }
 }
 
-\examples{
-\dontrun{
-current_schema()
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{current_schema()
+}\if{html}{\out{</div>}}
 }
-}
+

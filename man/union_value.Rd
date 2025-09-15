@@ -12,8 +12,10 @@ union_value()
 \description{
 Create a single member UNION containing the argument value. The tag of the value will be the bound variable name.
 }
-\examples{
-\dontrun{
-union_value(k := 'hello')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{union_value(k := 'hello')
+}\if{html}{\out{</div>}}
 }
-}
+

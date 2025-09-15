@@ -28,9 +28,11 @@ Converts the \code{value} to binary representation.
 }
 }
 
-\examples{
-\dontrun{
-bin('Aa')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{bin('Aa')
 bin(42)
+}\if{html}{\out{</div>}}
 }
-}
+

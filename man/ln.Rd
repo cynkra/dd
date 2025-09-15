@@ -15,8 +15,10 @@ ln(x = DOUBLE)
 \description{
 Computes the natural logarithm of x.
 }
-\examples{
-\dontrun{
-ln(2)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{ln(2)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -33,12 +33,14 @@ If \code{string} contains the \code{regex} pattern, returns the capturing groups
 }
 }
 
-\examples{
-\dontrun{
-regexp_extract('abcde', '[a-z]{3}')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{regexp_extract('abcde', '[a-z]\{3\}')
 regexp_extract('abc', '([a-z])(b)', 1)
 regexp_extract('ABC', '([a-z])(b)', 1, 'i')
-regexp_extract('2023-04-15', '(\d+)-(\d+)-(\d+)', ['y', 'm', 'd'])
+regexp_extract('2023-04-15', '(\\d+)-(\\d+)-(\\d+)', ['y', 'm', 'd'])
 regexp_extract('John Doe', '([a-z]+) ([a-z]+)', ['first_name', 'last_name'], 'i')
+}\if{html}{\out{</div>}}
 }
-}
+

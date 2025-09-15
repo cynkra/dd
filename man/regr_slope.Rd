@@ -17,8 +17,10 @@ regr_slope(y = DOUBLE, x = DOUBLE)
 \description{
 Returns the slope of the linear regression line for non-NULL pairs in a group.
 }
-\examples{
-\dontrun{
-COVAR_POP(x, y) / VAR_POP(x)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{COVAR_POP(x, y) / VAR_POP(x)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -17,8 +17,10 @@ list_has_any(list1 = `T[]`, list2 = `T[]`)
 \description{
 Returns true if the lists have any element in common. NULLs are ignored.
 }
-\examples{
-\dontrun{
-list_has_any([1, 2, 3], [2, 3, 4])
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{list_has_any([1, 2, 3], [2, 3, 4])
+}\if{html}{\out{</div>}}
 }
-}
+

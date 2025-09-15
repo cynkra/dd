@@ -29,8 +29,10 @@ Returns the bitwise AND of all bits in a given expression.
 }
 }
 
-\examples{
-\dontrun{
-bit_and(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{bit_and(A)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -42,8 +42,10 @@ Returns a bitstring with bits set for each distinct value.
 }
 }
 
-\examples{
-\dontrun{
-bitstring_agg(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{bitstring_agg(A)
+}\if{html}{\out{</div>}}
 }
-}
+

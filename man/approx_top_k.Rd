@@ -17,8 +17,10 @@ approx_top_k(val = ANY, k = BIGINT)
 \description{
 Finds the k approximately most occurring values in the data set.
 }
-\examples{
-\dontrun{
-approx_top_k(x, 5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{approx_top_k(x, 5)
+}\if{html}{\out{</div>}}
 }
-}
+

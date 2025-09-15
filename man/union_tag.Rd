@@ -15,8 +15,10 @@ union_tag(union = UNION)
 \description{
 Retrieve the currently selected tag of the union as an ENUM.
 }
-\examples{
-\dontrun{
-union_tag(union_value(k := 'foo'))
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{union_tag(union_value(k := 'foo'))
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -32,8 +32,10 @@ Bitwise OR.
 }
 }
 
-\examples{
-\dontrun{
-32 | 3
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{32 | 3
+}\if{html}{\out{</div>}}
 }
-}
+

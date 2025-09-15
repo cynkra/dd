@@ -15,8 +15,10 @@ printf(format = VARCHAR)
 \description{
 Formats a \code{string} using printf syntax.
 }
-\examples{
-\dontrun{
-printf('Benchmark "\%s" took \%d seconds', 'CSV', 42)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{printf('Benchmark "\%s" took \%d seconds', 'CSV', 42)
+}\if{html}{\out{</div>}}
 }
-}
+

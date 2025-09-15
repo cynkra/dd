@@ -22,8 +22,10 @@ Returns the next floating point value after x in the direction of y.
 }
 }
 
-\examples{
-\dontrun{
-nextafter(1::float, 2::float)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{nextafter(1::float, 2::float)
+}\if{html}{\out{</div>}}
 }
-}
+

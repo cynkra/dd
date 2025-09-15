@@ -31,8 +31,10 @@ Bitwise shift left.
 }
 }
 
-\examples{
-\dontrun{
-1 << 4
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{1 << 4
+}\if{html}{\out{</div>}}
 }
-}
+

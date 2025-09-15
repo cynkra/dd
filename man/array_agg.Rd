@@ -15,8 +15,10 @@ array_agg(arg = T)
 \description{
 Returns a LIST containing all the values of a column.
 }
-\examples{
-\dontrun{
-array_agg(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{array_agg(A)
+}\if{html}{\out{</div>}}
 }
-}
+

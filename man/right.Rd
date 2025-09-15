@@ -17,8 +17,10 @@ right(string = VARCHAR, count = BIGINT)
 \description{
 Extract the right-most \code{count} characters.
 }
-\examples{
-\dontrun{
-right('Hello🦆', 3)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{right('Hello🦆', 3)
+}\if{html}{\out{</div>}}
 }
-}
+

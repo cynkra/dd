@@ -17,8 +17,10 @@ array_transform(list = `ANY[]`, `lambda(x)` = LAMBDA)
 \description{
 Returns a list that is the result of applying the \code{lambda} function to each element of the input \code{list}. The return type is defined by the return type of the \code{lambda} function.
 }
-\examples{
-\dontrun{
-array_transform([1, 2, 3], lambda x : x + 1)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{array_transform([1, 2, 3], lambda x : x + 1)
+}\if{html}{\out{</div>}}
 }
-}
+

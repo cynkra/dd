@@ -28,8 +28,10 @@ Returns \code{true} if \code{search_string} is found within \code{string}.
 }
 }
 
-\examples{
-\dontrun{
-contains('abc', 'a')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{contains('abc', 'a')
+}\if{html}{\out{</div>}}
 }
-}
+

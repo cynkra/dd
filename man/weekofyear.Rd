@@ -22,8 +22,10 @@ Extract the weekofyear component from a date or timestamp.
 }
 }
 
-\examples{
-\dontrun{
-weekofyear(timestamp '2021-08-03 11:59:44.123456')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{weekofyear(timestamp '2021-08-03 11:59:44.123456')
+}\if{html}{\out{</div>}}
 }
-}
+

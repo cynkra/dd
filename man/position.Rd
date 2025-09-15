@@ -17,8 +17,10 @@ position(string = VARCHAR, search_string = VARCHAR)
 \description{
 Returns location of first occurrence of \code{search_string} in \code{string}, counting from 1. Returns 0 if no match found.
 }
-\examples{
-\dontrun{
-position('b' IN 'abc')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{position('b' IN 'abc')
+}\if{html}{\out{</div>}}
 }
-}
+

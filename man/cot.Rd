@@ -15,8 +15,10 @@ cot(x = DOUBLE)
 \description{
 Computes the cotangent of x.
 }
-\examples{
-\dontrun{
-cot(0.5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{cot(0.5)
+}\if{html}{\out{</div>}}
 }
-}
+

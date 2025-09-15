@@ -22,8 +22,10 @@ Returns the minimum value present in arg.
 }
 }
 
-\examples{
-\dontrun{
-min(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{min(A)
+}\if{html}{\out{</div>}}
 }
-}
+

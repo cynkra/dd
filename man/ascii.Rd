@@ -15,8 +15,10 @@ ascii(string = VARCHAR)
 \description{
 Returns an integer that represents the Unicode code point of the first character of the \code{string}.
 }
-\examples{
-\dontrun{
-ascii('Ω')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{ascii('Ω')
+}\if{html}{\out{</div>}}
 }
-}
+

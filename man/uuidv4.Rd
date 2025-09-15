@@ -12,8 +12,10 @@ uuidv4()
 \description{
 Returns a random UUIDv4 similar to this: eeccb8c5-9943-b2bb-bb5e-222f4e14b687.
 }
-\examples{
-\dontrun{
-uuidv4()
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{uuidv4()
+}\if{html}{\out{</div>}}
 }
-}
+

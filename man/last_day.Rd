@@ -21,8 +21,10 @@ Returns the last day of the month.
 }
 }
 
-\examples{
-\dontrun{
-last_day(TIMESTAMP '1992-03-22 01:02:03.1234')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{last_day(TIMESTAMP '1992-03-22 01:02:03.1234')
+}\if{html}{\out{</div>}}
 }
-}
+

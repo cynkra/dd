@@ -20,8 +20,10 @@ Construct a quarter interval.
 }
 }
 
-\examples{
-\dontrun{
-to_quarters(5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{to_quarters(5)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -22,8 +22,10 @@ Sorts the elements of the list in reverse order.
 }
 }
 
-\examples{
-\dontrun{
-array_reverse_sort([3, 6, 1, 2])
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{array_reverse_sort([3, 6, 1, 2])
+}\if{html}{\out{</div>}}
 }
-}
+

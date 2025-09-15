@@ -12,8 +12,10 @@ row()
 \description{
 Create an unnamed STRUCT (tuple) containing the argument values.
 }
-\examples{
-\dontrun{
-row(i, i \% 4, i / 4)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{row(i, i \% 4, i / 4)
+}\if{html}{\out{</div>}}
 }
-}
+

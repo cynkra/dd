@@ -15,8 +15,10 @@ nextval(`'sequence_name'` = VARCHAR)
 \description{
 Return the following value of the sequence.
 }
-\examples{
-\dontrun{
-nextval('my_sequence_name')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{nextval('my_sequence_name')
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -15,8 +15,10 @@ create_sort_key(parameters... = ANY)
 \description{
 Constructs a binary-comparable sort key based on a set of input parameters and sort qualifiers.
 }
-\examples{
-\dontrun{
-create_sort_key('A', 'DESC')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{create_sort_key('A', 'DESC')
+}\if{html}{\out{</div>}}
 }
-}
+

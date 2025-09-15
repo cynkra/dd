@@ -20,8 +20,10 @@ Construct a millenium interval.
 }
 }
 
-\examples{
-\dontrun{
-to_millennia(1)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{to_millennia(1)
+}\if{html}{\out{</div>}}
 }
-}
+

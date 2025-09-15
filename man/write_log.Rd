@@ -15,8 +15,10 @@ write_log(string = VARCHAR)
 \description{
 Writes to the logger.
 }
-\examples{
-\dontrun{
-write_log('Hello')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{write_log('Hello')
+}\if{html}{\out{</div>}}
 }
-}
+

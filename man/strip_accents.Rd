@@ -15,8 +15,10 @@ strip_accents(string = VARCHAR)
 \description{
 Strips accents from \code{string}.
 }
-\examples{
-\dontrun{
-strip_accents('mühleisen')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{strip_accents('mühleisen')
+}\if{html}{\out{</div>}}
 }
-}
+

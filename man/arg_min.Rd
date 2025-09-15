@@ -114,8 +114,10 @@ Finds the row with the minimum val. Calculates the non-NULL arg expression at th
 }
 }
 
-\examples{
-\dontrun{
-arg_min(A, B)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{arg_min(A, B)
+}\if{html}{\out{</div>}}
 }
-}
+

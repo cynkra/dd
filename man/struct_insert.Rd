@@ -12,8 +12,10 @@ struct_insert()
 \description{
 Adds field(s)/value(s) to an existing STRUCT with the argument values. The entry name(s) will be the bound variable name(s).
 }
-\examples{
-\dontrun{
-struct_insert({'a': 1}, b := 2)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{struct_insert(\{'a': 1\}, b := 2)
+}\if{html}{\out{</div>}}
 }
-}
+

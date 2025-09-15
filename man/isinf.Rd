@@ -23,8 +23,10 @@ Returns true if the floating point value is infinite, false otherwise.
 }
 }
 
-\examples{
-\dontrun{
-isinf('Infinity'::float)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{isinf('Infinity'::float)
+}\if{html}{\out{</div>}}
 }
-}
+

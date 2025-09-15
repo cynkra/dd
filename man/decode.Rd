@@ -15,8 +15,10 @@ decode(blob = BLOB)
 \description{
 Converts \code{blob} to \code{VARCHAR}. Fails if \code{blob} is not valid UTF-8.
 }
-\examples{
-\dontrun{
-decode('\xC3\xBC'::BLOB)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{decode('\\xC3\\xBC'::BLOB)
+}\if{html}{\out{</div>}}
 }
-}
+

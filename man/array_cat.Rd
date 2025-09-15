@@ -12,8 +12,10 @@ array_cat()
 \description{
 Concatenates lists. \code{NULL} inputs are skipped. See also operator \code{||}.
 }
-\examples{
-\dontrun{
-array_cat([2, 3], [4, 5, 6], [7])
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{array_cat([2, 3], [4, 5, 6], [7])
+}\if{html}{\out{</div>}}
 }
-}
+

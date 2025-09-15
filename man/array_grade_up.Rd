@@ -25,8 +25,10 @@ Works like list_sort, but the results are the indexes that correspond to the pos
 }
 }
 
-\examples{
-\dontrun{
-array_grade_up([3, 6, 1, 2])
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{array_grade_up([3, 6, 1, 2])
+}\if{html}{\out{</div>}}
 }
-}
+

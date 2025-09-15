@@ -15,8 +15,10 @@ skewness(x = DOUBLE)
 \description{
 Returns the skewness of all input values.
 }
-\examples{
-\dontrun{
-skewness(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{skewness(A)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -15,8 +15,10 @@ uuid_extract_timestamp(uuid = UUID)
 \description{
 Extract the timestamp for the given UUID v7.
 }
-\examples{
-\dontrun{
-uuid_extract_timestamp('019482e4-1441-7aad-8127-eec99573b0a0')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{uuid_extract_timestamp('019482e4-1441-7aad-8127-eec99573b0a0')
+}\if{html}{\out{</div>}}
 }
-}
+

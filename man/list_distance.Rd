@@ -22,8 +22,10 @@ Calculates the Euclidean distance between two points with coordinates given in t
 }
 }
 
-\examples{
-\dontrun{
-list_distance([1, 2, 3], [1, 2, 5])
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{list_distance([1, 2, 3], [1, 2, 5])
+}\if{html}{\out{</div>}}
 }
-}
+

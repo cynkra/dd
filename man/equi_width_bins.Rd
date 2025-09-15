@@ -28,8 +28,10 @@ Generates bin_count equi-width bins between the min and max. If enabled nice_rou
 }
 }
 
-\examples{
-\dontrun{
-equi_width_bins(0, 10, 2, true)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{equi_width_bins(0, 10, 2, true)
+}\if{html}{\out{</div>}}
 }
-}
+

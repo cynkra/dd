@@ -29,8 +29,10 @@ Returns the bitwise XOR of all bits in a given expression.
 }
 }
 
-\examples{
-\dontrun{
-bit_xor(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{bit_xor(A)
+}\if{html}{\out{</div>}}
 }
-}
+

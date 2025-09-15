@@ -15,8 +15,10 @@ url_decode(string = VARCHAR)
 \description{
 Decodes a URL from a representation using Percent-Encoding.
 }
-\examples{
-\dontrun{
-url_decode('https\%3A\%2F\%2Fduckdb.org\%2Fwhy_duckdb\%23portable')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{url_decode('https\%3A\%2F\%2Fduckdb.org\%2Fwhy_duckdb\%23portable')
+}\if{html}{\out{</div>}}
 }
-}
+

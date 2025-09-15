@@ -24,8 +24,10 @@ Returns \code{true} if the entire \code{string} matches the \code{regex}. A set 
 }
 }
 
-\examples{
-\dontrun{
-regexp_full_match('anabanana', '(an)*')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{regexp_full_match('anabanana', '(an)*')
+}\if{html}{\out{</div>}}
 }
-}
+

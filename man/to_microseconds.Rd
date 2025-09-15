@@ -15,8 +15,10 @@ to_microseconds(integer = BIGINT)
 \description{
 Construct a microsecond interval.
 }
-\examples{
-\dontrun{
-to_microseconds(5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{to_microseconds(5)
+}\if{html}{\out{</div>}}
 }
-}
+

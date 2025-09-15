@@ -15,8 +15,10 @@ favg(x = DOUBLE)
 \description{
 Calculates the average using a more accurate floating point summation (Kahan Sum).
 }
-\examples{
-\dontrun{
-favg(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{favg(A)
+}\if{html}{\out{</div>}}
 }
-}
+

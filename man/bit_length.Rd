@@ -24,9 +24,11 @@ Returns the bit-length of the \code{bit} argument.
 }
 }
 
-\examples{
-\dontrun{
-bit_length('abc')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{bit_length('abc')
 bit_length(42::TINYINT::BIT)
+}\if{html}{\out{</div>}}
 }
-}
+

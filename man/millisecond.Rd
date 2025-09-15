@@ -25,8 +25,10 @@ Extract the millisecond component from a date or timestamp.
 }
 }
 
-\examples{
-\dontrun{
-millisecond(timestamp '2021-08-03 11:59:44.123456')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{millisecond(timestamp '2021-08-03 11:59:44.123456')
+}\if{html}{\out{</div>}}
 }
-}
+

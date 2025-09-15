@@ -17,8 +17,10 @@ get_bit(bitstring = BIT, index = INTEGER)
 \description{
 Extracts the nth bit from bitstring; the first (leftmost) bit is indexed 0.
 }
-\examples{
-\dontrun{
-get_bit('0110010'::BIT, 2)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{get_bit('0110010'::BIT, 2)
+}\if{html}{\out{</div>}}
 }
-}
+

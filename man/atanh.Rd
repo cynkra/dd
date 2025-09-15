@@ -15,8 +15,10 @@ atanh(x = DOUBLE)
 \description{
 Computes the inverse hyperbolic tan of x.
 }
-\examples{
-\dontrun{
-atanh(0.5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{atanh(0.5)
+}\if{html}{\out{</div>}}
 }
-}
+

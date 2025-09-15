@@ -15,8 +15,10 @@ sinh(x = DOUBLE)
 \description{
 Computes the hyperbolic sin of x.
 }
-\examples{
-\dontrun{
-sinh(1)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{sinh(1)
+}\if{html}{\out{</div>}}
 }
-}
+

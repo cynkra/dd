@@ -15,8 +15,10 @@ flatten(nested_list = `T[][]`)
 \description{
 Flattens a nested list by one level.
 }
-\examples{
-\dontrun{
-flatten([[1, 2, 3], [4, 5]])
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{flatten([[1, 2, 3], [4, 5]])
+}\if{html}{\out{</div>}}
 }
-}
+

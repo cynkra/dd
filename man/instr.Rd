@@ -17,8 +17,10 @@ instr(string = VARCHAR, search_string = VARCHAR)
 \description{
 Returns location of first occurrence of \code{search_string} in \code{string}, counting from 1. Returns 0 if no match found.
 }
-\examples{
-\dontrun{
-instr('test test', 'es')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{instr('test test', 'es')
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -26,8 +26,10 @@ The number of partition boundaries between the timestamps.
 }
 }
 
-\examples{
-\dontrun{
-date_diff('hour', TIMESTAMPTZ '1992-09-30 23:59:59', TIMESTAMPTZ '1992-10-01 01:58:00')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{date_diff('hour', TIMESTAMPTZ '1992-09-30 23:59:59', TIMESTAMPTZ '1992-10-01 01:58:00')
+}\if{html}{\out{</div>}}
 }
-}
+

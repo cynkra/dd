@@ -17,8 +17,10 @@ atan2(y = DOUBLE, x = DOUBLE)
 \description{
 Computes the arctangent (y, x).
 }
-\examples{
-\dontrun{
-atan2(1.0, 0.0)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{atan2(1.0, 0.0)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -22,8 +22,10 @@ Subtract arguments, resulting in the time difference between the two timestamps.
 }
 }
 
-\examples{
-\dontrun{
-age(TIMESTAMP '2001-04-10', TIMESTAMP '1992-09-20')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{age(TIMESTAMP '2001-04-10', TIMESTAMP '1992-09-20')
+}\if{html}{\out{</div>}}
 }
-}
+

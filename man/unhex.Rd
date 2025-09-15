@@ -15,8 +15,10 @@ unhex(value = VARCHAR)
 \description{
 Converts a \code{value} from hexadecimal representation to a blob.
 }
-\examples{
-\dontrun{
-unhex('2A')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{unhex('2A')
+}\if{html}{\out{</div>}}
 }
-}
+

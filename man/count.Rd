@@ -20,8 +20,10 @@ Returns the number of non-NULL values in arg.
 }
 }
 
-\examples{
-\dontrun{
-count(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{count(A)
+}\if{html}{\out{</div>}}
 }
-}
+

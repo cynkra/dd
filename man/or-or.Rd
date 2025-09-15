@@ -18,10 +18,12 @@
 \description{
 Concatenates two strings, lists, or blobs. Any \code{NULL} input results in \code{NULL}. See also \code{concat(arg1, arg2, ...)} and \code{list_concat(list1, list2, ...)}.
 }
-\examples{
-\dontrun{
-'Duck' || 'DB'
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{'Duck' || 'DB'
 [1, 2, 3] || [4, 5, 6]
-'\xAA'::BLOB || '\xBB'::BLOB
+'\\xAA'::BLOB || '\\xBB'::BLOB
+}\if{html}{\out{</div>}}
 }
-}
+

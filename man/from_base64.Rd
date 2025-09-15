@@ -15,8 +15,10 @@ from_base64(string = VARCHAR)
 \description{
 Converts a base64 encoded \code{string} to a character string (\code{BLOB}).
 }
-\examples{
-\dontrun{
-from_base64('QQ==')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{from_base64('QQ==')
+}\if{html}{\out{</div>}}
 }
-}
+

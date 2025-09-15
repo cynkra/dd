@@ -17,8 +17,10 @@ parse_duckdb_log_message(type = VARCHAR, message = VARCHAR)
 \description{
 Parse the message into the expected logical type.
 }
-\examples{
-\dontrun{
-parse_duckdb_log_message('FileSystem', log_message)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{parse_duckdb_log_message('FileSystem', log_message)
+}\if{html}{\out{</div>}}
 }
-}
+

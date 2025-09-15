@@ -17,8 +17,10 @@ strpos(string = VARCHAR, search_string = VARCHAR)
 \description{
 Returns location of first occurrence of \code{search_string} in \code{string}, counting from 1. Returns 0 if no match found.
 }
-\examples{
-\dontrun{
-strpos('test test', 'es')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{strpos('test test', 'es')
+}\if{html}{\out{</div>}}
 }
-}
+

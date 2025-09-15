@@ -15,8 +15,10 @@ lower(string = VARCHAR)
 \description{
 Converts \code{string} to lower case.
 }
-\examples{
-\dontrun{
-lower('Hello')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{lower('Hello')
+}\if{html}{\out{</div>}}
 }
-}
+

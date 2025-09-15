@@ -15,8 +15,10 @@ bool_and(arg = BOOLEAN)
 \description{
 Returns TRUE if every input value is TRUE, otherwise FALSE.
 }
-\examples{
-\dontrun{
-bool_and(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{bool_and(A)
+}\if{html}{\out{</div>}}
 }
-}
+

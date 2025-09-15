@@ -17,8 +17,10 @@ in_search_path(database_name = VARCHAR, schema_name = VARCHAR)
 \description{
 Returns whether or not the database/schema are in the search path.
 }
-\examples{
-\dontrun{
-in_search_path('memory', 'main')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{in_search_path('memory', 'main')
+}\if{html}{\out{</div>}}
 }
-}
+

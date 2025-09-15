@@ -15,8 +15,10 @@ to_timestamp(sec = DOUBLE)
 \description{
 Converts secs since epoch to a timestamp with time zone.
 }
-\examples{
-\dontrun{
-to_timestamp(1284352323.5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{to_timestamp(1284352323.5)
+}\if{html}{\out{</div>}}
 }
-}
+

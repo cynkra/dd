@@ -24,9 +24,11 @@ Returns the number of bytes in the \code{bitstring}.
 }
 }
 
-\examples{
-\dontrun{
-octet_length('\xAA\xBB'::BLOB)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{octet_length('\\xAA\\xBB'::BLOB)
 octet_length('1101011'::BITSTRING)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -17,8 +17,10 @@ struct_contains(struct = STRUCT, `'entry'` = ANY)
 \description{
 Check if an unnamed STRUCT contains the value.
 }
-\examples{
-\dontrun{
-struct_contains(ROW(3, 3, 0), 3)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{struct_contains(ROW(3, 3, 0), 3)
+}\if{html}{\out{</div>}}
 }
-}
+

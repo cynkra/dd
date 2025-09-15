@@ -33,10 +33,12 @@ Converts \code{blob} to \code{VARCHAR} using hexadecimal encoding.
 }
 }
 
-\examples{
-\dontrun{
-to_hex('Hello')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{to_hex('Hello')
 to_hex(42)
-to_hex('\xAA\xBB'::BLOB)
+to_hex('\\xAA\\xBB'::BLOB)
+}\if{html}{\out{</div>}}
 }
-}
+

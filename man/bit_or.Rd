@@ -29,8 +29,10 @@ Returns the bitwise OR of all bits in a given expression.
 }
 }
 
-\examples{
-\dontrun{
-bit_or(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{bit_or(A)
+}\if{html}{\out{</div>}}
 }
-}
+

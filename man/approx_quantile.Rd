@@ -44,8 +44,10 @@ Computes the approximate quantile using T-Digest.
 }
 }
 
-\examples{
-\dontrun{
-approx_quantile(x, 0.5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{approx_quantile(x, 0.5)
+}\if{html}{\out{</div>}}
 }
-}
+

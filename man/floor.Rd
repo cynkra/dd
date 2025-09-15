@@ -21,8 +21,10 @@ Rounds the number down.
 }
 }
 
-\examples{
-\dontrun{
-floor(17.4)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{floor(17.4)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -19,8 +19,10 @@ replace_type(param = ANY, type1 = ANY, type2 = ANY)
 \description{
 Casts all fields of type1 to type2.
 }
-\examples{
-\dontrun{
-replace_type({duck: 3.141592653589793::DOUBLE}, NULL::DOUBLE, NULL::DECIMAL(15,2))
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{replace_type(\{duck: 3.141592653589793::DOUBLE\}, NULL::DOUBLE, NULL::DECIMAL(15,2))
+}\if{html}{\out{</div>}}
 }
-}
+

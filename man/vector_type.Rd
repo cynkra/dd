@@ -15,8 +15,10 @@ vector_type(col = ANY)
 \description{
 Returns the VectorType of a given column.
 }
-\examples{
-\dontrun{
-vector_type(col)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{vector_type(col)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -22,8 +22,10 @@ Returns the head of the \code{path} (the pathname until the last slash) similarl
 }
 }
 
-\examples{
-\dontrun{
-parse_dirpath('path/to/file.csv', 'forward_slash')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{parse_dirpath('path/to/file.csv', 'forward_slash')
+}\if{html}{\out{</div>}}
 }
-}
+

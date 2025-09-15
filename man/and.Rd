@@ -31,8 +31,10 @@ Bitwise AND.
 }
 }
 
-\examples{
-\dontrun{
-91 & 15
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{91 & 15
+}\if{html}{\out{</div>}}
 }
-}
+

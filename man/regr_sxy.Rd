@@ -17,8 +17,10 @@ regr_sxy(y = DOUBLE, x = DOUBLE)
 \description{
 Returns the population covariance of input values.
 }
-\examples{
-\dontrun{
-REGR_COUNT(y, x) * COVAR_POP(y, x)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{REGR_COUNT(y, x) * COVAR_POP(y, x)
+}\if{html}{\out{</div>}}
 }
-}
+

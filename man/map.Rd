@@ -22,8 +22,10 @@ Creates a map from a set of keys and values.
 }
 }
 
-\examples{
-\dontrun{
-map(['key1', 'key2'], ['val1', 'val2'])
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{map(['key1', 'key2'], ['val1', 'val2'])
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -21,8 +21,10 @@ Extract the Julian Day number from a date or timestamp.
 }
 }
 
-\examples{
-\dontrun{
-julian(timestamp '2006-01-01 12:00')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{julian(timestamp '2006-01-01 12:00')
+}\if{html}{\out{</div>}}
 }
-}
+

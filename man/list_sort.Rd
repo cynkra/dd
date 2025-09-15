@@ -25,8 +25,10 @@ Sorts the elements of the list.
 }
 }
 
-\examples{
-\dontrun{
-list_sort([3, 6, 1, 2])
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{list_sort([3, 6, 1, 2])
+}\if{html}{\out{</div>}}
 }
-}
+

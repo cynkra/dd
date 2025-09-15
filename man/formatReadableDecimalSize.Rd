@@ -15,8 +15,10 @@ formatReadableDecimalSize(integer = BIGINT)
 \description{
 Converts \code{integer} to a human-readable representation using units based on powers of 10 (KB, MB, GB, etc.).
 }
-\examples{
-\dontrun{
-formatReadableDecimalSize(16_000)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{formatReadableDecimalSize(16_000)
+}\if{html}{\out{</div>}}
 }
-}
+

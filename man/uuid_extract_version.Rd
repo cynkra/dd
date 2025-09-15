@@ -15,8 +15,10 @@ uuid_extract_version(uuid = UUID)
 \description{
 Extract a version for the given UUID.
 }
-\examples{
-\dontrun{
-uuid_extract_version('019482e4-1441-7aad-8127-eec99573b0a0')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{uuid_extract_version('019482e4-1441-7aad-8127-eec99573b0a0')
+}\if{html}{\out{</div>}}
 }
-}
+

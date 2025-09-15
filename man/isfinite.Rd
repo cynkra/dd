@@ -23,8 +23,10 @@ Returns true if the floating point value is finite, false otherwise.
 }
 }
 
-\examples{
-\dontrun{
-isfinite(5.5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{isfinite(5.5)
+}\if{html}{\out{</div>}}
 }
-}
+

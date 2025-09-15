@@ -17,8 +17,10 @@ Returns the name of the currently active database.
 }
 }
 
-\examples{
-\dontrun{
-current_database()
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{current_database()
+}\if{html}{\out{</div>}}
 }
-}
+

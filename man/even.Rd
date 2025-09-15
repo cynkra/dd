@@ -15,8 +15,10 @@ even(x = DOUBLE)
 \description{
 Rounds x to next even number by rounding away from zero.
 }
-\examples{
-\dontrun{
-even(2.9)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{even(2.9)
+}\if{html}{\out{</div>}}
 }
-}
+

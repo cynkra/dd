@@ -24,8 +24,10 @@ The Jaro similarity between two strings. Characters of different cases (e.g., \c
 }
 }
 
-\examples{
-\dontrun{
-jaro_similarity('duck', 'duckdb')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{jaro_similarity('duck', 'duckdb')
+}\if{html}{\out{</div>}}
 }
-}
+

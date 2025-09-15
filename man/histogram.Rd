@@ -31,8 +31,10 @@ Returns a LIST of STRUCTs with the fields bucket and count.
 }
 }
 
-\examples{
-\dontrun{
-histogram(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{histogram(A)
+}\if{html}{\out{</div>}}
 }
-}
+

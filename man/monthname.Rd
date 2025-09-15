@@ -21,8 +21,10 @@ The (English) name of the month.
 }
 }
 
-\examples{
-\dontrun{
-monthname(TIMESTAMP '1992-09-20')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{monthname(TIMESTAMP '1992-09-20')
+}\if{html}{\out{</div>}}
 }
-}
+

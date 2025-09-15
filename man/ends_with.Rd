@@ -17,8 +17,10 @@ ends_with(string = VARCHAR, search_string = VARCHAR)
 \description{
 Returns \code{true} if \code{string} ends with \code{search_string}.
 }
-\examples{
-\dontrun{
-ends_with('abc', 'bc')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{ends_with('abc', 'bc')
+}\if{html}{\out{</div>}}
 }
-}
+

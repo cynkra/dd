@@ -15,8 +15,10 @@ map_from_entries(map = `STRUCT(K, V)[]`)
 \description{
 Returns a map created from the entries of the array.
 }
-\examples{
-\dontrun{
-map_from_entries([{k: 5, v: 'val1'}, {k: 3, v: 'val2'}]);
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{map_from_entries([\{k: 5, v: 'val1'\}, \{k: 3, v: 'val2'\}]);
+}\if{html}{\out{</div>}}
 }
-}
+

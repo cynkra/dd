@@ -15,8 +15,10 @@ reverse(string = VARCHAR)
 \description{
 Reverses the \code{string}.
 }
-\examples{
-\dontrun{
-reverse('hello')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{reverse('hello')
+}\if{html}{\out{</div>}}
 }
-}
+

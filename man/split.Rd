@@ -17,8 +17,10 @@ split(string = VARCHAR, separator = VARCHAR)
 \description{
 Splits the \code{string} along the \code{separator}.
 }
-\examples{
-\dontrun{
-split('hello-world', '-')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{split('hello-world', '-')
+}\if{html}{\out{</div>}}
 }
-}
+

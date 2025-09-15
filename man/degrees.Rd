@@ -15,8 +15,10 @@ degrees(x = DOUBLE)
 \description{
 Converts radians to degrees.
 }
-\examples{
-\dontrun{
-degrees(pi())
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{degrees(pi())
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -26,8 +26,10 @@ Extract the epoch component in nanoseconds from a temporal type.
 }
 }
 
-\examples{
-\dontrun{
-epoch_ns(timestamp '2021-08-03 11:59:44.123456')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{epoch_ns(timestamp '2021-08-03 11:59:44.123456')
+}\if{html}{\out{</div>}}
 }
-}
+

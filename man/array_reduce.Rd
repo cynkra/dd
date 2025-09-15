@@ -24,8 +24,10 @@ Reduces all elements of the input \code{list} into a single scalar value by exec
 }
 }
 
-\examples{
-\dontrun{
-array_reduce([1, 2, 3], lambda x, y : x + y)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{array_reduce([1, 2, 3], lambda x, y : x + y)
+}\if{html}{\out{</div>}}
 }
-}
+

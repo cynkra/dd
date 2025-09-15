@@ -17,8 +17,10 @@ can_cast_implicitly(source_type = ANY, target_type = ANY)
 \description{
 Whether or not we can implicitly cast from the source type to the other type.
 }
-\examples{
-\dontrun{
-can_cast_implicitly(NULL::INTEGER, NULL::BIGINT)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{can_cast_implicitly(NULL::INTEGER, NULL::BIGINT)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -15,8 +15,10 @@ lgamma(x = DOUBLE)
 \description{
 Computes the log of the gamma function.
 }
-\examples{
-\dontrun{
-lgamma(2)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{lgamma(2)
+}\if{html}{\out{</div>}}
 }
-}
+

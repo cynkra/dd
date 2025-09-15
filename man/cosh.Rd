@@ -15,8 +15,10 @@ cosh(x = DOUBLE)
 \description{
 Computes the hyperbolic cos of x.
 }
-\examples{
-\dontrun{
-cosh(1)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{cosh(1)
+}\if{html}{\out{</div>}}
 }
-}
+

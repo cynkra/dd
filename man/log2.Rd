@@ -15,8 +15,10 @@ log2(x = DOUBLE)
 \description{
 Computes the 2-log of x.
 }
-\examples{
-\dontrun{
-log2(8)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{log2(8)
+}\if{html}{\out{</div>}}
 }
-}
+

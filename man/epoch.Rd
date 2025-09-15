@@ -25,8 +25,10 @@ Extract the epoch component from a temporal type.
 }
 }
 
-\examples{
-\dontrun{
-epoch(timestamp '2021-08-03 11:59:44.123456')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{epoch(timestamp '2021-08-03 11:59:44.123456')
+}\if{html}{\out{</div>}}
 }
-}
+

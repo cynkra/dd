@@ -15,8 +15,10 @@ to_minutes(integer = BIGINT)
 \description{
 Construct a minute interval.
 }
-\examples{
-\dontrun{
-to_minutes(5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{to_minutes(5)
+}\if{html}{\out{</div>}}
 }
-}
+

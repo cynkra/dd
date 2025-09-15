@@ -15,8 +15,10 @@ unbin(value = VARCHAR)
 \description{
 Converts a \code{value} from binary representation to a blob.
 }
-\examples{
-\dontrun{
-unbin('0110')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{unbin('0110')
+}\if{html}{\out{</div>}}
 }
-}
+

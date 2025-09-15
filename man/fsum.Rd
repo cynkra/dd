@@ -15,8 +15,10 @@ fsum(arg = DOUBLE)
 \description{
 Calculates the sum using a more accurate floating point summation (Kahan Sum).
 }
-\examples{
-\dontrun{
-fsum(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{fsum(A)
+}\if{html}{\out{</div>}}
 }
-}
+

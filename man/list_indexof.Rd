@@ -17,8 +17,10 @@ list_indexof(list = `T[]`, element = T)
 \description{
 Returns the index of the \code{element} if the \code{list} contains the \code{element}. If the \code{element} is not found, it returns \code{NULL}.
 }
-\examples{
-\dontrun{
-list_indexof([1, 2, NULL], 2)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{list_indexof([1, 2, NULL], 2)
+}\if{html}{\out{</div>}}
 }
-}
+

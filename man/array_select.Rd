@@ -17,8 +17,10 @@ array_select(value_list = `T[]`, index_list = `BIGINT[]`)
 \description{
 Returns a list based on the elements selected by the \code{index_list}.
 }
-\examples{
-\dontrun{
-array_select([10, 20, 30, 40], [1, 4])
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{array_select([10, 20, 30, 40], [1, 4])
+}\if{html}{\out{</div>}}
 }
-}
+

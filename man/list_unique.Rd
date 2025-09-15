@@ -15,8 +15,10 @@ list_unique(list = `ANY[]`)
 \description{
 Counts the unique elements of a \code{list}.
 }
-\examples{
-\dontrun{
-list_unique([1, 1, NULL, -3, 1, 5])
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{list_unique([1, 1, NULL, -3, 1, 5])
+}\if{html}{\out{</div>}}
 }
-}
+

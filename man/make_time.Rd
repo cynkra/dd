@@ -19,8 +19,10 @@ make_time(hour = BIGINT, minute = BIGINT, seconds = DOUBLE)
 \description{
 The time for the given parts.
 }
-\examples{
-\dontrun{
-make_time(13, 34, 27.123456)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{make_time(13, 34, 27.123456)
+}\if{html}{\out{</div>}}
 }
-}
+

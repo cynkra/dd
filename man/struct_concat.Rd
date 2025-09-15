@@ -12,8 +12,10 @@ struct_concat()
 \description{
 Merge the multiple STRUCTs into a single STRUCT.
 }
-\examples{
-\dontrun{
-struct_concat(struct_pack(i := 4), struct_pack(s := 'string'))
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{struct_concat(struct_pack(i := 4), struct_pack(s := 'string'))
+}\if{html}{\out{</div>}}
 }
-}
+

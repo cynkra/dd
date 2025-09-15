@@ -17,8 +17,10 @@ string_to_array(string = VARCHAR, separator = VARCHAR)
 \description{
 Splits the \code{string} along the \code{separator}.
 }
-\examples{
-\dontrun{
-string_to_array('hello-world', '-')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{string_to_array('hello-world', '-')
+}\if{html}{\out{</div>}}
 }
-}
+

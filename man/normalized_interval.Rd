@@ -15,8 +15,10 @@ normalized_interval(interval = INTERVAL)
 \description{
 Normalizes an INTERVAL to an equivalent interval.
 }
-\examples{
-\dontrun{
-normalized_interval(INTERVAL '30 days')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{normalized_interval(INTERVAL '30 days')
+}\if{html}{\out{</div>}}
 }
-}
+

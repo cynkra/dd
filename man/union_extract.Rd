@@ -17,8 +17,10 @@ union_extract(union = UNION, tag = VARCHAR)
 \description{
 Extract the value with the named tags from the union. NULL if the tag is not currently selected.
 }
-\examples{
-\dontrun{
-union_extract(s, 'k')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{union_extract(s, 'k')
+}\if{html}{\out{</div>}}
 }
-}
+

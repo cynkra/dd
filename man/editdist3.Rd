@@ -17,8 +17,10 @@ editdist3(s1 = VARCHAR, s2 = VARCHAR)
 \description{
 The minimum number of single-character edits (insertions, deletions or substitutions) required to change one string to the other. Characters of different cases (e.g., \code{a} and \code{A}) are considered different.
 }
-\examples{
-\dontrun{
-editdist3('duck', 'db')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{editdist3('duck', 'db')
+}\if{html}{\out{</div>}}
 }
-}
+

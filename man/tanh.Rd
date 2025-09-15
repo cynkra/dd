@@ -15,8 +15,10 @@ tanh(x = DOUBLE)
 \description{
 Computes the hyperbolic tan of x.
 }
-\examples{
-\dontrun{
-tanh(1)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{tanh(1)
+}\if{html}{\out{</div>}}
 }
-}
+

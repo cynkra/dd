@@ -15,8 +15,10 @@ encode(string = VARCHAR)
 \description{
 Converts the \code{string} to \code{BLOB}. Converts UTF-8 characters into literal encoding.
 }
-\examples{
-\dontrun{
-encode('my_string_with_ü')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{encode('my_string_with_ü')
+}\if{html}{\out{</div>}}
 }
-}
+

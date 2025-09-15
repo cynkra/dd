@@ -15,8 +15,10 @@ alias(expr = ANY)
 \description{
 Returns the name of a given expression.
 }
-\examples{
-\dontrun{
-alias(42 + 1)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{alias(42 + 1)
+}\if{html}{\out{</div>}}
 }
-}
+

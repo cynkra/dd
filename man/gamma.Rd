@@ -15,8 +15,10 @@ gamma(x = DOUBLE)
 \description{
 Interpolation of (x-1) factorial (so decimal inputs are allowed).
 }
-\examples{
-\dontrun{
-gamma(5.5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{gamma(5.5)
+}\if{html}{\out{</div>}}
 }
-}
+

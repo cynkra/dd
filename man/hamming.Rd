@@ -17,8 +17,10 @@ hamming(s1 = VARCHAR, s2 = VARCHAR)
 \description{
 The Hamming distance between to strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., \code{a} and \code{A}) are considered different.
 }
-\examples{
-\dontrun{
-hamming('duck', 'luck')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{hamming('duck', 'luck')
+}\if{html}{\out{</div>}}
 }
-}
+

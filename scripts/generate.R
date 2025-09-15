@@ -90,10 +90,10 @@ usage_and_params <- function(function_name, parameters, parameter_types, descrip
   examples <- examples[examples != ""]
   if (length(examples >= 0)) {
     examples <- paste0(
-      "#' @examples\n",
-      "#' \\dontrun{\n",
+      "#' @section SQL examples:\n",
+      "#' ```\n",
       paste0("#' ", examples, "\n", collapse = ""),
-      "#' }\n"
+      "#' ```\n"
     )
   } else {
     examples <- ""

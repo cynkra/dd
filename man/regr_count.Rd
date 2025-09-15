@@ -17,8 +17,10 @@ regr_count(y = DOUBLE, x = DOUBLE)
 \description{
 Returns the number of non-NULL number pairs in a group.
 }
-\examples{
-\dontrun{
-(SUM(x*y) - SUM(x) * SUM(y) / COUNT(*)) / COUNT(*)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{(SUM(x*y) - SUM(x) * SUM(y) / COUNT(*)) / COUNT(*)
+}\if{html}{\out{</div>}}
 }
-}
+

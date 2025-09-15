@@ -15,8 +15,10 @@ list(arg = T)
 \description{
 Returns a LIST containing all the values of a column.
 }
-\examples{
-\dontrun{
-list(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{list(A)
+}\if{html}{\out{</div>}}
 }
-}
+

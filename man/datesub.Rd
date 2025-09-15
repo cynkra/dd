@@ -26,8 +26,10 @@ The number of complete partitions between the timestamps.
 }
 }
 
-\examples{
-\dontrun{
-datesub('hour', TIMESTAMPTZ '1992-09-30 23:59:59', TIMESTAMPTZ '1992-10-01 01:58:00')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{datesub('hour', TIMESTAMPTZ '1992-09-30 23:59:59', TIMESTAMPTZ '1992-10-01 01:58:00')
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -12,8 +12,10 @@ current_query_id()
 \description{
 Get the current query_id.
 }
-\examples{
-\dontrun{
-current_query_id()
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{current_query_id()
+}\if{html}{\out{</div>}}
 }
-}
+

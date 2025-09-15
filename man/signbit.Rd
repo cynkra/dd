@@ -20,8 +20,10 @@ Returns whether the signbit is set or not.
 }
 }
 
-\examples{
-\dontrun{
-signbit(-0.0)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{signbit(-0.0)
+}\if{html}{\out{</div>}}
 }
-}
+

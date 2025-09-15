@@ -9,10 +9,10 @@
 #' @usage `!__postfix`(x = INTEGER)
 #' @param x `INTEGER`
 #' @return `HUGEINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' 4!
-#' }
+#' ```
 `!__postfix` <- function(x = INTEGER) {
   stop("DuckDB function !__postfix() is not available in R.")
 }
@@ -84,10 +84,10 @@
 #' @param left `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @param right `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' 91 & 15
-#' }
+#' ```
 `&` <- function(left = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`, right = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`) {
   stop("DuckDB function &() is not available in R.")
 }
@@ -102,10 +102,10 @@
 #' @param list1 `T[]`
 #' @param list2 `T[]`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_has_any([1, 2, 3], [2, 3, 4])
-#' }
+#' ```
 `&&` <- function(list1 = `T[]`, list2 = `T[]`) {
   stop("DuckDB function &&() is not available in R.")
 }
@@ -154,10 +154,10 @@
 #' @param x `DOUBLE`
 #' @param y `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' 2 ** 3
-#' }
+#' ```
 `**` <- function(x = DOUBLE, y = DOUBLE) {
   stop("DuckDB function **() is not available in R.")
 }
@@ -349,10 +349,10 @@
 #' @param input `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' 1 << 4
-#' }
+#' ```
 `<<` <- function(input = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
   stop("DuckDB function <<() is not available in R.")
 }
@@ -372,10 +372,10 @@
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_cosine_distance([1, 2, 3], [1, 2, 3])
-#' }
+#' ```
 `<=>` <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBLE[]`) {
   stop("DuckDB function <=>() is not available in R.")
 }
@@ -390,10 +390,10 @@
 #' @param list1 `T[]`
 #' @param list2 `T[]`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_has_all([1, 2, 3], [2, 3])
-#' }
+#' ```
 `<@` <- function(list1 = `T[]`, list2 = `T[]`) {
   stop("DuckDB function <@() is not available in R.")
 }
@@ -422,10 +422,10 @@
 #' @param input `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' 8 >> 2
-#' }
+#' ```
 `>>` <- function(input = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
   stop("DuckDB function >>() is not available in R.")
 }
@@ -455,10 +455,10 @@
 #' }
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' abs(-17.4)
-#' }
+#' ```
 `@` <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
   stop("DuckDB function @() is not available in R.")
 }
@@ -473,10 +473,10 @@
 #' @param list1 `T[]`
 #' @param list2 `T[]`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_has_all([1, 2, 3], [2, 3])
-#' }
+#' ```
 `@>` <- function(list1 = `T[]`, list2 = `T[]`) {
   stop("DuckDB function @>() is not available in R.")
 }
@@ -491,10 +491,10 @@
 #' @param x `DOUBLE`
 #' @param y `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' 2 ^ 3
-#' }
+#' ```
 `^` <- function(x = DOUBLE, y = DOUBLE) {
   stop("DuckDB function ^() is not available in R.")
 }
@@ -509,10 +509,10 @@
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' starts_with('abc', 'a')
-#' }
+#' ```
 `^@` <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function ^@() is not available in R.")
 }
@@ -878,10 +878,10 @@
 #' }
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' abs(-17.4)
-#' }
+#' ```
 abs <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
   stop("DuckDB function abs() is not available in R.")
 }
@@ -895,10 +895,10 @@ abs <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | D
 #' @usage acos(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' acos(0.5)
-#' }
+#' ```
 acos <- function(x = DOUBLE) {
   stop("DuckDB function acos() is not available in R.")
 }
@@ -912,10 +912,10 @@ acos <- function(x = DOUBLE) {
 #' @usage acosh(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' acosh(2.3)
-#' }
+#' ```
 acosh <- function(x = DOUBLE) {
   stop("DuckDB function acosh() is not available in R.")
 }
@@ -1010,10 +1010,10 @@ add_parquet_key <- function(col0 = VARCHAR, col1 = VARCHAR) {
 #' }
 #' @param timestamp `TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `INTERVAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' age(TIMESTAMP '2001-04-10', TIMESTAMP '1992-09-20')
-#' }
+#' ```
 age <- function(timestamp = `TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function age() is not available in R.")
 }
@@ -1028,10 +1028,10 @@ age <- function(timestamp = `TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' @param list `ANY[]`
 #' @param function_name `VARCHAR`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' aggregate([1, 2, NULL], 'min')
-#' }
+#' ```
 aggregate <- function(list = `ANY[]`, function_name = VARCHAR) {
   stop("DuckDB function aggregate() is not available in R.")
 }
@@ -1045,10 +1045,10 @@ aggregate <- function(list = `ANY[]`, function_name = VARCHAR) {
 #' @usage alias(expr = ANY)
 #' @param expr `ANY`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' alias(42 + 1)
-#' }
+#' ```
 alias <- function(expr = ANY) {
   stop("DuckDB function alias() is not available in R.")
 }
@@ -1094,10 +1094,10 @@ any_value <- function(arg = `DECIMAL | ANY`) {
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' apply([1, 2, 3], lambda x : x + 1)
-#' }
+#' ```
 apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function apply() is not available in R.")
 }
@@ -1111,10 +1111,10 @@ apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' @usage approx_count_distinct(any = ANY)
 #' @param any `ANY`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' approx_count_distinct(A)
-#' }
+#' ```
 approx_count_distinct <- function(any = ANY) {
   stop("DuckDB function approx_count_distinct() is not available in R.")
 }
@@ -1156,10 +1156,10 @@ approx_count_distinct <- function(any = ANY) {
 #' @param x `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | DATE | TIME | TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TINYINT | FLOAT`
 #' @param pos `FLOAT | FLOAT[]`
 #' @return `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | DATE | TIME | TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | DECIMAL[] | TINYINT[] | SMALLINT[] | INTEGER[] | BIGINT[] | HUGEINT[] | FLOAT[] | DOUBLE[] | DATE[] | TIME[] | TIME WITH TIME ZONE[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' approx_quantile(x, 0.5)
-#' }
+#' ```
 approx_quantile <- function(x = `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | DATE | TIME | TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TINYINT | FLOAT`, pos = `FLOAT | FLOAT[]`) {
   stop("DuckDB function approx_quantile() is not available in R.")
 }
@@ -1174,10 +1174,10 @@ approx_quantile <- function(x = `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT
 #' @param val `ANY`
 #' @param k `BIGINT`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' approx_top_k(x, 5)
-#' }
+#' ```
 approx_top_k <- function(val = ANY, k = BIGINT) {
   stop("DuckDB function approx_top_k() is not available in R.")
 }
@@ -1196,10 +1196,10 @@ approx_top_k <- function(val = ANY, k = BIGINT) {
 #' }
 #' @param arg `DECIMAL | ANY`
 #' @return `DECIMAL | ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' arbitrary(A)
-#' }
+#' ```
 arbitrary <- function(arg = `DECIMAL | ANY`) {
   stop("DuckDB function arbitrary() is not available in R.")
 }
@@ -1310,10 +1310,10 @@ arbitrary <- function(arg = `DECIMAL | ANY`) {
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
 #' @param col2 `BIGINT`
 #' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' arg_max(A, B)
-#' }
+#' ```
 arg_max <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, col2 = BIGINT) {
   stop("DuckDB function arg_max() is not available in R.")
 }
@@ -1422,10 +1422,10 @@ arg_max <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAM
 #' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
 #' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' arg_max_null(A, B)
-#' }
+#' ```
 arg_max_null <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`) {
   stop("DuckDB function arg_max_null() is not available in R.")
 }
@@ -1536,10 +1536,10 @@ arg_max_null <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIM
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
 #' @param col2 `BIGINT`
 #' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' arg_min(A, B)
-#' }
+#' ```
 arg_min <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, col2 = BIGINT) {
   stop("DuckDB function arg_min() is not available in R.")
 }
@@ -1648,10 +1648,10 @@ arg_min <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAM
 #' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
 #' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' arg_min_null(A, B)
-#' }
+#' ```
 arg_min_null <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`) {
   stop("DuckDB function arg_min_null() is not available in R.")
 }
@@ -1762,10 +1762,10 @@ arg_min_null <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIM
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
 #' @param col2 `BIGINT`
 #' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' argmax(A, B)
-#' }
+#' ```
 argmax <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, col2 = BIGINT) {
   stop("DuckDB function argmax() is not available in R.")
 }
@@ -1876,10 +1876,10 @@ argmax <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
 #' @param col2 `BIGINT`
 #' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' argmin(A, B)
-#' }
+#' ```
 argmin <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, col2 = BIGINT) {
   stop("DuckDB function argmin() is not available in R.")
 }
@@ -1893,10 +1893,10 @@ argmin <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP
 #' @usage array_agg(arg = T)
 #' @param arg `T`
 #' @return `T[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_agg(A)
-#' }
+#' ```
 array_agg <- function(arg = T) {
   stop("DuckDB function array_agg() is not available in R.")
 }
@@ -1911,10 +1911,10 @@ array_agg <- function(arg = T) {
 #' @param list `ANY[]`
 #' @param function_name `VARCHAR`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_aggr([1, 2, NULL], 'min')
-#' }
+#' ```
 array_aggr <- function(list = `ANY[]`, function_name = VARCHAR) {
   stop("DuckDB function array_aggr() is not available in R.")
 }
@@ -1929,10 +1929,10 @@ array_aggr <- function(list = `ANY[]`, function_name = VARCHAR) {
 #' @param list `ANY[]`
 #' @param function_name `VARCHAR`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_aggregate([1, 2, NULL], 'min')
-#' }
+#' ```
 array_aggregate <- function(list = `ANY[]`, function_name = VARCHAR) {
   stop("DuckDB function array_aggregate() is not available in R.")
 }
@@ -1961,10 +1961,10 @@ array_append <- function(arr, el) {
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_apply([1, 2, 3], lambda x : x + 1)
-#' }
+#' ```
 array_apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function array_apply() is not available in R.")
 }
@@ -1978,10 +1978,10 @@ array_apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' @usage array_cat()
 
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_cat([2, 3], [4, 5, 6], [7])
-#' }
+#' ```
 array_cat <- function() {
   stop("DuckDB function array_cat() is not available in R.")
 }
@@ -1995,10 +1995,10 @@ array_cat <- function() {
 #' @usage array_concat()
 
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_concat([2, 3], [4, 5, 6], [7])
-#' }
+#' ```
 array_concat <- function() {
   stop("DuckDB function array_concat() is not available in R.")
 }
@@ -2013,10 +2013,10 @@ array_concat <- function() {
 #' @param list `T[]`
 #' @param element `T`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_contains([1, 2, NULL], 1)
-#' }
+#' ```
 array_contains <- function(list = `T[]`, element = T) {
   stop("DuckDB function array_contains() is not available in R.")
 }
@@ -2036,10 +2036,10 @@ array_contains <- function(list = `T[]`, element = T) {
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_cosine_distance(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
-#' }
+#' ```
 array_cosine_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[ANY] | DOUBLE[ANY]`) {
   stop("DuckDB function array_cosine_distance() is not available in R.")
 }
@@ -2059,10 +2059,10 @@ array_cosine_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = 
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_cosine_similarity(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
-#' }
+#' ```
 array_cosine_similarity <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[ANY] | DOUBLE[ANY]`) {
   stop("DuckDB function array_cosine_similarity() is not available in R.")
 }
@@ -2081,10 +2081,10 @@ array_cosine_similarity <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 
 #' }
 #' @param array `FLOAT[3] | DOUBLE[3]`
 #' @return `FLOAT[3] | DOUBLE[3]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_cross_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
-#' }
+#' ```
 array_cross_product <- function(array = `FLOAT[3] | DOUBLE[3]`) {
   stop("DuckDB function array_cross_product() is not available in R.")
 }
@@ -2104,10 +2104,10 @@ array_cross_product <- function(array = `FLOAT[3] | DOUBLE[3]`) {
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_distance(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
-#' }
+#' ```
 array_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[ANY] | DOUBLE[ANY]`) {
   stop("DuckDB function array_distance() is not available in R.")
 }
@@ -2121,10 +2121,10 @@ array_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[
 #' @usage array_distinct(list = `T[]`)
 #' @param list `T[]`
 #' @return `T[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_distinct([1, 1, NULL, -3, 1, 5])
-#' }
+#' ```
 array_distinct <- function(list = `T[]`) {
   stop("DuckDB function array_distinct() is not available in R.")
 }
@@ -2144,10 +2144,10 @@ array_distinct <- function(list = `T[]`) {
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_dot_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
-#' }
+#' ```
 array_dot_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[ANY] | DOUBLE[ANY]`) {
   stop("DuckDB function array_dot_product() is not available in R.")
 }
@@ -2177,12 +2177,12 @@ array_dot_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLO
 #' @param struct `STRUCT`
 #' @param entry `VARCHAR`
 #' @return `T | VARCHAR | ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_extract('DuckDB', 2)
 #' array_extract({'i': 3, 'v2': 3, 'v3': 0}, 'i')
 #' array_extract(row(42, 84), 1)
-#' }
+#' ```
 array_extract <- function(col0 = `T[]`, col1 = BIGINT, string = VARCHAR, index = BIGINT, struct = STRUCT, entry = VARCHAR) {
   stop("DuckDB function array_extract() is not available in R.")
 }
@@ -2197,10 +2197,10 @@ array_extract <- function(col0 = `T[]`, col1 = BIGINT, string = VARCHAR, index =
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_filter([3, 4, 5], lambda x : x > 4)
-#' }
+#' ```
 array_filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function array_filter() is not available in R.")
 }
@@ -2222,10 +2222,10 @@ array_filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' @param col1 `VARCHAR`
 #' @param col2 `VARCHAR`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_grade_up([3, 6, 1, 2])
-#' }
+#' ```
 array_grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
   stop("DuckDB function array_grade_up() is not available in R.")
 }
@@ -2240,10 +2240,10 @@ array_grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
 #' @param list `T[]`
 #' @param element `T`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_has([1, 2, NULL], 1)
-#' }
+#' ```
 array_has <- function(list = `T[]`, element = T) {
   stop("DuckDB function array_has() is not available in R.")
 }
@@ -2258,10 +2258,10 @@ array_has <- function(list = `T[]`, element = T) {
 #' @param list1 `T[]`
 #' @param list2 `T[]`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_has_all([1, 2, 3], [2, 3])
-#' }
+#' ```
 array_has_all <- function(list1 = `T[]`, list2 = `T[]`) {
   stop("DuckDB function array_has_all() is not available in R.")
 }
@@ -2276,10 +2276,10 @@ array_has_all <- function(list1 = `T[]`, list2 = `T[]`) {
 #' @param list1 `T[]`
 #' @param list2 `T[]`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_has_any([1, 2, 3], [2, 3, 4])
-#' }
+#' ```
 array_has_any <- function(list1 = `T[]`, list2 = `T[]`) {
   stop("DuckDB function array_has_any() is not available in R.")
 }
@@ -2294,10 +2294,10 @@ array_has_any <- function(list1 = `T[]`, list2 = `T[]`) {
 #' @param list `T[]`
 #' @param element `T`
 #' @return `INTEGER`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_indexof([1, 2, NULL], 2)
-#' }
+#' ```
 array_indexof <- function(list = `T[]`, element = T) {
   stop("DuckDB function array_indexof() is not available in R.")
 }
@@ -2317,10 +2317,10 @@ array_indexof <- function(list = `T[]`, element = T) {
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_inner_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
-#' }
+#' ```
 array_inner_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[ANY] | DOUBLE[ANY]`) {
   stop("DuckDB function array_inner_product() is not available in R.")
 }
@@ -2356,10 +2356,10 @@ array_intersect <- function(l1, l2) {
 #' @param list `ANY[]`
 #' @param dimension `BIGINT`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_length([1, 2, 3])
-#' }
+#' ```
 array_length <- function(list = `ANY[]`, dimension = BIGINT) {
   stop("DuckDB function array_length() is not available in R.")
 }
@@ -2379,10 +2379,10 @@ array_length <- function(list = `ANY[]`, dimension = BIGINT) {
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_negative_dot_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
-#' }
+#' ```
 array_negative_dot_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[ANY] | DOUBLE[ANY]`) {
   stop("DuckDB function array_negative_dot_product() is not available in R.")
 }
@@ -2402,10 +2402,10 @@ array_negative_dot_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, arra
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_negative_inner_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
-#' }
+#' ```
 array_negative_inner_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[ANY] | DOUBLE[ANY]`) {
   stop("DuckDB function array_negative_inner_product() is not available in R.")
 }
@@ -2446,10 +2446,10 @@ array_pop_front <- function(arr) {
 #' @param list `T[]`
 #' @param element `T`
 #' @return `INTEGER`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_position([1, 2, NULL], 2)
-#' }
+#' ```
 array_position <- function(list = `T[]`, element = T) {
   stop("DuckDB function array_position() is not available in R.")
 }
@@ -2512,10 +2512,10 @@ array_push_front <- function(arr, e) {
 #' @param lambda(x,y) `LAMBDA`
 #' @param initial_value `ANY`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_reduce([1, 2, 3], lambda x, y : x + y)
-#' }
+#' ```
 array_reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY) {
   stop("DuckDB function array_reduce() is not available in R.")
 }
@@ -2536,10 +2536,10 @@ array_reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value =
 #' @param size[ `ANY`
 #' @param value] `ANY`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_resize([1, 2, 3], 5, 0)
-#' }
+#' ```
 array_resize <- function(list = `ANY[]`, `size[` = ANY, `value]` = ANY) {
   stop("DuckDB function array_resize() is not available in R.")
 }
@@ -2572,10 +2572,10 @@ array_reverse <- function(l) {
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_reverse_sort([3, 6, 1, 2])
-#' }
+#' ```
 array_reverse_sort <- function(list = `ANY[]`, col1 = VARCHAR) {
   stop("DuckDB function array_reverse_sort() is not available in R.")
 }
@@ -2590,10 +2590,10 @@ array_reverse_sort <- function(list = `ANY[]`, col1 = VARCHAR) {
 #' @param value_list `T[]`
 #' @param index_list `BIGINT[]`
 #' @return `T[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_select([10, 20, 30, 40], [1, 4])
-#' }
+#' ```
 array_select <- function(value_list = `T[]`, index_list = `BIGINT[]`) {
   stop("DuckDB function array_select() is not available in R.")
 }
@@ -2617,13 +2617,13 @@ array_select <- function(value_list = `T[]`, index_list = `BIGINT[]`) {
 #' @param end `ANY`
 #' @param step `BIGINT`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_slice('DuckDB', 3, 4)
 #' array_slice('DuckDB', 3, NULL)
 #' array_slice('DuckDB', 0, -3)
 #' array_slice([4, 5, 6], 1, 3, 2)
-#' }
+#' ```
 array_slice <- function(list = ANY, begin = ANY, end = ANY, step = BIGINT) {
   stop("DuckDB function array_slice() is not available in R.")
 }
@@ -2645,10 +2645,10 @@ array_slice <- function(list = ANY, begin = ANY, end = ANY, step = BIGINT) {
 #' @param col1 `VARCHAR`
 #' @param col2 `VARCHAR`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_sort([3, 6, 1, 2])
-#' }
+#' ```
 array_sort <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
   stop("DuckDB function array_sort() is not available in R.")
 }
@@ -2691,10 +2691,10 @@ array_to_string_comma_default <- function(arr, sep) {
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_transform([1, 2, 3], lambda x : x + 1)
-#' }
+#' ```
 array_transform <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function array_transform() is not available in R.")
 }
@@ -2708,10 +2708,10 @@ array_transform <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' @usage array_unique(list = `ANY[]`)
 #' @param list `ANY[]`
 #' @return `UBIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_unique([1, 1, NULL, -3, 1, 5])
-#' }
+#' ```
 array_unique <- function(list = `ANY[]`) {
   stop("DuckDB function array_unique() is not available in R.")
 }
@@ -2725,10 +2725,10 @@ array_unique <- function(list = `ANY[]`) {
 #' @usage array_value()
 
 #' @return `ARRAY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT)
-#' }
+#' ```
 array_value <- function() {
   stop("DuckDB function array_value() is not available in R.")
 }
@@ -2743,10 +2743,10 @@ array_value <- function() {
 #' @param value_list `T[]`
 #' @param mask_list `BOOLEAN[]`
 #' @return `T[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_where([10, 20, 30, 40], [true, false, false, true])
-#' }
+#' ```
 array_where <- function(value_list = `T[]`, mask_list = `BOOLEAN[]`) {
   stop("DuckDB function array_where() is not available in R.")
 }
@@ -2760,12 +2760,12 @@ array_where <- function(value_list = `T[]`, mask_list = `BOOLEAN[]`) {
 #' @usage array_zip()
 
 #' @return `STRUCT[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' array_zip([1, 2], [3, 4], [5, 6])
 #' array_zip([1, 2], [3, 4], [5, 6, 7])
 #' array_zip([1, 2], [3, 4], [5, 6, 7], true)
-#' }
+#' ```
 array_zip <- function() {
   stop("DuckDB function array_zip() is not available in R.")
 }
@@ -2809,10 +2809,10 @@ arrow_scan_dumb <- function(col0 = POINTER, col1 = POINTER, col2 = POINTER) {
 #' @usage ascii(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @return `INTEGER`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' ascii('Ω')
-#' }
+#' ```
 ascii <- function(string = VARCHAR) {
   stop("DuckDB function ascii() is not available in R.")
 }
@@ -2826,10 +2826,10 @@ ascii <- function(string = VARCHAR) {
 #' @usage asin(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' asin(0.5)
-#' }
+#' ```
 asin <- function(x = DOUBLE) {
   stop("DuckDB function asin() is not available in R.")
 }
@@ -2843,10 +2843,10 @@ asin <- function(x = DOUBLE) {
 #' @usage asinh(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' asinh(0.5)
-#' }
+#' ```
 asinh <- function(x = DOUBLE) {
   stop("DuckDB function asinh() is not available in R.")
 }
@@ -2860,10 +2860,10 @@ asinh <- function(x = DOUBLE) {
 #' @usage atan(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' atan(0.5)
-#' }
+#' ```
 atan <- function(x = DOUBLE) {
   stop("DuckDB function atan() is not available in R.")
 }
@@ -2878,10 +2878,10 @@ atan <- function(x = DOUBLE) {
 #' @param y `DOUBLE`
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' atan2(1.0, 0.0)
-#' }
+#' ```
 atan2 <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function atan2() is not available in R.")
 }
@@ -2895,10 +2895,10 @@ atan2 <- function(y = DOUBLE, x = DOUBLE) {
 #' @usage atanh(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' atanh(0.5)
-#' }
+#' ```
 atanh <- function(x = DOUBLE) {
   stop("DuckDB function atanh() is not available in R.")
 }
@@ -2926,10 +2926,10 @@ atanh <- function(x = DOUBLE) {
 #' }
 #' @param x `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL | DOUBLE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`
 #' @return `DECIMAL | DOUBLE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' SUM(x) / COUNT(*)
-#' }
+#' ```
 avg <- function(x = `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL | DOUBLE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`) {
   stop("DuckDB function avg() is not available in R.")
 }
@@ -2951,10 +2951,10 @@ avg <- function(x = `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL 
 #' @param max `DOUBLE`
 #' @param width `DOUBLE`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' bar(5, 0, 20, 10)
-#' }
+#' ```
 bar <- function(x = DOUBLE, min = DOUBLE, max = DOUBLE, width = DOUBLE) {
   stop("DuckDB function bar() is not available in R.")
 }
@@ -2968,10 +2968,10 @@ bar <- function(x = DOUBLE, min = DOUBLE, max = DOUBLE, width = DOUBLE) {
 #' @usage base64(blob = BLOB)
 #' @param blob `BLOB`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' base64('A'::BLOB)
-#' }
+#' ```
 base64 <- function(blob = BLOB) {
   stop("DuckDB function base64() is not available in R.")
 }
@@ -2997,11 +2997,11 @@ base64 <- function(blob = BLOB) {
 #' @param string `VARCHAR`
 #' @param value `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' bin('Aa')
 #' bin(42)
-#' }
+#' ```
 bin <- function(string = VARCHAR, value = `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`) {
   stop("DuckDB function bin() is not available in R.")
 }
@@ -3029,10 +3029,10 @@ bin <- function(string = VARCHAR, value = `BIGNUM | UBIGINT | BIGINT | HUGEINT |
 #' }
 #' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' bit_and(A)
-#' }
+#' ```
 bit_and <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`) {
   stop("DuckDB function bit_and() is not available in R.")
 }
@@ -3055,10 +3055,10 @@ bit_and <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTI
 #' }
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | BIT`
 #' @return `TINYINT | BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' bit_count(31)
-#' }
+#' ```
 bit_count <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | BIT`) {
   stop("DuckDB function bit_count() is not available in R.")
 }
@@ -3080,11 +3080,11 @@ bit_count <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | BIT
 #' @param string `VARCHAR`
 #' @param bit `BIT`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' bit_length('abc')
 #' bit_length(42::TINYINT::BIT)
-#' }
+#' ```
 bit_length <- function(string = VARCHAR, bit = BIT) {
   stop("DuckDB function bit_length() is not available in R.")
 }
@@ -3112,10 +3112,10 @@ bit_length <- function(string = VARCHAR, bit = BIT) {
 #' }
 #' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' bit_or(A)
-#' }
+#' ```
 bit_or <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`) {
   stop("DuckDB function bit_or() is not available in R.")
 }
@@ -3130,10 +3130,10 @@ bit_or <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTIN
 #' @param substring `BIT`
 #' @param bitstring `BIT`
 #' @return `INTEGER`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' bit_position('010'::BIT, '1110101'::BIT)
-#' }
+#' ```
 bit_position <- function(substring = BIT, bitstring = BIT) {
   stop("DuckDB function bit_position() is not available in R.")
 }
@@ -3161,10 +3161,10 @@ bit_position <- function(substring = BIT, bitstring = BIT) {
 #' }
 #' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' bit_xor(A)
-#' }
+#' ```
 bit_xor <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`) {
   stop("DuckDB function bit_xor() is not available in R.")
 }
@@ -3184,10 +3184,10 @@ bit_xor <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTI
 #' @param bitstring `VARCHAR | BIT`
 #' @param length `INTEGER`
 #' @return `BIT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' bitstring('1010'::BIT, 7)
-#' }
+#' ```
 bitstring <- function(bitstring = `VARCHAR | BIT`, length = INTEGER) {
   stop("DuckDB function bitstring() is not available in R.")
 }
@@ -3226,10 +3226,10 @@ bitstring <- function(bitstring = `VARCHAR | BIT`, length = INTEGER) {
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col2 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `BIT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' bitstring_agg(A)
-#' }
+#' ```
 bitstring_agg <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`, col2 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
   stop("DuckDB function bitstring_agg() is not available in R.")
 }
@@ -3243,10 +3243,10 @@ bitstring_agg <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT
 #' @usage bool_and(arg = BOOLEAN)
 #' @param arg `BOOLEAN`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' bool_and(A)
-#' }
+#' ```
 bool_and <- function(arg = BOOLEAN) {
   stop("DuckDB function bool_and() is not available in R.")
 }
@@ -3260,10 +3260,10 @@ bool_and <- function(arg = BOOLEAN) {
 #' @usage bool_or(arg = BOOLEAN)
 #' @param arg `BOOLEAN`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' bool_or(A)
-#' }
+#' ```
 bool_or <- function(arg = BOOLEAN) {
   stop("DuckDB function bool_or() is not available in R.")
 }
@@ -3278,10 +3278,10 @@ bool_or <- function(arg = BOOLEAN) {
 #' @param source_type `ANY`
 #' @param target_type `ANY`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' can_cast_implicitly(NULL::INTEGER, NULL::BIGINT)
-#' }
+#' ```
 can_cast_implicitly <- function(source_type = ANY, target_type = ANY) {
   stop("DuckDB function can_cast_implicitly() is not available in R.")
 }
@@ -3295,10 +3295,10 @@ can_cast_implicitly <- function(source_type = ANY, target_type = ANY) {
 #' @usage cardinality(map = ANY)
 #' @param map `ANY`
 #' @return `UBIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' cardinality( map([4, 2], ['a', 'b']) );
-#' }
+#' ```
 cardinality <- function(map = ANY) {
   stop("DuckDB function cardinality() is not available in R.")
 }
@@ -3313,10 +3313,10 @@ cardinality <- function(map = ANY) {
 #' @param param `ANY`
 #' @param type `ANY`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' cast_to_type('42', NULL::INTEGER)
-#' }
+#' ```
 cast_to_type <- function(param = ANY, type = ANY) {
   stop("DuckDB function cast_to_type() is not available in R.")
 }
@@ -3330,10 +3330,10 @@ cast_to_type <- function(param = ANY, type = ANY) {
 #' @usage cbrt(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' cbrt(8)
-#' }
+#' ```
 cbrt <- function(x = DOUBLE) {
   stop("DuckDB function cbrt() is not available in R.")
 }
@@ -3353,10 +3353,10 @@ cbrt <- function(x = DOUBLE) {
 #' }
 #' @param x `FLOAT | DOUBLE | DECIMAL`
 #' @return `FLOAT | DOUBLE | DECIMAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' ceil(17.4)
-#' }
+#' ```
 ceil <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
   stop("DuckDB function ceil() is not available in R.")
 }
@@ -3376,10 +3376,10 @@ ceil <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
 #' }
 #' @param x `FLOAT | DOUBLE | DECIMAL`
 #' @return `FLOAT | DOUBLE | DECIMAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' ceiling(17.4)
-#' }
+#' ```
 ceiling <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
   stop("DuckDB function ceiling() is not available in R.")
 }
@@ -3400,10 +3400,10 @@ ceiling <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' century(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 century <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function century() is not available in R.")
 }
@@ -3429,12 +3429,12 @@ century <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' @param bit `BIT`
 #' @param list `ANY[]`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' char_length('Hello🦆')
 #' char_length(42::TINYINT::BIT)
 #' char_length([1,2,3])
-#' }
+#' ```
 char_length <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
   stop("DuckDB function char_length() is not available in R.")
 }
@@ -3460,12 +3460,12 @@ char_length <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
 #' @param bit `BIT`
 #' @param list `ANY[]`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' character_length('Hello🦆')
 #' character_length(42::TINYINT::BIT)
 #' character_length([1,2,3])
-#' }
+#' ```
 character_length <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
   stop("DuckDB function character_length() is not available in R.")
 }
@@ -3497,10 +3497,10 @@ checkpoint <- function(col0 = VARCHAR) {
 #' @usage chr(code_point = INTEGER)
 #' @param code_point `INTEGER`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' chr(65)
-#' }
+#' ```
 chr <- function(code_point = INTEGER) {
   stop("DuckDB function chr() is not available in R.")
 }
@@ -3555,11 +3555,11 @@ combine <- function(col0 = `AGGREGATE_STATE<?>`, col1 = ANY) {
 #' @usage concat(value = ANY)
 #' @param value `ANY`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' concat('Hello', ' ', 'World')
 #' concat([1, 2, 3], NULL, [4, 5, 6])
-#' }
+#' ```
 concat <- function(value = ANY) {
   stop("DuckDB function concat() is not available in R.")
 }
@@ -3574,10 +3574,10 @@ concat <- function(value = ANY) {
 #' @param separator `VARCHAR`
 #' @param string `ANY`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' concat_ws(', ', 'Banana', 'Apple', 'Melon')
-#' }
+#' ```
 concat_ws <- function(separator = VARCHAR, string = ANY) {
   stop("DuckDB function concat_ws() is not available in R.")
 }
@@ -3592,10 +3592,10 @@ concat_ws <- function(separator = VARCHAR, string = ANY) {
 #' @param arg1 `ANY`
 #' @param arg2 `ANY`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' constant_or_null(42, NULL)
-#' }
+#' ```
 constant_or_null <- function(arg1 = ANY, arg2 = ANY) {
   stop("DuckDB function constant_or_null() is not available in R.")
 }
@@ -3619,10 +3619,10 @@ constant_or_null <- function(arg1 = ANY, arg2 = ANY) {
 #' @param col0 `T[] | MAP(K, V) | STRUCT`
 #' @param col1 `T | K | ANY`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' contains('abc', 'a')
-#' }
+#' ```
 contains <- function(string = VARCHAR, search_string = VARCHAR, col0 = `T[] | MAP(K, V) | STRUCT`, col1 = `T | K | ANY`) {
   stop("DuckDB function contains() is not available in R.")
 }
@@ -3651,10 +3651,10 @@ copy_database <- function(col0 = VARCHAR, col1 = VARCHAR) {
 #' @param y `DOUBLE`
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' COVAR_POP(y, x) / (STDDEV_POP(x) * STDDEV_POP(y))
-#' }
+#' ```
 corr <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function corr() is not available in R.")
 }
@@ -3668,10 +3668,10 @@ corr <- function(y = DOUBLE, x = DOUBLE) {
 #' @usage cos(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' cos(90)
-#' }
+#' ```
 cos <- function(x = DOUBLE) {
   stop("DuckDB function cos() is not available in R.")
 }
@@ -3685,10 +3685,10 @@ cos <- function(x = DOUBLE) {
 #' @usage cosh(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' cosh(1)
-#' }
+#' ```
 cosh <- function(x = DOUBLE) {
   stop("DuckDB function cosh() is not available in R.")
 }
@@ -3702,10 +3702,10 @@ cosh <- function(x = DOUBLE) {
 #' @usage cot(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' cot(0.5)
-#' }
+#' ```
 cot <- function(x = DOUBLE) {
   stop("DuckDB function cot() is not available in R.")
 }
@@ -3724,10 +3724,10 @@ cot <- function(x = DOUBLE) {
 #' }
 #' @param arg `ANY`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' count(A)
-#' }
+#' ```
 count <- function(arg = ANY) {
   stop("DuckDB function count() is not available in R.")
 }
@@ -3741,10 +3741,10 @@ count <- function(arg = ANY) {
 #' @usage count_if(arg = BOOLEAN)
 #' @param arg `BOOLEAN`
 #' @return `HUGEINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' count_if(A)
-#' }
+#' ```
 count_if <- function(arg = BOOLEAN) {
   stop("DuckDB function count_if() is not available in R.")
 }
@@ -3771,10 +3771,10 @@ count_star <- function() {
 #' @usage countif(arg = BOOLEAN)
 #' @param arg `BOOLEAN`
 #' @return `HUGEINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' countif(A)
-#' }
+#' ```
 countif <- function(arg = BOOLEAN) {
   stop("DuckDB function countif() is not available in R.")
 }
@@ -3789,10 +3789,10 @@ countif <- function(arg = BOOLEAN) {
 #' @param y `DOUBLE`
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' (SUM(x*y) - SUM(x) * SUM(y) / COUNT(*)) / COUNT(*)
-#' }
+#' ```
 covar_pop <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function covar_pop() is not available in R.")
 }
@@ -3807,10 +3807,10 @@ covar_pop <- function(y = DOUBLE, x = DOUBLE) {
 #' @param y `DOUBLE`
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' (SUM(x*y) - SUM(x) * SUM(y) / COUNT(*)) / (COUNT(*) - 1)
-#' }
+#' ```
 covar_samp <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function covar_samp() is not available in R.")
 }
@@ -3824,10 +3824,10 @@ covar_samp <- function(y = DOUBLE, x = DOUBLE) {
 #' @usage create_sort_key(parameters... = ANY)
 #' @param parameters... `ANY`
 #' @return `BLOB`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' create_sort_key('A', 'DESC')
-#' }
+#' ```
 create_sort_key <- function(parameters... = ANY) {
   stop("DuckDB function create_sort_key() is not available in R.")
 }
@@ -3854,10 +3854,10 @@ current_catalog <- function() {
 #' @usage current_connection_id()
 
 #' @return `UBIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' current_connection_id()
-#' }
+#' ```
 current_connection_id <- function() {
   stop("DuckDB function current_connection_id() is not available in R.")
 }
@@ -3876,10 +3876,10 @@ current_connection_id <- function() {
 #' }
 
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' current_database()
-#' }
+#' ```
 current_database <- function() {
   stop("DuckDB function current_database() is not available in R.")
 }
@@ -3898,10 +3898,10 @@ current_database <- function() {
 #' }
 
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' current_query()
-#' }
+#' ```
 current_query <- function() {
   stop("DuckDB function current_query() is not available in R.")
 }
@@ -3915,10 +3915,10 @@ current_query <- function() {
 #' @usage current_query_id()
 
 #' @return `UBIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' current_query_id()
-#' }
+#' ```
 current_query_id <- function() {
   stop("DuckDB function current_query_id() is not available in R.")
 }
@@ -3950,10 +3950,10 @@ current_role <- function() {
 #' }
 
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' current_schema()
-#' }
+#' ```
 current_schema <- function() {
   stop("DuckDB function current_schema() is not available in R.")
 }
@@ -3972,10 +3972,10 @@ current_schema <- function() {
 #' }
 #' @param include_implicit `BOOLEAN`
 #' @return `VARCHAR[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' current_schemas(true)
-#' }
+#' ```
 current_schemas <- function(include_implicit = BOOLEAN) {
   stop("DuckDB function current_schemas() is not available in R.")
 }
@@ -3989,10 +3989,10 @@ current_schemas <- function(include_implicit = BOOLEAN) {
 #' @usage current_setting(setting_name = VARCHAR)
 #' @param setting_name `VARCHAR`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' current_setting('access_mode')
-#' }
+#' ```
 current_setting <- function(setting_name = VARCHAR) {
   stop("DuckDB function current_setting() is not available in R.")
 }
@@ -4006,10 +4006,10 @@ current_setting <- function(setting_name = VARCHAR) {
 #' @usage current_transaction_id()
 
 #' @return `UBIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' current_transaction_id()
-#' }
+#' ```
 current_transaction_id <- function() {
   stop("DuckDB function current_transaction_id() is not available in R.")
 }
@@ -4036,10 +4036,10 @@ current_user <- function() {
 #' @usage currval(`'sequence_name'` = VARCHAR)
 #' @param 'sequence_name' `VARCHAR`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' currval('my_sequence_name')
-#' }
+#' ```
 currval <- function(`'sequence_name'` = VARCHAR) {
   stop("DuckDB function currval() is not available in R.")
 }
@@ -4054,10 +4054,10 @@ currval <- function(`'sequence_name'` = VARCHAR) {
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' damerau_levenshtein('duckdb', 'udckbd')
-#' }
+#' ```
 damerau_levenshtein <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function damerau_levenshtein() is not available in R.")
 }
@@ -4120,10 +4120,10 @@ date_add <- function(date, interval) {
 #' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' date_diff('hour', TIMESTAMPTZ '1992-09-30 23:59:59', TIMESTAMPTZ '1992-10-01 01:58:00')
-#' }
+#' ```
 date_diff <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, enddate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function date_diff() is not available in R.")
 }
@@ -4155,10 +4155,10 @@ date_diff <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIM
 #' @param ts `VARCHAR[] | VARCHAR`
 #' @param col1 `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `STRUCT() | BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' date_part('minute', TIMESTAMP '1992-09-20 20:38:40')
-#' }
+#' ```
 date_part <- function(ts = `VARCHAR[] | VARCHAR`, col1 = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function date_part() is not available in R.")
 }
@@ -4181,10 +4181,10 @@ date_part <- function(ts = `VARCHAR[] | VARCHAR`, col1 = `DATE | INTERVAL | TIME
 #' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' date_sub('hour', TIMESTAMPTZ '1992-09-30 23:59:59', TIMESTAMPTZ '1992-10-01 01:58:00')
-#' }
+#' ```
 date_sub <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, enddate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function date_sub() is not available in R.")
 }
@@ -4206,10 +4206,10 @@ date_sub <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIME
 #' @param part `VARCHAR`
 #' @param timestamp `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `TIMESTAMP | INTERVAL | TIMESTAMP WITH TIME ZONE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' date_trunc('hour', TIMESTAMPTZ '1992-09-20 20:38:40')
-#' }
+#' ```
 date_trunc <- function(part = VARCHAR, timestamp = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function date_trunc() is not available in R.")
 }
@@ -4232,10 +4232,10 @@ date_trunc <- function(part = VARCHAR, timestamp = `DATE | INTERVAL | TIMESTAMP 
 #' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' datediff('hour', TIMESTAMPTZ '1992-09-30 23:59:59', TIMESTAMPTZ '1992-10-01 01:58:00')
-#' }
+#' ```
 datediff <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, enddate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function datediff() is not available in R.")
 }
@@ -4267,10 +4267,10 @@ datediff <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIME
 #' @param ts `VARCHAR[] | VARCHAR`
 #' @param col1 `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `STRUCT() | BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' datepart('minute', TIMESTAMP '1992-09-20 20:38:40')
-#' }
+#' ```
 datepart <- function(ts = `VARCHAR[] | VARCHAR`, col1 = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function datepart() is not available in R.")
 }
@@ -4293,10 +4293,10 @@ datepart <- function(ts = `VARCHAR[] | VARCHAR`, col1 = `DATE | INTERVAL | TIME 
 #' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' datesub('hour', TIMESTAMPTZ '1992-09-30 23:59:59', TIMESTAMPTZ '1992-10-01 01:58:00')
-#' }
+#' ```
 datesub <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, enddate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function datesub() is not available in R.")
 }
@@ -4318,10 +4318,10 @@ datesub <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMES
 #' @param part `VARCHAR`
 #' @param timestamp `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `TIMESTAMP | INTERVAL | TIMESTAMP WITH TIME ZONE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' datetrunc('hour', TIMESTAMPTZ '1992-09-20 20:38:40')
-#' }
+#' ```
 datetrunc <- function(part = VARCHAR, timestamp = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function datetrunc() is not available in R.")
 }
@@ -4342,10 +4342,10 @@ datetrunc <- function(part = VARCHAR, timestamp = `DATE | INTERVAL | TIMESTAMP |
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' day(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 day <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function day() is not available in R.")
 }
@@ -4365,10 +4365,10 @@ day <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' }
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' dayname(TIMESTAMP '1992-03-22')
-#' }
+#' ```
 dayname <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function dayname() is not available in R.")
 }
@@ -4389,10 +4389,10 @@ dayname <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' dayofmonth(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 dayofmonth <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function dayofmonth() is not available in R.")
 }
@@ -4413,10 +4413,10 @@ dayofmonth <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME Z
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' dayofweek(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 dayofweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function dayofweek() is not available in R.")
 }
@@ -4437,10 +4437,10 @@ dayofweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZO
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' dayofyear(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 dayofyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function dayofyear() is not available in R.")
 }
@@ -4461,10 +4461,10 @@ dayofyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZO
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' decade(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 decade <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function decade() is not available in R.")
 }
@@ -4478,10 +4478,10 @@ decade <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @usage decode(blob = BLOB)
 #' @param blob `BLOB`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' decode('\xC3\xBC'::BLOB)
-#' }
+#' ```
 decode <- function(blob = BLOB) {
   stop("DuckDB function decode() is not available in R.")
 }
@@ -4495,10 +4495,10 @@ decode <- function(blob = BLOB) {
 #' @usage degrees(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' degrees(pi())
-#' }
+#' ```
 degrees <- function(x = DOUBLE) {
   stop("DuckDB function degrees() is not available in R.")
 }
@@ -5062,10 +5062,10 @@ duckdb_views <- function() {
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' editdist3('duck', 'db')
-#' }
+#' ```
 editdist3 <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function editdist3() is not available in R.")
 }
@@ -5080,10 +5080,10 @@ editdist3 <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' @param map `MAP(K, V)`
 #' @param key `K`
 #' @return `V[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' element_at(map(['key'], ['val']), 'key')
-#' }
+#' ```
 element_at <- function(map = `MAP(K, V)`, key = K) {
   stop("DuckDB function element_at() is not available in R.")
 }
@@ -5219,10 +5219,10 @@ enable_verification <- function() {
 #' @usage encode(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @return `BLOB`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' encode('my_string_with_ü')
-#' }
+#' ```
 encode <- function(string = VARCHAR) {
   stop("DuckDB function encode() is not available in R.")
 }
@@ -5237,10 +5237,10 @@ encode <- function(string = VARCHAR) {
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' ends_with('abc', 'bc')
-#' }
+#' ```
 ends_with <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function ends_with() is not available in R.")
 }
@@ -5267,10 +5267,10 @@ entropy <- function(x = ANY) {
 #' @usage enum_code(enum = ANY)
 #' @param enum `ANY`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' enum_code('happy'::mood)
-#' }
+#' ```
 enum_code <- function(enum = ANY) {
   stop("DuckDB function enum_code() is not available in R.")
 }
@@ -5284,10 +5284,10 @@ enum_code <- function(enum = ANY) {
 #' @usage enum_first(enum = ANY)
 #' @param enum `ANY`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' enum_first(NULL::mood)
-#' }
+#' ```
 enum_first <- function(enum = ANY) {
   stop("DuckDB function enum_first() is not available in R.")
 }
@@ -5301,10 +5301,10 @@ enum_first <- function(enum = ANY) {
 #' @usage enum_last(enum = ANY)
 #' @param enum `ANY`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' enum_last(NULL::mood)
-#' }
+#' ```
 enum_last <- function(enum = ANY) {
   stop("DuckDB function enum_last() is not available in R.")
 }
@@ -5318,10 +5318,10 @@ enum_last <- function(enum = ANY) {
 #' @usage enum_range(enum = ANY)
 #' @param enum `ANY`
 #' @return `VARCHAR[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' enum_range(NULL::mood)
-#' }
+#' ```
 enum_range <- function(enum = ANY) {
   stop("DuckDB function enum_range() is not available in R.")
 }
@@ -5336,10 +5336,10 @@ enum_range <- function(enum = ANY) {
 #' @param start `ANY`
 #' @param end `ANY`
 #' @return `VARCHAR[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' enum_range_boundary(NULL, 'happy'::mood)
-#' }
+#' ```
 enum_range_boundary <- function(start = ANY, end = ANY) {
   stop("DuckDB function enum_range_boundary() is not available in R.")
 }
@@ -5363,10 +5363,10 @@ enum_range_boundary <- function(start = ANY, end = ANY) {
 #' }
 #' @param temporal `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' epoch(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 epoch <- function(temporal = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function epoch() is not available in R.")
 }
@@ -5391,10 +5391,10 @@ epoch <- function(temporal = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
 #' }
 #' @param temporal `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | BIGINT`
 #' @return `BIGINT | TIMESTAMP`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' epoch_ms(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 epoch_ms <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | BIGINT`) {
   stop("DuckDB function epoch_ms() is not available in R.")
 }
@@ -5419,10 +5419,10 @@ epoch_ms <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | 
 #' }
 #' @param temporal `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | TIMESTAMP_NS`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' epoch_ns(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 epoch_ns <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | TIMESTAMP_NS`) {
   stop("DuckDB function epoch_ns() is not available in R.")
 }
@@ -5446,10 +5446,10 @@ epoch_ns <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | 
 #' }
 #' @param temporal `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' epoch_us(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 epoch_us <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function epoch_us() is not available in R.")
 }
@@ -5473,10 +5473,10 @@ epoch_us <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | 
 #' @param bin_count `BIGINT`
 #' @param nice_rounding `BOOLEAN`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' equi_width_bins(0, 10, 2, true)
-#' }
+#' ```
 equi_width_bins <- function(min = `BIGINT | DOUBLE | TIMESTAMP | ANY`, max = `BIGINT | DOUBLE | TIMESTAMP | ANY`, bin_count = BIGINT, nice_rounding = BOOLEAN) {
   stop("DuckDB function equi_width_bins() is not available in R.")
 }
@@ -5497,10 +5497,10 @@ equi_width_bins <- function(min = `BIGINT | DOUBLE | TIMESTAMP | ANY`, max = `BI
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' era(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 era <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function era() is not available in R.")
 }
@@ -5514,10 +5514,10 @@ era <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' @usage error(message = VARCHAR)
 #' @param message `VARCHAR`
 #' @return `"NULL"`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' error('access_mode')
-#' }
+#' ```
 error <- function(message = VARCHAR) {
   stop("DuckDB function error() is not available in R.")
 }
@@ -5531,10 +5531,10 @@ error <- function(message = VARCHAR) {
 #' @usage even(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' even(2.9)
-#' }
+#' ```
 even <- function(x = DOUBLE) {
   stop("DuckDB function even() is not available in R.")
 }
@@ -5548,10 +5548,10 @@ even <- function(x = DOUBLE) {
 #' @usage exp(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' exp(1)
-#' }
+#' ```
 exp <- function(x = DOUBLE) {
   stop("DuckDB function exp() is not available in R.")
 }
@@ -5578,10 +5578,10 @@ extension_versions <- function() {
 #' @usage factorial(x = INTEGER)
 #' @param x `INTEGER`
 #' @return `HUGEINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' 4!
-#' }
+#' ```
 factorial <- function(x = INTEGER) {
   stop("DuckDB function factorial() is not available in R.")
 }
@@ -5595,10 +5595,10 @@ factorial <- function(x = INTEGER) {
 #' @usage favg(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' favg(A)
-#' }
+#' ```
 favg <- function(x = DOUBLE) {
   stop("DuckDB function favg() is not available in R.")
 }
@@ -5627,10 +5627,10 @@ fdiv <- function(x, y) {
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' filter([3, 4, 5], lambda x : x > 4)
-#' }
+#' ```
 filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function filter() is not available in R.")
 }
@@ -5662,10 +5662,10 @@ finalize <- function(col0 = `AGGREGATE_STATE<?>`) {
 #' }
 #' @param arg `DECIMAL | ANY`
 #' @return `DECIMAL | ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' first(A)
-#' }
+#' ```
 first <- function(arg = `DECIMAL | ANY`) {
   stop("DuckDB function first() is not available in R.")
 }
@@ -5679,10 +5679,10 @@ first <- function(arg = `DECIMAL | ANY`) {
 #' @usage flatten(nested_list = `T[][]`)
 #' @param nested_list `T[][]`
 #' @return `T[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' flatten([[1, 2, 3], [4, 5]])
-#' }
+#' ```
 flatten <- function(nested_list = `T[][]`) {
   stop("DuckDB function flatten() is not available in R.")
 }
@@ -5702,10 +5702,10 @@ flatten <- function(nested_list = `T[][]`) {
 #' }
 #' @param x `FLOAT | DOUBLE | DECIMAL`
 #' @return `FLOAT | DOUBLE | DECIMAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' floor(17.4)
-#' }
+#' ```
 floor <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
   stop("DuckDB function floor() is not available in R.")
 }
@@ -5752,10 +5752,10 @@ force_checkpoint <- function(col0 = VARCHAR) {
 #' @usage format(format = VARCHAR)
 #' @param format `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' format('Benchmark "{}" took {} seconds', 'CSV', 42)
-#' }
+#' ```
 format <- function(format = VARCHAR) {
   stop("DuckDB function format() is not available in R.")
 }
@@ -5769,10 +5769,10 @@ format <- function(format = VARCHAR) {
 #' @usage formatReadableDecimalSize(integer = BIGINT)
 #' @param integer `BIGINT`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' formatReadableDecimalSize(16_000)
-#' }
+#' ```
 formatReadableDecimalSize <- function(integer = BIGINT) {
   stop("DuckDB function formatReadableDecimalSize() is not available in R.")
 }
@@ -5786,10 +5786,10 @@ formatReadableDecimalSize <- function(integer = BIGINT) {
 #' @usage formatReadableSize(integer = BIGINT)
 #' @param integer `BIGINT`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' formatReadableSize(16_000)
-#' }
+#' ```
 formatReadableSize <- function(integer = BIGINT) {
   stop("DuckDB function formatReadableSize() is not available in R.")
 }
@@ -5803,10 +5803,10 @@ formatReadableSize <- function(integer = BIGINT) {
 #' @usage format_bytes(integer = BIGINT)
 #' @param integer `BIGINT`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' format_bytes(16_000)
-#' }
+#' ```
 format_bytes <- function(integer = BIGINT) {
   stop("DuckDB function format_bytes() is not available in R.")
 }
@@ -5848,10 +5848,10 @@ format_type <- function(type_oid, typemod) {
 #' @usage from_base64(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @return `BLOB`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' from_base64('QQ==')
-#' }
+#' ```
 from_base64 <- function(string = VARCHAR) {
   stop("DuckDB function from_base64() is not available in R.")
 }
@@ -5865,10 +5865,10 @@ from_base64 <- function(string = VARCHAR) {
 #' @usage from_binary(value = VARCHAR)
 #' @param value `VARCHAR`
 #' @return `BLOB`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' from_binary('0110')
-#' }
+#' ```
 from_binary <- function(value = VARCHAR) {
   stop("DuckDB function from_binary() is not available in R.")
 }
@@ -5882,10 +5882,10 @@ from_binary <- function(value = VARCHAR) {
 #' @usage from_hex(value = VARCHAR)
 #' @param value `VARCHAR`
 #' @return `BLOB`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' from_hex('2A')
-#' }
+#' ```
 from_hex <- function(value = VARCHAR) {
   stop("DuckDB function from_hex() is not available in R.")
 }
@@ -5899,10 +5899,10 @@ from_hex <- function(value = VARCHAR) {
 #' @usage fsum(arg = DOUBLE)
 #' @param arg `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' fsum(A)
-#' }
+#' ```
 fsum <- function(arg = DOUBLE) {
   stop("DuckDB function fsum() is not available in R.")
 }
@@ -5929,10 +5929,10 @@ functions <- function() {
 #' @usage gamma(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' gamma(5.5)
-#' }
+#' ```
 gamma <- function(x = DOUBLE) {
   stop("DuckDB function gamma() is not available in R.")
 }
@@ -5952,10 +5952,10 @@ gamma <- function(x = DOUBLE) {
 #' @param x `BIGINT | HUGEINT`
 #' @param y `BIGINT | HUGEINT`
 #' @return `BIGINT | HUGEINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' gcd(42, 57)
-#' }
+#' ```
 gcd <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
   stop("DuckDB function gcd() is not available in R.")
 }
@@ -5969,10 +5969,10 @@ gcd <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
 #' @usage gen_random_uuid()
 
 #' @return `UUID`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' gen_random_uuid()
-#' }
+#' ```
 gen_random_uuid <- function() {
   stop("DuckDB function gen_random_uuid() is not available in R.")
 }
@@ -6003,10 +6003,10 @@ gen_random_uuid <- function() {
 #' @param stop `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param step `BIGINT | INTERVAL`
 #' @return `BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' generate_series(2, 5, 3)
-#' }
+#' ```
 generate_series <- function(col0 = `BIGINT | TIMESTAMP`, col1 = `BIGINT | TIMESTAMP`, col2 = `BIGINT | INTERVAL`, start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, stop = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, step = `BIGINT | INTERVAL`) {
   stop("DuckDB function generate_series() is not available in R.")
 }
@@ -6061,10 +6061,10 @@ geometric_mean <- function(x) {
 #' @param bitstring `BIT`
 #' @param index `INTEGER`
 #' @return `INTEGER`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' get_bit('0110010'::BIT, 2)
-#' }
+#' ```
 get_bit <- function(bitstring = BIT, index = INTEGER) {
   stop("DuckDB function get_bit() is not available in R.")
 }
@@ -6091,10 +6091,10 @@ get_block_size <- function(db_name) {
 #' @usage get_current_timestamp()
 
 #' @return `TIMESTAMP WITH TIME ZONE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' get_current_timestamp()
-#' }
+#' ```
 get_current_timestamp <- function() {
   stop("DuckDB function get_current_timestamp() is not available in R.")
 }
@@ -6147,10 +6147,10 @@ glob <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' @param col1 `VARCHAR`
 #' @param col2 `VARCHAR`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' grade_up([3, 6, 1, 2])
-#' }
+#' ```
 grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
   stop("DuckDB function grade_up() is not available in R.")
 }
@@ -6164,11 +6164,11 @@ grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
 #' @usage greatest(arg1 = ANY)
 #' @param arg1 `ANY`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' greatest(42, 84)
 #' greatest('abc', 'bcd', 'cde', 'EFG')
-#' }
+#' ```
 greatest <- function(arg1 = ANY) {
   stop("DuckDB function greatest() is not available in R.")
 }
@@ -6188,10 +6188,10 @@ greatest <- function(arg1 = ANY) {
 #' @param x `BIGINT | HUGEINT`
 #' @param y `BIGINT | HUGEINT`
 #' @return `BIGINT | HUGEINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' greatest_common_divisor(42, 57)
-#' }
+#' ```
 greatest_common_divisor <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
   stop("DuckDB function greatest_common_divisor() is not available in R.")
 }
@@ -6211,10 +6211,10 @@ greatest_common_divisor <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEIN
 #' @param str `ANY`
 #' @param arg `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' group_concat(A, '-')
-#' }
+#' ```
 group_concat <- function(str = ANY, arg = VARCHAR) {
   stop("DuckDB function group_concat() is not available in R.")
 }
@@ -6229,10 +6229,10 @@ group_concat <- function(str = ANY, arg = VARCHAR) {
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' hamming('duck', 'luck')
-#' }
+#' ```
 hamming <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function hamming() is not available in R.")
 }
@@ -6467,10 +6467,10 @@ has_tablespace_privilege <- function(tablespace, privilege, user) {
 #' @usage hash(value = ANY)
 #' @param value `ANY`
 #' @return `UBIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' hash('🦆')
-#' }
+#' ```
 hash <- function(value = ANY) {
   stop("DuckDB function hash() is not available in R.")
 }
@@ -6500,12 +6500,12 @@ hash <- function(value = ANY) {
 #' @param value `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`
 #' @param blob `BLOB`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' hex('Hello')
 #' hex(42)
 #' hex('\xAA\xBB'::BLOB)
-#' }
+#' ```
 hex <- function(string = VARCHAR, value = `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`, blob = BLOB) {
   stop("DuckDB function hex() is not available in R.")
 }
@@ -6530,10 +6530,10 @@ hex <- function(string = VARCHAR, value = `BIGNUM | BIGINT | UBIGINT | HUGEINT |
 #' @param bin_count Unspecified.
 #' @param technique Unspecified.
 #' @return `MAP`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' histogram(A)
-#' }
+#' ```
 histogram <- function(arg = ANY, col1 = `ANY[]`, source, col_name, bin_count, technique) {
   stop("DuckDB function histogram() is not available in R.")
 }
@@ -6548,10 +6548,10 @@ histogram <- function(arg = ANY, col1 = `ANY[]`, source, col_name, bin_count, te
 #' @param arg `ANY`
 #' @param bins `ANY[]`
 #' @return `MAP`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' histogram_exact(A, [0, 1, 2])
-#' }
+#' ```
 histogram_exact <- function(arg = ANY, bins = `ANY[]`) {
   stop("DuckDB function histogram_exact() is not available in R.")
 }
@@ -6591,10 +6591,10 @@ histogram_values <- function(source, col_name, bin_count, technique) {
 #' }
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' hour(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 hour <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function hour() is not available in R.")
 }
@@ -6610,10 +6610,10 @@ hour <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE 
 #' @param like_specifier `VARCHAR`
 #' @param escape_character `VARCHAR`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' ilike_escape('A%c', 'a$%C', '$')
-#' }
+#' ```
 ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
   stop("DuckDB function ilike_escape() is not available in R.")
 }
@@ -6641,10 +6641,10 @@ import_database <- function(col0 = VARCHAR) {
 #' @param database_name `VARCHAR`
 #' @param schema_name `VARCHAR`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' in_search_path('memory', 'main')
-#' }
+#' ```
 in_search_path <- function(database_name = VARCHAR, schema_name = VARCHAR) {
   stop("DuckDB function in_search_path() is not available in R.")
 }
@@ -6711,10 +6711,10 @@ inet_server_port <- function() {
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' instr('test test', 'es')
-#' }
+#' ```
 instr <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function instr() is not available in R.")
 }
@@ -6728,10 +6728,10 @@ instr <- function(string = VARCHAR, search_string = VARCHAR) {
 #' @usage is_histogram_other_bin(val = ANY)
 #' @param val `ANY`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' is_histogram_other_bin(v)
-#' }
+#' ```
 is_histogram_other_bin <- function(val = ANY) {
   stop("DuckDB function is_histogram_other_bin() is not available in R.")
 }
@@ -6753,10 +6753,10 @@ is_histogram_other_bin <- function(val = ANY) {
 #' }
 #' @param x `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' isfinite(5.5)
-#' }
+#' ```
 isfinite <- function(x = `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function isfinite() is not available in R.")
 }
@@ -6778,10 +6778,10 @@ isfinite <- function(x = `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIM
 #' }
 #' @param x `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' isinf('Infinity'::float)
-#' }
+#' ```
 isinf <- function(x = `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function isinf() is not available in R.")
 }
@@ -6800,10 +6800,10 @@ isinf <- function(x = `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME Z
 #' }
 #' @param x `FLOAT | DOUBLE`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' isnan('NaN'::FLOAT)
-#' }
+#' ```
 isnan <- function(x = `FLOAT | DOUBLE`) {
   stop("DuckDB function isnan() is not available in R.")
 }
@@ -6824,10 +6824,10 @@ isnan <- function(x = `FLOAT | DOUBLE`) {
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' isodow(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 isodow <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function isodow() is not available in R.")
 }
@@ -6848,10 +6848,10 @@ isodow <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' isoyear(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 isoyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function isoyear() is not available in R.")
 }
@@ -6866,10 +6866,10 @@ isoyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' jaccard('duck', 'luck')
-#' }
+#' ```
 jaccard <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function jaccard() is not available in R.")
 }
@@ -6890,10 +6890,10 @@ jaccard <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' @param s2 `VARCHAR`
 #' @param score_cutoff `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' jaro_similarity('duck', 'duckdb')
-#' }
+#' ```
 jaro_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE) {
   stop("DuckDB function jaro_similarity() is not available in R.")
 }
@@ -6914,10 +6914,10 @@ jaro_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE) {
 #' @param s2 `VARCHAR`
 #' @param score_cutoff `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' jaro_winkler_similarity('duck', 'duckdb')
-#' }
+#' ```
 jaro_winkler_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE) {
   stop("DuckDB function jaro_winkler_similarity() is not available in R.")
 }
@@ -6937,10 +6937,10 @@ jaro_winkler_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = D
 #' }
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' julian(timestamp '2006-01-01 12:00')
-#' }
+#' ```
 julian <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function julian() is not available in R.")
 }
@@ -6954,10 +6954,10 @@ julian <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' @usage kahan_sum(arg = DOUBLE)
 #' @param arg `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' kahan_sum(A)
-#' }
+#' ```
 kahan_sum <- function(arg = DOUBLE) {
   stop("DuckDB function kahan_sum() is not available in R.")
 }
@@ -7002,10 +7002,10 @@ kurtosis_pop <- function(x = DOUBLE) {
 #' }
 #' @param arg `DECIMAL | ANY`
 #' @return `DECIMAL | ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' last(A)
-#' }
+#' ```
 last <- function(arg = `DECIMAL | ANY`) {
   stop("DuckDB function last() is not available in R.")
 }
@@ -7025,10 +7025,10 @@ last <- function(arg = `DECIMAL | ANY`) {
 #' }
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `DATE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' last_day(TIMESTAMP '1992-03-22 01:02:03.1234')
-#' }
+#' ```
 last_day <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function last_day() is not available in R.")
 }
@@ -7042,10 +7042,10 @@ last_day <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' @usage lcase(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' lcase('Hello')
-#' }
+#' ```
 lcase <- function(string = VARCHAR) {
   stop("DuckDB function lcase() is not available in R.")
 }
@@ -7065,10 +7065,10 @@ lcase <- function(string = VARCHAR) {
 #' @param x `BIGINT | HUGEINT`
 #' @param y `BIGINT | HUGEINT`
 #' @return `BIGINT | HUGEINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' lcm(42, 57)
-#' }
+#' ```
 lcm <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
   stop("DuckDB function lcm() is not available in R.")
 }
@@ -7082,11 +7082,11 @@ lcm <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
 #' @usage least(arg1 = ANY)
 #' @param arg1 `ANY`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' least(42, 84)
 #' least('abc', 'bcd', 'cde', 'EFG')
-#' }
+#' ```
 least <- function(arg1 = ANY) {
   stop("DuckDB function least() is not available in R.")
 }
@@ -7106,10 +7106,10 @@ least <- function(arg1 = ANY) {
 #' @param x `BIGINT | HUGEINT`
 #' @param y `BIGINT | HUGEINT`
 #' @return `BIGINT | HUGEINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' least_common_multiple(42, 57)
-#' }
+#' ```
 least_common_multiple <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
   stop("DuckDB function least_common_multiple() is not available in R.")
 }
@@ -7124,10 +7124,10 @@ least_common_multiple <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`
 #' @param string `VARCHAR`
 #' @param count `BIGINT`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' left('Hello🦆', 2)
-#' }
+#' ```
 left <- function(string = VARCHAR, count = BIGINT) {
   stop("DuckDB function left() is not available in R.")
 }
@@ -7142,10 +7142,10 @@ left <- function(string = VARCHAR, count = BIGINT) {
 #' @param string `VARCHAR`
 #' @param count `BIGINT`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' left_grapheme('🤦🏼‍♂️🤦🏽‍♀️', 1)
-#' }
+#' ```
 left_grapheme <- function(string = VARCHAR, count = BIGINT) {
   stop("DuckDB function left_grapheme() is not available in R.")
 }
@@ -7171,12 +7171,12 @@ left_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #' @param bit `BIT`
 #' @param list `ANY[]`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' length('Hello🦆')
 #' length(42::TINYINT::BIT)
 #' length([1,2,3])
-#' }
+#' ```
 len <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
   stop("DuckDB function len() is not available in R.")
 }
@@ -7190,10 +7190,10 @@ len <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
 #' @usage length_grapheme(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' length_grapheme('🤦🏼‍♂️🤦🏽‍♀️')
-#' }
+#' ```
 length_grapheme <- function(string = VARCHAR) {
   stop("DuckDB function length_grapheme() is not available in R.")
 }
@@ -7208,10 +7208,10 @@ length_grapheme <- function(string = VARCHAR) {
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' levenshtein('duck', 'db')
-#' }
+#' ```
 levenshtein <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function levenshtein() is not available in R.")
 }
@@ -7225,10 +7225,10 @@ levenshtein <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' @usage lgamma(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' lgamma(2)
-#' }
+#' ```
 lgamma <- function(x = DOUBLE) {
   stop("DuckDB function lgamma() is not available in R.")
 }
@@ -7244,10 +7244,10 @@ lgamma <- function(x = DOUBLE) {
 #' @param like_specifier `VARCHAR`
 #' @param escape_character `VARCHAR`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' like_escape('a%c', 'a$%c', '$')
-#' }
+#' ```
 like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
   stop("DuckDB function like_escape() is not available in R.")
 }
@@ -7261,10 +7261,10 @@ like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_chara
 #' @usage list(arg = T)
 #' @param arg `T`
 #' @return `T[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list(A)
-#' }
+#' ```
 list <- function(arg = T) {
   stop("DuckDB function list() is not available in R.")
 }
@@ -7279,10 +7279,10 @@ list <- function(arg = T) {
 #' @param list `ANY[]`
 #' @param function_name `VARCHAR`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_aggregate([1, 2, NULL], 'min')
-#' }
+#' ```
 list_aggr <- function(list = `ANY[]`, function_name = VARCHAR) {
   stop("DuckDB function list_aggr() is not available in R.")
 }
@@ -7297,10 +7297,10 @@ list_aggr <- function(list = `ANY[]`, function_name = VARCHAR) {
 #' @param list `ANY[]`
 #' @param function_name `VARCHAR`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_aggregate([1, 2, NULL], 'min')
-#' }
+#' ```
 list_aggregate <- function(list = `ANY[]`, function_name = VARCHAR) {
   stop("DuckDB function list_aggregate() is not available in R.")
 }
@@ -7342,10 +7342,10 @@ list_append <- function(l, e) {
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_apply([1, 2, 3], lambda x : x + 1)
-#' }
+#' ```
 list_apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function list_apply() is not available in R.")
 }
@@ -7450,10 +7450,10 @@ list_bool_or <- function(l) {
 #' @usage list_cat()
 
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_cat([2, 3], [4, 5, 6], [7])
-#' }
+#' ```
 list_cat <- function() {
   stop("DuckDB function list_cat() is not available in R.")
 }
@@ -7467,10 +7467,10 @@ list_cat <- function() {
 #' @usage list_concat()
 
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_concat([2, 3], [4, 5, 6], [7])
-#' }
+#' ```
 list_concat <- function() {
   stop("DuckDB function list_concat() is not available in R.")
 }
@@ -7485,10 +7485,10 @@ list_concat <- function() {
 #' @param list `T[]`
 #' @param element `T`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_contains([1, 2, NULL], 1)
-#' }
+#' ```
 list_contains <- function(list = `T[]`, element = T) {
   stop("DuckDB function list_contains() is not available in R.")
 }
@@ -7508,10 +7508,10 @@ list_contains <- function(list = `T[]`, element = T) {
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_cosine_distance([1, 2, 3], [1, 2, 3])
-#' }
+#' ```
 list_cosine_distance <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBLE[]`) {
   stop("DuckDB function list_cosine_distance() is not available in R.")
 }
@@ -7531,10 +7531,10 @@ list_cosine_distance <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] 
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_cosine_similarity([1, 2, 3], [1, 2, 3])
-#' }
+#' ```
 list_cosine_similarity <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBLE[]`) {
   stop("DuckDB function list_cosine_similarity() is not available in R.")
 }
@@ -7567,10 +7567,10 @@ list_count <- function(l) {
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_distance([1, 2, 3], [1, 2, 5])
-#' }
+#' ```
 list_distance <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBLE[]`) {
   stop("DuckDB function list_distance() is not available in R.")
 }
@@ -7584,10 +7584,10 @@ list_distance <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBL
 #' @usage list_distinct(list = `T[]`)
 #' @param list `T[]`
 #' @return `T[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_distinct([1, 1, NULL, -3, 1, 5])
-#' }
+#' ```
 list_distinct <- function(list = `T[]`) {
   stop("DuckDB function list_distinct() is not available in R.")
 }
@@ -7607,10 +7607,10 @@ list_distinct <- function(list = `T[]`) {
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_dot_product([1, 2, 3], [1, 2, 3])
-#' }
+#' ```
 list_dot_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBLE[]`) {
   stop("DuckDB function list_dot_product() is not available in R.")
 }
@@ -7630,10 +7630,10 @@ list_dot_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DO
 #' @param list `T[] | VARCHAR`
 #' @param index `BIGINT`
 #' @return `T | VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_element([4, 5, 6], 3)
-#' }
+#' ```
 list_element <- function(list = `T[] | VARCHAR`, index = BIGINT) {
   stop("DuckDB function list_element() is not available in R.")
 }
@@ -7666,10 +7666,10 @@ list_entropy <- function(l) {
 #' @param list `T[] | VARCHAR`
 #' @param index `BIGINT`
 #' @return `T | VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_extract([4, 5, 6], 3)
-#' }
+#' ```
 list_extract <- function(list = `T[] | VARCHAR`, index = BIGINT) {
   stop("DuckDB function list_extract() is not available in R.")
 }
@@ -7684,10 +7684,10 @@ list_extract <- function(list = `T[] | VARCHAR`, index = BIGINT) {
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_filter([3, 4, 5], lambda x : x > 4)
-#' }
+#' ```
 list_filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function list_filter() is not available in R.")
 }
@@ -7722,10 +7722,10 @@ list_first <- function(l) {
 #' @param col1 `VARCHAR`
 #' @param col2 `VARCHAR`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_grade_up([3, 6, 1, 2])
-#' }
+#' ```
 list_grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
   stop("DuckDB function list_grade_up() is not available in R.")
 }
@@ -7740,10 +7740,10 @@ list_grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
 #' @param list `T[]`
 #' @param element `T`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_has([1, 2, NULL], 1)
-#' }
+#' ```
 list_has <- function(list = `T[]`, element = T) {
   stop("DuckDB function list_has() is not available in R.")
 }
@@ -7758,10 +7758,10 @@ list_has <- function(list = `T[]`, element = T) {
 #' @param list1 `T[]`
 #' @param list2 `T[]`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_has_all([1, 2, 3], [2, 3])
-#' }
+#' ```
 list_has_all <- function(list1 = `T[]`, list2 = `T[]`) {
   stop("DuckDB function list_has_all() is not available in R.")
 }
@@ -7776,10 +7776,10 @@ list_has_all <- function(list1 = `T[]`, list2 = `T[]`) {
 #' @param list1 `T[]`
 #' @param list2 `T[]`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_has_any([1, 2, 3], [2, 3, 4])
-#' }
+#' ```
 list_has_any <- function(list1 = `T[]`, list2 = `T[]`) {
   stop("DuckDB function list_has_any() is not available in R.")
 }
@@ -7807,10 +7807,10 @@ list_histogram <- function(l) {
 #' @param list `T[]`
 #' @param element `T`
 #' @return `INTEGER`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_indexof([1, 2, NULL], 2)
-#' }
+#' ```
 list_indexof <- function(list = `T[]`, element = T) {
   stop("DuckDB function list_indexof() is not available in R.")
 }
@@ -7830,10 +7830,10 @@ list_indexof <- function(list = `T[]`, element = T) {
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_inner_product([1, 2, 3], [1, 2, 3])
-#' }
+#' ```
 list_inner_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBLE[]`) {
   stop("DuckDB function list_inner_product() is not available in R.")
 }
@@ -7971,10 +7971,10 @@ list_mode <- function(l) {
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_negative_dot_product([1, 2, 3], [1, 2, 3])
-#' }
+#' ```
 list_negative_dot_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBLE[]`) {
   stop("DuckDB function list_negative_dot_product() is not available in R.")
 }
@@ -7994,10 +7994,10 @@ list_negative_dot_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLO
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_negative_inner_product([1, 2, 3], [1, 2, 3])
-#' }
+#' ```
 list_negative_inner_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBLE[]`) {
   stop("DuckDB function list_negative_inner_product() is not available in R.")
 }
@@ -8016,10 +8016,10 @@ list_negative_inner_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `F
 #' }
 #' @param any `T`
 #' @return `"NULL"[] | T[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_pack(4, 5, 6)
-#' }
+#' ```
 list_pack <- function(any = T) {
   stop("DuckDB function list_pack() is not available in R.")
 }
@@ -8034,10 +8034,10 @@ list_pack <- function(any = T) {
 #' @param list `T[]`
 #' @param element `T`
 #' @return `INTEGER`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_position([1, 2, NULL], 2)
-#' }
+#' ```
 list_position <- function(list = `T[]`, element = T) {
   stop("DuckDB function list_position() is not available in R.")
 }
@@ -8085,10 +8085,10 @@ list_product <- function(l) {
 #' @param lambda(x,y) `LAMBDA`
 #' @param initial_value `ANY`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_reduce([1, 2, 3], lambda x, y : x + y)
-#' }
+#' ```
 list_reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY) {
   stop("DuckDB function list_reduce() is not available in R.")
 }
@@ -8109,10 +8109,10 @@ list_reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = 
 #' @param size[ `ANY`
 #' @param value] `ANY`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_resize([1, 2, 3], 5, 0)
-#' }
+#' ```
 list_resize <- function(list = `ANY[]`, `size[` = ANY, `value]` = ANY) {
   stop("DuckDB function list_resize() is not available in R.")
 }
@@ -8145,10 +8145,10 @@ list_reverse <- function(l) {
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_reverse_sort([3, 6, 1, 2])
-#' }
+#' ```
 list_reverse_sort <- function(list = `ANY[]`, col1 = VARCHAR) {
   stop("DuckDB function list_reverse_sort() is not available in R.")
 }
@@ -8163,10 +8163,10 @@ list_reverse_sort <- function(list = `ANY[]`, col1 = VARCHAR) {
 #' @param value_list `T[]`
 #' @param index_list `BIGINT[]`
 #' @return `T[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_select([10, 20, 30, 40], [1, 4])
-#' }
+#' ```
 list_select <- function(value_list = `T[]`, index_list = `BIGINT[]`) {
   stop("DuckDB function list_select() is not available in R.")
 }
@@ -8216,11 +8216,11 @@ list_skewness <- function(l) {
 #' @param end `ANY`
 #' @param step `BIGINT`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_slice([4, 5, 6], 2, 3)
 #' list_slice([4, 5, 6], 1, 3, 2)
-#' }
+#' ```
 list_slice <- function(list = ANY, begin = ANY, end = ANY, step = BIGINT) {
   stop("DuckDB function list_slice() is not available in R.")
 }
@@ -8242,10 +8242,10 @@ list_slice <- function(list = ANY, begin = ANY, end = ANY, step = BIGINT) {
 #' @param col1 `VARCHAR`
 #' @param col2 `VARCHAR`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_sort([3, 6, 1, 2])
-#' }
+#' ```
 list_sort <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
   stop("DuckDB function list_sort() is not available in R.")
 }
@@ -8312,10 +8312,10 @@ list_sum <- function(l) {
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
 #' @return `ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_transform([1, 2, 3], lambda x : x + 1)
-#' }
+#' ```
 list_transform <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function list_transform() is not available in R.")
 }
@@ -8329,10 +8329,10 @@ list_transform <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' @usage list_unique(list = `ANY[]`)
 #' @param list `ANY[]`
 #' @return `UBIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_unique([1, 1, NULL, -3, 1, 5])
-#' }
+#' ```
 list_unique <- function(list = `ANY[]`) {
   stop("DuckDB function list_unique() is not available in R.")
 }
@@ -8351,10 +8351,10 @@ list_unique <- function(list = `ANY[]`) {
 #' }
 #' @param any `T`
 #' @return `"NULL"[] | T[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_value(4, 5, 6)
-#' }
+#' ```
 list_value <- function(any = T) {
   stop("DuckDB function list_value() is not available in R.")
 }
@@ -8395,10 +8395,10 @@ list_var_samp <- function(l) {
 #' @param value_list `T[]`
 #' @param mask_list `BOOLEAN[]`
 #' @return `T[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_where([10, 20, 30, 40], [true, false, false, true])
-#' }
+#' ```
 list_where <- function(value_list = `T[]`, mask_list = `BOOLEAN[]`) {
   stop("DuckDB function list_where() is not available in R.")
 }
@@ -8412,12 +8412,12 @@ list_where <- function(value_list = `T[]`, mask_list = `BOOLEAN[]`) {
 #' @usage list_zip()
 
 #' @return `STRUCT[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' list_zip([1, 2], [3, 4], [5, 6])
 #' list_zip([1, 2], [3, 4], [5, 6, 7])
 #' list_zip([1, 2], [3, 4], [5, 6, 7], true)
-#' }
+#' ```
 list_zip <- function() {
   stop("DuckDB function list_zip() is not available in R.")
 }
@@ -8437,10 +8437,10 @@ list_zip <- function() {
 #' @param str `ANY`
 #' @param arg `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' listagg(A, '-')
-#' }
+#' ```
 listagg <- function(str = ANY, arg = VARCHAR) {
   stop("DuckDB function listagg() is not available in R.")
 }
@@ -8454,10 +8454,10 @@ listagg <- function(str = ANY, arg = VARCHAR) {
 #' @usage ln(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' ln(2)
-#' }
+#' ```
 ln <- function(x = DOUBLE) {
   stop("DuckDB function ln() is not available in R.")
 }
@@ -8477,10 +8477,10 @@ ln <- function(x = DOUBLE) {
 #' @param b `DOUBLE`
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' log(2, 64)
-#' }
+#' ```
 log <- function(b = DOUBLE, x = DOUBLE) {
   stop("DuckDB function log() is not available in R.")
 }
@@ -8494,10 +8494,10 @@ log <- function(b = DOUBLE, x = DOUBLE) {
 #' @usage log10(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' log10(1000)
-#' }
+#' ```
 log10 <- function(x = DOUBLE) {
   stop("DuckDB function log10() is not available in R.")
 }
@@ -8511,10 +8511,10 @@ log10 <- function(x = DOUBLE) {
 #' @usage log2(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' log2(8)
-#' }
+#' ```
 log2 <- function(x = DOUBLE) {
   stop("DuckDB function log2() is not available in R.")
 }
@@ -8528,10 +8528,10 @@ log2 <- function(x = DOUBLE) {
 #' @usage lower(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' lower('Hello')
-#' }
+#' ```
 lower <- function(string = VARCHAR) {
   stop("DuckDB function lower() is not available in R.")
 }
@@ -8547,10 +8547,10 @@ lower <- function(string = VARCHAR) {
 #' @param count `INTEGER`
 #' @param character `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' lpad('hello', 8, '>')
-#' }
+#' ```
 lpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
   stop("DuckDB function lpad() is not available in R.")
 }
@@ -8570,11 +8570,11 @@ lpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #' @param string `VARCHAR`
 #' @param characters `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' ltrim('    test  ')
 #' ltrim('>>>>test<<', '><')
-#' }
+#' ```
 ltrim <- function(string = VARCHAR, characters = VARCHAR) {
   stop("DuckDB function ltrim() is not available in R.")
 }
@@ -8599,10 +8599,10 @@ ltrim <- function(string = VARCHAR, characters = VARCHAR) {
 #' }
 #' @param x `DECIMAL | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE`
 #' @return `DECIMAL | FLOAT | DOUBLE | INTERVAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' mad(x)
-#' }
+#' ```
 mad <- function(x = `DECIMAL | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE`) {
   stop("DuckDB function mad() is not available in R.")
 }
@@ -8628,11 +8628,11 @@ mad <- function(x = `DECIMAL | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMEST
 #' @param day `BIGINT`
 #' @param date-struct `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`
 #' @return `DATE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' make_date(1992, 9, 20)
 #' make_date({'year': 2024, 'month': 11, 'day': 14})
-#' }
+#' ```
 make_date <- function(col0 = INTEGER, year = BIGINT, month = BIGINT, day = BIGINT, `date-struct` = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`) {
   stop("DuckDB function make_date() is not available in R.")
 }
@@ -8648,10 +8648,10 @@ make_date <- function(col0 = INTEGER, year = BIGINT, month = BIGINT, day = BIGIN
 #' @param minute `BIGINT`
 #' @param seconds `DOUBLE`
 #' @return `TIME`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' make_time(13, 34, 27.123456)
-#' }
+#' ```
 make_time <- function(hour = BIGINT, minute = BIGINT, seconds = DOUBLE) {
   stop("DuckDB function make_time() is not available in R.")
 }
@@ -8675,10 +8675,10 @@ make_time <- function(hour = BIGINT, minute = BIGINT, seconds = DOUBLE) {
 #' @param minute `BIGINT`
 #' @param seconds `DOUBLE`
 #' @return `TIMESTAMP`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' make_timestamp(1992, 9, 20, 13, 34, 27.123456)
-#' }
+#' ```
 make_timestamp <- function(year = BIGINT, month = BIGINT, day = BIGINT, hour = BIGINT, minute = BIGINT, seconds = DOUBLE) {
   stop("DuckDB function make_timestamp() is not available in R.")
 }
@@ -8692,10 +8692,10 @@ make_timestamp <- function(year = BIGINT, month = BIGINT, day = BIGINT, hour = B
 #' @usage make_timestamp_ms(nanos = BIGINT)
 #' @param nanos `BIGINT`
 #' @return `TIMESTAMP`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' make_timestamp_ms(1732117793000000)
-#' }
+#' ```
 make_timestamp_ms <- function(nanos = BIGINT) {
   stop("DuckDB function make_timestamp_ms() is not available in R.")
 }
@@ -8709,10 +8709,10 @@ make_timestamp_ms <- function(nanos = BIGINT) {
 #' @usage make_timestamp_ns(nanos = BIGINT)
 #' @param nanos `BIGINT`
 #' @return `TIMESTAMP_NS`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' make_timestamp_ns(1732117793000000000)
-#' }
+#' ```
 make_timestamp_ns <- function(nanos = BIGINT) {
   stop("DuckDB function make_timestamp_ns() is not available in R.")
 }
@@ -8732,10 +8732,10 @@ make_timestamp_ns <- function(nanos = BIGINT) {
 #' @param keys `K[]`
 #' @param values `V[]`
 #' @return `MAP("NULL", "NULL") | MAP(K, V)`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' map(['key1', 'key2'], ['val1', 'val2'])
-#' }
+#' ```
 map <- function(keys = `K[]`, values = `V[]`) {
   stop("DuckDB function map() is not available in R.")
 }
@@ -8749,10 +8749,10 @@ map <- function(keys = `K[]`, values = `V[]`) {
 #' @usage map_concat()
 
 #' @return `LIST`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' map_concat(map([1, 2], ['a', 'b']), map([2, 3], ['c', 'd']));
-#' }
+#' ```
 map_concat <- function() {
   stop("DuckDB function map_concat() is not available in R.")
 }
@@ -8767,10 +8767,10 @@ map_concat <- function() {
 #' @param map `MAP(K, V)`
 #' @param key `K`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' map_contains(MAP {'key1': 10, 'key2': 20, 'key3': 30}, 'key2')
-#' }
+#' ```
 map_contains <- function(map = `MAP(K, V)`, key = K) {
   stop("DuckDB function map_contains() is not available in R.")
 }
@@ -8813,10 +8813,10 @@ map_contains_value <- function(map, value) {
 #' @usage map_entries(map = `MAP(K, V)`)
 #' @param map `MAP(K, V)`
 #' @return `STRUCT("key" K, "value" V)[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' map_entries(map(['key'], ['val']))
-#' }
+#' ```
 map_entries <- function(map = `MAP(K, V)`) {
   stop("DuckDB function map_entries() is not available in R.")
 }
@@ -8831,10 +8831,10 @@ map_entries <- function(map = `MAP(K, V)`) {
 #' @param map `MAP(K, V)`
 #' @param key `K`
 #' @return `V[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' map_extract(map(['key'], ['val']), 'key')
-#' }
+#' ```
 map_extract <- function(map = `MAP(K, V)`, key = K) {
   stop("DuckDB function map_extract() is not available in R.")
 }
@@ -8849,10 +8849,10 @@ map_extract <- function(map = `MAP(K, V)`, key = K) {
 #' @param map `MAP(K, V)`
 #' @param key `K`
 #' @return `V`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' map_extract_value(map(['key'], ['val']), 'key')
-#' }
+#' ```
 map_extract_value <- function(map = `MAP(K, V)`, key = K) {
   stop("DuckDB function map_extract_value() is not available in R.")
 }
@@ -8866,10 +8866,10 @@ map_extract_value <- function(map = `MAP(K, V)`, key = K) {
 #' @usage map_from_entries(map = `STRUCT(K, V)[]`)
 #' @param map `STRUCT(K, V)[]`
 #' @return `MAP(K, V)`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' map_from_entries([{k: 5, v: 'val1'}, {k: 3, v: 'val2'}]);
-#' }
+#' ```
 map_from_entries <- function(map = `STRUCT(K, V)[]`) {
   stop("DuckDB function map_from_entries() is not available in R.")
 }
@@ -8883,10 +8883,10 @@ map_from_entries <- function(map = `STRUCT(K, V)[]`) {
 #' @usage map_keys(map = `MAP(K, V)`)
 #' @param map `MAP(K, V)`
 #' @return `K[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' map_keys(map(['key'], ['val']))
-#' }
+#' ```
 map_keys <- function(map = `MAP(K, V)`) {
   stop("DuckDB function map_keys() is not available in R.")
 }
@@ -8913,10 +8913,10 @@ map_to_pg_oid <- function(type_name) {
 #' @usage map_values(map = `MAP(K, V)`)
 #' @param map `MAP(K, V)`
 #' @return `V[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' map_values(map(['key'], ['val']))
-#' }
+#' ```
 map_values <- function(map = `MAP(K, V)`) {
   stop("DuckDB function map_values() is not available in R.")
 }
@@ -8936,10 +8936,10 @@ map_values <- function(map = `MAP(K, V)`) {
 #' @param arg `ANY`
 #' @param col1 `BIGINT`
 #' @return `ANY | ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' max(A)
-#' }
+#' ```
 max <- function(arg = ANY, col1 = BIGINT) {
   stop("DuckDB function max() is not available in R.")
 }
@@ -9050,10 +9050,10 @@ max <- function(arg = ANY, col1 = BIGINT) {
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
 #' @param col2 `BIGINT`
 #' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' max_by(A, B)
-#' }
+#' ```
 max_by <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, col2 = BIGINT) {
   stop("DuckDB function max_by() is not available in R.")
 }
@@ -9075,11 +9075,11 @@ max_by <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP
 #' @param string `VARCHAR`
 #' @param blob `BLOB`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' md5('abc')
 #' md5('\xAA\xBB'::BLOB)
-#' }
+#' ```
 md5 <- function(string = VARCHAR, blob = BLOB) {
   stop("DuckDB function md5() is not available in R.")
 }
@@ -9101,11 +9101,11 @@ md5 <- function(string = VARCHAR, blob = BLOB) {
 #' @param string `VARCHAR`
 #' @param blob `BLOB`
 #' @return `UHUGEINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' md5_number('abc')
 #' md5_number('\xAA\xBB'::BLOB)
-#' }
+#' ```
 md5_number <- function(string = VARCHAR, blob = BLOB) {
   stop("DuckDB function md5_number() is not available in R.")
 }
@@ -9159,10 +9159,10 @@ md5_number_upper <- function(param) {
 #' }
 #' @param x `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL | DOUBLE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`
 #' @return `DECIMAL | DOUBLE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' SUM(x) / COUNT(*)
-#' }
+#' ```
 mean <- function(x = `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL | DOUBLE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`) {
   stop("DuckDB function mean() is not available in R.")
 }
@@ -9176,10 +9176,10 @@ mean <- function(x = `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL
 #' @usage median(x = ANY)
 #' @param x `ANY`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' median(x)
-#' }
+#' ```
 median <- function(x = ANY) {
   stop("DuckDB function median() is not available in R.")
 }
@@ -9216,10 +9216,10 @@ metadata_info <- function() {
 #' }
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' microsecond(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 microsecond <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function microsecond() is not available in R.")
 }
@@ -9240,10 +9240,10 @@ microsecond <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' millennium(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 millennium <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function millennium() is not available in R.")
 }
@@ -9267,10 +9267,10 @@ millennium <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME Z
 #' }
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' millisecond(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 millisecond <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function millisecond() is not available in R.")
 }
@@ -9290,10 +9290,10 @@ millisecond <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
 #' @param arg `ANY`
 #' @param col1 `BIGINT`
 #' @return `ANY | ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' min(A)
-#' }
+#' ```
 min <- function(arg = ANY, col1 = BIGINT) {
   stop("DuckDB function min() is not available in R.")
 }
@@ -9404,10 +9404,10 @@ min <- function(arg = ANY, col1 = BIGINT) {
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
 #' @param col2 `BIGINT`
 #' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' min_by(A, B)
-#' }
+#' ```
 min_by <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, col2 = BIGINT) {
   stop("DuckDB function min_by() is not available in R.")
 }
@@ -9431,10 +9431,10 @@ min_by <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP
 #' }
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' minute(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 minute <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function minute() is not available in R.")
 }
@@ -9449,10 +9449,10 @@ minute <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZON
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' mismatches('duck', 'luck')
-#' }
+#' ```
 mismatches <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function mismatches() is not available in R.")
 }
@@ -9516,10 +9516,10 @@ mode <- function(x = ANY) {
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' month(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 month <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function month() is not available in R.")
 }
@@ -9539,10 +9539,10 @@ month <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`)
 #' }
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' monthname(TIMESTAMP '1992-09-20')
-#' }
+#' ```
 monthname <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function monthname() is not available in R.")
 }
@@ -9601,10 +9601,10 @@ multiply <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | F
 #' }
 #' @param tsns `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' nanosecond(timestamp_ns '2021-08-03 11:59:44.123456789')
-#' }
+#' ```
 nanosecond <- function(tsns = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP_NS | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function nanosecond() is not available in R.")
 }
@@ -9624,10 +9624,10 @@ nanosecond <- function(tsns = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TI
 #' @param x `DOUBLE | FLOAT`
 #' @param y `DOUBLE | FLOAT`
 #' @return `DOUBLE | FLOAT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' nextafter(1::float, 2::float)
-#' }
+#' ```
 nextafter <- function(x = `DOUBLE | FLOAT`, y = `DOUBLE | FLOAT`) {
   stop("DuckDB function nextafter() is not available in R.")
 }
@@ -9641,10 +9641,10 @@ nextafter <- function(x = `DOUBLE | FLOAT`, y = `DOUBLE | FLOAT`) {
 #' @usage nextval(`'sequence_name'` = VARCHAR)
 #' @param 'sequence_name' `VARCHAR`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' nextval('my_sequence_name')
-#' }
+#' ```
 nextval <- function(`'sequence_name'` = VARCHAR) {
   stop("DuckDB function nextval() is not available in R.")
 }
@@ -9658,10 +9658,10 @@ nextval <- function(`'sequence_name'` = VARCHAR) {
 #' @usage nfc_normalize(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' nfc_normalize('ardèch')
-#' }
+#' ```
 nfc_normalize <- function(string = VARCHAR) {
   stop("DuckDB function nfc_normalize() is not available in R.")
 }
@@ -9675,10 +9675,10 @@ nfc_normalize <- function(string = VARCHAR) {
 #' @usage normalized_interval(interval = INTERVAL)
 #' @param interval `INTERVAL`
 #' @return `INTERVAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' normalized_interval(INTERVAL '30 days')
-#' }
+#' ```
 normalized_interval <- function(interval = INTERVAL) {
   stop("DuckDB function normalized_interval() is not available in R.")
 }
@@ -9694,10 +9694,10 @@ normalized_interval <- function(interval = INTERVAL) {
 #' @param like_specifier `VARCHAR`
 #' @param escape_character `VARCHAR`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' not_ilike_escape('A%c', 'a$%C', '$')
-#' }
+#' ```
 not_ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
   stop("DuckDB function not_ilike_escape() is not available in R.")
 }
@@ -9713,10 +9713,10 @@ not_ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_
 #' @param like_specifier `VARCHAR`
 #' @param escape_character `VARCHAR`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' not_like_escape('a%c', 'a$%c', '$')
-#' }
+#' ```
 not_like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
   stop("DuckDB function not_like_escape() is not available in R.")
 }
@@ -9730,10 +9730,10 @@ not_like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_c
 #' @usage now()
 
 #' @return `TIMESTAMP WITH TIME ZONE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' now()
-#' }
+#' ```
 now <- function() {
   stop("DuckDB function now() is not available in R.")
 }
@@ -9783,11 +9783,11 @@ obj_description <- function(object_oid, catalog_name) {
 #' @param blob `BLOB`
 #' @param bitstring `BIT`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' octet_length('\xAA\xBB'::BLOB)
 #' octet_length('1101011'::BITSTRING)
-#' }
+#' ```
 octet_length <- function(blob = BLOB, bitstring = BIT) {
   stop("DuckDB function octet_length() is not available in R.")
 }
@@ -9801,10 +9801,10 @@ octet_length <- function(blob = BLOB, bitstring = BIT) {
 #' @usage ord(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @return `INTEGER`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' [unicode('âbcd'), unicode('â'), unicode(''), unicode(NULL)]
-#' }
+#' ```
 ord <- function(string = VARCHAR) {
   stop("DuckDB function ord() is not available in R.")
 }
@@ -9948,10 +9948,10 @@ parquet_schema <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' @param path `VARCHAR`
 #' @param separator `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' parse_dirname('path/to/file.csv', 'system')
-#' }
+#' ```
 parse_dirname <- function(path = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function parse_dirname() is not available in R.")
 }
@@ -9971,10 +9971,10 @@ parse_dirname <- function(path = VARCHAR, separator = VARCHAR) {
 #' @param path `VARCHAR`
 #' @param separator `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' parse_dirpath('path/to/file.csv', 'forward_slash')
-#' }
+#' ```
 parse_dirpath <- function(path = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function parse_dirpath() is not available in R.")
 }
@@ -9989,10 +9989,10 @@ parse_dirpath <- function(path = VARCHAR, separator = VARCHAR) {
 #' @param type `VARCHAR`
 #' @param message `VARCHAR`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' parse_duckdb_log_message('FileSystem', log_message)
-#' }
+#' ```
 parse_duckdb_log_message <- function(type = VARCHAR, message = VARCHAR) {
   stop("DuckDB function parse_duckdb_log_message() is not available in R.")
 }
@@ -10015,10 +10015,10 @@ parse_duckdb_log_message <- function(type = VARCHAR, message = VARCHAR) {
 #' @param trim_extension `VARCHAR | BOOLEAN`
 #' @param separator `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' parse_filename('path/to/file.csv', true, 'forward_slash')
-#' }
+#' ```
 parse_filename <- function(string = VARCHAR, trim_extension = `VARCHAR | BOOLEAN`, separator = VARCHAR) {
   stop("DuckDB function parse_filename() is not available in R.")
 }
@@ -10038,10 +10038,10 @@ parse_filename <- function(string = VARCHAR, trim_extension = `VARCHAR | BOOLEAN
 #' @param path `VARCHAR`
 #' @param separator `VARCHAR`
 #' @return `VARCHAR[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' parse_path('path/to/file.csv', 'system')
-#' }
+#' ```
 parse_path <- function(path = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function parse_path() is not available in R.")
 }
@@ -10355,10 +10355,10 @@ pg_typeof <- function(expression) {
 #' @usage pi()
 
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' pi()
-#' }
+#' ```
 pi <- function() {
   stop("DuckDB function pi() is not available in R.")
 }
@@ -10386,10 +10386,10 @@ platform <- function() {
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' position('b' IN 'abc')
-#' }
+#' ```
 position <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function position() is not available in R.")
 }
@@ -10404,11 +10404,11 @@ position <- function(string = VARCHAR, search_string = VARCHAR) {
 #' @param x `DOUBLE`
 #' @param y `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' pow(2, 3)
 #' power(2, 3)
-#' }
+#' ```
 pow <- function(x = DOUBLE, y = DOUBLE) {
   stop("DuckDB function pow() is not available in R.")
 }
@@ -10423,10 +10423,10 @@ pow <- function(x = DOUBLE, y = DOUBLE) {
 #' @param x `DOUBLE`
 #' @param y `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' power(2, 3)
-#' }
+#' ```
 power <- function(x = DOUBLE, y = DOUBLE) {
   stop("DuckDB function power() is not available in R.")
 }
@@ -10563,10 +10563,10 @@ pragma_version <- function() {
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' prefix('abc', 'ab')
-#' }
+#' ```
 prefix <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function prefix() is not available in R.")
 }
@@ -10580,10 +10580,10 @@ prefix <- function(string = VARCHAR, search_string = VARCHAR) {
 #' @usage printf(format = VARCHAR)
 #' @param format `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' printf('Benchmark "%s" took %d seconds', 'CSV', 42)
-#' }
+#' ```
 printf <- function(format = VARCHAR) {
   stop("DuckDB function printf() is not available in R.")
 }
@@ -10597,10 +10597,10 @@ printf <- function(format = VARCHAR) {
 #' @usage product(arg = DOUBLE)
 #' @param arg `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' product(A)
-#' }
+#' ```
 product <- function(arg = DOUBLE) {
   stop("DuckDB function product() is not available in R.")
 }
@@ -10621,10 +10621,10 @@ product <- function(arg = DOUBLE) {
 #' @param x `ANY`
 #' @param pos `DOUBLE | DOUBLE[]`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' quantile_disc(x, 0.5)
-#' }
+#' ```
 quantile <- function(x = ANY, pos = `DOUBLE | DOUBLE[]`) {
   stop("DuckDB function quantile() is not available in R.")
 }
@@ -10668,10 +10668,10 @@ quantile <- function(x = ANY, pos = `DOUBLE | DOUBLE[]`) {
 #' @param x `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE`
 #' @param pos `DOUBLE | DOUBLE[]`
 #' @return `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' quantile_cont(x, 0.5)
-#' }
+#' ```
 quantile_cont <- function(x = `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE`, pos = `DOUBLE | DOUBLE[]`) {
   stop("DuckDB function quantile_cont() is not available in R.")
 }
@@ -10692,10 +10692,10 @@ quantile_cont <- function(x = `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT |
 #' @param x `ANY`
 #' @param pos `DOUBLE | DOUBLE[]`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' quantile_disc(x, 0.5)
-#' }
+#' ```
 quantile_disc <- function(x = ANY, pos = `DOUBLE | DOUBLE[]`) {
   stop("DuckDB function quantile_disc() is not available in R.")
 }
@@ -10716,10 +10716,10 @@ quantile_disc <- function(x = ANY, pos = `DOUBLE | DOUBLE[]`) {
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' quarter(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 quarter <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function quarter() is not available in R.")
 }
@@ -10781,10 +10781,10 @@ r_dataframe_scan <- function(col0 = POINTER, experimental = BOOLEAN, integer64 =
 #' @usage radians(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' radians(90)
-#' }
+#' ```
 radians <- function(x = DOUBLE) {
   stop("DuckDB function radians() is not available in R.")
 }
@@ -10798,10 +10798,10 @@ radians <- function(x = DOUBLE) {
 #' @usage random()
 
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' random()
-#' }
+#' ```
 random <- function() {
   stop("DuckDB function random() is not available in R.")
 }
@@ -10832,10 +10832,10 @@ random <- function() {
 #' @param stop `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param step `BIGINT | INTERVAL`
 #' @return `BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' range(2, 5, 3)
-#' }
+#' ```
 range <- function(col0 = `BIGINT | TIMESTAMP`, col1 = `BIGINT | TIMESTAMP`, col2 = `BIGINT | INTERVAL`, start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, stop = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, step = `BIGINT | INTERVAL`) {
   stop("DuckDB function range() is not available in R.")
 }
@@ -11060,10 +11060,10 @@ read_text <- function(col0 = `VARCHAR | VARCHAR[]`, union_by_name = BOOLEAN, hiv
 #' @param lambda(x,y) `LAMBDA`
 #' @param initial_value `ANY`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' reduce([1, 2, 3], lambda x, y : x + y)
-#' }
+#' ```
 reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY) {
   stop("DuckDB function reduce() is not available in R.")
 }
@@ -11077,10 +11077,10 @@ reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY) 
 #' @usage regexp_escape(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' regexp_escape('https://duckdb.org')
-#' }
+#' ```
 regexp_escape <- function(string = VARCHAR) {
   stop("DuckDB function regexp_escape() is not available in R.")
 }
@@ -11108,14 +11108,14 @@ regexp_escape <- function(string = VARCHAR) {
 #' @param options `VARCHAR`
 #' @param name_list `VARCHAR[]`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' regexp_extract('abcde', '[a-z]{3}')
 #' regexp_extract('abc', '([a-z])(b)', 1)
 #' regexp_extract('ABC', '([a-z])(b)', 1, 'i')
 #' regexp_extract('2023-04-15', '(\d+)-(\d+)-(\d+)', ['y', 'm', 'd'])
 #' regexp_extract('John Doe', '([a-z]+) ([a-z]+)', ['first_name', 'last_name'], 'i')
-#' }
+#' ```
 regexp_extract <- function(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR, name_list = `VARCHAR[]`) {
   stop("DuckDB function regexp_extract() is not available in R.")
 }
@@ -11138,10 +11138,10 @@ regexp_extract <- function(string = VARCHAR, regex = VARCHAR, group = INTEGER, o
 #' @param group `INTEGER`
 #' @param options `VARCHAR`
 #' @return `VARCHAR[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' regexp_extract_all('Peter: 33, Paul:14', '(\w+):\s*(\d+)', 2)
-#' }
+#' ```
 regexp_extract_all <- function(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR) {
   stop("DuckDB function regexp_extract_all() is not available in R.")
 }
@@ -11162,10 +11162,10 @@ regexp_extract_all <- function(string = VARCHAR, regex = VARCHAR, group = INTEGE
 #' @param regex `VARCHAR`
 #' @param col2 `VARCHAR`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' regexp_full_match('anabanana', '(an)*')
-#' }
+#' ```
 regexp_full_match <- function(string = VARCHAR, regex = VARCHAR, col2 = VARCHAR) {
   stop("DuckDB function regexp_full_match() is not available in R.")
 }
@@ -11186,10 +11186,10 @@ regexp_full_match <- function(string = VARCHAR, regex = VARCHAR, col2 = VARCHAR)
 #' @param regex `VARCHAR`
 #' @param options `VARCHAR`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' regexp_matches('anabanana', '(an)*')
-#' }
+#' ```
 regexp_matches <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR) {
   stop("DuckDB function regexp_matches() is not available in R.")
 }
@@ -11211,10 +11211,10 @@ regexp_matches <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR)
 #' @param replacement `VARCHAR`
 #' @param options `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' regexp_replace('hello', '[lo]', '-')
-#' }
+#' ```
 regexp_replace <- function(string = VARCHAR, regex = VARCHAR, replacement = VARCHAR, options = VARCHAR) {
   stop("DuckDB function regexp_replace() is not available in R.")
 }
@@ -11235,10 +11235,10 @@ regexp_replace <- function(string = VARCHAR, regex = VARCHAR, replacement = VARC
 #' @param regex `VARCHAR`
 #' @param options `VARCHAR`
 #' @return `VARCHAR[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' regexp_split_to_array('hello world; 42', ';? ')
-#' }
+#' ```
 regexp_split_to_array <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR) {
   stop("DuckDB function regexp_split_to_array() is not available in R.")
 }
@@ -11295,10 +11295,10 @@ regr_avgy <- function(y = DOUBLE, x = DOUBLE) {
 #' @param y `DOUBLE`
 #' @param x `DOUBLE`
 #' @return `UINTEGER`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' (SUM(x*y) - SUM(x) * SUM(y) / COUNT(*)) / COUNT(*)
-#' }
+#' ```
 regr_count <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function regr_count() is not available in R.")
 }
@@ -11313,10 +11313,10 @@ regr_count <- function(y = DOUBLE, x = DOUBLE) {
 #' @param y `DOUBLE`
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' AVG(y)-REGR_SLOPE(y, x)*AVG(x)
-#' }
+#' ```
 regr_intercept <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function regr_intercept() is not available in R.")
 }
@@ -11345,10 +11345,10 @@ regr_r2 <- function(y = DOUBLE, x = DOUBLE) {
 #' @param y `DOUBLE`
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' COVAR_POP(x, y) / VAR_POP(x)
-#' }
+#' ```
 regr_slope <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function regr_slope() is not available in R.")
 }
@@ -11363,10 +11363,10 @@ regr_slope <- function(y = DOUBLE, x = DOUBLE) {
 #' @param y `DOUBLE`
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' REGR_COUNT(y, x) * VAR_POP(x)
-#' }
+#' ```
 regr_sxx <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function regr_sxx() is not available in R.")
 }
@@ -11381,10 +11381,10 @@ regr_sxx <- function(y = DOUBLE, x = DOUBLE) {
 #' @param y `DOUBLE`
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' REGR_COUNT(y, x) * COVAR_POP(y, x)
-#' }
+#' ```
 regr_sxy <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function regr_sxy() is not available in R.")
 }
@@ -11399,10 +11399,10 @@ regr_sxy <- function(y = DOUBLE, x = DOUBLE) {
 #' @param y `DOUBLE`
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' REGR_COUNT(y, x) * VAR_POP(y)
-#' }
+#' ```
 regr_syy <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function regr_syy() is not available in R.")
 }
@@ -11429,11 +11429,11 @@ regr_syy <- function(y = DOUBLE, x = DOUBLE) {
 #' @param count `BIGINT`
 #' @param blob `BLOB`
 #' @return `VARCHAR | BLOB | T[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' repeat('A', 5)
 #' repeat('\xAA\xBB'::BLOB, 5)
-#' }
+#' ```
 `repeat` <- function(col0 = `ANY | T[]`, col1 = BIGINT, string = VARCHAR, count = BIGINT, blob = BLOB) {
   stop("DuckDB function repeat() is not available in R.")
 }
@@ -11462,10 +11462,10 @@ repeat_row <- function(num_rows = BIGINT) {
 #' @param source `VARCHAR`
 #' @param target `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' replace('hello', 'l', '-')
-#' }
+#' ```
 replace <- function(string = VARCHAR, source = VARCHAR, target = VARCHAR) {
   stop("DuckDB function replace() is not available in R.")
 }
@@ -11481,10 +11481,10 @@ replace <- function(string = VARCHAR, source = VARCHAR, target = VARCHAR) {
 #' @param type1 `ANY`
 #' @param type2 `ANY`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' replace_type({duck: 3.141592653589793::DOUBLE}, NULL::DOUBLE, NULL::DECIMAL(15,2))
-#' }
+#' ```
 replace_type <- function(param = ANY, type1 = ANY, type2 = ANY) {
   stop("DuckDB function replace_type() is not available in R.")
 }
@@ -11535,10 +11535,10 @@ replace_type <- function(param = ANY, type1 = ANY, type2 = ANY) {
 #' @param quantile `DOUBLE | DOUBLE[]`
 #' @param sample_size `INTEGER`
 #' @return `DECIMAL | DECIMAL[] | TINYINT | TINYINT[] | SMALLINT | SMALLINT[] | INTEGER | INTEGER[] | BIGINT | BIGINT[] | HUGEINT | HUGEINT[] | FLOAT | FLOAT[] | DOUBLE | DOUBLE[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' reservoir_quantile(A, 0.5, 1024)
-#' }
+#' ```
 reservoir_quantile <- function(x = `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE`, quantile = `DOUBLE | DOUBLE[]`, sample_size = INTEGER) {
   stop("DuckDB function reservoir_quantile() is not available in R.")
 }
@@ -11552,10 +11552,10 @@ reservoir_quantile <- function(x = `DECIMAL | TINYINT | SMALLINT | INTEGER | BIG
 #' @usage reverse(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' reverse('hello')
-#' }
+#' ```
 reverse <- function(string = VARCHAR) {
   stop("DuckDB function reverse() is not available in R.")
 }
@@ -11570,10 +11570,10 @@ reverse <- function(string = VARCHAR) {
 #' @param string `VARCHAR`
 #' @param count `BIGINT`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' right('Hello🦆', 3)
-#' }
+#' ```
 right <- function(string = VARCHAR, count = BIGINT) {
   stop("DuckDB function right() is not available in R.")
 }
@@ -11588,10 +11588,10 @@ right <- function(string = VARCHAR, count = BIGINT) {
 #' @param string `VARCHAR`
 #' @param count `BIGINT`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' right_grapheme('🤦🏼‍♂️🤦🏽‍♀️', 1)
-#' }
+#' ```
 right_grapheme <- function(string = VARCHAR, count = BIGINT) {
   stop("DuckDB function right_grapheme() is not available in R.")
 }
@@ -11625,10 +11625,10 @@ right_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL`
 #' @param precision `INTEGER`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' round(42.4332, 2)
-#' }
+#' ```
 round <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL`, precision = INTEGER) {
   stop("DuckDB function round() is not available in R.")
 }
@@ -11670,10 +11670,10 @@ roundbankers <- function(x, n) {
 #' @usage row()
 
 #' @return `STRUCT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' row(i, i % 4, i / 4)
-#' }
+#' ```
 row <- function() {
   stop("DuckDB function row() is not available in R.")
 }
@@ -11689,10 +11689,10 @@ row <- function() {
 #' @param count `INTEGER`
 #' @param character `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' rpad('hello', 10, '<')
-#' }
+#' ```
 rpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
   stop("DuckDB function rpad() is not available in R.")
 }
@@ -11712,11 +11712,11 @@ rpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #' @param string `VARCHAR`
 #' @param characters `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' rtrim('    test  ')
 #' rtrim('>>>>test<<', '><')
-#' }
+#' ```
 rtrim <- function(string = VARCHAR, characters = VARCHAR) {
   stop("DuckDB function rtrim() is not available in R.")
 }
@@ -11740,10 +11740,10 @@ rtrim <- function(string = VARCHAR, characters = VARCHAR) {
 #' }
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' second(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 second <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function second() is not available in R.")
 }
@@ -11798,10 +11798,10 @@ session_user <- function() {
 #' @param index `INTEGER`
 #' @param new_value `INTEGER`
 #' @return `BIT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' set_bit('0110010'::BIT, 2, 0)
-#' }
+#' ```
 set_bit <- function(bitstring = BIT, index = INTEGER, new_value = INTEGER) {
   stop("DuckDB function set_bit() is not available in R.")
 }
@@ -11815,10 +11815,10 @@ set_bit <- function(bitstring = BIT, index = INTEGER, new_value = INTEGER) {
 #' @usage setseed(col0 = DOUBLE)
 #' @param col0 `DOUBLE`
 #' @return `"NULL"`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' setseed(0.42)
-#' }
+#' ```
 setseed <- function(col0 = DOUBLE) {
   stop("DuckDB function setseed() is not available in R.")
 }
@@ -11840,11 +11840,11 @@ setseed <- function(col0 = DOUBLE) {
 #' @param value `VARCHAR`
 #' @param blob `BLOB`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' sha1('🦆')
 #' sha1('\xAA\xBB'::BLOB)
-#' }
+#' ```
 sha1 <- function(value = VARCHAR, blob = BLOB) {
   stop("DuckDB function sha1() is not available in R.")
 }
@@ -11866,11 +11866,11 @@ sha1 <- function(value = VARCHAR, blob = BLOB) {
 #' @param value `VARCHAR`
 #' @param blob `BLOB`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' sha256('🦆')
 #' sha256('\xAA\xBB'::BLOB)
-#' }
+#' ```
 sha256 <- function(value = VARCHAR, blob = BLOB) {
   stop("DuckDB function sha256() is not available in R.")
 }
@@ -11965,10 +11965,10 @@ show_tables_expanded <- function() {
 #' }
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' sign(-349)
-#' }
+#' ```
 sign <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
   stop("DuckDB function sign() is not available in R.")
 }
@@ -11987,10 +11987,10 @@ sign <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | 
 #' }
 #' @param x `FLOAT | DOUBLE`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' signbit(-0.0)
-#' }
+#' ```
 signbit <- function(x = `FLOAT | DOUBLE`) {
   stop("DuckDB function signbit() is not available in R.")
 }
@@ -12004,10 +12004,10 @@ signbit <- function(x = `FLOAT | DOUBLE`) {
 #' @usage sin(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' sin(90)
-#' }
+#' ```
 sin <- function(x = DOUBLE) {
   stop("DuckDB function sin() is not available in R.")
 }
@@ -12021,10 +12021,10 @@ sin <- function(x = DOUBLE) {
 #' @usage sinh(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' sinh(1)
-#' }
+#' ```
 sinh <- function(x = DOUBLE) {
   stop("DuckDB function sinh() is not available in R.")
 }
@@ -12038,10 +12038,10 @@ sinh <- function(x = DOUBLE) {
 #' @usage skewness(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' skewness(A)
-#' }
+#' ```
 skewness <- function(x = DOUBLE) {
   stop("DuckDB function skewness() is not available in R.")
 }
@@ -12115,10 +12115,10 @@ sniff_csv <- function(col0 = VARCHAR, delim = VARCHAR, dateformat = VARCHAR, col
 #' @param string `VARCHAR`
 #' @param separator `VARCHAR`
 #' @return `VARCHAR[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' split('hello-world', '-')
-#' }
+#' ```
 split <- function(string = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function split() is not available in R.")
 }
@@ -12147,10 +12147,10 @@ split_part <- function(string, delimiter, position) {
 #' @usage sqrt(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' sqrt(4)
-#' }
+#' ```
 sqrt <- function(x = DOUBLE) {
   stop("DuckDB function sqrt() is not available in R.")
 }
@@ -12165,10 +12165,10 @@ sqrt <- function(x = DOUBLE) {
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' starts_with('abc', 'a')
-#' }
+#' ```
 starts_with <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function starts_with() is not available in R.")
 }
@@ -12182,10 +12182,10 @@ starts_with <- function(string = VARCHAR, search_string = VARCHAR) {
 #' @usage stats(expression = ANY)
 #' @param expression `ANY`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' stats(5)
-#' }
+#' ```
 stats <- function(expression = ANY) {
   stop("DuckDB function stats() is not available in R.")
 }
@@ -12199,10 +12199,10 @@ stats <- function(expression = ANY) {
 #' @usage stddev(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' sqrt(var_samp(x))
-#' }
+#' ```
 stddev <- function(x = DOUBLE) {
   stop("DuckDB function stddev() is not available in R.")
 }
@@ -12216,10 +12216,10 @@ stddev <- function(x = DOUBLE) {
 #' @usage stddev_pop(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' sqrt(var_pop(x))
-#' }
+#' ```
 stddev_pop <- function(x = DOUBLE) {
   stop("DuckDB function stddev_pop() is not available in R.")
 }
@@ -12233,10 +12233,10 @@ stddev_pop <- function(x = DOUBLE) {
 #' @usage stddev_samp(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' sqrt(var_samp(x))
-#' }
+#' ```
 stddev_samp <- function(x = DOUBLE) {
   stop("DuckDB function stddev_samp() is not available in R.")
 }
@@ -12264,10 +12264,10 @@ storage_info <- function(col0 = VARCHAR) {
 #' @param string `VARCHAR`
 #' @param separator `VARCHAR`
 #' @return `VARCHAR[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' str_split('hello-world', '-')
-#' }
+#' ```
 str_split <- function(string = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function str_split() is not available in R.")
 }
@@ -12288,10 +12288,10 @@ str_split <- function(string = VARCHAR, separator = VARCHAR) {
 #' @param regex `VARCHAR`
 #' @param options `VARCHAR`
 #' @return `VARCHAR[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' str_split_regex('hello world; 42', ';? ')
-#' }
+#' ```
 str_split_regex <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR) {
   stop("DuckDB function str_split_regex() is not available in R.")
 }
@@ -12315,10 +12315,10 @@ str_split_regex <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR
 #' @param data `DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR`
 #' @param format `VARCHAR | DATE | TIMESTAMP | TIMESTAMP_NS`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' strftime(date '1992-01-01', '%a, %-d %B %Y')
-#' }
+#' ```
 strftime <- function(data = `DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR`, format = `VARCHAR | DATE | TIMESTAMP | TIMESTAMP_NS`) {
   stop("DuckDB function strftime() is not available in R.")
 }
@@ -12338,10 +12338,10 @@ strftime <- function(data = `DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR`, format 
 #' @param str `ANY`
 #' @param arg `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' string_agg(A, '-')
-#' }
+#' ```
 string_agg <- function(str = ANY, arg = VARCHAR) {
   stop("DuckDB function string_agg() is not available in R.")
 }
@@ -12356,10 +12356,10 @@ string_agg <- function(str = ANY, arg = VARCHAR) {
 #' @param string `VARCHAR`
 #' @param separator `VARCHAR`
 #' @return `VARCHAR[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' string_split('hello-world', '-')
-#' }
+#' ```
 string_split <- function(string = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function string_split() is not available in R.")
 }
@@ -12380,10 +12380,10 @@ string_split <- function(string = VARCHAR, separator = VARCHAR) {
 #' @param regex `VARCHAR`
 #' @param options `VARCHAR`
 #' @return `VARCHAR[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' string_split_regex('hello world; 42', ';? ')
-#' }
+#' ```
 string_split_regex <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR) {
   stop("DuckDB function string_split_regex() is not available in R.")
 }
@@ -12398,10 +12398,10 @@ string_split_regex <- function(string = VARCHAR, regex = VARCHAR, options = VARC
 #' @param string `VARCHAR`
 #' @param separator `VARCHAR`
 #' @return `VARCHAR[]`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' string_to_array('hello-world', '-')
-#' }
+#' ```
 string_to_array <- function(string = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function string_to_array() is not available in R.")
 }
@@ -12415,10 +12415,10 @@ string_to_array <- function(string = VARCHAR, separator = VARCHAR) {
 #' @usage strip_accents(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' strip_accents('mühleisen')
-#' }
+#' ```
 strip_accents <- function(string = VARCHAR) {
   stop("DuckDB function strip_accents() is not available in R.")
 }
@@ -12432,10 +12432,10 @@ strip_accents <- function(string = VARCHAR) {
 #' @usage strlen(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' strlen('🦆')
-#' }
+#' ```
 strlen <- function(string = VARCHAR) {
   stop("DuckDB function strlen() is not available in R.")
 }
@@ -12450,10 +12450,10 @@ strlen <- function(string = VARCHAR) {
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' strpos('test test', 'es')
-#' }
+#' ```
 strpos <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function strpos() is not available in R.")
 }
@@ -12476,11 +12476,11 @@ strpos <- function(string = VARCHAR, search_string = VARCHAR) {
 #' @param format `VARCHAR`
 #' @param format-list `VARCHAR[]`
 #' @return `TIMESTAMP`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' strptime('Wed, 1 January 1992 - 08:38:40 PM', '%a, %-d %B %Y - %I:%M:%S %p')
 #' strptime('4/15/2023 10:56:00', ['%d/%m/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S'])
-#' }
+#' ```
 strptime <- function(text = VARCHAR, format = VARCHAR, `format-list` = `VARCHAR[]`) {
   stop("DuckDB function strptime() is not available in R.")
 }
@@ -12494,10 +12494,10 @@ strptime <- function(text = VARCHAR, format = VARCHAR, `format-list` = `VARCHAR[
 #' @usage struct_concat()
 
 #' @return `STRUCT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' struct_concat(struct_pack(i := 4), struct_pack(s := 'string'))
-#' }
+#' ```
 struct_concat <- function() {
   stop("DuckDB function struct_concat() is not available in R.")
 }
@@ -12512,10 +12512,10 @@ struct_concat <- function() {
 #' @param struct `STRUCT`
 #' @param 'entry' `ANY`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' struct_contains(ROW(3, 3, 0), 3)
-#' }
+#' ```
 struct_contains <- function(struct = STRUCT, `'entry'` = ANY) {
   stop("DuckDB function struct_contains() is not available in R.")
 }
@@ -12535,10 +12535,10 @@ struct_contains <- function(struct = STRUCT, `'entry'` = ANY) {
 #' @param struct `STRUCT`
 #' @param 'entry' `VARCHAR | BIGINT`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' struct_extract({'i': 3, 'v2': 3, 'v3': 0}, 'i')
-#' }
+#' ```
 struct_extract <- function(struct = STRUCT, `'entry'` = `VARCHAR | BIGINT`) {
   stop("DuckDB function struct_extract() is not available in R.")
 }
@@ -12553,10 +12553,10 @@ struct_extract <- function(struct = STRUCT, `'entry'` = `VARCHAR | BIGINT`) {
 #' @param struct `STRUCT`
 #' @param 'entry' `ANY`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' struct_has(ROW(3, 3, 0), 3)
-#' }
+#' ```
 struct_has <- function(struct = STRUCT, `'entry'` = ANY) {
   stop("DuckDB function struct_has() is not available in R.")
 }
@@ -12571,10 +12571,10 @@ struct_has <- function(struct = STRUCT, `'entry'` = ANY) {
 #' @param struct `STRUCT`
 #' @param 'entry' `ANY`
 #' @return `INTEGER`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' struct_indexof(ROW(3, 3, 0), 3)
-#' }
+#' ```
 struct_indexof <- function(struct = STRUCT, `'entry'` = ANY) {
   stop("DuckDB function struct_indexof() is not available in R.")
 }
@@ -12588,10 +12588,10 @@ struct_indexof <- function(struct = STRUCT, `'entry'` = ANY) {
 #' @usage struct_insert()
 
 #' @return `STRUCT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' struct_insert({'a': 1}, b := 2)
-#' }
+#' ```
 struct_insert <- function() {
   stop("DuckDB function struct_insert() is not available in R.")
 }
@@ -12605,10 +12605,10 @@ struct_insert <- function() {
 #' @usage struct_pack()
 
 #' @return `STRUCT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' struct_pack(i := 4, s := 'string')
-#' }
+#' ```
 struct_pack <- function() {
   stop("DuckDB function struct_pack() is not available in R.")
 }
@@ -12623,10 +12623,10 @@ struct_pack <- function() {
 #' @param struct `STRUCT`
 #' @param 'entry' `ANY`
 #' @return `INTEGER`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' struct_position(ROW(3, 3, 0), 3)
-#' }
+#' ```
 struct_position <- function(struct = STRUCT, `'entry'` = ANY) {
   stop("DuckDB function struct_position() is not available in R.")
 }
@@ -12640,10 +12640,10 @@ struct_position <- function(struct = STRUCT, `'entry'` = ANY) {
 #' @usage struct_update()
 
 #' @return `STRUCT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' struct_update({'a': 1}, a := 2)
-#' }
+#' ```
 struct_update <- function() {
   stop("DuckDB function struct_update() is not available in R.")
 }
@@ -12664,11 +12664,11 @@ struct_update <- function() {
 #' @param start `BIGINT`
 #' @param length `BIGINT`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' substring('Hello', 2)
 #' substring('Hello', 2, 2)
-#' }
+#' ```
 substr <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
   stop("DuckDB function substr() is not available in R.")
 }
@@ -12689,11 +12689,11 @@ substr <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
 #' @param start `BIGINT`
 #' @param length `BIGINT`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' substring('Hello', 2)
 #' substring('Hello', 2, 2)
-#' }
+#' ```
 substring <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
   stop("DuckDB function substring() is not available in R.")
 }
@@ -12714,11 +12714,11 @@ substring <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
 #' @param start `BIGINT`
 #' @param length `BIGINT`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3)
 #' substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3, 2)
-#' }
+#' ```
 substring_grapheme <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
   stop("DuckDB function substring_grapheme() is not available in R.")
 }
@@ -12787,10 +12787,10 @@ subtract <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | F
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' suffix('abc', 'bc')
-#' }
+#' ```
 suffix <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function suffix() is not available in R.")
 }
@@ -12815,10 +12815,10 @@ suffix <- function(string = VARCHAR, search_string = VARCHAR) {
 #' }
 #' @param arg `DECIMAL | BOOLEAN | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | BIGNUM`
 #' @return `DECIMAL | HUGEINT | DOUBLE | BIGNUM`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' sum(A)
-#' }
+#' ```
 sum <- function(arg = `DECIMAL | BOOLEAN | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | BIGNUM`) {
   stop("DuckDB function sum() is not available in R.")
 }
@@ -12838,10 +12838,10 @@ sum <- function(arg = `DECIMAL | BOOLEAN | SMALLINT | INTEGER | BIGINT | HUGEINT
 #' }
 #' @param arg `INTEGER | BIGINT | DECIMAL`
 #' @return `HUGEINT | DECIMAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' sum_no_overflow(A)
-#' }
+#' ```
 sum_no_overflow <- function(arg = `INTEGER | BIGINT | DECIMAL`) {
   stop("DuckDB function sum_no_overflow() is not available in R.")
 }
@@ -12855,10 +12855,10 @@ sum_no_overflow <- function(arg = `INTEGER | BIGINT | DECIMAL`) {
 #' @usage sumkahan(arg = DOUBLE)
 #' @param arg `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' sumkahan(A)
-#' }
+#' ```
 sumkahan <- function(arg = DOUBLE) {
   stop("DuckDB function sumkahan() is not available in R.")
 }
@@ -12898,10 +12898,10 @@ table_info <- function(col0 = VARCHAR) {
 #' @usage tan(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' tan(90)
-#' }
+#' ```
 tan <- function(x = DOUBLE) {
   stop("DuckDB function tan() is not available in R.")
 }
@@ -12915,10 +12915,10 @@ tan <- function(x = DOUBLE) {
 #' @usage tanh(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' tanh(1)
-#' }
+#' ```
 tanh <- function(x = DOUBLE) {
   stop("DuckDB function tanh() is not available in R.")
 }
@@ -12975,10 +12975,10 @@ test_vector_types <- function(col0 = ANY, all_flat = BOOLEAN) {
 #' @param timestamp `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param origin `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | VARCHAR`
 #' @return `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' time_bucket(INTERVAL '2 weeks', TIMESTAMP '1992-04-20 15:26:00-07', TIMESTAMP '1992-04-01 00:00:00-07')
-#' }
+#' ```
 time_bucket <- function(bucket_width = INTERVAL, timestamp = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, origin = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | VARCHAR`) {
   stop("DuckDB function time_bucket() is not available in R.")
 }
@@ -12992,10 +12992,10 @@ time_bucket <- function(bucket_width = INTERVAL, timestamp = `DATE | TIMESTAMP |
 #' @usage timetz_byte_comparable(time_tz = `TIME WITH TIME ZONE`)
 #' @param time_tz `TIME WITH TIME ZONE`
 #' @return `UBIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' timetz_byte_comparable('18:18:16.21-07:00'::TIMETZ)
-#' }
+#' ```
 timetz_byte_comparable <- function(time_tz = `TIME WITH TIME ZONE`) {
   stop("DuckDB function timetz_byte_comparable() is not available in R.")
 }
@@ -13021,10 +13021,10 @@ timetz_byte_comparable <- function(time_tz = `TIME WITH TIME ZONE`) {
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | VARCHAR`
 #' @param col1 `TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | TIMESTAMP`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' timezone(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 timezone <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | VARCHAR`, col1 = `TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function timezone() is not available in R.")
 }
@@ -13045,10 +13045,10 @@ timezone <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' timezone_hour(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 timezone_hour <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function timezone_hour() is not available in R.")
 }
@@ -13069,10 +13069,10 @@ timezone_hour <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIM
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' timezone_minute(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 timezone_minute <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function timezone_minute() is not available in R.")
 }
@@ -13093,10 +13093,10 @@ timezone_minute <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH T
 #' @param radix `INTEGER`
 #' @param min_length `INTEGER`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' to_base(42, 16, 5)
-#' }
+#' ```
 to_base <- function(number = BIGINT, radix = INTEGER, min_length = INTEGER) {
   stop("DuckDB function to_base() is not available in R.")
 }
@@ -13110,10 +13110,10 @@ to_base <- function(number = BIGINT, radix = INTEGER, min_length = INTEGER) {
 #' @usage to_base64(blob = BLOB)
 #' @param blob `BLOB`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' to_base64('A'::BLOB)
-#' }
+#' ```
 to_base64 <- function(blob = BLOB) {
   stop("DuckDB function to_base64() is not available in R.")
 }
@@ -13139,11 +13139,11 @@ to_base64 <- function(blob = BLOB) {
 #' @param string `VARCHAR`
 #' @param value `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' to_binary('Aa')
 #' to_binary(42)
-#' }
+#' ```
 to_binary <- function(string = VARCHAR, value = `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`) {
   stop("DuckDB function to_binary() is not available in R.")
 }
@@ -13162,10 +13162,10 @@ to_binary <- function(string = VARCHAR, value = `BIGNUM | UBIGINT | BIGINT | HUG
 #' }
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' to_centuries(5)
-#' }
+#' ```
 to_centuries <- function(integer = `INTEGER | BIGINT`) {
   stop("DuckDB function to_centuries() is not available in R.")
 }
@@ -13184,10 +13184,10 @@ to_centuries <- function(integer = `INTEGER | BIGINT`) {
 #' }
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' to_days(5)
-#' }
+#' ```
 to_days <- function(integer = `INTEGER | BIGINT`) {
   stop("DuckDB function to_days() is not available in R.")
 }
@@ -13206,10 +13206,10 @@ to_days <- function(integer = `INTEGER | BIGINT`) {
 #' }
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' to_decades(5)
-#' }
+#' ```
 to_decades <- function(integer = `INTEGER | BIGINT`) {
   stop("DuckDB function to_decades() is not available in R.")
 }
@@ -13239,12 +13239,12 @@ to_decades <- function(integer = `INTEGER | BIGINT`) {
 #' @param value `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`
 #' @param blob `BLOB`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' to_hex('Hello')
 #' to_hex(42)
 #' to_hex('\xAA\xBB'::BLOB)
-#' }
+#' ```
 to_hex <- function(string = VARCHAR, value = `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`, blob = BLOB) {
   stop("DuckDB function to_hex() is not available in R.")
 }
@@ -13258,10 +13258,10 @@ to_hex <- function(string = VARCHAR, value = `BIGNUM | BIGINT | UBIGINT | HUGEIN
 #' @usage to_hours(integer = BIGINT)
 #' @param integer `BIGINT`
 #' @return `INTERVAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' to_hours(5)
-#' }
+#' ```
 to_hours <- function(integer = BIGINT) {
   stop("DuckDB function to_hours() is not available in R.")
 }
@@ -13275,10 +13275,10 @@ to_hours <- function(integer = BIGINT) {
 #' @usage to_microseconds(integer = BIGINT)
 #' @param integer `BIGINT`
 #' @return `INTERVAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' to_microseconds(5)
-#' }
+#' ```
 to_microseconds <- function(integer = BIGINT) {
   stop("DuckDB function to_microseconds() is not available in R.")
 }
@@ -13297,10 +13297,10 @@ to_microseconds <- function(integer = BIGINT) {
 #' }
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' to_millennia(1)
-#' }
+#' ```
 to_millennia <- function(integer = `INTEGER | BIGINT`) {
   stop("DuckDB function to_millennia() is not available in R.")
 }
@@ -13314,10 +13314,10 @@ to_millennia <- function(integer = `INTEGER | BIGINT`) {
 #' @usage to_milliseconds(double = DOUBLE)
 #' @param double `DOUBLE`
 #' @return `INTERVAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' to_milliseconds(5.5)
-#' }
+#' ```
 to_milliseconds <- function(double = DOUBLE) {
   stop("DuckDB function to_milliseconds() is not available in R.")
 }
@@ -13331,10 +13331,10 @@ to_milliseconds <- function(double = DOUBLE) {
 #' @usage to_minutes(integer = BIGINT)
 #' @param integer `BIGINT`
 #' @return `INTERVAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' to_minutes(5)
-#' }
+#' ```
 to_minutes <- function(integer = BIGINT) {
   stop("DuckDB function to_minutes() is not available in R.")
 }
@@ -13353,10 +13353,10 @@ to_minutes <- function(integer = BIGINT) {
 #' }
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' to_months(5)
-#' }
+#' ```
 to_months <- function(integer = `INTEGER | BIGINT`) {
   stop("DuckDB function to_months() is not available in R.")
 }
@@ -13375,10 +13375,10 @@ to_months <- function(integer = `INTEGER | BIGINT`) {
 #' }
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' to_quarters(5)
-#' }
+#' ```
 to_quarters <- function(integer = `INTEGER | BIGINT`) {
   stop("DuckDB function to_quarters() is not available in R.")
 }
@@ -13392,10 +13392,10 @@ to_quarters <- function(integer = `INTEGER | BIGINT`) {
 #' @usage to_seconds(double = DOUBLE)
 #' @param double `DOUBLE`
 #' @return `INTERVAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' to_seconds(5.5)
-#' }
+#' ```
 to_seconds <- function(double = DOUBLE) {
   stop("DuckDB function to_seconds() is not available in R.")
 }
@@ -13409,10 +13409,10 @@ to_seconds <- function(double = DOUBLE) {
 #' @usage to_timestamp(sec = DOUBLE)
 #' @param sec `DOUBLE`
 #' @return `TIMESTAMP WITH TIME ZONE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' to_timestamp(1284352323.5)
-#' }
+#' ```
 to_timestamp <- function(sec = DOUBLE) {
   stop("DuckDB function to_timestamp() is not available in R.")
 }
@@ -13431,10 +13431,10 @@ to_timestamp <- function(sec = DOUBLE) {
 #' }
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' to_weeks(5)
-#' }
+#' ```
 to_weeks <- function(integer = `INTEGER | BIGINT`) {
   stop("DuckDB function to_weeks() is not available in R.")
 }
@@ -13453,10 +13453,10 @@ to_weeks <- function(integer = `INTEGER | BIGINT`) {
 #' }
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' to_years(5)
-#' }
+#' ```
 to_years <- function(integer = `INTEGER | BIGINT`) {
   stop("DuckDB function to_years() is not available in R.")
 }
@@ -13470,10 +13470,10 @@ to_years <- function(integer = `INTEGER | BIGINT`) {
 #' @usage transaction_timestamp()
 
 #' @return `TIMESTAMP WITH TIME ZONE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' transaction_timestamp()
-#' }
+#' ```
 transaction_timestamp <- function() {
   stop("DuckDB function transaction_timestamp() is not available in R.")
 }
@@ -13489,10 +13489,10 @@ transaction_timestamp <- function() {
 #' @param from `VARCHAR`
 #' @param to `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' translate('12345', '143', 'ax')
-#' }
+#' ```
 translate <- function(string = VARCHAR, from = VARCHAR, to = VARCHAR) {
   stop("DuckDB function translate() is not available in R.")
 }
@@ -13512,11 +13512,11 @@ translate <- function(string = VARCHAR, from = VARCHAR, to = VARCHAR) {
 #' @param string `VARCHAR`
 #' @param characters `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' trim('    test  ')
 #' trim('>>>>test<<', '><')
-#' }
+#' ```
 trim <- function(string = VARCHAR, characters = VARCHAR) {
   stop("DuckDB function trim() is not available in R.")
 }
@@ -13560,10 +13560,10 @@ trim <- function(string = VARCHAR, characters = VARCHAR) {
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `INTEGER`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' trunc(17.4)
-#' }
+#' ```
 trunc <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`, col1 = INTEGER) {
   stop("DuckDB function trunc() is not available in R.")
 }
@@ -13596,10 +13596,10 @@ truncate_duckdb_logs <- function() {
 #' @param text `VARCHAR`
 #' @param format `VARCHAR | VARCHAR[]`
 #' @return `TIMESTAMP`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' try_strptime('Wed, 1 January 1992 - 08:38:40 PM', '%a, %-d %B %Y - %I:%M:%S %p')
-#' }
+#' ```
 try_strptime <- function(text = VARCHAR, format = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function try_strptime() is not available in R.")
 }
@@ -13613,10 +13613,10 @@ try_strptime <- function(text = VARCHAR, format = `VARCHAR | VARCHAR[]`) {
 #' @usage txid_current()
 
 #' @return `UBIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' txid_current()
-#' }
+#' ```
 txid_current <- function() {
   stop("DuckDB function txid_current() is not available in R.")
 }
@@ -13630,10 +13630,10 @@ txid_current <- function() {
 #' @usage typeof(expression = ANY)
 #' @param expression `ANY`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' typeof('abc')
-#' }
+#' ```
 typeof <- function(expression = ANY) {
   stop("DuckDB function typeof() is not available in R.")
 }
@@ -13647,10 +13647,10 @@ typeof <- function(expression = ANY) {
 #' @usage ucase(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' ucase('Hello')
-#' }
+#' ```
 ucase <- function(string = VARCHAR) {
   stop("DuckDB function ucase() is not available in R.")
 }
@@ -13664,10 +13664,10 @@ ucase <- function(string = VARCHAR) {
 #' @usage unbin(value = VARCHAR)
 #' @param value `VARCHAR`
 #' @return `BLOB`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' unbin('0110')
-#' }
+#' ```
 unbin <- function(value = VARCHAR) {
   stop("DuckDB function unbin() is not available in R.")
 }
@@ -13681,10 +13681,10 @@ unbin <- function(value = VARCHAR) {
 #' @usage unhex(value = VARCHAR)
 #' @param value `VARCHAR`
 #' @return `BLOB`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' unhex('2A')
-#' }
+#' ```
 unhex <- function(value = VARCHAR) {
   stop("DuckDB function unhex() is not available in R.")
 }
@@ -13698,10 +13698,10 @@ unhex <- function(value = VARCHAR) {
 #' @usage unicode(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @return `INTEGER`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' [unicode('âbcd'), unicode('â'), unicode(''), unicode(NULL)]
-#' }
+#' ```
 unicode <- function(string = VARCHAR) {
   stop("DuckDB function unicode() is not available in R.")
 }
@@ -13716,10 +13716,10 @@ unicode <- function(string = VARCHAR) {
 #' @param union `UNION`
 #' @param tag `VARCHAR`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' union_extract(s, 'k')
-#' }
+#' ```
 union_extract <- function(union = UNION, tag = VARCHAR) {
   stop("DuckDB function union_extract() is not available in R.")
 }
@@ -13733,10 +13733,10 @@ union_extract <- function(union = UNION, tag = VARCHAR) {
 #' @usage union_tag(union = UNION)
 #' @param union `UNION`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' union_tag(union_value(k := 'foo'))
-#' }
+#' ```
 union_tag <- function(union = UNION) {
   stop("DuckDB function union_tag() is not available in R.")
 }
@@ -13750,10 +13750,10 @@ union_tag <- function(union = UNION) {
 #' @usage union_value()
 
 #' @return `UNION`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' union_value(k := 'hello')
-#' }
+#' ```
 union_value <- function() {
   stop("DuckDB function union_value() is not available in R.")
 }
@@ -13780,10 +13780,10 @@ unnest <- function(col0 = ANY) {
 #' @usage unpivot_list()
 
 #' @return `LIST`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' unpivot_list(4, 5, 6)
-#' }
+#' ```
 unpivot_list <- function() {
   stop("DuckDB function unpivot_list() is not available in R.")
 }
@@ -13797,10 +13797,10 @@ unpivot_list <- function() {
 #' @usage upper(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' upper('Hello')
-#' }
+#' ```
 upper <- function(string = VARCHAR) {
   stop("DuckDB function upper() is not available in R.")
 }
@@ -13814,10 +13814,10 @@ upper <- function(string = VARCHAR) {
 #' @usage url_decode(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' url_decode('https%3A%2F%2Fduckdb.org%2Fwhy_duckdb%23portable')
-#' }
+#' ```
 url_decode <- function(string = VARCHAR) {
   stop("DuckDB function url_decode() is not available in R.")
 }
@@ -13831,10 +13831,10 @@ url_decode <- function(string = VARCHAR) {
 #' @usage url_encode(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' url_encode('this string has/ special+ characters>')
-#' }
+#' ```
 url_encode <- function(string = VARCHAR) {
   stop("DuckDB function url_encode() is not available in R.")
 }
@@ -13874,10 +13874,10 @@ user_agent <- function() {
 #' @usage uuid()
 
 #' @return `UUID`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' uuid()
-#' }
+#' ```
 uuid <- function() {
   stop("DuckDB function uuid() is not available in R.")
 }
@@ -13891,10 +13891,10 @@ uuid <- function() {
 #' @usage uuid_extract_timestamp(uuid = UUID)
 #' @param uuid `UUID`
 #' @return `TIMESTAMP WITH TIME ZONE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' uuid_extract_timestamp('019482e4-1441-7aad-8127-eec99573b0a0')
-#' }
+#' ```
 uuid_extract_timestamp <- function(uuid = UUID) {
   stop("DuckDB function uuid_extract_timestamp() is not available in R.")
 }
@@ -13908,10 +13908,10 @@ uuid_extract_timestamp <- function(uuid = UUID) {
 #' @usage uuid_extract_version(uuid = UUID)
 #' @param uuid `UUID`
 #' @return `UINTEGER`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' uuid_extract_version('019482e4-1441-7aad-8127-eec99573b0a0')
-#' }
+#' ```
 uuid_extract_version <- function(uuid = UUID) {
   stop("DuckDB function uuid_extract_version() is not available in R.")
 }
@@ -13925,10 +13925,10 @@ uuid_extract_version <- function(uuid = UUID) {
 #' @usage uuidv4()
 
 #' @return `UUID`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' uuidv4()
-#' }
+#' ```
 uuidv4 <- function() {
   stop("DuckDB function uuidv4() is not available in R.")
 }
@@ -13942,10 +13942,10 @@ uuidv4 <- function() {
 #' @usage uuidv7()
 
 #' @return `UUID`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' uuidv7()
-#' }
+#' ```
 uuidv7 <- function() {
   stop("DuckDB function uuidv7() is not available in R.")
 }
@@ -13972,10 +13972,10 @@ var_pop <- function(x = DOUBLE) {
 #' @usage var_samp(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' (SUM(x^2) - SUM(x)^2 / COUNT(x)) / (COUNT(x) - 1)
-#' }
+#' ```
 var_samp <- function(x = DOUBLE) {
   stop("DuckDB function var_samp() is not available in R.")
 }
@@ -13989,10 +13989,10 @@ var_samp <- function(x = DOUBLE) {
 #' @usage variance(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' (SUM(x^2) - SUM(x)^2 / COUNT(x)) / (COUNT(x) - 1)
-#' }
+#' ```
 variance <- function(x = DOUBLE) {
   stop("DuckDB function variance() is not available in R.")
 }
@@ -14025,10 +14025,10 @@ variant_extract <- function(col0 = VARIANT, col1 = `VARCHAR | UINTEGER`) {
 #' @usage variant_typeof(input_variant = VARIANT)
 #' @param input_variant `VARIANT`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' variant_typeof({'a': 42, 'b': [1,2,3]})::VARIANT)
-#' }
+#' ```
 variant_typeof <- function(input_variant = VARIANT) {
   stop("DuckDB function variant_typeof() is not available in R.")
 }
@@ -14042,10 +14042,10 @@ variant_typeof <- function(input_variant = VARIANT) {
 #' @usage vector_type(col = ANY)
 #' @param col `ANY`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' vector_type(col)
-#' }
+#' ```
 vector_type <- function(col = ANY) {
   stop("DuckDB function vector_type() is not available in R.")
 }
@@ -14116,10 +14116,10 @@ verify_serializer <- function() {
 #' }
 
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' version()
-#' }
+#' ```
 version <- function() {
   stop("DuckDB function version() is not available in R.")
 }
@@ -14154,10 +14154,10 @@ wavg <- function(value, weight) {
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' week(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 week <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function week() is not available in R.")
 }
@@ -14178,10 +14178,10 @@ week <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) 
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' weekday(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 weekday <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function weekday() is not available in R.")
 }
@@ -14202,10 +14202,10 @@ weekday <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' weekofyear(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 weekofyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function weekofyear() is not available in R.")
 }
@@ -14247,10 +14247,10 @@ which_secret <- function(col0 = VARCHAR, col1 = VARCHAR) {
 #' @usage write_log(string = VARCHAR)
 #' @param string `VARCHAR`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' write_log('Hello')
-#' }
+#' ```
 write_log <- function(string = VARCHAR) {
   stop("DuckDB function write_log() is not available in R.")
 }
@@ -14279,10 +14279,10 @@ write_log <- function(string = VARCHAR) {
 #' @param left `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @param right `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' xor(17, 5)
-#' }
+#' ```
 xor <- function(left = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`, right = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`) {
   stop("DuckDB function xor() is not available in R.")
 }
@@ -14303,10 +14303,10 @@ xor <- function(left = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYI
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' year(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 year <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function year() is not available in R.")
 }
@@ -14327,10 +14327,10 @@ year <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) 
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' yearweek(timestamp '2021-08-03 11:59:44.123456')
-#' }
+#' ```
 yearweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function yearweek() is not available in R.")
 }
@@ -14359,10 +14359,10 @@ yearweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #' @param left `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @param right `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' 32 | 3
-#' }
+#' ```
 `|` <- function(left = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`, right = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`) {
   stop("DuckDB function |() is not available in R.")
 }
@@ -14377,12 +14377,12 @@ yearweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #' @param arg1 `ANY`
 #' @param arg2 `ANY`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' 'Duck' || 'DB'
 #' [1, 2, 3] || [4, 5, 6]
 #' '\xAA'::BLOB || '\xBB'::BLOB
-#' }
+#' ```
 `||` <- function(arg1 = ANY, arg2 = ANY) {
   stop("DuckDB function ||() is not available in R.")
 }
@@ -14410,10 +14410,10 @@ yearweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #' }
 #' @param input `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
-#' @examples
-#' \dontrun{
+#' @section SQL examples:
+#' ```
 #' ~15
-#' }
+#' ```
 `~` <- function(input = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`) {
   stop("DuckDB function ~() is not available in R.")
 }

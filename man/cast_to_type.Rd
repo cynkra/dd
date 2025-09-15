@@ -17,8 +17,10 @@ cast_to_type(param = ANY, type = ANY)
 \description{
 Casts the first argument to the type of the second argument.
 }
-\examples{
-\dontrun{
-cast_to_type('42', NULL::INTEGER)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{cast_to_type('42', NULL::INTEGER)
+}\if{html}{\out{</div>}}
 }
-}
+

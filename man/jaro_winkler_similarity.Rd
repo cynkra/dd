@@ -24,8 +24,10 @@ The Jaro-Winkler similarity between two strings. Characters of different cases (
 }
 }
 
-\examples{
-\dontrun{
-jaro_winkler_similarity('duck', 'duckdb')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{jaro_winkler_similarity('duck', 'duckdb')
+}\if{html}{\out{</div>}}
 }
-}
+

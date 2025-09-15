@@ -31,9 +31,11 @@ The date for the given struct.
 }
 }
 
-\examples{
-\dontrun{
-make_date(1992, 9, 20)
-make_date({'year': 2024, 'month': 11, 'day': 14})
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{make_date(1992, 9, 20)
+make_date(\{'year': 2024, 'month': 11, 'day': 14\})
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -22,8 +22,10 @@ Returns the maximum value present in arg.
 }
 }
 
-\examples{
-\dontrun{
-max(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{max(A)
+}\if{html}{\out{</div>}}
 }
-}
+

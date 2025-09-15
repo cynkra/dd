@@ -22,8 +22,10 @@ Returns a list of the components (directories and filename) in the \code{path} s
 }
 }
 
-\examples{
-\dontrun{
-parse_path('path/to/file.csv', 'system')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{parse_path('path/to/file.csv', 'system')
+}\if{html}{\out{</div>}}
 }
-}
+

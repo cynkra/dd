@@ -15,8 +15,10 @@ cardinality(map = ANY)
 \description{
 Returns the size of the map (or the number of entries in the map).
 }
-\examples{
-\dontrun{
-cardinality( map([4, 2], ['a', 'b']) );
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{cardinality( map([4, 2], ['a', 'b']) );
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -26,8 +26,10 @@ If \code{string} contains the \code{regex}, replaces the matching part with \cod
 }
 }
 
-\examples{
-\dontrun{
-regexp_replace('hello', '[lo]', '-')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{regexp_replace('hello', '[lo]', '-')
+}\if{html}{\out{</div>}}
 }
-}
+

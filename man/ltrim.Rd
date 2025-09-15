@@ -22,9 +22,11 @@ Removes any occurrences of any of the \code{characters} from the left side of th
 }
 }
 
-\examples{
-\dontrun{
-ltrim('    test  ')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{ltrim('    test  ')
 ltrim('>>>>test<<', '><')
+}\if{html}{\out{</div>}}
 }
-}
+

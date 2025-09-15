@@ -17,8 +17,10 @@ concat_ws(separator = VARCHAR, string = ANY)
 \description{
 Concatenates many strings, separated by \code{separator}. \code{NULL} inputs are skipped.
 }
-\examples{
-\dontrun{
-concat_ws(', ', 'Banana', 'Apple', 'Melon')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{concat_ws(', ', 'Banana', 'Apple', 'Melon')
+}\if{html}{\out{</div>}}
 }
-}
+

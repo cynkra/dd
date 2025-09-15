@@ -15,8 +15,10 @@ typeof(expression = ANY)
 \description{
 Returns the name of the data type of the result of the expression.
 }
-\examples{
-\dontrun{
-typeof('abc')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{typeof('abc')
+}\if{html}{\out{</div>}}
 }
-}
+

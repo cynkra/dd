@@ -19,8 +19,10 @@ ilike_escape(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARC
 \description{
 Returns \code{true} if the \code{string} matches the \code{like_specifier} (see Pattern Matching) using case-insensitive matching. \code{escape_character} is used to search for wildcard characters in the \code{string}.
 }
-\examples{
-\dontrun{
-ilike_escape('A\%c', 'a$\%C', '$')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{ilike_escape('A\%c', 'a$\%C', '$')
+}\if{html}{\out{</div>}}
 }
-}
+

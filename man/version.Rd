@@ -17,8 +17,10 @@ Returns the currently active version of DuckDB in this format: v0.3.2	.
 }
 }
 
-\examples{
-\dontrun{
-version()
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{version()
+}\if{html}{\out{</div>}}
 }
-}
+

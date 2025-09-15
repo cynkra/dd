@@ -15,9 +15,11 @@ concat(value = ANY)
 \description{
 Concatenates multiple strings or lists. \code{NULL} inputs are skipped. See also operator \code{||}.
 }
-\examples{
-\dontrun{
-concat('Hello', ' ', 'World')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{concat('Hello', ' ', 'World')
 concat([1, 2, 3], NULL, [4, 5, 6])
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -19,8 +19,10 @@ lpad(string = VARCHAR, count = INTEGER, character = VARCHAR)
 \description{
 Pads the \code{string} with the \code{character} on the left until it has \code{count} characters. Truncates the \code{string} on the right if it has more than \code{count} characters.
 }
-\examples{
-\dontrun{
-lpad('hello', 8, '>')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{lpad('hello', 8, '>')
+}\if{html}{\out{</div>}}
 }
-}
+

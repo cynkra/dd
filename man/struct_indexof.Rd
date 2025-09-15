@@ -17,8 +17,10 @@ struct_indexof(struct = STRUCT, `'entry'` = ANY)
 \description{
 Get the position of the entry in an unnamed STRUCT, starting at 1.
 }
-\examples{
-\dontrun{
-struct_indexof(ROW(3, 3, 0), 3)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{struct_indexof(ROW(3, 3, 0), 3)
+}\if{html}{\out{</div>}}
 }
-}
+

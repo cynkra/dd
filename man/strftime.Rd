@@ -26,8 +26,10 @@ Converts a \code{date} to a string according to the format string.
 }
 }
 
-\examples{
-\dontrun{
-strftime(date '1992-01-01', '\%a, \%-d \%B \%Y')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{strftime(date '1992-01-01', '\%a, \%-d \%B \%Y')
+}\if{html}{\out{</div>}}
 }
-}
+

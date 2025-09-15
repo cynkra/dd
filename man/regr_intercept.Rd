@@ -17,8 +17,10 @@ regr_intercept(y = DOUBLE, x = DOUBLE)
 \description{
 Returns the intercept of the univariate linear regression line for non-NULL pairs in a group.
 }
-\examples{
-\dontrun{
-AVG(y)-REGR_SLOPE(y, x)*AVG(x)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{AVG(y)-REGR_SLOPE(y, x)*AVG(x)
+}\if{html}{\out{</div>}}
 }
-}
+

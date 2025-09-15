@@ -15,8 +15,10 @@ exp(x = DOUBLE)
 \description{
 Computes e to the power of x.
 }
-\examples{
-\dontrun{
-exp(1)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{exp(1)
+}\if{html}{\out{</div>}}
 }
-}
+

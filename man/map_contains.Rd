@@ -17,8 +17,10 @@ map_contains(map = `MAP(K, V)`, key = K)
 \description{
 Checks if a map contains a given key.
 }
-\examples{
-\dontrun{
-map_contains(MAP {'key1': 10, 'key2': 20, 'key3': 30}, 'key2')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{map_contains(MAP \{'key1': 10, 'key2': 20, 'key3': 30\}, 'key2')
+}\if{html}{\out{</div>}}
 }
-}
+

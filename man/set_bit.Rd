@@ -19,8 +19,10 @@ set_bit(bitstring = BIT, index = INTEGER, new_value = INTEGER)
 \description{
 Sets the nth bit in bitstring to newvalue; the first (leftmost) bit is indexed 0. Returns a new bitstring.
 }
-\examples{
-\dontrun{
-set_bit('0110010'::BIT, 2, 0)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{set_bit('0110010'::BIT, 2, 0)
+}\if{html}{\out{</div>}}
 }
-}
+

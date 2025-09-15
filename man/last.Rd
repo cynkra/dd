@@ -20,8 +20,10 @@ Returns the last value of a column. This function is affected by ordering.
 }
 }
 
-\examples{
-\dontrun{
-last(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{last(A)
+}\if{html}{\out{</div>}}
 }
-}
+

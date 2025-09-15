@@ -24,9 +24,11 @@ Extracts substring starting from character \code{start} up to the end of the str
 }
 }
 
-\examples{
-\dontrun{
-substring('Hello', 2)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{substring('Hello', 2)
 substring('Hello', 2, 2)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -15,8 +15,10 @@ length_grapheme(string = VARCHAR)
 \description{
 Number of grapheme clusters in \code{string}.
 }
-\examples{
-\dontrun{
-length_grapheme('🤦🏼‍♂️🤦🏽‍♀️')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{length_grapheme('🤦🏼‍♂️🤦🏽‍♀️')
+}\if{html}{\out{</div>}}
 }
-}
+

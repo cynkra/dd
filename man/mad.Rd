@@ -26,8 +26,10 @@ Returns the median absolute deviation for the values within x. NULL values are i
 }
 }
 
-\examples{
-\dontrun{
-mad(x)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{mad(x)
+}\if{html}{\out{</div>}}
 }
-}
+

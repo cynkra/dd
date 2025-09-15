@@ -19,8 +19,10 @@ replace(string = VARCHAR, source = VARCHAR, target = VARCHAR)
 \description{
 Replaces any occurrences of the \code{source} with \code{target} in \code{string}.
 }
-\examples{
-\dontrun{
-replace('hello', 'l', '-')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{replace('hello', 'l', '-')
+}\if{html}{\out{</div>}}
 }
-}
+

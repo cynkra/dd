@@ -15,8 +15,10 @@ countif(arg = BOOLEAN)
 \description{
 Counts the total number of TRUE values for a boolean column.
 }
-\examples{
-\dontrun{
-countif(A)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{countif(A)
+}\if{html}{\out{</div>}}
 }
-}
+

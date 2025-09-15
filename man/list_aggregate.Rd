@@ -17,8 +17,10 @@ list_aggregate(list = `ANY[]`, function_name = VARCHAR)
 \description{
 Executes the aggregate function \code{function_name} on the elements of \code{list}.
 }
-\examples{
-\dontrun{
-list_aggregate([1, 2, NULL], 'min')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{list_aggregate([1, 2, NULL], 'min')
+}\if{html}{\out{</div>}}
 }
-}
+

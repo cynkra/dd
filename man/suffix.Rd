@@ -17,8 +17,10 @@ suffix(string = VARCHAR, search_string = VARCHAR)
 \description{
 Returns \code{true} if \code{string} ends with \code{search_string}.
 }
-\examples{
-\dontrun{
-suffix('abc', 'bc')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{suffix('abc', 'bc')
+}\if{html}{\out{</div>}}
 }
-}
+

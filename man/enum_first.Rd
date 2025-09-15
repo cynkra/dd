@@ -15,8 +15,10 @@ enum_first(enum = ANY)
 \description{
 Returns the first value of the input enum type.
 }
-\examples{
-\dontrun{
-enum_first(NULL::mood)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{enum_first(NULL::mood)
+}\if{html}{\out{</div>}}
 }
-}
+

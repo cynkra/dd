@@ -54,8 +54,10 @@ Gives the approximate quantile using reservoir sampling, the sample size is opti
 }
 }
 
-\examples{
-\dontrun{
-reservoir_quantile(A, 0.5, 1024)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{reservoir_quantile(A, 0.5, 1024)
+}\if{html}{\out{</div>}}
 }
-}
+

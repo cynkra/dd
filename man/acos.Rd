@@ -15,8 +15,10 @@ acos(x = DOUBLE)
 \description{
 Computes the arccosine of x.
 }
-\examples{
-\dontrun{
-acos(0.5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{acos(0.5)
+}\if{html}{\out{</div>}}
 }
-}
+

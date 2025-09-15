@@ -20,8 +20,10 @@ Construct a year interval.
 }
 }
 
-\examples{
-\dontrun{
-to_years(5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{to_years(5)
+}\if{html}{\out{</div>}}
 }
-}
+

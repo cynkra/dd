@@ -12,8 +12,10 @@ array_value()
 \description{
 Creates an \code{ARRAY} containing the argument values.
 }
-\examples{
-\dontrun{
-array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT)
+}\if{html}{\out{</div>}}
 }
-}
+

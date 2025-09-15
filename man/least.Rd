@@ -15,9 +15,11 @@ least(arg1 = ANY)
 \description{
 Returns the smallest value. For strings lexicographical ordering is used. Note that uppercase characters are considered “smaller” than lowercase characters, and collations are not supported.
 }
-\examples{
-\dontrun{
-least(42, 84)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{least(42, 84)
 least('abc', 'bcd', 'cde', 'EFG')
+}\if{html}{\out{</div>}}
 }
-}
+

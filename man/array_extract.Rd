@@ -36,10 +36,12 @@ Extracts the entry from an unnamed \code{STRUCT} (tuple) using an index (1-based
 }
 }
 
-\examples{
-\dontrun{
-array_extract('DuckDB', 2)
-array_extract({'i': 3, 'v2': 3, 'v3': 0}, 'i')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{array_extract('DuckDB', 2)
+array_extract(\{'i': 3, 'v2': 3, 'v3': 0\}, 'i')
 array_extract(row(42, 84), 1)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -12,8 +12,10 @@ transaction_timestamp()
 \description{
 Returns the current timestamp.
 }
-\examples{
-\dontrun{
-transaction_timestamp()
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{transaction_timestamp()
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -46,8 +46,10 @@ Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of F
 }
 }
 
-\examples{
-\dontrun{
-quantile_cont(x, 0.5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{quantile_cont(x, 0.5)
+}\if{html}{\out{</div>}}
 }
-}
+

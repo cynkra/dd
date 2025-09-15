@@ -15,8 +15,10 @@ variance(x = DOUBLE)
 \description{
 Returns the sample variance of all input values.
 }
-\examples{
-\dontrun{
-(SUM(x^2) - SUM(x)^2 / COUNT(x)) / (COUNT(x) - 1)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{(SUM(x^2) - SUM(x)^2 / COUNT(x)) / (COUNT(x) - 1)
+}\if{html}{\out{</div>}}
 }
-}
+

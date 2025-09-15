@@ -15,8 +15,10 @@ asinh(x = DOUBLE)
 \description{
 Computes the inverse hyperbolic sin of x.
 }
-\examples{
-\dontrun{
-asinh(0.5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{asinh(0.5)
+}\if{html}{\out{</div>}}
 }
-}
+

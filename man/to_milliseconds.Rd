@@ -15,8 +15,10 @@ to_milliseconds(double = DOUBLE)
 \description{
 Construct a millisecond interval.
 }
-\examples{
-\dontrun{
-to_milliseconds(5.5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{to_milliseconds(5.5)
+}\if{html}{\out{</div>}}
 }
-}
+

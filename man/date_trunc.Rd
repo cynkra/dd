@@ -24,8 +24,10 @@ Truncate to specified precision.
 }
 }
 
-\examples{
-\dontrun{
-date_trunc('hour', TIMESTAMPTZ '1992-09-20 20:38:40')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{date_trunc('hour', TIMESTAMPTZ '1992-09-20 20:38:40')
+}\if{html}{\out{</div>}}
 }
-}
+

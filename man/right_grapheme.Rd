@@ -17,8 +17,10 @@ right_grapheme(string = VARCHAR, count = BIGINT)
 \description{
 Extracts the right-most \code{count} grapheme clusters.
 }
-\examples{
-\dontrun{
-right_grapheme('🤦🏼‍♂️🤦🏽‍♀️', 1)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{right_grapheme('🤦🏼‍♂️🤦🏽‍♀️', 1)
+}\if{html}{\out{</div>}}
 }
-}
+

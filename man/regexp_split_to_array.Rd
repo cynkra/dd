@@ -24,8 +24,10 @@ Splits the \code{string} along the \code{regex}. A set of optional regex \code{o
 }
 }
 
-\examples{
-\dontrun{
-regexp_split_to_array('hello world; 42', ';? ')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{regexp_split_to_array('hello world; 42', ';? ')
+}\if{html}{\out{</div>}}
 }
-}
+

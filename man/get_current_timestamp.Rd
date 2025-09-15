@@ -12,8 +12,10 @@ get_current_timestamp()
 \description{
 Returns the current timestamp.
 }
-\examples{
-\dontrun{
-get_current_timestamp()
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{get_current_timestamp()
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -15,8 +15,10 @@ list_distinct(list = `T[]`)
 \description{
 Removes all duplicates and \code{NULL} values from a list. Does not preserve the original order.
 }
-\examples{
-\dontrun{
-list_distinct([1, 1, NULL, -3, 1, 5])
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{list_distinct([1, 1, NULL, -3, 1, 5])
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -22,8 +22,10 @@ Computes the logarithm of x to base b. b may be omitted, in which case the defau
 }
 }
 
-\examples{
-\dontrun{
-log(2, 64)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{log(2, 64)
+}\if{html}{\out{</div>}}
 }
-}
+

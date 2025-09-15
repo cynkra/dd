@@ -15,8 +15,10 @@ radians(x = DOUBLE)
 \description{
 Converts degrees to radians.
 }
-\examples{
-\dontrun{
-radians(90)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{radians(90)
+}\if{html}{\out{</div>}}
 }
-}
+

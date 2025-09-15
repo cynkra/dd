@@ -20,8 +20,10 @@ Construct a decade interval.
 }
 }
 
-\examples{
-\dontrun{
-to_decades(5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{to_decades(5)
+}\if{html}{\out{</div>}}
 }
-}
+

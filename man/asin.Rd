@@ -15,8 +15,10 @@ asin(x = DOUBLE)
 \description{
 Computes the arcsine of x.
 }
-\examples{
-\dontrun{
-asin(0.5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{asin(0.5)
+}\if{html}{\out{</div>}}
 }
-}
+

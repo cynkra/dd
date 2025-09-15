@@ -17,8 +17,10 @@ list_where(value_list = `T[]`, mask_list = `BOOLEAN[]`)
 \description{
 Returns a list with the \code{BOOLEAN}s in \code{mask_list} applied as a mask to the \code{value_list}.
 }
-\examples{
-\dontrun{
-list_where([10, 20, 30, 40], [true, false, false, true])
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{list_where([10, 20, 30, 40], [true, false, false, true])
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -24,9 +24,11 @@ Returns the MD5 hash of the \code{blob} as a \code{HUGEINT}.
 }
 }
 
-\examples{
-\dontrun{
-md5_number('abc')
-md5_number('\xAA\xBB'::BLOB)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{md5_number('abc')
+md5_number('\\xAA\\xBB'::BLOB)
+}\if{html}{\out{</div>}}
 }
-}
+

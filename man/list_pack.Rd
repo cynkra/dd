@@ -20,8 +20,10 @@ Creates a LIST containing the argument values.
 }
 }
 
-\examples{
-\dontrun{
-list_pack(4, 5, 6)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{list_pack(4, 5, 6)
+}\if{html}{\out{</div>}}
 }
-}
+

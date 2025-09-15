@@ -15,8 +15,10 @@ enum_last(enum = ANY)
 \description{
 Returns the last value of the input enum type.
 }
-\examples{
-\dontrun{
-enum_last(NULL::mood)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{enum_last(NULL::mood)
+}\if{html}{\out{</div>}}
 }
-}
+

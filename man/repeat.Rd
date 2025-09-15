@@ -32,9 +32,11 @@ Repeats the \code{blob} \code{count} number of times.
 }
 }
 
-\examples{
-\dontrun{
-repeat('A', 5)
-repeat('\xAA\xBB'::BLOB, 5)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{repeat('A', 5)
+repeat('\\xAA\\xBB'::BLOB, 5)
+}\if{html}{\out{</div>}}
 }
-}
+

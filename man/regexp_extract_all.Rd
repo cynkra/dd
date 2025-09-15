@@ -27,8 +27,10 @@ Finds non-overlapping occurrences of the \code{regex} in the \code{string} and r
 }
 }
 
-\examples{
-\dontrun{
-regexp_extract_all('Peter: 33, Paul:14', '(\w+):\s*(\d+)', 2)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{regexp_extract_all('Peter: 33, Paul:14', '(\\w+):\\s*(\\d+)', 2)
+}\if{html}{\out{</div>}}
 }
-}
+

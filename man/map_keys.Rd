@@ -15,8 +15,10 @@ map_keys(map = `MAP(K, V)`)
 \description{
 Returns the keys of a map as a list.
 }
-\examples{
-\dontrun{
-map_keys(map(['key'], ['val']))
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{map_keys(map(['key'], ['val']))
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -15,8 +15,10 @@ median(x = ANY)
 \description{
 Returns the middle value of the set. NULL values are ignored. For even value counts, interpolate-able types (numeric, date/time) return the average of the two middle values. Non-interpolate-able types (everything else) return the lower of the two middle values.
 }
-\examples{
-\dontrun{
-median(x)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{median(x)
+}\if{html}{\out{</div>}}
 }
-}
+

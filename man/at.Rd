@@ -32,8 +32,10 @@ Absolute value.
 }
 }
 
-\examples{
-\dontrun{
-abs(-17.4)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{abs(-17.4)
+}\if{html}{\out{</div>}}
 }
-}
+

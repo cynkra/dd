@@ -26,8 +26,10 @@ Draws a band whose width is proportional to (\code{x - min}) and equal to \code{
 }
 }
 
-\examples{
-\dontrun{
-bar(5, 0, 20, 10)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{bar(5, 0, 20, 10)
+}\if{html}{\out{</div>}}
 }
-}
+

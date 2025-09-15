@@ -22,8 +22,10 @@ Extract the named entry from the STRUCT.
 }
 }
 
-\examples{
-\dontrun{
-struct_extract({'i': 3, 'v2': 3, 'v3': 0}, 'i')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{struct_extract(\{'i': 3, 'v2': 3, 'v3': 0\}, 'i')
+}\if{html}{\out{</div>}}
 }
-}
+

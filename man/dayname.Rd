@@ -21,8 +21,10 @@ The (English) name of the weekday.
 }
 }
 
-\examples{
-\dontrun{
-dayname(TIMESTAMP '1992-03-22')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{dayname(TIMESTAMP '1992-03-22')
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -30,8 +30,10 @@ The timestamp for the given parts.
 }
 }
 
-\examples{
-\dontrun{
-make_timestamp(1992, 9, 20, 13, 34, 27.123456)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{make_timestamp(1992, 9, 20, 13, 34, 27.123456)
+}\if{html}{\out{</div>}}
 }
-}
+

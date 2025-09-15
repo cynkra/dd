@@ -22,9 +22,11 @@ Removes any occurrences of any of the \code{characters} from the right side of t
 }
 }
 
-\examples{
-\dontrun{
-rtrim('    test  ')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{rtrim('    test  ')
 rtrim('>>>>test<<', '><')
+}\if{html}{\out{</div>}}
 }
-}
+

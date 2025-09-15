@@ -17,8 +17,10 @@ covar_samp(y = DOUBLE, x = DOUBLE)
 \description{
 Returns the sample covariance for non-NULL pairs in a group.
 }
-\examples{
-\dontrun{
-(SUM(x*y) - SUM(x) * SUM(y) / COUNT(*)) / (COUNT(*) - 1)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{(SUM(x*y) - SUM(x) * SUM(y) / COUNT(*)) / (COUNT(*) - 1)
+}\if{html}{\out{</div>}}
 }
-}
+

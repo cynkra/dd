@@ -15,8 +15,10 @@ upper(string = VARCHAR)
 \description{
 Converts \code{string} to upper case.
 }
-\examples{
-\dontrun{
-upper('Hello')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{upper('Hello')
+}\if{html}{\out{</div>}}
 }
-}
+

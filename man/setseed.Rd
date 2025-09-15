@@ -15,8 +15,10 @@ setseed(col0 = DOUBLE)
 \description{
 Sets the seed to be used for the random function.
 }
-\examples{
-\dontrun{
-setseed(0.42)
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{setseed(0.42)
+}\if{html}{\out{</div>}}
 }
-}
+

@@ -22,8 +22,10 @@ Computes the inner product between two same-sized lists.
 }
 }
 
-\examples{
-\dontrun{
-list_inner_product([1, 2, 3], [1, 2, 3])
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{list_inner_product([1, 2, 3], [1, 2, 3])
+}\if{html}{\out{</div>}}
 }
-}
+

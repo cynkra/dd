@@ -26,8 +26,10 @@ Returns the last component of the \code{path} similarly to Python's \code{os.pat
 }
 }
 
-\examples{
-\dontrun{
-parse_filename('path/to/file.csv', true, 'forward_slash')
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{parse_filename('path/to/file.csv', true, 'forward_slash')
+}\if{html}{\out{</div>}}
 }
-}
+
