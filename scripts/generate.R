@@ -30,15 +30,16 @@ browse_data <- function(x) {
 }
 
 usage_and_params <- function(function_name, parameters, parameter_types) {
-  usage_doc <- map2_chr(parameters, parameter_types, ~ {
-    if (length(..1) == 0) {
+  if (length(parameters) == 1) {
+    if (length(parameters[[1]]) == 0) {
       signature <- "()" # No parameters
     } else {
-      signature <- paste0("(", paste0(tibble:::tick_if_needed(..1), " = ", tibble:::tick_if_needed(..2), collapse = ", "), ")")
+      signature <- paste0("(", paste0(tibble:::tick_if_needed(parameters[[1]]), " = ", tibble:::tick_if_needed(parameter_types[[1]]), collapse = ", "), ")")
     }
-    glue("#' @usage {function_name}{signature}")
-  }) |>
-    glue_collapse(sep = "\n")
+    usage_doc <- glue("#' @usage {function_name}{signature}")
+  } else {
+    usage_doc <- "#' @usage NULL"
+  }
 
   params <-
     tibble(name = unlist(parameters), type = unlist(parameter_types)) |>
@@ -55,7 +56,7 @@ usage_and_params <- function(function_name, parameters, parameter_types) {
     pull() |>
     glue_collapse(sep = ", ")
 
-  tibble(usage_doc, param_doc, signature, types = list(unique(unlist(parameter_types))))
+  tibble(usage_doc, param_doc, signature, types = list(params$type))
 }
 
 funs <-
