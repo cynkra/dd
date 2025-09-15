@@ -4,6 +4,12 @@
 \alias{generate_series}
 \title{DuckDB function generate_series}
 \arguments{
+\item{col0}{\code{BIGINT | TIMESTAMP}}
+
+\item{col1}{\code{BIGINT | TIMESTAMP}}
+
+\item{col2}{\code{BIGINT | INTERVAL}}
+
 \item{start}{\verb{BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 
 \item{stop}{\verb{BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
@@ -18,6 +24,7 @@ Creates a list of values between \code{start} and \code{stop} - the stop paramet
 }
 \examples{
 \dontrun{
+character(0)
 generate_series(2, 5, 3)
 }
 }

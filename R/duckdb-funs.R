@@ -762,6 +762,24 @@ add <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT 
   stop("DuckDB function add() is not available in R.")
 }
 
+#' DuckDB function add_parquet_key
+#'
+#' @description
+#' DuckDB function `add_parquet_key()`.
+#'
+#' @name add_parquet_key
+#' @usage add_parquet_key(col0 = VARCHAR, col1 = VARCHAR)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+add_parquet_key <- function(col0 = VARCHAR, col1 = VARCHAR) {
+  stop("DuckDB function add_parquet_key() is not available in R.")
+}
+
 #' DuckDB function age
 #'
 #' @description
@@ -812,6 +830,23 @@ aggregate <- function(list = `ANY[]`, function_name = VARCHAR) {
 #' }
 alias <- function(expr = ANY) {
   stop("DuckDB function alias() is not available in R.")
+}
+
+#' DuckDB function all_profiling_output
+#'
+#' @description
+#' DuckDB function `all_profiling_output()`.
+#'
+#' @name all_profiling_output
+#' @usage all_profiling_output()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+all_profiling_output <- function() {
+  stop("DuckDB function all_profiling_output() is not available in R.")
 }
 
 #' DuckDB function any_value
@@ -1693,6 +1728,44 @@ array_zip <- function() {
   stop("DuckDB function array_zip() is not available in R.")
 }
 
+#' DuckDB function arrow_scan
+#'
+#' @description
+#' DuckDB function `arrow_scan()`.
+#'
+#' @name arrow_scan
+#' @usage arrow_scan(col0 = POINTER, col1 = POINTER, col2 = POINTER)
+#' @param col0 `POINTER`
+#' @param col1 `POINTER`
+#' @param col2 `POINTER`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+arrow_scan <- function(col0 = POINTER, col1 = POINTER, col2 = POINTER) {
+  stop("DuckDB function arrow_scan() is not available in R.")
+}
+
+#' DuckDB function arrow_scan_dumb
+#'
+#' @description
+#' DuckDB function `arrow_scan_dumb()`.
+#'
+#' @name arrow_scan_dumb
+#' @usage arrow_scan_dumb(col0 = POINTER, col1 = POINTER, col2 = POINTER)
+#' @param col0 `POINTER`
+#' @param col1 `POINTER`
+#' @param col2 `POINTER`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+arrow_scan_dumb <- function(col0 = POINTER, col1 = POINTER, col2 = POINTER) {
+  stop("DuckDB function arrow_scan_dumb() is not available in R.")
+}
+
 #' DuckDB function ascii
 #'
 #' @description
@@ -2220,6 +2293,23 @@ character_length <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
   stop("DuckDB function character_length() is not available in R.")
 }
 
+#' DuckDB function checkpoint
+#'
+#' @description
+#' DuckDB function `checkpoint()`.
+#'
+#' @name checkpoint
+#' @usage NULL
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+checkpoint <- function(col0 = VARCHAR) {
+  stop("DuckDB function checkpoint() is not available in R.")
+}
+
 #' DuckDB function chr
 #'
 #' @description
@@ -2235,6 +2325,23 @@ character_length <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
 #' }
 chr <- function(code_point = INTEGER) {
   stop("DuckDB function chr() is not available in R.")
+}
+
+#' DuckDB function collations
+#'
+#' @description
+#' DuckDB function `collations()`.
+#'
+#' @name collations
+#' @usage collations()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+collations <- function() {
+  stop("DuckDB function collations() is not available in R.")
 }
 
 #' DuckDB function combine
@@ -2327,6 +2434,24 @@ constant_or_null <- function(arg1 = ANY, arg2 = ANY) {
 #' }
 contains <- function(string = VARCHAR, search_string = VARCHAR, col0 = `T[] | MAP(K, V) | STRUCT`, col1 = `T | K | ANY`) {
   stop("DuckDB function contains() is not available in R.")
+}
+
+#' DuckDB function copy_database
+#'
+#' @description
+#' DuckDB function `copy_database()`.
+#'
+#' @name copy_database
+#' @usage copy_database(col0 = VARCHAR, col1 = VARCHAR)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+copy_database <- function(col0 = VARCHAR, col1 = VARCHAR) {
+  stop("DuckDB function copy_database() is not available in R.")
 }
 
 #' DuckDB function corr
@@ -2690,6 +2815,40 @@ damerau_levenshtein <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function damerau_levenshtein() is not available in R.")
 }
 
+#' DuckDB function database_list
+#'
+#' @description
+#' DuckDB function `database_list()`.
+#'
+#' @name database_list
+#' @usage database_list()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+database_list <- function() {
+  stop("DuckDB function database_list() is not available in R.")
+}
+
+#' DuckDB function database_size
+#'
+#' @description
+#' DuckDB function `database_size()`.
+#'
+#' @name database_size
+#' @usage database_size()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+database_size <- function() {
+  stop("DuckDB function database_size() is not available in R.")
+}
+
 #' DuckDB function date_diff
 #'
 #' @description
@@ -2974,6 +3133,227 @@ degrees <- function(x = DOUBLE) {
   stop("DuckDB function degrees() is not available in R.")
 }
 
+#' DuckDB function disable_checkpoint_on_shutdown
+#'
+#' @description
+#' DuckDB function `disable_checkpoint_on_shutdown()`.
+#'
+#' @name disable_checkpoint_on_shutdown
+#' @usage disable_checkpoint_on_shutdown()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+disable_checkpoint_on_shutdown <- function() {
+  stop("DuckDB function disable_checkpoint_on_shutdown() is not available in R.")
+}
+
+#' DuckDB function disable_logging
+#'
+#' @description
+#' DuckDB function `disable_logging()`.
+#'
+#' @name disable_logging
+#' @usage disable_logging()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+disable_logging <- function() {
+  stop("DuckDB function disable_logging() is not available in R.")
+}
+
+#' DuckDB function disable_object_cache
+#'
+#' @description
+#' DuckDB function `disable_object_cache()`.
+#'
+#' @name disable_object_cache
+#' @usage disable_object_cache()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+disable_object_cache <- function() {
+  stop("DuckDB function disable_object_cache() is not available in R.")
+}
+
+#' DuckDB function disable_optimizer
+#'
+#' @description
+#' DuckDB function `disable_optimizer()`.
+#'
+#' @name disable_optimizer
+#' @usage disable_optimizer()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+disable_optimizer <- function() {
+  stop("DuckDB function disable_optimizer() is not available in R.")
+}
+
+#' DuckDB function disable_print_progress_bar
+#'
+#' @description
+#' DuckDB function `disable_print_progress_bar()`.
+#'
+#' @name disable_print_progress_bar
+#' @usage disable_print_progress_bar()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+disable_print_progress_bar <- function() {
+  stop("DuckDB function disable_print_progress_bar() is not available in R.")
+}
+
+#' DuckDB function disable_profile
+#'
+#' @description
+#' DuckDB function `disable_profile()`.
+#'
+#' @name disable_profile
+#' @usage disable_profile()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+disable_profile <- function() {
+  stop("DuckDB function disable_profile() is not available in R.")
+}
+
+#' DuckDB function disable_profiling
+#'
+#' @description
+#' DuckDB function `disable_profiling()`.
+#'
+#' @name disable_profiling
+#' @usage disable_profiling()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+disable_profiling <- function() {
+  stop("DuckDB function disable_profiling() is not available in R.")
+}
+
+#' DuckDB function disable_progress_bar
+#'
+#' @description
+#' DuckDB function `disable_progress_bar()`.
+#'
+#' @name disable_progress_bar
+#' @usage disable_progress_bar()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+disable_progress_bar <- function() {
+  stop("DuckDB function disable_progress_bar() is not available in R.")
+}
+
+#' DuckDB function disable_verification
+#'
+#' @description
+#' DuckDB function `disable_verification()`.
+#'
+#' @name disable_verification
+#' @usage disable_verification()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+disable_verification <- function() {
+  stop("DuckDB function disable_verification() is not available in R.")
+}
+
+#' DuckDB function disable_verify_external
+#'
+#' @description
+#' DuckDB function `disable_verify_external()`.
+#'
+#' @name disable_verify_external
+#' @usage disable_verify_external()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+disable_verify_external <- function() {
+  stop("DuckDB function disable_verify_external() is not available in R.")
+}
+
+#' DuckDB function disable_verify_fetch_row
+#'
+#' @description
+#' DuckDB function `disable_verify_fetch_row()`.
+#'
+#' @name disable_verify_fetch_row
+#' @usage disable_verify_fetch_row()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+disable_verify_fetch_row <- function() {
+  stop("DuckDB function disable_verify_fetch_row() is not available in R.")
+}
+
+#' DuckDB function disable_verify_parallelism
+#'
+#' @description
+#' DuckDB function `disable_verify_parallelism()`.
+#'
+#' @name disable_verify_parallelism
+#' @usage disable_verify_parallelism()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+disable_verify_parallelism <- function() {
+  stop("DuckDB function disable_verify_parallelism() is not available in R.")
+}
+
+#' DuckDB function disable_verify_serializer
+#'
+#' @description
+#' DuckDB function `disable_verify_serializer()`.
+#'
+#' @name disable_verify_serializer
+#' @usage disable_verify_serializer()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+disable_verify_serializer <- function() {
+  stop("DuckDB function disable_verify_serializer() is not available in R.")
+}
+
 #' DuckDB function divide
 #'
 #' @description
@@ -2990,6 +3370,448 @@ degrees <- function(x = DOUBLE) {
 #' }
 divide <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
   stop("DuckDB function divide() is not available in R.")
+}
+
+#' DuckDB function duckdb_approx_database_count
+#'
+#' @description
+#' DuckDB function `duckdb_approx_database_count()`.
+#'
+#' @name duckdb_approx_database_count
+#' @usage duckdb_approx_database_count()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_approx_database_count <- function() {
+  stop("DuckDB function duckdb_approx_database_count() is not available in R.")
+}
+
+#' DuckDB function duckdb_columns
+#'
+#' @description
+#' DuckDB function `duckdb_columns()`.
+#'
+#' @name duckdb_columns
+#' @usage duckdb_columns()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_columns <- function() {
+  stop("DuckDB function duckdb_columns() is not available in R.")
+}
+
+#' DuckDB function duckdb_constraints
+#'
+#' @description
+#' DuckDB function `duckdb_constraints()`.
+#'
+#' @name duckdb_constraints
+#' @usage duckdb_constraints()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_constraints <- function() {
+  stop("DuckDB function duckdb_constraints() is not available in R.")
+}
+
+#' DuckDB function duckdb_databases
+#'
+#' @description
+#' DuckDB function `duckdb_databases()`.
+#'
+#' @name duckdb_databases
+#' @usage duckdb_databases()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_databases <- function() {
+  stop("DuckDB function duckdb_databases() is not available in R.")
+}
+
+#' DuckDB function duckdb_dependencies
+#'
+#' @description
+#' DuckDB function `duckdb_dependencies()`.
+#'
+#' @name duckdb_dependencies
+#' @usage duckdb_dependencies()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_dependencies <- function() {
+  stop("DuckDB function duckdb_dependencies() is not available in R.")
+}
+
+#' DuckDB function duckdb_extensions
+#'
+#' @description
+#' DuckDB function `duckdb_extensions()`.
+#'
+#' @name duckdb_extensions
+#' @usage duckdb_extensions()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_extensions <- function() {
+  stop("DuckDB function duckdb_extensions() is not available in R.")
+}
+
+#' DuckDB function duckdb_external_file_cache
+#'
+#' @description
+#' DuckDB function `duckdb_external_file_cache()`.
+#'
+#' @name duckdb_external_file_cache
+#' @usage duckdb_external_file_cache()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_external_file_cache <- function() {
+  stop("DuckDB function duckdb_external_file_cache() is not available in R.")
+}
+
+#' DuckDB function duckdb_functions
+#'
+#' @description
+#' DuckDB function `duckdb_functions()`.
+#'
+#' @name duckdb_functions
+#' @usage duckdb_functions()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_functions <- function() {
+  stop("DuckDB function duckdb_functions() is not available in R.")
+}
+
+#' DuckDB function duckdb_indexes
+#'
+#' @description
+#' DuckDB function `duckdb_indexes()`.
+#'
+#' @name duckdb_indexes
+#' @usage duckdb_indexes()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_indexes <- function() {
+  stop("DuckDB function duckdb_indexes() is not available in R.")
+}
+
+#' DuckDB function duckdb_keywords
+#'
+#' @description
+#' DuckDB function `duckdb_keywords()`.
+#'
+#' @name duckdb_keywords
+#' @usage duckdb_keywords()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_keywords <- function() {
+  stop("DuckDB function duckdb_keywords() is not available in R.")
+}
+
+#' DuckDB function duckdb_log_contexts
+#'
+#' @description
+#' DuckDB function `duckdb_log_contexts()`.
+#'
+#' @name duckdb_log_contexts
+#' @usage duckdb_log_contexts()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_log_contexts <- function() {
+  stop("DuckDB function duckdb_log_contexts() is not available in R.")
+}
+
+#' DuckDB function duckdb_logs
+#'
+#' @description
+#' DuckDB function `duckdb_logs()`.
+#'
+#' @name duckdb_logs
+#' @usage duckdb_logs(denormalized_table = BOOLEAN)
+#' @param denormalized_table `BOOLEAN`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_logs <- function(denormalized_table = BOOLEAN) {
+  stop("DuckDB function duckdb_logs() is not available in R.")
+}
+
+#' DuckDB function duckdb_memory
+#'
+#' @description
+#' DuckDB function `duckdb_memory()`.
+#'
+#' @name duckdb_memory
+#' @usage duckdb_memory()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_memory <- function() {
+  stop("DuckDB function duckdb_memory() is not available in R.")
+}
+
+#' DuckDB function duckdb_optimizers
+#'
+#' @description
+#' DuckDB function `duckdb_optimizers()`.
+#'
+#' @name duckdb_optimizers
+#' @usage duckdb_optimizers()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_optimizers <- function() {
+  stop("DuckDB function duckdb_optimizers() is not available in R.")
+}
+
+#' DuckDB function duckdb_prepared_statements
+#'
+#' @description
+#' DuckDB function `duckdb_prepared_statements()`.
+#'
+#' @name duckdb_prepared_statements
+#' @usage duckdb_prepared_statements()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_prepared_statements <- function() {
+  stop("DuckDB function duckdb_prepared_statements() is not available in R.")
+}
+
+#' DuckDB function duckdb_schemas
+#'
+#' @description
+#' DuckDB function `duckdb_schemas()`.
+#'
+#' @name duckdb_schemas
+#' @usage duckdb_schemas()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_schemas <- function() {
+  stop("DuckDB function duckdb_schemas() is not available in R.")
+}
+
+#' DuckDB function duckdb_secret_types
+#'
+#' @description
+#' DuckDB function `duckdb_secret_types()`.
+#'
+#' @name duckdb_secret_types
+#' @usage duckdb_secret_types()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_secret_types <- function() {
+  stop("DuckDB function duckdb_secret_types() is not available in R.")
+}
+
+#' DuckDB function duckdb_secrets
+#'
+#' @description
+#' DuckDB function `duckdb_secrets()`.
+#'
+#' @name duckdb_secrets
+#' @usage duckdb_secrets(redact = BOOLEAN)
+#' @param redact `BOOLEAN`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_secrets <- function(redact = BOOLEAN) {
+  stop("DuckDB function duckdb_secrets() is not available in R.")
+}
+
+#' DuckDB function duckdb_sequences
+#'
+#' @description
+#' DuckDB function `duckdb_sequences()`.
+#'
+#' @name duckdb_sequences
+#' @usage duckdb_sequences()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_sequences <- function() {
+  stop("DuckDB function duckdb_sequences() is not available in R.")
+}
+
+#' DuckDB function duckdb_settings
+#'
+#' @description
+#' DuckDB function `duckdb_settings()`.
+#'
+#' @name duckdb_settings
+#' @usage duckdb_settings()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_settings <- function() {
+  stop("DuckDB function duckdb_settings() is not available in R.")
+}
+
+#' DuckDB function duckdb_table_sample
+#'
+#' @description
+#' DuckDB function `duckdb_table_sample()`.
+#'
+#' @name duckdb_table_sample
+#' @usage duckdb_table_sample(col0 = VARCHAR)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_table_sample <- function(col0 = VARCHAR) {
+  stop("DuckDB function duckdb_table_sample() is not available in R.")
+}
+
+#' DuckDB function duckdb_tables
+#'
+#' @description
+#' DuckDB function `duckdb_tables()`.
+#'
+#' @name duckdb_tables
+#' @usage duckdb_tables()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_tables <- function() {
+  stop("DuckDB function duckdb_tables() is not available in R.")
+}
+
+#' DuckDB function duckdb_temporary_files
+#'
+#' @description
+#' DuckDB function `duckdb_temporary_files()`.
+#'
+#' @name duckdb_temporary_files
+#' @usage duckdb_temporary_files()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_temporary_files <- function() {
+  stop("DuckDB function duckdb_temporary_files() is not available in R.")
+}
+
+#' DuckDB function duckdb_types
+#'
+#' @description
+#' DuckDB function `duckdb_types()`.
+#'
+#' @name duckdb_types
+#' @usage duckdb_types()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_types <- function() {
+  stop("DuckDB function duckdb_types() is not available in R.")
+}
+
+#' DuckDB function duckdb_variables
+#'
+#' @description
+#' DuckDB function `duckdb_variables()`.
+#'
+#' @name duckdb_variables
+#' @usage duckdb_variables()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_variables <- function() {
+  stop("DuckDB function duckdb_variables() is not available in R.")
+}
+
+#' DuckDB function duckdb_views
+#'
+#' @description
+#' DuckDB function `duckdb_views()`.
+#'
+#' @name duckdb_views
+#' @usage duckdb_views()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+duckdb_views <- function() {
+  stop("DuckDB function duckdb_views() is not available in R.")
 }
 
 #' DuckDB function editdist3
@@ -3026,6 +3848,164 @@ editdist3 <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' }
 element_at <- function(map = `MAP(K, V)`, key = K) {
   stop("DuckDB function element_at() is not available in R.")
+}
+
+#' DuckDB function enable_checkpoint_on_shutdown
+#'
+#' @description
+#' DuckDB function `enable_checkpoint_on_shutdown()`.
+#'
+#' @name enable_checkpoint_on_shutdown
+#' @usage enable_checkpoint_on_shutdown()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+enable_checkpoint_on_shutdown <- function() {
+  stop("DuckDB function enable_checkpoint_on_shutdown() is not available in R.")
+}
+
+#' DuckDB function enable_logging
+#'
+#' @description
+#' DuckDB function `enable_logging()`.
+#'
+#' @name enable_logging
+#' @usage enable_logging(level = VARCHAR, storage = VARCHAR, storage_config = ANY, storage_path = VARCHAR, storage_normalize = BOOLEAN, storage_buffer_size = UBIGINT)
+#' @param level `VARCHAR`
+#' @param storage `VARCHAR`
+#' @param storage_config `ANY`
+#' @param storage_path `VARCHAR`
+#' @param storage_normalize `BOOLEAN`
+#' @param storage_buffer_size `UBIGINT`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+enable_logging <- function(level = VARCHAR, storage = VARCHAR, storage_config = ANY, storage_path = VARCHAR, storage_normalize = BOOLEAN, storage_buffer_size = UBIGINT) {
+  stop("DuckDB function enable_logging() is not available in R.")
+}
+
+#' DuckDB function enable_object_cache
+#'
+#' @description
+#' DuckDB function `enable_object_cache()`.
+#'
+#' @name enable_object_cache
+#' @usage enable_object_cache()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+enable_object_cache <- function() {
+  stop("DuckDB function enable_object_cache() is not available in R.")
+}
+
+#' DuckDB function enable_optimizer
+#'
+#' @description
+#' DuckDB function `enable_optimizer()`.
+#'
+#' @name enable_optimizer
+#' @usage enable_optimizer()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+enable_optimizer <- function() {
+  stop("DuckDB function enable_optimizer() is not available in R.")
+}
+
+#' DuckDB function enable_print_progress_bar
+#'
+#' @description
+#' DuckDB function `enable_print_progress_bar()`.
+#'
+#' @name enable_print_progress_bar
+#' @usage enable_print_progress_bar()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+enable_print_progress_bar <- function() {
+  stop("DuckDB function enable_print_progress_bar() is not available in R.")
+}
+
+#' DuckDB function enable_profile
+#'
+#' @description
+#' DuckDB function `enable_profile()`.
+#'
+#' @name enable_profile
+#' @usage enable_profile()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+enable_profile <- function() {
+  stop("DuckDB function enable_profile() is not available in R.")
+}
+
+#' DuckDB function enable_profiling
+#'
+#' @description
+#' DuckDB function `enable_profiling()`.
+#'
+#' @name enable_profiling
+#' @usage enable_profiling()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+enable_profiling <- function() {
+  stop("DuckDB function enable_profiling() is not available in R.")
+}
+
+#' DuckDB function enable_progress_bar
+#'
+#' @description
+#' DuckDB function `enable_progress_bar()`.
+#'
+#' @name enable_progress_bar
+#' @usage enable_progress_bar()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+enable_progress_bar <- function() {
+  stop("DuckDB function enable_progress_bar() is not available in R.")
+}
+
+#' DuckDB function enable_verification
+#'
+#' @description
+#' DuckDB function `enable_verification()`.
+#'
+#' @name enable_verification
+#' @usage enable_verification()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+enable_verification <- function() {
+  stop("DuckDB function enable_verification() is not available in R.")
 }
 
 #' DuckDB function encode
@@ -3322,6 +4302,23 @@ exp <- function(x = DOUBLE) {
   stop("DuckDB function exp() is not available in R.")
 }
 
+#' DuckDB function extension_versions
+#'
+#' @description
+#' DuckDB function `extension_versions()`.
+#'
+#' @name extension_versions
+#' @usage extension_versions()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+extension_versions <- function() {
+  stop("DuckDB function extension_versions() is not available in R.")
+}
+
 #' DuckDB function factorial
 #'
 #' @description
@@ -3440,6 +4437,23 @@ flatten <- function(nested_list = `T[][]`) {
 #' }
 floor <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
   stop("DuckDB function floor() is not available in R.")
+}
+
+#' DuckDB function force_checkpoint
+#'
+#' @description
+#' DuckDB function `force_checkpoint()`.
+#'
+#' @name force_checkpoint
+#' @usage NULL
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+force_checkpoint <- function(col0 = VARCHAR) {
+  stop("DuckDB function force_checkpoint() is not available in R.")
 }
 
 #' DuckDB function format
@@ -3578,6 +4592,23 @@ fsum <- function(arg = DOUBLE) {
   stop("DuckDB function fsum() is not available in R.")
 }
 
+#' DuckDB function functions
+#'
+#' @description
+#' DuckDB function `functions()`.
+#'
+#' @name functions
+#' @usage functions()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+functions <- function() {
+  stop("DuckDB function functions() is not available in R.")
+}
+
 #' DuckDB function gamma
 #'
 #' @description
@@ -3637,15 +4668,19 @@ gen_random_uuid <- function() {
 #'
 #' @name generate_series
 #' @usage NULL
+#' @param col0 `BIGINT | TIMESTAMP`
+#' @param col1 `BIGINT | TIMESTAMP`
+#' @param col2 `BIGINT | INTERVAL`
 #' @param start `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param stop `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param step `BIGINT | INTERVAL`
 #' @return `BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
 #' @examples
 #' \dontrun{
+#' character(0)
 #' generate_series(2, 5, 3)
 #' }
-generate_series <- function(start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, stop = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, step = `BIGINT | INTERVAL`) {
+generate_series <- function(col0 = `BIGINT | TIMESTAMP`, col1 = `BIGINT | TIMESTAMP`, col2 = `BIGINT | INTERVAL`, start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, stop = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, step = `BIGINT | INTERVAL`) {
   stop("DuckDB function generate_series() is not available in R.")
 }
 
@@ -3699,6 +4734,23 @@ get_current_timestamp <- function() {
 #' }
 getvariable <- function(col0 = VARCHAR) {
   stop("DuckDB function getvariable() is not available in R.")
+}
+
+#' DuckDB function glob
+#'
+#' @description
+#' DuckDB function `glob()`.
+#'
+#' @name glob
+#' @usage NULL
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+glob <- function(col0 = `VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function glob() is not available in R.")
 }
 
 #' DuckDB function grade_up
@@ -3903,6 +4955,23 @@ hour <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE 
 #' }
 ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
   stop("DuckDB function ilike_escape() is not available in R.")
+}
+
+#' DuckDB function import_database
+#'
+#' @description
+#' DuckDB function `import_database()`.
+#'
+#' @name import_database
+#' @usage import_database(col0 = VARCHAR)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+import_database <- function(col0 = VARCHAR) {
+  stop("DuckDB function import_database() is not available in R.")
 }
 
 #' DuckDB function in_search_path
@@ -5580,6 +6649,23 @@ median <- function(x = ANY) {
   stop("DuckDB function median() is not available in R.")
 }
 
+#' DuckDB function metadata_info
+#'
+#' @description
+#' DuckDB function `metadata_info()`.
+#'
+#' @name metadata_info
+#' @usage metadata_info()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+metadata_info <- function() {
+  stop("DuckDB function metadata_info() is not available in R.")
+}
+
 #' DuckDB function microsecond
 #'
 #' @description
@@ -5969,6 +7055,124 @@ ord <- function(string = VARCHAR) {
   stop("DuckDB function ord() is not available in R.")
 }
 
+#' DuckDB function parquet_bloom_probe
+#'
+#' @description
+#' DuckDB function `parquet_bloom_probe()`.
+#'
+#' @name parquet_bloom_probe
+#' @usage NULL
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param col1 `VARCHAR`
+#' @param col2 `ANY`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+parquet_bloom_probe <- function(col0 = `VARCHAR | VARCHAR[]`, col1 = VARCHAR, col2 = ANY) {
+  stop("DuckDB function parquet_bloom_probe() is not available in R.")
+}
+
+#' DuckDB function parquet_file_metadata
+#'
+#' @description
+#' DuckDB function `parquet_file_metadata()`.
+#'
+#' @name parquet_file_metadata
+#' @usage NULL
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+parquet_file_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function parquet_file_metadata() is not available in R.")
+}
+
+#' DuckDB function parquet_kv_metadata
+#'
+#' @description
+#' DuckDB function `parquet_kv_metadata()`.
+#'
+#' @name parquet_kv_metadata
+#' @usage NULL
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+parquet_kv_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function parquet_kv_metadata() is not available in R.")
+}
+
+#' DuckDB function parquet_metadata
+#'
+#' @description
+#' DuckDB function `parquet_metadata()`.
+#'
+#' @name parquet_metadata
+#' @usage NULL
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+parquet_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function parquet_metadata() is not available in R.")
+}
+
+#' DuckDB function parquet_scan
+#'
+#' @description
+#' DuckDB function `parquet_scan()`.
+#'
+#' @name parquet_scan
+#' @usage NULL
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param can_have_nan `BOOLEAN`
+#' @param encryption_config `ANY`
+#' @param file_row_number `BOOLEAN`
+#' @param schema `ANY`
+#' @param parquet_version `VARCHAR`
+#' @param filename `ANY`
+#' @param binary_as_string `BOOLEAN`
+#' @param debug_use_openssl `BOOLEAN`
+#' @param union_by_name `BOOLEAN`
+#' @param explicit_cardinality `UBIGINT`
+#' @param compression `VARCHAR`
+#' @param hive_types `ANY`
+#' @param hive_partitioning `BOOLEAN`
+#' @param hive_types_autocast `BOOLEAN`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+parquet_scan <- function(col0 = `VARCHAR | VARCHAR[]`, can_have_nan = BOOLEAN, encryption_config = ANY, file_row_number = BOOLEAN, schema = ANY, parquet_version = VARCHAR, filename = ANY, binary_as_string = BOOLEAN, debug_use_openssl = BOOLEAN, union_by_name = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, hive_types = ANY, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN) {
+  stop("DuckDB function parquet_scan() is not available in R.")
+}
+
+#' DuckDB function parquet_schema
+#'
+#' @description
+#' DuckDB function `parquet_schema()`.
+#'
+#' @name parquet_schema
+#' @usage NULL
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+parquet_schema <- function(col0 = `VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function parquet_schema() is not available in R.")
+}
+
 #' DuckDB function parse_dirname
 #'
 #' @description
@@ -6077,6 +7281,23 @@ pi <- function() {
   stop("DuckDB function pi() is not available in R.")
 }
 
+#' DuckDB function platform
+#'
+#' @description
+#' DuckDB function `platform()`.
+#'
+#' @name platform
+#' @usage platform()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+platform <- function() {
+  stop("DuckDB function platform() is not available in R.")
+}
+
 #' DuckDB function position
 #'
 #' @description
@@ -6129,6 +7350,159 @@ pow <- function(x = DOUBLE, y = DOUBLE) {
 #' }
 power <- function(x = DOUBLE, y = DOUBLE) {
   stop("DuckDB function power() is not available in R.")
+}
+
+#' DuckDB function pragma_collations
+#'
+#' @description
+#' DuckDB function `pragma_collations()`.
+#'
+#' @name pragma_collations
+#' @usage pragma_collations()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+pragma_collations <- function() {
+  stop("DuckDB function pragma_collations() is not available in R.")
+}
+
+#' DuckDB function pragma_database_size
+#'
+#' @description
+#' DuckDB function `pragma_database_size()`.
+#'
+#' @name pragma_database_size
+#' @usage pragma_database_size()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+pragma_database_size <- function() {
+  stop("DuckDB function pragma_database_size() is not available in R.")
+}
+
+#' DuckDB function pragma_metadata_info
+#'
+#' @description
+#' DuckDB function `pragma_metadata_info()`.
+#'
+#' @name pragma_metadata_info
+#' @usage NULL
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+pragma_metadata_info <- function(col0 = VARCHAR) {
+  stop("DuckDB function pragma_metadata_info() is not available in R.")
+}
+
+#' DuckDB function pragma_platform
+#'
+#' @description
+#' DuckDB function `pragma_platform()`.
+#'
+#' @name pragma_platform
+#' @usage pragma_platform()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+pragma_platform <- function() {
+  stop("DuckDB function pragma_platform() is not available in R.")
+}
+
+#' DuckDB function pragma_show
+#'
+#' @description
+#' DuckDB function `pragma_show()`.
+#'
+#' @name pragma_show
+#' @usage pragma_show(col0 = VARCHAR)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+pragma_show <- function(col0 = VARCHAR) {
+  stop("DuckDB function pragma_show() is not available in R.")
+}
+
+#' DuckDB function pragma_storage_info
+#'
+#' @description
+#' DuckDB function `pragma_storage_info()`.
+#'
+#' @name pragma_storage_info
+#' @usage pragma_storage_info(col0 = VARCHAR)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+pragma_storage_info <- function(col0 = VARCHAR) {
+  stop("DuckDB function pragma_storage_info() is not available in R.")
+}
+
+#' DuckDB function pragma_table_info
+#'
+#' @description
+#' DuckDB function `pragma_table_info()`.
+#'
+#' @name pragma_table_info
+#' @usage pragma_table_info(col0 = VARCHAR)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+pragma_table_info <- function(col0 = VARCHAR) {
+  stop("DuckDB function pragma_table_info() is not available in R.")
+}
+
+#' DuckDB function pragma_user_agent
+#'
+#' @description
+#' DuckDB function `pragma_user_agent()`.
+#'
+#' @name pragma_user_agent
+#' @usage pragma_user_agent()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+pragma_user_agent <- function() {
+  stop("DuckDB function pragma_user_agent() is not available in R.")
+}
+
+#' DuckDB function pragma_version
+#'
+#' @description
+#' DuckDB function `pragma_version()`.
+#'
+#' @name pragma_version
+#' @usage pragma_version()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+pragma_version <- function() {
+  stop("DuckDB function pragma_version() is not available in R.")
 }
 
 #' DuckDB function prefix
@@ -6254,6 +7628,60 @@ quarter <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
   stop("DuckDB function quarter() is not available in R.")
 }
 
+#' DuckDB function query
+#'
+#' @description
+#' DuckDB function `query()`.
+#'
+#' @name query
+#' @usage query(col0 = VARCHAR)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+query <- function(col0 = VARCHAR) {
+  stop("DuckDB function query() is not available in R.")
+}
+
+#' DuckDB function query_table
+#'
+#' @description
+#' DuckDB function `query_table()`.
+#'
+#' @name query_table
+#' @usage NULL
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param col1 `BOOLEAN`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+query_table <- function(col0 = `VARCHAR | VARCHAR[]`, col1 = BOOLEAN) {
+  stop("DuckDB function query_table() is not available in R.")
+}
+
+#' DuckDB function r_dataframe_scan
+#'
+#' @description
+#' DuckDB function `r_dataframe_scan()`.
+#'
+#' @name r_dataframe_scan
+#' @usage r_dataframe_scan(col0 = POINTER, experimental = BOOLEAN, integer64 = BOOLEAN)
+#' @param col0 `POINTER`
+#' @param experimental `BOOLEAN`
+#' @param integer64 `BOOLEAN`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+r_dataframe_scan <- function(col0 = POINTER, experimental = BOOLEAN, integer64 = BOOLEAN) {
+  stop("DuckDB function r_dataframe_scan() is not available in R.")
+}
+
 #' DuckDB function radians
 #'
 #' @description
@@ -6295,16 +7723,219 @@ random <- function() {
 #'
 #' @name range
 #' @usage NULL
+#' @param col0 `BIGINT | TIMESTAMP`
+#' @param col1 `BIGINT | TIMESTAMP`
+#' @param col2 `BIGINT | INTERVAL`
 #' @param start `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param stop `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param step `BIGINT | INTERVAL`
 #' @return `BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
 #' @examples
 #' \dontrun{
+#' character(0)
 #' range(2, 5, 3)
 #' }
-range <- function(start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, stop = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, step = `BIGINT | INTERVAL`) {
+range <- function(col0 = `BIGINT | TIMESTAMP`, col1 = `BIGINT | TIMESTAMP`, col2 = `BIGINT | INTERVAL`, start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, stop = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, step = `BIGINT | INTERVAL`) {
   stop("DuckDB function range() is not available in R.")
+}
+
+#' DuckDB function read_blob
+#'
+#' @description
+#' DuckDB function `read_blob()`.
+#'
+#' @name read_blob
+#' @usage NULL
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param union_by_name `BOOLEAN`
+#' @param hive_partitioning `BOOLEAN`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param hive_types `ANY`
+#' @param filename `ANY`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+read_blob <- function(col0 = `VARCHAR | VARCHAR[]`, union_by_name = BOOLEAN, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN, hive_types = ANY, filename = ANY) {
+  stop("DuckDB function read_blob() is not available in R.")
+}
+
+#' DuckDB function read_csv
+#'
+#' @description
+#' DuckDB function `read_csv()`.
+#'
+#' @name read_csv
+#' @usage NULL
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param skip `BIGINT`
+#' @param types `ANY`
+#' @param nullstr `ANY`
+#' @param encoding `VARCHAR`
+#' @param hive_types `ANY`
+#' @param filename `ANY`
+#' @param header `BOOLEAN`
+#' @param delim `VARCHAR`
+#' @param dateformat `VARCHAR`
+#' @param column_names `VARCHAR[]`
+#' @param union_by_name `BOOLEAN`
+#' @param new_line `VARCHAR`
+#' @param escape `VARCHAR`
+#' @param allow_quoted_nulls `BOOLEAN`
+#' @param comment `VARCHAR`
+#' @param hive_partitioning `BOOLEAN`
+#' @param sep `VARCHAR`
+#' @param columns `ANY`
+#' @param rejects_limit `BIGINT`
+#' @param force_not_null `VARCHAR[]`
+#' @param auto_type_candidates `ANY`
+#' @param sample_size `BIGINT`
+#' @param timestampformat `VARCHAR`
+#' @param auto_detect `BOOLEAN`
+#' @param all_varchar `BOOLEAN`
+#' @param store_rejects `BOOLEAN`
+#' @param normalize_names `BOOLEAN`
+#' @param rejects_table `VARCHAR`
+#' @param column_types `ANY`
+#' @param compression `VARCHAR`
+#' @param ignore_errors `BOOLEAN`
+#' @param names `VARCHAR[]`
+#' @param max_line_size `VARCHAR`
+#' @param quote `VARCHAR`
+#' @param maximum_line_size `VARCHAR`
+#' @param rejects_scan `VARCHAR`
+#' @param buffer_size `UBIGINT`
+#' @param decimal_separator `VARCHAR`
+#' @param parallel `BOOLEAN`
+#' @param null_padding `BOOLEAN`
+#' @param dtypes `ANY`
+#' @param strict_mode `BOOLEAN`
+#' @param thousands `VARCHAR`
+#' @param files_to_sniff `BIGINT`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+read_csv <- function(col0 = `VARCHAR | VARCHAR[]`, hive_types_autocast = BOOLEAN, skip = BIGINT, types = ANY, nullstr = ANY, encoding = VARCHAR, hive_types = ANY, filename = ANY, header = BOOLEAN, delim = VARCHAR, dateformat = VARCHAR, column_names = `VARCHAR[]`, union_by_name = BOOLEAN, new_line = VARCHAR, escape = VARCHAR, allow_quoted_nulls = BOOLEAN, comment = VARCHAR, hive_partitioning = BOOLEAN, sep = VARCHAR, columns = ANY, rejects_limit = BIGINT, force_not_null = `VARCHAR[]`, auto_type_candidates = ANY, sample_size = BIGINT, timestampformat = VARCHAR, auto_detect = BOOLEAN, all_varchar = BOOLEAN, store_rejects = BOOLEAN, normalize_names = BOOLEAN, rejects_table = VARCHAR, column_types = ANY, compression = VARCHAR, ignore_errors = BOOLEAN, names = `VARCHAR[]`, max_line_size = VARCHAR, quote = VARCHAR, maximum_line_size = VARCHAR, rejects_scan = VARCHAR, buffer_size = UBIGINT, decimal_separator = VARCHAR, parallel = BOOLEAN, null_padding = BOOLEAN, dtypes = ANY, strict_mode = BOOLEAN, thousands = VARCHAR, files_to_sniff = BIGINT) {
+  stop("DuckDB function read_csv() is not available in R.")
+}
+
+#' DuckDB function read_csv_auto
+#'
+#' @description
+#' DuckDB function `read_csv_auto()`.
+#'
+#' @name read_csv_auto
+#' @usage NULL
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param skip `BIGINT`
+#' @param types `ANY`
+#' @param nullstr `ANY`
+#' @param encoding `VARCHAR`
+#' @param hive_types `ANY`
+#' @param filename `ANY`
+#' @param header `BOOLEAN`
+#' @param delim `VARCHAR`
+#' @param dateformat `VARCHAR`
+#' @param column_names `VARCHAR[]`
+#' @param union_by_name `BOOLEAN`
+#' @param new_line `VARCHAR`
+#' @param escape `VARCHAR`
+#' @param allow_quoted_nulls `BOOLEAN`
+#' @param comment `VARCHAR`
+#' @param hive_partitioning `BOOLEAN`
+#' @param sep `VARCHAR`
+#' @param columns `ANY`
+#' @param rejects_limit `BIGINT`
+#' @param force_not_null `VARCHAR[]`
+#' @param auto_type_candidates `ANY`
+#' @param sample_size `BIGINT`
+#' @param timestampformat `VARCHAR`
+#' @param auto_detect `BOOLEAN`
+#' @param all_varchar `BOOLEAN`
+#' @param store_rejects `BOOLEAN`
+#' @param normalize_names `BOOLEAN`
+#' @param rejects_table `VARCHAR`
+#' @param column_types `ANY`
+#' @param compression `VARCHAR`
+#' @param ignore_errors `BOOLEAN`
+#' @param names `VARCHAR[]`
+#' @param max_line_size `VARCHAR`
+#' @param quote `VARCHAR`
+#' @param maximum_line_size `VARCHAR`
+#' @param rejects_scan `VARCHAR`
+#' @param buffer_size `UBIGINT`
+#' @param decimal_separator `VARCHAR`
+#' @param parallel `BOOLEAN`
+#' @param null_padding `BOOLEAN`
+#' @param dtypes `ANY`
+#' @param strict_mode `BOOLEAN`
+#' @param thousands `VARCHAR`
+#' @param files_to_sniff `BIGINT`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+read_csv_auto <- function(col0 = `VARCHAR | VARCHAR[]`, hive_types_autocast = BOOLEAN, skip = BIGINT, types = ANY, nullstr = ANY, encoding = VARCHAR, hive_types = ANY, filename = ANY, header = BOOLEAN, delim = VARCHAR, dateformat = VARCHAR, column_names = `VARCHAR[]`, union_by_name = BOOLEAN, new_line = VARCHAR, escape = VARCHAR, allow_quoted_nulls = BOOLEAN, comment = VARCHAR, hive_partitioning = BOOLEAN, sep = VARCHAR, columns = ANY, rejects_limit = BIGINT, force_not_null = `VARCHAR[]`, auto_type_candidates = ANY, sample_size = BIGINT, timestampformat = VARCHAR, auto_detect = BOOLEAN, all_varchar = BOOLEAN, store_rejects = BOOLEAN, normalize_names = BOOLEAN, rejects_table = VARCHAR, column_types = ANY, compression = VARCHAR, ignore_errors = BOOLEAN, names = `VARCHAR[]`, max_line_size = VARCHAR, quote = VARCHAR, maximum_line_size = VARCHAR, rejects_scan = VARCHAR, buffer_size = UBIGINT, decimal_separator = VARCHAR, parallel = BOOLEAN, null_padding = BOOLEAN, dtypes = ANY, strict_mode = BOOLEAN, thousands = VARCHAR, files_to_sniff = BIGINT) {
+  stop("DuckDB function read_csv_auto() is not available in R.")
+}
+
+#' DuckDB function read_parquet
+#'
+#' @description
+#' DuckDB function `read_parquet()`.
+#'
+#' @name read_parquet
+#' @usage NULL
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param can_have_nan `BOOLEAN`
+#' @param encryption_config `ANY`
+#' @param file_row_number `BOOLEAN`
+#' @param schema `ANY`
+#' @param parquet_version `VARCHAR`
+#' @param filename `ANY`
+#' @param binary_as_string `BOOLEAN`
+#' @param debug_use_openssl `BOOLEAN`
+#' @param union_by_name `BOOLEAN`
+#' @param explicit_cardinality `UBIGINT`
+#' @param compression `VARCHAR`
+#' @param hive_types `ANY`
+#' @param hive_partitioning `BOOLEAN`
+#' @param hive_types_autocast `BOOLEAN`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+read_parquet <- function(col0 = `VARCHAR | VARCHAR[]`, can_have_nan = BOOLEAN, encryption_config = ANY, file_row_number = BOOLEAN, schema = ANY, parquet_version = VARCHAR, filename = ANY, binary_as_string = BOOLEAN, debug_use_openssl = BOOLEAN, union_by_name = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, hive_types = ANY, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN) {
+  stop("DuckDB function read_parquet() is not available in R.")
+}
+
+#' DuckDB function read_text
+#'
+#' @description
+#' DuckDB function `read_text()`.
+#'
+#' @name read_text
+#' @usage NULL
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param union_by_name `BOOLEAN`
+#' @param hive_partitioning `BOOLEAN`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param hive_types `ANY`
+#' @param filename `ANY`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+read_text <- function(col0 = `VARCHAR | VARCHAR[]`, union_by_name = BOOLEAN, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN, hive_types = ANY, filename = ANY) {
+  stop("DuckDB function read_text() is not available in R.")
 }
 
 #' DuckDB function reduce
@@ -6638,20 +8269,37 @@ regr_syy <- function(y = DOUBLE, x = DOUBLE) {
 #'
 #' @name repeat
 #' @usage NULL
+#' @param col0 `ANY | T[]`
+#' @param col1 `BIGINT`
 #' @param string `VARCHAR`
 #' @param count `BIGINT`
 #' @param blob `BLOB`
-#' @param col0 `T[]`
-#' @param col1 `BIGINT`
 #' @return `VARCHAR | BLOB | T[]`
 #' @examples
 #' \dontrun{
+#' character(0)
 #' repeat('A', 5)
 #' repeat('\xAA\xBB'::BLOB, 5)
+#' }
+`repeat` <- function(col0 = `ANY | T[]`, col1 = BIGINT, string = VARCHAR, count = BIGINT, blob = BLOB) {
+  stop("DuckDB function repeat() is not available in R.")
+}
+
+#' DuckDB function repeat_row
+#'
+#' @description
+#' DuckDB function `repeat_row()`.
+#'
+#' @name repeat_row
+#' @usage repeat_row(num_rows = BIGINT)
+#' @param num_rows `BIGINT`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
 #' character(0)
 #' }
-`repeat` <- function(string = VARCHAR, count = BIGINT, blob = BLOB, col0 = `T[]`, col1 = BIGINT) {
-  stop("DuckDB function repeat() is not available in R.")
+repeat_row <- function(num_rows = BIGINT) {
+  stop("DuckDB function repeat_row() is not available in R.")
 }
 
 #' DuckDB function replace
@@ -6870,6 +8518,23 @@ sem <- function(x = DOUBLE) {
   stop("DuckDB function sem() is not available in R.")
 }
 
+#' DuckDB function seq_scan
+#'
+#' @description
+#' DuckDB function `seq_scan()`.
+#'
+#' @name seq_scan
+#' @usage seq_scan()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+seq_scan <- function() {
+  stop("DuckDB function seq_scan() is not available in R.")
+}
+
 #' DuckDB function set_bit
 #'
 #' @description
@@ -6946,6 +8611,74 @@ sha1 <- function(value = VARCHAR, blob = BLOB) {
 #' }
 sha256 <- function(value = VARCHAR, blob = BLOB) {
   stop("DuckDB function sha256() is not available in R.")
+}
+
+#' DuckDB function show
+#'
+#' @description
+#' DuckDB function `show()`.
+#'
+#' @name show
+#' @usage show(col0 = VARCHAR)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+show <- function(col0 = VARCHAR) {
+  stop("DuckDB function show() is not available in R.")
+}
+
+#' DuckDB function show_databases
+#'
+#' @description
+#' DuckDB function `show_databases()`.
+#'
+#' @name show_databases
+#' @usage show_databases()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+show_databases <- function() {
+  stop("DuckDB function show_databases() is not available in R.")
+}
+
+#' DuckDB function show_tables
+#'
+#' @description
+#' DuckDB function `show_tables()`.
+#'
+#' @name show_tables
+#' @usage show_tables()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+show_tables <- function() {
+  stop("DuckDB function show_tables() is not available in R.")
+}
+
+#' DuckDB function show_tables_expanded
+#'
+#' @description
+#' DuckDB function `show_tables_expanded()`.
+#'
+#' @name show_tables_expanded
+#' @usage show_tables_expanded()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+show_tables_expanded <- function() {
+  stop("DuckDB function show_tables_expanded() is not available in R.")
 }
 
 #' DuckDB function sign
@@ -7031,6 +8764,69 @@ sinh <- function(x = DOUBLE) {
 #' }
 skewness <- function(x = DOUBLE) {
   stop("DuckDB function skewness() is not available in R.")
+}
+
+#' DuckDB function sniff_csv
+#'
+#' @description
+#' DuckDB function `sniff_csv()`.
+#'
+#' @name sniff_csv
+#' @usage sniff_csv(col0 = VARCHAR, delim = VARCHAR, dateformat = VARCHAR, column_names = `VARCHAR[]`, sep = VARCHAR, hive_partitioning = BOOLEAN, header = BOOLEAN, escape = VARCHAR, allow_quoted_nulls = BOOLEAN, comment = VARCHAR, maximum_line_size = VARCHAR, new_line = VARCHAR, columns = ANY, rejects_limit = BIGINT, force_not_null = `VARCHAR[]`, timestampformat = VARCHAR, auto_detect = BOOLEAN, sample_size = BIGINT, auto_type_candidates = ANY, nullstr = ANY, encoding = VARCHAR, normalize_names = BOOLEAN, rejects_table = VARCHAR, column_types = ANY, skip = BIGINT, types = ANY, max_line_size = VARCHAR, quote = VARCHAR, rejects_scan = VARCHAR, ignore_errors = BOOLEAN, compression = VARCHAR, names = `VARCHAR[]`, force_match = BOOLEAN, store_rejects = BOOLEAN, all_varchar = BOOLEAN, buffer_size = UBIGINT, decimal_separator = VARCHAR, parallel = BOOLEAN, null_padding = BOOLEAN, dtypes = ANY, strict_mode = BOOLEAN, thousands = VARCHAR, files_to_sniff = BIGINT, filename = ANY, union_by_name = BOOLEAN, hive_types = ANY, hive_types_autocast = BOOLEAN)
+#' @param col0 `VARCHAR`
+#' @param delim `VARCHAR`
+#' @param dateformat `VARCHAR`
+#' @param column_names `VARCHAR[]`
+#' @param sep `VARCHAR`
+#' @param hive_partitioning `BOOLEAN`
+#' @param header `BOOLEAN`
+#' @param escape `VARCHAR`
+#' @param allow_quoted_nulls `BOOLEAN`
+#' @param comment `VARCHAR`
+#' @param maximum_line_size `VARCHAR`
+#' @param new_line `VARCHAR`
+#' @param columns `ANY`
+#' @param rejects_limit `BIGINT`
+#' @param force_not_null `VARCHAR[]`
+#' @param timestampformat `VARCHAR`
+#' @param auto_detect `BOOLEAN`
+#' @param sample_size `BIGINT`
+#' @param auto_type_candidates `ANY`
+#' @param nullstr `ANY`
+#' @param encoding `VARCHAR`
+#' @param normalize_names `BOOLEAN`
+#' @param rejects_table `VARCHAR`
+#' @param column_types `ANY`
+#' @param skip `BIGINT`
+#' @param types `ANY`
+#' @param max_line_size `VARCHAR`
+#' @param quote `VARCHAR`
+#' @param rejects_scan `VARCHAR`
+#' @param ignore_errors `BOOLEAN`
+#' @param compression `VARCHAR`
+#' @param names `VARCHAR[]`
+#' @param force_match `BOOLEAN`
+#' @param store_rejects `BOOLEAN`
+#' @param all_varchar `BOOLEAN`
+#' @param buffer_size `UBIGINT`
+#' @param decimal_separator `VARCHAR`
+#' @param parallel `BOOLEAN`
+#' @param null_padding `BOOLEAN`
+#' @param dtypes `ANY`
+#' @param strict_mode `BOOLEAN`
+#' @param thousands `VARCHAR`
+#' @param files_to_sniff `BIGINT`
+#' @param filename `ANY`
+#' @param union_by_name `BOOLEAN`
+#' @param hive_types `ANY`
+#' @param hive_types_autocast `BOOLEAN`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+sniff_csv <- function(col0 = VARCHAR, delim = VARCHAR, dateformat = VARCHAR, column_names = `VARCHAR[]`, sep = VARCHAR, hive_partitioning = BOOLEAN, header = BOOLEAN, escape = VARCHAR, allow_quoted_nulls = BOOLEAN, comment = VARCHAR, maximum_line_size = VARCHAR, new_line = VARCHAR, columns = ANY, rejects_limit = BIGINT, force_not_null = `VARCHAR[]`, timestampformat = VARCHAR, auto_detect = BOOLEAN, sample_size = BIGINT, auto_type_candidates = ANY, nullstr = ANY, encoding = VARCHAR, normalize_names = BOOLEAN, rejects_table = VARCHAR, column_types = ANY, skip = BIGINT, types = ANY, max_line_size = VARCHAR, quote = VARCHAR, rejects_scan = VARCHAR, ignore_errors = BOOLEAN, compression = VARCHAR, names = `VARCHAR[]`, force_match = BOOLEAN, store_rejects = BOOLEAN, all_varchar = BOOLEAN, buffer_size = UBIGINT, decimal_separator = VARCHAR, parallel = BOOLEAN, null_padding = BOOLEAN, dtypes = ANY, strict_mode = BOOLEAN, thousands = VARCHAR, files_to_sniff = BIGINT, filename = ANY, union_by_name = BOOLEAN, hive_types = ANY, hive_types_autocast = BOOLEAN) {
+  stop("DuckDB function sniff_csv() is not available in R.")
 }
 
 #' DuckDB function split
@@ -7152,6 +8948,23 @@ stddev_pop <- function(x = DOUBLE) {
 #' }
 stddev_samp <- function(x = DOUBLE) {
   stop("DuckDB function stddev_samp() is not available in R.")
+}
+
+#' DuckDB function storage_info
+#'
+#' @description
+#' DuckDB function `storage_info()`.
+#'
+#' @name storage_info
+#' @usage storage_info(col0 = VARCHAR)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+storage_info <- function(col0 = VARCHAR) {
+  stop("DuckDB function storage_info() is not available in R.")
 }
 
 #' DuckDB function str_split
@@ -7658,6 +9471,40 @@ sumkahan <- function(arg = DOUBLE) {
   stop("DuckDB function sumkahan() is not available in R.")
 }
 
+#' DuckDB function summary
+#'
+#' @description
+#' DuckDB function `summary()`.
+#'
+#' @name summary
+#' @usage summary(col0 = TABLE)
+#' @param col0 `TABLE`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+summary <- function(col0 = TABLE) {
+  stop("DuckDB function summary() is not available in R.")
+}
+
+#' DuckDB function table_info
+#'
+#' @description
+#' DuckDB function `table_info()`.
+#'
+#' @name table_info
+#' @usage table_info(col0 = VARCHAR)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+table_info <- function(col0 = VARCHAR) {
+  stop("DuckDB function table_info() is not available in R.")
+}
+
 #' DuckDB function tan
 #'
 #' @description
@@ -7690,6 +9537,42 @@ tan <- function(x = DOUBLE) {
 #' }
 tanh <- function(x = DOUBLE) {
   stop("DuckDB function tanh() is not available in R.")
+}
+
+#' DuckDB function test_all_types
+#'
+#' @description
+#' DuckDB function `test_all_types()`.
+#'
+#' @name test_all_types
+#' @usage test_all_types(use_large_enum = BOOLEAN, use_large_bignum = BOOLEAN)
+#' @param use_large_enum `BOOLEAN`
+#' @param use_large_bignum `BOOLEAN`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+test_all_types <- function(use_large_enum = BOOLEAN, use_large_bignum = BOOLEAN) {
+  stop("DuckDB function test_all_types() is not available in R.")
+}
+
+#' DuckDB function test_vector_types
+#'
+#' @description
+#' DuckDB function `test_vector_types()`.
+#'
+#' @name test_vector_types
+#' @usage test_vector_types(col0 = ANY, all_flat = BOOLEAN)
+#' @param col0 `ANY`
+#' @param all_flat `BOOLEAN`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+test_vector_types <- function(col0 = ANY, all_flat = BOOLEAN) {
+  stop("DuckDB function test_vector_types() is not available in R.")
 }
 
 #' DuckDB function time_bucket
@@ -8172,6 +10055,23 @@ trunc <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT |
   stop("DuckDB function trunc() is not available in R.")
 }
 
+#' DuckDB function truncate_duckdb_logs
+#'
+#' @description
+#' DuckDB function `truncate_duckdb_logs()`.
+#'
+#' @name truncate_duckdb_logs
+#' @usage truncate_duckdb_logs()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+truncate_duckdb_logs <- function() {
+  stop("DuckDB function truncate_duckdb_logs() is not available in R.")
+}
+
 #' DuckDB function try_strptime
 #'
 #' @description
@@ -8344,6 +10244,23 @@ union_value <- function() {
   stop("DuckDB function union_value() is not available in R.")
 }
 
+#' DuckDB function unnest
+#'
+#' @description
+#' DuckDB function `unnest()`.
+#'
+#' @name unnest
+#' @usage unnest(col0 = ANY)
+#' @param col0 `ANY`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+unnest <- function(col0 = ANY) {
+  stop("DuckDB function unnest() is not available in R.")
+}
+
 #' DuckDB function unpivot_list
 #'
 #' @description
@@ -8410,6 +10327,23 @@ url_decode <- function(string = VARCHAR) {
 #' }
 url_encode <- function(string = VARCHAR) {
   stop("DuckDB function url_encode() is not available in R.")
+}
+
+#' DuckDB function user_agent
+#'
+#' @description
+#' DuckDB function `user_agent()`.
+#'
+#' @name user_agent
+#' @usage user_agent()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+user_agent <- function() {
+  stop("DuckDB function user_agent() is not available in R.")
 }
 
 #' DuckDB function uuid
@@ -8600,18 +10534,87 @@ vector_type <- function(col = ANY) {
   stop("DuckDB function vector_type() is not available in R.")
 }
 
+#' DuckDB function verify_external
+#'
+#' @description
+#' DuckDB function `verify_external()`.
+#'
+#' @name verify_external
+#' @usage verify_external()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+verify_external <- function() {
+  stop("DuckDB function verify_external() is not available in R.")
+}
+
+#' DuckDB function verify_fetch_row
+#'
+#' @description
+#' DuckDB function `verify_fetch_row()`.
+#'
+#' @name verify_fetch_row
+#' @usage verify_fetch_row()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+verify_fetch_row <- function() {
+  stop("DuckDB function verify_fetch_row() is not available in R.")
+}
+
+#' DuckDB function verify_parallelism
+#'
+#' @description
+#' DuckDB function `verify_parallelism()`.
+#'
+#' @name verify_parallelism
+#' @usage verify_parallelism()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+verify_parallelism <- function() {
+  stop("DuckDB function verify_parallelism() is not available in R.")
+}
+
+#' DuckDB function verify_serializer
+#'
+#' @description
+#' DuckDB function `verify_serializer()`.
+#'
+#' @name verify_serializer
+#' @usage verify_serializer()
+
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+verify_serializer <- function() {
+  stop("DuckDB function verify_serializer() is not available in R.")
+}
+
 #' DuckDB function version
 #'
 #' @description
 #' Returns the currently active version of DuckDB in this format: v0.3.2	.
 #'
 #' @name version
-#' @usage version()
+#' @usage NULL
 
 #' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' version()
+#' character(0)
 #' }
 version <- function() {
   stop("DuckDB function version() is not available in R.")
@@ -8666,6 +10669,24 @@ weekday <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' }
 weekofyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function weekofyear() is not available in R.")
+}
+
+#' DuckDB function which_secret
+#'
+#' @description
+#' DuckDB function `which_secret()`.
+#'
+#' @name which_secret
+#' @usage which_secret(col0 = VARCHAR, col1 = VARCHAR)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @return Unspecified.
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+which_secret <- function(col0 = VARCHAR, col1 = VARCHAR) {
+  stop("DuckDB function which_secret() is not available in R.")
 }
 
 #' DuckDB function write_log

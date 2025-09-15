@@ -4,15 +4,15 @@
 \alias{repeat}
 \title{DuckDB function repeat}
 \arguments{
+\item{col0}{\code{ANY | T[]}}
+
+\item{col1}{\code{BIGINT}}
+
 \item{string}{\code{VARCHAR}}
 
 \item{count}{\code{BIGINT}}
 
 \item{blob}{\code{BLOB}}
-
-\item{col0}{\code{T[]}}
-
-\item{col1}{\code{BIGINT}}
 }
 \value{
 \code{VARCHAR | BLOB | T[]}
@@ -24,8 +24,8 @@ Repeats the \code{blob} \code{count} number of times.
 }
 \examples{
 \dontrun{
+character(0)
 repeat('A', 5)
 repeat('\xAA\xBB'::BLOB, 5)
-character(0)
 }
 }

@@ -99,12 +99,10 @@ funs <-
   select(-macro_definition) |>
   filter_print(internal) |>
   select(-internal) |>
-  # FIXME: Add support if return type is not given.
-  filter_print(!is.na(return_type)) |>
   summarize(
     .by = function_name,
     alias_of = unique(alias_of),
-    return_type = paste0(unique(return_type), collapse = " | "),
+    return_type = paste0(unique(na.omit(return_type)), collapse = " | "),
     usage_and_params(first(function_name), parameters, parameter_types, description),
     examples = paste0("#' ", unique(examples), collapse = "\n"),
     categories = list(unique(unlist(categories))),
@@ -132,7 +130,7 @@ code <-
     #' @name {rdize_function_name(function_name)}
     {usage_doc}
     {param_doc}
-    #' @return `{return_type}`
+    #' @return {if_else(return_type == "", "Unspecified.", paste0("`", return_type, "`"))}
     #' @examples
     #' \dontrun{{
     {examples}
