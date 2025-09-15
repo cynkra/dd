@@ -36,7 +36,7 @@ usage_and_params <- function(function_name, parameters, parameter_types, descrip
     } else {
       signature <- paste0("(", paste0(tibble:::tick_if_needed(parameters[[1]]), " = ", tibble:::tick_if_needed(parameter_types[[1]]), collapse = ", "), ")")
     }
-    usage_doc <- glue("#' @usage {function_name}{signature}")
+    usage_doc <- glue("#' @usage {tibble:::tick_if_needed(function_name)}{signature}")
   } else {
     usage_doc <- "#' @usage NULL"
   }
@@ -74,6 +74,18 @@ usage_and_params <- function(function_name, parameters, parameter_types, descrip
   )
 }
 
+rdize_function_name <- function(x) {
+  x <- gsub("^!", "not-", x)
+  x <- gsub("!", "-not-", x)
+  x <- gsub("^[|]", "or-", x)
+  x <- gsub("[|]$", "-or", x)
+  x <- gsub("[|]", "-or-", x)
+  x <- gsub("^[@]", "at-", x)
+  x <- gsub("[@]$", "-at", x)
+  x <- gsub("[@]", "-at-", x)
+  x
+}
+
 funs <-
   DBI::dbGetQuery(con, "FROM duckdb_functions()") |>
   as_tibble() |>
@@ -90,8 +102,6 @@ funs <-
   select(-stability) |>
   # FIXME: Add support if return type is not given.
   filter_print(!is.na(return_type)) |>
-  # FIXME: Operators
-  filter_print(grepl("^[a-z]", function_name)) |>
   summarize(
     .by = function_name,
     alias_of = unique(alias_of),
@@ -108,6 +118,8 @@ funs <-
   filter_print(!(function_name %in% c("remap_struct"))) |>
   # FIXME: Breaks devtools::document()
   filter_print(!(function_name %in% c("length"))) |>
+  # FIXME: Breaks R CMD check
+  filter_print(!(function_name %in% c("<->"))) |>
   arrange(function_name)
 
 code <-
@@ -118,7 +130,7 @@ code <-
     #' @description
     {description}
     #'
-    #' @name {function_name}
+    #' @name {rdize_function_name(function_name)}
     {usage_doc}
     {param_doc}
     #' @return `{return_type}`
@@ -126,7 +138,7 @@ code <-
     #' \dontrun{{
     {examples}
     #' }}
-    {function_name} <- function({signature}) {{
+    {tibble:::tick_if_needed(function_name)} <- function({signature}) {{
       stop("DuckDB function {function_name}() is not available in R.")
     }}
 
