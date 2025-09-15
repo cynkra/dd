@@ -22,6 +22,14 @@
 \description{
 The timestamp for the given parts.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{make_timestamp(year = BIGINT, month = BIGINT, day = BIGINT, hour = BIGINT, minute = BIGINT, seconds = DOUBLE)}
+\item \code{make_timestamp(year = BIGINT)}
+}
+}
+
 \examples{
 \dontrun{
 make_timestamp(1992, 9, 20, 13, 34, 27.123456)

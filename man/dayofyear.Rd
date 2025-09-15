@@ -12,6 +12,16 @@
 \description{
 Extract the dayofyear component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{dayofyear(ts = DATE)}
+\item \code{dayofyear(ts = INTERVAL)}
+\item \code{dayofyear(ts = TIMESTAMP)}
+\item \code{dayofyear(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 dayofyear(timestamp '2021-08-03 11:59:44.123456')

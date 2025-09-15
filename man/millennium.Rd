@@ -12,6 +12,16 @@
 \description{
 Extract the millennium component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{millennium(ts = DATE)}
+\item \code{millennium(ts = INTERVAL)}
+\item \code{millennium(ts = TIMESTAMP)}
+\item \code{millennium(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 millennium(timestamp '2021-08-03 11:59:44.123456')

@@ -16,3 +16,11 @@ Unspecified.
 \description{
 DuckDB function \code{has_language_privilege()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{has_language_privilege(language, privilege)}
+\item \code{has_language_privilege(user, language, privilege)}
+}
+}
+

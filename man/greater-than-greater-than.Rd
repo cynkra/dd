@@ -14,6 +14,23 @@
 \description{
 Bitwise shift right.
 }
+\section{Overloads}{
+
+\itemize{
+\item ```>>`(input = TINYINT, col1 = TINYINT)``
+\item ```>>`(input = SMALLINT, col1 = SMALLINT)``
+\item ```>>`(input = INTEGER, col1 = INTEGER)``
+\item ```>>`(input = BIGINT, col1 = BIGINT)``
+\item ```>>`(input = HUGEINT, col1 = HUGEINT)``
+\item ```>>`(input = UTINYINT, col1 = UTINYINT)``
+\item ```>>`(input = USMALLINT, col1 = USMALLINT)``
+\item ```>>`(input = UINTEGER, col1 = UINTEGER)``
+\item ```>>`(input = UBIGINT, col1 = UBIGINT)``
+\item ```>>`(input = UHUGEINT, col1 = UHUGEINT)``
+\item ```>>`(input = BIT, col1 = INTEGER)``
+}
+}
+
 \examples{
 \dontrun{
 8 >> 2

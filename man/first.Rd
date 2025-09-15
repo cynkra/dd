@@ -12,6 +12,14 @@
 \description{
 Returns the first value (NULL or non-NULL) from arg. This function is affected by ordering.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{first(arg = DECIMAL)}
+\item \code{first(arg = ANY)}
+}
+}
+
 \examples{
 \dontrun{
 first(A)

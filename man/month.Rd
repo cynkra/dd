@@ -12,6 +12,16 @@
 \description{
 Extract the month component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{month(ts = DATE)}
+\item \code{month(ts = INTERVAL)}
+\item \code{month(ts = TIMESTAMP)}
+\item \code{month(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 month(timestamp '2021-08-03 11:59:44.123456')

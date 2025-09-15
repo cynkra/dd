@@ -12,3 +12,11 @@ Unspecified.
 \description{
 DuckDB function \code{parquet_kv_metadata()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{parquet_kv_metadata(col0 = VARCHAR)}
+\item \code{parquet_kv_metadata(col0 = `VARCHAR[]`)}
+}
+}
+

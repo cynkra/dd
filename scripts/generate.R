@@ -33,22 +33,26 @@ browse_data <- function(x) {
 }
 
 param_type_tick_if_needed <- function(x) {
-  x[x != ""] <- paste0(" = ", tibble:::tick_if_needed(x[x != ""]))
-  x
+  if_else(is.na(x) | x == "", "", paste0(" = ", tibble:::tick_if_needed(x)))
 }
 
 usage_and_params <- function(function_name, parameters, parameter_types, description, macro_definition, examples) {
-  if (length(parameters) == 1) {
-    if (length(parameters[[1]]) == 0) {
+  signatures <- map2_chr(parameters, parameter_types, ~ {
+    if (length(.x) == 0) {
       usage_signature <- "" # No parameters
-    } else if (!is.na(macro_definition)) {
-      usage_signature <- paste0(tibble:::tick_if_needed(parameters[[1]]), collapse = ", ")
     } else {
-      usage_signature <- paste0(tibble:::tick_if_needed(parameters[[1]]), " = ", tibble:::tick_if_needed(parameter_types[[1]]), collapse = ", ")
+      usage_signature <- paste0(tibble:::tick_if_needed(.x), param_type_tick_if_needed(.y), collapse = ", ")
     }
-    usage_doc <- glue("#' @usage {tibble:::tick_if_needed(function_name)}({usage_signature})")
+    glue("{tibble:::tick_if_needed(function_name)}({usage_signature})")
+  })
+  if (length(parameters) == 1) {
+    usage_doc <- glue("#' @usage {signatures}")
   } else {
-    usage_doc <- "#' @usage NULL"
+    usage_doc <- paste0(
+      "#' @usage NULL\n",
+      "#' @section Overloads:\n",
+      paste0("#' - ``", signatures, "``", collapse = "\n")
+    )
   }
 
   params <-
@@ -62,16 +66,12 @@ usage_and_params <- function(function_name, parameters, parameter_types, descrip
     pull() |>
     glue_collapse(sep = "\n")
 
-  is_macro <- length(macro_definition) == 1 && !is.na(macro_definition)
-  if (is_macro) {
-    signature <- usage_signature
-  } else {
-    signature <- params |>
-      mutate(out = glue("{tibble:::tick_if_needed(name)}{param_type_tick_if_needed(type)}")) |>
-      pull() |>
-      glue_collapse(sep = ", ")
-  }
+  signature <- params |>
+    mutate(out = glue("{tibble:::tick_if_needed(name)}{param_type_tick_if_needed(type)}")) |>
+    pull() |>
+    glue_collapse(sep = ", ")
 
+  is_macro <- length(macro_definition) == 1 && !is.na(macro_definition)
   description <- na.omit(description)
   if (length(description) == 0) {
     description <- paste0("#' DuckDB ", if (is_macro) "macro" else "function", " `", function_name, "()`.")

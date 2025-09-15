@@ -14,6 +14,14 @@
 \description{
 Computes the greatest common divisor of x and y.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{greatest_common_divisor(x = BIGINT, y = BIGINT)}
+\item \code{greatest_common_divisor(x = HUGEINT, y = HUGEINT)}
+}
+}
+
 \examples{
 \dontrun{
 greatest_common_divisor(42, 57)

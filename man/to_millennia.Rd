@@ -12,6 +12,14 @@
 \description{
 Construct a millenium interval.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{to_millennia(integer = INTEGER)}
+\item \code{to_millennia(integer = BIGINT)}
+}
+}
+
 \examples{
 \dontrun{
 to_millennia(1)

@@ -12,6 +12,19 @@
 \description{
 Extract the microsecond component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{microsecond(ts = DATE)}
+\item \code{microsecond(ts = INTERVAL)}
+\item \code{microsecond(ts = TIME)}
+\item \code{microsecond(ts = TIMESTAMP)}
+\item \code{microsecond(ts = `TIME WITH TIME ZONE`)}
+\item \code{microsecond(ts = TIME_NS)}
+\item \code{microsecond(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 microsecond(timestamp '2021-08-03 11:59:44.123456')

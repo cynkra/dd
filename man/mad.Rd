@@ -12,6 +12,20 @@
 \description{
 Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{mad(x = DECIMAL)}
+\item \code{mad(x = FLOAT)}
+\item \code{mad(x = DOUBLE)}
+\item \code{mad(x = DATE)}
+\item \code{mad(x = TIMESTAMP)}
+\item \code{mad(x = TIME)}
+\item \code{mad(x = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{mad(x = `TIME WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 mad(x)

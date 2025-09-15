@@ -20,6 +20,19 @@ Converts the \code{value} to \code{VARCHAR} using hexadecimal representation.
 
 Converts \code{blob} to \code{VARCHAR} using hexadecimal encoding.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{hex(string = VARCHAR)}
+\item \code{hex(value = BIGNUM)}
+\item \code{hex(blob = BLOB)}
+\item \code{hex(value = BIGINT)}
+\item \code{hex(value = UBIGINT)}
+\item \code{hex(value = HUGEINT)}
+\item \code{hex(value = UHUGEINT)}
+}
+}
+
 \examples{
 \dontrun{
 hex('Hello')

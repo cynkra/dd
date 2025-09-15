@@ -16,6 +16,14 @@
 \description{
 Splits the \code{string} along the \code{regex}. A set of optional regex \code{options} can be set.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{regexp_split_to_array(string = VARCHAR, regex = VARCHAR)}
+\item \code{regexp_split_to_array(string = VARCHAR, regex = VARCHAR, options = VARCHAR)}
+}
+}
+
 \examples{
 \dontrun{
 regexp_split_to_array('hello world; 42', ';? ')

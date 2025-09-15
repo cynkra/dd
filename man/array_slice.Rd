@@ -20,6 +20,14 @@ Extracts a sublist or substring using slice conventions. Negative values are acc
 
 list_slice with added step feature.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{array_slice(list = ANY, begin = ANY, end = ANY)}
+\item \code{array_slice(list = ANY, begin = ANY, end = ANY, step = BIGINT)}
+}
+}
+
 \examples{
 \dontrun{
 array_slice('DuckDB', 3, 4)

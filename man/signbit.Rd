@@ -12,6 +12,14 @@
 \description{
 Returns whether the signbit is set or not.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{signbit(x = FLOAT)}
+\item \code{signbit(x = DOUBLE)}
+}
+}
+
 \examples{
 \dontrun{
 signbit(-0.0)

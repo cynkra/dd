@@ -14,6 +14,23 @@
 \description{
 Bitwise XOR.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{xor(left = TINYINT, right = TINYINT)}
+\item \code{xor(left = SMALLINT, right = SMALLINT)}
+\item \code{xor(left = INTEGER, right = INTEGER)}
+\item \code{xor(left = BIGINT, right = BIGINT)}
+\item \code{xor(left = HUGEINT, right = HUGEINT)}
+\item \code{xor(left = UTINYINT, right = UTINYINT)}
+\item \code{xor(left = USMALLINT, right = USMALLINT)}
+\item \code{xor(left = UINTEGER, right = UINTEGER)}
+\item \code{xor(left = UBIGINT, right = UBIGINT)}
+\item \code{xor(left = UHUGEINT, right = UHUGEINT)}
+\item \code{xor(left = BIT, right = BIT)}
+}
+}
+
 \examples{
 \dontrun{
 xor(17, 5)

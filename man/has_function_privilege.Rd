@@ -16,3 +16,11 @@ Unspecified.
 \description{
 DuckDB function \code{has_function_privilege()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{has_function_privilege(`function`, privilege)}
+\item \code{has_function_privilege(user, `function`, privilege)}
+}
+}
+

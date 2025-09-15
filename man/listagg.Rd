@@ -14,6 +14,14 @@
 \description{
 Concatenates the column string values with an optional separator.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{listagg(str = ANY)}
+\item \code{listagg(str = ANY, arg = VARCHAR)}
+}
+}
+
 \examples{
 \dontrun{
 listagg(A, '-')

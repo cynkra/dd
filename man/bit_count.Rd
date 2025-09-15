@@ -12,6 +12,18 @@
 \description{
 Returns the number of bits that are set.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{bit_count(x = TINYINT)}
+\item \code{bit_count(x = SMALLINT)}
+\item \code{bit_count(x = INTEGER)}
+\item \code{bit_count(x = BIGINT)}
+\item \code{bit_count(x = HUGEINT)}
+\item \code{bit_count(x = BIT)}
+}
+}
+
 \examples{
 \dontrun{
 bit_count(31)

@@ -16,6 +16,14 @@
 \description{
 Extracts substring starting from character \code{start} up to the end of the string. If optional argument \code{length} is set, extracts a substring of \code{length} characters instead. Note that a \code{start} value of \code{1} refers to the first character of the \code{string}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{substr(string = VARCHAR, start = BIGINT, length = BIGINT)}
+\item \code{substr(string = VARCHAR, start = BIGINT)}
+}
+}
+
 \examples{
 \dontrun{
 substring('Hello', 2)

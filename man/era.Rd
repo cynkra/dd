@@ -12,6 +12,16 @@
 \description{
 Extract the era component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{era(ts = DATE)}
+\item \code{era(ts = INTERVAL)}
+\item \code{era(ts = TIMESTAMP)}
+\item \code{era(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 era(timestamp '2021-08-03 11:59:44.123456')

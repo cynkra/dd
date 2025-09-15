@@ -18,6 +18,16 @@
 \description{
 Generates bin_count equi-width bins between the min and max. If enabled nice_rounding makes the numbers more readable/less jagged.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{equi_width_bins(min = BIGINT, max = BIGINT, bin_count = BIGINT, nice_rounding = BOOLEAN)}
+\item \code{equi_width_bins(min = DOUBLE, max = DOUBLE, bin_count = BIGINT, nice_rounding = BOOLEAN)}
+\item \code{equi_width_bins(min = TIMESTAMP, max = TIMESTAMP, bin_count = BIGINT, nice_rounding = BOOLEAN)}
+\item \code{equi_width_bins(min = ANY, max = ANY, bin_count = BIGINT, nice_rounding = BOOLEAN)}
+}
+}
+
 \examples{
 \dontrun{
 equi_width_bins(0, 10, 2, true)

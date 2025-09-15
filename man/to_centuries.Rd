@@ -12,6 +12,14 @@
 \description{
 Construct a century interval.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{to_centuries(integer = INTEGER)}
+\item \code{to_centuries(integer = BIGINT)}
+}
+}
+
 \examples{
 \dontrun{
 to_centuries(5)

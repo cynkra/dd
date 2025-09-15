@@ -9,6 +9,14 @@
 \description{
 Returns the current query as a string.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{current_query()}
+\item \code{current_query()}
+}
+}
+
 \examples{
 \dontrun{
 current_query()

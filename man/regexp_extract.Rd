@@ -22,6 +22,17 @@ If \code{string} contains the \code{regex} pattern, returns the capturing group 
 
 If \code{string} contains the \code{regex} pattern, returns the capturing groups as a struct with corresponding names from \code{name_list}; otherwise, returns a struct with the same keys and empty strings as values. A set of optional regex \code{options} can be set.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{regexp_extract(string = VARCHAR, regex = VARCHAR)}
+\item \code{regexp_extract(string = VARCHAR, regex = VARCHAR, group = INTEGER)}
+\item \code{regexp_extract(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR)}
+\item \code{regexp_extract(string = VARCHAR, regex = VARCHAR, name_list = `VARCHAR[]`)}
+\item \code{regexp_extract(string = VARCHAR, regex = VARCHAR, name_list = `VARCHAR[]`, options = VARCHAR)}
+}
+}
+
 \examples{
 \dontrun{
 regexp_extract('abcde', '[a-z]{3}')

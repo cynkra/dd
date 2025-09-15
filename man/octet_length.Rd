@@ -16,6 +16,14 @@ Number of bytes in \code{blob}.
 
 Returns the number of bytes in the \code{bitstring}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{octet_length(blob = BLOB)}
+\item \code{octet_length(bitstring = BIT)}
+}
+}
+
 \examples{
 \dontrun{
 octet_length('\xAA\xBB'::BLOB)

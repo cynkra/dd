@@ -12,6 +12,15 @@
 \description{
 Rounds the number down.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{floor(x = FLOAT)}
+\item \code{floor(x = DOUBLE)}
+\item \code{floor(x = DECIMAL)}
+}
+}
+
 \examples{
 \dontrun{
 floor(17.4)

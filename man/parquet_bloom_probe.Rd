@@ -16,3 +16,11 @@ Unspecified.
 \description{
 DuckDB function \code{parquet_bloom_probe()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{parquet_bloom_probe(col0 = VARCHAR, col1 = VARCHAR, col2 = ANY)}
+\item \code{parquet_bloom_probe(col0 = `VARCHAR[]`, col1 = VARCHAR, col2 = ANY)}
+}
+}
+

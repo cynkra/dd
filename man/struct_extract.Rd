@@ -14,6 +14,14 @@
 \description{
 Extract the named entry from the STRUCT.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{struct_extract(struct = STRUCT, `'entry'` = VARCHAR)}
+\item \code{struct_extract(struct = STRUCT, `'entry'` = BIGINT)}
+}
+}
+
 \examples{
 \dontrun{
 struct_extract({'i': 3, 'v2': 3, 'v3': 0}, 'i')

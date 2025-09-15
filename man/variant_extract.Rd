@@ -14,3 +14,11 @@
 \description{
 DuckDB function \code{variant_extract()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{variant_extract(col0 = VARIANT, col1 = VARCHAR)}
+\item \code{variant_extract(col0 = VARIANT, col1 = UINTEGER)}
+}
+}
+

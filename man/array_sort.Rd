@@ -16,6 +16,15 @@
 \description{
 Sorts the elements of the list.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{array_sort(list = `ANY[]`)}
+\item \code{array_sort(list = `ANY[]`, col1 = VARCHAR)}
+\item \code{array_sort(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR)}
+}
+}
+
 \examples{
 \dontrun{
 array_sort([3, 6, 1, 2])

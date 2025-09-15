@@ -12,6 +12,14 @@
 \description{
 Construct a decade interval.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{to_decades(integer = INTEGER)}
+\item \code{to_decades(integer = BIGINT)}
+}
+}
+
 \examples{
 \dontrun{
 to_decades(5)

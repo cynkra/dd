@@ -16,6 +16,14 @@
 \description{
 Splits the \code{string} along the \code{regex}. A set of optional regex \code{options} can be set.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{str_split_regex(string = VARCHAR, regex = VARCHAR)}
+\item \code{str_split_regex(string = VARCHAR, regex = VARCHAR, options = VARCHAR)}
+}
+}
+
 \examples{
 \dontrun{
 str_split_regex('hello world; 42', ';? ')

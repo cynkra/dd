@@ -14,6 +14,16 @@
 \description{
 Truncate to specified precision.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{date_trunc(part = VARCHAR, timestamp = DATE)}
+\item \code{date_trunc(part = VARCHAR, timestamp = INTERVAL)}
+\item \code{date_trunc(part = VARCHAR, timestamp = TIMESTAMP)}
+\item \code{date_trunc(part = VARCHAR, timestamp = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 date_trunc('hour', TIMESTAMPTZ '1992-09-20 20:38:40')

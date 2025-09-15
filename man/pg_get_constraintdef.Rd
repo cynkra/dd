@@ -14,3 +14,11 @@ Unspecified.
 \description{
 DuckDB function \code{pg_get_constraintdef()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{pg_get_constraintdef(constraint_oid)}
+\item \code{pg_get_constraintdef(constraint_oid, pretty_bool)}
+}
+}
+

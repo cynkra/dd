@@ -16,3 +16,11 @@ Unspecified.
 \description{
 DuckDB function \code{has_sequence_privilege()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{has_sequence_privilege(sequence, privilege)}
+\item \code{has_sequence_privilege(user, sequence, privilege)}
+}
+}
+

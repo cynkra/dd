@@ -14,6 +14,14 @@
 \description{
 Extract the \code{index}th (1-based) value from the list.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{list_element(list = `T[]`, index = BIGINT)}
+\item \code{list_element(list = VARCHAR, index = BIGINT)}
+}
+}
+
 \examples{
 \dontrun{
 list_element([4, 5, 6], 3)

@@ -18,3 +18,11 @@ Unspecified.
 \description{
 DuckDB function \code{has_column_privilege()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{has_column_privilege(table, column, privilege)}
+\item \code{has_column_privilege(user, table, column, privilege)}
+}
+}
+

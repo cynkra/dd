@@ -14,6 +14,14 @@
 \description{
 Creates a map from a set of keys and values.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{map()}
+\item \code{map(keys = `K[]`, values = `V[]`)}
+}
+}
+
 \examples{
 \dontrun{
 map(['key1', 'key2'], ['val1', 'val2'])

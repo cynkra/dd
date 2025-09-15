@@ -12,6 +12,20 @@
 \description{
 Extract the nanosecond component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{nanosecond(tsns = DATE)}
+\item \code{nanosecond(tsns = TIMESTAMP)}
+\item \code{nanosecond(tsns = INTERVAL)}
+\item \code{nanosecond(tsns = TIME)}
+\item \code{nanosecond(tsns = TIME_NS)}
+\item \code{nanosecond(tsns = `TIME WITH TIME ZONE`)}
+\item \code{nanosecond(tsns = TIMESTAMP_NS)}
+\item \code{nanosecond(tsns = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 nanosecond(timestamp_ns '2021-08-03 11:59:44.123456789')

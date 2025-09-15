@@ -14,6 +14,14 @@
 \description{
 Concatenates the column string values with an optional separator.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{string_agg(str = ANY)}
+\item \code{string_agg(str = ANY, arg = VARCHAR)}
+}
+}
+
 \examples{
 \dontrun{
 string_agg(A, '-')

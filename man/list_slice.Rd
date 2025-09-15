@@ -20,6 +20,14 @@ Extracts a sublist or substring using slice conventions. Negative values are acc
 
 list_slice with added step feature.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{list_slice(list = ANY, begin = ANY, end = ANY)}
+\item \code{list_slice(list = ANY, begin = ANY, end = ANY, step = BIGINT)}
+}
+}
+
 \examples{
 \dontrun{
 list_slice([4, 5, 6], 2, 3)

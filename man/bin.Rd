@@ -16,6 +16,18 @@ Converts the \code{string} to binary representation.
 
 Converts the \code{value} to binary representation.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{bin(string = VARCHAR)}
+\item \code{bin(value = BIGNUM)}
+\item \code{bin(value = UBIGINT)}
+\item \code{bin(value = BIGINT)}
+\item \code{bin(value = HUGEINT)}
+\item \code{bin(value = UHUGEINT)}
+}
+}
+
 \examples{
 \dontrun{
 bin('Aa')

@@ -12,6 +12,16 @@
 \description{
 Extract the decade component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{decade(ts = DATE)}
+\item \code{decade(ts = INTERVAL)}
+\item \code{decade(ts = TIMESTAMP)}
+\item \code{decade(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 decade(timestamp '2021-08-03 11:59:44.123456')

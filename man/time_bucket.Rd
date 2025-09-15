@@ -16,6 +16,22 @@
 \description{
 Truncate TIMESTAMPTZ by the specified interval bucket_width. Buckets are aligned relative to origin TIMESTAMPTZ. The origin defaults to 2000-01-03 00:00:00+00 for buckets that do not include a month or year interval, and to 2000-01-01 00:00:00+00 for month and year buckets.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{time_bucket(bucket_width = INTERVAL, timestamp = DATE)}
+\item \code{time_bucket(bucket_width = INTERVAL, timestamp = DATE, origin = DATE)}
+\item \code{time_bucket(bucket_width = INTERVAL, timestamp = DATE, origin = INTERVAL)}
+\item \code{time_bucket(bucket_width = INTERVAL, timestamp = TIMESTAMP)}
+\item \code{time_bucket(bucket_width = INTERVAL, timestamp = TIMESTAMP, origin = INTERVAL)}
+\item \code{time_bucket(bucket_width = INTERVAL, timestamp = TIMESTAMP, origin = TIMESTAMP)}
+\item \code{time_bucket(bucket_width = INTERVAL, timestamp = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{time_bucket(bucket_width = INTERVAL, timestamp = `TIMESTAMP WITH TIME ZONE`, origin = INTERVAL)}
+\item \code{time_bucket(bucket_width = INTERVAL, timestamp = `TIMESTAMP WITH TIME ZONE`, origin = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{time_bucket(bucket_width = INTERVAL, timestamp = `TIMESTAMP WITH TIME ZONE`, origin = VARCHAR)}
+}
+}
+
 \examples{
 \dontrun{
 time_bucket(INTERVAL '2 weeks', TIMESTAMP '1992-04-20 15:26:00-07', TIMESTAMP '1992-04-01 00:00:00-07')

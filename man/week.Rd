@@ -12,6 +12,16 @@
 \description{
 Extract the week component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{week(ts = DATE)}
+\item \code{week(ts = INTERVAL)}
+\item \code{week(ts = TIMESTAMP)}
+\item \code{week(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 week(timestamp '2021-08-03 11:59:44.123456')

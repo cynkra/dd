@@ -12,6 +12,19 @@
 \description{
 Extract the millisecond component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{millisecond(ts = DATE)}
+\item \code{millisecond(ts = INTERVAL)}
+\item \code{millisecond(ts = TIME)}
+\item \code{millisecond(ts = TIMESTAMP)}
+\item \code{millisecond(ts = `TIME WITH TIME ZONE`)}
+\item \code{millisecond(ts = TIME_NS)}
+\item \code{millisecond(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 millisecond(timestamp '2021-08-03 11:59:44.123456')

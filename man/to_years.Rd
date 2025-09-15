@@ -12,6 +12,14 @@
 \description{
 Construct a year interval.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{to_years(integer = INTEGER)}
+\item \code{to_years(integer = BIGINT)}
+}
+}
+
 \examples{
 \dontrun{
 to_years(5)

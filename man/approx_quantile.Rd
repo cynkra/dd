@@ -14,6 +14,36 @@
 \description{
 Computes the approximate quantile using T-Digest.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{approx_quantile(x = DECIMAL, pos = FLOAT)}
+\item \code{approx_quantile(x = SMALLINT, pos = FLOAT)}
+\item \code{approx_quantile(x = INTEGER, pos = FLOAT)}
+\item \code{approx_quantile(x = BIGINT, pos = FLOAT)}
+\item \code{approx_quantile(x = HUGEINT, pos = FLOAT)}
+\item \code{approx_quantile(x = DOUBLE, pos = FLOAT)}
+\item \code{approx_quantile(x = DATE, pos = FLOAT)}
+\item \code{approx_quantile(x = TIME, pos = FLOAT)}
+\item \code{approx_quantile(x = `TIME WITH TIME ZONE`, pos = FLOAT)}
+\item \code{approx_quantile(x = TIMESTAMP, pos = FLOAT)}
+\item \code{approx_quantile(x = `TIMESTAMP WITH TIME ZONE`, pos = FLOAT)}
+\item \code{approx_quantile(x = DECIMAL, pos = `FLOAT[]`)}
+\item \code{approx_quantile(x = TINYINT, pos = `FLOAT[]`)}
+\item \code{approx_quantile(x = SMALLINT, pos = `FLOAT[]`)}
+\item \code{approx_quantile(x = INTEGER, pos = `FLOAT[]`)}
+\item \code{approx_quantile(x = BIGINT, pos = `FLOAT[]`)}
+\item \code{approx_quantile(x = HUGEINT, pos = `FLOAT[]`)}
+\item \code{approx_quantile(x = FLOAT, pos = `FLOAT[]`)}
+\item \code{approx_quantile(x = DOUBLE, pos = `FLOAT[]`)}
+\item \code{approx_quantile(x = DATE, pos = `FLOAT[]`)}
+\item \code{approx_quantile(x = TIME, pos = `FLOAT[]`)}
+\item \code{approx_quantile(x = `TIME WITH TIME ZONE`, pos = `FLOAT[]`)}
+\item \code{approx_quantile(x = TIMESTAMP, pos = `FLOAT[]`)}
+\item \code{approx_quantile(x = `TIMESTAMP WITH TIME ZONE`, pos = `FLOAT[]`)}
+}
+}
+
 \examples{
 \dontrun{
 approx_quantile(x, 0.5)

@@ -12,6 +12,16 @@
 \description{
 Extract the timezone_hour component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{timezone_hour(ts = DATE)}
+\item \code{timezone_hour(ts = INTERVAL)}
+\item \code{timezone_hour(ts = TIMESTAMP)}
+\item \code{timezone_hour(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 timezone_hour(timestamp '2021-08-03 11:59:44.123456')

@@ -12,6 +12,14 @@
 \description{
 Returns the first value (NULL or non-NULL) from arg. This function is affected by ordering.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{arbitrary(arg = DECIMAL)}
+\item \code{arbitrary(arg = ANY)}
+}
+}
+
 \examples{
 \dontrun{
 arbitrary(A)

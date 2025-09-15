@@ -12,6 +12,15 @@
 \description{
 The (English) name of the month.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{monthname(ts = DATE)}
+\item \code{monthname(ts = TIMESTAMP)}
+\item \code{monthname(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 monthname(TIMESTAMP '1992-09-20')

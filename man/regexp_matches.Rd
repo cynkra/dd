@@ -16,6 +16,14 @@
 \description{
 Returns \code{true} if \code{string} contains the \code{regex}, \code{false} otherwise. A set of optional regex \code{options} can be set.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{regexp_matches(string = VARCHAR, regex = VARCHAR)}
+\item \code{regexp_matches(string = VARCHAR, regex = VARCHAR, options = VARCHAR)}
+}
+}
+
 \examples{
 \dontrun{
 regexp_matches('anabanana', '(an)*')

@@ -12,3 +12,11 @@ Unspecified.
 \description{
 DuckDB function \code{parquet_schema()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{parquet_schema(col0 = VARCHAR)}
+\item \code{parquet_schema(col0 = `VARCHAR[]`)}
+}
+}
+

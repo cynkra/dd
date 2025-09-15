@@ -16,3 +16,11 @@ Unspecified.
 \description{
 DuckDB function \code{pg_has_role()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{pg_has_role(user, role, privilege)}
+\item \code{pg_has_role(role, privilege)}
+}
+}
+

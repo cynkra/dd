@@ -12,6 +12,23 @@
 \description{
 Calculates the average value for all tuples in x.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{mean(x = DECIMAL)}
+\item \code{mean(x = SMALLINT)}
+\item \code{mean(x = INTEGER)}
+\item \code{mean(x = BIGINT)}
+\item \code{mean(x = HUGEINT)}
+\item \code{mean(x = INTERVAL)}
+\item \code{mean(x = DOUBLE)}
+\item \code{mean(x = TIMESTAMP)}
+\item \code{mean(x = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{mean(x = TIME)}
+\item \code{mean(x = `TIME WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 SUM(x) / COUNT(*)

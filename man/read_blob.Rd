@@ -22,3 +22,11 @@ Unspecified.
 \description{
 DuckDB function \code{read_blob()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{read_blob(col0 = VARCHAR, union_by_name = BOOLEAN, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN, hive_types = ANY, filename = ANY)}
+\item \code{read_blob(col0 = `VARCHAR[]`, filename = ANY, hive_types = ANY, hive_types_autocast = BOOLEAN, hive_partitioning = BOOLEAN, union_by_name = BOOLEAN)}
+}
+}
+

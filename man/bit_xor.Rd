@@ -12,6 +12,23 @@
 \description{
 Returns the bitwise XOR of all bits in a given expression.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{bit_xor(arg = TINYINT)}
+\item \code{bit_xor(arg = SMALLINT)}
+\item \code{bit_xor(arg = INTEGER)}
+\item \code{bit_xor(arg = BIGINT)}
+\item \code{bit_xor(arg = HUGEINT)}
+\item \code{bit_xor(arg = UTINYINT)}
+\item \code{bit_xor(arg = USMALLINT)}
+\item \code{bit_xor(arg = UINTEGER)}
+\item \code{bit_xor(arg = UBIGINT)}
+\item \code{bit_xor(arg = UHUGEINT)}
+\item \code{bit_xor(arg = BIT)}
+}
+}
+
 \examples{
 \dontrun{
 bit_xor(A)

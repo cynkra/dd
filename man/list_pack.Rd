@@ -12,6 +12,14 @@
 \description{
 Creates a LIST containing the argument values.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{list_pack()}
+\item \code{list_pack(any = T)}
+}
+}
+
 \examples{
 \dontrun{
 list_pack(4, 5, 6)

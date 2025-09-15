@@ -12,6 +12,20 @@
 \description{
 Extract the epoch component in nanoseconds from a temporal type.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{epoch_ns(temporal = DATE)}
+\item \code{epoch_ns(temporal = TIMESTAMP)}
+\item \code{epoch_ns(temporal = INTERVAL)}
+\item \code{epoch_ns(temporal = TIME)}
+\item \code{epoch_ns(temporal = TIME_NS)}
+\item \code{epoch_ns(temporal = `TIME WITH TIME ZONE`)}
+\item \code{epoch_ns(temporal = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{epoch_ns(temporal = TIMESTAMP_NS)}
+}
+}
+
 \examples{
 \dontrun{
 epoch_ns(timestamp '2021-08-03 11:59:44.123456')

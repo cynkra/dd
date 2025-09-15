@@ -14,6 +14,14 @@
 \description{
 Sorts the elements of the list in reverse order.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{array_reverse_sort(list = `ANY[]`)}
+\item \code{array_reverse_sort(list = `ANY[]`, col1 = VARCHAR)}
+}
+}
+
 \examples{
 \dontrun{
 array_reverse_sort([3, 6, 1, 2])

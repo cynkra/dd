@@ -12,3 +12,11 @@ Unspecified.
 \description{
 DuckDB function \code{glob()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{glob(col0 = VARCHAR)}
+\item \code{glob(col0 = `VARCHAR[]`)}
+}
+}
+

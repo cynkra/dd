@@ -18,6 +18,16 @@
 \description{
 Returns \code{true} if \code{search_string} is found within \code{string}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{contains(string = VARCHAR, search_string = VARCHAR)}
+\item \code{contains(col0 = `T[]`, col1 = T)}
+\item \code{contains(col0 = `MAP(K, V)`, col1 = K)}
+\item \code{contains(col0 = STRUCT, col1 = ANY)}
+}
+}
+
 \examples{
 \dontrun{
 contains('abc', 'a')

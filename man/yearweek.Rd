@@ -12,6 +12,16 @@
 \description{
 Extract the yearweek component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{yearweek(ts = DATE)}
+\item \code{yearweek(ts = INTERVAL)}
+\item \code{yearweek(ts = TIMESTAMP)}
+\item \code{yearweek(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 yearweek(timestamp '2021-08-03 11:59:44.123456')

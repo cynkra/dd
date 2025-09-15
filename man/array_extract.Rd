@@ -26,6 +26,16 @@ Extracts the named \code{entry} from the \code{STRUCT}.
 
 Extracts the entry from an unnamed \code{STRUCT} (tuple) using an index (1-based).
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{array_extract(col0 = `T[]`, col1 = BIGINT)}
+\item \code{array_extract(string = VARCHAR, index = BIGINT)}
+\item \code{array_extract(struct = STRUCT, entry = VARCHAR)}
+\item \code{array_extract(struct = STRUCT, index = BIGINT)}
+}
+}
+
 \examples{
 \dontrun{
 array_extract('DuckDB', 2)

@@ -22,6 +22,16 @@ Repeats the \code{string} \code{count} number of times.
 
 Repeats the \code{blob} \code{count} number of times.
 }
+\section{Overloads}{
+
+\itemize{
+\item ```repeat`(col0 = ANY, col1 = BIGINT)``
+\item ```repeat`(string = VARCHAR, count = BIGINT)``
+\item ```repeat`(blob = BLOB, count = BIGINT)``
+\item ```repeat\verb{(col0 = }T[]`, col1 = BIGINT)``
+}
+}
+
 \examples{
 \dontrun{
 repeat('A', 5)

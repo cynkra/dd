@@ -16,6 +16,104 @@
 \description{
 Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{max_by(arg = INTEGER, val = INTEGER)}
+\item \code{max_by(arg = INTEGER, val = BIGINT)}
+\item \code{max_by(arg = INTEGER, val = HUGEINT)}
+\item \code{max_by(arg = INTEGER, val = DOUBLE)}
+\item \code{max_by(arg = INTEGER, val = VARCHAR)}
+\item \code{max_by(arg = INTEGER, val = DATE)}
+\item \code{max_by(arg = INTEGER, val = TIMESTAMP)}
+\item \code{max_by(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{max_by(arg = INTEGER, val = BLOB)}
+\item \code{max_by(arg = BIGINT, val = INTEGER)}
+\item \code{max_by(arg = BIGINT, val = BIGINT)}
+\item \code{max_by(arg = BIGINT, val = HUGEINT)}
+\item \code{max_by(arg = BIGINT, val = DOUBLE)}
+\item \code{max_by(arg = BIGINT, val = VARCHAR)}
+\item \code{max_by(arg = BIGINT, val = DATE)}
+\item \code{max_by(arg = BIGINT, val = TIMESTAMP)}
+\item \code{max_by(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{max_by(arg = BIGINT, val = BLOB)}
+\item \code{max_by(arg = DOUBLE, val = INTEGER)}
+\item \code{max_by(arg = DOUBLE, val = BIGINT)}
+\item \code{max_by(arg = DOUBLE, val = HUGEINT)}
+\item \code{max_by(arg = DOUBLE, val = DOUBLE)}
+\item \code{max_by(arg = DOUBLE, val = VARCHAR)}
+\item \code{max_by(arg = DOUBLE, val = DATE)}
+\item \code{max_by(arg = DOUBLE, val = TIMESTAMP)}
+\item \code{max_by(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{max_by(arg = DOUBLE, val = BLOB)}
+\item \code{max_by(arg = VARCHAR, val = INTEGER)}
+\item \code{max_by(arg = VARCHAR, val = BIGINT)}
+\item \code{max_by(arg = VARCHAR, val = HUGEINT)}
+\item \code{max_by(arg = VARCHAR, val = DOUBLE)}
+\item \code{max_by(arg = VARCHAR, val = VARCHAR)}
+\item \code{max_by(arg = VARCHAR, val = DATE)}
+\item \code{max_by(arg = VARCHAR, val = TIMESTAMP)}
+\item \code{max_by(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{max_by(arg = VARCHAR, val = BLOB)}
+\item \code{max_by(arg = DATE, val = INTEGER)}
+\item \code{max_by(arg = DATE, val = BIGINT)}
+\item \code{max_by(arg = DATE, val = HUGEINT)}
+\item \code{max_by(arg = DATE, val = DOUBLE)}
+\item \code{max_by(arg = DATE, val = VARCHAR)}
+\item \code{max_by(arg = DATE, val = DATE)}
+\item \code{max_by(arg = DATE, val = TIMESTAMP)}
+\item \code{max_by(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{max_by(arg = DATE, val = BLOB)}
+\item \code{max_by(arg = TIMESTAMP, val = INTEGER)}
+\item \code{max_by(arg = TIMESTAMP, val = BIGINT)}
+\item \code{max_by(arg = TIMESTAMP, val = HUGEINT)}
+\item \code{max_by(arg = TIMESTAMP, val = DOUBLE)}
+\item \code{max_by(arg = TIMESTAMP, val = VARCHAR)}
+\item \code{max_by(arg = TIMESTAMP, val = DATE)}
+\item \code{max_by(arg = TIMESTAMP, val = TIMESTAMP)}
+\item \code{max_by(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{max_by(arg = TIMESTAMP, val = BLOB)}
+\item \code{max_by(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}
+\item \code{max_by(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}
+\item \code{max_by(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}
+\item \code{max_by(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}
+\item \code{max_by(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}
+\item \code{max_by(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}
+\item \code{max_by(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}
+\item \code{max_by(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{max_by(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}
+\item \code{max_by(arg = BLOB, val = INTEGER)}
+\item \code{max_by(arg = BLOB, val = BIGINT)}
+\item \code{max_by(arg = BLOB, val = HUGEINT)}
+\item \code{max_by(arg = BLOB, val = DOUBLE)}
+\item \code{max_by(arg = BLOB, val = VARCHAR)}
+\item \code{max_by(arg = BLOB, val = DATE)}
+\item \code{max_by(arg = BLOB, val = TIMESTAMP)}
+\item \code{max_by(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{max_by(arg = BLOB, val = BLOB)}
+\item \code{max_by(arg = DECIMAL, val = INTEGER)}
+\item \code{max_by(arg = DECIMAL, val = BIGINT)}
+\item \code{max_by(arg = DECIMAL, val = HUGEINT)}
+\item \code{max_by(arg = DECIMAL, val = DOUBLE)}
+\item \code{max_by(arg = DECIMAL, val = VARCHAR)}
+\item \code{max_by(arg = DECIMAL, val = DATE)}
+\item \code{max_by(arg = DECIMAL, val = TIMESTAMP)}
+\item \code{max_by(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{max_by(arg = DECIMAL, val = BLOB)}
+\item \code{max_by(arg = ANY, val = INTEGER)}
+\item \code{max_by(arg = ANY, val = BIGINT)}
+\item \code{max_by(arg = ANY, val = HUGEINT)}
+\item \code{max_by(arg = ANY, val = DOUBLE)}
+\item \code{max_by(arg = ANY, val = VARCHAR)}
+\item \code{max_by(arg = ANY, val = DATE)}
+\item \code{max_by(arg = ANY, val = TIMESTAMP)}
+\item \code{max_by(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{max_by(arg = ANY, val = BLOB)}
+\item \code{max_by(arg = ANY, val = ANY)}
+\item \code{max_by(arg = ANY, val = ANY, col2 = BIGINT)}
+}
+}
+
 \examples{
 \dontrun{
 max_by(A, B)

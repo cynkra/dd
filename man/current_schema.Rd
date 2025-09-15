@@ -9,6 +9,14 @@
 \description{
 Returns the name of the currently active schema. Default is main.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{current_schema()}
+\item \code{current_schema()}
+}
+}
+
 \examples{
 \dontrun{
 current_schema()

@@ -12,6 +12,17 @@
 \description{
 Returns true if the floating point value is finite, false otherwise.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{isfinite(x = FLOAT)}
+\item \code{isfinite(x = DOUBLE)}
+\item \code{isfinite(x = DATE)}
+\item \code{isfinite(x = TIMESTAMP)}
+\item \code{isfinite(x = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 isfinite(5.5)

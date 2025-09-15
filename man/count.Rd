@@ -12,6 +12,14 @@
 \description{
 Returns the number of non-NULL values in arg.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{count(arg = ANY)}
+\item \code{count()}
+}
+}
+
 \examples{
 \dontrun{
 count(A)

@@ -12,6 +12,19 @@
 \description{
 Extract the hour component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{hour(ts = DATE)}
+\item \code{hour(ts = INTERVAL)}
+\item \code{hour(ts = TIME)}
+\item \code{hour(ts = TIMESTAMP)}
+\item \code{hour(ts = `TIME WITH TIME ZONE`)}
+\item \code{hour(ts = TIME_NS)}
+\item \code{hour(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 hour(timestamp '2021-08-03 11:59:44.123456')

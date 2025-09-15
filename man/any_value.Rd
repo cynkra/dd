@@ -12,3 +12,11 @@
 \description{
 Returns the first non-NULL value from arg. This function is affected by ordering.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{any_value(arg = DECIMAL)}
+\item \code{any_value(arg = ANY)}
+}
+}
+

@@ -12,3 +12,11 @@ Unspecified.
 \description{
 DuckDB function \code{pragma_metadata_info()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{pragma_metadata_info()}
+\item \code{pragma_metadata_info(col0 = VARCHAR)}
+}
+}
+

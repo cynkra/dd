@@ -12,6 +12,15 @@
 \description{
 Rounds the number up.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{ceil(x = FLOAT)}
+\item \code{ceil(x = DOUBLE)}
+\item \code{ceil(x = DECIMAL)}
+}
+}
+
 \examples{
 \dontrun{
 ceil(17.4)

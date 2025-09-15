@@ -20,6 +20,15 @@ Returns the bit-length of the \code{bit} argument.
 
 Returns the length of the \code{list}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{character_length(string = VARCHAR)}
+\item \code{character_length(bit = BIT)}
+\item \code{character_length(list = `ANY[]`)}
+}
+}
+
 \examples{
 \dontrun{
 character_length('Hello🦆')

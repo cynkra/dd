@@ -13,6 +13,25 @@
 \description{
 Absolute value.
 }
+\section{Overloads}{
+
+\itemize{
+\item ```@`(x = TINYINT)``
+\item ```@`(x = SMALLINT)``
+\item ```@`(x = INTEGER)``
+\item ```@`(x = BIGINT)``
+\item ```@`(x = HUGEINT)``
+\item ```@`(x = FLOAT)``
+\item ```@`(x = DOUBLE)``
+\item ```@`(x = DECIMAL)``
+\item ```@`(x = UTINYINT)``
+\item ```@`(x = USMALLINT)``
+\item ```@`(x = UINTEGER)``
+\item ```@`(x = UBIGINT)``
+\item ```@`(x = UHUGEINT)``
+}
+}
+
 \examples{
 \dontrun{
 abs(-17.4)

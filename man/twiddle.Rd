@@ -12,6 +12,23 @@
 \description{
 Bitwise NOT.
 }
+\section{Overloads}{
+
+\itemize{
+\item ```~`(input = TINYINT)``
+\item ```~`(input = SMALLINT)``
+\item ```~`(input = INTEGER)``
+\item ```~`(input = BIGINT)``
+\item ```~`(input = HUGEINT)``
+\item ```~`(input = UTINYINT)``
+\item ```~`(input = USMALLINT)``
+\item ```~`(input = UINTEGER)``
+\item ```~`(input = UBIGINT)``
+\item ```~`(input = UHUGEINT)``
+\item ```~`(input = BIT)``
+}
+}
+
 \examples{
 \dontrun{
 ~15

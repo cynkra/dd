@@ -14,6 +14,20 @@
 \description{
 Extract the timezone component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{timezone(ts = DATE)}
+\item \code{timezone(ts = INTERVAL)}
+\item \code{timezone(ts = INTERVAL, col1 = `TIME WITH TIME ZONE`)}
+\item \code{timezone(ts = TIMESTAMP)}
+\item \code{timezone(ts = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{timezone(ts = VARCHAR, col1 = TIMESTAMP)}
+\item \code{timezone(ts = VARCHAR, col1 = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{timezone(ts = VARCHAR, col1 = `TIME WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 timezone(timestamp '2021-08-03 11:59:44.123456')

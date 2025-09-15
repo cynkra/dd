@@ -14,6 +14,14 @@
 \description{
 Computes the logarithm of x to base b. b may be omitted, in which case the default 10.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{log(b = DOUBLE)}
+\item \code{log(b = DOUBLE, x = DOUBLE)}
+}
+}
+
 \examples{
 \dontrun{
 log(2, 64)

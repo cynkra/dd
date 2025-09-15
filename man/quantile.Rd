@@ -14,6 +14,15 @@
 \description{
 Returns the exact quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding exact quantiles.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{quantile(x = ANY, pos = DOUBLE)}
+\item \code{quantile(x = ANY, pos = `DOUBLE[]`)}
+\item \code{quantile(x = ANY)}
+}
+}
+
 \examples{
 \dontrun{
 quantile_disc(x, 0.5)

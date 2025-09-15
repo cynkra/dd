@@ -16,6 +16,32 @@
 \description{
 Returns a bitstring with bits set for each distinct value.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{bitstring_agg(arg = TINYINT)}
+\item \code{bitstring_agg(arg = TINYINT, col1 = TINYINT, col2 = TINYINT)}
+\item \code{bitstring_agg(arg = SMALLINT)}
+\item \code{bitstring_agg(arg = SMALLINT, col1 = SMALLINT, col2 = SMALLINT)}
+\item \code{bitstring_agg(arg = INTEGER)}
+\item \code{bitstring_agg(arg = INTEGER, col1 = INTEGER, col2 = INTEGER)}
+\item \code{bitstring_agg(arg = BIGINT)}
+\item \code{bitstring_agg(arg = BIGINT, col1 = BIGINT, col2 = BIGINT)}
+\item \code{bitstring_agg(arg = HUGEINT)}
+\item \code{bitstring_agg(arg = HUGEINT, col1 = HUGEINT, col2 = HUGEINT)}
+\item \code{bitstring_agg(arg = UTINYINT)}
+\item \code{bitstring_agg(arg = UTINYINT, col1 = UTINYINT, col2 = UTINYINT)}
+\item \code{bitstring_agg(arg = USMALLINT)}
+\item \code{bitstring_agg(arg = USMALLINT, col1 = USMALLINT, col2 = USMALLINT)}
+\item \code{bitstring_agg(arg = UINTEGER)}
+\item \code{bitstring_agg(arg = UINTEGER, col1 = UINTEGER, col2 = UINTEGER)}
+\item \code{bitstring_agg(arg = UBIGINT)}
+\item \code{bitstring_agg(arg = UBIGINT, col1 = UBIGINT, col2 = UBIGINT)}
+\item \code{bitstring_agg(arg = UHUGEINT)}
+\item \code{bitstring_agg(arg = UHUGEINT, col1 = UHUGEINT, col2 = UHUGEINT)}
+}
+}
+
 \examples{
 \dontrun{
 bitstring_agg(A)

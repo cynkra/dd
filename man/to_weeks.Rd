@@ -12,6 +12,14 @@
 \description{
 Construct a week interval.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{to_weeks(integer = INTEGER)}
+\item \code{to_weeks(integer = BIGINT)}
+}
+}
+
 \examples{
 \dontrun{
 to_weeks(5)

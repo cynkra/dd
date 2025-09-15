@@ -14,3 +14,21 @@
 \description{
 DuckDB function \code{divide()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{divide(col0 = TINYINT, col1 = TINYINT)}
+\item \code{divide(col0 = SMALLINT, col1 = SMALLINT)}
+\item \code{divide(col0 = INTEGER, col1 = INTEGER)}
+\item \code{divide(col0 = BIGINT, col1 = BIGINT)}
+\item \code{divide(col0 = HUGEINT, col1 = HUGEINT)}
+\item \code{divide(col0 = FLOAT, col1 = FLOAT)}
+\item \code{divide(col0 = DOUBLE, col1 = DOUBLE)}
+\item \code{divide(col0 = UTINYINT, col1 = UTINYINT)}
+\item \code{divide(col0 = USMALLINT, col1 = USMALLINT)}
+\item \code{divide(col0 = UINTEGER, col1 = UINTEGER)}
+\item \code{divide(col0 = UBIGINT, col1 = UBIGINT)}
+\item \code{divide(col0 = UHUGEINT, col1 = UHUGEINT)}
+}
+}
+

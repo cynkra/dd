@@ -16,6 +16,15 @@
 \description{
 Works like list_sort, but the results are the indexes that correspond to the position in the original list instead of the actual values.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{array_grade_up(list = `ANY[]`)}
+\item \code{array_grade_up(list = `ANY[]`, col1 = VARCHAR)}
+\item \code{array_grade_up(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR)}
+}
+}
+
 \examples{
 \dontrun{
 array_grade_up([3, 6, 1, 2])

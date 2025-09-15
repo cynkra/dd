@@ -14,6 +14,23 @@
 \description{
 Bitwise AND.
 }
+\section{Overloads}{
+
+\itemize{
+\item ```&`(left = TINYINT, right = TINYINT)``
+\item ```&`(left = SMALLINT, right = SMALLINT)``
+\item ```&`(left = INTEGER, right = INTEGER)``
+\item ```&`(left = BIGINT, right = BIGINT)``
+\item ```&`(left = HUGEINT, right = HUGEINT)``
+\item ```&`(left = UTINYINT, right = UTINYINT)``
+\item ```&`(left = USMALLINT, right = USMALLINT)``
+\item ```&`(left = UINTEGER, right = UINTEGER)``
+\item ```&`(left = UBIGINT, right = UBIGINT)``
+\item ```&`(left = UHUGEINT, right = UHUGEINT)``
+\item ```&`(left = BIT, right = BIT)``
+}
+}
+
 \examples{
 \dontrun{
 91 & 15

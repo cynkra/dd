@@ -12,6 +12,16 @@
 \description{
 Extract the dayofweek component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{dayofweek(ts = DATE)}
+\item \code{dayofweek(ts = INTERVAL)}
+\item \code{dayofweek(ts = TIMESTAMP)}
+\item \code{dayofweek(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 dayofweek(timestamp '2021-08-03 11:59:44.123456')

@@ -14,6 +14,14 @@
 \description{
 Pads the bitstring until the specified length.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{bitstring(bitstring = VARCHAR, length = INTEGER)}
+\item \code{bitstring(bitstring = BIT, length = INTEGER)}
+}
+}
+
 \examples{
 \dontrun{
 bitstring('1010'::BIT, 7)

@@ -12,3 +12,11 @@ Unspecified.
 \description{
 DuckDB function \code{checkpoint()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{checkpoint()}
+\item \code{checkpoint(col0 = VARCHAR)}
+}
+}
+

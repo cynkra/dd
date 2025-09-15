@@ -12,6 +12,16 @@
 \description{
 Extract the weekday component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{weekday(ts = DATE)}
+\item \code{weekday(ts = INTERVAL)}
+\item \code{weekday(ts = TIMESTAMP)}
+\item \code{weekday(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 weekday(timestamp '2021-08-03 11:59:44.123456')

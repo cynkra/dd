@@ -9,6 +9,14 @@
 \description{
 Returns the currently active version of DuckDB in this format: v0.3.2	.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{version()}
+\item \code{version()}
+}
+}
+
 \examples{
 \dontrun{
 version()

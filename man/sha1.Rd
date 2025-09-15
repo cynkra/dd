@@ -16,6 +16,14 @@ Returns a \code{VARCHAR} with the SHA-1 hash of the \code{value}.
 
 Returns a \code{VARCHAR} with the SHA-1 hash of the \code{blob}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{sha1(value = VARCHAR)}
+\item \code{sha1(blob = BLOB)}
+}
+}
+
 \examples{
 \dontrun{
 sha1('🦆')

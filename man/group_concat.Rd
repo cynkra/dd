@@ -14,6 +14,14 @@
 \description{
 Concatenates the column string values with an optional separator.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{group_concat(str = ANY)}
+\item \code{group_concat(str = ANY, arg = VARCHAR)}
+}
+}
+
 \examples{
 \dontrun{
 group_concat(A, '-')

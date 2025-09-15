@@ -12,6 +12,14 @@
 \description{
 Construct a month interval.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{to_months(integer = INTEGER)}
+\item \code{to_months(integer = BIGINT)}
+}
+}
+
 \examples{
 \dontrun{
 to_months(5)

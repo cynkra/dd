@@ -12,6 +12,16 @@
 \description{
 Extract the year component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{year(ts = DATE)}
+\item \code{year(ts = INTERVAL)}
+\item \code{year(ts = TIMESTAMP)}
+\item \code{year(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 year(timestamp '2021-08-03 11:59:44.123456')

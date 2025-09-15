@@ -12,6 +12,16 @@
 \description{
 Extract the isodow component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{isodow(ts = DATE)}
+\item \code{isodow(ts = INTERVAL)}
+\item \code{isodow(ts = TIMESTAMP)}
+\item \code{isodow(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 isodow(timestamp '2021-08-03 11:59:44.123456')

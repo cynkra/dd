@@ -12,6 +12,16 @@
 \description{
 Subtract arguments, resulting in the time difference between the two timestamps.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{age(timestamp = TIMESTAMP)}
+\item \code{age(timestamp = TIMESTAMP, timestamp = TIMESTAMP)}
+\item \code{age(timestamp = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{age(timestamp = `TIMESTAMP WITH TIME ZONE`, timestamp = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 age(TIMESTAMP '2001-04-10', TIMESTAMP '1992-09-20')

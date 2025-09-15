@@ -14,6 +14,14 @@
 \description{
 Returns the minimum value present in arg.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{min(arg = ANY)}
+\item \code{min(arg = ANY, col1 = BIGINT)}
+}
+}
+
 \examples{
 \dontrun{
 min(A)

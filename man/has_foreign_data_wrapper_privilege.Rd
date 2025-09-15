@@ -16,3 +16,11 @@ Unspecified.
 \description{
 DuckDB function \code{has_foreign_data_wrapper_privilege()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{has_foreign_data_wrapper_privilege(fdw, privilege)}
+\item \code{has_foreign_data_wrapper_privilege(user, fdw, privilege)}
+}
+}
+

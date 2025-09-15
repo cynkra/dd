@@ -14,6 +14,26 @@
 \description{
 Get subfield (equivalent to extract).
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{datepart(ts = `VARCHAR[]`, col1 = DATE)}
+\item \code{datepart(ts = `VARCHAR[]`, col1 = INTERVAL)}
+\item \code{datepart(ts = `VARCHAR[]`, col1 = TIME)}
+\item \code{datepart(ts = `VARCHAR[]`, col1 = TIMESTAMP)}
+\item \code{datepart(ts = `VARCHAR[]`, col1 = `TIME WITH TIME ZONE`)}
+\item \code{datepart(ts = `VARCHAR[]`, col1 = TIME_NS)}
+\item \code{datepart(ts = VARCHAR, col1 = DATE)}
+\item \code{datepart(ts = VARCHAR, col1 = INTERVAL)}
+\item \code{datepart(ts = VARCHAR, col1 = TIME)}
+\item \code{datepart(ts = VARCHAR, col1 = TIMESTAMP)}
+\item \code{datepart(ts = VARCHAR, col1 = `TIME WITH TIME ZONE`)}
+\item \code{datepart(ts = VARCHAR, col1 = TIME_NS)}
+\item \code{datepart(ts = `VARCHAR[]`, col1 = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{datepart(ts = VARCHAR, col1 = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 datepart('minute', TIMESTAMP '1992-09-20 20:38:40')

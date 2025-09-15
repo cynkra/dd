@@ -18,6 +18,14 @@ Converts the \code{string} text to timestamp according to the format string. Thr
 
 Converts the \code{string} text to timestamp applying the format strings in the list until one succeeds. Throws an error on failure. To return \code{NULL} on failure, use try_strptime.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{strptime(text = VARCHAR, format = VARCHAR)}
+\item \code{strptime(text = VARCHAR, `format-list` = `VARCHAR[]`)}
+}
+}
+
 \examples{
 \dontrun{
 strptime('Wed, 1 January 1992 - 08:38:40 PM', '\%a, \%-d \%B \%Y - \%I:\%M:\%S \%p')

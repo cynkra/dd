@@ -18,6 +18,15 @@
 \description{
 Finds non-overlapping occurrences of the \code{regex} in the \code{string} and returns the corresponding values of the capturing \code{group}. A set of optional regex \code{options} can be set.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR)}
+\item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = INTEGER)}
+\item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR)}
+}
+}
+
 \examples{
 \dontrun{
 regexp_extract_all('Peter: 33, Paul:14', '(\w+):\s*(\d+)', 2)

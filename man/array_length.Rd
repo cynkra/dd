@@ -16,6 +16,14 @@ Returns the length of the \code{list}.
 
 \code{array_length} for lists with dimensions other than 1 not implemented.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{array_length(list = `ANY[]`)}
+\item \code{array_length(list = `ANY[]`, dimension = BIGINT)}
+}
+}
+
 \examples{
 \dontrun{
 array_length([1, 2, 3])

@@ -16,3 +16,11 @@ Unspecified.
 \description{
 DuckDB function \code{has_schema_privilege()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{has_schema_privilege(schema, privilege)}
+\item \code{has_schema_privilege(user, schema, privilege)}
+}
+}
+

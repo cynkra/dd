@@ -16,3 +16,11 @@ Unspecified.
 \description{
 DuckDB function \code{has_tablespace_privilege()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{has_tablespace_privilege(tablespace, privilege)}
+\item \code{has_tablespace_privilege(user, tablespace, privilege)}
+}
+}
+

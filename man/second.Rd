@@ -12,6 +12,19 @@
 \description{
 Extract the second component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{second(ts = DATE)}
+\item \code{second(ts = INTERVAL)}
+\item \code{second(ts = TIME)}
+\item \code{second(ts = TIMESTAMP)}
+\item \code{second(ts = `TIME WITH TIME ZONE`)}
+\item \code{second(ts = TIME_NS)}
+\item \code{second(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 second(timestamp '2021-08-03 11:59:44.123456')

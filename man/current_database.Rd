@@ -9,6 +9,14 @@
 \description{
 Returns the name of the currently active database.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{current_database()}
+\item \code{current_database()}
+}
+}
+
 \examples{
 \dontrun{
 current_database()

@@ -14,6 +14,14 @@
 \description{
 Computes the least common multiple of x and y.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{least_common_multiple(x = BIGINT, y = BIGINT)}
+\item \code{least_common_multiple(x = HUGEINT, y = HUGEINT)}
+}
+}
+
 \examples{
 \dontrun{
 least_common_multiple(42, 57)

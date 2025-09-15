@@ -12,6 +12,14 @@
 \description{
 Returns true if the floating point value is not a number, false otherwise.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{isnan(x = FLOAT)}
+\item \code{isnan(x = DOUBLE)}
+}
+}
+
 \examples{
 \dontrun{
 isnan('NaN'::FLOAT)

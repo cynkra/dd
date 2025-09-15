@@ -14,3 +14,52 @@
 \description{
 DuckDB function \verb{+()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item ```+`(col0 = TINYINT)``
+\item ```+`(col0 = TINYINT, col1 = TINYINT)``
+\item ```+`(col0 = SMALLINT)``
+\item ```+`(col0 = SMALLINT, col1 = SMALLINT)``
+\item ```+`(col0 = INTEGER)``
+\item ```+`(col0 = INTEGER, col1 = INTEGER)``
+\item ```+`(col0 = BIGINT)``
+\item ```+`(col0 = BIGINT, col1 = BIGINT)``
+\item ```+`(col0 = HUGEINT)``
+\item ```+`(col0 = HUGEINT, col1 = HUGEINT)``
+\item ```+`(col0 = FLOAT)``
+\item ```+`(col0 = FLOAT, col1 = FLOAT)``
+\item ```+`(col0 = DOUBLE)``
+\item ```+`(col0 = DOUBLE, col1 = DOUBLE)``
+\item ```+`(col0 = DECIMAL)``
+\item ```+`(col0 = DECIMAL, col1 = DECIMAL)``
+\item ```+`(col0 = UTINYINT)``
+\item ```+`(col0 = UTINYINT, col1 = UTINYINT)``
+\item ```+`(col0 = USMALLINT)``
+\item ```+`(col0 = USMALLINT, col1 = USMALLINT)``
+\item ```+`(col0 = UINTEGER)``
+\item ```+`(col0 = UINTEGER, col1 = UINTEGER)``
+\item ```+`(col0 = UBIGINT)``
+\item ```+`(col0 = UBIGINT, col1 = UBIGINT)``
+\item ```+`(col0 = UHUGEINT)``
+\item ```+`(col0 = UHUGEINT, col1 = UHUGEINT)``
+\item ```+`(col0 = DATE, col1 = INTEGER)``
+\item ```+`(col0 = INTEGER, col1 = DATE)``
+\item ```+`(col0 = INTERVAL, col1 = INTERVAL)``
+\item ```+`(col0 = DATE, col1 = INTERVAL)``
+\item ```+`(col0 = INTERVAL, col1 = DATE)``
+\item ```+`(col0 = TIME, col1 = INTERVAL)``
+\item ```+`(col0 = INTERVAL, col1 = TIME)``
+\item ```+`(col0 = TIMESTAMP, col1 = INTERVAL)``
+\item ```+`(col0 = INTERVAL, col1 = TIMESTAMP)``
+\item ```+\verb{(col0 = }TIME WITH TIME ZONE`, col1 = INTERVAL)``
+\item ```+\verb{(col0 = INTERVAL, col1 = }TIME WITH TIME ZONE`)``
+\item ```+`(col0 = TIME, col1 = DATE)``
+\item ```+`(col0 = DATE, col1 = TIME)``
+\item ```+\verb{(col0 = }TIME WITH TIME ZONE`, col1 = DATE)``
+\item ```+\verb{(col0 = DATE, col1 = }TIME WITH TIME ZONE`)``
+\item ```+`()``
+\item ```+`(col0 = BIGNUM, col1 = BIGNUM)``
+}
+}
+

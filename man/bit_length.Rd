@@ -16,6 +16,14 @@ Number of bits in a \code{string}.
 
 Returns the bit-length of the \code{bit} argument.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{bit_length(string = VARCHAR)}
+\item \code{bit_length(bit = BIT)}
+}
+}
+
 \examples{
 \dontrun{
 bit_length('abc')

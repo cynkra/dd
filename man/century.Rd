@@ -12,6 +12,16 @@
 \description{
 Extract the century component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{century(ts = DATE)}
+\item \code{century(ts = INTERVAL)}
+\item \code{century(ts = TIMESTAMP)}
+\item \code{century(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 century(timestamp '2021-08-03 11:59:44.123456')

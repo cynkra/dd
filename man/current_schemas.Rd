@@ -12,6 +12,14 @@
 \description{
 Returns list of schemas. Pass a parameter of True to include implicit schemas.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{current_schemas(include_implicit = BOOLEAN)}
+\item \code{current_schemas(include_implicit)}
+}
+}
+
 \examples{
 \dontrun{
 current_schemas(true)

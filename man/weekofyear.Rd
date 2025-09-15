@@ -12,6 +12,16 @@
 \description{
 Extract the weekofyear component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{weekofyear(ts = DATE)}
+\item \code{weekofyear(ts = INTERVAL)}
+\item \code{weekofyear(ts = TIMESTAMP)}
+\item \code{weekofyear(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 weekofyear(timestamp '2021-08-03 11:59:44.123456')

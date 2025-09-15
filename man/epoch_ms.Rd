@@ -12,6 +12,20 @@
 \description{
 Extract the epoch component in milliseconds from a temporal type.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{epoch_ms(temporal = DATE)}
+\item \code{epoch_ms(temporal = TIMESTAMP)}
+\item \code{epoch_ms(temporal = INTERVAL)}
+\item \code{epoch_ms(temporal = TIME)}
+\item \code{epoch_ms(temporal = TIME_NS)}
+\item \code{epoch_ms(temporal = `TIME WITH TIME ZONE`)}
+\item \code{epoch_ms(temporal = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{epoch_ms(temporal = BIGINT)}
+}
+}
+
 \examples{
 \dontrun{
 epoch_ms(timestamp '2021-08-03 11:59:44.123456')

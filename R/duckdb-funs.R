@@ -52,6 +52,20 @@
 #'
 #' @name %
 #' @usage NULL
+#' @section Overloads:
+#' - ```%`(col0 = TINYINT, col1 = TINYINT)``
+#' - ```%`(col0 = SMALLINT, col1 = SMALLINT)``
+#' - ```%`(col0 = INTEGER, col1 = INTEGER)``
+#' - ```%`(col0 = BIGINT, col1 = BIGINT)``
+#' - ```%`(col0 = HUGEINT, col1 = HUGEINT)``
+#' - ```%`(col0 = FLOAT, col1 = FLOAT)``
+#' - ```%`(col0 = DOUBLE, col1 = DOUBLE)``
+#' - ```%`(col0 = DECIMAL, col1 = DECIMAL)``
+#' - ```%`(col0 = UTINYINT, col1 = UTINYINT)``
+#' - ```%`(col0 = USMALLINT, col1 = USMALLINT)``
+#' - ```%`(col0 = UINTEGER, col1 = UINTEGER)``
+#' - ```%`(col0 = UBIGINT, col1 = UBIGINT)``
+#' - ```%`(col0 = UHUGEINT, col1 = UHUGEINT)``
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
@@ -66,6 +80,18 @@
 #'
 #' @name &
 #' @usage NULL
+#' @section Overloads:
+#' - ```&`(left = TINYINT, right = TINYINT)``
+#' - ```&`(left = SMALLINT, right = SMALLINT)``
+#' - ```&`(left = INTEGER, right = INTEGER)``
+#' - ```&`(left = BIGINT, right = BIGINT)``
+#' - ```&`(left = HUGEINT, right = HUGEINT)``
+#' - ```&`(left = UTINYINT, right = UTINYINT)``
+#' - ```&`(left = USMALLINT, right = USMALLINT)``
+#' - ```&`(left = UINTEGER, right = UINTEGER)``
+#' - ```&`(left = UBIGINT, right = UBIGINT)``
+#' - ```&`(left = UHUGEINT, right = UHUGEINT)``
+#' - ```&`(left = BIT, right = BIT)``
 #' @param left `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @param right `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
@@ -102,6 +128,24 @@
 #'
 #' @name *
 #' @usage NULL
+#' @section Overloads:
+#' - ```*`(col0 = TINYINT, col1 = TINYINT)``
+#' - ```*`(col0 = SMALLINT, col1 = SMALLINT)``
+#' - ```*`(col0 = INTEGER, col1 = INTEGER)``
+#' - ```*`(col0 = BIGINT, col1 = BIGINT)``
+#' - ```*`(col0 = HUGEINT, col1 = HUGEINT)``
+#' - ```*`(col0 = FLOAT, col1 = FLOAT)``
+#' - ```*`(col0 = DOUBLE, col1 = DOUBLE)``
+#' - ```*`(col0 = DECIMAL, col1 = DECIMAL)``
+#' - ```*`(col0 = UTINYINT, col1 = UTINYINT)``
+#' - ```*`(col0 = USMALLINT, col1 = USMALLINT)``
+#' - ```*`(col0 = UINTEGER, col1 = UINTEGER)``
+#' - ```*`(col0 = UBIGINT, col1 = UBIGINT)``
+#' - ```*`(col0 = UHUGEINT, col1 = UHUGEINT)``
+#' - ```*`(col0 = INTERVAL, col1 = DOUBLE)``
+#' - ```*`(col0 = DOUBLE, col1 = INTERVAL)``
+#' - ```*`(col0 = BIGINT, col1 = INTERVAL)``
+#' - ```*`(col0 = INTERVAL, col1 = BIGINT)``
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
@@ -134,6 +178,50 @@
 #'
 #' @name +
 #' @usage NULL
+#' @section Overloads:
+#' - ```+`(col0 = TINYINT)``
+#' - ```+`(col0 = TINYINT, col1 = TINYINT)``
+#' - ```+`(col0 = SMALLINT)``
+#' - ```+`(col0 = SMALLINT, col1 = SMALLINT)``
+#' - ```+`(col0 = INTEGER)``
+#' - ```+`(col0 = INTEGER, col1 = INTEGER)``
+#' - ```+`(col0 = BIGINT)``
+#' - ```+`(col0 = BIGINT, col1 = BIGINT)``
+#' - ```+`(col0 = HUGEINT)``
+#' - ```+`(col0 = HUGEINT, col1 = HUGEINT)``
+#' - ```+`(col0 = FLOAT)``
+#' - ```+`(col0 = FLOAT, col1 = FLOAT)``
+#' - ```+`(col0 = DOUBLE)``
+#' - ```+`(col0 = DOUBLE, col1 = DOUBLE)``
+#' - ```+`(col0 = DECIMAL)``
+#' - ```+`(col0 = DECIMAL, col1 = DECIMAL)``
+#' - ```+`(col0 = UTINYINT)``
+#' - ```+`(col0 = UTINYINT, col1 = UTINYINT)``
+#' - ```+`(col0 = USMALLINT)``
+#' - ```+`(col0 = USMALLINT, col1 = USMALLINT)``
+#' - ```+`(col0 = UINTEGER)``
+#' - ```+`(col0 = UINTEGER, col1 = UINTEGER)``
+#' - ```+`(col0 = UBIGINT)``
+#' - ```+`(col0 = UBIGINT, col1 = UBIGINT)``
+#' - ```+`(col0 = UHUGEINT)``
+#' - ```+`(col0 = UHUGEINT, col1 = UHUGEINT)``
+#' - ```+`(col0 = DATE, col1 = INTEGER)``
+#' - ```+`(col0 = INTEGER, col1 = DATE)``
+#' - ```+`(col0 = INTERVAL, col1 = INTERVAL)``
+#' - ```+`(col0 = DATE, col1 = INTERVAL)``
+#' - ```+`(col0 = INTERVAL, col1 = DATE)``
+#' - ```+`(col0 = TIME, col1 = INTERVAL)``
+#' - ```+`(col0 = INTERVAL, col1 = TIME)``
+#' - ```+`(col0 = TIMESTAMP, col1 = INTERVAL)``
+#' - ```+`(col0 = INTERVAL, col1 = TIMESTAMP)``
+#' - ```+`(col0 = `TIME WITH TIME ZONE`, col1 = INTERVAL)``
+#' - ```+`(col0 = INTERVAL, col1 = `TIME WITH TIME ZONE`)``
+#' - ```+`(col0 = TIME, col1 = DATE)``
+#' - ```+`(col0 = DATE, col1 = TIME)``
+#' - ```+`(col0 = `TIME WITH TIME ZONE`, col1 = DATE)``
+#' - ```+`(col0 = DATE, col1 = `TIME WITH TIME ZONE`)``
+#' - ```+`()``
+#' - ```+`(col0 = BIGNUM, col1 = BIGNUM)``
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | ANY[] | BIGNUM`
@@ -148,6 +236,44 @@
 #'
 #' @name -
 #' @usage NULL
+#' @section Overloads:
+#' - ```-`(col0 = TINYINT)``
+#' - ```-`(col0 = TINYINT, col1 = TINYINT)``
+#' - ```-`(col0 = SMALLINT)``
+#' - ```-`(col0 = SMALLINT, col1 = SMALLINT)``
+#' - ```-`(col0 = INTEGER)``
+#' - ```-`(col0 = INTEGER, col1 = INTEGER)``
+#' - ```-`(col0 = BIGINT)``
+#' - ```-`(col0 = BIGINT, col1 = BIGINT)``
+#' - ```-`(col0 = HUGEINT)``
+#' - ```-`(col0 = HUGEINT, col1 = HUGEINT)``
+#' - ```-`(col0 = FLOAT)``
+#' - ```-`(col0 = FLOAT, col1 = FLOAT)``
+#' - ```-`(col0 = DOUBLE)``
+#' - ```-`(col0 = DOUBLE, col1 = DOUBLE)``
+#' - ```-`(col0 = DECIMAL)``
+#' - ```-`(col0 = DECIMAL, col1 = DECIMAL)``
+#' - ```-`(col0 = UTINYINT)``
+#' - ```-`(col0 = UTINYINT, col1 = UTINYINT)``
+#' - ```-`(col0 = USMALLINT)``
+#' - ```-`(col0 = USMALLINT, col1 = USMALLINT)``
+#' - ```-`(col0 = UINTEGER)``
+#' - ```-`(col0 = UINTEGER, col1 = UINTEGER)``
+#' - ```-`(col0 = UBIGINT)``
+#' - ```-`(col0 = UBIGINT, col1 = UBIGINT)``
+#' - ```-`(col0 = UHUGEINT)``
+#' - ```-`(col0 = UHUGEINT, col1 = UHUGEINT)``
+#' - ```-`(col0 = BIGNUM)``
+#' - ```-`(col0 = BIGNUM, col1 = BIGNUM)``
+#' - ```-`(col0 = DATE, col1 = DATE)``
+#' - ```-`(col0 = DATE, col1 = INTEGER)``
+#' - ```-`(col0 = TIMESTAMP, col1 = TIMESTAMP)``
+#' - ```-`(col0 = INTERVAL, col1 = INTERVAL)``
+#' - ```-`(col0 = DATE, col1 = INTERVAL)``
+#' - ```-`(col0 = TIME, col1 = INTERVAL)``
+#' - ```-`(col0 = TIMESTAMP, col1 = INTERVAL)``
+#' - ```-`(col0 = `TIME WITH TIME ZONE`, col1 = INTERVAL)``
+#' - ```-`(col0 = INTERVAL)``
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL | TIME | TIME WITH TIME ZONE`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE`
@@ -162,6 +288,10 @@
 #'
 #' @name /
 #' @usage NULL
+#' @section Overloads:
+#' - ```/`(col0 = FLOAT, col1 = FLOAT)``
+#' - ```/`(col0 = DOUBLE, col1 = DOUBLE)``
+#' - ```/`(col0 = INTERVAL, col1 = DOUBLE)``
 #' @param col0 `FLOAT | DOUBLE | INTERVAL`
 #' @param col1 `FLOAT | DOUBLE`
 #' @return `FLOAT | DOUBLE | INTERVAL`
@@ -176,6 +306,19 @@
 #'
 #' @name //
 #' @usage NULL
+#' @section Overloads:
+#' - ```//`(col0 = TINYINT, col1 = TINYINT)``
+#' - ```//`(col0 = SMALLINT, col1 = SMALLINT)``
+#' - ```//`(col0 = INTEGER, col1 = INTEGER)``
+#' - ```//`(col0 = BIGINT, col1 = BIGINT)``
+#' - ```//`(col0 = HUGEINT, col1 = HUGEINT)``
+#' - ```//`(col0 = FLOAT, col1 = FLOAT)``
+#' - ```//`(col0 = DOUBLE, col1 = DOUBLE)``
+#' - ```//`(col0 = UTINYINT, col1 = UTINYINT)``
+#' - ```//`(col0 = USMALLINT, col1 = USMALLINT)``
+#' - ```//`(col0 = UINTEGER, col1 = UINTEGER)``
+#' - ```//`(col0 = UBIGINT, col1 = UBIGINT)``
+#' - ```//`(col0 = UHUGEINT, col1 = UHUGEINT)``
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
@@ -190,6 +333,18 @@
 #'
 #' @name <<
 #' @usage NULL
+#' @section Overloads:
+#' - ```<<`(input = TINYINT, col1 = TINYINT)``
+#' - ```<<`(input = SMALLINT, col1 = SMALLINT)``
+#' - ```<<`(input = INTEGER, col1 = INTEGER)``
+#' - ```<<`(input = BIGINT, col1 = BIGINT)``
+#' - ```<<`(input = HUGEINT, col1 = HUGEINT)``
+#' - ```<<`(input = UTINYINT, col1 = UTINYINT)``
+#' - ```<<`(input = USMALLINT, col1 = USMALLINT)``
+#' - ```<<`(input = UINTEGER, col1 = UINTEGER)``
+#' - ```<<`(input = UBIGINT, col1 = UBIGINT)``
+#' - ```<<`(input = UHUGEINT, col1 = UHUGEINT)``
+#' - ```<<`(input = BIT, col1 = INTEGER)``
 #' @param input `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
@@ -208,6 +363,9 @@
 #'
 #' @name <=>
 #' @usage NULL
+#' @section Overloads:
+#' - ```<=>`(list1 = `FLOAT[]`, list2 = `FLOAT[]`)``
+#' - ```<=>`(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)``
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
@@ -244,6 +402,18 @@
 #'
 #' @name >>
 #' @usage NULL
+#' @section Overloads:
+#' - ```>>`(input = TINYINT, col1 = TINYINT)``
+#' - ```>>`(input = SMALLINT, col1 = SMALLINT)``
+#' - ```>>`(input = INTEGER, col1 = INTEGER)``
+#' - ```>>`(input = BIGINT, col1 = BIGINT)``
+#' - ```>>`(input = HUGEINT, col1 = HUGEINT)``
+#' - ```>>`(input = UTINYINT, col1 = UTINYINT)``
+#' - ```>>`(input = USMALLINT, col1 = USMALLINT)``
+#' - ```>>`(input = UINTEGER, col1 = UINTEGER)``
+#' - ```>>`(input = UBIGINT, col1 = UBIGINT)``
+#' - ```>>`(input = UHUGEINT, col1 = UHUGEINT)``
+#' - ```>>`(input = BIT, col1 = INTEGER)``
 #' @param input `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
@@ -262,6 +432,20 @@
 #'
 #' @name at-
 #' @usage NULL
+#' @section Overloads:
+#' - ```@`(x = TINYINT)``
+#' - ```@`(x = SMALLINT)``
+#' - ```@`(x = INTEGER)``
+#' - ```@`(x = BIGINT)``
+#' - ```@`(x = HUGEINT)``
+#' - ```@`(x = FLOAT)``
+#' - ```@`(x = DOUBLE)``
+#' - ```@`(x = DECIMAL)``
+#' - ```@`(x = UTINYINT)``
+#' - ```@`(x = USMALLINT)``
+#' - ```@`(x = UINTEGER)``
+#' - ```@`(x = UBIGINT)``
+#' - ```@`(x = UHUGEINT)``
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @examples
@@ -333,6 +517,9 @@
 #'
 #' @name __internal_compress_integral_ubigint
 #' @usage NULL
+#' @section Overloads:
+#' - ```__internal_compress_integral_ubigint`(col0 = HUGEINT, col1 = HUGEINT)``
+#' - ```__internal_compress_integral_ubigint`(col0 = UHUGEINT, col1 = UHUGEINT)``
 #' @param col0 `HUGEINT | UHUGEINT`
 #' @param col1 `HUGEINT | UHUGEINT`
 #' @return `UBIGINT`
@@ -347,6 +534,11 @@
 #'
 #' @name __internal_compress_integral_uinteger
 #' @usage NULL
+#' @section Overloads:
+#' - ```__internal_compress_integral_uinteger`(col0 = BIGINT, col1 = BIGINT)``
+#' - ```__internal_compress_integral_uinteger`(col0 = HUGEINT, col1 = HUGEINT)``
+#' - ```__internal_compress_integral_uinteger`(col0 = UBIGINT, col1 = UBIGINT)``
+#' - ```__internal_compress_integral_uinteger`(col0 = UHUGEINT, col1 = UHUGEINT)``
 #' @param col0 `BIGINT | HUGEINT | UBIGINT | UHUGEINT`
 #' @param col1 `BIGINT | HUGEINT | UBIGINT | UHUGEINT`
 #' @return `UINTEGER`
@@ -361,6 +553,13 @@
 #'
 #' @name __internal_compress_integral_usmallint
 #' @usage NULL
+#' @section Overloads:
+#' - ```__internal_compress_integral_usmallint`(col0 = INTEGER, col1 = INTEGER)``
+#' - ```__internal_compress_integral_usmallint`(col0 = BIGINT, col1 = BIGINT)``
+#' - ```__internal_compress_integral_usmallint`(col0 = HUGEINT, col1 = HUGEINT)``
+#' - ```__internal_compress_integral_usmallint`(col0 = UINTEGER, col1 = UINTEGER)``
+#' - ```__internal_compress_integral_usmallint`(col0 = UBIGINT, col1 = UBIGINT)``
+#' - ```__internal_compress_integral_usmallint`(col0 = UHUGEINT, col1 = UHUGEINT)``
 #' @param col0 `INTEGER | BIGINT | HUGEINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `INTEGER | BIGINT | HUGEINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `USMALLINT`
@@ -375,6 +574,15 @@
 #'
 #' @name __internal_compress_integral_utinyint
 #' @usage NULL
+#' @section Overloads:
+#' - ```__internal_compress_integral_utinyint`(col0 = SMALLINT, col1 = SMALLINT)``
+#' - ```__internal_compress_integral_utinyint`(col0 = INTEGER, col1 = INTEGER)``
+#' - ```__internal_compress_integral_utinyint`(col0 = BIGINT, col1 = BIGINT)``
+#' - ```__internal_compress_integral_utinyint`(col0 = HUGEINT, col1 = HUGEINT)``
+#' - ```__internal_compress_integral_utinyint`(col0 = USMALLINT, col1 = USMALLINT)``
+#' - ```__internal_compress_integral_utinyint`(col0 = UINTEGER, col1 = UINTEGER)``
+#' - ```__internal_compress_integral_utinyint`(col0 = UBIGINT, col1 = UBIGINT)``
+#' - ```__internal_compress_integral_utinyint`(col0 = UHUGEINT, col1 = UHUGEINT)``
 #' @param col0 `SMALLINT | INTEGER | BIGINT | HUGEINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `SMALLINT | INTEGER | BIGINT | HUGEINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `UTINYINT`
@@ -467,6 +675,10 @@
 #'
 #' @name __internal_decompress_integral_bigint
 #' @usage NULL
+#' @section Overloads:
+#' - ```__internal_decompress_integral_bigint`(col0 = UTINYINT, col1 = BIGINT)``
+#' - ```__internal_decompress_integral_bigint`(col0 = USMALLINT, col1 = BIGINT)``
+#' - ```__internal_decompress_integral_bigint`(col0 = UINTEGER, col1 = BIGINT)``
 #' @param col0 `UTINYINT | USMALLINT | UINTEGER`
 #' @param col1 `BIGINT`
 #' @return `BIGINT`
@@ -481,6 +693,11 @@
 #'
 #' @name __internal_decompress_integral_hugeint
 #' @usage NULL
+#' @section Overloads:
+#' - ```__internal_decompress_integral_hugeint`(col0 = UTINYINT, col1 = HUGEINT)``
+#' - ```__internal_decompress_integral_hugeint`(col0 = USMALLINT, col1 = HUGEINT)``
+#' - ```__internal_decompress_integral_hugeint`(col0 = UINTEGER, col1 = HUGEINT)``
+#' - ```__internal_decompress_integral_hugeint`(col0 = UBIGINT, col1 = HUGEINT)``
 #' @param col0 `UTINYINT | USMALLINT | UINTEGER | UBIGINT`
 #' @param col1 `HUGEINT`
 #' @return `HUGEINT`
@@ -495,6 +712,9 @@
 #'
 #' @name __internal_decompress_integral_integer
 #' @usage NULL
+#' @section Overloads:
+#' - ```__internal_decompress_integral_integer`(col0 = UTINYINT, col1 = INTEGER)``
+#' - ```__internal_decompress_integral_integer`(col0 = USMALLINT, col1 = INTEGER)``
 #' @param col0 `UTINYINT | USMALLINT`
 #' @param col1 `INTEGER`
 #' @return `INTEGER`
@@ -523,6 +743,10 @@
 #'
 #' @name __internal_decompress_integral_ubigint
 #' @usage NULL
+#' @section Overloads:
+#' - ```__internal_decompress_integral_ubigint`(col0 = UTINYINT, col1 = UBIGINT)``
+#' - ```__internal_decompress_integral_ubigint`(col0 = USMALLINT, col1 = UBIGINT)``
+#' - ```__internal_decompress_integral_ubigint`(col0 = UINTEGER, col1 = UBIGINT)``
 #' @param col0 `UTINYINT | USMALLINT | UINTEGER`
 #' @param col1 `UBIGINT`
 #' @return `UBIGINT`
@@ -537,6 +761,11 @@
 #'
 #' @name __internal_decompress_integral_uhugeint
 #' @usage NULL
+#' @section Overloads:
+#' - ```__internal_decompress_integral_uhugeint`(col0 = UTINYINT, col1 = UHUGEINT)``
+#' - ```__internal_decompress_integral_uhugeint`(col0 = USMALLINT, col1 = UHUGEINT)``
+#' - ```__internal_decompress_integral_uhugeint`(col0 = UINTEGER, col1 = UHUGEINT)``
+#' - ```__internal_decompress_integral_uhugeint`(col0 = UBIGINT, col1 = UHUGEINT)``
 #' @param col0 `UTINYINT | USMALLINT | UINTEGER | UBIGINT`
 #' @param col1 `UHUGEINT`
 #' @return `UHUGEINT`
@@ -551,6 +780,9 @@
 #'
 #' @name __internal_decompress_integral_uinteger
 #' @usage NULL
+#' @section Overloads:
+#' - ```__internal_decompress_integral_uinteger`(col0 = UTINYINT, col1 = UINTEGER)``
+#' - ```__internal_decompress_integral_uinteger`(col0 = USMALLINT, col1 = UINTEGER)``
 #' @param col0 `UTINYINT | USMALLINT`
 #' @param col1 `UINTEGER`
 #' @return `UINTEGER`
@@ -579,6 +811,13 @@
 #'
 #' @name __internal_decompress_string
 #' @usage NULL
+#' @section Overloads:
+#' - ```__internal_decompress_string`(col0 = UTINYINT)``
+#' - ```__internal_decompress_string`(col0 = USMALLINT)``
+#' - ```__internal_decompress_string`(col0 = UINTEGER)``
+#' - ```__internal_decompress_string`(col0 = UBIGINT)``
+#' - ```__internal_decompress_string`(col0 = UHUGEINT)``
+#' - ```__internal_decompress_string`(col0 = HUGEINT)``
 #' @param col0 `UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | HUGEINT`
 #' @return `VARCHAR`
 `__internal_decompress_string` <- function(col0 = `UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | HUGEINT`) {
@@ -592,6 +831,20 @@
 #'
 #' @name abs
 #' @usage NULL
+#' @section Overloads:
+#' - ``abs(x = TINYINT)``
+#' - ``abs(x = SMALLINT)``
+#' - ``abs(x = INTEGER)``
+#' - ``abs(x = BIGINT)``
+#' - ``abs(x = HUGEINT)``
+#' - ``abs(x = FLOAT)``
+#' - ``abs(x = DOUBLE)``
+#' - ``abs(x = DECIMAL)``
+#' - ``abs(x = UTINYINT)``
+#' - ``abs(x = USMALLINT)``
+#' - ``abs(x = UINTEGER)``
+#' - ``abs(x = UBIGINT)``
+#' - ``abs(x = UHUGEINT)``
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @examples
@@ -643,6 +896,50 @@ acosh <- function(x = DOUBLE) {
 #'
 #' @name add
 #' @usage NULL
+#' @section Overloads:
+#' - ``add(col0 = TINYINT)``
+#' - ``add(col0 = TINYINT, col1 = TINYINT)``
+#' - ``add(col0 = SMALLINT)``
+#' - ``add(col0 = SMALLINT, col1 = SMALLINT)``
+#' - ``add(col0 = INTEGER)``
+#' - ``add(col0 = INTEGER, col1 = INTEGER)``
+#' - ``add(col0 = BIGINT)``
+#' - ``add(col0 = BIGINT, col1 = BIGINT)``
+#' - ``add(col0 = HUGEINT)``
+#' - ``add(col0 = HUGEINT, col1 = HUGEINT)``
+#' - ``add(col0 = FLOAT)``
+#' - ``add(col0 = FLOAT, col1 = FLOAT)``
+#' - ``add(col0 = DOUBLE)``
+#' - ``add(col0 = DOUBLE, col1 = DOUBLE)``
+#' - ``add(col0 = DECIMAL)``
+#' - ``add(col0 = DECIMAL, col1 = DECIMAL)``
+#' - ``add(col0 = UTINYINT)``
+#' - ``add(col0 = UTINYINT, col1 = UTINYINT)``
+#' - ``add(col0 = USMALLINT)``
+#' - ``add(col0 = USMALLINT, col1 = USMALLINT)``
+#' - ``add(col0 = UINTEGER)``
+#' - ``add(col0 = UINTEGER, col1 = UINTEGER)``
+#' - ``add(col0 = UBIGINT)``
+#' - ``add(col0 = UBIGINT, col1 = UBIGINT)``
+#' - ``add(col0 = UHUGEINT)``
+#' - ``add(col0 = UHUGEINT, col1 = UHUGEINT)``
+#' - ``add(col0 = DATE, col1 = INTEGER)``
+#' - ``add(col0 = INTEGER, col1 = DATE)``
+#' - ``add(col0 = INTERVAL, col1 = INTERVAL)``
+#' - ``add(col0 = DATE, col1 = INTERVAL)``
+#' - ``add(col0 = INTERVAL, col1 = DATE)``
+#' - ``add(col0 = TIME, col1 = INTERVAL)``
+#' - ``add(col0 = INTERVAL, col1 = TIME)``
+#' - ``add(col0 = TIMESTAMP, col1 = INTERVAL)``
+#' - ``add(col0 = INTERVAL, col1 = TIMESTAMP)``
+#' - ``add(col0 = `TIME WITH TIME ZONE`, col1 = INTERVAL)``
+#' - ``add(col0 = INTERVAL, col1 = `TIME WITH TIME ZONE`)``
+#' - ``add(col0 = TIME, col1 = DATE)``
+#' - ``add(col0 = DATE, col1 = TIME)``
+#' - ``add(col0 = `TIME WITH TIME ZONE`, col1 = DATE)``
+#' - ``add(col0 = DATE, col1 = `TIME WITH TIME ZONE`)``
+#' - ``add()``
+#' - ``add(col0 = BIGNUM, col1 = BIGNUM)``
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | ANY[] | BIGNUM`
@@ -671,6 +968,11 @@ add_parquet_key <- function(col0 = VARCHAR, col1 = VARCHAR) {
 #'
 #' @name age
 #' @usage NULL
+#' @section Overloads:
+#' - ``age(timestamp = TIMESTAMP)``
+#' - ``age(timestamp = TIMESTAMP, timestamp = TIMESTAMP)``
+#' - ``age(timestamp = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``age(timestamp = `TIMESTAMP WITH TIME ZONE`, timestamp = `TIMESTAMP WITH TIME ZONE`)``
 #' @param timestamp `TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `INTERVAL`
 #' @examples
@@ -736,6 +1038,9 @@ all_profiling_output <- function() {
 #'
 #' @name any_value
 #' @usage NULL
+#' @section Overloads:
+#' - ``any_value(arg = DECIMAL)``
+#' - ``any_value(arg = ANY)``
 #' @param arg `DECIMAL | ANY`
 #' @return `DECIMAL | ANY`
 any_value <- function(arg = `DECIMAL | ANY`) {
@@ -784,6 +1089,31 @@ approx_count_distinct <- function(any = ANY) {
 #'
 #' @name approx_quantile
 #' @usage NULL
+#' @section Overloads:
+#' - ``approx_quantile(x = DECIMAL, pos = FLOAT)``
+#' - ``approx_quantile(x = SMALLINT, pos = FLOAT)``
+#' - ``approx_quantile(x = INTEGER, pos = FLOAT)``
+#' - ``approx_quantile(x = BIGINT, pos = FLOAT)``
+#' - ``approx_quantile(x = HUGEINT, pos = FLOAT)``
+#' - ``approx_quantile(x = DOUBLE, pos = FLOAT)``
+#' - ``approx_quantile(x = DATE, pos = FLOAT)``
+#' - ``approx_quantile(x = TIME, pos = FLOAT)``
+#' - ``approx_quantile(x = `TIME WITH TIME ZONE`, pos = FLOAT)``
+#' - ``approx_quantile(x = TIMESTAMP, pos = FLOAT)``
+#' - ``approx_quantile(x = `TIMESTAMP WITH TIME ZONE`, pos = FLOAT)``
+#' - ``approx_quantile(x = DECIMAL, pos = `FLOAT[]`)``
+#' - ``approx_quantile(x = TINYINT, pos = `FLOAT[]`)``
+#' - ``approx_quantile(x = SMALLINT, pos = `FLOAT[]`)``
+#' - ``approx_quantile(x = INTEGER, pos = `FLOAT[]`)``
+#' - ``approx_quantile(x = BIGINT, pos = `FLOAT[]`)``
+#' - ``approx_quantile(x = HUGEINT, pos = `FLOAT[]`)``
+#' - ``approx_quantile(x = FLOAT, pos = `FLOAT[]`)``
+#' - ``approx_quantile(x = DOUBLE, pos = `FLOAT[]`)``
+#' - ``approx_quantile(x = DATE, pos = `FLOAT[]`)``
+#' - ``approx_quantile(x = TIME, pos = `FLOAT[]`)``
+#' - ``approx_quantile(x = `TIME WITH TIME ZONE`, pos = `FLOAT[]`)``
+#' - ``approx_quantile(x = TIMESTAMP, pos = `FLOAT[]`)``
+#' - ``approx_quantile(x = `TIMESTAMP WITH TIME ZONE`, pos = `FLOAT[]`)``
 #' @param x `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | DATE | TIME | TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TINYINT | FLOAT`
 #' @param pos `FLOAT | FLOAT[]`
 #' @return `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | DATE | TIME | TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | DECIMAL[] | TINYINT[] | SMALLINT[] | INTEGER[] | BIGINT[] | HUGEINT[] | FLOAT[] | DOUBLE[] | DATE[] | TIME[] | TIME WITH TIME ZONE[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
@@ -820,6 +1150,9 @@ approx_top_k <- function(val = ANY, k = BIGINT) {
 #'
 #' @name arbitrary
 #' @usage NULL
+#' @section Overloads:
+#' - ``arbitrary(arg = DECIMAL)``
+#' - ``arbitrary(arg = ANY)``
 #' @param arg `DECIMAL | ANY`
 #' @return `DECIMAL | ANY`
 #' @examples
@@ -837,6 +1170,99 @@ arbitrary <- function(arg = `DECIMAL | ANY`) {
 #'
 #' @name arg_max
 #' @usage NULL
+#' @section Overloads:
+#' - ``arg_max(arg = INTEGER, val = INTEGER)``
+#' - ``arg_max(arg = INTEGER, val = BIGINT)``
+#' - ``arg_max(arg = INTEGER, val = HUGEINT)``
+#' - ``arg_max(arg = INTEGER, val = DOUBLE)``
+#' - ``arg_max(arg = INTEGER, val = VARCHAR)``
+#' - ``arg_max(arg = INTEGER, val = DATE)``
+#' - ``arg_max(arg = INTEGER, val = TIMESTAMP)``
+#' - ``arg_max(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max(arg = INTEGER, val = BLOB)``
+#' - ``arg_max(arg = BIGINT, val = INTEGER)``
+#' - ``arg_max(arg = BIGINT, val = BIGINT)``
+#' - ``arg_max(arg = BIGINT, val = HUGEINT)``
+#' - ``arg_max(arg = BIGINT, val = DOUBLE)``
+#' - ``arg_max(arg = BIGINT, val = VARCHAR)``
+#' - ``arg_max(arg = BIGINT, val = DATE)``
+#' - ``arg_max(arg = BIGINT, val = TIMESTAMP)``
+#' - ``arg_max(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max(arg = BIGINT, val = BLOB)``
+#' - ``arg_max(arg = DOUBLE, val = INTEGER)``
+#' - ``arg_max(arg = DOUBLE, val = BIGINT)``
+#' - ``arg_max(arg = DOUBLE, val = HUGEINT)``
+#' - ``arg_max(arg = DOUBLE, val = DOUBLE)``
+#' - ``arg_max(arg = DOUBLE, val = VARCHAR)``
+#' - ``arg_max(arg = DOUBLE, val = DATE)``
+#' - ``arg_max(arg = DOUBLE, val = TIMESTAMP)``
+#' - ``arg_max(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max(arg = DOUBLE, val = BLOB)``
+#' - ``arg_max(arg = VARCHAR, val = INTEGER)``
+#' - ``arg_max(arg = VARCHAR, val = BIGINT)``
+#' - ``arg_max(arg = VARCHAR, val = HUGEINT)``
+#' - ``arg_max(arg = VARCHAR, val = DOUBLE)``
+#' - ``arg_max(arg = VARCHAR, val = VARCHAR)``
+#' - ``arg_max(arg = VARCHAR, val = DATE)``
+#' - ``arg_max(arg = VARCHAR, val = TIMESTAMP)``
+#' - ``arg_max(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max(arg = VARCHAR, val = BLOB)``
+#' - ``arg_max(arg = DATE, val = INTEGER)``
+#' - ``arg_max(arg = DATE, val = BIGINT)``
+#' - ``arg_max(arg = DATE, val = HUGEINT)``
+#' - ``arg_max(arg = DATE, val = DOUBLE)``
+#' - ``arg_max(arg = DATE, val = VARCHAR)``
+#' - ``arg_max(arg = DATE, val = DATE)``
+#' - ``arg_max(arg = DATE, val = TIMESTAMP)``
+#' - ``arg_max(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max(arg = DATE, val = BLOB)``
+#' - ``arg_max(arg = TIMESTAMP, val = INTEGER)``
+#' - ``arg_max(arg = TIMESTAMP, val = BIGINT)``
+#' - ``arg_max(arg = TIMESTAMP, val = HUGEINT)``
+#' - ``arg_max(arg = TIMESTAMP, val = DOUBLE)``
+#' - ``arg_max(arg = TIMESTAMP, val = VARCHAR)``
+#' - ``arg_max(arg = TIMESTAMP, val = DATE)``
+#' - ``arg_max(arg = TIMESTAMP, val = TIMESTAMP)``
+#' - ``arg_max(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max(arg = TIMESTAMP, val = BLOB)``
+#' - ``arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)``
+#' - ``arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)``
+#' - ``arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)``
+#' - ``arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)``
+#' - ``arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)``
+#' - ``arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)``
+#' - ``arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)``
+#' - ``arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)``
+#' - ``arg_max(arg = BLOB, val = INTEGER)``
+#' - ``arg_max(arg = BLOB, val = BIGINT)``
+#' - ``arg_max(arg = BLOB, val = HUGEINT)``
+#' - ``arg_max(arg = BLOB, val = DOUBLE)``
+#' - ``arg_max(arg = BLOB, val = VARCHAR)``
+#' - ``arg_max(arg = BLOB, val = DATE)``
+#' - ``arg_max(arg = BLOB, val = TIMESTAMP)``
+#' - ``arg_max(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max(arg = BLOB, val = BLOB)``
+#' - ``arg_max(arg = DECIMAL, val = INTEGER)``
+#' - ``arg_max(arg = DECIMAL, val = BIGINT)``
+#' - ``arg_max(arg = DECIMAL, val = HUGEINT)``
+#' - ``arg_max(arg = DECIMAL, val = DOUBLE)``
+#' - ``arg_max(arg = DECIMAL, val = VARCHAR)``
+#' - ``arg_max(arg = DECIMAL, val = DATE)``
+#' - ``arg_max(arg = DECIMAL, val = TIMESTAMP)``
+#' - ``arg_max(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max(arg = DECIMAL, val = BLOB)``
+#' - ``arg_max(arg = ANY, val = INTEGER)``
+#' - ``arg_max(arg = ANY, val = BIGINT)``
+#' - ``arg_max(arg = ANY, val = HUGEINT)``
+#' - ``arg_max(arg = ANY, val = DOUBLE)``
+#' - ``arg_max(arg = ANY, val = VARCHAR)``
+#' - ``arg_max(arg = ANY, val = DATE)``
+#' - ``arg_max(arg = ANY, val = TIMESTAMP)``
+#' - ``arg_max(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max(arg = ANY, val = BLOB)``
+#' - ``arg_max(arg = ANY, val = ANY)``
+#' - ``arg_max(arg = ANY, val = ANY, col2 = BIGINT)``
 #' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
 #' @param col2 `BIGINT`
@@ -856,6 +1282,98 @@ arg_max <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAM
 #'
 #' @name arg_max_null
 #' @usage NULL
+#' @section Overloads:
+#' - ``arg_max_null(arg = INTEGER, val = INTEGER)``
+#' - ``arg_max_null(arg = INTEGER, val = BIGINT)``
+#' - ``arg_max_null(arg = INTEGER, val = HUGEINT)``
+#' - ``arg_max_null(arg = INTEGER, val = DOUBLE)``
+#' - ``arg_max_null(arg = INTEGER, val = VARCHAR)``
+#' - ``arg_max_null(arg = INTEGER, val = DATE)``
+#' - ``arg_max_null(arg = INTEGER, val = TIMESTAMP)``
+#' - ``arg_max_null(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max_null(arg = INTEGER, val = BLOB)``
+#' - ``arg_max_null(arg = BIGINT, val = INTEGER)``
+#' - ``arg_max_null(arg = BIGINT, val = BIGINT)``
+#' - ``arg_max_null(arg = BIGINT, val = HUGEINT)``
+#' - ``arg_max_null(arg = BIGINT, val = DOUBLE)``
+#' - ``arg_max_null(arg = BIGINT, val = VARCHAR)``
+#' - ``arg_max_null(arg = BIGINT, val = DATE)``
+#' - ``arg_max_null(arg = BIGINT, val = TIMESTAMP)``
+#' - ``arg_max_null(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max_null(arg = BIGINT, val = BLOB)``
+#' - ``arg_max_null(arg = DOUBLE, val = INTEGER)``
+#' - ``arg_max_null(arg = DOUBLE, val = BIGINT)``
+#' - ``arg_max_null(arg = DOUBLE, val = HUGEINT)``
+#' - ``arg_max_null(arg = DOUBLE, val = DOUBLE)``
+#' - ``arg_max_null(arg = DOUBLE, val = VARCHAR)``
+#' - ``arg_max_null(arg = DOUBLE, val = DATE)``
+#' - ``arg_max_null(arg = DOUBLE, val = TIMESTAMP)``
+#' - ``arg_max_null(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max_null(arg = DOUBLE, val = BLOB)``
+#' - ``arg_max_null(arg = VARCHAR, val = INTEGER)``
+#' - ``arg_max_null(arg = VARCHAR, val = BIGINT)``
+#' - ``arg_max_null(arg = VARCHAR, val = HUGEINT)``
+#' - ``arg_max_null(arg = VARCHAR, val = DOUBLE)``
+#' - ``arg_max_null(arg = VARCHAR, val = VARCHAR)``
+#' - ``arg_max_null(arg = VARCHAR, val = DATE)``
+#' - ``arg_max_null(arg = VARCHAR, val = TIMESTAMP)``
+#' - ``arg_max_null(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max_null(arg = VARCHAR, val = BLOB)``
+#' - ``arg_max_null(arg = DATE, val = INTEGER)``
+#' - ``arg_max_null(arg = DATE, val = BIGINT)``
+#' - ``arg_max_null(arg = DATE, val = HUGEINT)``
+#' - ``arg_max_null(arg = DATE, val = DOUBLE)``
+#' - ``arg_max_null(arg = DATE, val = VARCHAR)``
+#' - ``arg_max_null(arg = DATE, val = DATE)``
+#' - ``arg_max_null(arg = DATE, val = TIMESTAMP)``
+#' - ``arg_max_null(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max_null(arg = DATE, val = BLOB)``
+#' - ``arg_max_null(arg = TIMESTAMP, val = INTEGER)``
+#' - ``arg_max_null(arg = TIMESTAMP, val = BIGINT)``
+#' - ``arg_max_null(arg = TIMESTAMP, val = HUGEINT)``
+#' - ``arg_max_null(arg = TIMESTAMP, val = DOUBLE)``
+#' - ``arg_max_null(arg = TIMESTAMP, val = VARCHAR)``
+#' - ``arg_max_null(arg = TIMESTAMP, val = DATE)``
+#' - ``arg_max_null(arg = TIMESTAMP, val = TIMESTAMP)``
+#' - ``arg_max_null(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max_null(arg = TIMESTAMP, val = BLOB)``
+#' - ``arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)``
+#' - ``arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)``
+#' - ``arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)``
+#' - ``arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)``
+#' - ``arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)``
+#' - ``arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)``
+#' - ``arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)``
+#' - ``arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)``
+#' - ``arg_max_null(arg = BLOB, val = INTEGER)``
+#' - ``arg_max_null(arg = BLOB, val = BIGINT)``
+#' - ``arg_max_null(arg = BLOB, val = HUGEINT)``
+#' - ``arg_max_null(arg = BLOB, val = DOUBLE)``
+#' - ``arg_max_null(arg = BLOB, val = VARCHAR)``
+#' - ``arg_max_null(arg = BLOB, val = DATE)``
+#' - ``arg_max_null(arg = BLOB, val = TIMESTAMP)``
+#' - ``arg_max_null(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max_null(arg = BLOB, val = BLOB)``
+#' - ``arg_max_null(arg = DECIMAL, val = INTEGER)``
+#' - ``arg_max_null(arg = DECIMAL, val = BIGINT)``
+#' - ``arg_max_null(arg = DECIMAL, val = HUGEINT)``
+#' - ``arg_max_null(arg = DECIMAL, val = DOUBLE)``
+#' - ``arg_max_null(arg = DECIMAL, val = VARCHAR)``
+#' - ``arg_max_null(arg = DECIMAL, val = DATE)``
+#' - ``arg_max_null(arg = DECIMAL, val = TIMESTAMP)``
+#' - ``arg_max_null(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max_null(arg = DECIMAL, val = BLOB)``
+#' - ``arg_max_null(arg = ANY, val = INTEGER)``
+#' - ``arg_max_null(arg = ANY, val = BIGINT)``
+#' - ``arg_max_null(arg = ANY, val = HUGEINT)``
+#' - ``arg_max_null(arg = ANY, val = DOUBLE)``
+#' - ``arg_max_null(arg = ANY, val = VARCHAR)``
+#' - ``arg_max_null(arg = ANY, val = DATE)``
+#' - ``arg_max_null(arg = ANY, val = TIMESTAMP)``
+#' - ``arg_max_null(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_max_null(arg = ANY, val = BLOB)``
+#' - ``arg_max_null(arg = ANY, val = ANY)``
 #' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
 #' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
@@ -874,6 +1392,99 @@ arg_max_null <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIM
 #'
 #' @name arg_min
 #' @usage NULL
+#' @section Overloads:
+#' - ``arg_min(arg = INTEGER, val = INTEGER)``
+#' - ``arg_min(arg = INTEGER, val = BIGINT)``
+#' - ``arg_min(arg = INTEGER, val = HUGEINT)``
+#' - ``arg_min(arg = INTEGER, val = DOUBLE)``
+#' - ``arg_min(arg = INTEGER, val = VARCHAR)``
+#' - ``arg_min(arg = INTEGER, val = DATE)``
+#' - ``arg_min(arg = INTEGER, val = TIMESTAMP)``
+#' - ``arg_min(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min(arg = INTEGER, val = BLOB)``
+#' - ``arg_min(arg = BIGINT, val = INTEGER)``
+#' - ``arg_min(arg = BIGINT, val = BIGINT)``
+#' - ``arg_min(arg = BIGINT, val = HUGEINT)``
+#' - ``arg_min(arg = BIGINT, val = DOUBLE)``
+#' - ``arg_min(arg = BIGINT, val = VARCHAR)``
+#' - ``arg_min(arg = BIGINT, val = DATE)``
+#' - ``arg_min(arg = BIGINT, val = TIMESTAMP)``
+#' - ``arg_min(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min(arg = BIGINT, val = BLOB)``
+#' - ``arg_min(arg = DOUBLE, val = INTEGER)``
+#' - ``arg_min(arg = DOUBLE, val = BIGINT)``
+#' - ``arg_min(arg = DOUBLE, val = HUGEINT)``
+#' - ``arg_min(arg = DOUBLE, val = DOUBLE)``
+#' - ``arg_min(arg = DOUBLE, val = VARCHAR)``
+#' - ``arg_min(arg = DOUBLE, val = DATE)``
+#' - ``arg_min(arg = DOUBLE, val = TIMESTAMP)``
+#' - ``arg_min(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min(arg = DOUBLE, val = BLOB)``
+#' - ``arg_min(arg = VARCHAR, val = INTEGER)``
+#' - ``arg_min(arg = VARCHAR, val = BIGINT)``
+#' - ``arg_min(arg = VARCHAR, val = HUGEINT)``
+#' - ``arg_min(arg = VARCHAR, val = DOUBLE)``
+#' - ``arg_min(arg = VARCHAR, val = VARCHAR)``
+#' - ``arg_min(arg = VARCHAR, val = DATE)``
+#' - ``arg_min(arg = VARCHAR, val = TIMESTAMP)``
+#' - ``arg_min(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min(arg = VARCHAR, val = BLOB)``
+#' - ``arg_min(arg = DATE, val = INTEGER)``
+#' - ``arg_min(arg = DATE, val = BIGINT)``
+#' - ``arg_min(arg = DATE, val = HUGEINT)``
+#' - ``arg_min(arg = DATE, val = DOUBLE)``
+#' - ``arg_min(arg = DATE, val = VARCHAR)``
+#' - ``arg_min(arg = DATE, val = DATE)``
+#' - ``arg_min(arg = DATE, val = TIMESTAMP)``
+#' - ``arg_min(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min(arg = DATE, val = BLOB)``
+#' - ``arg_min(arg = TIMESTAMP, val = INTEGER)``
+#' - ``arg_min(arg = TIMESTAMP, val = BIGINT)``
+#' - ``arg_min(arg = TIMESTAMP, val = HUGEINT)``
+#' - ``arg_min(arg = TIMESTAMP, val = DOUBLE)``
+#' - ``arg_min(arg = TIMESTAMP, val = VARCHAR)``
+#' - ``arg_min(arg = TIMESTAMP, val = DATE)``
+#' - ``arg_min(arg = TIMESTAMP, val = TIMESTAMP)``
+#' - ``arg_min(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min(arg = TIMESTAMP, val = BLOB)``
+#' - ``arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)``
+#' - ``arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)``
+#' - ``arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)``
+#' - ``arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)``
+#' - ``arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)``
+#' - ``arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)``
+#' - ``arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)``
+#' - ``arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)``
+#' - ``arg_min(arg = BLOB, val = INTEGER)``
+#' - ``arg_min(arg = BLOB, val = BIGINT)``
+#' - ``arg_min(arg = BLOB, val = HUGEINT)``
+#' - ``arg_min(arg = BLOB, val = DOUBLE)``
+#' - ``arg_min(arg = BLOB, val = VARCHAR)``
+#' - ``arg_min(arg = BLOB, val = DATE)``
+#' - ``arg_min(arg = BLOB, val = TIMESTAMP)``
+#' - ``arg_min(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min(arg = BLOB, val = BLOB)``
+#' - ``arg_min(arg = DECIMAL, val = INTEGER)``
+#' - ``arg_min(arg = DECIMAL, val = BIGINT)``
+#' - ``arg_min(arg = DECIMAL, val = HUGEINT)``
+#' - ``arg_min(arg = DECIMAL, val = DOUBLE)``
+#' - ``arg_min(arg = DECIMAL, val = VARCHAR)``
+#' - ``arg_min(arg = DECIMAL, val = DATE)``
+#' - ``arg_min(arg = DECIMAL, val = TIMESTAMP)``
+#' - ``arg_min(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min(arg = DECIMAL, val = BLOB)``
+#' - ``arg_min(arg = ANY, val = INTEGER)``
+#' - ``arg_min(arg = ANY, val = BIGINT)``
+#' - ``arg_min(arg = ANY, val = HUGEINT)``
+#' - ``arg_min(arg = ANY, val = DOUBLE)``
+#' - ``arg_min(arg = ANY, val = VARCHAR)``
+#' - ``arg_min(arg = ANY, val = DATE)``
+#' - ``arg_min(arg = ANY, val = TIMESTAMP)``
+#' - ``arg_min(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min(arg = ANY, val = BLOB)``
+#' - ``arg_min(arg = ANY, val = ANY)``
+#' - ``arg_min(arg = ANY, val = ANY, col2 = BIGINT)``
 #' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
 #' @param col2 `BIGINT`
@@ -893,6 +1504,98 @@ arg_min <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAM
 #'
 #' @name arg_min_null
 #' @usage NULL
+#' @section Overloads:
+#' - ``arg_min_null(arg = INTEGER, val = INTEGER)``
+#' - ``arg_min_null(arg = INTEGER, val = BIGINT)``
+#' - ``arg_min_null(arg = INTEGER, val = HUGEINT)``
+#' - ``arg_min_null(arg = INTEGER, val = DOUBLE)``
+#' - ``arg_min_null(arg = INTEGER, val = VARCHAR)``
+#' - ``arg_min_null(arg = INTEGER, val = DATE)``
+#' - ``arg_min_null(arg = INTEGER, val = TIMESTAMP)``
+#' - ``arg_min_null(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min_null(arg = INTEGER, val = BLOB)``
+#' - ``arg_min_null(arg = BIGINT, val = INTEGER)``
+#' - ``arg_min_null(arg = BIGINT, val = BIGINT)``
+#' - ``arg_min_null(arg = BIGINT, val = HUGEINT)``
+#' - ``arg_min_null(arg = BIGINT, val = DOUBLE)``
+#' - ``arg_min_null(arg = BIGINT, val = VARCHAR)``
+#' - ``arg_min_null(arg = BIGINT, val = DATE)``
+#' - ``arg_min_null(arg = BIGINT, val = TIMESTAMP)``
+#' - ``arg_min_null(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min_null(arg = BIGINT, val = BLOB)``
+#' - ``arg_min_null(arg = DOUBLE, val = INTEGER)``
+#' - ``arg_min_null(arg = DOUBLE, val = BIGINT)``
+#' - ``arg_min_null(arg = DOUBLE, val = HUGEINT)``
+#' - ``arg_min_null(arg = DOUBLE, val = DOUBLE)``
+#' - ``arg_min_null(arg = DOUBLE, val = VARCHAR)``
+#' - ``arg_min_null(arg = DOUBLE, val = DATE)``
+#' - ``arg_min_null(arg = DOUBLE, val = TIMESTAMP)``
+#' - ``arg_min_null(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min_null(arg = DOUBLE, val = BLOB)``
+#' - ``arg_min_null(arg = VARCHAR, val = INTEGER)``
+#' - ``arg_min_null(arg = VARCHAR, val = BIGINT)``
+#' - ``arg_min_null(arg = VARCHAR, val = HUGEINT)``
+#' - ``arg_min_null(arg = VARCHAR, val = DOUBLE)``
+#' - ``arg_min_null(arg = VARCHAR, val = VARCHAR)``
+#' - ``arg_min_null(arg = VARCHAR, val = DATE)``
+#' - ``arg_min_null(arg = VARCHAR, val = TIMESTAMP)``
+#' - ``arg_min_null(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min_null(arg = VARCHAR, val = BLOB)``
+#' - ``arg_min_null(arg = DATE, val = INTEGER)``
+#' - ``arg_min_null(arg = DATE, val = BIGINT)``
+#' - ``arg_min_null(arg = DATE, val = HUGEINT)``
+#' - ``arg_min_null(arg = DATE, val = DOUBLE)``
+#' - ``arg_min_null(arg = DATE, val = VARCHAR)``
+#' - ``arg_min_null(arg = DATE, val = DATE)``
+#' - ``arg_min_null(arg = DATE, val = TIMESTAMP)``
+#' - ``arg_min_null(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min_null(arg = DATE, val = BLOB)``
+#' - ``arg_min_null(arg = TIMESTAMP, val = INTEGER)``
+#' - ``arg_min_null(arg = TIMESTAMP, val = BIGINT)``
+#' - ``arg_min_null(arg = TIMESTAMP, val = HUGEINT)``
+#' - ``arg_min_null(arg = TIMESTAMP, val = DOUBLE)``
+#' - ``arg_min_null(arg = TIMESTAMP, val = VARCHAR)``
+#' - ``arg_min_null(arg = TIMESTAMP, val = DATE)``
+#' - ``arg_min_null(arg = TIMESTAMP, val = TIMESTAMP)``
+#' - ``arg_min_null(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min_null(arg = TIMESTAMP, val = BLOB)``
+#' - ``arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)``
+#' - ``arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)``
+#' - ``arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)``
+#' - ``arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)``
+#' - ``arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)``
+#' - ``arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)``
+#' - ``arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)``
+#' - ``arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)``
+#' - ``arg_min_null(arg = BLOB, val = INTEGER)``
+#' - ``arg_min_null(arg = BLOB, val = BIGINT)``
+#' - ``arg_min_null(arg = BLOB, val = HUGEINT)``
+#' - ``arg_min_null(arg = BLOB, val = DOUBLE)``
+#' - ``arg_min_null(arg = BLOB, val = VARCHAR)``
+#' - ``arg_min_null(arg = BLOB, val = DATE)``
+#' - ``arg_min_null(arg = BLOB, val = TIMESTAMP)``
+#' - ``arg_min_null(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min_null(arg = BLOB, val = BLOB)``
+#' - ``arg_min_null(arg = DECIMAL, val = INTEGER)``
+#' - ``arg_min_null(arg = DECIMAL, val = BIGINT)``
+#' - ``arg_min_null(arg = DECIMAL, val = HUGEINT)``
+#' - ``arg_min_null(arg = DECIMAL, val = DOUBLE)``
+#' - ``arg_min_null(arg = DECIMAL, val = VARCHAR)``
+#' - ``arg_min_null(arg = DECIMAL, val = DATE)``
+#' - ``arg_min_null(arg = DECIMAL, val = TIMESTAMP)``
+#' - ``arg_min_null(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min_null(arg = DECIMAL, val = BLOB)``
+#' - ``arg_min_null(arg = ANY, val = INTEGER)``
+#' - ``arg_min_null(arg = ANY, val = BIGINT)``
+#' - ``arg_min_null(arg = ANY, val = HUGEINT)``
+#' - ``arg_min_null(arg = ANY, val = DOUBLE)``
+#' - ``arg_min_null(arg = ANY, val = VARCHAR)``
+#' - ``arg_min_null(arg = ANY, val = DATE)``
+#' - ``arg_min_null(arg = ANY, val = TIMESTAMP)``
+#' - ``arg_min_null(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``arg_min_null(arg = ANY, val = BLOB)``
+#' - ``arg_min_null(arg = ANY, val = ANY)``
 #' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
 #' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
@@ -911,6 +1614,99 @@ arg_min_null <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIM
 #'
 #' @name argmax
 #' @usage NULL
+#' @section Overloads:
+#' - ``argmax(arg = INTEGER, val = INTEGER)``
+#' - ``argmax(arg = INTEGER, val = BIGINT)``
+#' - ``argmax(arg = INTEGER, val = HUGEINT)``
+#' - ``argmax(arg = INTEGER, val = DOUBLE)``
+#' - ``argmax(arg = INTEGER, val = VARCHAR)``
+#' - ``argmax(arg = INTEGER, val = DATE)``
+#' - ``argmax(arg = INTEGER, val = TIMESTAMP)``
+#' - ``argmax(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmax(arg = INTEGER, val = BLOB)``
+#' - ``argmax(arg = BIGINT, val = INTEGER)``
+#' - ``argmax(arg = BIGINT, val = BIGINT)``
+#' - ``argmax(arg = BIGINT, val = HUGEINT)``
+#' - ``argmax(arg = BIGINT, val = DOUBLE)``
+#' - ``argmax(arg = BIGINT, val = VARCHAR)``
+#' - ``argmax(arg = BIGINT, val = DATE)``
+#' - ``argmax(arg = BIGINT, val = TIMESTAMP)``
+#' - ``argmax(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmax(arg = BIGINT, val = BLOB)``
+#' - ``argmax(arg = DOUBLE, val = INTEGER)``
+#' - ``argmax(arg = DOUBLE, val = BIGINT)``
+#' - ``argmax(arg = DOUBLE, val = HUGEINT)``
+#' - ``argmax(arg = DOUBLE, val = DOUBLE)``
+#' - ``argmax(arg = DOUBLE, val = VARCHAR)``
+#' - ``argmax(arg = DOUBLE, val = DATE)``
+#' - ``argmax(arg = DOUBLE, val = TIMESTAMP)``
+#' - ``argmax(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmax(arg = DOUBLE, val = BLOB)``
+#' - ``argmax(arg = VARCHAR, val = INTEGER)``
+#' - ``argmax(arg = VARCHAR, val = BIGINT)``
+#' - ``argmax(arg = VARCHAR, val = HUGEINT)``
+#' - ``argmax(arg = VARCHAR, val = DOUBLE)``
+#' - ``argmax(arg = VARCHAR, val = VARCHAR)``
+#' - ``argmax(arg = VARCHAR, val = DATE)``
+#' - ``argmax(arg = VARCHAR, val = TIMESTAMP)``
+#' - ``argmax(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmax(arg = VARCHAR, val = BLOB)``
+#' - ``argmax(arg = DATE, val = INTEGER)``
+#' - ``argmax(arg = DATE, val = BIGINT)``
+#' - ``argmax(arg = DATE, val = HUGEINT)``
+#' - ``argmax(arg = DATE, val = DOUBLE)``
+#' - ``argmax(arg = DATE, val = VARCHAR)``
+#' - ``argmax(arg = DATE, val = DATE)``
+#' - ``argmax(arg = DATE, val = TIMESTAMP)``
+#' - ``argmax(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmax(arg = DATE, val = BLOB)``
+#' - ``argmax(arg = TIMESTAMP, val = INTEGER)``
+#' - ``argmax(arg = TIMESTAMP, val = BIGINT)``
+#' - ``argmax(arg = TIMESTAMP, val = HUGEINT)``
+#' - ``argmax(arg = TIMESTAMP, val = DOUBLE)``
+#' - ``argmax(arg = TIMESTAMP, val = VARCHAR)``
+#' - ``argmax(arg = TIMESTAMP, val = DATE)``
+#' - ``argmax(arg = TIMESTAMP, val = TIMESTAMP)``
+#' - ``argmax(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmax(arg = TIMESTAMP, val = BLOB)``
+#' - ``argmax(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)``
+#' - ``argmax(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)``
+#' - ``argmax(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)``
+#' - ``argmax(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)``
+#' - ``argmax(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)``
+#' - ``argmax(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)``
+#' - ``argmax(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)``
+#' - ``argmax(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmax(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)``
+#' - ``argmax(arg = BLOB, val = INTEGER)``
+#' - ``argmax(arg = BLOB, val = BIGINT)``
+#' - ``argmax(arg = BLOB, val = HUGEINT)``
+#' - ``argmax(arg = BLOB, val = DOUBLE)``
+#' - ``argmax(arg = BLOB, val = VARCHAR)``
+#' - ``argmax(arg = BLOB, val = DATE)``
+#' - ``argmax(arg = BLOB, val = TIMESTAMP)``
+#' - ``argmax(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmax(arg = BLOB, val = BLOB)``
+#' - ``argmax(arg = DECIMAL, val = INTEGER)``
+#' - ``argmax(arg = DECIMAL, val = BIGINT)``
+#' - ``argmax(arg = DECIMAL, val = HUGEINT)``
+#' - ``argmax(arg = DECIMAL, val = DOUBLE)``
+#' - ``argmax(arg = DECIMAL, val = VARCHAR)``
+#' - ``argmax(arg = DECIMAL, val = DATE)``
+#' - ``argmax(arg = DECIMAL, val = TIMESTAMP)``
+#' - ``argmax(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmax(arg = DECIMAL, val = BLOB)``
+#' - ``argmax(arg = ANY, val = INTEGER)``
+#' - ``argmax(arg = ANY, val = BIGINT)``
+#' - ``argmax(arg = ANY, val = HUGEINT)``
+#' - ``argmax(arg = ANY, val = DOUBLE)``
+#' - ``argmax(arg = ANY, val = VARCHAR)``
+#' - ``argmax(arg = ANY, val = DATE)``
+#' - ``argmax(arg = ANY, val = TIMESTAMP)``
+#' - ``argmax(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmax(arg = ANY, val = BLOB)``
+#' - ``argmax(arg = ANY, val = ANY)``
+#' - ``argmax(arg = ANY, val = ANY, col2 = BIGINT)``
 #' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
 #' @param col2 `BIGINT`
@@ -930,6 +1726,99 @@ argmax <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP
 #'
 #' @name argmin
 #' @usage NULL
+#' @section Overloads:
+#' - ``argmin(arg = INTEGER, val = INTEGER)``
+#' - ``argmin(arg = INTEGER, val = BIGINT)``
+#' - ``argmin(arg = INTEGER, val = HUGEINT)``
+#' - ``argmin(arg = INTEGER, val = DOUBLE)``
+#' - ``argmin(arg = INTEGER, val = VARCHAR)``
+#' - ``argmin(arg = INTEGER, val = DATE)``
+#' - ``argmin(arg = INTEGER, val = TIMESTAMP)``
+#' - ``argmin(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmin(arg = INTEGER, val = BLOB)``
+#' - ``argmin(arg = BIGINT, val = INTEGER)``
+#' - ``argmin(arg = BIGINT, val = BIGINT)``
+#' - ``argmin(arg = BIGINT, val = HUGEINT)``
+#' - ``argmin(arg = BIGINT, val = DOUBLE)``
+#' - ``argmin(arg = BIGINT, val = VARCHAR)``
+#' - ``argmin(arg = BIGINT, val = DATE)``
+#' - ``argmin(arg = BIGINT, val = TIMESTAMP)``
+#' - ``argmin(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmin(arg = BIGINT, val = BLOB)``
+#' - ``argmin(arg = DOUBLE, val = INTEGER)``
+#' - ``argmin(arg = DOUBLE, val = BIGINT)``
+#' - ``argmin(arg = DOUBLE, val = HUGEINT)``
+#' - ``argmin(arg = DOUBLE, val = DOUBLE)``
+#' - ``argmin(arg = DOUBLE, val = VARCHAR)``
+#' - ``argmin(arg = DOUBLE, val = DATE)``
+#' - ``argmin(arg = DOUBLE, val = TIMESTAMP)``
+#' - ``argmin(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmin(arg = DOUBLE, val = BLOB)``
+#' - ``argmin(arg = VARCHAR, val = INTEGER)``
+#' - ``argmin(arg = VARCHAR, val = BIGINT)``
+#' - ``argmin(arg = VARCHAR, val = HUGEINT)``
+#' - ``argmin(arg = VARCHAR, val = DOUBLE)``
+#' - ``argmin(arg = VARCHAR, val = VARCHAR)``
+#' - ``argmin(arg = VARCHAR, val = DATE)``
+#' - ``argmin(arg = VARCHAR, val = TIMESTAMP)``
+#' - ``argmin(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmin(arg = VARCHAR, val = BLOB)``
+#' - ``argmin(arg = DATE, val = INTEGER)``
+#' - ``argmin(arg = DATE, val = BIGINT)``
+#' - ``argmin(arg = DATE, val = HUGEINT)``
+#' - ``argmin(arg = DATE, val = DOUBLE)``
+#' - ``argmin(arg = DATE, val = VARCHAR)``
+#' - ``argmin(arg = DATE, val = DATE)``
+#' - ``argmin(arg = DATE, val = TIMESTAMP)``
+#' - ``argmin(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmin(arg = DATE, val = BLOB)``
+#' - ``argmin(arg = TIMESTAMP, val = INTEGER)``
+#' - ``argmin(arg = TIMESTAMP, val = BIGINT)``
+#' - ``argmin(arg = TIMESTAMP, val = HUGEINT)``
+#' - ``argmin(arg = TIMESTAMP, val = DOUBLE)``
+#' - ``argmin(arg = TIMESTAMP, val = VARCHAR)``
+#' - ``argmin(arg = TIMESTAMP, val = DATE)``
+#' - ``argmin(arg = TIMESTAMP, val = TIMESTAMP)``
+#' - ``argmin(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmin(arg = TIMESTAMP, val = BLOB)``
+#' - ``argmin(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)``
+#' - ``argmin(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)``
+#' - ``argmin(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)``
+#' - ``argmin(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)``
+#' - ``argmin(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)``
+#' - ``argmin(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)``
+#' - ``argmin(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)``
+#' - ``argmin(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmin(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)``
+#' - ``argmin(arg = BLOB, val = INTEGER)``
+#' - ``argmin(arg = BLOB, val = BIGINT)``
+#' - ``argmin(arg = BLOB, val = HUGEINT)``
+#' - ``argmin(arg = BLOB, val = DOUBLE)``
+#' - ``argmin(arg = BLOB, val = VARCHAR)``
+#' - ``argmin(arg = BLOB, val = DATE)``
+#' - ``argmin(arg = BLOB, val = TIMESTAMP)``
+#' - ``argmin(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmin(arg = BLOB, val = BLOB)``
+#' - ``argmin(arg = DECIMAL, val = INTEGER)``
+#' - ``argmin(arg = DECIMAL, val = BIGINT)``
+#' - ``argmin(arg = DECIMAL, val = HUGEINT)``
+#' - ``argmin(arg = DECIMAL, val = DOUBLE)``
+#' - ``argmin(arg = DECIMAL, val = VARCHAR)``
+#' - ``argmin(arg = DECIMAL, val = DATE)``
+#' - ``argmin(arg = DECIMAL, val = TIMESTAMP)``
+#' - ``argmin(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmin(arg = DECIMAL, val = BLOB)``
+#' - ``argmin(arg = ANY, val = INTEGER)``
+#' - ``argmin(arg = ANY, val = BIGINT)``
+#' - ``argmin(arg = ANY, val = HUGEINT)``
+#' - ``argmin(arg = ANY, val = DOUBLE)``
+#' - ``argmin(arg = ANY, val = VARCHAR)``
+#' - ``argmin(arg = ANY, val = DATE)``
+#' - ``argmin(arg = ANY, val = TIMESTAMP)``
+#' - ``argmin(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``argmin(arg = ANY, val = BLOB)``
+#' - ``argmin(arg = ANY, val = ANY)``
+#' - ``argmin(arg = ANY, val = ANY, col2 = BIGINT)``
 #' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
 #' @param col2 `BIGINT`
@@ -1086,6 +1975,9 @@ array_contains <- function(list = `T[]`, element = T) {
 #'
 #' @name array_cosine_distance
 #' @usage NULL
+#' @section Overloads:
+#' - ``array_cosine_distance(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)``
+#' - ``array_cosine_distance(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)``
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
@@ -1104,6 +1996,9 @@ array_cosine_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = 
 #'
 #' @name array_cosine_similarity
 #' @usage NULL
+#' @section Overloads:
+#' - ``array_cosine_similarity(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)``
+#' - ``array_cosine_similarity(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)``
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
@@ -1122,6 +2017,9 @@ array_cosine_similarity <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 
 #'
 #' @name array_cross_product
 #' @usage NULL
+#' @section Overloads:
+#' - ``array_cross_product(array = `FLOAT[3]`, array = `FLOAT[3]`)``
+#' - ``array_cross_product(array = `DOUBLE[3]`, array = `DOUBLE[3]`)``
 #' @param array `FLOAT[3] | DOUBLE[3]`
 #' @return `FLOAT[3] | DOUBLE[3]`
 #' @examples
@@ -1139,6 +2037,9 @@ array_cross_product <- function(array = `FLOAT[3] | DOUBLE[3]`) {
 #'
 #' @name array_distance
 #' @usage NULL
+#' @section Overloads:
+#' - ``array_distance(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)``
+#' - ``array_distance(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)``
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
@@ -1174,6 +2075,9 @@ array_distinct <- function(list = `T[]`) {
 #'
 #' @name array_dot_product
 #' @usage NULL
+#' @section Overloads:
+#' - ``array_dot_product(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)``
+#' - ``array_dot_product(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)``
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
@@ -1196,6 +2100,11 @@ array_dot_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLO
 #'
 #' @name array_extract
 #' @usage NULL
+#' @section Overloads:
+#' - ``array_extract(col0 = `T[]`, col1 = BIGINT)``
+#' - ``array_extract(string = VARCHAR, index = BIGINT)``
+#' - ``array_extract(struct = STRUCT, entry = VARCHAR)``
+#' - ``array_extract(struct = STRUCT, index = BIGINT)``
 #' @param col0 `T[]`
 #' @param col1 `BIGINT`
 #' @param string `VARCHAR`
@@ -1238,6 +2147,10 @@ array_filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #'
 #' @name array_grade_up
 #' @usage NULL
+#' @section Overloads:
+#' - ``array_grade_up(list = `ANY[]`)``
+#' - ``array_grade_up(list = `ANY[]`, col1 = VARCHAR)``
+#' - ``array_grade_up(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR)``
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
 #' @param col2 `VARCHAR`
@@ -1329,6 +2242,9 @@ array_indexof <- function(list = `T[]`, element = T) {
 #'
 #' @name array_inner_product
 #' @usage NULL
+#' @section Overloads:
+#' - ``array_inner_product(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)``
+#' - ``array_inner_product(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)``
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
@@ -1363,6 +2279,9 @@ array_intersect <- function(l1, l2) {
 #'
 #' @name array_length
 #' @usage NULL
+#' @section Overloads:
+#' - ``array_length(list = `ANY[]`)``
+#' - ``array_length(list = `ANY[]`, dimension = BIGINT)``
 #' @param list `ANY[]`
 #' @param dimension `BIGINT`
 #' @return `BIGINT`
@@ -1381,6 +2300,9 @@ array_length <- function(list = `ANY[]`, dimension = BIGINT) {
 #'
 #' @name array_negative_dot_product
 #' @usage NULL
+#' @section Overloads:
+#' - ``array_negative_dot_product(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)``
+#' - ``array_negative_dot_product(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)``
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
@@ -1399,6 +2321,9 @@ array_negative_dot_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, arra
 #'
 #' @name array_negative_inner_product
 #' @usage NULL
+#' @section Overloads:
+#' - ``array_negative_inner_product(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)``
+#' - ``array_negative_inner_product(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)``
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
@@ -1503,6 +2428,9 @@ array_push_front <- function(arr, e) {
 #'
 #' @name array_reduce
 #' @usage NULL
+#' @section Overloads:
+#' - ``array_reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA)``
+#' - ``array_reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY)``
 #' @param list `ANY[]`
 #' @param lambda(x,y) `LAMBDA`
 #' @param initial_value `ANY`
@@ -1522,6 +2450,9 @@ array_reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value =
 #'
 #' @name array_resize
 #' @usage NULL
+#' @section Overloads:
+#' - ``array_resize(list = `ANY[]`, `size[` = ANY)``
+#' - ``array_resize(list = `ANY[]`, `size[` = ANY, `value]` = ANY)``
 #' @param list `ANY[]`
 #' @param size[ `ANY`
 #' @param value] `ANY`
@@ -1554,6 +2485,9 @@ array_reverse <- function(l) {
 #'
 #' @name array_reverse_sort
 #' @usage NULL
+#' @section Overloads:
+#' - ``array_reverse_sort(list = `ANY[]`)``
+#' - ``array_reverse_sort(list = `ANY[]`, col1 = VARCHAR)``
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
 #' @return `ANY[]`
@@ -1592,6 +2526,9 @@ array_select <- function(value_list = `T[]`, index_list = `BIGINT[]`) {
 #'
 #' @name array_slice
 #' @usage NULL
+#' @section Overloads:
+#' - ``array_slice(list = ANY, begin = ANY, end = ANY)``
+#' - ``array_slice(list = ANY, begin = ANY, end = ANY, step = BIGINT)``
 #' @param list `ANY`
 #' @param begin `ANY`
 #' @param end `ANY`
@@ -1615,6 +2552,10 @@ array_slice <- function(list = ANY, begin = ANY, end = ANY, step = BIGINT) {
 #'
 #' @name array_sort
 #' @usage NULL
+#' @section Overloads:
+#' - ``array_sort(list = `ANY[]`)``
+#' - ``array_sort(list = `ANY[]`, col1 = VARCHAR)``
+#' - ``array_sort(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR)``
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
 #' @param col2 `VARCHAR`
@@ -1884,6 +2825,18 @@ atanh <- function(x = DOUBLE) {
 #'
 #' @name avg
 #' @usage NULL
+#' @section Overloads:
+#' - ``avg(x = DECIMAL)``
+#' - ``avg(x = SMALLINT)``
+#' - ``avg(x = INTEGER)``
+#' - ``avg(x = BIGINT)``
+#' - ``avg(x = HUGEINT)``
+#' - ``avg(x = INTERVAL)``
+#' - ``avg(x = DOUBLE)``
+#' - ``avg(x = TIMESTAMP)``
+#' - ``avg(x = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``avg(x = TIME)``
+#' - ``avg(x = `TIME WITH TIME ZONE`)``
 #' @param x `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL | DOUBLE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`
 #' @return `DECIMAL | DOUBLE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`
 #' @examples
@@ -1901,6 +2854,9 @@ avg <- function(x = `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL 
 #'
 #' @name bar
 #' @usage NULL
+#' @section Overloads:
+#' - ``bar(x = DOUBLE, min = DOUBLE, max = DOUBLE, width = DOUBLE)``
+#' - ``bar(x = DOUBLE, min = DOUBLE, max = DOUBLE)``
 #' @param x `DOUBLE`
 #' @param min `DOUBLE`
 #' @param max `DOUBLE`
@@ -1940,6 +2896,13 @@ base64 <- function(blob = BLOB) {
 #'
 #' @name bin
 #' @usage NULL
+#' @section Overloads:
+#' - ``bin(string = VARCHAR)``
+#' - ``bin(value = BIGNUM)``
+#' - ``bin(value = UBIGINT)``
+#' - ``bin(value = BIGINT)``
+#' - ``bin(value = HUGEINT)``
+#' - ``bin(value = UHUGEINT)``
 #' @param string `VARCHAR`
 #' @param value `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`
 #' @return `VARCHAR`
@@ -1959,6 +2922,18 @@ bin <- function(string = VARCHAR, value = `BIGNUM | UBIGINT | BIGINT | HUGEINT |
 #'
 #' @name bit_and
 #' @usage NULL
+#' @section Overloads:
+#' - ``bit_and(arg = TINYINT)``
+#' - ``bit_and(arg = SMALLINT)``
+#' - ``bit_and(arg = INTEGER)``
+#' - ``bit_and(arg = BIGINT)``
+#' - ``bit_and(arg = HUGEINT)``
+#' - ``bit_and(arg = UTINYINT)``
+#' - ``bit_and(arg = USMALLINT)``
+#' - ``bit_and(arg = UINTEGER)``
+#' - ``bit_and(arg = UBIGINT)``
+#' - ``bit_and(arg = UHUGEINT)``
+#' - ``bit_and(arg = BIT)``
 #' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @examples
@@ -1976,6 +2951,13 @@ bit_and <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTI
 #'
 #' @name bit_count
 #' @usage NULL
+#' @section Overloads:
+#' - ``bit_count(x = TINYINT)``
+#' - ``bit_count(x = SMALLINT)``
+#' - ``bit_count(x = INTEGER)``
+#' - ``bit_count(x = BIGINT)``
+#' - ``bit_count(x = HUGEINT)``
+#' - ``bit_count(x = BIT)``
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | BIT`
 #' @return `TINYINT | BIGINT`
 #' @examples
@@ -1995,6 +2977,9 @@ bit_count <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | BIT
 #'
 #' @name bit_length
 #' @usage NULL
+#' @section Overloads:
+#' - ``bit_length(string = VARCHAR)``
+#' - ``bit_length(bit = BIT)``
 #' @param string `VARCHAR`
 #' @param bit `BIT`
 #' @return `BIGINT`
@@ -2014,6 +2999,18 @@ bit_length <- function(string = VARCHAR, bit = BIT) {
 #'
 #' @name bit_or
 #' @usage NULL
+#' @section Overloads:
+#' - ``bit_or(arg = TINYINT)``
+#' - ``bit_or(arg = SMALLINT)``
+#' - ``bit_or(arg = INTEGER)``
+#' - ``bit_or(arg = BIGINT)``
+#' - ``bit_or(arg = HUGEINT)``
+#' - ``bit_or(arg = UTINYINT)``
+#' - ``bit_or(arg = USMALLINT)``
+#' - ``bit_or(arg = UINTEGER)``
+#' - ``bit_or(arg = UBIGINT)``
+#' - ``bit_or(arg = UHUGEINT)``
+#' - ``bit_or(arg = BIT)``
 #' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @examples
@@ -2049,6 +3046,18 @@ bit_position <- function(substring = BIT, bitstring = BIT) {
 #'
 #' @name bit_xor
 #' @usage NULL
+#' @section Overloads:
+#' - ``bit_xor(arg = TINYINT)``
+#' - ``bit_xor(arg = SMALLINT)``
+#' - ``bit_xor(arg = INTEGER)``
+#' - ``bit_xor(arg = BIGINT)``
+#' - ``bit_xor(arg = HUGEINT)``
+#' - ``bit_xor(arg = UTINYINT)``
+#' - ``bit_xor(arg = USMALLINT)``
+#' - ``bit_xor(arg = UINTEGER)``
+#' - ``bit_xor(arg = UBIGINT)``
+#' - ``bit_xor(arg = UHUGEINT)``
+#' - ``bit_xor(arg = BIT)``
 #' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @examples
@@ -2066,6 +3075,9 @@ bit_xor <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTI
 #'
 #' @name bitstring
 #' @usage NULL
+#' @section Overloads:
+#' - ``bitstring(bitstring = VARCHAR, length = INTEGER)``
+#' - ``bitstring(bitstring = BIT, length = INTEGER)``
 #' @param bitstring `VARCHAR | BIT`
 #' @param length `INTEGER`
 #' @return `BIT`
@@ -2084,6 +3096,27 @@ bitstring <- function(bitstring = `VARCHAR | BIT`, length = INTEGER) {
 #'
 #' @name bitstring_agg
 #' @usage NULL
+#' @section Overloads:
+#' - ``bitstring_agg(arg = TINYINT)``
+#' - ``bitstring_agg(arg = TINYINT, col1 = TINYINT, col2 = TINYINT)``
+#' - ``bitstring_agg(arg = SMALLINT)``
+#' - ``bitstring_agg(arg = SMALLINT, col1 = SMALLINT, col2 = SMALLINT)``
+#' - ``bitstring_agg(arg = INTEGER)``
+#' - ``bitstring_agg(arg = INTEGER, col1 = INTEGER, col2 = INTEGER)``
+#' - ``bitstring_agg(arg = BIGINT)``
+#' - ``bitstring_agg(arg = BIGINT, col1 = BIGINT, col2 = BIGINT)``
+#' - ``bitstring_agg(arg = HUGEINT)``
+#' - ``bitstring_agg(arg = HUGEINT, col1 = HUGEINT, col2 = HUGEINT)``
+#' - ``bitstring_agg(arg = UTINYINT)``
+#' - ``bitstring_agg(arg = UTINYINT, col1 = UTINYINT, col2 = UTINYINT)``
+#' - ``bitstring_agg(arg = USMALLINT)``
+#' - ``bitstring_agg(arg = USMALLINT, col1 = USMALLINT, col2 = USMALLINT)``
+#' - ``bitstring_agg(arg = UINTEGER)``
+#' - ``bitstring_agg(arg = UINTEGER, col1 = UINTEGER, col2 = UINTEGER)``
+#' - ``bitstring_agg(arg = UBIGINT)``
+#' - ``bitstring_agg(arg = UBIGINT, col1 = UBIGINT, col2 = UBIGINT)``
+#' - ``bitstring_agg(arg = UHUGEINT)``
+#' - ``bitstring_agg(arg = UHUGEINT, col1 = UHUGEINT, col2 = UHUGEINT)``
 #' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col2 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
@@ -2207,6 +3240,10 @@ cbrt <- function(x = DOUBLE) {
 #'
 #' @name ceil
 #' @usage NULL
+#' @section Overloads:
+#' - ``ceil(x = FLOAT)``
+#' - ``ceil(x = DOUBLE)``
+#' - ``ceil(x = DECIMAL)``
 #' @param x `FLOAT | DOUBLE | DECIMAL`
 #' @return `FLOAT | DOUBLE | DECIMAL`
 #' @examples
@@ -2224,6 +3261,10 @@ ceil <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
 #'
 #' @name ceiling
 #' @usage NULL
+#' @section Overloads:
+#' - ``ceiling(x = FLOAT)``
+#' - ``ceiling(x = DOUBLE)``
+#' - ``ceiling(x = DECIMAL)``
 #' @param x `FLOAT | DOUBLE | DECIMAL`
 #' @return `FLOAT | DOUBLE | DECIMAL`
 #' @examples
@@ -2241,6 +3282,11 @@ ceiling <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
 #'
 #' @name century
 #' @usage NULL
+#' @section Overloads:
+#' - ``century(ts = DATE)``
+#' - ``century(ts = INTERVAL)``
+#' - ``century(ts = TIMESTAMP)``
+#' - ``century(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -2262,6 +3308,10 @@ century <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #'
 #' @name char_length
 #' @usage NULL
+#' @section Overloads:
+#' - ``char_length(string = VARCHAR)``
+#' - ``char_length(bit = BIT)``
+#' - ``char_length(list = `ANY[]`)``
 #' @param string `VARCHAR`
 #' @param bit `BIT`
 #' @param list `ANY[]`
@@ -2287,6 +3337,10 @@ char_length <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
 #'
 #' @name character_length
 #' @usage NULL
+#' @section Overloads:
+#' - ``character_length(string = VARCHAR)``
+#' - ``character_length(bit = BIT)``
+#' - ``character_length(list = `ANY[]`)``
 #' @param string `VARCHAR`
 #' @param bit `BIT`
 #' @param list `ANY[]`
@@ -2308,6 +3362,9 @@ character_length <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
 #'
 #' @name checkpoint
 #' @usage NULL
+#' @section Overloads:
+#' - ``checkpoint()``
+#' - ``checkpoint(col0 = VARCHAR)``
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 checkpoint <- function(col0 = VARCHAR) {
@@ -2433,6 +3490,11 @@ constant_or_null <- function(arg1 = ANY, arg2 = ANY) {
 #'
 #' @name contains
 #' @usage NULL
+#' @section Overloads:
+#' - ``contains(string = VARCHAR, search_string = VARCHAR)``
+#' - ``contains(col0 = `T[]`, col1 = T)``
+#' - ``contains(col0 = `MAP(K, V)`, col1 = K)``
+#' - ``contains(col0 = STRUCT, col1 = ANY)``
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
 #' @param col0 `T[] | MAP(K, V) | STRUCT`
@@ -2536,6 +3598,9 @@ cot <- function(x = DOUBLE) {
 #'
 #' @name count
 #' @usage NULL
+#' @section Overloads:
+#' - ``count(arg = ANY)``
+#' - ``count()``
 #' @param arg `ANY`
 #' @return `BIGINT`
 #' @examples
@@ -2683,6 +3748,9 @@ current_connection_id <- function() {
 #'
 #' @name current_database
 #' @usage NULL
+#' @section Overloads:
+#' - ``current_database()``
+#' - ``current_database()``
 
 #' @return `VARCHAR`
 #' @examples
@@ -2700,6 +3768,9 @@ current_database <- function() {
 #'
 #' @name current_query
 #' @usage NULL
+#' @section Overloads:
+#' - ``current_query()``
+#' - ``current_query()``
 
 #' @return `VARCHAR`
 #' @examples
@@ -2747,6 +3818,9 @@ current_role <- function() {
 #'
 #' @name current_schema
 #' @usage NULL
+#' @section Overloads:
+#' - ``current_schema()``
+#' - ``current_schema()``
 
 #' @return `VARCHAR`
 #' @examples
@@ -2764,6 +3838,9 @@ current_schema <- function() {
 #'
 #' @name current_schemas
 #' @usage NULL
+#' @section Overloads:
+#' - ``current_schemas(include_implicit = BOOLEAN)``
+#' - ``current_schemas(include_implicit)``
 #' @param include_implicit `BOOLEAN`
 #' @return `VARCHAR[]`
 #' @examples
@@ -2903,6 +3980,11 @@ date_add <- function(date, interval) {
 #'
 #' @name date_diff
 #' @usage NULL
+#' @section Overloads:
+#' - ``date_diff(part = VARCHAR, startdate = DATE, enddate = DATE)``
+#' - ``date_diff(part = VARCHAR, startdate = TIME, enddate = TIME)``
+#' - ``date_diff(part = VARCHAR, startdate = TIMESTAMP, enddate = TIMESTAMP)``
+#' - ``date_diff(part = VARCHAR, startdate = `TIMESTAMP WITH TIME ZONE`, enddate = `TIMESTAMP WITH TIME ZONE`)``
 #' @param part `VARCHAR`
 #' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
@@ -2922,6 +4004,21 @@ date_diff <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIM
 #'
 #' @name date_part
 #' @usage NULL
+#' @section Overloads:
+#' - ``date_part(ts = `VARCHAR[]`, col1 = DATE)``
+#' - ``date_part(ts = `VARCHAR[]`, col1 = INTERVAL)``
+#' - ``date_part(ts = `VARCHAR[]`, col1 = TIME)``
+#' - ``date_part(ts = `VARCHAR[]`, col1 = TIMESTAMP)``
+#' - ``date_part(ts = `VARCHAR[]`, col1 = `TIME WITH TIME ZONE`)``
+#' - ``date_part(ts = `VARCHAR[]`, col1 = TIME_NS)``
+#' - ``date_part(ts = VARCHAR, col1 = DATE)``
+#' - ``date_part(ts = VARCHAR, col1 = INTERVAL)``
+#' - ``date_part(ts = VARCHAR, col1 = TIME)``
+#' - ``date_part(ts = VARCHAR, col1 = TIMESTAMP)``
+#' - ``date_part(ts = VARCHAR, col1 = `TIME WITH TIME ZONE`)``
+#' - ``date_part(ts = VARCHAR, col1 = TIME_NS)``
+#' - ``date_part(ts = `VARCHAR[]`, col1 = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``date_part(ts = VARCHAR, col1 = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `VARCHAR[] | VARCHAR`
 #' @param col1 `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `STRUCT() | BIGINT`
@@ -2940,6 +4037,11 @@ date_part <- function(ts = `VARCHAR[] | VARCHAR`, col1 = `DATE | INTERVAL | TIME
 #'
 #' @name date_sub
 #' @usage NULL
+#' @section Overloads:
+#' - ``date_sub(part = VARCHAR, startdate = DATE, enddate = DATE)``
+#' - ``date_sub(part = VARCHAR, startdate = TIME, enddate = TIME)``
+#' - ``date_sub(part = VARCHAR, startdate = TIMESTAMP, enddate = TIMESTAMP)``
+#' - ``date_sub(part = VARCHAR, startdate = `TIMESTAMP WITH TIME ZONE`, enddate = `TIMESTAMP WITH TIME ZONE`)``
 #' @param part `VARCHAR`
 #' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
@@ -2959,6 +4061,11 @@ date_sub <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIME
 #'
 #' @name date_trunc
 #' @usage NULL
+#' @section Overloads:
+#' - ``date_trunc(part = VARCHAR, timestamp = DATE)``
+#' - ``date_trunc(part = VARCHAR, timestamp = INTERVAL)``
+#' - ``date_trunc(part = VARCHAR, timestamp = TIMESTAMP)``
+#' - ``date_trunc(part = VARCHAR, timestamp = `TIMESTAMP WITH TIME ZONE`)``
 #' @param part `VARCHAR`
 #' @param timestamp `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `TIMESTAMP | INTERVAL | TIMESTAMP WITH TIME ZONE`
@@ -2977,6 +4084,11 @@ date_trunc <- function(part = VARCHAR, timestamp = `DATE | INTERVAL | TIMESTAMP 
 #'
 #' @name datediff
 #' @usage NULL
+#' @section Overloads:
+#' - ``datediff(part = VARCHAR, startdate = DATE, enddate = DATE)``
+#' - ``datediff(part = VARCHAR, startdate = TIME, enddate = TIME)``
+#' - ``datediff(part = VARCHAR, startdate = TIMESTAMP, enddate = TIMESTAMP)``
+#' - ``datediff(part = VARCHAR, startdate = `TIMESTAMP WITH TIME ZONE`, enddate = `TIMESTAMP WITH TIME ZONE`)``
 #' @param part `VARCHAR`
 #' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
@@ -2996,6 +4108,21 @@ datediff <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIME
 #'
 #' @name datepart
 #' @usage NULL
+#' @section Overloads:
+#' - ``datepart(ts = `VARCHAR[]`, col1 = DATE)``
+#' - ``datepart(ts = `VARCHAR[]`, col1 = INTERVAL)``
+#' - ``datepart(ts = `VARCHAR[]`, col1 = TIME)``
+#' - ``datepart(ts = `VARCHAR[]`, col1 = TIMESTAMP)``
+#' - ``datepart(ts = `VARCHAR[]`, col1 = `TIME WITH TIME ZONE`)``
+#' - ``datepart(ts = `VARCHAR[]`, col1 = TIME_NS)``
+#' - ``datepart(ts = VARCHAR, col1 = DATE)``
+#' - ``datepart(ts = VARCHAR, col1 = INTERVAL)``
+#' - ``datepart(ts = VARCHAR, col1 = TIME)``
+#' - ``datepart(ts = VARCHAR, col1 = TIMESTAMP)``
+#' - ``datepart(ts = VARCHAR, col1 = `TIME WITH TIME ZONE`)``
+#' - ``datepart(ts = VARCHAR, col1 = TIME_NS)``
+#' - ``datepart(ts = `VARCHAR[]`, col1 = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``datepart(ts = VARCHAR, col1 = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `VARCHAR[] | VARCHAR`
 #' @param col1 `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `STRUCT() | BIGINT`
@@ -3014,6 +4141,11 @@ datepart <- function(ts = `VARCHAR[] | VARCHAR`, col1 = `DATE | INTERVAL | TIME 
 #'
 #' @name datesub
 #' @usage NULL
+#' @section Overloads:
+#' - ``datesub(part = VARCHAR, startdate = DATE, enddate = DATE)``
+#' - ``datesub(part = VARCHAR, startdate = TIME, enddate = TIME)``
+#' - ``datesub(part = VARCHAR, startdate = TIMESTAMP, enddate = TIMESTAMP)``
+#' - ``datesub(part = VARCHAR, startdate = `TIMESTAMP WITH TIME ZONE`, enddate = `TIMESTAMP WITH TIME ZONE`)``
 #' @param part `VARCHAR`
 #' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
@@ -3033,6 +4165,11 @@ datesub <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMES
 #'
 #' @name datetrunc
 #' @usage NULL
+#' @section Overloads:
+#' - ``datetrunc(part = VARCHAR, timestamp = DATE)``
+#' - ``datetrunc(part = VARCHAR, timestamp = INTERVAL)``
+#' - ``datetrunc(part = VARCHAR, timestamp = TIMESTAMP)``
+#' - ``datetrunc(part = VARCHAR, timestamp = `TIMESTAMP WITH TIME ZONE`)``
 #' @param part `VARCHAR`
 #' @param timestamp `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `TIMESTAMP | INTERVAL | TIMESTAMP WITH TIME ZONE`
@@ -3051,6 +4188,11 @@ datetrunc <- function(part = VARCHAR, timestamp = `DATE | INTERVAL | TIMESTAMP |
 #'
 #' @name day
 #' @usage NULL
+#' @section Overloads:
+#' - ``day(ts = DATE)``
+#' - ``day(ts = INTERVAL)``
+#' - ``day(ts = TIMESTAMP)``
+#' - ``day(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -3068,6 +4210,10 @@ day <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #'
 #' @name dayname
 #' @usage NULL
+#' @section Overloads:
+#' - ``dayname(ts = DATE)``
+#' - ``dayname(ts = TIMESTAMP)``
+#' - ``dayname(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `VARCHAR`
 #' @examples
@@ -3085,6 +4231,11 @@ dayname <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #'
 #' @name dayofmonth
 #' @usage NULL
+#' @section Overloads:
+#' - ``dayofmonth(ts = DATE)``
+#' - ``dayofmonth(ts = INTERVAL)``
+#' - ``dayofmonth(ts = TIMESTAMP)``
+#' - ``dayofmonth(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -3102,6 +4253,11 @@ dayofmonth <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME Z
 #'
 #' @name dayofweek
 #' @usage NULL
+#' @section Overloads:
+#' - ``dayofweek(ts = DATE)``
+#' - ``dayofweek(ts = INTERVAL)``
+#' - ``dayofweek(ts = TIMESTAMP)``
+#' - ``dayofweek(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -3119,6 +4275,11 @@ dayofweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZO
 #'
 #' @name dayofyear
 #' @usage NULL
+#' @section Overloads:
+#' - ``dayofyear(ts = DATE)``
+#' - ``dayofyear(ts = INTERVAL)``
+#' - ``dayofyear(ts = TIMESTAMP)``
+#' - ``dayofyear(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -3136,6 +4297,11 @@ dayofyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZO
 #'
 #' @name decade
 #' @usage NULL
+#' @section Overloads:
+#' - ``decade(ts = DATE)``
+#' - ``decade(ts = INTERVAL)``
+#' - ``decade(ts = TIMESTAMP)``
+#' - ``decade(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -3356,6 +4522,19 @@ disable_verify_serializer <- function() {
 #'
 #' @name divide
 #' @usage NULL
+#' @section Overloads:
+#' - ``divide(col0 = TINYINT, col1 = TINYINT)``
+#' - ``divide(col0 = SMALLINT, col1 = SMALLINT)``
+#' - ``divide(col0 = INTEGER, col1 = INTEGER)``
+#' - ``divide(col0 = BIGINT, col1 = BIGINT)``
+#' - ``divide(col0 = HUGEINT, col1 = HUGEINT)``
+#' - ``divide(col0 = FLOAT, col1 = FLOAT)``
+#' - ``divide(col0 = DOUBLE, col1 = DOUBLE)``
+#' - ``divide(col0 = UTINYINT, col1 = UTINYINT)``
+#' - ``divide(col0 = USMALLINT, col1 = USMALLINT)``
+#' - ``divide(col0 = UINTEGER, col1 = UINTEGER)``
+#' - ``divide(col0 = UBIGINT, col1 = UBIGINT)``
+#' - ``divide(col0 = UHUGEINT, col1 = UHUGEINT)``
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
@@ -4013,6 +5192,14 @@ enum_range_boundary <- function(start = ANY, end = ANY) {
 #'
 #' @name epoch
 #' @usage NULL
+#' @section Overloads:
+#' - ``epoch(temporal = DATE)``
+#' - ``epoch(temporal = INTERVAL)``
+#' - ``epoch(temporal = TIME)``
+#' - ``epoch(temporal = TIMESTAMP)``
+#' - ``epoch(temporal = `TIME WITH TIME ZONE`)``
+#' - ``epoch(temporal = TIME_NS)``
+#' - ``epoch(temporal = `TIMESTAMP WITH TIME ZONE`)``
 #' @param temporal `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `DOUBLE`
 #' @examples
@@ -4030,6 +5217,15 @@ epoch <- function(temporal = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
 #'
 #' @name epoch_ms
 #' @usage NULL
+#' @section Overloads:
+#' - ``epoch_ms(temporal = DATE)``
+#' - ``epoch_ms(temporal = TIMESTAMP)``
+#' - ``epoch_ms(temporal = INTERVAL)``
+#' - ``epoch_ms(temporal = TIME)``
+#' - ``epoch_ms(temporal = TIME_NS)``
+#' - ``epoch_ms(temporal = `TIME WITH TIME ZONE`)``
+#' - ``epoch_ms(temporal = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``epoch_ms(temporal = BIGINT)``
 #' @param temporal `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | BIGINT`
 #' @return `BIGINT | TIMESTAMP`
 #' @examples
@@ -4047,6 +5243,15 @@ epoch_ms <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | 
 #'
 #' @name epoch_ns
 #' @usage NULL
+#' @section Overloads:
+#' - ``epoch_ns(temporal = DATE)``
+#' - ``epoch_ns(temporal = TIMESTAMP)``
+#' - ``epoch_ns(temporal = INTERVAL)``
+#' - ``epoch_ns(temporal = TIME)``
+#' - ``epoch_ns(temporal = TIME_NS)``
+#' - ``epoch_ns(temporal = `TIME WITH TIME ZONE`)``
+#' - ``epoch_ns(temporal = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``epoch_ns(temporal = TIMESTAMP_NS)``
 #' @param temporal `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | TIMESTAMP_NS`
 #' @return `BIGINT`
 #' @examples
@@ -4064,6 +5269,14 @@ epoch_ns <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | 
 #'
 #' @name epoch_us
 #' @usage NULL
+#' @section Overloads:
+#' - ``epoch_us(temporal = DATE)``
+#' - ``epoch_us(temporal = TIMESTAMP)``
+#' - ``epoch_us(temporal = INTERVAL)``
+#' - ``epoch_us(temporal = TIME)``
+#' - ``epoch_us(temporal = TIME_NS)``
+#' - ``epoch_us(temporal = `TIME WITH TIME ZONE`)``
+#' - ``epoch_us(temporal = `TIMESTAMP WITH TIME ZONE`)``
 #' @param temporal `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -4081,6 +5294,11 @@ epoch_us <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | 
 #'
 #' @name equi_width_bins
 #' @usage NULL
+#' @section Overloads:
+#' - ``equi_width_bins(min = BIGINT, max = BIGINT, bin_count = BIGINT, nice_rounding = BOOLEAN)``
+#' - ``equi_width_bins(min = DOUBLE, max = DOUBLE, bin_count = BIGINT, nice_rounding = BOOLEAN)``
+#' - ``equi_width_bins(min = TIMESTAMP, max = TIMESTAMP, bin_count = BIGINT, nice_rounding = BOOLEAN)``
+#' - ``equi_width_bins(min = ANY, max = ANY, bin_count = BIGINT, nice_rounding = BOOLEAN)``
 #' @param min `BIGINT | DOUBLE | TIMESTAMP | ANY`
 #' @param max `BIGINT | DOUBLE | TIMESTAMP | ANY`
 #' @param bin_count `BIGINT`
@@ -4101,6 +5319,11 @@ equi_width_bins <- function(min = `BIGINT | DOUBLE | TIMESTAMP | ANY`, max = `BI
 #'
 #' @name era
 #' @usage NULL
+#' @section Overloads:
+#' - ``era(ts = DATE)``
+#' - ``era(ts = INTERVAL)``
+#' - ``era(ts = TIMESTAMP)``
+#' - ``era(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -4261,6 +5484,9 @@ finalize <- function(col0 = `AGGREGATE_STATE<?>`) {
 #'
 #' @name first
 #' @usage NULL
+#' @section Overloads:
+#' - ``first(arg = DECIMAL)``
+#' - ``first(arg = ANY)``
 #' @param arg `DECIMAL | ANY`
 #' @return `DECIMAL | ANY`
 #' @examples
@@ -4295,6 +5521,10 @@ flatten <- function(nested_list = `T[][]`) {
 #'
 #' @name floor
 #' @usage NULL
+#' @section Overloads:
+#' - ``floor(x = FLOAT)``
+#' - ``floor(x = DOUBLE)``
+#' - ``floor(x = DECIMAL)``
 #' @param x `FLOAT | DOUBLE | DECIMAL`
 #' @return `FLOAT | DOUBLE | DECIMAL`
 #' @examples
@@ -4326,6 +5556,10 @@ fmod <- function(x, y) {
 #'
 #' @name force_checkpoint
 #' @usage NULL
+#' @section Overloads:
+#' - ``force_checkpoint()``
+#' - ``force_checkpoint(col0 = VARCHAR)``
+#' - ``force_checkpoint()``
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 force_checkpoint <- function(col0 = VARCHAR) {
@@ -4533,6 +5767,9 @@ gamma <- function(x = DOUBLE) {
 #'
 #' @name gcd
 #' @usage NULL
+#' @section Overloads:
+#' - ``gcd(x = BIGINT, y = BIGINT)``
+#' - ``gcd(x = HUGEINT, y = HUGEINT)``
 #' @param x `BIGINT | HUGEINT`
 #' @param y `BIGINT | HUGEINT`
 #' @return `BIGINT | HUGEINT`
@@ -4568,6 +5805,16 @@ gen_random_uuid <- function() {
 #'
 #' @name generate_series
 #' @usage NULL
+#' @section Overloads:
+#' - ``generate_series(col0 = BIGINT)``
+#' - ``generate_series(col0 = BIGINT, col1 = BIGINT)``
+#' - ``generate_series(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT)``
+#' - ``generate_series(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)``
+#' - ``generate_series(start = BIGINT)``
+#' - ``generate_series(start = BIGINT, stop = BIGINT)``
+#' - ``generate_series(start = BIGINT, stop = BIGINT, step = BIGINT)``
+#' - ``generate_series(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)``
+#' - ``generate_series(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)``
 #' @param col0 `BIGINT | TIMESTAMP`
 #' @param col1 `BIGINT | TIMESTAMP`
 #' @param col2 `BIGINT | INTERVAL`
@@ -4691,6 +5938,9 @@ getvariable <- function(col0 = VARCHAR) {
 #'
 #' @name glob
 #' @usage NULL
+#' @section Overloads:
+#' - ``glob(col0 = VARCHAR)``
+#' - ``glob(col0 = `VARCHAR[]`)``
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
 glob <- function(col0 = `VARCHAR | VARCHAR[]`) {
@@ -4704,6 +5954,10 @@ glob <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #'
 #' @name grade_up
 #' @usage NULL
+#' @section Overloads:
+#' - ``grade_up(list = `ANY[]`)``
+#' - ``grade_up(list = `ANY[]`, col1 = VARCHAR)``
+#' - ``grade_up(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR)``
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
 #' @param col2 `VARCHAR`
@@ -4741,6 +5995,9 @@ greatest <- function(arg1 = ANY) {
 #'
 #' @name greatest_common_divisor
 #' @usage NULL
+#' @section Overloads:
+#' - ``greatest_common_divisor(x = BIGINT, y = BIGINT)``
+#' - ``greatest_common_divisor(x = HUGEINT, y = HUGEINT)``
 #' @param x `BIGINT | HUGEINT`
 #' @param y `BIGINT | HUGEINT`
 #' @return `BIGINT | HUGEINT`
@@ -4759,6 +6016,9 @@ greatest_common_divisor <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEIN
 #'
 #' @name group_concat
 #' @usage NULL
+#' @section Overloads:
+#' - ``group_concat(str = ANY)``
+#' - ``group_concat(str = ANY, arg = VARCHAR)``
 #' @param str `ANY`
 #' @param arg `VARCHAR`
 #' @return `VARCHAR`
@@ -4795,6 +6055,9 @@ hamming <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #'
 #' @name has_any_column_privilege
 #' @usage NULL
+#' @section Overloads:
+#' - ``has_any_column_privilege(table, privilege)``
+#' - ``has_any_column_privilege(user, table, privilege)``
 #' @param table Unspecified.
 #' @param privilege Unspecified.
 #' @param user Unspecified.
@@ -4810,6 +6073,9 @@ has_any_column_privilege <- function(table, privilege, user) {
 #'
 #' @name has_column_privilege
 #' @usage NULL
+#' @section Overloads:
+#' - ``has_column_privilege(table, column, privilege)``
+#' - ``has_column_privilege(user, table, column, privilege)``
 #' @param table Unspecified.
 #' @param column Unspecified.
 #' @param privilege Unspecified.
@@ -4826,6 +6092,9 @@ has_column_privilege <- function(table, column, privilege, user) {
 #'
 #' @name has_database_privilege
 #' @usage NULL
+#' @section Overloads:
+#' - ``has_database_privilege(database, privilege)``
+#' - ``has_database_privilege(user, database, privilege)``
 #' @param database Unspecified.
 #' @param privilege Unspecified.
 #' @param user Unspecified.
@@ -4841,6 +6110,9 @@ has_database_privilege <- function(database, privilege, user) {
 #'
 #' @name has_foreign_data_wrapper_privilege
 #' @usage NULL
+#' @section Overloads:
+#' - ``has_foreign_data_wrapper_privilege(fdw, privilege)``
+#' - ``has_foreign_data_wrapper_privilege(user, fdw, privilege)``
 #' @param fdw Unspecified.
 #' @param privilege Unspecified.
 #' @param user Unspecified.
@@ -4856,6 +6128,9 @@ has_foreign_data_wrapper_privilege <- function(fdw, privilege, user) {
 #'
 #' @name has_function_privilege
 #' @usage NULL
+#' @section Overloads:
+#' - ``has_function_privilege(`function`, privilege)``
+#' - ``has_function_privilege(user, `function`, privilege)``
 #' @param function Unspecified.
 #' @param privilege Unspecified.
 #' @param user Unspecified.
@@ -4871,6 +6146,9 @@ has_function_privilege <- function(`function`, privilege, user) {
 #'
 #' @name has_language_privilege
 #' @usage NULL
+#' @section Overloads:
+#' - ``has_language_privilege(language, privilege)``
+#' - ``has_language_privilege(user, language, privilege)``
 #' @param language Unspecified.
 #' @param privilege Unspecified.
 #' @param user Unspecified.
@@ -4886,6 +6164,9 @@ has_language_privilege <- function(language, privilege, user) {
 #'
 #' @name has_schema_privilege
 #' @usage NULL
+#' @section Overloads:
+#' - ``has_schema_privilege(schema, privilege)``
+#' - ``has_schema_privilege(user, schema, privilege)``
 #' @param schema Unspecified.
 #' @param privilege Unspecified.
 #' @param user Unspecified.
@@ -4901,6 +6182,9 @@ has_schema_privilege <- function(schema, privilege, user) {
 #'
 #' @name has_sequence_privilege
 #' @usage NULL
+#' @section Overloads:
+#' - ``has_sequence_privilege(sequence, privilege)``
+#' - ``has_sequence_privilege(user, sequence, privilege)``
 #' @param sequence Unspecified.
 #' @param privilege Unspecified.
 #' @param user Unspecified.
@@ -4916,6 +6200,9 @@ has_sequence_privilege <- function(sequence, privilege, user) {
 #'
 #' @name has_server_privilege
 #' @usage NULL
+#' @section Overloads:
+#' - ``has_server_privilege(server, privilege)``
+#' - ``has_server_privilege(user, server, privilege)``
 #' @param server Unspecified.
 #' @param privilege Unspecified.
 #' @param user Unspecified.
@@ -4931,6 +6218,9 @@ has_server_privilege <- function(server, privilege, user) {
 #'
 #' @name has_table_privilege
 #' @usage NULL
+#' @section Overloads:
+#' - ``has_table_privilege(table, privilege)``
+#' - ``has_table_privilege(user, table, privilege)``
 #' @param table Unspecified.
 #' @param privilege Unspecified.
 #' @param user Unspecified.
@@ -4946,6 +6236,9 @@ has_table_privilege <- function(table, privilege, user) {
 #'
 #' @name has_tablespace_privilege
 #' @usage NULL
+#' @section Overloads:
+#' - ``has_tablespace_privilege(tablespace, privilege)``
+#' - ``has_tablespace_privilege(user, tablespace, privilege)``
 #' @param tablespace Unspecified.
 #' @param privilege Unspecified.
 #' @param user Unspecified.
@@ -4982,6 +6275,14 @@ hash <- function(value = ANY) {
 #'
 #' @name hex
 #' @usage NULL
+#' @section Overloads:
+#' - ``hex(string = VARCHAR)``
+#' - ``hex(value = BIGNUM)``
+#' - ``hex(blob = BLOB)``
+#' - ``hex(value = BIGINT)``
+#' - ``hex(value = UBIGINT)``
+#' - ``hex(value = HUGEINT)``
+#' - ``hex(value = UHUGEINT)``
 #' @param string `VARCHAR`
 #' @param value `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`
 #' @param blob `BLOB`
@@ -5003,6 +6304,10 @@ hex <- function(string = VARCHAR, value = `BIGNUM | BIGINT | UBIGINT | HUGEINT |
 #'
 #' @name histogram
 #' @usage NULL
+#' @section Overloads:
+#' - ``histogram(arg = ANY, col1 = `ANY[]`)``
+#' - ``histogram(arg = ANY)``
+#' - ``histogram(source, col_name, bin_count, technique)``
 #' @param arg `ANY`
 #' @param col1 `ANY[]`
 #' @param source Unspecified.
@@ -5059,6 +6364,14 @@ histogram_values <- function(source, col_name, bin_count, technique) {
 #'
 #' @name hour
 #' @usage NULL
+#' @section Overloads:
+#' - ``hour(ts = DATE)``
+#' - ``hour(ts = INTERVAL)``
+#' - ``hour(ts = TIME)``
+#' - ``hour(ts = TIMESTAMP)``
+#' - ``hour(ts = `TIME WITH TIME ZONE`)``
+#' - ``hour(ts = TIME_NS)``
+#' - ``hour(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -5213,6 +6526,12 @@ is_histogram_other_bin <- function(val = ANY) {
 #'
 #' @name isfinite
 #' @usage NULL
+#' @section Overloads:
+#' - ``isfinite(x = FLOAT)``
+#' - ``isfinite(x = DOUBLE)``
+#' - ``isfinite(x = DATE)``
+#' - ``isfinite(x = TIMESTAMP)``
+#' - ``isfinite(x = `TIMESTAMP WITH TIME ZONE`)``
 #' @param x `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BOOLEAN`
 #' @examples
@@ -5230,6 +6549,12 @@ isfinite <- function(x = `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIM
 #'
 #' @name isinf
 #' @usage NULL
+#' @section Overloads:
+#' - ``isinf(x = FLOAT)``
+#' - ``isinf(x = DOUBLE)``
+#' - ``isinf(x = DATE)``
+#' - ``isinf(x = TIMESTAMP)``
+#' - ``isinf(x = `TIMESTAMP WITH TIME ZONE`)``
 #' @param x `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BOOLEAN`
 #' @examples
@@ -5247,6 +6572,9 @@ isinf <- function(x = `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME Z
 #'
 #' @name isnan
 #' @usage NULL
+#' @section Overloads:
+#' - ``isnan(x = FLOAT)``
+#' - ``isnan(x = DOUBLE)``
 #' @param x `FLOAT | DOUBLE`
 #' @return `BOOLEAN`
 #' @examples
@@ -5264,6 +6592,11 @@ isnan <- function(x = `FLOAT | DOUBLE`) {
 #'
 #' @name isodow
 #' @usage NULL
+#' @section Overloads:
+#' - ``isodow(ts = DATE)``
+#' - ``isodow(ts = INTERVAL)``
+#' - ``isodow(ts = TIMESTAMP)``
+#' - ``isodow(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -5281,6 +6614,11 @@ isodow <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #'
 #' @name isoyear
 #' @usage NULL
+#' @section Overloads:
+#' - ``isoyear(ts = DATE)``
+#' - ``isoyear(ts = INTERVAL)``
+#' - ``isoyear(ts = TIMESTAMP)``
+#' - ``isoyear(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -5316,6 +6654,9 @@ jaccard <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #'
 #' @name jaro_similarity
 #' @usage NULL
+#' @section Overloads:
+#' - ``jaro_similarity(s1 = VARCHAR, s2 = VARCHAR)``
+#' - ``jaro_similarity(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE)``
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
 #' @param score_cutoff `DOUBLE`
@@ -5335,6 +6676,9 @@ jaro_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE) {
 #'
 #' @name jaro_winkler_similarity
 #' @usage NULL
+#' @section Overloads:
+#' - ``jaro_winkler_similarity(s1 = VARCHAR, s2 = VARCHAR)``
+#' - ``jaro_winkler_similarity(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE)``
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
 #' @param score_cutoff `DOUBLE`
@@ -5354,6 +6698,10 @@ jaro_winkler_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = D
 #'
 #' @name julian
 #' @usage NULL
+#' @section Overloads:
+#' - ``julian(ts = DATE)``
+#' - ``julian(ts = TIMESTAMP)``
+#' - ``julian(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `DOUBLE`
 #' @examples
@@ -5414,6 +6762,9 @@ kurtosis_pop <- function(x = DOUBLE) {
 #'
 #' @name last
 #' @usage NULL
+#' @section Overloads:
+#' - ``last(arg = DECIMAL)``
+#' - ``last(arg = ANY)``
 #' @param arg `DECIMAL | ANY`
 #' @return `DECIMAL | ANY`
 #' @examples
@@ -5431,6 +6782,10 @@ last <- function(arg = `DECIMAL | ANY`) {
 #'
 #' @name last_day
 #' @usage NULL
+#' @section Overloads:
+#' - ``last_day(ts = DATE)``
+#' - ``last_day(ts = TIMESTAMP)``
+#' - ``last_day(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `DATE`
 #' @examples
@@ -5465,6 +6820,9 @@ lcase <- function(string = VARCHAR) {
 #'
 #' @name lcm
 #' @usage NULL
+#' @section Overloads:
+#' - ``lcm(x = BIGINT, y = BIGINT)``
+#' - ``lcm(x = HUGEINT, y = HUGEINT)``
 #' @param x `BIGINT | HUGEINT`
 #' @param y `BIGINT | HUGEINT`
 #' @return `BIGINT | HUGEINT`
@@ -5501,6 +6859,9 @@ least <- function(arg1 = ANY) {
 #'
 #' @name least_common_multiple
 #' @usage NULL
+#' @section Overloads:
+#' - ``least_common_multiple(x = BIGINT, y = BIGINT)``
+#' - ``least_common_multiple(x = HUGEINT, y = HUGEINT)``
 #' @param x `BIGINT | HUGEINT`
 #' @param y `BIGINT | HUGEINT`
 #' @return `BIGINT | HUGEINT`
@@ -5559,6 +6920,10 @@ left_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #'
 #' @name len
 #' @usage NULL
+#' @section Overloads:
+#' - ``len(string = VARCHAR)``
+#' - ``len(bit = BIT)``
+#' - ``len(list = `ANY[]`)``
 #' @param string `VARCHAR`
 #' @param bit `BIT`
 #' @param list `ANY[]`
@@ -5892,6 +7257,9 @@ list_contains <- function(list = `T[]`, element = T) {
 #'
 #' @name list_cosine_distance
 #' @usage NULL
+#' @section Overloads:
+#' - ``list_cosine_distance(list1 = `FLOAT[]`, list2 = `FLOAT[]`)``
+#' - ``list_cosine_distance(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)``
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
@@ -5910,6 +7278,9 @@ list_cosine_distance <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] 
 #'
 #' @name list_cosine_similarity
 #' @usage NULL
+#' @section Overloads:
+#' - ``list_cosine_similarity(list1 = `FLOAT[]`, list2 = `FLOAT[]`)``
+#' - ``list_cosine_similarity(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)``
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
@@ -5941,6 +7312,9 @@ list_count <- function(l) {
 #'
 #' @name list_distance
 #' @usage NULL
+#' @section Overloads:
+#' - ``list_distance(list1 = `FLOAT[]`, list2 = `FLOAT[]`)``
+#' - ``list_distance(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)``
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
@@ -5976,6 +7350,9 @@ list_distinct <- function(list = `T[]`) {
 #'
 #' @name list_dot_product
 #' @usage NULL
+#' @section Overloads:
+#' - ``list_dot_product(list1 = `FLOAT[]`, list2 = `FLOAT[]`)``
+#' - ``list_dot_product(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)``
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
@@ -5994,6 +7371,9 @@ list_dot_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DO
 #'
 #' @name list_element
 #' @usage NULL
+#' @section Overloads:
+#' - ``list_element(list = `T[]`, index = BIGINT)``
+#' - ``list_element(list = VARCHAR, index = BIGINT)``
 #' @param list `T[] | VARCHAR`
 #' @param index `BIGINT`
 #' @return `T | VARCHAR`
@@ -6025,6 +7405,9 @@ list_entropy <- function(l) {
 #'
 #' @name list_extract
 #' @usage NULL
+#' @section Overloads:
+#' - ``list_extract(list = `T[]`, index = BIGINT)``
+#' - ``list_extract(list = VARCHAR, index = BIGINT)``
 #' @param list `T[] | VARCHAR`
 #' @param index `BIGINT`
 #' @return `T | VARCHAR`
@@ -6074,6 +7457,10 @@ list_first <- function(l) {
 #'
 #' @name list_grade_up
 #' @usage NULL
+#' @section Overloads:
+#' - ``list_grade_up(list = `ANY[]`)``
+#' - ``list_grade_up(list = `ANY[]`, col1 = VARCHAR)``
+#' - ``list_grade_up(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR)``
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
 #' @param col2 `VARCHAR`
@@ -6178,6 +7565,9 @@ list_indexof <- function(list = `T[]`, element = T) {
 #'
 #' @name list_inner_product
 #' @usage NULL
+#' @section Overloads:
+#' - ``list_inner_product(list1 = `FLOAT[]`, list2 = `FLOAT[]`)``
+#' - ``list_inner_product(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)``
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
@@ -6314,6 +7704,9 @@ list_mode <- function(l) {
 #'
 #' @name list_negative_dot_product
 #' @usage NULL
+#' @section Overloads:
+#' - ``list_negative_dot_product(list1 = `FLOAT[]`, list2 = `FLOAT[]`)``
+#' - ``list_negative_dot_product(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)``
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
@@ -6332,6 +7725,9 @@ list_negative_dot_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLO
 #'
 #' @name list_negative_inner_product
 #' @usage NULL
+#' @section Overloads:
+#' - ``list_negative_inner_product(list1 = `FLOAT[]`, list2 = `FLOAT[]`)``
+#' - ``list_negative_inner_product(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)``
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
@@ -6350,6 +7746,9 @@ list_negative_inner_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `F
 #'
 #' @name list_pack
 #' @usage NULL
+#' @section Overloads:
+#' - ``list_pack()``
+#' - ``list_pack(any = T)``
 #' @param any `T`
 #' @return `"NULL"[] | T[]`
 #' @examples
@@ -6412,6 +7811,9 @@ list_product <- function(l) {
 #'
 #' @name list_reduce
 #' @usage NULL
+#' @section Overloads:
+#' - ``list_reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA)``
+#' - ``list_reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY)``
 #' @param list `ANY[]`
 #' @param lambda(x,y) `LAMBDA`
 #' @param initial_value `ANY`
@@ -6431,6 +7833,9 @@ list_reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = 
 #'
 #' @name list_resize
 #' @usage NULL
+#' @section Overloads:
+#' - ``list_resize(list = `ANY[]`, `size[` = ANY)``
+#' - ``list_resize(list = `ANY[]`, `size[` = ANY, `value]` = ANY)``
 #' @param list `ANY[]`
 #' @param size[ `ANY`
 #' @param value] `ANY`
@@ -6463,6 +7868,9 @@ list_reverse <- function(l) {
 #'
 #' @name list_reverse_sort
 #' @usage NULL
+#' @section Overloads:
+#' - ``list_reverse_sort(list = `ANY[]`)``
+#' - ``list_reverse_sort(list = `ANY[]`, col1 = VARCHAR)``
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
 #' @return `ANY[]`
@@ -6527,6 +7935,9 @@ list_skewness <- function(l) {
 #'
 #' @name list_slice
 #' @usage NULL
+#' @section Overloads:
+#' - ``list_slice(list = ANY, begin = ANY, end = ANY)``
+#' - ``list_slice(list = ANY, begin = ANY, end = ANY, step = BIGINT)``
 #' @param list `ANY`
 #' @param begin `ANY`
 #' @param end `ANY`
@@ -6548,6 +7959,10 @@ list_slice <- function(list = ANY, begin = ANY, end = ANY, step = BIGINT) {
 #'
 #' @name list_sort
 #' @usage NULL
+#' @section Overloads:
+#' - ``list_sort(list = `ANY[]`)``
+#' - ``list_sort(list = `ANY[]`, col1 = VARCHAR)``
+#' - ``list_sort(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR)``
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
 #' @param col2 `VARCHAR`
@@ -6654,6 +8069,9 @@ list_unique <- function(list = `ANY[]`) {
 #'
 #' @name list_value
 #' @usage NULL
+#' @section Overloads:
+#' - ``list_value()``
+#' - ``list_value(any = T)``
 #' @param any `T`
 #' @return `"NULL"[] | T[]`
 #' @examples
@@ -6734,6 +8152,9 @@ list_zip <- function() {
 #'
 #' @name listagg
 #' @usage NULL
+#' @section Overloads:
+#' - ``listagg(str = ANY)``
+#' - ``listagg(str = ANY, arg = VARCHAR)``
 #' @param str `ANY`
 #' @param arg `VARCHAR`
 #' @return `VARCHAR`
@@ -6769,6 +8190,9 @@ ln <- function(x = DOUBLE) {
 #'
 #' @name log
 #' @usage NULL
+#' @section Overloads:
+#' - ``log(b = DOUBLE)``
+#' - ``log(b = DOUBLE, x = DOUBLE)``
 #' @param b `DOUBLE`
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
@@ -6857,6 +8281,9 @@ lpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #'
 #' @name ltrim
 #' @usage NULL
+#' @section Overloads:
+#' - ``ltrim(string = VARCHAR)``
+#' - ``ltrim(string = VARCHAR, characters = VARCHAR)``
 #' @param string `VARCHAR`
 #' @param characters `VARCHAR`
 #' @return `VARCHAR`
@@ -6876,6 +8303,15 @@ ltrim <- function(string = VARCHAR, characters = VARCHAR) {
 #'
 #' @name mad
 #' @usage NULL
+#' @section Overloads:
+#' - ``mad(x = DECIMAL)``
+#' - ``mad(x = FLOAT)``
+#' - ``mad(x = DOUBLE)``
+#' - ``mad(x = DATE)``
+#' - ``mad(x = TIMESTAMP)``
+#' - ``mad(x = TIME)``
+#' - ``mad(x = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``mad(x = `TIME WITH TIME ZONE`)``
 #' @param x `DECIMAL | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE`
 #' @return `DECIMAL | FLOAT | DOUBLE | INTERVAL`
 #' @examples
@@ -6895,6 +8331,10 @@ mad <- function(x = `DECIMAL | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMEST
 #'
 #' @name make_date
 #' @usage NULL
+#' @section Overloads:
+#' - ``make_date(col0 = INTEGER)``
+#' - ``make_date(year = BIGINT, month = BIGINT, day = BIGINT)``
+#' - ``make_date(`date-struct` = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`)``
 #' @param col0 `INTEGER`
 #' @param year `BIGINT`
 #' @param month `BIGINT`
@@ -6936,6 +8376,9 @@ make_time <- function(hour = BIGINT, minute = BIGINT, seconds = DOUBLE) {
 #'
 #' @name make_timestamp
 #' @usage NULL
+#' @section Overloads:
+#' - ``make_timestamp(year = BIGINT, month = BIGINT, day = BIGINT, hour = BIGINT, minute = BIGINT, seconds = DOUBLE)``
+#' - ``make_timestamp(year = BIGINT)``
 #' @param year `BIGINT`
 #' @param month `BIGINT`
 #' @param day `BIGINT`
@@ -6992,6 +8435,9 @@ make_timestamp_ns <- function(nanos = BIGINT) {
 #'
 #' @name map
 #' @usage NULL
+#' @section Overloads:
+#' - ``map()``
+#' - ``map(keys = `K[]`, values = `V[]`)``
 #' @param keys `K[]`
 #' @param values `V[]`
 #' @return `MAP("NULL", "NULL") | MAP(K, V)`
@@ -7191,6 +8637,9 @@ map_values <- function(map = `MAP(K, V)`) {
 #'
 #' @name max
 #' @usage NULL
+#' @section Overloads:
+#' - ``max(arg = ANY)``
+#' - ``max(arg = ANY, col1 = BIGINT)``
 #' @param arg `ANY`
 #' @param col1 `BIGINT`
 #' @return `ANY | ANY[]`
@@ -7209,6 +8658,99 @@ max <- function(arg = ANY, col1 = BIGINT) {
 #'
 #' @name max_by
 #' @usage NULL
+#' @section Overloads:
+#' - ``max_by(arg = INTEGER, val = INTEGER)``
+#' - ``max_by(arg = INTEGER, val = BIGINT)``
+#' - ``max_by(arg = INTEGER, val = HUGEINT)``
+#' - ``max_by(arg = INTEGER, val = DOUBLE)``
+#' - ``max_by(arg = INTEGER, val = VARCHAR)``
+#' - ``max_by(arg = INTEGER, val = DATE)``
+#' - ``max_by(arg = INTEGER, val = TIMESTAMP)``
+#' - ``max_by(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``max_by(arg = INTEGER, val = BLOB)``
+#' - ``max_by(arg = BIGINT, val = INTEGER)``
+#' - ``max_by(arg = BIGINT, val = BIGINT)``
+#' - ``max_by(arg = BIGINT, val = HUGEINT)``
+#' - ``max_by(arg = BIGINT, val = DOUBLE)``
+#' - ``max_by(arg = BIGINT, val = VARCHAR)``
+#' - ``max_by(arg = BIGINT, val = DATE)``
+#' - ``max_by(arg = BIGINT, val = TIMESTAMP)``
+#' - ``max_by(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``max_by(arg = BIGINT, val = BLOB)``
+#' - ``max_by(arg = DOUBLE, val = INTEGER)``
+#' - ``max_by(arg = DOUBLE, val = BIGINT)``
+#' - ``max_by(arg = DOUBLE, val = HUGEINT)``
+#' - ``max_by(arg = DOUBLE, val = DOUBLE)``
+#' - ``max_by(arg = DOUBLE, val = VARCHAR)``
+#' - ``max_by(arg = DOUBLE, val = DATE)``
+#' - ``max_by(arg = DOUBLE, val = TIMESTAMP)``
+#' - ``max_by(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``max_by(arg = DOUBLE, val = BLOB)``
+#' - ``max_by(arg = VARCHAR, val = INTEGER)``
+#' - ``max_by(arg = VARCHAR, val = BIGINT)``
+#' - ``max_by(arg = VARCHAR, val = HUGEINT)``
+#' - ``max_by(arg = VARCHAR, val = DOUBLE)``
+#' - ``max_by(arg = VARCHAR, val = VARCHAR)``
+#' - ``max_by(arg = VARCHAR, val = DATE)``
+#' - ``max_by(arg = VARCHAR, val = TIMESTAMP)``
+#' - ``max_by(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``max_by(arg = VARCHAR, val = BLOB)``
+#' - ``max_by(arg = DATE, val = INTEGER)``
+#' - ``max_by(arg = DATE, val = BIGINT)``
+#' - ``max_by(arg = DATE, val = HUGEINT)``
+#' - ``max_by(arg = DATE, val = DOUBLE)``
+#' - ``max_by(arg = DATE, val = VARCHAR)``
+#' - ``max_by(arg = DATE, val = DATE)``
+#' - ``max_by(arg = DATE, val = TIMESTAMP)``
+#' - ``max_by(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``max_by(arg = DATE, val = BLOB)``
+#' - ``max_by(arg = TIMESTAMP, val = INTEGER)``
+#' - ``max_by(arg = TIMESTAMP, val = BIGINT)``
+#' - ``max_by(arg = TIMESTAMP, val = HUGEINT)``
+#' - ``max_by(arg = TIMESTAMP, val = DOUBLE)``
+#' - ``max_by(arg = TIMESTAMP, val = VARCHAR)``
+#' - ``max_by(arg = TIMESTAMP, val = DATE)``
+#' - ``max_by(arg = TIMESTAMP, val = TIMESTAMP)``
+#' - ``max_by(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``max_by(arg = TIMESTAMP, val = BLOB)``
+#' - ``max_by(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)``
+#' - ``max_by(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)``
+#' - ``max_by(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)``
+#' - ``max_by(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)``
+#' - ``max_by(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)``
+#' - ``max_by(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)``
+#' - ``max_by(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)``
+#' - ``max_by(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``max_by(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)``
+#' - ``max_by(arg = BLOB, val = INTEGER)``
+#' - ``max_by(arg = BLOB, val = BIGINT)``
+#' - ``max_by(arg = BLOB, val = HUGEINT)``
+#' - ``max_by(arg = BLOB, val = DOUBLE)``
+#' - ``max_by(arg = BLOB, val = VARCHAR)``
+#' - ``max_by(arg = BLOB, val = DATE)``
+#' - ``max_by(arg = BLOB, val = TIMESTAMP)``
+#' - ``max_by(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``max_by(arg = BLOB, val = BLOB)``
+#' - ``max_by(arg = DECIMAL, val = INTEGER)``
+#' - ``max_by(arg = DECIMAL, val = BIGINT)``
+#' - ``max_by(arg = DECIMAL, val = HUGEINT)``
+#' - ``max_by(arg = DECIMAL, val = DOUBLE)``
+#' - ``max_by(arg = DECIMAL, val = VARCHAR)``
+#' - ``max_by(arg = DECIMAL, val = DATE)``
+#' - ``max_by(arg = DECIMAL, val = TIMESTAMP)``
+#' - ``max_by(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``max_by(arg = DECIMAL, val = BLOB)``
+#' - ``max_by(arg = ANY, val = INTEGER)``
+#' - ``max_by(arg = ANY, val = BIGINT)``
+#' - ``max_by(arg = ANY, val = HUGEINT)``
+#' - ``max_by(arg = ANY, val = DOUBLE)``
+#' - ``max_by(arg = ANY, val = VARCHAR)``
+#' - ``max_by(arg = ANY, val = DATE)``
+#' - ``max_by(arg = ANY, val = TIMESTAMP)``
+#' - ``max_by(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``max_by(arg = ANY, val = BLOB)``
+#' - ``max_by(arg = ANY, val = ANY)``
+#' - ``max_by(arg = ANY, val = ANY, col2 = BIGINT)``
 #' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
 #' @param col2 `BIGINT`
@@ -7230,6 +8772,9 @@ max_by <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP
 #'
 #' @name md5
 #' @usage NULL
+#' @section Overloads:
+#' - ``md5(string = VARCHAR)``
+#' - ``md5(blob = BLOB)``
 #' @param string `VARCHAR`
 #' @param blob `BLOB`
 #' @return `VARCHAR`
@@ -7251,6 +8796,9 @@ md5 <- function(string = VARCHAR, blob = BLOB) {
 #'
 #' @name md5_number
 #' @usage NULL
+#' @section Overloads:
+#' - ``md5_number(string = VARCHAR)``
+#' - ``md5_number(blob = BLOB)``
 #' @param string `VARCHAR`
 #' @param blob `BLOB`
 #' @return `UHUGEINT`
@@ -7296,6 +8844,18 @@ md5_number_upper <- function(param) {
 #'
 #' @name mean
 #' @usage NULL
+#' @section Overloads:
+#' - ``mean(x = DECIMAL)``
+#' - ``mean(x = SMALLINT)``
+#' - ``mean(x = INTEGER)``
+#' - ``mean(x = BIGINT)``
+#' - ``mean(x = HUGEINT)``
+#' - ``mean(x = INTERVAL)``
+#' - ``mean(x = DOUBLE)``
+#' - ``mean(x = TIMESTAMP)``
+#' - ``mean(x = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``mean(x = TIME)``
+#' - ``mean(x = `TIME WITH TIME ZONE`)``
 #' @param x `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL | DOUBLE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`
 #' @return `DECIMAL | DOUBLE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`
 #' @examples
@@ -7343,6 +8903,14 @@ metadata_info <- function() {
 #'
 #' @name microsecond
 #' @usage NULL
+#' @section Overloads:
+#' - ``microsecond(ts = DATE)``
+#' - ``microsecond(ts = INTERVAL)``
+#' - ``microsecond(ts = TIME)``
+#' - ``microsecond(ts = TIMESTAMP)``
+#' - ``microsecond(ts = `TIME WITH TIME ZONE`)``
+#' - ``microsecond(ts = TIME_NS)``
+#' - ``microsecond(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -7360,6 +8928,11 @@ microsecond <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
 #'
 #' @name millennium
 #' @usage NULL
+#' @section Overloads:
+#' - ``millennium(ts = DATE)``
+#' - ``millennium(ts = INTERVAL)``
+#' - ``millennium(ts = TIMESTAMP)``
+#' - ``millennium(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -7377,6 +8950,14 @@ millennium <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME Z
 #'
 #' @name millisecond
 #' @usage NULL
+#' @section Overloads:
+#' - ``millisecond(ts = DATE)``
+#' - ``millisecond(ts = INTERVAL)``
+#' - ``millisecond(ts = TIME)``
+#' - ``millisecond(ts = TIMESTAMP)``
+#' - ``millisecond(ts = `TIME WITH TIME ZONE`)``
+#' - ``millisecond(ts = TIME_NS)``
+#' - ``millisecond(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -7394,6 +8975,9 @@ millisecond <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
 #'
 #' @name min
 #' @usage NULL
+#' @section Overloads:
+#' - ``min(arg = ANY)``
+#' - ``min(arg = ANY, col1 = BIGINT)``
 #' @param arg `ANY`
 #' @param col1 `BIGINT`
 #' @return `ANY | ANY[]`
@@ -7412,6 +8996,99 @@ min <- function(arg = ANY, col1 = BIGINT) {
 #'
 #' @name min_by
 #' @usage NULL
+#' @section Overloads:
+#' - ``min_by(arg = INTEGER, val = INTEGER)``
+#' - ``min_by(arg = INTEGER, val = BIGINT)``
+#' - ``min_by(arg = INTEGER, val = HUGEINT)``
+#' - ``min_by(arg = INTEGER, val = DOUBLE)``
+#' - ``min_by(arg = INTEGER, val = VARCHAR)``
+#' - ``min_by(arg = INTEGER, val = DATE)``
+#' - ``min_by(arg = INTEGER, val = TIMESTAMP)``
+#' - ``min_by(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``min_by(arg = INTEGER, val = BLOB)``
+#' - ``min_by(arg = BIGINT, val = INTEGER)``
+#' - ``min_by(arg = BIGINT, val = BIGINT)``
+#' - ``min_by(arg = BIGINT, val = HUGEINT)``
+#' - ``min_by(arg = BIGINT, val = DOUBLE)``
+#' - ``min_by(arg = BIGINT, val = VARCHAR)``
+#' - ``min_by(arg = BIGINT, val = DATE)``
+#' - ``min_by(arg = BIGINT, val = TIMESTAMP)``
+#' - ``min_by(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``min_by(arg = BIGINT, val = BLOB)``
+#' - ``min_by(arg = DOUBLE, val = INTEGER)``
+#' - ``min_by(arg = DOUBLE, val = BIGINT)``
+#' - ``min_by(arg = DOUBLE, val = HUGEINT)``
+#' - ``min_by(arg = DOUBLE, val = DOUBLE)``
+#' - ``min_by(arg = DOUBLE, val = VARCHAR)``
+#' - ``min_by(arg = DOUBLE, val = DATE)``
+#' - ``min_by(arg = DOUBLE, val = TIMESTAMP)``
+#' - ``min_by(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``min_by(arg = DOUBLE, val = BLOB)``
+#' - ``min_by(arg = VARCHAR, val = INTEGER)``
+#' - ``min_by(arg = VARCHAR, val = BIGINT)``
+#' - ``min_by(arg = VARCHAR, val = HUGEINT)``
+#' - ``min_by(arg = VARCHAR, val = DOUBLE)``
+#' - ``min_by(arg = VARCHAR, val = VARCHAR)``
+#' - ``min_by(arg = VARCHAR, val = DATE)``
+#' - ``min_by(arg = VARCHAR, val = TIMESTAMP)``
+#' - ``min_by(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``min_by(arg = VARCHAR, val = BLOB)``
+#' - ``min_by(arg = DATE, val = INTEGER)``
+#' - ``min_by(arg = DATE, val = BIGINT)``
+#' - ``min_by(arg = DATE, val = HUGEINT)``
+#' - ``min_by(arg = DATE, val = DOUBLE)``
+#' - ``min_by(arg = DATE, val = VARCHAR)``
+#' - ``min_by(arg = DATE, val = DATE)``
+#' - ``min_by(arg = DATE, val = TIMESTAMP)``
+#' - ``min_by(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``min_by(arg = DATE, val = BLOB)``
+#' - ``min_by(arg = TIMESTAMP, val = INTEGER)``
+#' - ``min_by(arg = TIMESTAMP, val = BIGINT)``
+#' - ``min_by(arg = TIMESTAMP, val = HUGEINT)``
+#' - ``min_by(arg = TIMESTAMP, val = DOUBLE)``
+#' - ``min_by(arg = TIMESTAMP, val = VARCHAR)``
+#' - ``min_by(arg = TIMESTAMP, val = DATE)``
+#' - ``min_by(arg = TIMESTAMP, val = TIMESTAMP)``
+#' - ``min_by(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``min_by(arg = TIMESTAMP, val = BLOB)``
+#' - ``min_by(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)``
+#' - ``min_by(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)``
+#' - ``min_by(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)``
+#' - ``min_by(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)``
+#' - ``min_by(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)``
+#' - ``min_by(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)``
+#' - ``min_by(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)``
+#' - ``min_by(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``min_by(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)``
+#' - ``min_by(arg = BLOB, val = INTEGER)``
+#' - ``min_by(arg = BLOB, val = BIGINT)``
+#' - ``min_by(arg = BLOB, val = HUGEINT)``
+#' - ``min_by(arg = BLOB, val = DOUBLE)``
+#' - ``min_by(arg = BLOB, val = VARCHAR)``
+#' - ``min_by(arg = BLOB, val = DATE)``
+#' - ``min_by(arg = BLOB, val = TIMESTAMP)``
+#' - ``min_by(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``min_by(arg = BLOB, val = BLOB)``
+#' - ``min_by(arg = DECIMAL, val = INTEGER)``
+#' - ``min_by(arg = DECIMAL, val = BIGINT)``
+#' - ``min_by(arg = DECIMAL, val = HUGEINT)``
+#' - ``min_by(arg = DECIMAL, val = DOUBLE)``
+#' - ``min_by(arg = DECIMAL, val = VARCHAR)``
+#' - ``min_by(arg = DECIMAL, val = DATE)``
+#' - ``min_by(arg = DECIMAL, val = TIMESTAMP)``
+#' - ``min_by(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``min_by(arg = DECIMAL, val = BLOB)``
+#' - ``min_by(arg = ANY, val = INTEGER)``
+#' - ``min_by(arg = ANY, val = BIGINT)``
+#' - ``min_by(arg = ANY, val = HUGEINT)``
+#' - ``min_by(arg = ANY, val = DOUBLE)``
+#' - ``min_by(arg = ANY, val = VARCHAR)``
+#' - ``min_by(arg = ANY, val = DATE)``
+#' - ``min_by(arg = ANY, val = TIMESTAMP)``
+#' - ``min_by(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``min_by(arg = ANY, val = BLOB)``
+#' - ``min_by(arg = ANY, val = ANY)``
+#' - ``min_by(arg = ANY, val = ANY, col2 = BIGINT)``
 #' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
 #' @param col2 `BIGINT`
@@ -7431,6 +9108,14 @@ min_by <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP
 #'
 #' @name minute
 #' @usage NULL
+#' @section Overloads:
+#' - ``minute(ts = DATE)``
+#' - ``minute(ts = INTERVAL)``
+#' - ``minute(ts = TIME)``
+#' - ``minute(ts = TIMESTAMP)``
+#' - ``minute(ts = `TIME WITH TIME ZONE`)``
+#' - ``minute(ts = TIME_NS)``
+#' - ``minute(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -7466,6 +9151,20 @@ mismatches <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #'
 #' @name mod
 #' @usage NULL
+#' @section Overloads:
+#' - ``mod(col0 = TINYINT, col1 = TINYINT)``
+#' - ``mod(col0 = SMALLINT, col1 = SMALLINT)``
+#' - ``mod(col0 = INTEGER, col1 = INTEGER)``
+#' - ``mod(col0 = BIGINT, col1 = BIGINT)``
+#' - ``mod(col0 = HUGEINT, col1 = HUGEINT)``
+#' - ``mod(col0 = FLOAT, col1 = FLOAT)``
+#' - ``mod(col0 = DOUBLE, col1 = DOUBLE)``
+#' - ``mod(col0 = DECIMAL, col1 = DECIMAL)``
+#' - ``mod(col0 = UTINYINT, col1 = UTINYINT)``
+#' - ``mod(col0 = USMALLINT, col1 = USMALLINT)``
+#' - ``mod(col0 = UINTEGER, col1 = UINTEGER)``
+#' - ``mod(col0 = UBIGINT, col1 = UBIGINT)``
+#' - ``mod(col0 = UHUGEINT, col1 = UHUGEINT)``
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
@@ -7493,6 +9192,11 @@ mode <- function(x = ANY) {
 #'
 #' @name month
 #' @usage NULL
+#' @section Overloads:
+#' - ``month(ts = DATE)``
+#' - ``month(ts = INTERVAL)``
+#' - ``month(ts = TIMESTAMP)``
+#' - ``month(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -7510,6 +9214,10 @@ month <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`)
 #'
 #' @name monthname
 #' @usage NULL
+#' @section Overloads:
+#' - ``monthname(ts = DATE)``
+#' - ``monthname(ts = TIMESTAMP)``
+#' - ``monthname(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `VARCHAR`
 #' @examples
@@ -7527,6 +9235,24 @@ monthname <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #'
 #' @name multiply
 #' @usage NULL
+#' @section Overloads:
+#' - ``multiply(col0 = TINYINT, col1 = TINYINT)``
+#' - ``multiply(col0 = SMALLINT, col1 = SMALLINT)``
+#' - ``multiply(col0 = INTEGER, col1 = INTEGER)``
+#' - ``multiply(col0 = BIGINT, col1 = BIGINT)``
+#' - ``multiply(col0 = HUGEINT, col1 = HUGEINT)``
+#' - ``multiply(col0 = FLOAT, col1 = FLOAT)``
+#' - ``multiply(col0 = DOUBLE, col1 = DOUBLE)``
+#' - ``multiply(col0 = DECIMAL, col1 = DECIMAL)``
+#' - ``multiply(col0 = UTINYINT, col1 = UTINYINT)``
+#' - ``multiply(col0 = USMALLINT, col1 = USMALLINT)``
+#' - ``multiply(col0 = UINTEGER, col1 = UINTEGER)``
+#' - ``multiply(col0 = UBIGINT, col1 = UBIGINT)``
+#' - ``multiply(col0 = UHUGEINT, col1 = UHUGEINT)``
+#' - ``multiply(col0 = INTERVAL, col1 = DOUBLE)``
+#' - ``multiply(col0 = DOUBLE, col1 = INTERVAL)``
+#' - ``multiply(col0 = BIGINT, col1 = INTERVAL)``
+#' - ``multiply(col0 = INTERVAL, col1 = BIGINT)``
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
@@ -7541,6 +9267,15 @@ multiply <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | F
 #'
 #' @name nanosecond
 #' @usage NULL
+#' @section Overloads:
+#' - ``nanosecond(tsns = DATE)``
+#' - ``nanosecond(tsns = TIMESTAMP)``
+#' - ``nanosecond(tsns = INTERVAL)``
+#' - ``nanosecond(tsns = TIME)``
+#' - ``nanosecond(tsns = TIME_NS)``
+#' - ``nanosecond(tsns = `TIME WITH TIME ZONE`)``
+#' - ``nanosecond(tsns = TIMESTAMP_NS)``
+#' - ``nanosecond(tsns = `TIMESTAMP WITH TIME ZONE`)``
 #' @param tsns `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -7558,6 +9293,9 @@ nanosecond <- function(tsns = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TI
 #'
 #' @name nextafter
 #' @usage NULL
+#' @section Overloads:
+#' - ``nextafter(x = DOUBLE, y = DOUBLE)``
+#' - ``nextafter(x = FLOAT, y = FLOAT)``
 #' @param x `DOUBLE | FLOAT`
 #' @param y `DOUBLE | FLOAT`
 #' @return `DOUBLE | FLOAT`
@@ -7712,6 +9450,9 @@ obj_description <- function(object_oid, catalog_name) {
 #'
 #' @name octet_length
 #' @usage NULL
+#' @section Overloads:
+#' - ``octet_length(blob = BLOB)``
+#' - ``octet_length(bitstring = BIT)``
 #' @param blob `BLOB`
 #' @param bitstring `BIT`
 #' @return `BIGINT`
@@ -7748,6 +9489,9 @@ ord <- function(string = VARCHAR) {
 #'
 #' @name parquet_bloom_probe
 #' @usage NULL
+#' @section Overloads:
+#' - ``parquet_bloom_probe(col0 = VARCHAR, col1 = VARCHAR, col2 = ANY)``
+#' - ``parquet_bloom_probe(col0 = `VARCHAR[]`, col1 = VARCHAR, col2 = ANY)``
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @param col1 `VARCHAR`
 #' @param col2 `ANY`
@@ -7763,6 +9507,9 @@ parquet_bloom_probe <- function(col0 = `VARCHAR | VARCHAR[]`, col1 = VARCHAR, co
 #'
 #' @name parquet_file_metadata
 #' @usage NULL
+#' @section Overloads:
+#' - ``parquet_file_metadata(col0 = VARCHAR)``
+#' - ``parquet_file_metadata(col0 = `VARCHAR[]`)``
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
 parquet_file_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
@@ -7776,6 +9523,9 @@ parquet_file_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #'
 #' @name parquet_kv_metadata
 #' @usage NULL
+#' @section Overloads:
+#' - ``parquet_kv_metadata(col0 = VARCHAR)``
+#' - ``parquet_kv_metadata(col0 = `VARCHAR[]`)``
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
 parquet_kv_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
@@ -7789,6 +9539,9 @@ parquet_kv_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #'
 #' @name parquet_metadata
 #' @usage NULL
+#' @section Overloads:
+#' - ``parquet_metadata(col0 = VARCHAR)``
+#' - ``parquet_metadata(col0 = `VARCHAR[]`)``
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
 parquet_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
@@ -7802,6 +9555,9 @@ parquet_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #'
 #' @name parquet_scan
 #' @usage NULL
+#' @section Overloads:
+#' - ``parquet_scan(col0 = VARCHAR, can_have_nan = BOOLEAN, encryption_config = ANY, file_row_number = BOOLEAN, schema = ANY, parquet_version = VARCHAR, filename = ANY, binary_as_string = BOOLEAN, debug_use_openssl = BOOLEAN, union_by_name = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, hive_types = ANY, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN)``
+#' - ``parquet_scan(col0 = `VARCHAR[]`, hive_types_autocast = BOOLEAN, hive_partitioning = BOOLEAN, hive_types = ANY, compression = VARCHAR, explicit_cardinality = UBIGINT, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, binary_as_string = BOOLEAN, filename = ANY, parquet_version = VARCHAR, schema = ANY, file_row_number = BOOLEAN, encryption_config = ANY, can_have_nan = BOOLEAN)``
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @param can_have_nan `BOOLEAN`
 #' @param encryption_config `ANY`
@@ -7829,6 +9585,9 @@ parquet_scan <- function(col0 = `VARCHAR | VARCHAR[]`, can_have_nan = BOOLEAN, e
 #'
 #' @name parquet_schema
 #' @usage NULL
+#' @section Overloads:
+#' - ``parquet_schema(col0 = VARCHAR)``
+#' - ``parquet_schema(col0 = `VARCHAR[]`)``
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
 parquet_schema <- function(col0 = `VARCHAR | VARCHAR[]`) {
@@ -7842,6 +9601,9 @@ parquet_schema <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #'
 #' @name parse_dirname
 #' @usage NULL
+#' @section Overloads:
+#' - ``parse_dirname(path = VARCHAR)``
+#' - ``parse_dirname(path = VARCHAR, separator = VARCHAR)``
 #' @param path `VARCHAR`
 #' @param separator `VARCHAR`
 #' @return `VARCHAR`
@@ -7860,6 +9622,9 @@ parse_dirname <- function(path = VARCHAR, separator = VARCHAR) {
 #'
 #' @name parse_dirpath
 #' @usage NULL
+#' @section Overloads:
+#' - ``parse_dirpath(path = VARCHAR)``
+#' - ``parse_dirpath(path = VARCHAR, separator = VARCHAR)``
 #' @param path `VARCHAR`
 #' @param separator `VARCHAR`
 #' @return `VARCHAR`
@@ -7896,6 +9661,11 @@ parse_duckdb_log_message <- function(type = VARCHAR, message = VARCHAR) {
 #'
 #' @name parse_filename
 #' @usage NULL
+#' @section Overloads:
+#' - ``parse_filename(string = VARCHAR)``
+#' - ``parse_filename(string = VARCHAR, trim_extension = VARCHAR)``
+#' - ``parse_filename(string = VARCHAR, trim_extension = BOOLEAN)``
+#' - ``parse_filename(string = VARCHAR, trim_extension = BOOLEAN, separator = VARCHAR)``
 #' @param string `VARCHAR`
 #' @param trim_extension `VARCHAR | BOOLEAN`
 #' @param separator `VARCHAR`
@@ -7915,6 +9685,9 @@ parse_filename <- function(string = VARCHAR, trim_extension = `VARCHAR | BOOLEAN
 #'
 #' @name parse_path
 #' @usage NULL
+#' @section Overloads:
+#' - ``parse_path(path = VARCHAR)``
+#' - ``parse_path(path = VARCHAR, separator = VARCHAR)``
 #' @param path `VARCHAR`
 #' @param separator `VARCHAR`
 #' @return `VARCHAR[]`
@@ -7985,6 +9758,9 @@ pg_function_is_visible <- function(function_oid) {
 #'
 #' @name pg_get_constraintdef
 #' @usage NULL
+#' @section Overloads:
+#' - ``pg_get_constraintdef(constraint_oid)``
+#' - ``pg_get_constraintdef(constraint_oid, pretty_bool)``
 #' @param constraint_oid Unspecified.
 #' @param pretty_bool Unspecified.
 #' @return Unspecified.
@@ -8026,6 +9802,9 @@ pg_get_viewdef <- function(oid) {
 #'
 #' @name pg_has_role
 #' @usage NULL
+#' @section Overloads:
+#' - ``pg_has_role(user, role, privilege)``
+#' - ``pg_has_role(role, privilege)``
 #' @param user Unspecified.
 #' @param role Unspecified.
 #' @param privilege Unspecified.
@@ -8334,6 +10113,9 @@ pragma_database_size <- function() {
 #'
 #' @name pragma_metadata_info
 #' @usage NULL
+#' @section Overloads:
+#' - ``pragma_metadata_info()``
+#' - ``pragma_metadata_info(col0 = VARCHAR)``
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 pragma_metadata_info <- function(col0 = VARCHAR) {
@@ -8477,6 +10259,10 @@ product <- function(arg = DOUBLE) {
 #'
 #' @name quantile
 #' @usage NULL
+#' @section Overloads:
+#' - ``quantile(x = ANY, pos = DOUBLE)``
+#' - ``quantile(x = ANY, pos = `DOUBLE[]`)``
+#' - ``quantile(x = ANY)``
 #' @param x `ANY`
 #' @param pos `DOUBLE | DOUBLE[]`
 #' @return `ANY`
@@ -8495,6 +10281,33 @@ quantile <- function(x = ANY, pos = `DOUBLE | DOUBLE[]`) {
 #'
 #' @name quantile_cont
 #' @usage NULL
+#' @section Overloads:
+#' - ``quantile_cont(x = DECIMAL, pos = DOUBLE)``
+#' - ``quantile_cont(x = DECIMAL, pos = `DOUBLE[]`)``
+#' - ``quantile_cont(x = TINYINT, pos = DOUBLE)``
+#' - ``quantile_cont(x = TINYINT, pos = `DOUBLE[]`)``
+#' - ``quantile_cont(x = SMALLINT, pos = DOUBLE)``
+#' - ``quantile_cont(x = SMALLINT, pos = `DOUBLE[]`)``
+#' - ``quantile_cont(x = INTEGER, pos = DOUBLE)``
+#' - ``quantile_cont(x = INTEGER, pos = `DOUBLE[]`)``
+#' - ``quantile_cont(x = BIGINT, pos = DOUBLE)``
+#' - ``quantile_cont(x = BIGINT, pos = `DOUBLE[]`)``
+#' - ``quantile_cont(x = HUGEINT, pos = DOUBLE)``
+#' - ``quantile_cont(x = HUGEINT, pos = `DOUBLE[]`)``
+#' - ``quantile_cont(x = FLOAT, pos = DOUBLE)``
+#' - ``quantile_cont(x = FLOAT, pos = `DOUBLE[]`)``
+#' - ``quantile_cont(x = DOUBLE, pos = DOUBLE)``
+#' - ``quantile_cont(x = DOUBLE, pos = `DOUBLE[]`)``
+#' - ``quantile_cont(x = DATE, pos = DOUBLE)``
+#' - ``quantile_cont(x = DATE, pos = `DOUBLE[]`)``
+#' - ``quantile_cont(x = TIMESTAMP, pos = DOUBLE)``
+#' - ``quantile_cont(x = TIMESTAMP, pos = `DOUBLE[]`)``
+#' - ``quantile_cont(x = TIME, pos = DOUBLE)``
+#' - ``quantile_cont(x = TIME, pos = `DOUBLE[]`)``
+#' - ``quantile_cont(x = `TIMESTAMP WITH TIME ZONE`, pos = DOUBLE)``
+#' - ``quantile_cont(x = `TIMESTAMP WITH TIME ZONE`, pos = `DOUBLE[]`)``
+#' - ``quantile_cont(x = `TIME WITH TIME ZONE`, pos = DOUBLE)``
+#' - ``quantile_cont(x = `TIME WITH TIME ZONE`, pos = `DOUBLE[]`)``
 #' @param x `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE`
 #' @param pos `DOUBLE | DOUBLE[]`
 #' @return `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE`
@@ -8513,6 +10326,10 @@ quantile_cont <- function(x = `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT |
 #'
 #' @name quantile_disc
 #' @usage NULL
+#' @section Overloads:
+#' - ``quantile_disc(x = ANY, pos = DOUBLE)``
+#' - ``quantile_disc(x = ANY, pos = `DOUBLE[]`)``
+#' - ``quantile_disc(x = ANY)``
 #' @param x `ANY`
 #' @param pos `DOUBLE | DOUBLE[]`
 #' @return `ANY`
@@ -8531,6 +10348,11 @@ quantile_disc <- function(x = ANY, pos = `DOUBLE | DOUBLE[]`) {
 #'
 #' @name quarter
 #' @usage NULL
+#' @section Overloads:
+#' - ``quarter(ts = DATE)``
+#' - ``quarter(ts = INTERVAL)``
+#' - ``quarter(ts = TIMESTAMP)``
+#' - ``quarter(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -8561,6 +10383,10 @@ query <- function(col0 = VARCHAR) {
 #'
 #' @name query_table
 #' @usage NULL
+#' @section Overloads:
+#' - ``query_table(col0 = VARCHAR)``
+#' - ``query_table(col0 = `VARCHAR[]`)``
+#' - ``query_table(col0 = `VARCHAR[]`, col1 = BOOLEAN)``
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @param col1 `BOOLEAN`
 #' @return Unspecified.
@@ -8624,6 +10450,16 @@ random <- function() {
 #'
 #' @name range
 #' @usage NULL
+#' @section Overloads:
+#' - ``range(col0 = BIGINT)``
+#' - ``range(col0 = BIGINT, col1 = BIGINT)``
+#' - ``range(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT)``
+#' - ``range(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)``
+#' - ``range(start = BIGINT)``
+#' - ``range(start = BIGINT, stop = BIGINT)``
+#' - ``range(start = BIGINT, stop = BIGINT, step = BIGINT)``
+#' - ``range(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)``
+#' - ``range(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)``
 #' @param col0 `BIGINT | TIMESTAMP`
 #' @param col1 `BIGINT | TIMESTAMP`
 #' @param col2 `BIGINT | INTERVAL`
@@ -8646,6 +10482,9 @@ range <- function(col0 = `BIGINT | TIMESTAMP`, col1 = `BIGINT | TIMESTAMP`, col2
 #'
 #' @name read_blob
 #' @usage NULL
+#' @section Overloads:
+#' - ``read_blob(col0 = VARCHAR, union_by_name = BOOLEAN, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN, hive_types = ANY, filename = ANY)``
+#' - ``read_blob(col0 = `VARCHAR[]`, filename = ANY, hive_types = ANY, hive_types_autocast = BOOLEAN, hive_partitioning = BOOLEAN, union_by_name = BOOLEAN)``
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @param union_by_name `BOOLEAN`
 #' @param hive_partitioning `BOOLEAN`
@@ -8664,6 +10503,9 @@ read_blob <- function(col0 = `VARCHAR | VARCHAR[]`, union_by_name = BOOLEAN, hiv
 #'
 #' @name read_csv
 #' @usage NULL
+#' @section Overloads:
+#' - ``read_csv(col0 = VARCHAR, hive_types_autocast = BOOLEAN, skip = BIGINT, types = ANY, nullstr = ANY, encoding = VARCHAR, hive_types = ANY, filename = ANY, header = BOOLEAN, delim = VARCHAR, dateformat = VARCHAR, column_names = `VARCHAR[]`, union_by_name = BOOLEAN, new_line = VARCHAR, escape = VARCHAR, allow_quoted_nulls = BOOLEAN, comment = VARCHAR, hive_partitioning = BOOLEAN, sep = VARCHAR, columns = ANY, rejects_limit = BIGINT, force_not_null = `VARCHAR[]`, auto_type_candidates = ANY, sample_size = BIGINT, timestampformat = VARCHAR, auto_detect = BOOLEAN, all_varchar = BOOLEAN, store_rejects = BOOLEAN, normalize_names = BOOLEAN, rejects_table = VARCHAR, column_types = ANY, compression = VARCHAR, ignore_errors = BOOLEAN, names = `VARCHAR[]`, max_line_size = VARCHAR, quote = VARCHAR, maximum_line_size = VARCHAR, rejects_scan = VARCHAR, buffer_size = UBIGINT, decimal_separator = VARCHAR, parallel = BOOLEAN, null_padding = BOOLEAN, dtypes = ANY, strict_mode = BOOLEAN, thousands = VARCHAR, files_to_sniff = BIGINT)``
+#' - ``read_csv(col0 = `VARCHAR[]`, files_to_sniff = BIGINT, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, null_padding = BOOLEAN, parallel = BOOLEAN, decimal_separator = VARCHAR, buffer_size = UBIGINT, rejects_scan = VARCHAR, maximum_line_size = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, names = `VARCHAR[]`, ignore_errors = BOOLEAN, compression = VARCHAR, column_types = ANY, rejects_table = VARCHAR, normalize_names = BOOLEAN, store_rejects = BOOLEAN, all_varchar = BOOLEAN, auto_detect = BOOLEAN, timestampformat = VARCHAR, sample_size = BIGINT, auto_type_candidates = ANY, force_not_null = `VARCHAR[]`, rejects_limit = BIGINT, columns = ANY, sep = VARCHAR, hive_partitioning = BOOLEAN, comment = VARCHAR, allow_quoted_nulls = BOOLEAN, escape = VARCHAR, new_line = VARCHAR, union_by_name = BOOLEAN, column_names = `VARCHAR[]`, dateformat = VARCHAR, delim = VARCHAR, header = BOOLEAN, filename = ANY, hive_types = ANY, encoding = VARCHAR, nullstr = ANY, types = ANY, skip = BIGINT, hive_types_autocast = BOOLEAN)``
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @param hive_types_autocast `BOOLEAN`
 #' @param skip `BIGINT`
@@ -8722,6 +10564,9 @@ read_csv <- function(col0 = `VARCHAR | VARCHAR[]`, hive_types_autocast = BOOLEAN
 #'
 #' @name read_csv_auto
 #' @usage NULL
+#' @section Overloads:
+#' - ``read_csv_auto(col0 = VARCHAR, hive_types_autocast = BOOLEAN, skip = BIGINT, types = ANY, nullstr = ANY, encoding = VARCHAR, hive_types = ANY, filename = ANY, header = BOOLEAN, delim = VARCHAR, dateformat = VARCHAR, column_names = `VARCHAR[]`, union_by_name = BOOLEAN, new_line = VARCHAR, escape = VARCHAR, allow_quoted_nulls = BOOLEAN, comment = VARCHAR, hive_partitioning = BOOLEAN, sep = VARCHAR, columns = ANY, rejects_limit = BIGINT, force_not_null = `VARCHAR[]`, auto_type_candidates = ANY, sample_size = BIGINT, timestampformat = VARCHAR, auto_detect = BOOLEAN, all_varchar = BOOLEAN, store_rejects = BOOLEAN, normalize_names = BOOLEAN, rejects_table = VARCHAR, column_types = ANY, compression = VARCHAR, ignore_errors = BOOLEAN, names = `VARCHAR[]`, max_line_size = VARCHAR, quote = VARCHAR, maximum_line_size = VARCHAR, rejects_scan = VARCHAR, buffer_size = UBIGINT, decimal_separator = VARCHAR, parallel = BOOLEAN, null_padding = BOOLEAN, dtypes = ANY, strict_mode = BOOLEAN, thousands = VARCHAR, files_to_sniff = BIGINT)``
+#' - ``read_csv_auto(col0 = `VARCHAR[]`, files_to_sniff = BIGINT, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, null_padding = BOOLEAN, parallel = BOOLEAN, decimal_separator = VARCHAR, buffer_size = UBIGINT, rejects_scan = VARCHAR, maximum_line_size = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, names = `VARCHAR[]`, ignore_errors = BOOLEAN, compression = VARCHAR, column_types = ANY, rejects_table = VARCHAR, normalize_names = BOOLEAN, store_rejects = BOOLEAN, all_varchar = BOOLEAN, auto_detect = BOOLEAN, timestampformat = VARCHAR, sample_size = BIGINT, auto_type_candidates = ANY, force_not_null = `VARCHAR[]`, rejects_limit = BIGINT, columns = ANY, sep = VARCHAR, hive_partitioning = BOOLEAN, comment = VARCHAR, allow_quoted_nulls = BOOLEAN, escape = VARCHAR, new_line = VARCHAR, union_by_name = BOOLEAN, column_names = `VARCHAR[]`, dateformat = VARCHAR, delim = VARCHAR, header = BOOLEAN, filename = ANY, hive_types = ANY, encoding = VARCHAR, nullstr = ANY, types = ANY, skip = BIGINT, hive_types_autocast = BOOLEAN)``
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @param hive_types_autocast `BOOLEAN`
 #' @param skip `BIGINT`
@@ -8780,6 +10625,9 @@ read_csv_auto <- function(col0 = `VARCHAR | VARCHAR[]`, hive_types_autocast = BO
 #'
 #' @name read_parquet
 #' @usage NULL
+#' @section Overloads:
+#' - ``read_parquet(col0 = VARCHAR, can_have_nan = BOOLEAN, encryption_config = ANY, file_row_number = BOOLEAN, schema = ANY, parquet_version = VARCHAR, filename = ANY, binary_as_string = BOOLEAN, debug_use_openssl = BOOLEAN, union_by_name = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, hive_types = ANY, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN)``
+#' - ``read_parquet(col0 = `VARCHAR[]`, hive_types_autocast = BOOLEAN, hive_partitioning = BOOLEAN, hive_types = ANY, compression = VARCHAR, explicit_cardinality = UBIGINT, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, binary_as_string = BOOLEAN, filename = ANY, parquet_version = VARCHAR, schema = ANY, file_row_number = BOOLEAN, encryption_config = ANY, can_have_nan = BOOLEAN)``
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @param can_have_nan `BOOLEAN`
 #' @param encryption_config `ANY`
@@ -8807,6 +10655,9 @@ read_parquet <- function(col0 = `VARCHAR | VARCHAR[]`, can_have_nan = BOOLEAN, e
 #'
 #' @name read_text
 #' @usage NULL
+#' @section Overloads:
+#' - ``read_text(col0 = VARCHAR, union_by_name = BOOLEAN, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN, hive_types = ANY, filename = ANY)``
+#' - ``read_text(col0 = `VARCHAR[]`, filename = ANY, hive_types = ANY, hive_types_autocast = BOOLEAN, hive_partitioning = BOOLEAN, union_by_name = BOOLEAN)``
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @param union_by_name `BOOLEAN`
 #' @param hive_partitioning `BOOLEAN`
@@ -8825,6 +10676,9 @@ read_text <- function(col0 = `VARCHAR | VARCHAR[]`, union_by_name = BOOLEAN, hiv
 #'
 #' @name reduce
 #' @usage NULL
+#' @section Overloads:
+#' - ``reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA)``
+#' - ``reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY)``
 #' @param list `ANY[]`
 #' @param lambda(x,y) `LAMBDA`
 #' @param initial_value `ANY`
@@ -8863,6 +10717,12 @@ regexp_escape <- function(string = VARCHAR) {
 #'
 #' @name regexp_extract
 #' @usage NULL
+#' @section Overloads:
+#' - ``regexp_extract(string = VARCHAR, regex = VARCHAR)``
+#' - ``regexp_extract(string = VARCHAR, regex = VARCHAR, group = INTEGER)``
+#' - ``regexp_extract(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR)``
+#' - ``regexp_extract(string = VARCHAR, regex = VARCHAR, name_list = `VARCHAR[]`)``
+#' - ``regexp_extract(string = VARCHAR, regex = VARCHAR, name_list = `VARCHAR[]`, options = VARCHAR)``
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
 #' @param group `INTEGER`
@@ -8888,6 +10748,10 @@ regexp_extract <- function(string = VARCHAR, regex = VARCHAR, group = INTEGER, o
 #'
 #' @name regexp_extract_all
 #' @usage NULL
+#' @section Overloads:
+#' - ``regexp_extract_all(string = VARCHAR, regex = VARCHAR)``
+#' - ``regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = INTEGER)``
+#' - ``regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR)``
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
 #' @param group `INTEGER`
@@ -8908,6 +10772,9 @@ regexp_extract_all <- function(string = VARCHAR, regex = VARCHAR, group = INTEGE
 #'
 #' @name regexp_full_match
 #' @usage NULL
+#' @section Overloads:
+#' - ``regexp_full_match(string = VARCHAR, regex = VARCHAR)``
+#' - ``regexp_full_match(string = VARCHAR, regex = VARCHAR, col2 = VARCHAR)``
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
 #' @param col2 `VARCHAR`
@@ -8927,6 +10794,9 @@ regexp_full_match <- function(string = VARCHAR, regex = VARCHAR, col2 = VARCHAR)
 #'
 #' @name regexp_matches
 #' @usage NULL
+#' @section Overloads:
+#' - ``regexp_matches(string = VARCHAR, regex = VARCHAR)``
+#' - ``regexp_matches(string = VARCHAR, regex = VARCHAR, options = VARCHAR)``
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
 #' @param options `VARCHAR`
@@ -8946,6 +10816,9 @@ regexp_matches <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR)
 #'
 #' @name regexp_replace
 #' @usage NULL
+#' @section Overloads:
+#' - ``regexp_replace(string = VARCHAR, regex = VARCHAR, replacement = VARCHAR)``
+#' - ``regexp_replace(string = VARCHAR, regex = VARCHAR, replacement = VARCHAR, options = VARCHAR)``
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
 #' @param replacement `VARCHAR`
@@ -8966,6 +10839,9 @@ regexp_replace <- function(string = VARCHAR, regex = VARCHAR, replacement = VARC
 #'
 #' @name regexp_split_to_array
 #' @usage NULL
+#' @section Overloads:
+#' - ``regexp_split_to_array(string = VARCHAR, regex = VARCHAR)``
+#' - ``regexp_split_to_array(string = VARCHAR, regex = VARCHAR, options = VARCHAR)``
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
 #' @param options `VARCHAR`
@@ -9151,6 +11027,11 @@ regr_syy <- function(y = DOUBLE, x = DOUBLE) {
 #'
 #' @name repeat
 #' @usage NULL
+#' @section Overloads:
+#' - ```repeat`(col0 = ANY, col1 = BIGINT)``
+#' - ```repeat`(string = VARCHAR, count = BIGINT)``
+#' - ```repeat`(blob = BLOB, count = BIGINT)``
+#' - ```repeat`(col0 = `T[]`, col1 = BIGINT)``
 #' @param col0 `ANY | T[]`
 #' @param col1 `BIGINT`
 #' @param string `VARCHAR`
@@ -9224,6 +11105,39 @@ replace_type <- function(param = ANY, type1 = ANY, type2 = ANY) {
 #'
 #' @name reservoir_quantile
 #' @usage NULL
+#' @section Overloads:
+#' - ``reservoir_quantile(x = DECIMAL, quantile = DOUBLE)``
+#' - ``reservoir_quantile(x = DECIMAL, quantile = DOUBLE, sample_size = INTEGER)``
+#' - ``reservoir_quantile(x = DECIMAL, quantile = `DOUBLE[]`)``
+#' - ``reservoir_quantile(x = DECIMAL, quantile = `DOUBLE[]`, sample_size = INTEGER)``
+#' - ``reservoir_quantile(x = TINYINT, quantile = DOUBLE)``
+#' - ``reservoir_quantile(x = TINYINT, quantile = DOUBLE, sample_size = INTEGER)``
+#' - ``reservoir_quantile(x = TINYINT, quantile = `DOUBLE[]`)``
+#' - ``reservoir_quantile(x = TINYINT, quantile = `DOUBLE[]`, sample_size = INTEGER)``
+#' - ``reservoir_quantile(x = SMALLINT, quantile = DOUBLE)``
+#' - ``reservoir_quantile(x = SMALLINT, quantile = DOUBLE, sample_size = INTEGER)``
+#' - ``reservoir_quantile(x = SMALLINT, quantile = `DOUBLE[]`)``
+#' - ``reservoir_quantile(x = SMALLINT, quantile = `DOUBLE[]`, sample_size = INTEGER)``
+#' - ``reservoir_quantile(x = INTEGER, quantile = DOUBLE)``
+#' - ``reservoir_quantile(x = INTEGER, quantile = DOUBLE, sample_size = INTEGER)``
+#' - ``reservoir_quantile(x = INTEGER, quantile = `DOUBLE[]`)``
+#' - ``reservoir_quantile(x = INTEGER, quantile = `DOUBLE[]`, sample_size = INTEGER)``
+#' - ``reservoir_quantile(x = BIGINT, quantile = DOUBLE)``
+#' - ``reservoir_quantile(x = BIGINT, quantile = DOUBLE, sample_size = INTEGER)``
+#' - ``reservoir_quantile(x = BIGINT, quantile = `DOUBLE[]`)``
+#' - ``reservoir_quantile(x = BIGINT, quantile = `DOUBLE[]`, sample_size = INTEGER)``
+#' - ``reservoir_quantile(x = HUGEINT, quantile = DOUBLE)``
+#' - ``reservoir_quantile(x = HUGEINT, quantile = DOUBLE, sample_size = INTEGER)``
+#' - ``reservoir_quantile(x = HUGEINT, quantile = `DOUBLE[]`)``
+#' - ``reservoir_quantile(x = HUGEINT, quantile = `DOUBLE[]`, sample_size = INTEGER)``
+#' - ``reservoir_quantile(x = FLOAT, quantile = DOUBLE)``
+#' - ``reservoir_quantile(x = FLOAT, quantile = DOUBLE, sample_size = INTEGER)``
+#' - ``reservoir_quantile(x = FLOAT, quantile = `DOUBLE[]`)``
+#' - ``reservoir_quantile(x = FLOAT, quantile = `DOUBLE[]`, sample_size = INTEGER)``
+#' - ``reservoir_quantile(x = DOUBLE, quantile = DOUBLE)``
+#' - ``reservoir_quantile(x = DOUBLE, quantile = DOUBLE, sample_size = INTEGER)``
+#' - ``reservoir_quantile(x = DOUBLE, quantile = `DOUBLE[]`)``
+#' - ``reservoir_quantile(x = DOUBLE, quantile = `DOUBLE[]`, sample_size = INTEGER)``
 #' @param x `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE`
 #' @param quantile `DOUBLE | DOUBLE[]`
 #' @param sample_size `INTEGER`
@@ -9296,6 +11210,23 @@ right_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #'
 #' @name round
 #' @usage NULL
+#' @section Overloads:
+#' - ``round(x = TINYINT)``
+#' - ``round(x = TINYINT, precision = INTEGER)``
+#' - ``round(x = SMALLINT)``
+#' - ``round(x = SMALLINT, precision = INTEGER)``
+#' - ``round(x = INTEGER)``
+#' - ``round(x = INTEGER, precision = INTEGER)``
+#' - ``round(x = BIGINT)``
+#' - ``round(x = BIGINT, precision = INTEGER)``
+#' - ``round(x = HUGEINT)``
+#' - ``round(x = HUGEINT, precision = INTEGER)``
+#' - ``round(x = FLOAT)``
+#' - ``round(x = FLOAT, precision = INTEGER)``
+#' - ``round(x = DOUBLE)``
+#' - ``round(x = DOUBLE, precision = INTEGER)``
+#' - ``round(x = DECIMAL)``
+#' - ``round(x = DECIMAL, precision = INTEGER)``
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL`
 #' @param precision `INTEGER`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL`
@@ -9378,6 +11309,9 @@ rpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #'
 #' @name rtrim
 #' @usage NULL
+#' @section Overloads:
+#' - ``rtrim(string = VARCHAR)``
+#' - ``rtrim(string = VARCHAR, characters = VARCHAR)``
 #' @param string `VARCHAR`
 #' @param characters `VARCHAR`
 #' @return `VARCHAR`
@@ -9397,6 +11331,14 @@ rtrim <- function(string = VARCHAR, characters = VARCHAR) {
 #'
 #' @name second
 #' @usage NULL
+#' @section Overloads:
+#' - ``second(ts = DATE)``
+#' - ``second(ts = INTERVAL)``
+#' - ``second(ts = TIME)``
+#' - ``second(ts = TIMESTAMP)``
+#' - ``second(ts = `TIME WITH TIME ZONE`)``
+#' - ``second(ts = TIME_NS)``
+#' - ``second(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -9491,6 +11433,9 @@ setseed <- function(col0 = DOUBLE) {
 #'
 #' @name sha1
 #' @usage NULL
+#' @section Overloads:
+#' - ``sha1(value = VARCHAR)``
+#' - ``sha1(blob = BLOB)``
 #' @param value `VARCHAR`
 #' @param blob `BLOB`
 #' @return `VARCHAR`
@@ -9512,6 +11457,9 @@ sha1 <- function(value = VARCHAR, blob = BLOB) {
 #'
 #' @name sha256
 #' @usage NULL
+#' @section Overloads:
+#' - ``sha256(value = VARCHAR)``
+#' - ``sha256(blob = BLOB)``
 #' @param value `VARCHAR`
 #' @param blob `BLOB`
 #' @return `VARCHAR`
@@ -9597,6 +11545,19 @@ show_tables_expanded <- function() {
 #'
 #' @name sign
 #' @usage NULL
+#' @section Overloads:
+#' - ``sign(x = TINYINT)``
+#' - ``sign(x = SMALLINT)``
+#' - ``sign(x = INTEGER)``
+#' - ``sign(x = BIGINT)``
+#' - ``sign(x = HUGEINT)``
+#' - ``sign(x = FLOAT)``
+#' - ``sign(x = DOUBLE)``
+#' - ``sign(x = UTINYINT)``
+#' - ``sign(x = USMALLINT)``
+#' - ``sign(x = UINTEGER)``
+#' - ``sign(x = UBIGINT)``
+#' - ``sign(x = UHUGEINT)``
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT`
 #' @examples
@@ -9614,6 +11575,9 @@ sign <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | 
 #'
 #' @name signbit
 #' @usage NULL
+#' @section Overloads:
+#' - ``signbit(x = FLOAT)``
+#' - ``signbit(x = DOUBLE)``
 #' @param x `FLOAT | DOUBLE`
 #' @return `BOOLEAN`
 #' @examples
@@ -9908,6 +11872,9 @@ str_split <- function(string = VARCHAR, separator = VARCHAR) {
 #'
 #' @name str_split_regex
 #' @usage NULL
+#' @section Overloads:
+#' - ``str_split_regex(string = VARCHAR, regex = VARCHAR)``
+#' - ``str_split_regex(string = VARCHAR, regex = VARCHAR, options = VARCHAR)``
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
 #' @param options `VARCHAR`
@@ -9927,6 +11894,13 @@ str_split_regex <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR
 #'
 #' @name strftime
 #' @usage NULL
+#' @section Overloads:
+#' - ``strftime(data = DATE, format = VARCHAR)``
+#' - ``strftime(data = TIMESTAMP, format = VARCHAR)``
+#' - ``strftime(data = TIMESTAMP_NS, format = VARCHAR)``
+#' - ``strftime(data = VARCHAR, format = DATE)``
+#' - ``strftime(data = VARCHAR, format = TIMESTAMP)``
+#' - ``strftime(data = VARCHAR, format = TIMESTAMP_NS)``
 #' @param data `DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR`
 #' @param format `VARCHAR | DATE | TIMESTAMP | TIMESTAMP_NS`
 #' @return `VARCHAR`
@@ -9945,6 +11919,9 @@ strftime <- function(data = `DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR`, format 
 #'
 #' @name string_agg
 #' @usage NULL
+#' @section Overloads:
+#' - ``string_agg(str = ANY)``
+#' - ``string_agg(str = ANY, arg = VARCHAR)``
 #' @param str `ANY`
 #' @param arg `VARCHAR`
 #' @return `VARCHAR`
@@ -9981,6 +11958,9 @@ string_split <- function(string = VARCHAR, separator = VARCHAR) {
 #'
 #' @name string_split_regex
 #' @usage NULL
+#' @section Overloads:
+#' - ``string_split_regex(string = VARCHAR, regex = VARCHAR)``
+#' - ``string_split_regex(string = VARCHAR, regex = VARCHAR, options = VARCHAR)``
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
 #' @param options `VARCHAR`
@@ -10072,6 +12052,9 @@ strpos <- function(string = VARCHAR, search_string = VARCHAR) {
 #'
 #' @name strptime
 #' @usage NULL
+#' @section Overloads:
+#' - ``strptime(text = VARCHAR, format = VARCHAR)``
+#' - ``strptime(text = VARCHAR, `format-list` = `VARCHAR[]`)``
 #' @param text `VARCHAR`
 #' @param format `VARCHAR`
 #' @param format-list `VARCHAR[]`
@@ -10127,6 +12110,9 @@ struct_contains <- function(struct = STRUCT, `'entry'` = ANY) {
 #'
 #' @name struct_extract
 #' @usage NULL
+#' @section Overloads:
+#' - ``struct_extract(struct = STRUCT, `'entry'` = VARCHAR)``
+#' - ``struct_extract(struct = STRUCT, `'entry'` = BIGINT)``
 #' @param struct `STRUCT`
 #' @param 'entry' `VARCHAR | BIGINT`
 #' @return `ANY`
@@ -10250,6 +12236,9 @@ struct_update <- function() {
 #'
 #' @name substr
 #' @usage NULL
+#' @section Overloads:
+#' - ``substr(string = VARCHAR, start = BIGINT, length = BIGINT)``
+#' - ``substr(string = VARCHAR, start = BIGINT)``
 #' @param string `VARCHAR`
 #' @param start `BIGINT`
 #' @param length `BIGINT`
@@ -10270,6 +12259,9 @@ substr <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
 #'
 #' @name substring
 #' @usage NULL
+#' @section Overloads:
+#' - ``substring(string = VARCHAR, start = BIGINT, length = BIGINT)``
+#' - ``substring(string = VARCHAR, start = BIGINT)``
 #' @param string `VARCHAR`
 #' @param start `BIGINT`
 #' @param length `BIGINT`
@@ -10290,6 +12282,9 @@ substring <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
 #'
 #' @name substring_grapheme
 #' @usage NULL
+#' @section Overloads:
+#' - ``substring_grapheme(string = VARCHAR, start = BIGINT, length = BIGINT)``
+#' - ``substring_grapheme(string = VARCHAR, start = BIGINT)``
 #' @param string `VARCHAR`
 #' @param start `BIGINT`
 #' @param length `BIGINT`
@@ -10310,6 +12305,44 @@ substring_grapheme <- function(string = VARCHAR, start = BIGINT, length = BIGINT
 #'
 #' @name subtract
 #' @usage NULL
+#' @section Overloads:
+#' - ``subtract(col0 = TINYINT)``
+#' - ``subtract(col0 = TINYINT, col1 = TINYINT)``
+#' - ``subtract(col0 = SMALLINT)``
+#' - ``subtract(col0 = SMALLINT, col1 = SMALLINT)``
+#' - ``subtract(col0 = INTEGER)``
+#' - ``subtract(col0 = INTEGER, col1 = INTEGER)``
+#' - ``subtract(col0 = BIGINT)``
+#' - ``subtract(col0 = BIGINT, col1 = BIGINT)``
+#' - ``subtract(col0 = HUGEINT)``
+#' - ``subtract(col0 = HUGEINT, col1 = HUGEINT)``
+#' - ``subtract(col0 = FLOAT)``
+#' - ``subtract(col0 = FLOAT, col1 = FLOAT)``
+#' - ``subtract(col0 = DOUBLE)``
+#' - ``subtract(col0 = DOUBLE, col1 = DOUBLE)``
+#' - ``subtract(col0 = DECIMAL)``
+#' - ``subtract(col0 = DECIMAL, col1 = DECIMAL)``
+#' - ``subtract(col0 = UTINYINT)``
+#' - ``subtract(col0 = UTINYINT, col1 = UTINYINT)``
+#' - ``subtract(col0 = USMALLINT)``
+#' - ``subtract(col0 = USMALLINT, col1 = USMALLINT)``
+#' - ``subtract(col0 = UINTEGER)``
+#' - ``subtract(col0 = UINTEGER, col1 = UINTEGER)``
+#' - ``subtract(col0 = UBIGINT)``
+#' - ``subtract(col0 = UBIGINT, col1 = UBIGINT)``
+#' - ``subtract(col0 = UHUGEINT)``
+#' - ``subtract(col0 = UHUGEINT, col1 = UHUGEINT)``
+#' - ``subtract(col0 = BIGNUM)``
+#' - ``subtract(col0 = BIGNUM, col1 = BIGNUM)``
+#' - ``subtract(col0 = DATE, col1 = DATE)``
+#' - ``subtract(col0 = DATE, col1 = INTEGER)``
+#' - ``subtract(col0 = TIMESTAMP, col1 = TIMESTAMP)``
+#' - ``subtract(col0 = INTERVAL, col1 = INTERVAL)``
+#' - ``subtract(col0 = DATE, col1 = INTERVAL)``
+#' - ``subtract(col0 = TIME, col1 = INTERVAL)``
+#' - ``subtract(col0 = TIMESTAMP, col1 = INTERVAL)``
+#' - ``subtract(col0 = `TIME WITH TIME ZONE`, col1 = INTERVAL)``
+#' - ``subtract(col0 = INTERVAL)``
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL | TIME | TIME WITH TIME ZONE`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE`
@@ -10342,6 +12375,15 @@ suffix <- function(string = VARCHAR, search_string = VARCHAR) {
 #'
 #' @name sum
 #' @usage NULL
+#' @section Overloads:
+#' - ``sum(arg = DECIMAL)``
+#' - ``sum(arg = BOOLEAN)``
+#' - ``sum(arg = SMALLINT)``
+#' - ``sum(arg = INTEGER)``
+#' - ``sum(arg = BIGINT)``
+#' - ``sum(arg = HUGEINT)``
+#' - ``sum(arg = DOUBLE)``
+#' - ``sum(arg = BIGNUM)``
 #' @param arg `DECIMAL | BOOLEAN | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | BIGNUM`
 #' @return `DECIMAL | HUGEINT | DOUBLE | BIGNUM`
 #' @examples
@@ -10359,6 +12401,10 @@ sum <- function(arg = `DECIMAL | BOOLEAN | SMALLINT | INTEGER | BIGINT | HUGEINT
 #'
 #' @name sum_no_overflow
 #' @usage NULL
+#' @section Overloads:
+#' - ``sum_no_overflow(arg = INTEGER)``
+#' - ``sum_no_overflow(arg = BIGINT)``
+#' - ``sum_no_overflow(arg = DECIMAL)``
 #' @param arg `INTEGER | BIGINT | DECIMAL`
 #' @return `HUGEINT | DECIMAL`
 #' @examples
@@ -10481,6 +12527,17 @@ test_vector_types <- function(col0 = ANY, all_flat = BOOLEAN) {
 #'
 #' @name time_bucket
 #' @usage NULL
+#' @section Overloads:
+#' - ``time_bucket(bucket_width = INTERVAL, timestamp = DATE)``
+#' - ``time_bucket(bucket_width = INTERVAL, timestamp = DATE, origin = DATE)``
+#' - ``time_bucket(bucket_width = INTERVAL, timestamp = DATE, origin = INTERVAL)``
+#' - ``time_bucket(bucket_width = INTERVAL, timestamp = TIMESTAMP)``
+#' - ``time_bucket(bucket_width = INTERVAL, timestamp = TIMESTAMP, origin = INTERVAL)``
+#' - ``time_bucket(bucket_width = INTERVAL, timestamp = TIMESTAMP, origin = TIMESTAMP)``
+#' - ``time_bucket(bucket_width = INTERVAL, timestamp = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``time_bucket(bucket_width = INTERVAL, timestamp = `TIMESTAMP WITH TIME ZONE`, origin = INTERVAL)``
+#' - ``time_bucket(bucket_width = INTERVAL, timestamp = `TIMESTAMP WITH TIME ZONE`, origin = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``time_bucket(bucket_width = INTERVAL, timestamp = `TIMESTAMP WITH TIME ZONE`, origin = VARCHAR)``
 #' @param bucket_width `INTERVAL`
 #' @param timestamp `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param origin `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | VARCHAR`
@@ -10517,6 +12574,15 @@ timetz_byte_comparable <- function(time_tz = `TIME WITH TIME ZONE`) {
 #'
 #' @name timezone
 #' @usage NULL
+#' @section Overloads:
+#' - ``timezone(ts = DATE)``
+#' - ``timezone(ts = INTERVAL)``
+#' - ``timezone(ts = INTERVAL, col1 = `TIME WITH TIME ZONE`)``
+#' - ``timezone(ts = TIMESTAMP)``
+#' - ``timezone(ts = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``timezone(ts = VARCHAR, col1 = TIMESTAMP)``
+#' - ``timezone(ts = VARCHAR, col1 = `TIMESTAMP WITH TIME ZONE`)``
+#' - ``timezone(ts = VARCHAR, col1 = `TIME WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | VARCHAR`
 #' @param col1 `TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | TIMESTAMP`
@@ -10535,6 +12601,11 @@ timezone <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #'
 #' @name timezone_hour
 #' @usage NULL
+#' @section Overloads:
+#' - ``timezone_hour(ts = DATE)``
+#' - ``timezone_hour(ts = INTERVAL)``
+#' - ``timezone_hour(ts = TIMESTAMP)``
+#' - ``timezone_hour(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -10552,6 +12623,11 @@ timezone_hour <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIM
 #'
 #' @name timezone_minute
 #' @usage NULL
+#' @section Overloads:
+#' - ``timezone_minute(ts = DATE)``
+#' - ``timezone_minute(ts = INTERVAL)``
+#' - ``timezone_minute(ts = TIMESTAMP)``
+#' - ``timezone_minute(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -10569,6 +12645,9 @@ timezone_minute <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH T
 #'
 #' @name to_base
 #' @usage NULL
+#' @section Overloads:
+#' - ``to_base(number = BIGINT, radix = INTEGER)``
+#' - ``to_base(number = BIGINT, radix = INTEGER, min_length = INTEGER)``
 #' @param number `BIGINT`
 #' @param radix `INTEGER`
 #' @param min_length `INTEGER`
@@ -10607,6 +12686,13 @@ to_base64 <- function(blob = BLOB) {
 #'
 #' @name to_binary
 #' @usage NULL
+#' @section Overloads:
+#' - ``to_binary(string = VARCHAR)``
+#' - ``to_binary(value = BIGNUM)``
+#' - ``to_binary(value = UBIGINT)``
+#' - ``to_binary(value = BIGINT)``
+#' - ``to_binary(value = HUGEINT)``
+#' - ``to_binary(value = UHUGEINT)``
 #' @param string `VARCHAR`
 #' @param value `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`
 #' @return `VARCHAR`
@@ -10626,6 +12712,9 @@ to_binary <- function(string = VARCHAR, value = `BIGNUM | UBIGINT | BIGINT | HUG
 #'
 #' @name to_centuries
 #' @usage NULL
+#' @section Overloads:
+#' - ``to_centuries(integer = INTEGER)``
+#' - ``to_centuries(integer = BIGINT)``
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
 #' @examples
@@ -10643,6 +12732,9 @@ to_centuries <- function(integer = `INTEGER | BIGINT`) {
 #'
 #' @name to_days
 #' @usage NULL
+#' @section Overloads:
+#' - ``to_days(integer = INTEGER)``
+#' - ``to_days(integer = BIGINT)``
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
 #' @examples
@@ -10660,6 +12752,9 @@ to_days <- function(integer = `INTEGER | BIGINT`) {
 #'
 #' @name to_decades
 #' @usage NULL
+#' @section Overloads:
+#' - ``to_decades(integer = INTEGER)``
+#' - ``to_decades(integer = BIGINT)``
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
 #' @examples
@@ -10681,6 +12776,14 @@ to_decades <- function(integer = `INTEGER | BIGINT`) {
 #'
 #' @name to_hex
 #' @usage NULL
+#' @section Overloads:
+#' - ``to_hex(string = VARCHAR)``
+#' - ``to_hex(value = BIGNUM)``
+#' - ``to_hex(blob = BLOB)``
+#' - ``to_hex(value = BIGINT)``
+#' - ``to_hex(value = UBIGINT)``
+#' - ``to_hex(value = HUGEINT)``
+#' - ``to_hex(value = UHUGEINT)``
 #' @param string `VARCHAR`
 #' @param value `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`
 #' @param blob `BLOB`
@@ -10736,6 +12839,9 @@ to_microseconds <- function(integer = BIGINT) {
 #'
 #' @name to_millennia
 #' @usage NULL
+#' @section Overloads:
+#' - ``to_millennia(integer = INTEGER)``
+#' - ``to_millennia(integer = BIGINT)``
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
 #' @examples
@@ -10787,6 +12893,9 @@ to_minutes <- function(integer = BIGINT) {
 #'
 #' @name to_months
 #' @usage NULL
+#' @section Overloads:
+#' - ``to_months(integer = INTEGER)``
+#' - ``to_months(integer = BIGINT)``
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
 #' @examples
@@ -10804,6 +12913,9 @@ to_months <- function(integer = `INTEGER | BIGINT`) {
 #'
 #' @name to_quarters
 #' @usage NULL
+#' @section Overloads:
+#' - ``to_quarters(integer = INTEGER)``
+#' - ``to_quarters(integer = BIGINT)``
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
 #' @examples
@@ -10855,6 +12967,9 @@ to_timestamp <- function(sec = DOUBLE) {
 #'
 #' @name to_weeks
 #' @usage NULL
+#' @section Overloads:
+#' - ``to_weeks(integer = INTEGER)``
+#' - ``to_weeks(integer = BIGINT)``
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
 #' @examples
@@ -10872,6 +12987,9 @@ to_weeks <- function(integer = `INTEGER | BIGINT`) {
 #'
 #' @name to_years
 #' @usage NULL
+#' @section Overloads:
+#' - ``to_years(integer = INTEGER)``
+#' - ``to_years(integer = BIGINT)``
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
 #' @examples
@@ -10925,6 +13043,9 @@ translate <- function(string = VARCHAR, from = VARCHAR, to = VARCHAR) {
 #'
 #' @name trim
 #' @usage NULL
+#' @section Overloads:
+#' - ``trim(string = VARCHAR)``
+#' - ``trim(string = VARCHAR, characters = VARCHAR)``
 #' @param string `VARCHAR`
 #' @param characters `VARCHAR`
 #' @return `VARCHAR`
@@ -10944,6 +13065,33 @@ trim <- function(string = VARCHAR, characters = VARCHAR) {
 #'
 #' @name trunc
 #' @usage NULL
+#' @section Overloads:
+#' - ``trunc(x = TINYINT)``
+#' - ``trunc(x = TINYINT, col1 = INTEGER)``
+#' - ``trunc(x = SMALLINT)``
+#' - ``trunc(x = SMALLINT, col1 = INTEGER)``
+#' - ``trunc(x = INTEGER)``
+#' - ``trunc(x = INTEGER, col1 = INTEGER)``
+#' - ``trunc(x = BIGINT)``
+#' - ``trunc(x = BIGINT, col1 = INTEGER)``
+#' - ``trunc(x = HUGEINT)``
+#' - ``trunc(x = HUGEINT, col1 = INTEGER)``
+#' - ``trunc(x = FLOAT)``
+#' - ``trunc(x = FLOAT, col1 = INTEGER)``
+#' - ``trunc(x = DOUBLE)``
+#' - ``trunc(x = DOUBLE, col1 = INTEGER)``
+#' - ``trunc(x = DECIMAL)``
+#' - ``trunc(x = DECIMAL, col1 = INTEGER)``
+#' - ``trunc(x = UTINYINT)``
+#' - ``trunc(x = UTINYINT, col1 = INTEGER)``
+#' - ``trunc(x = USMALLINT)``
+#' - ``trunc(x = USMALLINT, col1 = INTEGER)``
+#' - ``trunc(x = UINTEGER)``
+#' - ``trunc(x = UINTEGER, col1 = INTEGER)``
+#' - ``trunc(x = UBIGINT)``
+#' - ``trunc(x = UBIGINT, col1 = INTEGER)``
+#' - ``trunc(x = UHUGEINT)``
+#' - ``trunc(x = UHUGEINT, col1 = INTEGER)``
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `INTEGER`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
@@ -10975,6 +13123,9 @@ truncate_duckdb_logs <- function() {
 #'
 #' @name try_strptime
 #' @usage NULL
+#' @section Overloads:
+#' - ``try_strptime(text = VARCHAR, format = VARCHAR)``
+#' - ``try_strptime(text = VARCHAR, format = `VARCHAR[]`)``
 #' @param text `VARCHAR`
 #' @param format `VARCHAR | VARCHAR[]`
 #' @return `TIMESTAMP`
@@ -11386,6 +13537,9 @@ variance <- function(x = DOUBLE) {
 #'
 #' @name variant_extract
 #' @usage NULL
+#' @section Overloads:
+#' - ``variant_extract(col0 = VARIANT, col1 = VARCHAR)``
+#' - ``variant_extract(col0 = VARIANT, col1 = UINTEGER)``
 #' @param col0 `VARIANT`
 #' @param col1 `VARCHAR | UINTEGER`
 #' @return `VARIANT`
@@ -11486,6 +13640,9 @@ verify_serializer <- function() {
 #'
 #' @name version
 #' @usage NULL
+#' @section Overloads:
+#' - ``version()``
+#' - ``version()``
 
 #' @return `VARCHAR`
 #' @examples
@@ -11517,6 +13674,11 @@ wavg <- function(value, weight) {
 #'
 #' @name week
 #' @usage NULL
+#' @section Overloads:
+#' - ``week(ts = DATE)``
+#' - ``week(ts = INTERVAL)``
+#' - ``week(ts = TIMESTAMP)``
+#' - ``week(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -11534,6 +13696,11 @@ week <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) 
 #'
 #' @name weekday
 #' @usage NULL
+#' @section Overloads:
+#' - ``weekday(ts = DATE)``
+#' - ``weekday(ts = INTERVAL)``
+#' - ``weekday(ts = TIMESTAMP)``
+#' - ``weekday(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -11551,6 +13718,11 @@ weekday <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #'
 #' @name weekofyear
 #' @usage NULL
+#' @section Overloads:
+#' - ``weekofyear(ts = DATE)``
+#' - ``weekofyear(ts = INTERVAL)``
+#' - ``weekofyear(ts = TIMESTAMP)``
+#' - ``weekofyear(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -11613,6 +13785,18 @@ write_log <- function(string = VARCHAR) {
 #'
 #' @name xor
 #' @usage NULL
+#' @section Overloads:
+#' - ``xor(left = TINYINT, right = TINYINT)``
+#' - ``xor(left = SMALLINT, right = SMALLINT)``
+#' - ``xor(left = INTEGER, right = INTEGER)``
+#' - ``xor(left = BIGINT, right = BIGINT)``
+#' - ``xor(left = HUGEINT, right = HUGEINT)``
+#' - ``xor(left = UTINYINT, right = UTINYINT)``
+#' - ``xor(left = USMALLINT, right = USMALLINT)``
+#' - ``xor(left = UINTEGER, right = UINTEGER)``
+#' - ``xor(left = UBIGINT, right = UBIGINT)``
+#' - ``xor(left = UHUGEINT, right = UHUGEINT)``
+#' - ``xor(left = BIT, right = BIT)``
 #' @param left `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @param right `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
@@ -11631,6 +13815,11 @@ xor <- function(left = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYI
 #'
 #' @name year
 #' @usage NULL
+#' @section Overloads:
+#' - ``year(ts = DATE)``
+#' - ``year(ts = INTERVAL)``
+#' - ``year(ts = TIMESTAMP)``
+#' - ``year(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -11648,6 +13837,11 @@ year <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) 
 #'
 #' @name yearweek
 #' @usage NULL
+#' @section Overloads:
+#' - ``yearweek(ts = DATE)``
+#' - ``yearweek(ts = INTERVAL)``
+#' - ``yearweek(ts = TIMESTAMP)``
+#' - ``yearweek(ts = `TIMESTAMP WITH TIME ZONE`)``
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @examples
@@ -11665,6 +13859,18 @@ yearweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #'
 #' @name or-
 #' @usage NULL
+#' @section Overloads:
+#' - ```|`(left = TINYINT, right = TINYINT)``
+#' - ```|`(left = SMALLINT, right = SMALLINT)``
+#' - ```|`(left = INTEGER, right = INTEGER)``
+#' - ```|`(left = BIGINT, right = BIGINT)``
+#' - ```|`(left = HUGEINT, right = HUGEINT)``
+#' - ```|`(left = UTINYINT, right = UTINYINT)``
+#' - ```|`(left = USMALLINT, right = USMALLINT)``
+#' - ```|`(left = UINTEGER, right = UINTEGER)``
+#' - ```|`(left = UBIGINT, right = UBIGINT)``
+#' - ```|`(left = UHUGEINT, right = UHUGEINT)``
+#' - ```|`(left = BIT, right = BIT)``
 #' @param left `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @param right `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
@@ -11703,6 +13909,18 @@ yearweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #'
 #' @name ~
 #' @usage NULL
+#' @section Overloads:
+#' - ```~`(input = TINYINT)``
+#' - ```~`(input = SMALLINT)``
+#' - ```~`(input = INTEGER)``
+#' - ```~`(input = BIGINT)``
+#' - ```~`(input = HUGEINT)``
+#' - ```~`(input = UTINYINT)``
+#' - ```~`(input = USMALLINT)``
+#' - ```~`(input = UINTEGER)``
+#' - ```~`(input = UBIGINT)``
+#' - ```~`(input = UHUGEINT)``
+#' - ```~`(input = BIT)``
 #' @param input `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @examples

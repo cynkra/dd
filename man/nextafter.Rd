@@ -14,6 +14,14 @@
 \description{
 Returns the next floating point value after x in the direction of y.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{nextafter(x = DOUBLE, y = DOUBLE)}
+\item \code{nextafter(x = FLOAT, y = FLOAT)}
+}
+}
+
 \examples{
 \dontrun{
 nextafter(1::float, 2::float)

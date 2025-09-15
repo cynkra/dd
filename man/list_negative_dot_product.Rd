@@ -14,6 +14,14 @@
 \description{
 Computes the negative inner product between two same-sized lists.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{list_negative_dot_product(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}
+\item \code{list_negative_dot_product(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}
+}
+}
+
 \examples{
 \dontrun{
 list_negative_dot_product([1, 2, 3], [1, 2, 3])

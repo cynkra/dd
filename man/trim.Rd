@@ -14,6 +14,14 @@
 \description{
 Removes any occurrences of any of the \code{characters} from either side of the \code{string}. \code{characters} defaults to \code{space}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{trim(string = VARCHAR)}
+\item \code{trim(string = VARCHAR, characters = VARCHAR)}
+}
+}
+
 \examples{
 \dontrun{
 trim('    test  ')

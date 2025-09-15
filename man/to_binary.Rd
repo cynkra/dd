@@ -16,6 +16,18 @@ Converts the \code{string} to binary representation.
 
 Converts the \code{value} to binary representation.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{to_binary(string = VARCHAR)}
+\item \code{to_binary(value = BIGNUM)}
+\item \code{to_binary(value = UBIGINT)}
+\item \code{to_binary(value = BIGINT)}
+\item \code{to_binary(value = HUGEINT)}
+\item \code{to_binary(value = UHUGEINT)}
+}
+}
+
 \examples{
 \dontrun{
 to_binary('Aa')

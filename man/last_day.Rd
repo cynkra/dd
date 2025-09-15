@@ -12,6 +12,15 @@
 \description{
 Returns the last day of the month.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{last_day(ts = DATE)}
+\item \code{last_day(ts = TIMESTAMP)}
+\item \code{last_day(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 last_day(TIMESTAMP '1992-03-22 01:02:03.1234')

@@ -16,6 +16,14 @@
 \description{
 Resizes the \code{list} to contain \code{size} elements. Initializes new elements with \code{value} or \code{NULL} if \code{value} is not set.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{list_resize(list = `ANY[]`, `size[` = ANY)}
+\item \code{list_resize(list = `ANY[]`, `size[` = ANY, `value]` = ANY)}
+}
+}
+
 \examples{
 \dontrun{
 list_resize([1, 2, 3], 5, 0)

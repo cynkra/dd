@@ -14,3 +14,46 @@
 \description{
 DuckDB function \code{subtract()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{subtract(col0 = TINYINT)}
+\item \code{subtract(col0 = TINYINT, col1 = TINYINT)}
+\item \code{subtract(col0 = SMALLINT)}
+\item \code{subtract(col0 = SMALLINT, col1 = SMALLINT)}
+\item \code{subtract(col0 = INTEGER)}
+\item \code{subtract(col0 = INTEGER, col1 = INTEGER)}
+\item \code{subtract(col0 = BIGINT)}
+\item \code{subtract(col0 = BIGINT, col1 = BIGINT)}
+\item \code{subtract(col0 = HUGEINT)}
+\item \code{subtract(col0 = HUGEINT, col1 = HUGEINT)}
+\item \code{subtract(col0 = FLOAT)}
+\item \code{subtract(col0 = FLOAT, col1 = FLOAT)}
+\item \code{subtract(col0 = DOUBLE)}
+\item \code{subtract(col0 = DOUBLE, col1 = DOUBLE)}
+\item \code{subtract(col0 = DECIMAL)}
+\item \code{subtract(col0 = DECIMAL, col1 = DECIMAL)}
+\item \code{subtract(col0 = UTINYINT)}
+\item \code{subtract(col0 = UTINYINT, col1 = UTINYINT)}
+\item \code{subtract(col0 = USMALLINT)}
+\item \code{subtract(col0 = USMALLINT, col1 = USMALLINT)}
+\item \code{subtract(col0 = UINTEGER)}
+\item \code{subtract(col0 = UINTEGER, col1 = UINTEGER)}
+\item \code{subtract(col0 = UBIGINT)}
+\item \code{subtract(col0 = UBIGINT, col1 = UBIGINT)}
+\item \code{subtract(col0 = UHUGEINT)}
+\item \code{subtract(col0 = UHUGEINT, col1 = UHUGEINT)}
+\item \code{subtract(col0 = BIGNUM)}
+\item \code{subtract(col0 = BIGNUM, col1 = BIGNUM)}
+\item \code{subtract(col0 = DATE, col1 = DATE)}
+\item \code{subtract(col0 = DATE, col1 = INTEGER)}
+\item \code{subtract(col0 = TIMESTAMP, col1 = TIMESTAMP)}
+\item \code{subtract(col0 = INTERVAL, col1 = INTERVAL)}
+\item \code{subtract(col0 = DATE, col1 = INTERVAL)}
+\item \code{subtract(col0 = TIME, col1 = INTERVAL)}
+\item \code{subtract(col0 = TIMESTAMP, col1 = INTERVAL)}
+\item \code{subtract(col0 = `TIME WITH TIME ZONE`, col1 = INTERVAL)}
+\item \code{subtract(col0 = INTERVAL)}
+}
+}
+

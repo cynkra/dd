@@ -14,6 +14,28 @@
 \description{
 Rounds x to s decimal places.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{round(x = TINYINT)}
+\item \code{round(x = TINYINT, precision = INTEGER)}
+\item \code{round(x = SMALLINT)}
+\item \code{round(x = SMALLINT, precision = INTEGER)}
+\item \code{round(x = INTEGER)}
+\item \code{round(x = INTEGER, precision = INTEGER)}
+\item \code{round(x = BIGINT)}
+\item \code{round(x = BIGINT, precision = INTEGER)}
+\item \code{round(x = HUGEINT)}
+\item \code{round(x = HUGEINT, precision = INTEGER)}
+\item \code{round(x = FLOAT)}
+\item \code{round(x = FLOAT, precision = INTEGER)}
+\item \code{round(x = DOUBLE)}
+\item \code{round(x = DOUBLE, precision = INTEGER)}
+\item \code{round(x = DECIMAL)}
+\item \code{round(x = DECIMAL, precision = INTEGER)}
+}
+}
+
 \examples{
 \dontrun{
 round(42.4332, 2)

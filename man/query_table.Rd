@@ -14,3 +14,12 @@ Unspecified.
 \description{
 DuckDB function \code{query_table()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{query_table(col0 = VARCHAR)}
+\item \code{query_table(col0 = `VARCHAR[]`)}
+\item \code{query_table(col0 = `VARCHAR[]`, col1 = BOOLEAN)}
+}
+}
+

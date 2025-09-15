@@ -14,6 +14,14 @@
 \description{
 Computes the negative inner product between two arrays of the same size. The array elements can not be \code{NULL}. The arrays can have any size as long as the size is the same for both arguments.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{array_negative_inner_product(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)}
+\item \code{array_negative_inner_product(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)}
+}
+}
+
 \examples{
 \dontrun{
 array_negative_inner_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))

@@ -12,6 +12,15 @@
 \description{
 Extract the Julian Day number from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{julian(ts = DATE)}
+\item \code{julian(ts = TIMESTAMP)}
+\item \code{julian(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 julian(timestamp '2006-01-01 12:00')

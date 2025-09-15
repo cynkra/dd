@@ -18,6 +18,14 @@
 \description{
 If \code{string} contains the \code{regex}, replaces the matching part with \code{replacement}. A set of optional regex \code{options} can be set.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{regexp_replace(string = VARCHAR, regex = VARCHAR, replacement = VARCHAR)}
+\item \code{regexp_replace(string = VARCHAR, regex = VARCHAR, replacement = VARCHAR, options = VARCHAR)}
+}
+}
+
 \examples{
 \dontrun{
 regexp_replace('hello', '[lo]', '-')

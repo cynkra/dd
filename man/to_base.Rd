@@ -16,6 +16,14 @@
 \description{
 Converts \code{number} to a string in the given base \code{radix}, optionally padding with leading zeros to \code{min_length}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{to_base(number = BIGINT, radix = INTEGER)}
+\item \code{to_base(number = BIGINT, radix = INTEGER, min_length = INTEGER)}
+}
+}
+
 \examples{
 \dontrun{
 to_base(42, 16, 5)

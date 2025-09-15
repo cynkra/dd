@@ -12,6 +12,23 @@
 \description{
 Returns the bitwise OR of all bits in a given expression.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{bit_or(arg = TINYINT)}
+\item \code{bit_or(arg = SMALLINT)}
+\item \code{bit_or(arg = INTEGER)}
+\item \code{bit_or(arg = BIGINT)}
+\item \code{bit_or(arg = HUGEINT)}
+\item \code{bit_or(arg = UTINYINT)}
+\item \code{bit_or(arg = USMALLINT)}
+\item \code{bit_or(arg = UINTEGER)}
+\item \code{bit_or(arg = UBIGINT)}
+\item \code{bit_or(arg = UHUGEINT)}
+\item \code{bit_or(arg = BIT)}
+}
+}
+
 \examples{
 \dontrun{
 bit_or(A)

@@ -12,6 +12,16 @@
 \description{
 Extract the day component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{day(ts = DATE)}
+\item \code{day(ts = INTERVAL)}
+\item \code{day(ts = TIMESTAMP)}
+\item \code{day(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 day(timestamp '2021-08-03 11:59:44.123456')

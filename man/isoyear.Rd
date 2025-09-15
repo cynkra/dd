@@ -12,6 +12,16 @@
 \description{
 Extract the isoyear component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{isoyear(ts = DATE)}
+\item \code{isoyear(ts = INTERVAL)}
+\item \code{isoyear(ts = TIMESTAMP)}
+\item \code{isoyear(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 isoyear(timestamp '2021-08-03 11:59:44.123456')

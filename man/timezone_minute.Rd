@@ -12,6 +12,16 @@
 \description{
 Extract the timezone_minute component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{timezone_minute(ts = DATE)}
+\item \code{timezone_minute(ts = INTERVAL)}
+\item \code{timezone_minute(ts = TIMESTAMP)}
+\item \code{timezone_minute(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 timezone_minute(timestamp '2021-08-03 11:59:44.123456')

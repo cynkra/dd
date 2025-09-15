@@ -12,6 +12,16 @@
 \description{
 Extract the quarter component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{quarter(ts = DATE)}
+\item \code{quarter(ts = INTERVAL)}
+\item \code{quarter(ts = TIMESTAMP)}
+\item \code{quarter(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 quarter(timestamp '2021-08-03 11:59:44.123456')

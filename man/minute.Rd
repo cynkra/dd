@@ -12,6 +12,19 @@
 \description{
 Extract the minute component from a date or timestamp.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{minute(ts = DATE)}
+\item \code{minute(ts = INTERVAL)}
+\item \code{minute(ts = TIME)}
+\item \code{minute(ts = TIMESTAMP)}
+\item \code{minute(ts = `TIME WITH TIME ZONE`)}
+\item \code{minute(ts = TIME_NS)}
+\item \code{minute(ts = `TIMESTAMP WITH TIME ZONE`)}
+}
+}
+
 \examples{
 \dontrun{
 minute(timestamp '2021-08-03 11:59:44.123456')

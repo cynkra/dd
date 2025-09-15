@@ -14,3 +14,52 @@
 \description{
 DuckDB function \code{add()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{add(col0 = TINYINT)}
+\item \code{add(col0 = TINYINT, col1 = TINYINT)}
+\item \code{add(col0 = SMALLINT)}
+\item \code{add(col0 = SMALLINT, col1 = SMALLINT)}
+\item \code{add(col0 = INTEGER)}
+\item \code{add(col0 = INTEGER, col1 = INTEGER)}
+\item \code{add(col0 = BIGINT)}
+\item \code{add(col0 = BIGINT, col1 = BIGINT)}
+\item \code{add(col0 = HUGEINT)}
+\item \code{add(col0 = HUGEINT, col1 = HUGEINT)}
+\item \code{add(col0 = FLOAT)}
+\item \code{add(col0 = FLOAT, col1 = FLOAT)}
+\item \code{add(col0 = DOUBLE)}
+\item \code{add(col0 = DOUBLE, col1 = DOUBLE)}
+\item \code{add(col0 = DECIMAL)}
+\item \code{add(col0 = DECIMAL, col1 = DECIMAL)}
+\item \code{add(col0 = UTINYINT)}
+\item \code{add(col0 = UTINYINT, col1 = UTINYINT)}
+\item \code{add(col0 = USMALLINT)}
+\item \code{add(col0 = USMALLINT, col1 = USMALLINT)}
+\item \code{add(col0 = UINTEGER)}
+\item \code{add(col0 = UINTEGER, col1 = UINTEGER)}
+\item \code{add(col0 = UBIGINT)}
+\item \code{add(col0 = UBIGINT, col1 = UBIGINT)}
+\item \code{add(col0 = UHUGEINT)}
+\item \code{add(col0 = UHUGEINT, col1 = UHUGEINT)}
+\item \code{add(col0 = DATE, col1 = INTEGER)}
+\item \code{add(col0 = INTEGER, col1 = DATE)}
+\item \code{add(col0 = INTERVAL, col1 = INTERVAL)}
+\item \code{add(col0 = DATE, col1 = INTERVAL)}
+\item \code{add(col0 = INTERVAL, col1 = DATE)}
+\item \code{add(col0 = TIME, col1 = INTERVAL)}
+\item \code{add(col0 = INTERVAL, col1 = TIME)}
+\item \code{add(col0 = TIMESTAMP, col1 = INTERVAL)}
+\item \code{add(col0 = INTERVAL, col1 = TIMESTAMP)}
+\item \code{add(col0 = `TIME WITH TIME ZONE`, col1 = INTERVAL)}
+\item \code{add(col0 = INTERVAL, col1 = `TIME WITH TIME ZONE`)}
+\item \code{add(col0 = TIME, col1 = DATE)}
+\item \code{add(col0 = DATE, col1 = TIME)}
+\item \code{add(col0 = `TIME WITH TIME ZONE`, col1 = DATE)}
+\item \code{add(col0 = DATE, col1 = `TIME WITH TIME ZONE`)}
+\item \code{add()}
+\item \code{add(col0 = BIGNUM, col1 = BIGNUM)}
+}
+}
+

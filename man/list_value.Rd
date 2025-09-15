@@ -12,6 +12,14 @@
 \description{
 Creates a LIST containing the argument values.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{list_value()}
+\item \code{list_value(any = T)}
+}
+}
+
 \examples{
 \dontrun{
 list_value(4, 5, 6)

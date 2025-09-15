@@ -12,6 +12,14 @@
 \description{
 Construct a day interval.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{to_days(integer = INTEGER)}
+\item \code{to_days(integer = BIGINT)}
+}
+}
+
 \examples{
 \dontrun{
 to_days(5)

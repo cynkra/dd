@@ -16,6 +16,14 @@
 \description{
 Reduces all elements of the input \code{list} into a single scalar value by executing the \code{lambda} function on a running result and the next list element. The \code{lambda} function has an optional \code{initial_value} argument.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{array_reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA)}
+\item \code{array_reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY)}
+}
+}
+
 \examples{
 \dontrun{
 array_reduce([1, 2, 3], lambda x, y : x + y)

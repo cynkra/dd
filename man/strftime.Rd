@@ -14,6 +14,18 @@
 \description{
 Converts a \code{date} to a string according to the format string.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{strftime(data = DATE, format = VARCHAR)}
+\item \code{strftime(data = TIMESTAMP, format = VARCHAR)}
+\item \code{strftime(data = TIMESTAMP_NS, format = VARCHAR)}
+\item \code{strftime(data = VARCHAR, format = DATE)}
+\item \code{strftime(data = VARCHAR, format = TIMESTAMP)}
+\item \code{strftime(data = VARCHAR, format = TIMESTAMP_NS)}
+}
+}
+
 \examples{
 \dontrun{
 strftime(date '1992-01-01', '\%a, \%-d \%B \%Y')
