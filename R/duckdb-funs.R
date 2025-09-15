@@ -203,6 +203,23 @@ array_filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function array_filter() is not available in R.")
 }
 
+#' DuckDB function array_grade_up
+#'
+#' Works like list_sort, but the results are the indexes that correspond to the position in the original list instead of the actual values.
+#'
+#' @name array_grade_up
+#' @usage NULL
+#' @param list `ANY[]`
+#' @param col1 `VARCHAR`
+#' @param col2 `VARCHAR`
+#' @examples
+#' \dontrun{
+#' array_grade_up([3, 6, 1, 2])
+#' }
+array_grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
+  stop("DuckDB function array_grade_up() is not available in R.")
+}
+
 #' DuckDB function array_has
 #'
 #' Returns true if the list contains the element.
@@ -395,6 +412,23 @@ array_reverse_sort <- function(list = `ANY[]`, col1 = VARCHAR) {
 #' }
 array_select <- function(value_list = `T[]`, index_list = `BIGINT[]`) {
   stop("DuckDB function array_select() is not available in R.")
+}
+
+#' DuckDB function array_sort
+#'
+#' Sorts the elements of the list.
+#'
+#' @name array_sort
+#' @usage NULL
+#' @param list `ANY[]`
+#' @param col1 `VARCHAR`
+#' @param col2 `VARCHAR`
+#' @examples
+#' \dontrun{
+#' array_sort([3, 6, 1, 2])
+#' }
+array_sort <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
+  stop("DuckDB function array_sort() is not available in R.")
 }
 
 #' DuckDB function array_transform
@@ -647,6 +681,36 @@ cbrt <- function(x = DOUBLE) {
   stop("DuckDB function cbrt() is not available in R.")
 }
 
+#' DuckDB function ceil
+#'
+#' Rounds the number up.
+#'
+#' @name ceil
+#' @usage NULL
+#' @param x `FLOAT | DOUBLE | DECIMAL`
+#' @examples
+#' \dontrun{
+#' ceil(17.4)
+#' }
+ceil <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
+  stop("DuckDB function ceil() is not available in R.")
+}
+
+#' DuckDB function ceiling
+#'
+#' Rounds the number up.
+#'
+#' @name ceiling
+#' @usage NULL
+#' @param x `FLOAT | DOUBLE | DECIMAL`
+#' @examples
+#' \dontrun{
+#' ceiling(17.4)
+#' }
+ceiling <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
+  stop("DuckDB function ceiling() is not available in R.")
+}
+
 #' DuckDB function chr
 #'
 #' Returns a character which is corresponding the ASCII code value or Unicode code point.
@@ -752,6 +816,21 @@ current_setting <- function(setting_name = VARCHAR) {
 #' }
 damerau_levenshtein <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function damerau_levenshtein() is not available in R.")
+}
+
+#' DuckDB function dayname
+#'
+#' The (English) name of the weekday.
+#'
+#' @name dayname
+#' @usage NULL
+#' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' dayname(TIMESTAMP '1992-03-22')
+#' }
+dayname <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function dayname() is not available in R.")
 }
 
 #' DuckDB function decode
@@ -999,6 +1078,21 @@ flatten <- function(nested_list = `T[][]`) {
   stop("DuckDB function flatten() is not available in R.")
 }
 
+#' DuckDB function floor
+#'
+#' Rounds the number down.
+#'
+#' @name floor
+#' @usage NULL
+#' @param x `FLOAT | DOUBLE | DECIMAL`
+#' @examples
+#' \dontrun{
+#' floor(17.4)
+#' }
+floor <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
+  stop("DuckDB function floor() is not available in R.")
+}
+
 #' DuckDB function formatReadableDecimalSize
 #'
 #' Converts `integer` to a human-readable representation using units based on powers of 10 (KB, MB, GB, etc.).
@@ -1134,6 +1228,23 @@ gcd <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
 #' }
 get_bit <- function(bitstring = BIT, index = INTEGER) {
   stop("DuckDB function get_bit() is not available in R.")
+}
+
+#' DuckDB function grade_up
+#'
+#' Works like list_sort, but the results are the indexes that correspond to the position in the original list instead of the actual values.
+#'
+#' @name grade_up
+#' @usage NULL
+#' @param list `ANY[]`
+#' @param col1 `VARCHAR`
+#' @param col2 `VARCHAR`
+#' @examples
+#' \dontrun{
+#' grade_up([3, 6, 1, 2])
+#' }
+grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
+  stop("DuckDB function grade_up() is not available in R.")
 }
 
 #' DuckDB function greatest_common_divisor
@@ -1279,6 +1390,36 @@ jaro_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE) {
 #' }
 jaro_winkler_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE) {
   stop("DuckDB function jaro_winkler_similarity() is not available in R.")
+}
+
+#' DuckDB function julian
+#'
+#' Extract the Julian Day number from a date or timestamp.
+#'
+#' @name julian
+#' @usage NULL
+#' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' julian(timestamp '2006-01-01 12:00')
+#' }
+julian <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function julian() is not available in R.")
+}
+
+#' DuckDB function last_day
+#'
+#' Returns the last day of the month.
+#'
+#' @name last_day
+#' @usage NULL
+#' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' last_day(TIMESTAMP '1992-03-22 01:02:03.1234')
+#' }
+last_day <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function last_day() is not available in R.")
 }
 
 #' DuckDB function lcase
@@ -1582,6 +1723,23 @@ list_filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function list_filter() is not available in R.")
 }
 
+#' DuckDB function list_grade_up
+#'
+#' Works like list_sort, but the results are the indexes that correspond to the position in the original list instead of the actual values.
+#'
+#' @name list_grade_up
+#' @usage NULL
+#' @param list `ANY[]`
+#' @param col1 `VARCHAR`
+#' @param col2 `VARCHAR`
+#' @examples
+#' \dontrun{
+#' list_grade_up([3, 6, 1, 2])
+#' }
+list_grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
+  stop("DuckDB function list_grade_up() is not available in R.")
+}
+
 #' DuckDB function list_has
 #'
 #' Returns true if the list contains the element.
@@ -1789,6 +1947,23 @@ list_reverse_sort <- function(list = `ANY[]`, col1 = VARCHAR) {
 #' }
 list_select <- function(value_list = `T[]`, index_list = `BIGINT[]`) {
   stop("DuckDB function list_select() is not available in R.")
+}
+
+#' DuckDB function list_sort
+#'
+#' Sorts the elements of the list.
+#'
+#' @name list_sort
+#' @usage NULL
+#' @param list `ANY[]`
+#' @param col1 `VARCHAR`
+#' @param col2 `VARCHAR`
+#' @examples
+#' \dontrun{
+#' list_sort([3, 6, 1, 2])
+#' }
+list_sort <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
+  stop("DuckDB function list_sort() is not available in R.")
 }
 
 #' DuckDB function list_transform
@@ -2169,6 +2344,21 @@ mismatches <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function mismatches() is not available in R.")
 }
 
+#' DuckDB function monthname
+#'
+#' The (English) name of the month.
+#'
+#' @name monthname
+#' @usage NULL
+#' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' monthname(TIMESTAMP '1992-09-20')
+#' }
+monthname <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function monthname() is not available in R.")
+}
+
 #' DuckDB function nextafter
 #'
 #' Returns the next floating point value after x in the direction of y.
@@ -2452,6 +2642,24 @@ reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY) 
 #' }
 regexp_escape <- function(string = VARCHAR) {
   stop("DuckDB function regexp_escape() is not available in R.")
+}
+
+#' DuckDB function regexp_extract_all
+#'
+#' Finds non-overlapping occurrences of the `regex` in the `string` and returns the corresponding values of the capturing `group`. A set of optional regex `options` can be set.
+#'
+#' @name regexp_extract_all
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param regex `VARCHAR`
+#' @param group `INTEGER`
+#' @param options `VARCHAR`
+#' @examples
+#' \dontrun{
+#' regexp_extract_all('Peter: 33, Paul:14', '(\w+):\s*(\d+)', 2)
+#' }
+regexp_extract_all <- function(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR) {
+  stop("DuckDB function regexp_extract_all() is not available in R.")
 }
 
 #' DuckDB function regexp_full_match
