@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{disable_profile()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

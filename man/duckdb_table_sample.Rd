@@ -15,8 +15,3 @@ Unspecified.
 \description{
 DuckDB function \code{duckdb_table_sample()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

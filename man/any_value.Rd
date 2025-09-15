@@ -12,8 +12,3 @@
 \description{
 Returns the first non-NULL value from arg. This function is affected by ordering.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

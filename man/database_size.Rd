@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{database_size()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

@@ -16,6 +16,7 @@ Removes any occurrences of any of the \code{characters} from either side of the 
 }
 \examples{
 \dontrun{
-c("trim('    test  ')", "trim('>>>>test<<', '><')")
+trim('    test  ')
+trim('>>>>test<<', '><')
 }
 }

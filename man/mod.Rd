@@ -14,8 +14,3 @@
 \description{
 DuckDB function \code{mod()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

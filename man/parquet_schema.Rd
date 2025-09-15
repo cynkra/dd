@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{parquet_schema()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

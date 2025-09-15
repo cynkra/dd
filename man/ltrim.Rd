@@ -16,6 +16,7 @@ Removes any occurrences of any of the \code{characters} from the left side of th
 }
 \examples{
 \dontrun{
-c("ltrim('    test  ')", "ltrim('>>>>test<<', '><')")
+ltrim('    test  ')
+ltrim('>>>>test<<', '><')
 }
 }

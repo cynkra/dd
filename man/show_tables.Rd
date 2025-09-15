@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{show_tables()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

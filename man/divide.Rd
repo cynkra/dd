@@ -14,8 +14,3 @@
 \description{
 DuckDB function \code{divide()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

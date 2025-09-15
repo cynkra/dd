@@ -15,8 +15,3 @@ Unspecified.
 \description{
 DuckDB function \code{import_database()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

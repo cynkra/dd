@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{truncate_duckdb_logs()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

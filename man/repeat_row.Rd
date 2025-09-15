@@ -15,8 +15,3 @@ Unspecified.
 \description{
 DuckDB function \code{repeat_row()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

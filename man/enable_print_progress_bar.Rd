@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{enable_print_progress_bar()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

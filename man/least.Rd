@@ -17,6 +17,7 @@ Returns the smallest value. For strings lexicographical ordering is used. Note t
 }
 \examples{
 \dontrun{
-c("least(42, 84)", "least('abc', 'bcd', 'cde', 'EFG')")
+least(42, 84)
+least('abc', 'bcd', 'cde', 'EFG')
 }
 }

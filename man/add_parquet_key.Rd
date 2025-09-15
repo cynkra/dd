@@ -17,8 +17,3 @@ Unspecified.
 \description{
 DuckDB function \code{add_parquet_key()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

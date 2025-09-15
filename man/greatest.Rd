@@ -17,6 +17,7 @@ Returns the largest value. For strings lexicographical ordering is used. Note th
 }
 \examples{
 \dontrun{
-c("greatest(42, 84)", "greatest('abc', 'bcd', 'cde', 'EFG')")
+greatest(42, 84)
+greatest('abc', 'bcd', 'cde', 'EFG')
 }
 }

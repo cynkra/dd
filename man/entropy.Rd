@@ -15,8 +15,3 @@ entropy(x = ANY)
 \description{
 Returns the log-2 entropy of count input-values.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

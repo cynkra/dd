@@ -14,8 +14,3 @@
 \description{
 DuckDB function \code{variant_extract()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

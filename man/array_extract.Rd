@@ -28,7 +28,6 @@ Extracts the entry from an unnamed \code{STRUCT} (tuple) using an index (1-based
 }
 \examples{
 \dontrun{
-character(0)
 array_extract('DuckDB', 2)
 array_extract({'i': 3, 'v2': 3, 'v3': 0}, 'i')
 array_extract(row(42, 84), 1)

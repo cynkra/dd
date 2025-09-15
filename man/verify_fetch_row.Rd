@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{verify_fetch_row()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

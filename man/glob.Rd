@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{glob()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

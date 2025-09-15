@@ -15,8 +15,3 @@ Unspecified.
 \description{
 DuckDB function \code{duckdb_logs()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

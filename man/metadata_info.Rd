@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{metadata_info()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

@@ -40,8 +40,3 @@ Unspecified.
 \description{
 DuckDB function \code{parquet_scan()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

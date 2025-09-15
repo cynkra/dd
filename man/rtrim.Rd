@@ -16,6 +16,7 @@ Removes any occurrences of any of the \code{characters} from the right side of t
 }
 \examples{
 \dontrun{
-c("rtrim('    test  ')", "rtrim('>>>>test<<', '><')")
+rtrim('    test  ')
+rtrim('>>>>test<<', '><')
 }
 }

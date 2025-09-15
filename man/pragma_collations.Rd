@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{pragma_collations()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

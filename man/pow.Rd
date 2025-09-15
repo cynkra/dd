@@ -29,6 +29,7 @@ Computes x to the power of y.
 2 ^ 3
 }
 \dontrun{
-c("pow(2, 3)", "power(2, 3)")
+pow(2, 3)
+power(2, 3)
 }
 }

@@ -22,7 +22,9 @@ list_slice with added step feature.
 }
 \examples{
 \dontrun{
-c("array_slice('DuckDB', 3, 4)", "array_slice('DuckDB', 3, NULL)", "array_slice('DuckDB', 0, -3)")
+array_slice('DuckDB', 3, 4)
+array_slice('DuckDB', 3, NULL)
+array_slice('DuckDB', 0, -3)
 array_slice([4, 5, 6], 1, 3, 2)
 }
 }

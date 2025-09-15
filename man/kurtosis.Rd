@@ -15,8 +15,3 @@ kurtosis(x = DOUBLE)
 \description{
 Returns the excess kurtosis (Fisher’s definition) of all input values, with a bias correction according to the sample size.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

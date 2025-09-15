@@ -14,8 +14,3 @@
 \description{
 DuckDB function \code{subtract()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

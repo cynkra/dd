@@ -17,8 +17,3 @@ regr_avgy(y = DOUBLE, x = DOUBLE)
 \description{
 Returns the average of the dependent variable for non-NULL pairs in a group, where x is the independent variable and y is the dependent variable.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

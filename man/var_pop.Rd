@@ -15,8 +15,3 @@ var_pop(x = DOUBLE)
 \description{
 Returns the population variance.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

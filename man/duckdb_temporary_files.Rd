@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{duckdb_temporary_files()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

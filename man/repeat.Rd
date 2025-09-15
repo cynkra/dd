@@ -24,7 +24,6 @@ Repeats the \code{blob} \code{count} number of times.
 }
 \examples{
 \dontrun{
-character(0)
 repeat('A', 5)
 repeat('\xAA\xBB'::BLOB, 5)
 }

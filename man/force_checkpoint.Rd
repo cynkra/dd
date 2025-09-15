@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{force_checkpoint()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

@@ -18,6 +18,7 @@ Extracts substring starting from grapheme clusters \code{start} up to the end of
 }
 \examples{
 \dontrun{
-c("substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3)", "substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3, 2)")
+substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3)
+substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3, 2)
 }
 }

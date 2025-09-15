@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{duckdb_log_contexts()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

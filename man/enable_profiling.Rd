@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{enable_profiling()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

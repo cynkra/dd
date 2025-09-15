@@ -12,8 +12,3 @@ count_star()
 \description{
 DuckDB function \code{count_star()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

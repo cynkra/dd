@@ -15,8 +15,3 @@ Unspecified.
 \description{
 DuckDB function \code{query()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

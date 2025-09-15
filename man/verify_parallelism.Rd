@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{verify_parallelism()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

@@ -15,8 +15,3 @@ Unspecified.
 \description{
 DuckDB function \code{duckdb_secrets()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

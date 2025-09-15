@@ -107,8 +107,3 @@ Unspecified.
 \description{
 DuckDB function \code{sniff_csv()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

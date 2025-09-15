@@ -14,6 +14,8 @@ Zips n \code{LIST}s to a new \code{LIST} whose length will be that of the longes
 }
 \examples{
 \dontrun{
-c("list_zip([1, 2], [3, 4], [5, 6])", "list_zip([1, 2], [3, 4], [5, 6, 7])", "list_zip([1, 2], [3, 4], [5, 6, 7], true)")
+list_zip([1, 2], [3, 4], [5, 6])
+list_zip([1, 2], [3, 4], [5, 6, 7])
+list_zip([1, 2], [3, 4], [5, 6, 7], true)
 }
 }

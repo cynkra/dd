@@ -15,8 +15,3 @@ mode(x = ANY)
 \description{
 Returns the most frequent value for the values within x. NULL values are ignored.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

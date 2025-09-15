@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{duckdb_approx_database_count()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

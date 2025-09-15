@@ -18,6 +18,7 @@ Extracts substring starting from character \code{start} up to the end of the str
 }
 \examples{
 \dontrun{
-c("substring('Hello', 2)", "substring('Hello', 2, 2)")
+substring('Hello', 2)
+substring('Hello', 2, 2)
 }
 }

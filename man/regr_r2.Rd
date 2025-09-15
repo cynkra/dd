@@ -17,8 +17,3 @@ regr_r2(y = DOUBLE, x = DOUBLE)
 \description{
 Returns the coefficient of determination for non-NULL pairs in a group.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

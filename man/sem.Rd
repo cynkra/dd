@@ -15,8 +15,3 @@ sem(x = DOUBLE)
 \description{
 Returns the standard error of the mean.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

@@ -15,8 +15,3 @@ Unspecified.
 \description{
 DuckDB function \code{pragma_table_info()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

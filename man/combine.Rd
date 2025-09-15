@@ -17,8 +17,3 @@ combine(col0 = `AGGREGATE_STATE<?>`, col1 = ANY)
 \description{
 DuckDB function \code{combine()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

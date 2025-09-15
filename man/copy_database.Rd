@@ -17,8 +17,3 @@ Unspecified.
 \description{
 DuckDB function \code{copy_database()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

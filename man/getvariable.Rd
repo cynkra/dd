@@ -15,8 +15,3 @@ getvariable(col0 = VARCHAR)
 \description{
 DuckDB function \code{getvariable()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

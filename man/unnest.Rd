@@ -15,8 +15,3 @@ Unspecified.
 \description{
 DuckDB function \code{unnest()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

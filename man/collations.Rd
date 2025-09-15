@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{collations()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{user_agent()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

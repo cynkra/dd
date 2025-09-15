@@ -20,6 +20,8 @@ Concatenates two strings, lists, or blobs. Any \code{NULL} input results in \cod
 }
 \examples{
 \dontrun{
-c("'Duck' || 'DB'", "[1, 2, 3] || [4, 5, 6]", "'\\\\xAA'::BLOB || '\\\\xBB'::BLOB")
+'Duck' || 'DB'
+[1, 2, 3] || [4, 5, 6]
+'\xAA'::BLOB || '\xBB'::BLOB
 }
 }

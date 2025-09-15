@@ -17,8 +17,3 @@ Unspecified.
 \description{
 DuckDB function \code{test_vector_types()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{duckdb_external_file_cache()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

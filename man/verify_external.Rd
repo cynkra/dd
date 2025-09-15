@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{verify_external()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

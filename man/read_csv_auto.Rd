@@ -102,8 +102,3 @@ Unspecified.
 \description{
 DuckDB function \code{read_csv_auto()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

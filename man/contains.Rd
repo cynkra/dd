@@ -21,6 +21,5 @@ Returns \code{true} if \code{search_string} is found within \code{string}.
 \examples{
 \dontrun{
 contains('abc', 'a')
-character(0)
 }
 }

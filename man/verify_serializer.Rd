@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{verify_serializer()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

@@ -32,7 +32,7 @@ browse_data <- function(x) {
   x
 }
 
-usage_and_params <- function(function_name, parameters, parameter_types, description, macro_definition) {
+usage_and_params <- function(function_name, parameters, parameter_types, description, macro_definition, examples) {
   if (length(parameters) == 1) {
     if (length(parameters[[1]]) == 0) {
       usage_signature <- "()" # No parameters
@@ -74,12 +74,26 @@ usage_and_params <- function(function_name, parameters, parameter_types, descrip
     description <- paste0("#' ", description, collapse = "\n#'\n")
   }
 
+  examples <- na.omit(unique(unlist(examples)))
+  examples <- examples[examples != ""]
+  if (length(examples >= 0)) {
+    examples <- paste0(
+      "#' @examples\n",
+      "#' \\dontrun{\n",
+      paste0("#' ", examples, "\n", collapse = ""),
+      "#' }\n"
+    )
+  } else {
+    examples <- ""
+  }
+
   tibble(
     usage_doc,
     param_doc,
     signature,
     types = list(params$type),
     description,
+    examples,
   )
 }
 
@@ -108,8 +122,7 @@ funs <-
     .by = function_name,
     alias_of = unique(alias_of),
     return_type = paste0(unique(na.omit(return_type)), collapse = " | "),
-    usage_and_params(first(function_name), parameters, parameter_types, description, macro_definition),
-    examples = paste0("#' ", unique(examples), collapse = "\n"),
+    usage_and_params(first(function_name), parameters, parameter_types, description, macro_definition, examples),
     categories = list(unique(unlist(categories))),
   ) |>
   # https://github.com/duckdb/duckdb/pull/18977
@@ -136,11 +149,7 @@ code <-
     {usage_doc}
     {param_doc}
     #' @return {if_else(return_type == "", "Unspecified.", paste0("`", return_type, "`"))}
-    #' @examples
-    #' \dontrun{{
-    {examples}
-    #' }}
-    {tibble:::tick_if_needed(function_name)} <- function({signature}) {{
+    {examples}{tibble:::tick_if_needed(function_name)} <- function({signature}) {{
       stop("DuckDB function {function_name}() is not available in R.")
     }}
 

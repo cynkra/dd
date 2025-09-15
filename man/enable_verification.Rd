@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{enable_verification()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

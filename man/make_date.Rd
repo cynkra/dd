@@ -24,7 +24,6 @@ The date for the given struct.
 }
 \examples{
 \dontrun{
-character(0)
 make_date(1992, 9, 20)
 make_date({'year': 2024, 'month': 11, 'day': 14})
 }

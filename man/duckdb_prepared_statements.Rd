@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{duckdb_prepared_statements()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

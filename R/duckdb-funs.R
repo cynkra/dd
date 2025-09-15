@@ -27,10 +27,6 @@
 #' @param col0 `VARCHAR`
 #' @param col1 `VARCHAR`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `!~~` <- function(col0 = VARCHAR, col1 = VARCHAR) {
   stop("DuckDB function !~~() is not available in R.")
 }
@@ -45,10 +41,6 @@
 #' @param col0 `VARCHAR`
 #' @param col1 `VARCHAR`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `!~~*` <- function(col0 = VARCHAR, col1 = VARCHAR) {
   stop("DuckDB function !~~*() is not available in R.")
 }
@@ -63,10 +55,6 @@
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `%` <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
   stop("DuckDB function %() is not available in R.")
 }
@@ -117,10 +105,6 @@
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `*` <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`) {
   stop("DuckDB function *() is not available in R.")
 }
@@ -153,10 +137,6 @@
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | ANY[] | BIGNUM`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `+` <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`) {
   stop("DuckDB function +() is not available in R.")
 }
@@ -171,10 +151,6 @@
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL | TIME | TIME WITH TIME ZONE`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `-` <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL | TIME | TIME WITH TIME ZONE`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL`) {
   stop("DuckDB function -() is not available in R.")
 }
@@ -189,10 +165,6 @@
 #' @param col0 `FLOAT | DOUBLE | INTERVAL`
 #' @param col1 `FLOAT | DOUBLE`
 #' @return `FLOAT | DOUBLE | INTERVAL`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `/` <- function(col0 = `FLOAT | DOUBLE | INTERVAL`, col1 = `FLOAT | DOUBLE`) {
   stop("DuckDB function /() is not available in R.")
 }
@@ -207,10 +179,6 @@
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `//` <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
   stop("DuckDB function //() is not available in R.")
 }
@@ -368,10 +336,6 @@
 #' @param col0 `HUGEINT | UHUGEINT`
 #' @param col1 `HUGEINT | UHUGEINT`
 #' @return `UBIGINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_compress_integral_ubigint` <- function(col0 = `HUGEINT | UHUGEINT`, col1 = `HUGEINT | UHUGEINT`) {
   stop("DuckDB function __internal_compress_integral_ubigint() is not available in R.")
 }
@@ -386,10 +350,6 @@
 #' @param col0 `BIGINT | HUGEINT | UBIGINT | UHUGEINT`
 #' @param col1 `BIGINT | HUGEINT | UBIGINT | UHUGEINT`
 #' @return `UINTEGER`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_compress_integral_uinteger` <- function(col0 = `BIGINT | HUGEINT | UBIGINT | UHUGEINT`, col1 = `BIGINT | HUGEINT | UBIGINT | UHUGEINT`) {
   stop("DuckDB function __internal_compress_integral_uinteger() is not available in R.")
 }
@@ -404,10 +364,6 @@
 #' @param col0 `INTEGER | BIGINT | HUGEINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `INTEGER | BIGINT | HUGEINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `USMALLINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_compress_integral_usmallint` <- function(col0 = `INTEGER | BIGINT | HUGEINT | UINTEGER | UBIGINT | UHUGEINT`, col1 = `INTEGER | BIGINT | HUGEINT | UINTEGER | UBIGINT | UHUGEINT`) {
   stop("DuckDB function __internal_compress_integral_usmallint() is not available in R.")
 }
@@ -422,10 +378,6 @@
 #' @param col0 `SMALLINT | INTEGER | BIGINT | HUGEINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `SMALLINT | INTEGER | BIGINT | HUGEINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `UTINYINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_compress_integral_utinyint` <- function(col0 = `SMALLINT | INTEGER | BIGINT | HUGEINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`, col1 = `SMALLINT | INTEGER | BIGINT | HUGEINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
   stop("DuckDB function __internal_compress_integral_utinyint() is not available in R.")
 }
@@ -439,10 +391,6 @@
 #' @usage `__internal_compress_string_hugeint`(col0 = VARCHAR)
 #' @param col0 `VARCHAR`
 #' @return `HUGEINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_compress_string_hugeint` <- function(col0 = VARCHAR) {
   stop("DuckDB function __internal_compress_string_hugeint() is not available in R.")
 }
@@ -456,10 +404,6 @@
 #' @usage `__internal_compress_string_ubigint`(col0 = VARCHAR)
 #' @param col0 `VARCHAR`
 #' @return `UBIGINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_compress_string_ubigint` <- function(col0 = VARCHAR) {
   stop("DuckDB function __internal_compress_string_ubigint() is not available in R.")
 }
@@ -473,10 +417,6 @@
 #' @usage `__internal_compress_string_uhugeint`(col0 = VARCHAR)
 #' @param col0 `VARCHAR`
 #' @return `UHUGEINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_compress_string_uhugeint` <- function(col0 = VARCHAR) {
   stop("DuckDB function __internal_compress_string_uhugeint() is not available in R.")
 }
@@ -490,10 +430,6 @@
 #' @usage `__internal_compress_string_uinteger`(col0 = VARCHAR)
 #' @param col0 `VARCHAR`
 #' @return `UINTEGER`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_compress_string_uinteger` <- function(col0 = VARCHAR) {
   stop("DuckDB function __internal_compress_string_uinteger() is not available in R.")
 }
@@ -507,10 +443,6 @@
 #' @usage `__internal_compress_string_usmallint`(col0 = VARCHAR)
 #' @param col0 `VARCHAR`
 #' @return `USMALLINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_compress_string_usmallint` <- function(col0 = VARCHAR) {
   stop("DuckDB function __internal_compress_string_usmallint() is not available in R.")
 }
@@ -524,10 +456,6 @@
 #' @usage `__internal_compress_string_utinyint`(col0 = VARCHAR)
 #' @param col0 `VARCHAR`
 #' @return `UTINYINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_compress_string_utinyint` <- function(col0 = VARCHAR) {
   stop("DuckDB function __internal_compress_string_utinyint() is not available in R.")
 }
@@ -542,10 +470,6 @@
 #' @param col0 `UTINYINT | USMALLINT | UINTEGER`
 #' @param col1 `BIGINT`
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_decompress_integral_bigint` <- function(col0 = `UTINYINT | USMALLINT | UINTEGER`, col1 = BIGINT) {
   stop("DuckDB function __internal_decompress_integral_bigint() is not available in R.")
 }
@@ -560,10 +484,6 @@
 #' @param col0 `UTINYINT | USMALLINT | UINTEGER | UBIGINT`
 #' @param col1 `HUGEINT`
 #' @return `HUGEINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_decompress_integral_hugeint` <- function(col0 = `UTINYINT | USMALLINT | UINTEGER | UBIGINT`, col1 = HUGEINT) {
   stop("DuckDB function __internal_decompress_integral_hugeint() is not available in R.")
 }
@@ -578,10 +498,6 @@
 #' @param col0 `UTINYINT | USMALLINT`
 #' @param col1 `INTEGER`
 #' @return `INTEGER`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_decompress_integral_integer` <- function(col0 = `UTINYINT | USMALLINT`, col1 = INTEGER) {
   stop("DuckDB function __internal_decompress_integral_integer() is not available in R.")
 }
@@ -596,10 +512,6 @@
 #' @param col0 `UTINYINT`
 #' @param col1 `SMALLINT`
 #' @return `SMALLINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_decompress_integral_smallint` <- function(col0 = UTINYINT, col1 = SMALLINT) {
   stop("DuckDB function __internal_decompress_integral_smallint() is not available in R.")
 }
@@ -614,10 +526,6 @@
 #' @param col0 `UTINYINT | USMALLINT | UINTEGER`
 #' @param col1 `UBIGINT`
 #' @return `UBIGINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_decompress_integral_ubigint` <- function(col0 = `UTINYINT | USMALLINT | UINTEGER`, col1 = UBIGINT) {
   stop("DuckDB function __internal_decompress_integral_ubigint() is not available in R.")
 }
@@ -632,10 +540,6 @@
 #' @param col0 `UTINYINT | USMALLINT | UINTEGER | UBIGINT`
 #' @param col1 `UHUGEINT`
 #' @return `UHUGEINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_decompress_integral_uhugeint` <- function(col0 = `UTINYINT | USMALLINT | UINTEGER | UBIGINT`, col1 = UHUGEINT) {
   stop("DuckDB function __internal_decompress_integral_uhugeint() is not available in R.")
 }
@@ -650,10 +554,6 @@
 #' @param col0 `UTINYINT | USMALLINT`
 #' @param col1 `UINTEGER`
 #' @return `UINTEGER`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_decompress_integral_uinteger` <- function(col0 = `UTINYINT | USMALLINT`, col1 = UINTEGER) {
   stop("DuckDB function __internal_decompress_integral_uinteger() is not available in R.")
 }
@@ -668,10 +568,6 @@
 #' @param col0 `UTINYINT`
 #' @param col1 `USMALLINT`
 #' @return `USMALLINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_decompress_integral_usmallint` <- function(col0 = UTINYINT, col1 = USMALLINT) {
   stop("DuckDB function __internal_decompress_integral_usmallint() is not available in R.")
 }
@@ -685,10 +581,6 @@
 #' @usage NULL
 #' @param col0 `UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | HUGEINT`
 #' @return `VARCHAR`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `__internal_decompress_string` <- function(col0 = `UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | HUGEINT`) {
   stop("DuckDB function __internal_decompress_string() is not available in R.")
 }
@@ -754,10 +646,6 @@ acosh <- function(x = DOUBLE) {
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | ANY[] | BIGNUM`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 add <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`) {
   stop("DuckDB function add() is not available in R.")
 }
@@ -772,10 +660,6 @@ add <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT 
 #' @param col0 `VARCHAR`
 #' @param col1 `VARCHAR`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 add_parquet_key <- function(col0 = VARCHAR, col1 = VARCHAR) {
   stop("DuckDB function add_parquet_key() is not available in R.")
 }
@@ -841,10 +725,6 @@ alias <- function(expr = ANY) {
 #' @usage all_profiling_output()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 all_profiling_output <- function() {
   stop("DuckDB function all_profiling_output() is not available in R.")
 }
@@ -858,10 +738,6 @@ all_profiling_output <- function() {
 #' @usage NULL
 #' @param arg `DECIMAL | ANY`
 #' @return `DECIMAL | ANY`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 any_value <- function(arg = `DECIMAL | ANY`) {
   stop("DuckDB function any_value() is not available in R.")
 }
@@ -1315,7 +1191,6 @@ array_dot_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLO
 #' @return `T | VARCHAR | ANY`
 #' @examples
 #' \dontrun{
-#' character(0)
 #' array_extract('DuckDB', 2)
 #' array_extract({'i': 3, 'v2': 3, 'v3': 0}, 'i')
 #' array_extract(row(42, 84), 1)
@@ -1615,7 +1490,9 @@ array_select <- function(value_list = `T[]`, index_list = `BIGINT[]`) {
 #' @return `ANY`
 #' @examples
 #' \dontrun{
-#' c("array_slice('DuckDB', 3, 4)", "array_slice('DuckDB', 3, NULL)", "array_slice('DuckDB', 0, -3)")
+#' array_slice('DuckDB', 3, 4)
+#' array_slice('DuckDB', 3, NULL)
+#' array_slice('DuckDB', 0, -3)
 #' array_slice([4, 5, 6], 1, 3, 2)
 #' }
 array_slice <- function(list = ANY, begin = ANY, end = ANY, step = BIGINT) {
@@ -1722,7 +1599,9 @@ array_where <- function(value_list = `T[]`, mask_list = `BOOLEAN[]`) {
 #' @return `STRUCT[]`
 #' @examples
 #' \dontrun{
-#' c("array_zip([1, 2], [3, 4], [5, 6])", "array_zip([1, 2], [3, 4], [5, 6, 7])", "array_zip([1, 2], [3, 4], [5, 6, 7], true)")
+#' array_zip([1, 2], [3, 4], [5, 6])
+#' array_zip([1, 2], [3, 4], [5, 6, 7])
+#' array_zip([1, 2], [3, 4], [5, 6, 7], true)
 #' }
 array_zip <- function() {
   stop("DuckDB function array_zip() is not available in R.")
@@ -1739,10 +1618,6 @@ array_zip <- function() {
 #' @param col1 `POINTER`
 #' @param col2 `POINTER`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 arrow_scan <- function(col0 = POINTER, col1 = POINTER, col2 = POINTER) {
   stop("DuckDB function arrow_scan() is not available in R.")
 }
@@ -1758,10 +1633,6 @@ arrow_scan <- function(col0 = POINTER, col1 = POINTER, col2 = POINTER) {
 #' @param col1 `POINTER`
 #' @param col2 `POINTER`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 arrow_scan_dumb <- function(col0 = POINTER, col1 = POINTER, col2 = POINTER) {
   stop("DuckDB function arrow_scan_dumb() is not available in R.")
 }
@@ -2302,10 +2173,6 @@ character_length <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
 #' @usage NULL
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 checkpoint <- function(col0 = VARCHAR) {
   stop("DuckDB function checkpoint() is not available in R.")
 }
@@ -2336,10 +2203,6 @@ chr <- function(code_point = INTEGER) {
 #' @usage collations()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 collations <- function() {
   stop("DuckDB function collations() is not available in R.")
 }
@@ -2354,10 +2217,6 @@ collations <- function() {
 #' @param col0 `AGGREGATE_STATE<?>`
 #' @param col1 `ANY`
 #' @return `AGGREGATE_STATE<?>`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 combine <- function(col0 = `AGGREGATE_STATE<?>`, col1 = ANY) {
   stop("DuckDB function combine() is not available in R.")
 }
@@ -2373,7 +2232,8 @@ combine <- function(col0 = `AGGREGATE_STATE<?>`, col1 = ANY) {
 #' @return `ANY`
 #' @examples
 #' \dontrun{
-#' c("concat('Hello', ' ', 'World')", "concat([1, 2, 3], NULL, [4, 5, 6])")
+#' concat('Hello', ' ', 'World')
+#' concat([1, 2, 3], NULL, [4, 5, 6])
 #' }
 concat <- function(value = ANY) {
   stop("DuckDB function concat() is not available in R.")
@@ -2430,7 +2290,6 @@ constant_or_null <- function(arg1 = ANY, arg2 = ANY) {
 #' @examples
 #' \dontrun{
 #' contains('abc', 'a')
-#' character(0)
 #' }
 contains <- function(string = VARCHAR, search_string = VARCHAR, col0 = `T[] | MAP(K, V) | STRUCT`, col1 = `T | K | ANY`) {
   stop("DuckDB function contains() is not available in R.")
@@ -2446,10 +2305,6 @@ contains <- function(string = VARCHAR, search_string = VARCHAR, col0 = `T[] | MA
 #' @param col0 `VARCHAR`
 #' @param col1 `VARCHAR`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 copy_database <- function(col0 = VARCHAR, col1 = VARCHAR) {
   stop("DuckDB function copy_database() is not available in R.")
 }
@@ -2566,10 +2421,6 @@ count_if <- function(arg = BOOLEAN) {
 #' @usage count_star()
 
 #' @return `BIGINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 count_star <- function() {
   stop("DuckDB function count_star() is not available in R.")
 }
@@ -2824,10 +2675,6 @@ damerau_levenshtein <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' @usage database_list()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 database_list <- function() {
   stop("DuckDB function database_list() is not available in R.")
 }
@@ -2841,10 +2688,6 @@ database_list <- function() {
 #' @usage database_size()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 database_size <- function() {
   stop("DuckDB function database_size() is not available in R.")
 }
@@ -3142,10 +2985,6 @@ degrees <- function(x = DOUBLE) {
 #' @usage disable_checkpoint_on_shutdown()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 disable_checkpoint_on_shutdown <- function() {
   stop("DuckDB function disable_checkpoint_on_shutdown() is not available in R.")
 }
@@ -3159,10 +2998,6 @@ disable_checkpoint_on_shutdown <- function() {
 #' @usage disable_logging()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 disable_logging <- function() {
   stop("DuckDB function disable_logging() is not available in R.")
 }
@@ -3176,10 +3011,6 @@ disable_logging <- function() {
 #' @usage disable_object_cache()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 disable_object_cache <- function() {
   stop("DuckDB function disable_object_cache() is not available in R.")
 }
@@ -3193,10 +3024,6 @@ disable_object_cache <- function() {
 #' @usage disable_optimizer()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 disable_optimizer <- function() {
   stop("DuckDB function disable_optimizer() is not available in R.")
 }
@@ -3210,10 +3037,6 @@ disable_optimizer <- function() {
 #' @usage disable_print_progress_bar()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 disable_print_progress_bar <- function() {
   stop("DuckDB function disable_print_progress_bar() is not available in R.")
 }
@@ -3227,10 +3050,6 @@ disable_print_progress_bar <- function() {
 #' @usage disable_profile()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 disable_profile <- function() {
   stop("DuckDB function disable_profile() is not available in R.")
 }
@@ -3244,10 +3063,6 @@ disable_profile <- function() {
 #' @usage disable_profiling()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 disable_profiling <- function() {
   stop("DuckDB function disable_profiling() is not available in R.")
 }
@@ -3261,10 +3076,6 @@ disable_profiling <- function() {
 #' @usage disable_progress_bar()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 disable_progress_bar <- function() {
   stop("DuckDB function disable_progress_bar() is not available in R.")
 }
@@ -3278,10 +3089,6 @@ disable_progress_bar <- function() {
 #' @usage disable_verification()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 disable_verification <- function() {
   stop("DuckDB function disable_verification() is not available in R.")
 }
@@ -3295,10 +3102,6 @@ disable_verification <- function() {
 #' @usage disable_verify_external()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 disable_verify_external <- function() {
   stop("DuckDB function disable_verify_external() is not available in R.")
 }
@@ -3312,10 +3115,6 @@ disable_verify_external <- function() {
 #' @usage disable_verify_fetch_row()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 disable_verify_fetch_row <- function() {
   stop("DuckDB function disable_verify_fetch_row() is not available in R.")
 }
@@ -3329,10 +3128,6 @@ disable_verify_fetch_row <- function() {
 #' @usage disable_verify_parallelism()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 disable_verify_parallelism <- function() {
   stop("DuckDB function disable_verify_parallelism() is not available in R.")
 }
@@ -3346,10 +3141,6 @@ disable_verify_parallelism <- function() {
 #' @usage disable_verify_serializer()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 disable_verify_serializer <- function() {
   stop("DuckDB function disable_verify_serializer() is not available in R.")
 }
@@ -3364,10 +3155,6 @@ disable_verify_serializer <- function() {
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 divide <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
   stop("DuckDB function divide() is not available in R.")
 }
@@ -3381,10 +3168,6 @@ divide <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLO
 #' @usage duckdb_approx_database_count()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_approx_database_count <- function() {
   stop("DuckDB function duckdb_approx_database_count() is not available in R.")
 }
@@ -3398,10 +3181,6 @@ duckdb_approx_database_count <- function() {
 #' @usage duckdb_columns()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_columns <- function() {
   stop("DuckDB function duckdb_columns() is not available in R.")
 }
@@ -3415,10 +3194,6 @@ duckdb_columns <- function() {
 #' @usage duckdb_constraints()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_constraints <- function() {
   stop("DuckDB function duckdb_constraints() is not available in R.")
 }
@@ -3432,10 +3207,6 @@ duckdb_constraints <- function() {
 #' @usage duckdb_databases()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_databases <- function() {
   stop("DuckDB function duckdb_databases() is not available in R.")
 }
@@ -3449,10 +3220,6 @@ duckdb_databases <- function() {
 #' @usage duckdb_dependencies()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_dependencies <- function() {
   stop("DuckDB function duckdb_dependencies() is not available in R.")
 }
@@ -3466,10 +3233,6 @@ duckdb_dependencies <- function() {
 #' @usage duckdb_extensions()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_extensions <- function() {
   stop("DuckDB function duckdb_extensions() is not available in R.")
 }
@@ -3483,10 +3246,6 @@ duckdb_extensions <- function() {
 #' @usage duckdb_external_file_cache()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_external_file_cache <- function() {
   stop("DuckDB function duckdb_external_file_cache() is not available in R.")
 }
@@ -3500,10 +3259,6 @@ duckdb_external_file_cache <- function() {
 #' @usage duckdb_functions()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_functions <- function() {
   stop("DuckDB function duckdb_functions() is not available in R.")
 }
@@ -3517,10 +3272,6 @@ duckdb_functions <- function() {
 #' @usage duckdb_indexes()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_indexes <- function() {
   stop("DuckDB function duckdb_indexes() is not available in R.")
 }
@@ -3534,10 +3285,6 @@ duckdb_indexes <- function() {
 #' @usage duckdb_keywords()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_keywords <- function() {
   stop("DuckDB function duckdb_keywords() is not available in R.")
 }
@@ -3551,10 +3298,6 @@ duckdb_keywords <- function() {
 #' @usage duckdb_log_contexts()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_log_contexts <- function() {
   stop("DuckDB function duckdb_log_contexts() is not available in R.")
 }
@@ -3568,10 +3311,6 @@ duckdb_log_contexts <- function() {
 #' @usage duckdb_logs(denormalized_table = BOOLEAN)
 #' @param denormalized_table `BOOLEAN`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_logs <- function(denormalized_table = BOOLEAN) {
   stop("DuckDB function duckdb_logs() is not available in R.")
 }
@@ -3585,10 +3324,6 @@ duckdb_logs <- function(denormalized_table = BOOLEAN) {
 #' @usage duckdb_memory()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_memory <- function() {
   stop("DuckDB function duckdb_memory() is not available in R.")
 }
@@ -3602,10 +3337,6 @@ duckdb_memory <- function() {
 #' @usage duckdb_optimizers()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_optimizers <- function() {
   stop("DuckDB function duckdb_optimizers() is not available in R.")
 }
@@ -3619,10 +3350,6 @@ duckdb_optimizers <- function() {
 #' @usage duckdb_prepared_statements()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_prepared_statements <- function() {
   stop("DuckDB function duckdb_prepared_statements() is not available in R.")
 }
@@ -3636,10 +3363,6 @@ duckdb_prepared_statements <- function() {
 #' @usage duckdb_schemas()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_schemas <- function() {
   stop("DuckDB function duckdb_schemas() is not available in R.")
 }
@@ -3653,10 +3376,6 @@ duckdb_schemas <- function() {
 #' @usage duckdb_secret_types()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_secret_types <- function() {
   stop("DuckDB function duckdb_secret_types() is not available in R.")
 }
@@ -3670,10 +3389,6 @@ duckdb_secret_types <- function() {
 #' @usage duckdb_secrets(redact = BOOLEAN)
 #' @param redact `BOOLEAN`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_secrets <- function(redact = BOOLEAN) {
   stop("DuckDB function duckdb_secrets() is not available in R.")
 }
@@ -3687,10 +3402,6 @@ duckdb_secrets <- function(redact = BOOLEAN) {
 #' @usage duckdb_sequences()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_sequences <- function() {
   stop("DuckDB function duckdb_sequences() is not available in R.")
 }
@@ -3704,10 +3415,6 @@ duckdb_sequences <- function() {
 #' @usage duckdb_settings()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_settings <- function() {
   stop("DuckDB function duckdb_settings() is not available in R.")
 }
@@ -3721,10 +3428,6 @@ duckdb_settings <- function() {
 #' @usage duckdb_table_sample(col0 = VARCHAR)
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_table_sample <- function(col0 = VARCHAR) {
   stop("DuckDB function duckdb_table_sample() is not available in R.")
 }
@@ -3738,10 +3441,6 @@ duckdb_table_sample <- function(col0 = VARCHAR) {
 #' @usage duckdb_tables()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_tables <- function() {
   stop("DuckDB function duckdb_tables() is not available in R.")
 }
@@ -3755,10 +3454,6 @@ duckdb_tables <- function() {
 #' @usage duckdb_temporary_files()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_temporary_files <- function() {
   stop("DuckDB function duckdb_temporary_files() is not available in R.")
 }
@@ -3772,10 +3467,6 @@ duckdb_temporary_files <- function() {
 #' @usage duckdb_types()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_types <- function() {
   stop("DuckDB function duckdb_types() is not available in R.")
 }
@@ -3789,10 +3480,6 @@ duckdb_types <- function() {
 #' @usage duckdb_variables()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_variables <- function() {
   stop("DuckDB function duckdb_variables() is not available in R.")
 }
@@ -3806,10 +3493,6 @@ duckdb_variables <- function() {
 #' @usage duckdb_views()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 duckdb_views <- function() {
   stop("DuckDB function duckdb_views() is not available in R.")
 }
@@ -3859,10 +3542,6 @@ element_at <- function(map = `MAP(K, V)`, key = K) {
 #' @usage enable_checkpoint_on_shutdown()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 enable_checkpoint_on_shutdown <- function() {
   stop("DuckDB function enable_checkpoint_on_shutdown() is not available in R.")
 }
@@ -3881,10 +3560,6 @@ enable_checkpoint_on_shutdown <- function() {
 #' @param storage_normalize `BOOLEAN`
 #' @param storage_buffer_size `UBIGINT`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 enable_logging <- function(level = VARCHAR, storage = VARCHAR, storage_config = ANY, storage_path = VARCHAR, storage_normalize = BOOLEAN, storage_buffer_size = UBIGINT) {
   stop("DuckDB function enable_logging() is not available in R.")
 }
@@ -3898,10 +3573,6 @@ enable_logging <- function(level = VARCHAR, storage = VARCHAR, storage_config = 
 #' @usage enable_object_cache()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 enable_object_cache <- function() {
   stop("DuckDB function enable_object_cache() is not available in R.")
 }
@@ -3915,10 +3586,6 @@ enable_object_cache <- function() {
 #' @usage enable_optimizer()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 enable_optimizer <- function() {
   stop("DuckDB function enable_optimizer() is not available in R.")
 }
@@ -3932,10 +3599,6 @@ enable_optimizer <- function() {
 #' @usage enable_print_progress_bar()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 enable_print_progress_bar <- function() {
   stop("DuckDB function enable_print_progress_bar() is not available in R.")
 }
@@ -3949,10 +3612,6 @@ enable_print_progress_bar <- function() {
 #' @usage enable_profile()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 enable_profile <- function() {
   stop("DuckDB function enable_profile() is not available in R.")
 }
@@ -3966,10 +3625,6 @@ enable_profile <- function() {
 #' @usage enable_profiling()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 enable_profiling <- function() {
   stop("DuckDB function enable_profiling() is not available in R.")
 }
@@ -3983,10 +3638,6 @@ enable_profiling <- function() {
 #' @usage enable_progress_bar()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 enable_progress_bar <- function() {
   stop("DuckDB function enable_progress_bar() is not available in R.")
 }
@@ -4000,10 +3651,6 @@ enable_progress_bar <- function() {
 #' @usage enable_verification()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 enable_verification <- function() {
   stop("DuckDB function enable_verification() is not available in R.")
 }
@@ -4052,10 +3699,6 @@ ends_with <- function(string = VARCHAR, search_string = VARCHAR) {
 #' @usage entropy(x = ANY)
 #' @param x `ANY`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 entropy <- function(x = ANY) {
   stop("DuckDB function entropy() is not available in R.")
 }
@@ -4311,10 +3954,6 @@ exp <- function(x = DOUBLE) {
 #' @usage extension_versions()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 extension_versions <- function() {
   stop("DuckDB function extension_versions() is not available in R.")
 }
@@ -4380,10 +4019,6 @@ filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' @usage finalize(col0 = `AGGREGATE_STATE<?>`)
 #' @param col0 `AGGREGATE_STATE<?>`
 #' @return `INVALID`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 finalize <- function(col0 = `AGGREGATE_STATE<?>`) {
   stop("DuckDB function finalize() is not available in R.")
 }
@@ -4448,10 +4083,6 @@ floor <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
 #' @usage NULL
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 force_checkpoint <- function(col0 = VARCHAR) {
   stop("DuckDB function force_checkpoint() is not available in R.")
 }
@@ -4601,10 +4232,6 @@ fsum <- function(arg = DOUBLE) {
 #' @usage functions()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 functions <- function() {
   stop("DuckDB function functions() is not available in R.")
 }
@@ -4677,7 +4304,6 @@ gen_random_uuid <- function() {
 #' @return `BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
 #' @examples
 #' \dontrun{
-#' character(0)
 #' generate_series(2, 5, 3)
 #' }
 generate_series <- function(col0 = `BIGINT | TIMESTAMP`, col1 = `BIGINT | TIMESTAMP`, col2 = `BIGINT | INTERVAL`, start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, stop = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, step = `BIGINT | INTERVAL`) {
@@ -4728,10 +4354,6 @@ get_current_timestamp <- function() {
 #' @usage getvariable(col0 = VARCHAR)
 #' @param col0 `VARCHAR`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 getvariable <- function(col0 = VARCHAR) {
   stop("DuckDB function getvariable() is not available in R.")
 }
@@ -4745,10 +4367,6 @@ getvariable <- function(col0 = VARCHAR) {
 #' @usage NULL
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 glob <- function(col0 = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function glob() is not available in R.")
 }
@@ -4783,7 +4401,8 @@ grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
 #' @return `ANY`
 #' @examples
 #' \dontrun{
-#' c("greatest(42, 84)", "greatest('abc', 'bcd', 'cde', 'EFG')")
+#' greatest(42, 84)
+#' greatest('abc', 'bcd', 'cde', 'EFG')
 #' }
 greatest <- function(arg1 = ANY) {
   stop("DuckDB function greatest() is not available in R.")
@@ -4966,10 +4585,6 @@ ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_char
 #' @usage import_database(col0 = VARCHAR)
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 import_database <- function(col0 = VARCHAR) {
   stop("DuckDB function import_database() is not available in R.")
 }
@@ -5211,10 +4826,6 @@ kahan_sum <- function(arg = DOUBLE) {
 #' @usage kurtosis(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 kurtosis <- function(x = DOUBLE) {
   stop("DuckDB function kurtosis() is not available in R.")
 }
@@ -5228,10 +4839,6 @@ kurtosis <- function(x = DOUBLE) {
 #' @usage kurtosis_pop(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 kurtosis_pop <- function(x = DOUBLE) {
   stop("DuckDB function kurtosis_pop() is not available in R.")
 }
@@ -5316,7 +4923,8 @@ lcm <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
 #' @return `ANY`
 #' @examples
 #' \dontrun{
-#' c("least(42, 84)", "least('abc', 'bcd', 'cde', 'EFG')")
+#' least(42, 84)
+#' least('abc', 'bcd', 'cde', 'EFG')
 #' }
 least <- function(arg1 = ANY) {
   stop("DuckDB function least() is not available in R.")
@@ -6115,7 +5723,9 @@ list_where <- function(value_list = `T[]`, mask_list = `BOOLEAN[]`) {
 #' @return `STRUCT[]`
 #' @examples
 #' \dontrun{
-#' c("list_zip([1, 2], [3, 4], [5, 6])", "list_zip([1, 2], [3, 4], [5, 6, 7])", "list_zip([1, 2], [3, 4], [5, 6, 7], true)")
+#' list_zip([1, 2], [3, 4], [5, 6])
+#' list_zip([1, 2], [3, 4], [5, 6, 7])
+#' list_zip([1, 2], [3, 4], [5, 6, 7], true)
 #' }
 list_zip <- function() {
   stop("DuckDB function list_zip() is not available in R.")
@@ -6256,7 +5866,8 @@ lpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #' @return `VARCHAR`
 #' @examples
 #' \dontrun{
-#' c("ltrim('    test  ')", "ltrim('>>>>test<<', '><')")
+#' ltrim('    test  ')
+#' ltrim('>>>>test<<', '><')
 #' }
 ltrim <- function(string = VARCHAR, characters = VARCHAR) {
   stop("DuckDB function ltrim() is not available in R.")
@@ -6296,7 +5907,6 @@ mad <- function(x = `DECIMAL | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMEST
 #' @return `DATE`
 #' @examples
 #' \dontrun{
-#' character(0)
 #' make_date(1992, 9, 20)
 #' make_date({'year': 2024, 'month': 11, 'day': 14})
 #' }
@@ -6658,10 +6268,6 @@ median <- function(x = ANY) {
 #' @usage metadata_info()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 metadata_info <- function() {
   stop("DuckDB function metadata_info() is not available in R.")
 }
@@ -6799,10 +6405,6 @@ mismatches <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 mod <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
   stop("DuckDB function mod() is not available in R.")
 }
@@ -6816,10 +6418,6 @@ mod <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT 
 #' @usage mode(x = ANY)
 #' @param x `ANY`
 #' @return `ANY`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 mode <- function(x = ANY) {
   stop("DuckDB function mode() is not available in R.")
 }
@@ -6868,10 +6466,6 @@ monthname <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 multiply <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`) {
   stop("DuckDB function multiply() is not available in R.")
 }
@@ -7066,10 +6660,6 @@ ord <- function(string = VARCHAR) {
 #' @param col1 `VARCHAR`
 #' @param col2 `ANY`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 parquet_bloom_probe <- function(col0 = `VARCHAR | VARCHAR[]`, col1 = VARCHAR, col2 = ANY) {
   stop("DuckDB function parquet_bloom_probe() is not available in R.")
 }
@@ -7083,10 +6673,6 @@ parquet_bloom_probe <- function(col0 = `VARCHAR | VARCHAR[]`, col1 = VARCHAR, co
 #' @usage NULL
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 parquet_file_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function parquet_file_metadata() is not available in R.")
 }
@@ -7100,10 +6686,6 @@ parquet_file_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' @usage NULL
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 parquet_kv_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function parquet_kv_metadata() is not available in R.")
 }
@@ -7117,10 +6699,6 @@ parquet_kv_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' @usage NULL
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 parquet_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function parquet_metadata() is not available in R.")
 }
@@ -7148,10 +6726,6 @@ parquet_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' @param hive_partitioning `BOOLEAN`
 #' @param hive_types_autocast `BOOLEAN`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 parquet_scan <- function(col0 = `VARCHAR | VARCHAR[]`, can_have_nan = BOOLEAN, encryption_config = ANY, file_row_number = BOOLEAN, schema = ANY, parquet_version = VARCHAR, filename = ANY, binary_as_string = BOOLEAN, debug_use_openssl = BOOLEAN, union_by_name = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, hive_types = ANY, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN) {
   stop("DuckDB function parquet_scan() is not available in R.")
 }
@@ -7165,10 +6739,6 @@ parquet_scan <- function(col0 = `VARCHAR | VARCHAR[]`, can_have_nan = BOOLEAN, e
 #' @usage NULL
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 parquet_schema <- function(col0 = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function parquet_schema() is not available in R.")
 }
@@ -7290,10 +6860,6 @@ pi <- function() {
 #' @usage platform()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 platform <- function() {
   stop("DuckDB function platform() is not available in R.")
 }
@@ -7328,7 +6894,8 @@ position <- function(string = VARCHAR, search_string = VARCHAR) {
 #' @return `DOUBLE`
 #' @examples
 #' \dontrun{
-#' c("pow(2, 3)", "power(2, 3)")
+#' pow(2, 3)
+#' power(2, 3)
 #' }
 pow <- function(x = DOUBLE, y = DOUBLE) {
   stop("DuckDB function pow() is not available in R.")
@@ -7361,10 +6928,6 @@ power <- function(x = DOUBLE, y = DOUBLE) {
 #' @usage pragma_collations()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 pragma_collations <- function() {
   stop("DuckDB function pragma_collations() is not available in R.")
 }
@@ -7378,10 +6941,6 @@ pragma_collations <- function() {
 #' @usage pragma_database_size()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 pragma_database_size <- function() {
   stop("DuckDB function pragma_database_size() is not available in R.")
 }
@@ -7395,10 +6954,6 @@ pragma_database_size <- function() {
 #' @usage NULL
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 pragma_metadata_info <- function(col0 = VARCHAR) {
   stop("DuckDB function pragma_metadata_info() is not available in R.")
 }
@@ -7412,10 +6967,6 @@ pragma_metadata_info <- function(col0 = VARCHAR) {
 #' @usage pragma_platform()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 pragma_platform <- function() {
   stop("DuckDB function pragma_platform() is not available in R.")
 }
@@ -7429,10 +6980,6 @@ pragma_platform <- function() {
 #' @usage pragma_show(col0 = VARCHAR)
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 pragma_show <- function(col0 = VARCHAR) {
   stop("DuckDB function pragma_show() is not available in R.")
 }
@@ -7446,10 +6993,6 @@ pragma_show <- function(col0 = VARCHAR) {
 #' @usage pragma_storage_info(col0 = VARCHAR)
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 pragma_storage_info <- function(col0 = VARCHAR) {
   stop("DuckDB function pragma_storage_info() is not available in R.")
 }
@@ -7463,10 +7006,6 @@ pragma_storage_info <- function(col0 = VARCHAR) {
 #' @usage pragma_table_info(col0 = VARCHAR)
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 pragma_table_info <- function(col0 = VARCHAR) {
   stop("DuckDB function pragma_table_info() is not available in R.")
 }
@@ -7480,10 +7019,6 @@ pragma_table_info <- function(col0 = VARCHAR) {
 #' @usage pragma_user_agent()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 pragma_user_agent <- function() {
   stop("DuckDB function pragma_user_agent() is not available in R.")
 }
@@ -7497,10 +7032,6 @@ pragma_user_agent <- function() {
 #' @usage pragma_version()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 pragma_version <- function() {
   stop("DuckDB function pragma_version() is not available in R.")
 }
@@ -7637,10 +7168,6 @@ quarter <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' @usage query(col0 = VARCHAR)
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 query <- function(col0 = VARCHAR) {
   stop("DuckDB function query() is not available in R.")
 }
@@ -7655,10 +7182,6 @@ query <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @param col1 `BOOLEAN`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 query_table <- function(col0 = `VARCHAR | VARCHAR[]`, col1 = BOOLEAN) {
   stop("DuckDB function query_table() is not available in R.")
 }
@@ -7674,10 +7197,6 @@ query_table <- function(col0 = `VARCHAR | VARCHAR[]`, col1 = BOOLEAN) {
 #' @param experimental `BOOLEAN`
 #' @param integer64 `BOOLEAN`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 r_dataframe_scan <- function(col0 = POINTER, experimental = BOOLEAN, integer64 = BOOLEAN) {
   stop("DuckDB function r_dataframe_scan() is not available in R.")
 }
@@ -7732,7 +7251,6 @@ random <- function() {
 #' @return `BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
 #' @examples
 #' \dontrun{
-#' character(0)
 #' range(2, 5, 3)
 #' }
 range <- function(col0 = `BIGINT | TIMESTAMP`, col1 = `BIGINT | TIMESTAMP`, col2 = `BIGINT | INTERVAL`, start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, stop = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, step = `BIGINT | INTERVAL`) {
@@ -7753,10 +7271,6 @@ range <- function(col0 = `BIGINT | TIMESTAMP`, col1 = `BIGINT | TIMESTAMP`, col2
 #' @param hive_types `ANY`
 #' @param filename `ANY`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 read_blob <- function(col0 = `VARCHAR | VARCHAR[]`, union_by_name = BOOLEAN, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN, hive_types = ANY, filename = ANY) {
   stop("DuckDB function read_blob() is not available in R.")
 }
@@ -7815,10 +7329,6 @@ read_blob <- function(col0 = `VARCHAR | VARCHAR[]`, union_by_name = BOOLEAN, hiv
 #' @param thousands `VARCHAR`
 #' @param files_to_sniff `BIGINT`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 read_csv <- function(col0 = `VARCHAR | VARCHAR[]`, hive_types_autocast = BOOLEAN, skip = BIGINT, types = ANY, nullstr = ANY, encoding = VARCHAR, hive_types = ANY, filename = ANY, header = BOOLEAN, delim = VARCHAR, dateformat = VARCHAR, column_names = `VARCHAR[]`, union_by_name = BOOLEAN, new_line = VARCHAR, escape = VARCHAR, allow_quoted_nulls = BOOLEAN, comment = VARCHAR, hive_partitioning = BOOLEAN, sep = VARCHAR, columns = ANY, rejects_limit = BIGINT, force_not_null = `VARCHAR[]`, auto_type_candidates = ANY, sample_size = BIGINT, timestampformat = VARCHAR, auto_detect = BOOLEAN, all_varchar = BOOLEAN, store_rejects = BOOLEAN, normalize_names = BOOLEAN, rejects_table = VARCHAR, column_types = ANY, compression = VARCHAR, ignore_errors = BOOLEAN, names = `VARCHAR[]`, max_line_size = VARCHAR, quote = VARCHAR, maximum_line_size = VARCHAR, rejects_scan = VARCHAR, buffer_size = UBIGINT, decimal_separator = VARCHAR, parallel = BOOLEAN, null_padding = BOOLEAN, dtypes = ANY, strict_mode = BOOLEAN, thousands = VARCHAR, files_to_sniff = BIGINT) {
   stop("DuckDB function read_csv() is not available in R.")
 }
@@ -7877,10 +7387,6 @@ read_csv <- function(col0 = `VARCHAR | VARCHAR[]`, hive_types_autocast = BOOLEAN
 #' @param thousands `VARCHAR`
 #' @param files_to_sniff `BIGINT`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 read_csv_auto <- function(col0 = `VARCHAR | VARCHAR[]`, hive_types_autocast = BOOLEAN, skip = BIGINT, types = ANY, nullstr = ANY, encoding = VARCHAR, hive_types = ANY, filename = ANY, header = BOOLEAN, delim = VARCHAR, dateformat = VARCHAR, column_names = `VARCHAR[]`, union_by_name = BOOLEAN, new_line = VARCHAR, escape = VARCHAR, allow_quoted_nulls = BOOLEAN, comment = VARCHAR, hive_partitioning = BOOLEAN, sep = VARCHAR, columns = ANY, rejects_limit = BIGINT, force_not_null = `VARCHAR[]`, auto_type_candidates = ANY, sample_size = BIGINT, timestampformat = VARCHAR, auto_detect = BOOLEAN, all_varchar = BOOLEAN, store_rejects = BOOLEAN, normalize_names = BOOLEAN, rejects_table = VARCHAR, column_types = ANY, compression = VARCHAR, ignore_errors = BOOLEAN, names = `VARCHAR[]`, max_line_size = VARCHAR, quote = VARCHAR, maximum_line_size = VARCHAR, rejects_scan = VARCHAR, buffer_size = UBIGINT, decimal_separator = VARCHAR, parallel = BOOLEAN, null_padding = BOOLEAN, dtypes = ANY, strict_mode = BOOLEAN, thousands = VARCHAR, files_to_sniff = BIGINT) {
   stop("DuckDB function read_csv_auto() is not available in R.")
 }
@@ -7908,10 +7414,6 @@ read_csv_auto <- function(col0 = `VARCHAR | VARCHAR[]`, hive_types_autocast = BO
 #' @param hive_partitioning `BOOLEAN`
 #' @param hive_types_autocast `BOOLEAN`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 read_parquet <- function(col0 = `VARCHAR | VARCHAR[]`, can_have_nan = BOOLEAN, encryption_config = ANY, file_row_number = BOOLEAN, schema = ANY, parquet_version = VARCHAR, filename = ANY, binary_as_string = BOOLEAN, debug_use_openssl = BOOLEAN, union_by_name = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, hive_types = ANY, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN) {
   stop("DuckDB function read_parquet() is not available in R.")
 }
@@ -7930,10 +7432,6 @@ read_parquet <- function(col0 = `VARCHAR | VARCHAR[]`, can_have_nan = BOOLEAN, e
 #' @param hive_types `ANY`
 #' @param filename `ANY`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 read_text <- function(col0 = `VARCHAR | VARCHAR[]`, union_by_name = BOOLEAN, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN, hive_types = ANY, filename = ANY) {
   stop("DuckDB function read_text() is not available in R.")
 }
@@ -8108,10 +7606,6 @@ regexp_split_to_array <- function(string = VARCHAR, regex = VARCHAR, options = V
 #' @param y `DOUBLE`
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 regr_avgx <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function regr_avgx() is not available in R.")
 }
@@ -8126,10 +7620,6 @@ regr_avgx <- function(y = DOUBLE, x = DOUBLE) {
 #' @param y `DOUBLE`
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 regr_avgy <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function regr_avgy() is not available in R.")
 }
@@ -8180,10 +7670,6 @@ regr_intercept <- function(y = DOUBLE, x = DOUBLE) {
 #' @param y `DOUBLE`
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 regr_r2 <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function regr_r2() is not available in R.")
 }
@@ -8277,7 +7763,6 @@ regr_syy <- function(y = DOUBLE, x = DOUBLE) {
 #' @return `VARCHAR | BLOB | T[]`
 #' @examples
 #' \dontrun{
-#' character(0)
 #' repeat('A', 5)
 #' repeat('\xAA\xBB'::BLOB, 5)
 #' }
@@ -8294,10 +7779,6 @@ regr_syy <- function(y = DOUBLE, x = DOUBLE) {
 #' @usage repeat_row(num_rows = BIGINT)
 #' @param num_rows `BIGINT`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 repeat_row <- function(num_rows = BIGINT) {
   stop("DuckDB function repeat_row() is not available in R.")
 }
@@ -8478,7 +7959,8 @@ rpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #' @return `VARCHAR`
 #' @examples
 #' \dontrun{
-#' c("rtrim('    test  ')", "rtrim('>>>>test<<', '><')")
+#' rtrim('    test  ')
+#' rtrim('>>>>test<<', '><')
 #' }
 rtrim <- function(string = VARCHAR, characters = VARCHAR) {
   stop("DuckDB function rtrim() is not available in R.")
@@ -8510,10 +7992,6 @@ second <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZON
 #' @usage sem(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 sem <- function(x = DOUBLE) {
   stop("DuckDB function sem() is not available in R.")
 }
@@ -8527,10 +8005,6 @@ sem <- function(x = DOUBLE) {
 #' @usage seq_scan()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 seq_scan <- function() {
   stop("DuckDB function seq_scan() is not available in R.")
 }
@@ -8622,10 +8096,6 @@ sha256 <- function(value = VARCHAR, blob = BLOB) {
 #' @usage show(col0 = VARCHAR)
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 show <- function(col0 = VARCHAR) {
   stop("DuckDB function show() is not available in R.")
 }
@@ -8639,10 +8109,6 @@ show <- function(col0 = VARCHAR) {
 #' @usage show_databases()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 show_databases <- function() {
   stop("DuckDB function show_databases() is not available in R.")
 }
@@ -8656,10 +8122,6 @@ show_databases <- function() {
 #' @usage show_tables()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 show_tables <- function() {
   stop("DuckDB function show_tables() is not available in R.")
 }
@@ -8673,10 +8135,6 @@ show_tables <- function() {
 #' @usage show_tables_expanded()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 show_tables_expanded <- function() {
   stop("DuckDB function show_tables_expanded() is not available in R.")
 }
@@ -8821,10 +8279,6 @@ skewness <- function(x = DOUBLE) {
 #' @param hive_types `ANY`
 #' @param hive_types_autocast `BOOLEAN`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 sniff_csv <- function(col0 = VARCHAR, delim = VARCHAR, dateformat = VARCHAR, column_names = `VARCHAR[]`, sep = VARCHAR, hive_partitioning = BOOLEAN, header = BOOLEAN, escape = VARCHAR, allow_quoted_nulls = BOOLEAN, comment = VARCHAR, maximum_line_size = VARCHAR, new_line = VARCHAR, columns = ANY, rejects_limit = BIGINT, force_not_null = `VARCHAR[]`, timestampformat = VARCHAR, auto_detect = BOOLEAN, sample_size = BIGINT, auto_type_candidates = ANY, nullstr = ANY, encoding = VARCHAR, normalize_names = BOOLEAN, rejects_table = VARCHAR, column_types = ANY, skip = BIGINT, types = ANY, max_line_size = VARCHAR, quote = VARCHAR, rejects_scan = VARCHAR, ignore_errors = BOOLEAN, compression = VARCHAR, names = `VARCHAR[]`, force_match = BOOLEAN, store_rejects = BOOLEAN, all_varchar = BOOLEAN, buffer_size = UBIGINT, decimal_separator = VARCHAR, parallel = BOOLEAN, null_padding = BOOLEAN, dtypes = ANY, strict_mode = BOOLEAN, thousands = VARCHAR, files_to_sniff = BIGINT, filename = ANY, union_by_name = BOOLEAN, hive_types = ANY, hive_types_autocast = BOOLEAN) {
   stop("DuckDB function sniff_csv() is not available in R.")
 }
@@ -8959,10 +8413,6 @@ stddev_samp <- function(x = DOUBLE) {
 #' @usage storage_info(col0 = VARCHAR)
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 storage_info <- function(col0 = VARCHAR) {
   stop("DuckDB function storage_info() is not available in R.")
 }
@@ -9340,7 +8790,8 @@ struct_update <- function() {
 #' @return `VARCHAR`
 #' @examples
 #' \dontrun{
-#' c("substring('Hello', 2)", "substring('Hello', 2, 2)")
+#' substring('Hello', 2)
+#' substring('Hello', 2, 2)
 #' }
 substr <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
   stop("DuckDB function substr() is not available in R.")
@@ -9359,7 +8810,8 @@ substr <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
 #' @return `VARCHAR`
 #' @examples
 #' \dontrun{
-#' c("substring('Hello', 2)", "substring('Hello', 2, 2)")
+#' substring('Hello', 2)
+#' substring('Hello', 2, 2)
 #' }
 substring <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
   stop("DuckDB function substring() is not available in R.")
@@ -9378,7 +8830,8 @@ substring <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
 #' @return `VARCHAR`
 #' @examples
 #' \dontrun{
-#' c("substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3)", "substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3, 2)")
+#' substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3)
+#' substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3, 2)
 #' }
 substring_grapheme <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
   stop("DuckDB function substring_grapheme() is not available in R.")
@@ -9394,10 +8847,6 @@ substring_grapheme <- function(string = VARCHAR, start = BIGINT, length = BIGINT
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL | TIME | TIME WITH TIME ZONE`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 subtract <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL | TIME | TIME WITH TIME ZONE`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL`) {
   stop("DuckDB function subtract() is not available in R.")
 }
@@ -9480,10 +8929,6 @@ sumkahan <- function(arg = DOUBLE) {
 #' @usage summary(col0 = TABLE)
 #' @param col0 `TABLE`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 summary <- function(col0 = TABLE) {
   stop("DuckDB function summary() is not available in R.")
 }
@@ -9497,10 +8942,6 @@ summary <- function(col0 = TABLE) {
 #' @usage table_info(col0 = VARCHAR)
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 table_info <- function(col0 = VARCHAR) {
   stop("DuckDB function table_info() is not available in R.")
 }
@@ -9549,10 +8990,6 @@ tanh <- function(x = DOUBLE) {
 #' @param use_large_enum `BOOLEAN`
 #' @param use_large_bignum `BOOLEAN`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 test_all_types <- function(use_large_enum = BOOLEAN, use_large_bignum = BOOLEAN) {
   stop("DuckDB function test_all_types() is not available in R.")
 }
@@ -9567,10 +9004,6 @@ test_all_types <- function(use_large_enum = BOOLEAN, use_large_bignum = BOOLEAN)
 #' @param col0 `ANY`
 #' @param all_flat `BOOLEAN`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 test_vector_types <- function(col0 = ANY, all_flat = BOOLEAN) {
   stop("DuckDB function test_vector_types() is not available in R.")
 }
@@ -10031,7 +9464,8 @@ translate <- function(string = VARCHAR, from = VARCHAR, to = VARCHAR) {
 #' @return `VARCHAR`
 #' @examples
 #' \dontrun{
-#' c("trim('    test  ')", "trim('>>>>test<<', '><')")
+#' trim('    test  ')
+#' trim('>>>>test<<', '><')
 #' }
 trim <- function(string = VARCHAR, characters = VARCHAR) {
   stop("DuckDB function trim() is not available in R.")
@@ -10064,10 +9498,6 @@ trunc <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT |
 #' @usage truncate_duckdb_logs()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 truncate_duckdb_logs <- function() {
   stop("DuckDB function truncate_duckdb_logs() is not available in R.")
 }
@@ -10253,10 +9683,6 @@ union_value <- function() {
 #' @usage unnest(col0 = ANY)
 #' @param col0 `ANY`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 unnest <- function(col0 = ANY) {
   stop("DuckDB function unnest() is not available in R.")
 }
@@ -10338,10 +9764,6 @@ url_encode <- function(string = VARCHAR) {
 #' @usage user_agent()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 user_agent <- function() {
   stop("DuckDB function user_agent() is not available in R.")
 }
@@ -10440,10 +9862,6 @@ uuidv7 <- function() {
 #' @usage var_pop(x = DOUBLE)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 var_pop <- function(x = DOUBLE) {
   stop("DuckDB function var_pop() is not available in R.")
 }
@@ -10492,10 +9910,6 @@ variance <- function(x = DOUBLE) {
 #' @param col0 `VARIANT`
 #' @param col1 `VARCHAR | UINTEGER`
 #' @return `VARIANT`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 variant_extract <- function(col0 = VARIANT, col1 = `VARCHAR | UINTEGER`) {
   stop("DuckDB function variant_extract() is not available in R.")
 }
@@ -10543,10 +9957,6 @@ vector_type <- function(col = ANY) {
 #' @usage verify_external()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 verify_external <- function() {
   stop("DuckDB function verify_external() is not available in R.")
 }
@@ -10560,10 +9970,6 @@ verify_external <- function() {
 #' @usage verify_fetch_row()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 verify_fetch_row <- function() {
   stop("DuckDB function verify_fetch_row() is not available in R.")
 }
@@ -10577,10 +9983,6 @@ verify_fetch_row <- function() {
 #' @usage verify_parallelism()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 verify_parallelism <- function() {
   stop("DuckDB function verify_parallelism() is not available in R.")
 }
@@ -10594,10 +9996,6 @@ verify_parallelism <- function() {
 #' @usage verify_serializer()
 
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 verify_serializer <- function() {
   stop("DuckDB function verify_serializer() is not available in R.")
 }
@@ -10614,7 +10012,6 @@ verify_serializer <- function() {
 #' @examples
 #' \dontrun{
 #' version()
-#' character(0)
 #' }
 version <- function() {
   stop("DuckDB function version() is not available in R.")
@@ -10681,10 +10078,6 @@ weekofyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME Z
 #' @param col0 `VARCHAR`
 #' @param col1 `VARCHAR`
 #' @return Unspecified.
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 which_secret <- function(col0 = VARCHAR, col1 = VARCHAR) {
   stop("DuckDB function which_secret() is not available in R.")
 }
@@ -10788,7 +10181,9 @@ yearweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #' @return `ANY`
 #' @examples
 #' \dontrun{
-#' c("'Duck' || 'DB'", "[1, 2, 3] || [4, 5, 6]", "'\\xAA'::BLOB || '\\xBB'::BLOB")
+#' 'Duck' || 'DB'
+#' [1, 2, 3] || [4, 5, 6]
+#' '\xAA'::BLOB || '\xBB'::BLOB
 #' }
 `||` <- function(arg1 = ANY, arg2 = ANY) {
   stop("DuckDB function ||() is not available in R.")
@@ -10821,10 +10216,6 @@ yearweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #' @param col0 `VARCHAR`
 #' @param col1 `VARCHAR`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `~~` <- function(col0 = VARCHAR, col1 = VARCHAR) {
   stop("DuckDB function ~~() is not available in R.")
 }
@@ -10839,10 +10230,6 @@ yearweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #' @param col0 `VARCHAR`
 #' @param col1 `VARCHAR`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `~~*` <- function(col0 = VARCHAR, col1 = VARCHAR) {
   stop("DuckDB function ~~*() is not available in R.")
 }
@@ -10857,10 +10244,6 @@ yearweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #' @param col0 `VARCHAR`
 #' @param col1 `VARCHAR`
 #' @return `BOOLEAN`
-#' @examples
-#' \dontrun{
-#' character(0)
-#' }
 `~~~` <- function(col0 = VARCHAR, col1 = VARCHAR) {
   stop("DuckDB function ~~~() is not available in R.")
 }

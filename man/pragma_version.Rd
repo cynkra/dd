@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{pragma_version()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

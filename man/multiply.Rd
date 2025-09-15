@@ -14,8 +14,3 @@
 \description{
 DuckDB function \code{multiply()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

@@ -25,8 +25,3 @@ Unspecified.
 \description{
 DuckDB function \code{enable_logging()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

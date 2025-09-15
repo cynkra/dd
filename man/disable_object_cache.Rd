@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{disable_object_cache()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

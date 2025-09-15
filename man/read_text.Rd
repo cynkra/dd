@@ -22,8 +22,3 @@ Unspecified.
 \description{
 DuckDB function \code{read_text()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

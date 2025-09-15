@@ -16,8 +16,3 @@ Unspecified.
 \description{
 DuckDB function \code{parquet_bloom_probe()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

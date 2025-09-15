@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{disable_logging()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

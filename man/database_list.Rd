@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{database_list()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

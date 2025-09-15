@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{duckdb_indexes()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

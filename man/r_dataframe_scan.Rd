@@ -19,8 +19,3 @@ Unspecified.
 \description{
 DuckDB function \code{r_dataframe_scan()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

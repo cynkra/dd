@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{enable_checkpoint_on_shutdown()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

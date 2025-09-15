@@ -19,8 +19,3 @@ Unspecified.
 \description{
 DuckDB function \code{arrow_scan()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

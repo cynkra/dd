@@ -17,6 +17,7 @@ Concatenates multiple strings or lists. \code{NULL} inputs are skipped. See also
 }
 \examples{
 \dontrun{
-c("concat('Hello', ' ', 'World')", "concat([1, 2, 3], NULL, [4, 5, 6])")
+concat('Hello', ' ', 'World')
+concat([1, 2, 3], NULL, [4, 5, 6])
 }
 }

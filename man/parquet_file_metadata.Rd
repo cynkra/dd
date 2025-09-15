@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{parquet_file_metadata()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

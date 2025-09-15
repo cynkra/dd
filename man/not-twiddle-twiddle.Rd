@@ -18,8 +18,3 @@
 \description{
 DuckDB function \verb{!~~()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

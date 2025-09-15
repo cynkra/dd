@@ -40,8 +40,3 @@ Unspecified.
 \description{
 DuckDB function \code{read_parquet()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

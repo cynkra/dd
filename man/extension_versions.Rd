@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{extension_versions()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

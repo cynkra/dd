@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{disable_progress_bar()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

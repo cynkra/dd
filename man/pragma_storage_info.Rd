@@ -15,8 +15,3 @@ Unspecified.
 \description{
 DuckDB function \code{pragma_storage_info()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

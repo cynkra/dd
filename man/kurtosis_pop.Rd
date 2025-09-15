@@ -15,8 +15,3 @@ kurtosis_pop(x = DOUBLE)
 \description{
 Returns the excess kurtosis (Fisher’s definition) of all input values, without bias correction.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

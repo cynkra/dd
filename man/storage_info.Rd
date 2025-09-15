@@ -15,8 +15,3 @@ Unspecified.
 \description{
 DuckDB function \code{storage_info()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

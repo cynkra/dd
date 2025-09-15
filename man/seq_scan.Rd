@@ -12,8 +12,3 @@ Unspecified.
 \description{
 DuckDB function \code{seq_scan()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

@@ -14,8 +14,3 @@
 \description{
 DuckDB function \code{add()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}

@@ -24,7 +24,6 @@ Creates a list of values between \code{start} and \code{stop} - the stop paramet
 }
 \examples{
 \dontrun{
-character(0)
 range(2, 5, 3)
 }
 }

@@ -15,8 +15,3 @@ finalize(col0 = `AGGREGATE_STATE<?>`)
 \description{
 DuckDB function \code{finalize()}.
 }
-\examples{
-\dontrun{
-character(0)
-}
-}
