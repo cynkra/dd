@@ -9,6 +9,9 @@ is_histogram_other_bin(val = ANY)
 \arguments{
 \item{val}{\code{ANY}}
 }
+\value{
+\code{BOOLEAN}
+}
 \description{
 Whether or not the provided value is the histogram "other" bin (used for values not belonging to any provided bin).
 }

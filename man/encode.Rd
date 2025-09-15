@@ -9,6 +9,9 @@ encode(string = VARCHAR)
 \arguments{
 \item{string}{\code{VARCHAR}}
 }
+\value{
+\code{BLOB}
+}
 \description{
 Converts the \code{string} to \code{BLOB}. Converts UTF-8 characters into literal encoding.
 }

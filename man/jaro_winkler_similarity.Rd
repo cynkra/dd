@@ -10,6 +10,9 @@
 
 \item{score_cutoff}{\code{DOUBLE}}
 }
+\value{
+\code{DOUBLE}
+}
 \description{
 The Jaro-Winkler similarity between two strings. Characters of different cases (e.g., \code{a} and \code{A}) are considered different. Returns a number between 0 and 1. For similarity < \code{score_cutoff}, 0 is returned instead. \code{score_cutoff} defaults to 0.
 }

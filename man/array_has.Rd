@@ -11,6 +11,9 @@ array_has(list = `T[]`, element = T)
 
 \item{element}{\code{T}}
 }
+\value{
+\code{BOOLEAN}
+}
 \description{
 Returns true if the list contains the element.
 }

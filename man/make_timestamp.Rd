@@ -16,6 +16,9 @@
 
 \item{seconds}{\code{DOUBLE}}
 }
+\value{
+\code{TIMESTAMP}
+}
 \description{
 The timestamp for the given parts.
 }

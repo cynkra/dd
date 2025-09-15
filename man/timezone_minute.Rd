@@ -6,6 +6,9 @@
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
+\value{
+\code{BIGINT}
+}
 \description{
 Extract the timezone_minute component from a date or timestamp.
 }

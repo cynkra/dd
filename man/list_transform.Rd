@@ -11,6 +11,9 @@ list_transform(list = `ANY[]`, `lambda(x)` = LAMBDA)
 
 \item{lambda(x)}{\code{LAMBDA}}
 }
+\value{
+\code{ANY[]}
+}
 \description{
 Returns a list that is the result of applying the \code{lambda} function to each element of the input \code{list}. The return type is defined by the return type of the \code{lambda} function.
 }

@@ -11,6 +11,9 @@ cast_to_type(param = ANY, type = ANY)
 
 \item{type}{\code{ANY}}
 }
+\value{
+\code{ANY}
+}
 \description{
 Casts the first argument to the type of the second argument.
 }

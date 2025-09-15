@@ -8,6 +8,9 @@
 
 \item{y}{\code{DOUBLE | FLOAT}}
 }
+\value{
+\code{DOUBLE | FLOAT}
+}
 \description{
 Returns the next floating point value after x in the direction of y.
 }

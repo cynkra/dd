@@ -6,6 +6,9 @@
 \arguments{
 \item{x}{\code{FLOAT | DOUBLE}}
 }
+\value{
+\code{BOOLEAN}
+}
 \description{
 Returns true if the floating point value is not a number, false otherwise.
 }

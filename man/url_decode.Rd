@@ -9,6 +9,9 @@ url_decode(string = VARCHAR)
 \arguments{
 \item{string}{\code{VARCHAR}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Decodes a URL from a representation using Percent-Encoding.
 }

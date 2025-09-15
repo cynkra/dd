@@ -9,6 +9,9 @@ even(x = DOUBLE)
 \arguments{
 \item{x}{\code{DOUBLE}}
 }
+\value{
+\code{DOUBLE}
+}
 \description{
 Rounds x to next even number by rounding away from zero.
 }

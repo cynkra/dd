@@ -8,6 +8,7 @@
 #' @name abs
 #' @usage NULL
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
+#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @examples
 #' \dontrun{
 #' abs(-17.4)
@@ -24,6 +25,7 @@ abs <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | D
 #' @name acos
 #' @usage acos(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' acos(0.5)
@@ -40,6 +42,7 @@ acos <- function(x = DOUBLE) {
 #' @name acosh
 #' @usage acosh(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' acosh(2.3)
@@ -57,6 +60,7 @@ acosh <- function(x = DOUBLE) {
 #' @usage NULL
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
+#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | BIGNUM`
 #' @examples
 #' \dontrun{
 #' character(0)
@@ -73,6 +77,7 @@ add <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT 
 #' @name age
 #' @usage NULL
 #' @param timestamp `TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `INTERVAL`
 #' @examples
 #' \dontrun{
 #' age(TIMESTAMP '2001-04-10', TIMESTAMP '1992-09-20')
@@ -89,6 +94,7 @@ age <- function(timestamp = `TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' @name alias
 #' @usage alias(expr = ANY)
 #' @param expr `ANY`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' alias(42 + 1)
@@ -106,6 +112,7 @@ alias <- function(expr = ANY) {
 #' @usage apply(list = `ANY[]`, `lambda(x)` = LAMBDA)
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
+#' @return `ANY[]`
 #' @examples
 #' \dontrun{
 #' apply([1, 2, 3], lambda x : x + 1)
@@ -123,6 +130,7 @@ apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' @usage array_apply(list = `ANY[]`, `lambda(x)` = LAMBDA)
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
+#' @return `ANY[]`
 #' @examples
 #' \dontrun{
 #' array_apply([1, 2, 3], lambda x : x + 1)
@@ -140,6 +148,7 @@ array_apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' @usage array_contains(list = `T[]`, element = T)
 #' @param list `T[]`
 #' @param element `T`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' array_contains([1, 2, NULL], 1)
@@ -157,6 +166,7 @@ array_contains <- function(list = `T[]`, element = T) {
 #' @usage NULL
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @return `FLOAT | DOUBLE`
 #' @examples
 #' \dontrun{
 #' array_cosine_distance(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
@@ -174,6 +184,7 @@ array_cosine_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = 
 #' @usage NULL
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @return `FLOAT | DOUBLE`
 #' @examples
 #' \dontrun{
 #' array_cosine_similarity(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
@@ -190,6 +201,7 @@ array_cosine_similarity <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 
 #' @name array_cross_product
 #' @usage NULL
 #' @param array `FLOAT[3] | DOUBLE[3]`
+#' @return `FLOAT[3] | DOUBLE[3]`
 #' @examples
 #' \dontrun{
 #' array_cross_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
@@ -207,6 +219,7 @@ array_cross_product <- function(array = `FLOAT[3] | DOUBLE[3]`) {
 #' @usage NULL
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @return `FLOAT | DOUBLE`
 #' @examples
 #' \dontrun{
 #' array_distance(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
@@ -223,6 +236,7 @@ array_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[
 #' @name array_distinct
 #' @usage array_distinct(list = `T[]`)
 #' @param list `T[]`
+#' @return `T[]`
 #' @examples
 #' \dontrun{
 #' array_distinct([1, 1, NULL, -3, 1, 5])
@@ -240,6 +254,7 @@ array_distinct <- function(list = `T[]`) {
 #' @usage NULL
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @return `FLOAT | DOUBLE`
 #' @examples
 #' \dontrun{
 #' array_dot_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
@@ -265,6 +280,7 @@ array_dot_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLO
 #' @param index `BIGINT`
 #' @param struct `STRUCT`
 #' @param entry `VARCHAR`
+#' @return `T | VARCHAR | ANY`
 #' @examples
 #' \dontrun{
 #' character(0)
@@ -285,6 +301,7 @@ array_extract <- function(col0 = `T[]`, col1 = BIGINT, string = VARCHAR, index =
 #' @usage array_filter(list = `ANY[]`, `lambda(x)` = LAMBDA)
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
+#' @return `ANY[]`
 #' @examples
 #' \dontrun{
 #' array_filter([3, 4, 5], lambda x : x > 4)
@@ -303,6 +320,7 @@ array_filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
 #' @param col2 `VARCHAR`
+#' @return `ANY[]`
 #' @examples
 #' \dontrun{
 #' array_grade_up([3, 6, 1, 2])
@@ -320,6 +338,7 @@ array_grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
 #' @usage array_has(list = `T[]`, element = T)
 #' @param list `T[]`
 #' @param element `T`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' array_has([1, 2, NULL], 1)
@@ -337,6 +356,7 @@ array_has <- function(list = `T[]`, element = T) {
 #' @usage array_has_all(list1 = `T[]`, list2 = `T[]`)
 #' @param list1 `T[]`
 #' @param list2 `T[]`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' array_has_all([1, 2, 3], [2, 3])
@@ -354,6 +374,7 @@ array_has_all <- function(list1 = `T[]`, list2 = `T[]`) {
 #' @usage array_has_any(list1 = `T[]`, list2 = `T[]`)
 #' @param list1 `T[]`
 #' @param list2 `T[]`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' array_has_any([1, 2, 3], [2, 3, 4])
@@ -371,6 +392,7 @@ array_has_any <- function(list1 = `T[]`, list2 = `T[]`) {
 #' @usage array_indexof(list = `T[]`, element = T)
 #' @param list `T[]`
 #' @param element `T`
+#' @return `INTEGER`
 #' @examples
 #' \dontrun{
 #' array_indexof([1, 2, NULL], 2)
@@ -388,6 +410,7 @@ array_indexof <- function(list = `T[]`, element = T) {
 #' @usage NULL
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @return `FLOAT | DOUBLE`
 #' @examples
 #' \dontrun{
 #' array_inner_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
@@ -407,6 +430,7 @@ array_inner_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `F
 #' @usage NULL
 #' @param list `ANY[]`
 #' @param dimension `BIGINT`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' array_length([1, 2, 3])
@@ -424,6 +448,7 @@ array_length <- function(list = `ANY[]`, dimension = BIGINT) {
 #' @usage NULL
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @return `FLOAT | DOUBLE`
 #' @examples
 #' \dontrun{
 #' array_negative_dot_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
@@ -441,6 +466,7 @@ array_negative_dot_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, arra
 #' @usage NULL
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @return `FLOAT | DOUBLE`
 #' @examples
 #' \dontrun{
 #' array_negative_inner_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
@@ -458,6 +484,7 @@ array_negative_inner_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, ar
 #' @usage array_position(list = `T[]`, element = T)
 #' @param list `T[]`
 #' @param element `T`
+#' @return `INTEGER`
 #' @examples
 #' \dontrun{
 #' array_position([1, 2, NULL], 2)
@@ -476,6 +503,7 @@ array_position <- function(list = `T[]`, element = T) {
 #' @param list `ANY[]`
 #' @param lambda(x,y) `LAMBDA`
 #' @param initial_value `ANY`
+#' @return `ANY`
 #' @examples
 #' \dontrun{
 #' array_reduce([1, 2, 3], lambda x, y : x + y)
@@ -494,6 +522,7 @@ array_reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value =
 #' @param list `ANY[]`
 #' @param size[ `ANY`
 #' @param value] `ANY`
+#' @return `ANY[]`
 #' @examples
 #' \dontrun{
 #' array_resize([1, 2, 3], 5, 0)
@@ -511,6 +540,7 @@ array_resize <- function(list = `ANY[]`, `size[` = ANY, `value]` = ANY) {
 #' @usage NULL
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
+#' @return `ANY[]`
 #' @examples
 #' \dontrun{
 #' array_reverse_sort([3, 6, 1, 2])
@@ -528,6 +558,7 @@ array_reverse_sort <- function(list = `ANY[]`, col1 = VARCHAR) {
 #' @usage array_select(value_list = `T[]`, index_list = `BIGINT[]`)
 #' @param value_list `T[]`
 #' @param index_list `BIGINT[]`
+#' @return `T[]`
 #' @examples
 #' \dontrun{
 #' array_select([10, 20, 30, 40], [1, 4])
@@ -549,6 +580,7 @@ array_select <- function(value_list = `T[]`, index_list = `BIGINT[]`) {
 #' @param begin `ANY`
 #' @param end `ANY`
 #' @param step `BIGINT`
+#' @return `ANY`
 #' @examples
 #' \dontrun{
 #' c("array_slice('DuckDB', 3, 4)", "array_slice('DuckDB', 3, NULL)", "array_slice('DuckDB', 0, -3)")
@@ -568,6 +600,7 @@ array_slice <- function(list = ANY, begin = ANY, end = ANY, step = BIGINT) {
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
 #' @param col2 `VARCHAR`
+#' @return `ANY[]`
 #' @examples
 #' \dontrun{
 #' array_sort([3, 6, 1, 2])
@@ -585,6 +618,7 @@ array_sort <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
 #' @usage array_transform(list = `ANY[]`, `lambda(x)` = LAMBDA)
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
+#' @return `ANY[]`
 #' @examples
 #' \dontrun{
 #' array_transform([1, 2, 3], lambda x : x + 1)
@@ -601,6 +635,7 @@ array_transform <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' @name array_unique
 #' @usage array_unique(list = `ANY[]`)
 #' @param list `ANY[]`
+#' @return `UBIGINT`
 #' @examples
 #' \dontrun{
 #' array_unique([1, 1, NULL, -3, 1, 5])
@@ -618,6 +653,7 @@ array_unique <- function(list = `ANY[]`) {
 #' @usage array_where(value_list = `T[]`, mask_list = `BOOLEAN[]`)
 #' @param value_list `T[]`
 #' @param mask_list `BOOLEAN[]`
+#' @return `T[]`
 #' @examples
 #' \dontrun{
 #' array_where([10, 20, 30, 40], [true, false, false, true])
@@ -634,6 +670,7 @@ array_where <- function(value_list = `T[]`, mask_list = `BOOLEAN[]`) {
 #' @name ascii
 #' @usage ascii(string = VARCHAR)
 #' @param string `VARCHAR`
+#' @return `INTEGER`
 #' @examples
 #' \dontrun{
 #' ascii('Ω')
@@ -650,6 +687,7 @@ ascii <- function(string = VARCHAR) {
 #' @name asin
 #' @usage asin(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' asin(0.5)
@@ -666,6 +704,7 @@ asin <- function(x = DOUBLE) {
 #' @name asinh
 #' @usage asinh(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' asinh(0.5)
@@ -682,6 +721,7 @@ asinh <- function(x = DOUBLE) {
 #' @name atan
 #' @usage atan(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' atan(0.5)
@@ -699,6 +739,7 @@ atan <- function(x = DOUBLE) {
 #' @usage atan2(y = DOUBLE, x = DOUBLE)
 #' @param y `DOUBLE`
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' atan2(1.0, 0.0)
@@ -715,6 +756,7 @@ atan2 <- function(y = DOUBLE, x = DOUBLE) {
 #' @name atanh
 #' @usage atanh(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' atanh(0.5)
@@ -734,6 +776,7 @@ atanh <- function(x = DOUBLE) {
 #' @param min `DOUBLE`
 #' @param max `DOUBLE`
 #' @param width `DOUBLE`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' bar(5, 0, 20, 10)
@@ -750,6 +793,7 @@ bar <- function(x = DOUBLE, min = DOUBLE, max = DOUBLE, width = DOUBLE) {
 #' @name base64
 #' @usage base64(blob = BLOB)
 #' @param blob `BLOB`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' base64('A'::BLOB)
@@ -769,6 +813,7 @@ base64 <- function(blob = BLOB) {
 #' @usage NULL
 #' @param string `VARCHAR`
 #' @param value `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' bin('Aa')
@@ -786,6 +831,7 @@ bin <- function(string = VARCHAR, value = `BIGNUM | UBIGINT | BIGINT | HUGEINT |
 #' @name bit_count
 #' @usage NULL
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | BIT`
+#' @return `TINYINT | BIGINT`
 #' @examples
 #' \dontrun{
 #' bit_count(31)
@@ -805,6 +851,7 @@ bit_count <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | BIT
 #' @usage NULL
 #' @param string `VARCHAR`
 #' @param bit `BIT`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' bit_length('abc')
@@ -823,6 +870,7 @@ bit_length <- function(string = VARCHAR, bit = BIT) {
 #' @usage bit_position(substring = BIT, bitstring = BIT)
 #' @param substring `BIT`
 #' @param bitstring `BIT`
+#' @return `INTEGER`
 #' @examples
 #' \dontrun{
 #' bit_position('010'::BIT, '1110101'::BIT)
@@ -840,6 +888,7 @@ bit_position <- function(substring = BIT, bitstring = BIT) {
 #' @usage NULL
 #' @param bitstring `VARCHAR | BIT`
 #' @param length `INTEGER`
+#' @return `BIT`
 #' @examples
 #' \dontrun{
 #' bitstring('1010'::BIT, 7)
@@ -857,6 +906,7 @@ bitstring <- function(bitstring = `VARCHAR | BIT`, length = INTEGER) {
 #' @usage can_cast_implicitly(source_type = ANY, target_type = ANY)
 #' @param source_type `ANY`
 #' @param target_type `ANY`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' can_cast_implicitly(NULL::INTEGER, NULL::BIGINT)
@@ -874,6 +924,7 @@ can_cast_implicitly <- function(source_type = ANY, target_type = ANY) {
 #' @usage cast_to_type(param = ANY, type = ANY)
 #' @param param `ANY`
 #' @param type `ANY`
+#' @return `ANY`
 #' @examples
 #' \dontrun{
 #' cast_to_type('42', NULL::INTEGER)
@@ -890,6 +941,7 @@ cast_to_type <- function(param = ANY, type = ANY) {
 #' @name cbrt
 #' @usage cbrt(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' cbrt(8)
@@ -906,6 +958,7 @@ cbrt <- function(x = DOUBLE) {
 #' @name ceil
 #' @usage NULL
 #' @param x `FLOAT | DOUBLE | DECIMAL`
+#' @return `FLOAT | DOUBLE | DECIMAL`
 #' @examples
 #' \dontrun{
 #' ceil(17.4)
@@ -922,6 +975,7 @@ ceil <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
 #' @name ceiling
 #' @usage NULL
 #' @param x `FLOAT | DOUBLE | DECIMAL`
+#' @return `FLOAT | DOUBLE | DECIMAL`
 #' @examples
 #' \dontrun{
 #' ceiling(17.4)
@@ -938,6 +992,7 @@ ceiling <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
 #' @name century
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' century(timestamp '2021-08-03 11:59:44.123456')
@@ -960,6 +1015,7 @@ century <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' @param string `VARCHAR`
 #' @param bit `BIT`
 #' @param list `ANY[]`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' char_length('Hello🦆')
@@ -984,6 +1040,7 @@ char_length <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
 #' @param string `VARCHAR`
 #' @param bit `BIT`
 #' @param list `ANY[]`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' character_length('Hello🦆')
@@ -1002,6 +1059,7 @@ character_length <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
 #' @name chr
 #' @usage chr(code_point = INTEGER)
 #' @param code_point `INTEGER`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' chr(65)
@@ -1019,6 +1077,7 @@ chr <- function(code_point = INTEGER) {
 #' @usage combine(col0 = `AGGREGATE_STATE<?>`, col1 = ANY)
 #' @param col0 `AGGREGATE_STATE<?>`
 #' @param col1 `ANY`
+#' @return `AGGREGATE_STATE<?>`
 #' @examples
 #' \dontrun{
 #' character(0)
@@ -1038,6 +1097,7 @@ combine <- function(col0 = `AGGREGATE_STATE<?>`, col1 = ANY) {
 #' @param search_string `VARCHAR`
 #' @param col0 `T[] | MAP(K, V) | STRUCT`
 #' @param col1 `T | K | ANY`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' contains('abc', 'a')
@@ -1055,6 +1115,7 @@ contains <- function(string = VARCHAR, search_string = VARCHAR, col0 = `T[] | MA
 #' @name cos
 #' @usage cos(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' cos(90)
@@ -1071,6 +1132,7 @@ cos <- function(x = DOUBLE) {
 #' @name cosh
 #' @usage cosh(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' cosh(1)
@@ -1087,6 +1149,7 @@ cosh <- function(x = DOUBLE) {
 #' @name cot
 #' @usage cot(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' cot(0.5)
@@ -1103,6 +1166,7 @@ cot <- function(x = DOUBLE) {
 #' @name current_setting
 #' @usage current_setting(setting_name = VARCHAR)
 #' @param setting_name `VARCHAR`
+#' @return `ANY`
 #' @examples
 #' \dontrun{
 #' current_setting('access_mode')
@@ -1120,6 +1184,7 @@ current_setting <- function(setting_name = VARCHAR) {
 #' @usage damerau_levenshtein(s1 = VARCHAR, s2 = VARCHAR)
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' damerau_levenshtein('duckdb', 'udckbd')
@@ -1138,6 +1203,7 @@ damerau_levenshtein <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' @param part `VARCHAR`
 #' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' date_diff('hour', TIMESTAMPTZ '1992-09-30 23:59:59', TIMESTAMPTZ '1992-10-01 01:58:00')
@@ -1155,6 +1221,7 @@ date_diff <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIM
 #' @usage NULL
 #' @param ts `VARCHAR[] | VARCHAR`
 #' @param col1 `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
+#' @return `STRUCT() | BIGINT`
 #' @examples
 #' \dontrun{
 #' date_part('minute', TIMESTAMP '1992-09-20 20:38:40')
@@ -1173,6 +1240,7 @@ date_part <- function(ts = `VARCHAR[] | VARCHAR`, col1 = `DATE | INTERVAL | TIME
 #' @param part `VARCHAR`
 #' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' date_sub('hour', TIMESTAMPTZ '1992-09-30 23:59:59', TIMESTAMPTZ '1992-10-01 01:58:00')
@@ -1190,6 +1258,7 @@ date_sub <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIME
 #' @usage NULL
 #' @param part `VARCHAR`
 #' @param timestamp `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `TIMESTAMP | INTERVAL | TIMESTAMP WITH TIME ZONE`
 #' @examples
 #' \dontrun{
 #' date_trunc('hour', TIMESTAMPTZ '1992-09-20 20:38:40')
@@ -1208,6 +1277,7 @@ date_trunc <- function(part = VARCHAR, timestamp = `DATE | INTERVAL | TIMESTAMP 
 #' @param part `VARCHAR`
 #' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' datediff('hour', TIMESTAMPTZ '1992-09-30 23:59:59', TIMESTAMPTZ '1992-10-01 01:58:00')
@@ -1225,6 +1295,7 @@ datediff <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIME
 #' @usage NULL
 #' @param ts `VARCHAR[] | VARCHAR`
 #' @param col1 `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
+#' @return `STRUCT() | BIGINT`
 #' @examples
 #' \dontrun{
 #' datepart('minute', TIMESTAMP '1992-09-20 20:38:40')
@@ -1243,6 +1314,7 @@ datepart <- function(ts = `VARCHAR[] | VARCHAR`, col1 = `DATE | INTERVAL | TIME 
 #' @param part `VARCHAR`
 #' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' datesub('hour', TIMESTAMPTZ '1992-09-30 23:59:59', TIMESTAMPTZ '1992-10-01 01:58:00')
@@ -1260,6 +1332,7 @@ datesub <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMES
 #' @usage NULL
 #' @param part `VARCHAR`
 #' @param timestamp `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `TIMESTAMP | INTERVAL | TIMESTAMP WITH TIME ZONE`
 #' @examples
 #' \dontrun{
 #' datetrunc('hour', TIMESTAMPTZ '1992-09-20 20:38:40')
@@ -1276,6 +1349,7 @@ datetrunc <- function(part = VARCHAR, timestamp = `DATE | INTERVAL | TIMESTAMP |
 #' @name day
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' day(timestamp '2021-08-03 11:59:44.123456')
@@ -1292,6 +1366,7 @@ day <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' @name dayname
 #' @usage NULL
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' dayname(TIMESTAMP '1992-03-22')
@@ -1308,6 +1383,7 @@ dayname <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' @name dayofmonth
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' dayofmonth(timestamp '2021-08-03 11:59:44.123456')
@@ -1324,6 +1400,7 @@ dayofmonth <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME Z
 #' @name dayofweek
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' dayofweek(timestamp '2021-08-03 11:59:44.123456')
@@ -1340,6 +1417,7 @@ dayofweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZO
 #' @name dayofyear
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' dayofyear(timestamp '2021-08-03 11:59:44.123456')
@@ -1356,6 +1434,7 @@ dayofyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZO
 #' @name decade
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' decade(timestamp '2021-08-03 11:59:44.123456')
@@ -1372,6 +1451,7 @@ decade <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @name decode
 #' @usage decode(blob = BLOB)
 #' @param blob `BLOB`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' decode('\xC3\xBC'::BLOB)
@@ -1388,6 +1468,7 @@ decode <- function(blob = BLOB) {
 #' @name degrees
 #' @usage degrees(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' degrees(pi())
@@ -1405,6 +1486,7 @@ degrees <- function(x = DOUBLE) {
 #' @usage NULL
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
+#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @examples
 #' \dontrun{
 #' character(0)
@@ -1422,6 +1504,7 @@ divide <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLO
 #' @usage editdist3(s1 = VARCHAR, s2 = VARCHAR)
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' editdist3('duck', 'db')
@@ -1439,6 +1522,7 @@ editdist3 <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' @usage element_at(map = `MAP(K, V)`, key = K)
 #' @param map `MAP(K, V)`
 #' @param key `K`
+#' @return `V[]`
 #' @examples
 #' \dontrun{
 #' element_at(map(['key'], ['val']), 'key')
@@ -1455,6 +1539,7 @@ element_at <- function(map = `MAP(K, V)`, key = K) {
 #' @name encode
 #' @usage encode(string = VARCHAR)
 #' @param string `VARCHAR`
+#' @return `BLOB`
 #' @examples
 #' \dontrun{
 #' encode('my_string_with_ü')
@@ -1472,6 +1557,7 @@ encode <- function(string = VARCHAR) {
 #' @usage ends_with(string = VARCHAR, search_string = VARCHAR)
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' ends_with('abc', 'bc')
@@ -1488,6 +1574,7 @@ ends_with <- function(string = VARCHAR, search_string = VARCHAR) {
 #' @name enum_code
 #' @usage enum_code(enum = ANY)
 #' @param enum `ANY`
+#' @return `ANY`
 #' @examples
 #' \dontrun{
 #' enum_code('happy'::mood)
@@ -1504,6 +1591,7 @@ enum_code <- function(enum = ANY) {
 #' @name enum_first
 #' @usage enum_first(enum = ANY)
 #' @param enum `ANY`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' enum_first(NULL::mood)
@@ -1520,6 +1608,7 @@ enum_first <- function(enum = ANY) {
 #' @name enum_last
 #' @usage enum_last(enum = ANY)
 #' @param enum `ANY`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' enum_last(NULL::mood)
@@ -1536,6 +1625,7 @@ enum_last <- function(enum = ANY) {
 #' @name enum_range
 #' @usage enum_range(enum = ANY)
 #' @param enum `ANY`
+#' @return `VARCHAR[]`
 #' @examples
 #' \dontrun{
 #' enum_range(NULL::mood)
@@ -1553,6 +1643,7 @@ enum_range <- function(enum = ANY) {
 #' @usage enum_range_boundary(start = ANY, end = ANY)
 #' @param start `ANY`
 #' @param end `ANY`
+#' @return `VARCHAR[]`
 #' @examples
 #' \dontrun{
 #' enum_range_boundary(NULL, 'happy'::mood)
@@ -1569,6 +1660,7 @@ enum_range_boundary <- function(start = ANY, end = ANY) {
 #' @name epoch
 #' @usage NULL
 #' @param temporal `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' epoch(timestamp '2021-08-03 11:59:44.123456')
@@ -1585,6 +1677,7 @@ epoch <- function(temporal = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
 #' @name epoch_ms
 #' @usage NULL
 #' @param temporal `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | BIGINT`
+#' @return `BIGINT | TIMESTAMP`
 #' @examples
 #' \dontrun{
 #' epoch_ms(timestamp '2021-08-03 11:59:44.123456')
@@ -1601,6 +1694,7 @@ epoch_ms <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | 
 #' @name epoch_ns
 #' @usage NULL
 #' @param temporal `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | TIMESTAMP_NS`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' epoch_ns(timestamp '2021-08-03 11:59:44.123456')
@@ -1617,6 +1711,7 @@ epoch_ns <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | 
 #' @name epoch_us
 #' @usage NULL
 #' @param temporal `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' epoch_us(timestamp '2021-08-03 11:59:44.123456')
@@ -1636,6 +1731,7 @@ epoch_us <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | 
 #' @param max `BIGINT | DOUBLE | TIMESTAMP | ANY`
 #' @param bin_count `BIGINT`
 #' @param nice_rounding `BOOLEAN`
+#' @return `ANY[]`
 #' @examples
 #' \dontrun{
 #' equi_width_bins(0, 10, 2, true)
@@ -1652,6 +1748,7 @@ equi_width_bins <- function(min = `BIGINT | DOUBLE | TIMESTAMP | ANY`, max = `BI
 #' @name era
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' era(timestamp '2021-08-03 11:59:44.123456')
@@ -1668,6 +1765,7 @@ era <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' @name even
 #' @usage even(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' even(2.9)
@@ -1684,6 +1782,7 @@ even <- function(x = DOUBLE) {
 #' @name exp
 #' @usage exp(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' exp(1)
@@ -1700,6 +1799,7 @@ exp <- function(x = DOUBLE) {
 #' @name factorial
 #' @usage factorial(x = INTEGER)
 #' @param x `INTEGER`
+#' @return `HUGEINT`
 #' @examples
 #' \dontrun{
 #' 4!
@@ -1717,6 +1817,7 @@ factorial <- function(x = INTEGER) {
 #' @usage filter(list = `ANY[]`, `lambda(x)` = LAMBDA)
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
+#' @return `ANY[]`
 #' @examples
 #' \dontrun{
 #' filter([3, 4, 5], lambda x : x > 4)
@@ -1733,6 +1834,7 @@ filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' @name finalize
 #' @usage finalize(col0 = `AGGREGATE_STATE<?>`)
 #' @param col0 `AGGREGATE_STATE<?>`
+#' @return `INVALID`
 #' @examples
 #' \dontrun{
 #' character(0)
@@ -1749,6 +1851,7 @@ finalize <- function(col0 = `AGGREGATE_STATE<?>`) {
 #' @name flatten
 #' @usage flatten(nested_list = `T[][]`)
 #' @param nested_list `T[][]`
+#' @return `T[]`
 #' @examples
 #' \dontrun{
 #' flatten([[1, 2, 3], [4, 5]])
@@ -1765,6 +1868,7 @@ flatten <- function(nested_list = `T[][]`) {
 #' @name floor
 #' @usage NULL
 #' @param x `FLOAT | DOUBLE | DECIMAL`
+#' @return `FLOAT | DOUBLE | DECIMAL`
 #' @examples
 #' \dontrun{
 #' floor(17.4)
@@ -1781,6 +1885,7 @@ floor <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
 #' @name formatReadableDecimalSize
 #' @usage formatReadableDecimalSize(integer = BIGINT)
 #' @param integer `BIGINT`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' formatReadableDecimalSize(16_000)
@@ -1797,6 +1902,7 @@ formatReadableDecimalSize <- function(integer = BIGINT) {
 #' @name formatReadableSize
 #' @usage formatReadableSize(integer = BIGINT)
 #' @param integer `BIGINT`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' formatReadableSize(16_000)
@@ -1813,6 +1919,7 @@ formatReadableSize <- function(integer = BIGINT) {
 #' @name format_bytes
 #' @usage format_bytes(integer = BIGINT)
 #' @param integer `BIGINT`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' format_bytes(16_000)
@@ -1829,6 +1936,7 @@ format_bytes <- function(integer = BIGINT) {
 #' @name from_base64
 #' @usage from_base64(string = VARCHAR)
 #' @param string `VARCHAR`
+#' @return `BLOB`
 #' @examples
 #' \dontrun{
 #' from_base64('QQ==')
@@ -1845,6 +1953,7 @@ from_base64 <- function(string = VARCHAR) {
 #' @name from_binary
 #' @usage from_binary(value = VARCHAR)
 #' @param value `VARCHAR`
+#' @return `BLOB`
 #' @examples
 #' \dontrun{
 #' from_binary('0110')
@@ -1861,6 +1970,7 @@ from_binary <- function(value = VARCHAR) {
 #' @name from_hex
 #' @usage from_hex(value = VARCHAR)
 #' @param value `VARCHAR`
+#' @return `BLOB`
 #' @examples
 #' \dontrun{
 #' from_hex('2A')
@@ -1877,6 +1987,7 @@ from_hex <- function(value = VARCHAR) {
 #' @name gamma
 #' @usage gamma(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' gamma(5.5)
@@ -1894,6 +2005,7 @@ gamma <- function(x = DOUBLE) {
 #' @usage NULL
 #' @param x `BIGINT | HUGEINT`
 #' @param y `BIGINT | HUGEINT`
+#' @return `BIGINT | HUGEINT`
 #' @examples
 #' \dontrun{
 #' gcd(42, 57)
@@ -1912,6 +2024,7 @@ gcd <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
 #' @param start `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param stop `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param step `BIGINT | INTERVAL`
+#' @return `BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
 #' @examples
 #' \dontrun{
 #' generate_series(2, 5, 3)
@@ -1929,6 +2042,7 @@ generate_series <- function(start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZO
 #' @usage get_bit(bitstring = BIT, index = INTEGER)
 #' @param bitstring `BIT`
 #' @param index `INTEGER`
+#' @return `INTEGER`
 #' @examples
 #' \dontrun{
 #' get_bit('0110010'::BIT, 2)
@@ -1945,6 +2059,7 @@ get_bit <- function(bitstring = BIT, index = INTEGER) {
 #' @name getvariable
 #' @usage getvariable(col0 = VARCHAR)
 #' @param col0 `VARCHAR`
+#' @return `ANY`
 #' @examples
 #' \dontrun{
 #' character(0)
@@ -1963,6 +2078,7 @@ getvariable <- function(col0 = VARCHAR) {
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
 #' @param col2 `VARCHAR`
+#' @return `ANY[]`
 #' @examples
 #' \dontrun{
 #' grade_up([3, 6, 1, 2])
@@ -1980,6 +2096,7 @@ grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
 #' @usage NULL
 #' @param x `BIGINT | HUGEINT`
 #' @param y `BIGINT | HUGEINT`
+#' @return `BIGINT | HUGEINT`
 #' @examples
 #' \dontrun{
 #' greatest_common_divisor(42, 57)
@@ -1997,6 +2114,7 @@ greatest_common_divisor <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEIN
 #' @usage hamming(s1 = VARCHAR, s2 = VARCHAR)
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' hamming('duck', 'luck')
@@ -2019,6 +2137,7 @@ hamming <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' @param string `VARCHAR`
 #' @param value `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`
 #' @param blob `BLOB`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' hex('Hello')
@@ -2037,6 +2156,7 @@ hex <- function(string = VARCHAR, value = `BIGNUM | BIGINT | UBIGINT | HUGEINT |
 #' @name hour
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' hour(timestamp '2021-08-03 11:59:44.123456')
@@ -2055,6 +2175,7 @@ hour <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE 
 #' @param string `VARCHAR`
 #' @param like_specifier `VARCHAR`
 #' @param escape_character `VARCHAR`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' ilike_escape('A%c', 'a$%C', '$')
@@ -2072,6 +2193,7 @@ ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_char
 #' @usage instr(string = VARCHAR, search_string = VARCHAR)
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' instr('test test', 'es')
@@ -2088,6 +2210,7 @@ instr <- function(string = VARCHAR, search_string = VARCHAR) {
 #' @name is_histogram_other_bin
 #' @usage is_histogram_other_bin(val = ANY)
 #' @param val `ANY`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' is_histogram_other_bin(v)
@@ -2104,6 +2227,7 @@ is_histogram_other_bin <- function(val = ANY) {
 #' @name isfinite
 #' @usage NULL
 #' @param x `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' isfinite(5.5)
@@ -2120,6 +2244,7 @@ isfinite <- function(x = `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIM
 #' @name isinf
 #' @usage NULL
 #' @param x `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' isinf('Infinity'::float)
@@ -2136,6 +2261,7 @@ isinf <- function(x = `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME Z
 #' @name isnan
 #' @usage NULL
 #' @param x `FLOAT | DOUBLE`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' isnan('NaN'::FLOAT)
@@ -2152,6 +2278,7 @@ isnan <- function(x = `FLOAT | DOUBLE`) {
 #' @name isodow
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' isodow(timestamp '2021-08-03 11:59:44.123456')
@@ -2168,6 +2295,7 @@ isodow <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @name isoyear
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' isoyear(timestamp '2021-08-03 11:59:44.123456')
@@ -2185,6 +2313,7 @@ isoyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' @usage jaccard(s1 = VARCHAR, s2 = VARCHAR)
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' jaccard('duck', 'luck')
@@ -2203,6 +2332,7 @@ jaccard <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
 #' @param score_cutoff `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' jaro_similarity('duck', 'duckdb')
@@ -2221,6 +2351,7 @@ jaro_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE) {
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
 #' @param score_cutoff `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' jaro_winkler_similarity('duck', 'duckdb')
@@ -2237,6 +2368,7 @@ jaro_winkler_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = D
 #' @name julian
 #' @usage NULL
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' julian(timestamp '2006-01-01 12:00')
@@ -2253,6 +2385,7 @@ julian <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' @name last_day
 #' @usage NULL
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `DATE`
 #' @examples
 #' \dontrun{
 #' last_day(TIMESTAMP '1992-03-22 01:02:03.1234')
@@ -2269,6 +2402,7 @@ last_day <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' @name lcase
 #' @usage lcase(string = VARCHAR)
 #' @param string `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' lcase('Hello')
@@ -2286,6 +2420,7 @@ lcase <- function(string = VARCHAR) {
 #' @usage NULL
 #' @param x `BIGINT | HUGEINT`
 #' @param y `BIGINT | HUGEINT`
+#' @return `BIGINT | HUGEINT`
 #' @examples
 #' \dontrun{
 #' lcm(42, 57)
@@ -2303,6 +2438,7 @@ lcm <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
 #' @usage NULL
 #' @param x `BIGINT | HUGEINT`
 #' @param y `BIGINT | HUGEINT`
+#' @return `BIGINT | HUGEINT`
 #' @examples
 #' \dontrun{
 #' least_common_multiple(42, 57)
@@ -2320,6 +2456,7 @@ least_common_multiple <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`
 #' @usage left(string = VARCHAR, count = BIGINT)
 #' @param string `VARCHAR`
 #' @param count `BIGINT`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' left('Hello🦆', 2)
@@ -2337,6 +2474,7 @@ left <- function(string = VARCHAR, count = BIGINT) {
 #' @usage left_grapheme(string = VARCHAR, count = BIGINT)
 #' @param string `VARCHAR`
 #' @param count `BIGINT`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' left_grapheme('🤦🏼‍♂️🤦🏽‍♀️', 1)
@@ -2359,6 +2497,7 @@ left_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #' @param string `VARCHAR`
 #' @param bit `BIT`
 #' @param list `ANY[]`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' length('Hello🦆')
@@ -2377,6 +2516,7 @@ len <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
 #' @name length_grapheme
 #' @usage length_grapheme(string = VARCHAR)
 #' @param string `VARCHAR`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' length_grapheme('🤦🏼‍♂️🤦🏽‍♀️')
@@ -2394,6 +2534,7 @@ length_grapheme <- function(string = VARCHAR) {
 #' @usage levenshtein(s1 = VARCHAR, s2 = VARCHAR)
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' levenshtein('duck', 'db')
@@ -2410,6 +2551,7 @@ levenshtein <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' @name lgamma
 #' @usage lgamma(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' lgamma(2)
@@ -2428,6 +2570,7 @@ lgamma <- function(x = DOUBLE) {
 #' @param string `VARCHAR`
 #' @param like_specifier `VARCHAR`
 #' @param escape_character `VARCHAR`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' like_escape('a%c', 'a$%c', '$')
@@ -2445,6 +2588,7 @@ like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_chara
 #' @usage list_apply(list = `ANY[]`, `lambda(x)` = LAMBDA)
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
+#' @return `ANY[]`
 #' @examples
 #' \dontrun{
 #' list_apply([1, 2, 3], lambda x : x + 1)
@@ -2462,6 +2606,7 @@ list_apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' @usage list_contains(list = `T[]`, element = T)
 #' @param list `T[]`
 #' @param element `T`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' list_contains([1, 2, NULL], 1)
@@ -2479,6 +2624,7 @@ list_contains <- function(list = `T[]`, element = T) {
 #' @usage NULL
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
+#' @return `FLOAT | DOUBLE`
 #' @examples
 #' \dontrun{
 #' list_cosine_distance([1, 2, 3], [1, 2, 3])
@@ -2496,6 +2642,7 @@ list_cosine_distance <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] 
 #' @usage NULL
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
+#' @return `FLOAT | DOUBLE`
 #' @examples
 #' \dontrun{
 #' list_cosine_similarity([1, 2, 3], [1, 2, 3])
@@ -2513,6 +2660,7 @@ list_cosine_similarity <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[
 #' @usage NULL
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
+#' @return `FLOAT | DOUBLE`
 #' @examples
 #' \dontrun{
 #' list_distance([1, 2, 3], [1, 2, 5])
@@ -2529,6 +2677,7 @@ list_distance <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBL
 #' @name list_distinct
 #' @usage list_distinct(list = `T[]`)
 #' @param list `T[]`
+#' @return `T[]`
 #' @examples
 #' \dontrun{
 #' list_distinct([1, 1, NULL, -3, 1, 5])
@@ -2546,6 +2695,7 @@ list_distinct <- function(list = `T[]`) {
 #' @usage NULL
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
+#' @return `FLOAT | DOUBLE`
 #' @examples
 #' \dontrun{
 #' list_dot_product([1, 2, 3], [1, 2, 3])
@@ -2563,6 +2713,7 @@ list_dot_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DO
 #' @usage NULL
 #' @param list `T[] | VARCHAR`
 #' @param index `BIGINT`
+#' @return `T | VARCHAR`
 #' @examples
 #' \dontrun{
 #' list_element([4, 5, 6], 3)
@@ -2580,6 +2731,7 @@ list_element <- function(list = `T[] | VARCHAR`, index = BIGINT) {
 #' @usage NULL
 #' @param list `T[] | VARCHAR`
 #' @param index `BIGINT`
+#' @return `T | VARCHAR`
 #' @examples
 #' \dontrun{
 #' list_extract([4, 5, 6], 3)
@@ -2597,6 +2749,7 @@ list_extract <- function(list = `T[] | VARCHAR`, index = BIGINT) {
 #' @usage list_filter(list = `ANY[]`, `lambda(x)` = LAMBDA)
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
+#' @return `ANY[]`
 #' @examples
 #' \dontrun{
 #' list_filter([3, 4, 5], lambda x : x > 4)
@@ -2615,6 +2768,7 @@ list_filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
 #' @param col2 `VARCHAR`
+#' @return `ANY[]`
 #' @examples
 #' \dontrun{
 #' list_grade_up([3, 6, 1, 2])
@@ -2632,6 +2786,7 @@ list_grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
 #' @usage list_has(list = `T[]`, element = T)
 #' @param list `T[]`
 #' @param element `T`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' list_has([1, 2, NULL], 1)
@@ -2649,6 +2804,7 @@ list_has <- function(list = `T[]`, element = T) {
 #' @usage list_has_all(list1 = `T[]`, list2 = `T[]`)
 #' @param list1 `T[]`
 #' @param list2 `T[]`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' list_has_all([1, 2, 3], [2, 3])
@@ -2666,6 +2822,7 @@ list_has_all <- function(list1 = `T[]`, list2 = `T[]`) {
 #' @usage list_has_any(list1 = `T[]`, list2 = `T[]`)
 #' @param list1 `T[]`
 #' @param list2 `T[]`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' list_has_any([1, 2, 3], [2, 3, 4])
@@ -2683,6 +2840,7 @@ list_has_any <- function(list1 = `T[]`, list2 = `T[]`) {
 #' @usage list_indexof(list = `T[]`, element = T)
 #' @param list `T[]`
 #' @param element `T`
+#' @return `INTEGER`
 #' @examples
 #' \dontrun{
 #' list_indexof([1, 2, NULL], 2)
@@ -2700,6 +2858,7 @@ list_indexof <- function(list = `T[]`, element = T) {
 #' @usage NULL
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
+#' @return `FLOAT | DOUBLE`
 #' @examples
 #' \dontrun{
 #' list_inner_product([1, 2, 3], [1, 2, 3])
@@ -2717,6 +2876,7 @@ list_inner_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | 
 #' @usage NULL
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
+#' @return `FLOAT | DOUBLE`
 #' @examples
 #' \dontrun{
 #' list_negative_dot_product([1, 2, 3], [1, 2, 3])
@@ -2734,6 +2894,7 @@ list_negative_dot_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLO
 #' @usage NULL
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
+#' @return `FLOAT | DOUBLE`
 #' @examples
 #' \dontrun{
 #' list_negative_inner_product([1, 2, 3], [1, 2, 3])
@@ -2750,6 +2911,7 @@ list_negative_inner_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `F
 #' @name list_pack
 #' @usage list_pack()
 
+#' @return `"NULL"[]`
 #' @examples
 #' \dontrun{
 #' list_pack(4, 5, 6)
@@ -2767,6 +2929,7 @@ list_pack <- function() {
 #' @usage list_position(list = `T[]`, element = T)
 #' @param list `T[]`
 #' @param element `T`
+#' @return `INTEGER`
 #' @examples
 #' \dontrun{
 #' list_position([1, 2, NULL], 2)
@@ -2785,6 +2948,7 @@ list_position <- function(list = `T[]`, element = T) {
 #' @param list `ANY[]`
 #' @param lambda(x,y) `LAMBDA`
 #' @param initial_value `ANY`
+#' @return `ANY`
 #' @examples
 #' \dontrun{
 #' list_reduce([1, 2, 3], lambda x, y : x + y)
@@ -2803,6 +2967,7 @@ list_reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = 
 #' @param list `ANY[]`
 #' @param size[ `ANY`
 #' @param value] `ANY`
+#' @return `ANY[]`
 #' @examples
 #' \dontrun{
 #' list_resize([1, 2, 3], 5, 0)
@@ -2820,6 +2985,7 @@ list_resize <- function(list = `ANY[]`, `size[` = ANY, `value]` = ANY) {
 #' @usage NULL
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
+#' @return `ANY[]`
 #' @examples
 #' \dontrun{
 #' list_reverse_sort([3, 6, 1, 2])
@@ -2837,6 +3003,7 @@ list_reverse_sort <- function(list = `ANY[]`, col1 = VARCHAR) {
 #' @usage list_select(value_list = `T[]`, index_list = `BIGINT[]`)
 #' @param value_list `T[]`
 #' @param index_list `BIGINT[]`
+#' @return `T[]`
 #' @examples
 #' \dontrun{
 #' list_select([10, 20, 30, 40], [1, 4])
@@ -2858,6 +3025,7 @@ list_select <- function(value_list = `T[]`, index_list = `BIGINT[]`) {
 #' @param begin `ANY`
 #' @param end `ANY`
 #' @param step `BIGINT`
+#' @return `ANY`
 #' @examples
 #' \dontrun{
 #' list_slice([4, 5, 6], 2, 3)
@@ -2877,6 +3045,7 @@ list_slice <- function(list = ANY, begin = ANY, end = ANY, step = BIGINT) {
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
 #' @param col2 `VARCHAR`
+#' @return `ANY[]`
 #' @examples
 #' \dontrun{
 #' list_sort([3, 6, 1, 2])
@@ -2894,6 +3063,7 @@ list_sort <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
 #' @usage list_transform(list = `ANY[]`, `lambda(x)` = LAMBDA)
 #' @param list `ANY[]`
 #' @param lambda(x) `LAMBDA`
+#' @return `ANY[]`
 #' @examples
 #' \dontrun{
 #' list_transform([1, 2, 3], lambda x : x + 1)
@@ -2910,6 +3080,7 @@ list_transform <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' @name list_unique
 #' @usage list_unique(list = `ANY[]`)
 #' @param list `ANY[]`
+#' @return `UBIGINT`
 #' @examples
 #' \dontrun{
 #' list_unique([1, 1, NULL, -3, 1, 5])
@@ -2926,6 +3097,7 @@ list_unique <- function(list = `ANY[]`) {
 #' @name list_value
 #' @usage list_value()
 
+#' @return `"NULL"[]`
 #' @examples
 #' \dontrun{
 #' list_value(4, 5, 6)
@@ -2943,6 +3115,7 @@ list_value <- function() {
 #' @usage list_where(value_list = `T[]`, mask_list = `BOOLEAN[]`)
 #' @param value_list `T[]`
 #' @param mask_list `BOOLEAN[]`
+#' @return `T[]`
 #' @examples
 #' \dontrun{
 #' list_where([10, 20, 30, 40], [true, false, false, true])
@@ -2959,6 +3132,7 @@ list_where <- function(value_list = `T[]`, mask_list = `BOOLEAN[]`) {
 #' @name ln
 #' @usage ln(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' ln(2)
@@ -2976,6 +3150,7 @@ ln <- function(x = DOUBLE) {
 #' @usage NULL
 #' @param b `DOUBLE`
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' log(2, 64)
@@ -2992,6 +3167,7 @@ log <- function(b = DOUBLE, x = DOUBLE) {
 #' @name log10
 #' @usage log10(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' log10(1000)
@@ -3008,6 +3184,7 @@ log10 <- function(x = DOUBLE) {
 #' @name log2
 #' @usage log2(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' log2(8)
@@ -3024,6 +3201,7 @@ log2 <- function(x = DOUBLE) {
 #' @name lower
 #' @usage lower(string = VARCHAR)
 #' @param string `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' lower('Hello')
@@ -3042,6 +3220,7 @@ lower <- function(string = VARCHAR) {
 #' @param string `VARCHAR`
 #' @param count `INTEGER`
 #' @param character `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' lpad('hello', 8, '>')
@@ -3059,6 +3238,7 @@ lpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #' @usage NULL
 #' @param string `VARCHAR`
 #' @param characters `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' c("ltrim('    test  ')", "ltrim('>>>>test<<', '><')")
@@ -3081,6 +3261,7 @@ ltrim <- function(string = VARCHAR, characters = VARCHAR) {
 #' @param month `BIGINT`
 #' @param day `BIGINT`
 #' @param date-struct `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`
+#' @return `DATE`
 #' @examples
 #' \dontrun{
 #' character(0)
@@ -3101,6 +3282,7 @@ make_date <- function(col0 = INTEGER, year = BIGINT, month = BIGINT, day = BIGIN
 #' @param hour `BIGINT`
 #' @param minute `BIGINT`
 #' @param seconds `DOUBLE`
+#' @return `TIME`
 #' @examples
 #' \dontrun{
 #' make_time(13, 34, 27.123456)
@@ -3122,6 +3304,7 @@ make_time <- function(hour = BIGINT, minute = BIGINT, seconds = DOUBLE) {
 #' @param hour `BIGINT`
 #' @param minute `BIGINT`
 #' @param seconds `DOUBLE`
+#' @return `TIMESTAMP`
 #' @examples
 #' \dontrun{
 #' make_timestamp(1992, 9, 20, 13, 34, 27.123456)
@@ -3138,6 +3321,7 @@ make_timestamp <- function(year = BIGINT, month = BIGINT, day = BIGINT, hour = B
 #' @name make_timestamp_ms
 #' @usage make_timestamp_ms(nanos = BIGINT)
 #' @param nanos `BIGINT`
+#' @return `TIMESTAMP`
 #' @examples
 #' \dontrun{
 #' make_timestamp_ms(1732117793000000)
@@ -3154,6 +3338,7 @@ make_timestamp_ms <- function(nanos = BIGINT) {
 #' @name make_timestamp_ns
 #' @usage make_timestamp_ns(nanos = BIGINT)
 #' @param nanos `BIGINT`
+#' @return `TIMESTAMP_NS`
 #' @examples
 #' \dontrun{
 #' make_timestamp_ns(1732117793000000000)
@@ -3171,6 +3356,7 @@ make_timestamp_ns <- function(nanos = BIGINT) {
 #' @usage NULL
 #' @param keys `K[]`
 #' @param values `V[]`
+#' @return `MAP("NULL", "NULL") | MAP(K, V)`
 #' @examples
 #' \dontrun{
 #' map(['key1', 'key2'], ['val1', 'val2'])
@@ -3188,6 +3374,7 @@ map <- function(keys = `K[]`, values = `V[]`) {
 #' @usage map_contains(map = `MAP(K, V)`, key = K)
 #' @param map `MAP(K, V)`
 #' @param key `K`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' map_contains(MAP {'key1': 10, 'key2': 20, 'key3': 30}, 'key2')
@@ -3204,6 +3391,7 @@ map_contains <- function(map = `MAP(K, V)`, key = K) {
 #' @name map_entries
 #' @usage map_entries(map = `MAP(K, V)`)
 #' @param map `MAP(K, V)`
+#' @return `STRUCT("key" K, "value" V)[]`
 #' @examples
 #' \dontrun{
 #' map_entries(map(['key'], ['val']))
@@ -3221,6 +3409,7 @@ map_entries <- function(map = `MAP(K, V)`) {
 #' @usage map_extract(map = `MAP(K, V)`, key = K)
 #' @param map `MAP(K, V)`
 #' @param key `K`
+#' @return `V[]`
 #' @examples
 #' \dontrun{
 #' map_extract(map(['key'], ['val']), 'key')
@@ -3238,6 +3427,7 @@ map_extract <- function(map = `MAP(K, V)`, key = K) {
 #' @usage map_extract_value(map = `MAP(K, V)`, key = K)
 #' @param map `MAP(K, V)`
 #' @param key `K`
+#' @return `V`
 #' @examples
 #' \dontrun{
 #' map_extract_value(map(['key'], ['val']), 'key')
@@ -3254,6 +3444,7 @@ map_extract_value <- function(map = `MAP(K, V)`, key = K) {
 #' @name map_from_entries
 #' @usage map_from_entries(map = `STRUCT(K, V)[]`)
 #' @param map `STRUCT(K, V)[]`
+#' @return `MAP(K, V)`
 #' @examples
 #' \dontrun{
 #' map_from_entries([{k: 5, v: 'val1'}, {k: 3, v: 'val2'}]);
@@ -3270,6 +3461,7 @@ map_from_entries <- function(map = `STRUCT(K, V)[]`) {
 #' @name map_keys
 #' @usage map_keys(map = `MAP(K, V)`)
 #' @param map `MAP(K, V)`
+#' @return `K[]`
 #' @examples
 #' \dontrun{
 #' map_keys(map(['key'], ['val']))
@@ -3286,6 +3478,7 @@ map_keys <- function(map = `MAP(K, V)`) {
 #' @name map_values
 #' @usage map_values(map = `MAP(K, V)`)
 #' @param map `MAP(K, V)`
+#' @return `V[]`
 #' @examples
 #' \dontrun{
 #' map_values(map(['key'], ['val']))
@@ -3305,6 +3498,7 @@ map_values <- function(map = `MAP(K, V)`) {
 #' @usage NULL
 #' @param string `VARCHAR`
 #' @param blob `BLOB`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' md5('abc')
@@ -3325,6 +3519,7 @@ md5 <- function(string = VARCHAR, blob = BLOB) {
 #' @usage NULL
 #' @param string `VARCHAR`
 #' @param blob `BLOB`
+#' @return `UHUGEINT`
 #' @examples
 #' \dontrun{
 #' md5_number('abc')
@@ -3342,6 +3537,7 @@ md5_number <- function(string = VARCHAR, blob = BLOB) {
 #' @name microsecond
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' microsecond(timestamp '2021-08-03 11:59:44.123456')
@@ -3358,6 +3554,7 @@ microsecond <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
 #' @name millennium
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' millennium(timestamp '2021-08-03 11:59:44.123456')
@@ -3374,6 +3571,7 @@ millennium <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME Z
 #' @name millisecond
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' millisecond(timestamp '2021-08-03 11:59:44.123456')
@@ -3390,6 +3588,7 @@ millisecond <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
 #' @name minute
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' minute(timestamp '2021-08-03 11:59:44.123456')
@@ -3407,6 +3606,7 @@ minute <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZON
 #' @usage mismatches(s1 = VARCHAR, s2 = VARCHAR)
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' mismatches('duck', 'luck')
@@ -3424,6 +3624,7 @@ mismatches <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' @usage NULL
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
+#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @examples
 #' \dontrun{
 #' character(0)
@@ -3440,6 +3641,7 @@ mod <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT 
 #' @name month
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' month(timestamp '2021-08-03 11:59:44.123456')
@@ -3456,6 +3658,7 @@ month <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`)
 #' @name monthname
 #' @usage NULL
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' monthname(TIMESTAMP '1992-09-20')
@@ -3473,6 +3676,7 @@ monthname <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' @usage NULL
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
+#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
 #' @examples
 #' \dontrun{
 #' character(0)
@@ -3489,6 +3693,7 @@ multiply <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | F
 #' @name nanosecond
 #' @usage NULL
 #' @param tsns `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP_NS | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' nanosecond(timestamp_ns '2021-08-03 11:59:44.123456789')
@@ -3506,6 +3711,7 @@ nanosecond <- function(tsns = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TI
 #' @usage NULL
 #' @param x `DOUBLE | FLOAT`
 #' @param y `DOUBLE | FLOAT`
+#' @return `DOUBLE | FLOAT`
 #' @examples
 #' \dontrun{
 #' nextafter(1::float, 2::float)
@@ -3522,6 +3728,7 @@ nextafter <- function(x = `DOUBLE | FLOAT`, y = `DOUBLE | FLOAT`) {
 #' @name nfc_normalize
 #' @usage nfc_normalize(string = VARCHAR)
 #' @param string `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' nfc_normalize('ardèch')
@@ -3538,6 +3745,7 @@ nfc_normalize <- function(string = VARCHAR) {
 #' @name normalized_interval
 #' @usage normalized_interval(interval = INTERVAL)
 #' @param interval `INTERVAL`
+#' @return `INTERVAL`
 #' @examples
 #' \dontrun{
 #' normalized_interval(INTERVAL '30 days')
@@ -3556,6 +3764,7 @@ normalized_interval <- function(interval = INTERVAL) {
 #' @param string `VARCHAR`
 #' @param like_specifier `VARCHAR`
 #' @param escape_character `VARCHAR`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' not_ilike_escape('A%c', 'a$%C', '$')
@@ -3574,6 +3783,7 @@ not_ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_
 #' @param string `VARCHAR`
 #' @param like_specifier `VARCHAR`
 #' @param escape_character `VARCHAR`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' not_like_escape('a%c', 'a$%c', '$')
@@ -3593,6 +3803,7 @@ not_like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_c
 #' @usage NULL
 #' @param blob `BLOB`
 #' @param bitstring `BIT`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' octet_length('\xAA\xBB'::BLOB)
@@ -3610,6 +3821,7 @@ octet_length <- function(blob = BLOB, bitstring = BIT) {
 #' @name ord
 #' @usage ord(string = VARCHAR)
 #' @param string `VARCHAR`
+#' @return `INTEGER`
 #' @examples
 #' \dontrun{
 #' [unicode('âbcd'), unicode('â'), unicode(''), unicode(NULL)]
@@ -3627,6 +3839,7 @@ ord <- function(string = VARCHAR) {
 #' @usage NULL
 #' @param path `VARCHAR`
 #' @param separator `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' parse_dirname('path/to/file.csv', 'system')
@@ -3644,6 +3857,7 @@ parse_dirname <- function(path = VARCHAR, separator = VARCHAR) {
 #' @usage NULL
 #' @param path `VARCHAR`
 #' @param separator `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' parse_dirpath('path/to/file.csv', 'forward_slash')
@@ -3661,6 +3875,7 @@ parse_dirpath <- function(path = VARCHAR, separator = VARCHAR) {
 #' @usage parse_duckdb_log_message(type = VARCHAR, message = VARCHAR)
 #' @param type `VARCHAR`
 #' @param message `VARCHAR`
+#' @return `ANY`
 #' @examples
 #' \dontrun{
 #' parse_duckdb_log_message('FileSystem', log_message)
@@ -3679,6 +3894,7 @@ parse_duckdb_log_message <- function(type = VARCHAR, message = VARCHAR) {
 #' @param string `VARCHAR`
 #' @param trim_extension `VARCHAR | BOOLEAN`
 #' @param separator `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' parse_filename('path/to/file.csv', true, 'forward_slash')
@@ -3696,6 +3912,7 @@ parse_filename <- function(string = VARCHAR, trim_extension = `VARCHAR | BOOLEAN
 #' @usage NULL
 #' @param path `VARCHAR`
 #' @param separator `VARCHAR`
+#' @return `VARCHAR[]`
 #' @examples
 #' \dontrun{
 #' parse_path('path/to/file.csv', 'system')
@@ -3712,6 +3929,7 @@ parse_path <- function(path = VARCHAR, separator = VARCHAR) {
 #' @name pi
 #' @usage pi()
 
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' pi()
@@ -3729,6 +3947,7 @@ pi <- function() {
 #' @usage position(string = VARCHAR, search_string = VARCHAR)
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' position('b' IN 'abc')
@@ -3746,6 +3965,7 @@ position <- function(string = VARCHAR, search_string = VARCHAR) {
 #' @usage pow(x = DOUBLE, y = DOUBLE)
 #' @param x `DOUBLE`
 #' @param y `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' c("pow(2, 3)", "power(2, 3)")
@@ -3763,6 +3983,7 @@ pow <- function(x = DOUBLE, y = DOUBLE) {
 #' @usage power(x = DOUBLE, y = DOUBLE)
 #' @param x `DOUBLE`
 #' @param y `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' power(2, 3)
@@ -3780,6 +4001,7 @@ power <- function(x = DOUBLE, y = DOUBLE) {
 #' @usage prefix(string = VARCHAR, search_string = VARCHAR)
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' prefix('abc', 'ab')
@@ -3796,6 +4018,7 @@ prefix <- function(string = VARCHAR, search_string = VARCHAR) {
 #' @name quarter
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' quarter(timestamp '2021-08-03 11:59:44.123456')
@@ -3812,6 +4035,7 @@ quarter <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' @name radians
 #' @usage radians(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' radians(90)
@@ -3830,6 +4054,7 @@ radians <- function(x = DOUBLE) {
 #' @param start `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param stop `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param step `BIGINT | INTERVAL`
+#' @return `BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
 #' @examples
 #' \dontrun{
 #' range(2, 5, 3)
@@ -3848,6 +4073,7 @@ range <- function(start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, stop 
 #' @param list `ANY[]`
 #' @param lambda(x,y) `LAMBDA`
 #' @param initial_value `ANY`
+#' @return `ANY`
 #' @examples
 #' \dontrun{
 #' reduce([1, 2, 3], lambda x, y : x + y)
@@ -3864,6 +4090,7 @@ reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY) 
 #' @name regexp_escape
 #' @usage regexp_escape(string = VARCHAR)
 #' @param string `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' regexp_escape('https://duckdb.org')
@@ -3886,6 +4113,7 @@ regexp_escape <- function(string = VARCHAR) {
 #' @param group `INTEGER`
 #' @param options `VARCHAR`
 #' @param name_list `VARCHAR[]`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' regexp_extract('abcde', '[a-z]{3}')
@@ -3909,6 +4137,7 @@ regexp_extract <- function(string = VARCHAR, regex = VARCHAR, group = INTEGER, o
 #' @param regex `VARCHAR`
 #' @param group `INTEGER`
 #' @param options `VARCHAR`
+#' @return `VARCHAR[]`
 #' @examples
 #' \dontrun{
 #' regexp_extract_all('Peter: 33, Paul:14', '(\w+):\s*(\d+)', 2)
@@ -3927,6 +4156,7 @@ regexp_extract_all <- function(string = VARCHAR, regex = VARCHAR, group = INTEGE
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
 #' @param col2 `VARCHAR`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' regexp_full_match('anabanana', '(an)*')
@@ -3945,6 +4175,7 @@ regexp_full_match <- function(string = VARCHAR, regex = VARCHAR, col2 = VARCHAR)
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
 #' @param options `VARCHAR`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' regexp_matches('anabanana', '(an)*')
@@ -3964,6 +4195,7 @@ regexp_matches <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR)
 #' @param regex `VARCHAR`
 #' @param replacement `VARCHAR`
 #' @param options `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' regexp_replace('hello', '[lo]', '-')
@@ -3982,6 +4214,7 @@ regexp_replace <- function(string = VARCHAR, regex = VARCHAR, replacement = VARC
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
 #' @param options `VARCHAR`
+#' @return `VARCHAR[]`
 #' @examples
 #' \dontrun{
 #' regexp_split_to_array('hello world; 42', ';? ')
@@ -4000,6 +4233,7 @@ regexp_split_to_array <- function(string = VARCHAR, regex = VARCHAR, options = V
 #' @param string `VARCHAR`
 #' @param source `VARCHAR`
 #' @param target `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' replace('hello', 'l', '-')
@@ -4018,6 +4252,7 @@ replace <- function(string = VARCHAR, source = VARCHAR, target = VARCHAR) {
 #' @param param `ANY`
 #' @param type1 `ANY`
 #' @param type2 `ANY`
+#' @return `ANY`
 #' @examples
 #' \dontrun{
 #' replace_type({duck: 3.141592653589793::DOUBLE}, NULL::DOUBLE, NULL::DECIMAL(15,2))
@@ -4034,6 +4269,7 @@ replace_type <- function(param = ANY, type1 = ANY, type2 = ANY) {
 #' @name reverse
 #' @usage reverse(string = VARCHAR)
 #' @param string `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' reverse('hello')
@@ -4051,6 +4287,7 @@ reverse <- function(string = VARCHAR) {
 #' @usage right(string = VARCHAR, count = BIGINT)
 #' @param string `VARCHAR`
 #' @param count `BIGINT`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' right('Hello🦆', 3)
@@ -4068,6 +4305,7 @@ right <- function(string = VARCHAR, count = BIGINT) {
 #' @usage right_grapheme(string = VARCHAR, count = BIGINT)
 #' @param string `VARCHAR`
 #' @param count `BIGINT`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' right_grapheme('🤦🏼‍♂️🤦🏽‍♀️', 1)
@@ -4085,6 +4323,7 @@ right_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #' @usage NULL
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL`
 #' @param precision `INTEGER`
+#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL`
 #' @examples
 #' \dontrun{
 #' round(42.4332, 2)
@@ -4103,6 +4342,7 @@ round <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT |
 #' @param string `VARCHAR`
 #' @param count `INTEGER`
 #' @param character `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' rpad('hello', 10, '<')
@@ -4120,6 +4360,7 @@ rpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #' @usage NULL
 #' @param string `VARCHAR`
 #' @param characters `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' c("rtrim('    test  ')", "rtrim('>>>>test<<', '><')")
@@ -4136,6 +4377,7 @@ rtrim <- function(string = VARCHAR, characters = VARCHAR) {
 #' @name second
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' second(timestamp '2021-08-03 11:59:44.123456')
@@ -4154,6 +4396,7 @@ second <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZON
 #' @param bitstring `BIT`
 #' @param index `INTEGER`
 #' @param new_value `INTEGER`
+#' @return `BIT`
 #' @examples
 #' \dontrun{
 #' set_bit('0110010'::BIT, 2, 0)
@@ -4173,6 +4416,7 @@ set_bit <- function(bitstring = BIT, index = INTEGER, new_value = INTEGER) {
 #' @usage NULL
 #' @param value `VARCHAR`
 #' @param blob `BLOB`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' sha1('🦆')
@@ -4193,6 +4437,7 @@ sha1 <- function(value = VARCHAR, blob = BLOB) {
 #' @usage NULL
 #' @param value `VARCHAR`
 #' @param blob `BLOB`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' sha256('🦆')
@@ -4210,6 +4455,7 @@ sha256 <- function(value = VARCHAR, blob = BLOB) {
 #' @name sign
 #' @usage NULL
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
+#' @return `TINYINT`
 #' @examples
 #' \dontrun{
 #' sign(-349)
@@ -4226,6 +4472,7 @@ sign <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | 
 #' @name signbit
 #' @usage NULL
 #' @param x `FLOAT | DOUBLE`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' signbit(-0.0)
@@ -4242,6 +4489,7 @@ signbit <- function(x = `FLOAT | DOUBLE`) {
 #' @name sin
 #' @usage sin(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' sin(90)
@@ -4258,6 +4506,7 @@ sin <- function(x = DOUBLE) {
 #' @name sinh
 #' @usage sinh(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' sinh(1)
@@ -4275,6 +4524,7 @@ sinh <- function(x = DOUBLE) {
 #' @usage split(string = VARCHAR, separator = VARCHAR)
 #' @param string `VARCHAR`
 #' @param separator `VARCHAR`
+#' @return `VARCHAR[]`
 #' @examples
 #' \dontrun{
 #' split('hello-world', '-')
@@ -4291,6 +4541,7 @@ split <- function(string = VARCHAR, separator = VARCHAR) {
 #' @name sqrt
 #' @usage sqrt(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' sqrt(4)
@@ -4308,6 +4559,7 @@ sqrt <- function(x = DOUBLE) {
 #' @usage starts_with(string = VARCHAR, search_string = VARCHAR)
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' starts_with('abc', 'a')
@@ -4325,6 +4577,7 @@ starts_with <- function(string = VARCHAR, search_string = VARCHAR) {
 #' @usage str_split(string = VARCHAR, separator = VARCHAR)
 #' @param string `VARCHAR`
 #' @param separator `VARCHAR`
+#' @return `VARCHAR[]`
 #' @examples
 #' \dontrun{
 #' str_split('hello-world', '-')
@@ -4343,6 +4596,7 @@ str_split <- function(string = VARCHAR, separator = VARCHAR) {
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
 #' @param options `VARCHAR`
+#' @return `VARCHAR[]`
 #' @examples
 #' \dontrun{
 #' str_split_regex('hello world; 42', ';? ')
@@ -4360,6 +4614,7 @@ str_split_regex <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR
 #' @usage NULL
 #' @param data `DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR`
 #' @param format `VARCHAR | DATE | TIMESTAMP | TIMESTAMP_NS`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' strftime(date '1992-01-01', '%a, %-d %B %Y')
@@ -4377,6 +4632,7 @@ strftime <- function(data = `DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR`, format 
 #' @usage string_split(string = VARCHAR, separator = VARCHAR)
 #' @param string `VARCHAR`
 #' @param separator `VARCHAR`
+#' @return `VARCHAR[]`
 #' @examples
 #' \dontrun{
 #' string_split('hello-world', '-')
@@ -4395,6 +4651,7 @@ string_split <- function(string = VARCHAR, separator = VARCHAR) {
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
 #' @param options `VARCHAR`
+#' @return `VARCHAR[]`
 #' @examples
 #' \dontrun{
 #' string_split_regex('hello world; 42', ';? ')
@@ -4412,6 +4669,7 @@ string_split_regex <- function(string = VARCHAR, regex = VARCHAR, options = VARC
 #' @usage string_to_array(string = VARCHAR, separator = VARCHAR)
 #' @param string `VARCHAR`
 #' @param separator `VARCHAR`
+#' @return `VARCHAR[]`
 #' @examples
 #' \dontrun{
 #' string_to_array('hello-world', '-')
@@ -4428,6 +4686,7 @@ string_to_array <- function(string = VARCHAR, separator = VARCHAR) {
 #' @name strip_accents
 #' @usage strip_accents(string = VARCHAR)
 #' @param string `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' strip_accents('mühleisen')
@@ -4444,6 +4703,7 @@ strip_accents <- function(string = VARCHAR) {
 #' @name strlen
 #' @usage strlen(string = VARCHAR)
 #' @param string `VARCHAR`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' strlen('🦆')
@@ -4461,6 +4721,7 @@ strlen <- function(string = VARCHAR) {
 #' @usage strpos(string = VARCHAR, search_string = VARCHAR)
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' strpos('test test', 'es')
@@ -4481,6 +4742,7 @@ strpos <- function(string = VARCHAR, search_string = VARCHAR) {
 #' @param text `VARCHAR`
 #' @param format `VARCHAR`
 #' @param format-list `VARCHAR[]`
+#' @return `TIMESTAMP`
 #' @examples
 #' \dontrun{
 #' strptime('Wed, 1 January 1992 - 08:38:40 PM', '%a, %-d %B %Y - %I:%M:%S %p')
@@ -4499,6 +4761,7 @@ strptime <- function(text = VARCHAR, format = VARCHAR, `format-list` = `VARCHAR[
 #' @usage struct_contains(struct = STRUCT, `'entry'` = ANY)
 #' @param struct `STRUCT`
 #' @param 'entry' `ANY`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' struct_contains(ROW(3, 3, 0), 3)
@@ -4516,6 +4779,7 @@ struct_contains <- function(struct = STRUCT, `'entry'` = ANY) {
 #' @usage NULL
 #' @param struct `STRUCT`
 #' @param 'entry' `VARCHAR | BIGINT`
+#' @return `ANY`
 #' @examples
 #' \dontrun{
 #' struct_extract({'i': 3, 'v2': 3, 'v3': 0}, 'i')
@@ -4533,6 +4797,7 @@ struct_extract <- function(struct = STRUCT, `'entry'` = `VARCHAR | BIGINT`) {
 #' @usage struct_has(struct = STRUCT, `'entry'` = ANY)
 #' @param struct `STRUCT`
 #' @param 'entry' `ANY`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' struct_has(ROW(3, 3, 0), 3)
@@ -4550,6 +4815,7 @@ struct_has <- function(struct = STRUCT, `'entry'` = ANY) {
 #' @usage struct_indexof(struct = STRUCT, `'entry'` = ANY)
 #' @param struct `STRUCT`
 #' @param 'entry' `ANY`
+#' @return `INTEGER`
 #' @examples
 #' \dontrun{
 #' struct_indexof(ROW(3, 3, 0), 3)
@@ -4567,6 +4833,7 @@ struct_indexof <- function(struct = STRUCT, `'entry'` = ANY) {
 #' @usage struct_position(struct = STRUCT, `'entry'` = ANY)
 #' @param struct `STRUCT`
 #' @param 'entry' `ANY`
+#' @return `INTEGER`
 #' @examples
 #' \dontrun{
 #' struct_position(ROW(3, 3, 0), 3)
@@ -4585,6 +4852,7 @@ struct_position <- function(struct = STRUCT, `'entry'` = ANY) {
 #' @param string `VARCHAR`
 #' @param start `BIGINT`
 #' @param length `BIGINT`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' c("substring('Hello', 2)", "substring('Hello', 2, 2)")
@@ -4603,6 +4871,7 @@ substr <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
 #' @param string `VARCHAR`
 #' @param start `BIGINT`
 #' @param length `BIGINT`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' c("substring('Hello', 2)", "substring('Hello', 2, 2)")
@@ -4621,6 +4890,7 @@ substring <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
 #' @param string `VARCHAR`
 #' @param start `BIGINT`
 #' @param length `BIGINT`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' c("substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3)", "substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3, 2)")
@@ -4638,6 +4908,7 @@ substring_grapheme <- function(string = VARCHAR, start = BIGINT, length = BIGINT
 #' @usage NULL
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL | TIME | TIME WITH TIME ZONE`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL`
+#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE`
 #' @examples
 #' \dontrun{
 #' character(0)
@@ -4655,6 +4926,7 @@ subtract <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | F
 #' @usage suffix(string = VARCHAR, search_string = VARCHAR)
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
+#' @return `BOOLEAN`
 #' @examples
 #' \dontrun{
 #' suffix('abc', 'bc')
@@ -4671,6 +4943,7 @@ suffix <- function(string = VARCHAR, search_string = VARCHAR) {
 #' @name tan
 #' @usage tan(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' tan(90)
@@ -4687,6 +4960,7 @@ tan <- function(x = DOUBLE) {
 #' @name tanh
 #' @usage tanh(x = DOUBLE)
 #' @param x `DOUBLE`
+#' @return `DOUBLE`
 #' @examples
 #' \dontrun{
 #' tanh(1)
@@ -4705,6 +4979,7 @@ tanh <- function(x = DOUBLE) {
 #' @param bucket_width `INTERVAL`
 #' @param timestamp `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param origin `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | VARCHAR`
+#' @return `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @examples
 #' \dontrun{
 #' time_bucket(INTERVAL '2 weeks', TIMESTAMP '1992-04-20 15:26:00-07', TIMESTAMP '1992-04-01 00:00:00-07')
@@ -4721,6 +4996,7 @@ time_bucket <- function(bucket_width = INTERVAL, timestamp = `DATE | TIMESTAMP |
 #' @name timetz_byte_comparable
 #' @usage timetz_byte_comparable(time_tz = `TIME WITH TIME ZONE`)
 #' @param time_tz `TIME WITH TIME ZONE`
+#' @return `UBIGINT`
 #' @examples
 #' \dontrun{
 #' timetz_byte_comparable('18:18:16.21-07:00'::TIMETZ)
@@ -4738,6 +5014,7 @@ timetz_byte_comparable <- function(time_tz = `TIME WITH TIME ZONE`) {
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | VARCHAR`
 #' @param col1 `TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | TIMESTAMP`
 #' @examples
 #' \dontrun{
 #' timezone(timestamp '2021-08-03 11:59:44.123456')
@@ -4754,6 +5031,7 @@ timezone <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #' @name timezone_hour
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' timezone_hour(timestamp '2021-08-03 11:59:44.123456')
@@ -4770,6 +5048,7 @@ timezone_hour <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIM
 #' @name timezone_minute
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' timezone_minute(timestamp '2021-08-03 11:59:44.123456')
@@ -4788,6 +5067,7 @@ timezone_minute <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH T
 #' @param number `BIGINT`
 #' @param radix `INTEGER`
 #' @param min_length `INTEGER`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' to_base(42, 16, 5)
@@ -4804,6 +5084,7 @@ to_base <- function(number = BIGINT, radix = INTEGER, min_length = INTEGER) {
 #' @name to_base64
 #' @usage to_base64(blob = BLOB)
 #' @param blob `BLOB`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' to_base64('A'::BLOB)
@@ -4823,6 +5104,7 @@ to_base64 <- function(blob = BLOB) {
 #' @usage NULL
 #' @param string `VARCHAR`
 #' @param value `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' to_binary('Aa')
@@ -4840,6 +5122,7 @@ to_binary <- function(string = VARCHAR, value = `BIGNUM | UBIGINT | BIGINT | HUG
 #' @name to_centuries
 #' @usage NULL
 #' @param integer `INTEGER | BIGINT`
+#' @return `INTERVAL`
 #' @examples
 #' \dontrun{
 #' to_centuries(5)
@@ -4856,6 +5139,7 @@ to_centuries <- function(integer = `INTEGER | BIGINT`) {
 #' @name to_days
 #' @usage NULL
 #' @param integer `INTEGER | BIGINT`
+#' @return `INTERVAL`
 #' @examples
 #' \dontrun{
 #' to_days(5)
@@ -4872,6 +5156,7 @@ to_days <- function(integer = `INTEGER | BIGINT`) {
 #' @name to_decades
 #' @usage NULL
 #' @param integer `INTEGER | BIGINT`
+#' @return `INTERVAL`
 #' @examples
 #' \dontrun{
 #' to_decades(5)
@@ -4894,6 +5179,7 @@ to_decades <- function(integer = `INTEGER | BIGINT`) {
 #' @param string `VARCHAR`
 #' @param value `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`
 #' @param blob `BLOB`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' to_hex('Hello')
@@ -4912,6 +5198,7 @@ to_hex <- function(string = VARCHAR, value = `BIGNUM | BIGINT | UBIGINT | HUGEIN
 #' @name to_hours
 #' @usage to_hours(integer = BIGINT)
 #' @param integer `BIGINT`
+#' @return `INTERVAL`
 #' @examples
 #' \dontrun{
 #' to_hours(5)
@@ -4928,6 +5215,7 @@ to_hours <- function(integer = BIGINT) {
 #' @name to_microseconds
 #' @usage to_microseconds(integer = BIGINT)
 #' @param integer `BIGINT`
+#' @return `INTERVAL`
 #' @examples
 #' \dontrun{
 #' to_microseconds(5)
@@ -4944,6 +5232,7 @@ to_microseconds <- function(integer = BIGINT) {
 #' @name to_millennia
 #' @usage NULL
 #' @param integer `INTEGER | BIGINT`
+#' @return `INTERVAL`
 #' @examples
 #' \dontrun{
 #' to_millennia(1)
@@ -4960,6 +5249,7 @@ to_millennia <- function(integer = `INTEGER | BIGINT`) {
 #' @name to_milliseconds
 #' @usage to_milliseconds(double = DOUBLE)
 #' @param double `DOUBLE`
+#' @return `INTERVAL`
 #' @examples
 #' \dontrun{
 #' to_milliseconds(5.5)
@@ -4976,6 +5266,7 @@ to_milliseconds <- function(double = DOUBLE) {
 #' @name to_minutes
 #' @usage to_minutes(integer = BIGINT)
 #' @param integer `BIGINT`
+#' @return `INTERVAL`
 #' @examples
 #' \dontrun{
 #' to_minutes(5)
@@ -4992,6 +5283,7 @@ to_minutes <- function(integer = BIGINT) {
 #' @name to_months
 #' @usage NULL
 #' @param integer `INTEGER | BIGINT`
+#' @return `INTERVAL`
 #' @examples
 #' \dontrun{
 #' to_months(5)
@@ -5008,6 +5300,7 @@ to_months <- function(integer = `INTEGER | BIGINT`) {
 #' @name to_quarters
 #' @usage NULL
 #' @param integer `INTEGER | BIGINT`
+#' @return `INTERVAL`
 #' @examples
 #' \dontrun{
 #' to_quarters(5)
@@ -5024,6 +5317,7 @@ to_quarters <- function(integer = `INTEGER | BIGINT`) {
 #' @name to_seconds
 #' @usage to_seconds(double = DOUBLE)
 #' @param double `DOUBLE`
+#' @return `INTERVAL`
 #' @examples
 #' \dontrun{
 #' to_seconds(5.5)
@@ -5040,6 +5334,7 @@ to_seconds <- function(double = DOUBLE) {
 #' @name to_timestamp
 #' @usage to_timestamp(sec = DOUBLE)
 #' @param sec `DOUBLE`
+#' @return `TIMESTAMP WITH TIME ZONE`
 #' @examples
 #' \dontrun{
 #' to_timestamp(1284352323.5)
@@ -5056,6 +5351,7 @@ to_timestamp <- function(sec = DOUBLE) {
 #' @name to_weeks
 #' @usage NULL
 #' @param integer `INTEGER | BIGINT`
+#' @return `INTERVAL`
 #' @examples
 #' \dontrun{
 #' to_weeks(5)
@@ -5072,6 +5368,7 @@ to_weeks <- function(integer = `INTEGER | BIGINT`) {
 #' @name to_years
 #' @usage NULL
 #' @param integer `INTEGER | BIGINT`
+#' @return `INTERVAL`
 #' @examples
 #' \dontrun{
 #' to_years(5)
@@ -5090,6 +5387,7 @@ to_years <- function(integer = `INTEGER | BIGINT`) {
 #' @param string `VARCHAR`
 #' @param from `VARCHAR`
 #' @param to `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' translate('12345', '143', 'ax')
@@ -5107,6 +5405,7 @@ translate <- function(string = VARCHAR, from = VARCHAR, to = VARCHAR) {
 #' @usage NULL
 #' @param string `VARCHAR`
 #' @param characters `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' c("trim('    test  ')", "trim('>>>>test<<', '><')")
@@ -5124,6 +5423,7 @@ trim <- function(string = VARCHAR, characters = VARCHAR) {
 #' @usage NULL
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `INTEGER`
+#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @examples
 #' \dontrun{
 #' trunc(17.4)
@@ -5141,6 +5441,7 @@ trunc <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT |
 #' @usage NULL
 #' @param text `VARCHAR`
 #' @param format `VARCHAR | VARCHAR[]`
+#' @return `TIMESTAMP`
 #' @examples
 #' \dontrun{
 #' try_strptime('Wed, 1 January 1992 - 08:38:40 PM', '%a, %-d %B %Y - %I:%M:%S %p')
@@ -5157,6 +5458,7 @@ try_strptime <- function(text = VARCHAR, format = `VARCHAR | VARCHAR[]`) {
 #' @name typeof
 #' @usage typeof(expression = ANY)
 #' @param expression `ANY`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' typeof('abc')
@@ -5173,6 +5475,7 @@ typeof <- function(expression = ANY) {
 #' @name ucase
 #' @usage ucase(string = VARCHAR)
 #' @param string `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' ucase('Hello')
@@ -5189,6 +5492,7 @@ ucase <- function(string = VARCHAR) {
 #' @name unbin
 #' @usage unbin(value = VARCHAR)
 #' @param value `VARCHAR`
+#' @return `BLOB`
 #' @examples
 #' \dontrun{
 #' unbin('0110')
@@ -5205,6 +5509,7 @@ unbin <- function(value = VARCHAR) {
 #' @name unhex
 #' @usage unhex(value = VARCHAR)
 #' @param value `VARCHAR`
+#' @return `BLOB`
 #' @examples
 #' \dontrun{
 #' unhex('2A')
@@ -5221,6 +5526,7 @@ unhex <- function(value = VARCHAR) {
 #' @name unicode
 #' @usage unicode(string = VARCHAR)
 #' @param string `VARCHAR`
+#' @return `INTEGER`
 #' @examples
 #' \dontrun{
 #' [unicode('âbcd'), unicode('â'), unicode(''), unicode(NULL)]
@@ -5238,6 +5544,7 @@ unicode <- function(string = VARCHAR) {
 #' @usage union_extract(union = UNION, tag = VARCHAR)
 #' @param union `UNION`
 #' @param tag `VARCHAR`
+#' @return `ANY`
 #' @examples
 #' \dontrun{
 #' union_extract(s, 'k')
@@ -5254,6 +5561,7 @@ union_extract <- function(union = UNION, tag = VARCHAR) {
 #' @name union_tag
 #' @usage union_tag(union = UNION)
 #' @param union `UNION`
+#' @return `ANY`
 #' @examples
 #' \dontrun{
 #' union_tag(union_value(k := 'foo'))
@@ -5270,6 +5578,7 @@ union_tag <- function(union = UNION) {
 #' @name upper
 #' @usage upper(string = VARCHAR)
 #' @param string `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' upper('Hello')
@@ -5286,6 +5595,7 @@ upper <- function(string = VARCHAR) {
 #' @name url_decode
 #' @usage url_decode(string = VARCHAR)
 #' @param string `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' url_decode('https%3A%2F%2Fduckdb.org%2Fwhy_duckdb%23portable')
@@ -5302,6 +5612,7 @@ url_decode <- function(string = VARCHAR) {
 #' @name url_encode
 #' @usage url_encode(string = VARCHAR)
 #' @param string `VARCHAR`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' url_encode('this string has/ special+ characters>')
@@ -5318,6 +5629,7 @@ url_encode <- function(string = VARCHAR) {
 #' @name uuid_extract_timestamp
 #' @usage uuid_extract_timestamp(uuid = UUID)
 #' @param uuid `UUID`
+#' @return `TIMESTAMP WITH TIME ZONE`
 #' @examples
 #' \dontrun{
 #' uuid_extract_timestamp('019482e4-1441-7aad-8127-eec99573b0a0')
@@ -5334,6 +5646,7 @@ uuid_extract_timestamp <- function(uuid = UUID) {
 #' @name uuid_extract_version
 #' @usage uuid_extract_version(uuid = UUID)
 #' @param uuid `UUID`
+#' @return `UINTEGER`
 #' @examples
 #' \dontrun{
 #' uuid_extract_version('019482e4-1441-7aad-8127-eec99573b0a0')
@@ -5351,6 +5664,7 @@ uuid_extract_version <- function(uuid = UUID) {
 #' @usage NULL
 #' @param col0 `VARIANT`
 #' @param col1 `VARCHAR | UINTEGER`
+#' @return `VARIANT`
 #' @examples
 #' \dontrun{
 #' character(0)
@@ -5367,6 +5681,7 @@ variant_extract <- function(col0 = VARIANT, col1 = `VARCHAR | UINTEGER`) {
 #' @name variant_typeof
 #' @usage variant_typeof(input_variant = VARIANT)
 #' @param input_variant `VARIANT`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' variant_typeof({'a': 42, 'b': [1,2,3])::VARIANT)
@@ -5383,6 +5698,7 @@ variant_typeof <- function(input_variant = VARIANT) {
 #' @name vector_type
 #' @usage vector_type(col = ANY)
 #' @param col `ANY`
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' vector_type(col)
@@ -5399,6 +5715,7 @@ vector_type <- function(col = ANY) {
 #' @name version
 #' @usage version()
 
+#' @return `VARCHAR`
 #' @examples
 #' \dontrun{
 #' version()
@@ -5415,6 +5732,7 @@ version <- function() {
 #' @name week
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' week(timestamp '2021-08-03 11:59:44.123456')
@@ -5431,6 +5749,7 @@ week <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) 
 #' @name weekday
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' weekday(timestamp '2021-08-03 11:59:44.123456')
@@ -5447,6 +5766,7 @@ weekday <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' @name weekofyear
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' weekofyear(timestamp '2021-08-03 11:59:44.123456')
@@ -5464,6 +5784,7 @@ weekofyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME Z
 #' @usage NULL
 #' @param left `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @param right `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
+#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @examples
 #' \dontrun{
 #' xor(17, 5)
@@ -5480,6 +5801,7 @@ xor <- function(left = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYI
 #' @name year
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' year(timestamp '2021-08-03 11:59:44.123456')
@@ -5496,6 +5818,7 @@ year <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) 
 #' @name yearweek
 #' @usage NULL
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT`
 #' @examples
 #' \dontrun{
 #' yearweek(timestamp '2021-08-03 11:59:44.123456')

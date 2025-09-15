@@ -9,6 +9,9 @@ degrees(x = DOUBLE)
 \arguments{
 \item{x}{\code{DOUBLE}}
 }
+\value{
+\code{DOUBLE}
+}
 \description{
 Converts radians to degrees.
 }

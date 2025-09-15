@@ -9,6 +9,9 @@ enum_last(enum = ANY)
 \arguments{
 \item{enum}{\code{ANY}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Returns the last value of the input enum type.
 }

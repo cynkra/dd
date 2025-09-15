@@ -10,6 +10,9 @@
 
 \item{col2}{\code{VARCHAR}}
 }
+\value{
+\code{ANY[]}
+}
 \description{
 Works like list_sort, but the results are the indexes that correspond to the position in the original list instead of the actual values.
 }

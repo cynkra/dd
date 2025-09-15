@@ -11,6 +11,9 @@ list_has_all(list1 = `T[]`, list2 = `T[]`)
 
 \item{list2}{\code{T[]}}
 }
+\value{
+\code{BOOLEAN}
+}
 \description{
 Returns true if all elements of list2 are in list1. NULLs are ignored.
 }

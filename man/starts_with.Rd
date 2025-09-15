@@ -11,6 +11,9 @@ starts_with(string = VARCHAR, search_string = VARCHAR)
 
 \item{search_string}{\code{VARCHAR}}
 }
+\value{
+\code{BOOLEAN}
+}
 \description{
 Returns \code{true} if \code{string} begins with \code{search_string}.
 }

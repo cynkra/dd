@@ -9,6 +9,9 @@ exp(x = DOUBLE)
 \arguments{
 \item{x}{\code{DOUBLE}}
 }
+\value{
+\code{DOUBLE}
+}
 \description{
 Computes e to the power of x.
 }

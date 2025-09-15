@@ -9,6 +9,9 @@ map_from_entries(map = `STRUCT(K, V)[]`)
 \arguments{
 \item{map}{\code{STRUCT(K, V)[]}}
 }
+\value{
+\code{MAP(K, V)}
+}
 \description{
 Returns a map created from the entries of the array.
 }

@@ -8,6 +8,9 @@
 
 \item{'entry'}{\code{VARCHAR | BIGINT}}
 }
+\value{
+\code{ANY}
+}
 \description{
 Extract the named entry from the STRUCT.
 }

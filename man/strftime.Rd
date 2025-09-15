@@ -8,6 +8,9 @@
 
 \item{format}{\code{VARCHAR | DATE | TIMESTAMP | TIMESTAMP_NS}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Converts a \code{date} to a string according to the format string.
 }

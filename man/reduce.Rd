@@ -10,6 +10,9 @@
 
 \item{lambda(x, y)}{\code{LAMBDA}}
 }
+\value{
+\code{ANY}
+}
 \description{
 Reduces all elements of the input \code{list} into a single scalar value by executing the \code{lambda} function on a running result and the next list element. The \code{lambda} function has an optional \code{initial_value} argument.
 }

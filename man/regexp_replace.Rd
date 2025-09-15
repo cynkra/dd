@@ -12,6 +12,9 @@
 
 \item{options}{\code{VARCHAR}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 If \code{string} contains the \code{regex}, replaces the matching part with \code{replacement}. A set of optional regex \code{options} can be set.
 }

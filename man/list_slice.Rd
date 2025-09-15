@@ -12,6 +12,9 @@
 
 \item{step}{\code{BIGINT}}
 }
+\value{
+\code{ANY}
+}
 \description{
 Extracts a sublist or substring using slice conventions. Negative values are accepted.
 

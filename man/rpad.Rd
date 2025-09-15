@@ -13,6 +13,9 @@ rpad(string = VARCHAR, count = INTEGER, character = VARCHAR)
 
 \item{character}{\code{VARCHAR}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Pads the \code{string} with the \code{character} on the right until it has \code{count} characters. Truncates the \code{string} on the right if it has more than \code{count} characters.
 }

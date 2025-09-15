@@ -10,6 +10,9 @@
 
 \item{list}{\code{ANY[]}}
 }
+\value{
+\code{BIGINT}
+}
 \description{
 Number of characters in \code{string}.
 

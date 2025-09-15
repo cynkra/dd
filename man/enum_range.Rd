@@ -9,6 +9,9 @@ enum_range(enum = ANY)
 \arguments{
 \item{enum}{\code{ANY}}
 }
+\value{
+\code{VARCHAR[]}
+}
 \description{
 Returns all values of the input enum type as an array.
 }

@@ -6,6 +6,9 @@
 \arguments{
 \item{array}{\code{FLOAT[3] | DOUBLE[3]}}
 }
+\value{
+\code{FLOAT[3] | DOUBLE[3]}
+}
 \description{
 Computes the cross product of two arrays of size 3. The array elements can not be \code{NULL}.
 }

@@ -8,6 +8,9 @@
 
 \item{index}{\code{BIGINT}}
 }
+\value{
+\code{T | VARCHAR}
+}
 \description{
 Extract the \code{index}th (1-based) value from the list.
 }

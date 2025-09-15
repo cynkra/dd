@@ -9,6 +9,9 @@ current_setting(setting_name = VARCHAR)
 \arguments{
 \item{setting_name}{\code{VARCHAR}}
 }
+\value{
+\code{ANY}
+}
 \description{
 Returns the current value of the configuration setting.
 }

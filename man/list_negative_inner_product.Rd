@@ -8,6 +8,9 @@
 
 \item{list2}{\code{FLOAT[] | DOUBLE[]}}
 }
+\value{
+\code{FLOAT | DOUBLE}
+}
 \description{
 Computes the negative inner product between two same-sized lists.
 }

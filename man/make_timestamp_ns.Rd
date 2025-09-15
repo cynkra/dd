@@ -9,6 +9,9 @@ make_timestamp_ns(nanos = BIGINT)
 \arguments{
 \item{nanos}{\code{BIGINT}}
 }
+\value{
+\code{TIMESTAMP_NS}
+}
 \description{
 The timestamp for the given nanoseconds since epoch.
 }

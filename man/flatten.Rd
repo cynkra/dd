@@ -9,6 +9,9 @@ flatten(nested_list = `T[][]`)
 \arguments{
 \item{nested_list}{\code{T[][]}}
 }
+\value{
+\code{T[]}
+}
 \description{
 Flattens a nested list by one level.
 }

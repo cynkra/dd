@@ -9,6 +9,9 @@ formatReadableDecimalSize(integer = BIGINT)
 \arguments{
 \item{integer}{\code{BIGINT}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Converts \code{integer} to a human-readable representation using units based on powers of 10 (KB, MB, GB, etc.).
 }

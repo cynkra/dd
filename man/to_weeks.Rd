@@ -6,6 +6,9 @@
 \arguments{
 \item{integer}{\code{INTEGER | BIGINT}}
 }
+\value{
+\code{INTERVAL}
+}
 \description{
 Construct a week interval.
 }

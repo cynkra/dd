@@ -11,6 +11,9 @@ damerau_levenshtein(s1 = VARCHAR, s2 = VARCHAR)
 
 \item{s2}{\code{VARCHAR}}
 }
+\value{
+\code{BIGINT}
+}
 \description{
 Extension of Levenshtein distance to also include transposition of adjacent characters as an allowed edit operation. In other words, the minimum number of edit operations (insertions, deletions, substitutions or transpositions) required to change one string to another. Characters of different cases (e.g., \code{a} and \code{A}) are considered different.
 }

@@ -13,6 +13,9 @@ set_bit(bitstring = BIT, index = INTEGER, new_value = INTEGER)
 
 \item{new_value}{\code{INTEGER}}
 }
+\value{
+\code{BIT}
+}
 \description{
 Sets the nth bit in bitstring to newvalue; the first (leftmost) bit is indexed 0. Returns a new bitstring.
 }

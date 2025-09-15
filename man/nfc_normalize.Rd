@@ -9,6 +9,9 @@ nfc_normalize(string = VARCHAR)
 \arguments{
 \item{string}{\code{VARCHAR}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Converts \code{string} to Unicode NFC normalized string. Useful for comparisons and ordering if text data is mixed between NFC normalized and not.
 }

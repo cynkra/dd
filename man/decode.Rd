@@ -9,6 +9,9 @@ decode(blob = BLOB)
 \arguments{
 \item{blob}{\code{BLOB}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Converts \code{blob} to \code{VARCHAR}. Fails if \code{blob} is not valid UTF-8.
 }

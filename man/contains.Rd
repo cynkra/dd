@@ -12,6 +12,9 @@
 
 \item{col1}{\code{T | K | ANY}}
 }
+\value{
+\code{BOOLEAN}
+}
 \description{
 Returns \code{true} if \code{search_string} is found within \code{string}.
 }

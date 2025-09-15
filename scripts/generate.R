@@ -123,6 +123,7 @@ code <-
     #' @name {function_name}
     {usage_doc}
     {param_doc}
+    #' @return `{return_type}`
     #' @examples
     #' \dontrun{{
     {examples}

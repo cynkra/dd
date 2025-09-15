@@ -12,6 +12,9 @@
 
 \item{options}{\code{VARCHAR}}
 }
+\value{
+\code{VARCHAR[]}
+}
 \description{
 Finds non-overlapping occurrences of the \code{regex} in the \code{string} and returns the corresponding values of the capturing \code{group}. A set of optional regex \code{options} can be set.
 }

@@ -9,6 +9,9 @@ url_encode(string = VARCHAR)
 \arguments{
 \item{string}{\code{VARCHAR}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Encodes a URL to a representation using Percent-Encoding.
 }

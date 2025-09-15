@@ -6,6 +6,9 @@
 \usage{
 list_pack()
 }
+\value{
+\code{"NULL"[]}
+}
 \description{
 Creates a LIST containing the argument values.
 }

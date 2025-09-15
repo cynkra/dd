@@ -9,6 +9,9 @@ strip_accents(string = VARCHAR)
 \arguments{
 \item{string}{\code{VARCHAR}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Strips accents from \code{string}.
 }

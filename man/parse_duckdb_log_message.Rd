@@ -11,6 +11,9 @@ parse_duckdb_log_message(type = VARCHAR, message = VARCHAR)
 
 \item{message}{\code{VARCHAR}}
 }
+\value{
+\code{ANY}
+}
 \description{
 Parse the message into the expected logical type.
 }

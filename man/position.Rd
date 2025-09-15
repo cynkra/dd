@@ -11,6 +11,9 @@ position(string = VARCHAR, search_string = VARCHAR)
 
 \item{search_string}{\code{VARCHAR}}
 }
+\value{
+\code{BIGINT}
+}
 \description{
 Returns location of first occurrence of \code{search_string} in \code{string}, counting from 1. Returns 0 if no match found.
 }

@@ -8,6 +8,9 @@
 
 \item{blob}{\code{BLOB}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Returns the MD5 hash of the \code{string} as a \code{VARCHAR}.
 

@@ -6,6 +6,9 @@
 \arguments{
 \item{temporal}{\verb{DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE}}
 }
+\value{
+\code{DOUBLE}
+}
 \description{
 Extract the epoch component from a temporal type.
 }

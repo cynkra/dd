@@ -9,6 +9,9 @@ vector_type(col = ANY)
 \arguments{
 \item{col}{\code{ANY}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Returns the VectorType of a given column.
 }

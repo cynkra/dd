@@ -16,6 +16,9 @@
 
 \item{entry}{\code{VARCHAR}}
 }
+\value{
+\code{T | VARCHAR | ANY}
+}
 \description{
 Extracts a single character from a \code{string} using a (1-based) \code{index}.
 

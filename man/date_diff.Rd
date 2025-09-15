@@ -10,6 +10,9 @@
 
 \item{enddate}{\verb{DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
+\value{
+\code{BIGINT}
+}
 \description{
 The number of partition boundaries between the timestamps.
 }

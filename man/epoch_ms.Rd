@@ -6,6 +6,9 @@
 \arguments{
 \item{temporal}{\verb{DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | BIGINT}}
 }
+\value{
+\code{BIGINT | TIMESTAMP}
+}
 \description{
 Extract the epoch component in milliseconds from a temporal type.
 }

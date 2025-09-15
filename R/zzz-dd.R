@@ -5,7 +5,7 @@
 #' @export
 #' @examples
 #' dd[1:3]
-dd <- list(
+dd <- base::list(
   abs = abs,
   acos = acos,
   acosh = acosh,

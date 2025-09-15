@@ -10,6 +10,9 @@
 
 \item{options}{\code{VARCHAR}}
 }
+\value{
+\code{VARCHAR[]}
+}
 \description{
 Splits the \code{string} along the \code{regex}. A set of optional regex \code{options} can be set.
 }

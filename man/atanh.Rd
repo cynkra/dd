@@ -9,6 +9,9 @@ atanh(x = DOUBLE)
 \arguments{
 \item{x}{\code{DOUBLE}}
 }
+\value{
+\code{DOUBLE}
+}
 \description{
 Computes the inverse hyperbolic tan of x.
 }

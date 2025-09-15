@@ -10,6 +10,9 @@
 
 \item{value]}{\code{ANY}}
 }
+\value{
+\code{ANY[]}
+}
 \description{
 Resizes the \code{list} to contain \code{size} elements. Initializes new elements with \code{value} or \code{NULL} if \code{value} is not set.
 }

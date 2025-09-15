@@ -9,6 +9,9 @@ factorial(x = INTEGER)
 \arguments{
 \item{x}{\code{INTEGER}}
 }
+\value{
+\code{HUGEINT}
+}
 \description{
 Factorial of x. Computes the product of the current integer and all integers below it.
 }

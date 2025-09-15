@@ -8,6 +8,9 @@
 
 \item{col1}{\code{INTEGER}}
 }
+\value{
+\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT}
+}
 \description{
 Truncates the number.
 }

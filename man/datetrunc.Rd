@@ -8,6 +8,9 @@
 
 \item{timestamp}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
+\value{
+\verb{TIMESTAMP | INTERVAL | TIMESTAMP WITH TIME ZONE}
+}
 \description{
 Truncate to specified precision.
 }

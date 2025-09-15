@@ -11,6 +11,9 @@ bit_position(substring = BIT, bitstring = BIT)
 
 \item{bitstring}{\code{BIT}}
 }
+\value{
+\code{INTEGER}
+}
 \description{
 Returns first starting index of the specified substring within bits, or zero if it is not present. The first (leftmost) bit is indexed 1.
 }

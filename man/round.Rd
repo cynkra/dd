@@ -8,6 +8,9 @@
 
 \item{precision}{\code{INTEGER}}
 }
+\value{
+\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL}
+}
 \description{
 Rounds x to s decimal places.
 }

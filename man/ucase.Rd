@@ -9,6 +9,9 @@ ucase(string = VARCHAR)
 \arguments{
 \item{string}{\code{VARCHAR}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Converts \code{string} to upper case.
 }

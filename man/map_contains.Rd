@@ -11,6 +11,9 @@ map_contains(map = `MAP(K, V)`, key = K)
 
 \item{key}{\code{K}}
 }
+\value{
+\code{BOOLEAN}
+}
 \description{
 Checks if a map contains a given key.
 }

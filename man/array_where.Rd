@@ -11,6 +11,9 @@ array_where(value_list = `T[]`, mask_list = `BOOLEAN[]`)
 
 \item{mask_list}{\code{BOOLEAN[]}}
 }
+\value{
+\code{T[]}
+}
 \description{
 Returns a list with the \code{BOOLEAN}s in \code{mask_list} applied as a mask to the \code{value_list}.
 }

@@ -11,6 +11,9 @@ get_bit(bitstring = BIT, index = INTEGER)
 
 \item{index}{\code{INTEGER}}
 }
+\value{
+\code{INTEGER}
+}
 \description{
 Extracts the nth bit from bitstring; the first (leftmost) bit is indexed 0.
 }

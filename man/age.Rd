@@ -6,6 +6,9 @@
 \arguments{
 \item{timestamp}{\verb{TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
+\value{
+\code{INTERVAL}
+}
 \description{
 Subtract arguments, resulting in the time difference between the two timestamps.
 }

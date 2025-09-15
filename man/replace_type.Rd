@@ -13,6 +13,9 @@ replace_type(param = ANY, type1 = ANY, type2 = ANY)
 
 \item{type2}{\code{ANY}}
 }
+\value{
+\code{ANY}
+}
 \description{
 Casts all fields of type1 to type2.
 }

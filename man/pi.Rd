@@ -6,6 +6,9 @@
 \usage{
 pi()
 }
+\value{
+\code{DOUBLE}
+}
 \description{
 Returns the value of pi.
 }

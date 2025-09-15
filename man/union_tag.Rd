@@ -9,6 +9,9 @@ union_tag(union = UNION)
 \arguments{
 \item{union}{\code{UNION}}
 }
+\value{
+\code{ANY}
+}
 \description{
 Retrieve the currently selected tag of the union as an ENUM.
 }

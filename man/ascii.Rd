@@ -9,6 +9,9 @@ ascii(string = VARCHAR)
 \arguments{
 \item{string}{\code{VARCHAR}}
 }
+\value{
+\code{INTEGER}
+}
 \description{
 Returns an integer that represents the Unicode code point of the first character of the \code{string}.
 }

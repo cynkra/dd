@@ -11,6 +11,9 @@ right_grapheme(string = VARCHAR, count = BIGINT)
 
 \item{count}{\code{BIGINT}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Extracts the right-most \code{count} grapheme clusters.
 }

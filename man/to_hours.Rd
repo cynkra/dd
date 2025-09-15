@@ -9,6 +9,9 @@ to_hours(integer = BIGINT)
 \arguments{
 \item{integer}{\code{BIGINT}}
 }
+\value{
+\code{INTERVAL}
+}
 \description{
 Construct a hour interval.
 }

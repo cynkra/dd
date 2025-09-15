@@ -9,6 +9,9 @@ chr(code_point = INTEGER)
 \arguments{
 \item{code_point}{\code{INTEGER}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Returns a character which is corresponding the ASCII code value or Unicode code point.
 }

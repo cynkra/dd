@@ -9,6 +9,9 @@ regexp_escape(string = VARCHAR)
 \arguments{
 \item{string}{\code{VARCHAR}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Escapes special patterns to turn \code{string} into a regular expression similarly to Python's \code{re.escape} function.
 }

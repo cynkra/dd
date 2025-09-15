@@ -9,6 +9,9 @@ ord(string = VARCHAR)
 \arguments{
 \item{string}{\code{VARCHAR}}
 }
+\value{
+\code{INTEGER}
+}
 \description{
 Returns an \code{INTEGER} representing the \code{unicode} codepoint of the first character in the \code{string}.
 }

@@ -8,6 +8,9 @@
 
 \item{value}{\code{BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Converts the \code{string} to binary representation.
 

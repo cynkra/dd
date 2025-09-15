@@ -9,6 +9,9 @@ from_binary(value = VARCHAR)
 \arguments{
 \item{value}{\code{VARCHAR}}
 }
+\value{
+\code{BLOB}
+}
 \description{
 Converts a \code{value} from binary representation to a blob.
 }

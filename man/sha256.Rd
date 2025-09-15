@@ -8,6 +8,9 @@
 
 \item{blob}{\code{BLOB}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Returns a \code{VARCHAR} with the SHA-256 hash of the \code{value}.
 

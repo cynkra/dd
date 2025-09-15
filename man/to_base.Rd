@@ -10,6 +10,9 @@
 
 \item{min_length}{\code{INTEGER}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Converts \code{number} to a string in the given base \code{radix}, optionally padding with leading zeros to \code{min_length}.
 }

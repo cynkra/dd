@@ -8,6 +8,9 @@
 
 \item{separator}{\code{VARCHAR}}
 }
+\value{
+\code{VARCHAR[]}
+}
 \description{
 Returns a list of the components (directories and filename) in the \code{path} similarly to Python's \code{pathlib.parts} function. \code{separator} options: \code{system}, \code{both_slash} (default), \code{forward_slash}, \code{backslash}.
 }

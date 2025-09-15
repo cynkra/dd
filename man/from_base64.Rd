@@ -9,6 +9,9 @@ from_base64(string = VARCHAR)
 \arguments{
 \item{string}{\code{VARCHAR}}
 }
+\value{
+\code{BLOB}
+}
 \description{
 Converts a base64 encoded \code{string} to a character string (\code{BLOB}).
 }

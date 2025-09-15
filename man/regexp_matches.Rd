@@ -10,6 +10,9 @@
 
 \item{options}{\code{VARCHAR}}
 }
+\value{
+\code{BOOLEAN}
+}
 \description{
 Returns \code{true} if \code{string} contains the \code{regex}, \code{false} otherwise. A set of optional regex \code{options} can be set.
 }

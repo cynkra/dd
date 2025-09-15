@@ -9,6 +9,9 @@ strlen(string = VARCHAR)
 \arguments{
 \item{string}{\code{VARCHAR}}
 }
+\value{
+\code{BIGINT}
+}
 \description{
 Number of bytes in \code{string}.
 }

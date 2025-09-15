@@ -9,6 +9,9 @@ uuid_extract_timestamp(uuid = UUID)
 \arguments{
 \item{uuid}{\code{UUID}}
 }
+\value{
+\verb{TIMESTAMP WITH TIME ZONE}
+}
 \description{
 Extract the timestamp for the given UUID v7.
 }

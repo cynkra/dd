@@ -11,6 +11,9 @@ str_split(string = VARCHAR, separator = VARCHAR)
 
 \item{separator}{\code{VARCHAR}}
 }
+\value{
+\code{VARCHAR[]}
+}
 \description{
 Splits the \code{string} along the \code{separator}.
 }

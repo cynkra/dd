@@ -6,6 +6,9 @@
 \arguments{
 \item{ts}{\verb{DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
+\value{
+\code{DOUBLE}
+}
 \description{
 Extract the Julian Day number from a date or timestamp.
 }

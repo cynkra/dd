@@ -8,6 +8,9 @@
 
 \item{col1}{\verb{DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE}}
 }
+\value{
+\code{STRUCT() | BIGINT}
+}
 \description{
 Get subfield (equivalent to extract).
 }

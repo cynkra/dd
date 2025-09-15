@@ -8,6 +8,9 @@
 
 \item{col1}{\code{VARCHAR | UINTEGER}}
 }
+\value{
+\code{VARIANT}
+}
 \description{
 DuckDB function \code{variant_extract()}.
 }

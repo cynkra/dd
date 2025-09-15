@@ -6,6 +6,9 @@
 \arguments{
 \item{x}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | BIT}}
 }
+\value{
+\code{TINYINT | BIGINT}
+}
 \description{
 Returns the number of bits that are set.
 }

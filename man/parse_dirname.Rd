@@ -8,6 +8,9 @@
 
 \item{separator}{\code{VARCHAR}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Returns the top-level directory name from the given \code{path}. \code{separator} options: \code{system}, \code{both_slash} (default), \code{forward_slash}, \code{backslash}.
 }

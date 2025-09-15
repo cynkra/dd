@@ -10,6 +10,9 @@
 
 \item{separator}{\code{VARCHAR}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Returns the last component of the \code{path} similarly to Python's \code{os.path.basename} function. If \code{trim_extension} is \code{true}, the file extension will be removed (defaults to \code{false}). \code{separator} options: \code{system}, \code{both_slash} (default), \code{forward_slash}, \code{backslash}.
 }

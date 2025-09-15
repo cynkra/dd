@@ -11,6 +11,9 @@ jaccard(s1 = VARCHAR, s2 = VARCHAR)
 
 \item{s2}{\code{VARCHAR}}
 }
+\value{
+\code{DOUBLE}
+}
 \description{
 The Jaccard similarity between two strings. Characters of different cases (e.g., \code{a} and \code{A}) are considered different. Returns a number between 0 and 1.
 }

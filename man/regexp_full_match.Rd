@@ -10,6 +10,9 @@
 
 \item{col2}{\code{VARCHAR}}
 }
+\value{
+\code{BOOLEAN}
+}
 \description{
 Returns \code{true} if the entire \code{string} matches the \code{regex}. A set of optional regex \code{options} can be set.
 }

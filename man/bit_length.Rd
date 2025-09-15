@@ -8,6 +8,9 @@
 
 \item{bit}{\code{BIT}}
 }
+\value{
+\code{BIGINT}
+}
 \description{
 Number of bits in a \code{string}.
 

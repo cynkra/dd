@@ -10,6 +10,9 @@
 
 \item{col2}{\code{VARCHAR}}
 }
+\value{
+\code{ANY[]}
+}
 \description{
 Sorts the elements of the list.
 }

@@ -8,6 +8,9 @@
 
 \item{y}{\code{BIGINT | HUGEINT}}
 }
+\value{
+\code{BIGINT | HUGEINT}
+}
 \description{
 Computes the greatest common divisor of x and y.
 }

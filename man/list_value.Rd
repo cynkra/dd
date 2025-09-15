@@ -6,6 +6,9 @@
 \usage{
 list_value()
 }
+\value{
+\code{"NULL"[]}
+}
 \description{
 Creates a LIST containing the argument values.
 }

@@ -8,6 +8,9 @@
 
 \item{list2}{\code{FLOAT[] | DOUBLE[]}}
 }
+\value{
+\code{FLOAT | DOUBLE}
+}
 \description{
 Calculates the Euclidean distance between two points with coordinates given in two inputs lists of equal length.
 }

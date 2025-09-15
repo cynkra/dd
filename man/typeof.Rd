@@ -9,6 +9,9 @@ typeof(expression = ANY)
 \arguments{
 \item{expression}{\code{ANY}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Returns the name of the data type of the result of the expression.
 }

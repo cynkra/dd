@@ -9,6 +9,9 @@ list_unique(list = `ANY[]`)
 \arguments{
 \item{list}{\code{ANY[]}}
 }
+\value{
+\code{UBIGINT}
+}
 \description{
 Counts the unique elements of a \code{list}.
 }

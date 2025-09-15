@@ -6,6 +6,9 @@
 \arguments{
 \item{tsns}{\verb{DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP_NS | TIMESTAMP WITH TIME ZONE}}
 }
+\value{
+\code{BIGINT}
+}
 \description{
 Extract the nanosecond component from a date or timestamp.
 }

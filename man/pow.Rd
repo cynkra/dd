@@ -11,6 +11,9 @@ pow(x = DOUBLE, y = DOUBLE)
 
 \item{y}{\code{DOUBLE}}
 }
+\value{
+\code{DOUBLE}
+}
 \description{
 Computes x to the power of y.
 }

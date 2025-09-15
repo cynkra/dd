@@ -8,6 +8,9 @@
 
 \item{list2}{\code{FLOAT[] | DOUBLE[]}}
 }
+\value{
+\code{FLOAT | DOUBLE}
+}
 \description{
 Computes the cosine distance between two same-sized lists.
 }

@@ -8,6 +8,9 @@
 
 \item{x}{\code{DOUBLE}}
 }
+\value{
+\code{DOUBLE}
+}
 \description{
 Computes the logarithm of x to base b. b may be omitted, in which case the default 10.
 }

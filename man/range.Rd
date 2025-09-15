@@ -10,6 +10,9 @@
 
 \item{step}{\code{BIGINT | INTERVAL}}
 }
+\value{
+\verb{BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]}
+}
 \description{
 Creates a list of values between \code{start} and \code{stop} - the stop parameter is exclusive.
 }

@@ -11,6 +11,9 @@ map_extract_value(map = `MAP(K, V)`, key = K)
 
 \item{key}{\code{K}}
 }
+\value{
+\code{V}
+}
 \description{
 Returns the value for a given key or NULL if the key is not contained in the map. The type of the key provided in the second parameter must match the type of the map’s keys else an error is returned.
 }

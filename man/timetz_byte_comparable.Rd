@@ -9,6 +9,9 @@ timetz_byte_comparable(time_tz = `TIME WITH TIME ZONE`)
 \arguments{
 \item{time_tz}{\verb{TIME WITH TIME ZONE}}
 }
+\value{
+\code{UBIGINT}
+}
 \description{
 Converts a TIME WITH TIME ZONE to an integer sort key.
 }

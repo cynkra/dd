@@ -11,6 +11,9 @@ left(string = VARCHAR, count = BIGINT)
 
 \item{count}{\code{BIGINT}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Extracts the left-most count characters.
 }

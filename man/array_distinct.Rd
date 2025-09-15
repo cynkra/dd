@@ -9,6 +9,9 @@ array_distinct(list = `T[]`)
 \arguments{
 \item{list}{\code{T[]}}
 }
+\value{
+\code{T[]}
+}
 \description{
 Removes all duplicates and \code{NULL} values from a list. Does not preserve the original order.
 }

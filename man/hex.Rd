@@ -10,6 +10,9 @@
 
 \item{blob}{\code{BLOB}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Converts the \code{string} to hexadecimal representation.
 

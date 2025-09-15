@@ -14,6 +14,9 @@
 
 \item{name_list}{\code{VARCHAR[]}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 If \code{string} contains the \code{regex} pattern, returns the capturing group specified by optional parameter \code{group}; otherwise, returns the empty string. The \code{group} must be a constant value. If no \code{group} is given, it defaults to 0. A set of optional regex \code{options} can be set.
 

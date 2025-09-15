@@ -9,6 +9,9 @@ gamma(x = DOUBLE)
 \arguments{
 \item{x}{\code{DOUBLE}}
 }
+\value{
+\code{DOUBLE}
+}
 \description{
 Interpolation of (x-1) factorial (so decimal inputs are allowed).
 }

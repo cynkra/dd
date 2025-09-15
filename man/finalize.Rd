@@ -9,6 +9,9 @@ finalize(col0 = `AGGREGATE_STATE<?>`)
 \arguments{
 \item{col0}{\verb{AGGREGATE_STATE<?>}}
 }
+\value{
+\code{INVALID}
+}
 \description{
 DuckDB function \code{finalize()}.
 }

@@ -11,6 +11,9 @@ combine(col0 = `AGGREGATE_STATE<?>`, col1 = ANY)
 
 \item{col1}{\code{ANY}}
 }
+\value{
+\verb{AGGREGATE_STATE<?>}
+}
 \description{
 DuckDB function \code{combine()}.
 }

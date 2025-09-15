@@ -9,6 +9,9 @@ reverse(string = VARCHAR)
 \arguments{
 \item{string}{\code{VARCHAR}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Reverses the \code{string}.
 }

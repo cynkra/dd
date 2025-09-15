@@ -9,6 +9,9 @@ to_milliseconds(double = DOUBLE)
 \arguments{
 \item{double}{\code{DOUBLE}}
 }
+\value{
+\code{INTERVAL}
+}
 \description{
 Construct a millisecond interval.
 }

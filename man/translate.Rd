@@ -13,6 +13,9 @@ translate(string = VARCHAR, from = VARCHAR, to = VARCHAR)
 
 \item{to}{\code{VARCHAR}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Replaces each character in \code{string} that matches a character in the \code{from} set with the corresponding character in the \code{to} set. If \code{from} is longer than \code{to}, occurrences of the extra characters in \code{from} are deleted.
 }

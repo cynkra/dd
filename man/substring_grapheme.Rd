@@ -10,6 +10,9 @@
 
 \item{length}{\code{BIGINT}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Extracts substring starting from grapheme clusters \code{start} up to the end of the string. If optional argument \code{length} is set, extracts a substring of \code{length} grapheme clusters instead. Note that a \code{start} value of \code{1} refers to the \code{first} character of the \code{string}.
 }

@@ -11,6 +11,9 @@ struct_contains(struct = STRUCT, `'entry'` = ANY)
 
 \item{'entry'}{\code{ANY}}
 }
+\value{
+\code{BOOLEAN}
+}
 \description{
 Check if an unnamed STRUCT contains the value.
 }

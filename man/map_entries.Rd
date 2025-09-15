@@ -9,6 +9,9 @@ map_entries(map = `MAP(K, V)`)
 \arguments{
 \item{map}{\code{MAP(K, V)}}
 }
+\value{
+\verb{STRUCT("key" K, "value" V)[]}
+}
 \description{
 Returns the map entries as a list of keys/values.
 }

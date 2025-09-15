@@ -9,6 +9,9 @@ map_values(map = `MAP(K, V)`)
 \arguments{
 \item{map}{\code{MAP(K, V)}}
 }
+\value{
+\code{V[]}
+}
 \description{
 Returns the values of a map as a list.
 }

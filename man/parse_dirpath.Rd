@@ -8,6 +8,9 @@
 
 \item{separator}{\code{VARCHAR}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Returns the head of the \code{path} (the pathname until the last slash) similarly to Python's \code{os.path.dirname}. \code{separator} options: \code{system}, \code{both_slash} (default), \code{forward_slash}, \code{backslash}.
 }

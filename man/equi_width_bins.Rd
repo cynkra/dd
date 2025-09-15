@@ -12,6 +12,9 @@
 
 \item{nice_rounding}{\code{BOOLEAN}}
 }
+\value{
+\code{ANY[]}
+}
 \description{
 Generates bin_count equi-width bins between the min and max. If enabled nice_rounding makes the numbers more readable/less jagged.
 }

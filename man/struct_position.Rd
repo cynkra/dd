@@ -11,6 +11,9 @@ struct_position(struct = STRUCT, `'entry'` = ANY)
 
 \item{'entry'}{\code{ANY}}
 }
+\value{
+\code{INTEGER}
+}
 \description{
 Get the position of the entry in an unnamed STRUCT, starting at 1.
 }

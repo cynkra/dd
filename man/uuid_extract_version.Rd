@@ -9,6 +9,9 @@ uuid_extract_version(uuid = UUID)
 \arguments{
 \item{uuid}{\code{UUID}}
 }
+\value{
+\code{UINTEGER}
+}
 \description{
 Extract a version for the given UUID.
 }

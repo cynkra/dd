@@ -8,6 +8,9 @@
 
 \item{format}{\code{VARCHAR | VARCHAR[]}}
 }
+\value{
+\code{TIMESTAMP}
+}
 \description{
 Converts the \code{string} text to timestamp according to the format string. Returns \code{NULL} on failure.
 }

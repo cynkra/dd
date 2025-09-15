@@ -11,6 +11,9 @@ union_extract(union = UNION, tag = VARCHAR)
 
 \item{tag}{\code{VARCHAR}}
 }
+\value{
+\code{ANY}
+}
 \description{
 Extract the value with the named tags from the union. NULL if the tag is not currently selected.
 }

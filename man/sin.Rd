@@ -9,6 +9,9 @@ sin(x = DOUBLE)
 \arguments{
 \item{x}{\code{DOUBLE}}
 }
+\value{
+\code{DOUBLE}
+}
 \description{
 Computes the sin of x.
 }

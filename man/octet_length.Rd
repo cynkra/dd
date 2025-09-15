@@ -8,6 +8,9 @@
 
 \item{bitstring}{\code{BIT}}
 }
+\value{
+\code{BIGINT}
+}
 \description{
 Number of bytes in \code{blob}.
 

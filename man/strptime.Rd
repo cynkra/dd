@@ -10,6 +10,9 @@
 
 \item{format-list}{\code{VARCHAR[]}}
 }
+\value{
+\code{TIMESTAMP}
+}
 \description{
 Converts the \code{string} text to timestamp according to the format string. Throws an error on failure. To return \code{NULL} on failure, use try_strptime.
 

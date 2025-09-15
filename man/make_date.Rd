@@ -14,6 +14,9 @@
 
 \item{date-struct}{\verb{STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)}}
 }
+\value{
+\code{DATE}
+}
 \description{
 The date for the given parts.
 

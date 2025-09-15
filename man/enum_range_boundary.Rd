@@ -11,6 +11,9 @@ enum_range_boundary(start = ANY, end = ANY)
 
 \item{end}{\code{ANY}}
 }
+\value{
+\code{VARCHAR[]}
+}
 \description{
 Returns the range between the two given enum values as an array. The values must be of the same enum type. When the first parameter is NULL, the result starts with the first value of the enum type. When the second parameter is NULL, the result ends with the last value of the enum type.
 }

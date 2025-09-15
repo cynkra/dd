@@ -9,6 +9,9 @@ asinh(x = DOUBLE)
 \arguments{
 \item{x}{\code{DOUBLE}}
 }
+\value{
+\code{DOUBLE}
+}
 \description{
 Computes the inverse hyperbolic sin of x.
 }

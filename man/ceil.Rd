@@ -6,6 +6,9 @@
 \arguments{
 \item{x}{\code{FLOAT | DOUBLE | DECIMAL}}
 }
+\value{
+\code{FLOAT | DOUBLE | DECIMAL}
+}
 \description{
 Rounds the number up.
 }

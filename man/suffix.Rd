@@ -11,6 +11,9 @@ suffix(string = VARCHAR, search_string = VARCHAR)
 
 \item{search_string}{\code{VARCHAR}}
 }
+\value{
+\code{BOOLEAN}
+}
 \description{
 Returns \code{true} if \code{string} ends with \code{search_string}.
 }

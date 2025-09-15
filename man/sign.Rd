@@ -6,6 +6,9 @@
 \arguments{
 \item{x}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT}}
 }
+\value{
+\code{TINYINT}
+}
 \description{
 Returns the sign of x as -1, 0 or 1.
 }

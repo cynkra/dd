@@ -9,6 +9,9 @@ alias(expr = ANY)
 \arguments{
 \item{expr}{\code{ANY}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Returns the name of a given expression.
 }

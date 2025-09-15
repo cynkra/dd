@@ -10,6 +10,9 @@
 
 \item{origin}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | VARCHAR}}
 }
+\value{
+\verb{DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE}
+}
 \description{
 Truncate TIMESTAMPTZ by the specified interval bucket_width. Buckets are aligned relative to origin TIMESTAMPTZ. The origin defaults to 2000-01-03 00:00:00+00 for buckets that do not include a month or year interval, and to 2000-01-01 00:00:00+00 for month and year buckets.
 }

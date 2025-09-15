@@ -9,6 +9,9 @@ to_microseconds(integer = BIGINT)
 \arguments{
 \item{integer}{\code{BIGINT}}
 }
+\value{
+\code{INTERVAL}
+}
 \description{
 Construct a microsecond interval.
 }

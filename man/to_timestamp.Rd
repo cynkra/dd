@@ -9,6 +9,9 @@ to_timestamp(sec = DOUBLE)
 \arguments{
 \item{sec}{\code{DOUBLE}}
 }
+\value{
+\verb{TIMESTAMP WITH TIME ZONE}
+}
 \description{
 Converts secs since epoch to a timestamp with time zone.
 }

@@ -11,6 +11,9 @@ array_select(value_list = `T[]`, index_list = `BIGINT[]`)
 
 \item{index_list}{\code{BIGINT[]}}
 }
+\value{
+\code{T[]}
+}
 \description{
 Returns a list based on the elements selected by the \code{index_list}.
 }

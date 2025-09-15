@@ -9,6 +9,9 @@ variant_typeof(input_variant = VARIANT)
 \arguments{
 \item{input_variant}{\code{VARIANT}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Returns the internal type of the \code{input_variant}.
 }

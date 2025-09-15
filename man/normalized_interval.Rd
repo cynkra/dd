@@ -9,6 +9,9 @@ normalized_interval(interval = INTERVAL)
 \arguments{
 \item{interval}{\code{INTERVAL}}
 }
+\value{
+\code{INTERVAL}
+}
 \description{
 Normalizes an INTERVAL to an equivalent interval.
 }

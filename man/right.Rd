@@ -11,6 +11,9 @@ right(string = VARCHAR, count = BIGINT)
 
 \item{count}{\code{BIGINT}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Extract the right-most \code{count} characters.
 }

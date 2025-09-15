@@ -9,6 +9,9 @@ length_grapheme(string = VARCHAR)
 \arguments{
 \item{string}{\code{VARCHAR}}
 }
+\value{
+\code{BIGINT}
+}
 \description{
 Number of grapheme clusters in \code{string}.
 }

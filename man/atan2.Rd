@@ -11,6 +11,9 @@ atan2(y = DOUBLE, x = DOUBLE)
 
 \item{x}{\code{DOUBLE}}
 }
+\value{
+\code{DOUBLE}
+}
 \description{
 Computes the arctangent (y, x).
 }

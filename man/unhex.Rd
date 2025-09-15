@@ -9,6 +9,9 @@ unhex(value = VARCHAR)
 \arguments{
 \item{value}{\code{VARCHAR}}
 }
+\value{
+\code{BLOB}
+}
 \description{
 Converts a \code{value} from hexadecimal representation to a blob.
 }

@@ -11,6 +11,9 @@ array_indexof(list = `T[]`, element = T)
 
 \item{element}{\code{T}}
 }
+\value{
+\code{INTEGER}
+}
 \description{
 Returns the index of the \code{element} if the \code{list} contains the \code{element}. If the \code{element} is not found, it returns \code{NULL}.
 }

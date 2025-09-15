@@ -9,6 +9,9 @@ asin(x = DOUBLE)
 \arguments{
 \item{x}{\code{DOUBLE}}
 }
+\value{
+\code{DOUBLE}
+}
 \description{
 Computes the arcsine of x.
 }

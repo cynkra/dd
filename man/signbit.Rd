@@ -6,6 +6,9 @@
 \arguments{
 \item{x}{\code{FLOAT | DOUBLE}}
 }
+\value{
+\code{BOOLEAN}
+}
 \description{
 Returns whether the signbit is set or not.
 }

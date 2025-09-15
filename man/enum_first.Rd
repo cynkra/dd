@@ -9,6 +9,9 @@ enum_first(enum = ANY)
 \arguments{
 \item{enum}{\code{ANY}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Returns the first value of the input enum type.
 }

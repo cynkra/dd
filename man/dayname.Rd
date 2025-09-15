@@ -6,6 +6,9 @@
 \arguments{
 \item{ts}{\verb{DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 The (English) name of the weekday.
 }

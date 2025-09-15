@@ -8,6 +8,9 @@
 
 \item{values}{\code{V[]}}
 }
+\value{
+\code{MAP("NULL", "NULL") | MAP(K, V)}
+}
 \description{
 Creates a map from a set of keys and values.
 }

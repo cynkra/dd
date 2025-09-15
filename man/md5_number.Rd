@@ -8,6 +8,9 @@
 
 \item{blob}{\code{BLOB}}
 }
+\value{
+\code{UHUGEINT}
+}
 \description{
 Returns the MD5 hash of the \code{string} as a \code{HUGEINT}.
 

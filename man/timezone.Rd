@@ -8,6 +8,9 @@
 
 \item{col1}{\verb{TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
+\value{
+\verb{BIGINT | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | TIMESTAMP}
+}
 \description{
 Extract the timezone component from a date or timestamp.
 }

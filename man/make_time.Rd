@@ -13,6 +13,9 @@ make_time(hour = BIGINT, minute = BIGINT, seconds = DOUBLE)
 
 \item{seconds}{\code{DOUBLE}}
 }
+\value{
+\code{TIME}
+}
 \description{
 The time for the given parts.
 }

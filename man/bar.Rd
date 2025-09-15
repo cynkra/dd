@@ -12,6 +12,9 @@
 
 \item{width}{\code{DOUBLE}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Draws a band whose width is proportional to (\code{x - min}) and equal to \code{width} characters when \code{x} = \code{max}. \code{width} defaults to 80.
 }

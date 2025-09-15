@@ -9,6 +9,9 @@ getvariable(col0 = VARCHAR)
 \arguments{
 \item{col0}{\code{VARCHAR}}
 }
+\value{
+\code{ANY}
+}
 \description{
 DuckDB function \code{getvariable()}.
 }

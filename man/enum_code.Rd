@@ -9,6 +9,9 @@ enum_code(enum = ANY)
 \arguments{
 \item{enum}{\code{ANY}}
 }
+\value{
+\code{ANY}
+}
 \description{
 Returns the numeric value backing the given enum value.
 }

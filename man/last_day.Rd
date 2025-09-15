@@ -6,6 +6,9 @@
 \arguments{
 \item{ts}{\verb{DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
+\value{
+\code{DATE}
+}
 \description{
 Returns the last day of the month.
 }

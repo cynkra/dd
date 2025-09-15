@@ -8,6 +8,9 @@
 
 \item{length}{\code{INTEGER}}
 }
+\value{
+\code{BIT}
+}
 \description{
 Pads the bitstring until the specified length.
 }

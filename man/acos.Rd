@@ -9,6 +9,9 @@ acos(x = DOUBLE)
 \arguments{
 \item{x}{\code{DOUBLE}}
 }
+\value{
+\code{DOUBLE}
+}
 \description{
 Computes the arccosine of x.
 }

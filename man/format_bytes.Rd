@@ -9,6 +9,9 @@ format_bytes(integer = BIGINT)
 \arguments{
 \item{integer}{\code{BIGINT}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Converts \code{integer} to a human-readable representation using units based on powers of 2 (KiB, MiB, GiB, etc.).
 }

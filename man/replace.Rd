@@ -13,6 +13,9 @@ replace(string = VARCHAR, source = VARCHAR, target = VARCHAR)
 
 \item{target}{\code{VARCHAR}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Replaces any occurrences of the \code{source} with \code{target} in \code{string}.
 }

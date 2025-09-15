@@ -9,6 +9,9 @@ to_base64(blob = BLOB)
 \arguments{
 \item{blob}{\code{BLOB}}
 }
+\value{
+\code{VARCHAR}
+}
 \description{
 Converts a \code{blob} to a base64 encoded string.
 }

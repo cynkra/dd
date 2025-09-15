@@ -8,6 +8,9 @@
 
 \item{dimension}{\code{BIGINT}}
 }
+\value{
+\code{BIGINT}
+}
 \description{
 Returns the length of the \code{list}.
 

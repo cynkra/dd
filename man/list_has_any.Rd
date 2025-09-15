@@ -11,6 +11,9 @@ list_has_any(list1 = `T[]`, list2 = `T[]`)
 
 \item{list2}{\code{T[]}}
 }
+\value{
+\code{BOOLEAN}
+}
 \description{
 Returns true if the lists have any element in common. NULLs are ignored.
 }

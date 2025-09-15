@@ -6,6 +6,9 @@
 \arguments{
 \item{x}{\verb{FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
+\value{
+\code{BOOLEAN}
+}
 \description{
 Returns true if the floating point value is infinite, false otherwise.
 }

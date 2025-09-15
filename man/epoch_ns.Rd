@@ -6,6 +6,9 @@
 \arguments{
 \item{temporal}{\verb{DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | TIMESTAMP_NS}}
 }
+\value{
+\code{BIGINT}
+}
 \description{
 Extract the epoch component in nanoseconds from a temporal type.
 }
