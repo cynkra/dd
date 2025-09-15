@@ -30,6 +30,21 @@ acosh <- function(x = DOUBLE) {
   stop("DuckDB function acosh() is not available in R.")
 }
 
+#' DuckDB function age
+#'
+#' Subtract arguments, resulting in the time difference between the two timestamps.
+#'
+#' @name age
+#' @usage NULL
+#' @param timestamp `TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' age(TIMESTAMP '2001-04-10', TIMESTAMP '1992-09-20')
+#' }
+age <- function(timestamp = `TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function age() is not available in R.")
+}
+
 #' DuckDB function alias
 #'
 #' Returns the name of a given expression.
@@ -711,6 +726,21 @@ ceiling <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
   stop("DuckDB function ceiling() is not available in R.")
 }
 
+#' DuckDB function century
+#'
+#' Extract the century component from a date or timestamp.
+#'
+#' @name century
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' century(timestamp '2021-08-03 11:59:44.123456')
+#' }
+century <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function century() is not available in R.")
+}
+
 #' DuckDB function chr
 #'
 #' Returns a character which is corresponding the ASCII code value or Unicode code point.
@@ -818,6 +848,121 @@ damerau_levenshtein <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function damerau_levenshtein() is not available in R.")
 }
 
+#' DuckDB function date_diff
+#'
+#' The number of partition boundaries between the timestamps.
+#'
+#' @name date_diff
+#' @usage NULL
+#' @param part `VARCHAR`
+#' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' date_diff('hour', TIMESTAMPTZ '1992-09-30 23:59:59', TIMESTAMPTZ '1992-10-01 01:58:00')
+#' }
+date_diff <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, enddate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function date_diff() is not available in R.")
+}
+
+#' DuckDB function date_sub
+#'
+#' The number of complete partitions between the timestamps.
+#'
+#' @name date_sub
+#' @usage NULL
+#' @param part `VARCHAR`
+#' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' date_sub('hour', TIMESTAMPTZ '1992-09-30 23:59:59', TIMESTAMPTZ '1992-10-01 01:58:00')
+#' }
+date_sub <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, enddate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function date_sub() is not available in R.")
+}
+
+#' DuckDB function date_trunc
+#'
+#' Truncate to specified precision.
+#'
+#' @name date_trunc
+#' @usage NULL
+#' @param part `VARCHAR`
+#' @param timestamp `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' date_trunc('hour', TIMESTAMPTZ '1992-09-20 20:38:40')
+#' }
+date_trunc <- function(part = VARCHAR, timestamp = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function date_trunc() is not available in R.")
+}
+
+#' DuckDB function datediff
+#'
+#' The number of partition boundaries between the timestamps.
+#'
+#' @name datediff
+#' @usage NULL
+#' @param part `VARCHAR`
+#' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' datediff('hour', TIMESTAMPTZ '1992-09-30 23:59:59', TIMESTAMPTZ '1992-10-01 01:58:00')
+#' }
+datediff <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, enddate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function datediff() is not available in R.")
+}
+
+#' DuckDB function datesub
+#'
+#' The number of complete partitions between the timestamps.
+#'
+#' @name datesub
+#' @usage NULL
+#' @param part `VARCHAR`
+#' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' datesub('hour', TIMESTAMPTZ '1992-09-30 23:59:59', TIMESTAMPTZ '1992-10-01 01:58:00')
+#' }
+datesub <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, enddate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function datesub() is not available in R.")
+}
+
+#' DuckDB function datetrunc
+#'
+#' Truncate to specified precision.
+#'
+#' @name datetrunc
+#' @usage NULL
+#' @param part `VARCHAR`
+#' @param timestamp `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' datetrunc('hour', TIMESTAMPTZ '1992-09-20 20:38:40')
+#' }
+datetrunc <- function(part = VARCHAR, timestamp = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function datetrunc() is not available in R.")
+}
+
+#' DuckDB function day
+#'
+#' Extract the day component from a date or timestamp.
+#'
+#' @name day
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' day(timestamp '2021-08-03 11:59:44.123456')
+#' }
+day <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function day() is not available in R.")
+}
+
 #' DuckDB function dayname
 #'
 #' The (English) name of the weekday.
@@ -831,6 +976,66 @@ damerau_levenshtein <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' }
 dayname <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function dayname() is not available in R.")
+}
+
+#' DuckDB function dayofmonth
+#'
+#' Extract the dayofmonth component from a date or timestamp.
+#'
+#' @name dayofmonth
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' dayofmonth(timestamp '2021-08-03 11:59:44.123456')
+#' }
+dayofmonth <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function dayofmonth() is not available in R.")
+}
+
+#' DuckDB function dayofweek
+#'
+#' Extract the dayofweek component from a date or timestamp.
+#'
+#' @name dayofweek
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' dayofweek(timestamp '2021-08-03 11:59:44.123456')
+#' }
+dayofweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function dayofweek() is not available in R.")
+}
+
+#' DuckDB function dayofyear
+#'
+#' Extract the dayofyear component from a date or timestamp.
+#'
+#' @name dayofyear
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' dayofyear(timestamp '2021-08-03 11:59:44.123456')
+#' }
+dayofyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function dayofyear() is not available in R.")
+}
+
+#' DuckDB function decade
+#'
+#' Extract the decade component from a date or timestamp.
+#'
+#' @name decade
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' decade(timestamp '2021-08-03 11:59:44.123456')
+#' }
+decade <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function decade() is not available in R.")
 }
 
 #' DuckDB function decode
@@ -1000,6 +1205,39 @@ enum_range <- function(enum = ANY) {
 #' }
 enum_range_boundary <- function(start = ANY, end = ANY) {
   stop("DuckDB function enum_range_boundary() is not available in R.")
+}
+
+#' DuckDB function equi_width_bins
+#'
+#' Generates bin_count equi-width bins between the min and max. If enabled nice_rounding makes the numbers more readable/less jagged.
+#'
+#' @name equi_width_bins
+#' @usage NULL
+#' @param min `BIGINT | DOUBLE | TIMESTAMP | ANY`
+#' @param max `BIGINT | DOUBLE | TIMESTAMP | ANY`
+#' @param bin_count `BIGINT`
+#' @param nice_rounding `BOOLEAN`
+#' @examples
+#' \dontrun{
+#' equi_width_bins(0, 10, 2, true)
+#' }
+equi_width_bins <- function(min = `BIGINT | DOUBLE | TIMESTAMP | ANY`, max = `BIGINT | DOUBLE | TIMESTAMP | ANY`, bin_count = BIGINT, nice_rounding = BOOLEAN) {
+  stop("DuckDB function equi_width_bins() is not available in R.")
+}
+
+#' DuckDB function era
+#'
+#' Extract the era component from a date or timestamp.
+#'
+#' @name era
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' era(timestamp '2021-08-03 11:59:44.123456')
+#' }
+era <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function era() is not available in R.")
 }
 
 #' DuckDB function even
@@ -1340,6 +1578,36 @@ is_histogram_other_bin <- function(val = ANY) {
 #' }
 isnan <- function(x = `FLOAT | DOUBLE`) {
   stop("DuckDB function isnan() is not available in R.")
+}
+
+#' DuckDB function isodow
+#'
+#' Extract the isodow component from a date or timestamp.
+#'
+#' @name isodow
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' isodow(timestamp '2021-08-03 11:59:44.123456')
+#' }
+isodow <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function isodow() is not available in R.")
+}
+
+#' DuckDB function isoyear
+#'
+#' Extract the isoyear component from a date or timestamp.
+#'
+#' @name isoyear
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' isoyear(timestamp '2021-08-03 11:59:44.123456')
+#' }
+isoyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function isoyear() is not available in R.")
 }
 
 #' DuckDB function jaccard
@@ -2328,6 +2596,21 @@ map_values <- function(map = `MAP(K, V)`) {
   stop("DuckDB function map_values() is not available in R.")
 }
 
+#' DuckDB function millennium
+#'
+#' Extract the millennium component from a date or timestamp.
+#'
+#' @name millennium
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' millennium(timestamp '2021-08-03 11:59:44.123456')
+#' }
+millennium <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function millennium() is not available in R.")
+}
+
 #' DuckDB function mismatches
 #'
 #' The Hamming distance between to strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., `a` and `A`) are considered different.
@@ -2342,6 +2625,21 @@ map_values <- function(map = `MAP(K, V)`) {
 #' }
 mismatches <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function mismatches() is not available in R.")
+}
+
+#' DuckDB function month
+#'
+#' Extract the month component from a date or timestamp.
+#'
+#' @name month
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' month(timestamp '2021-08-03 11:59:44.123456')
+#' }
+month <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function month() is not available in R.")
 }
 
 #' DuckDB function monthname
@@ -2502,6 +2800,23 @@ parse_duckdb_log_message <- function(type = VARCHAR, message = VARCHAR) {
   stop("DuckDB function parse_duckdb_log_message() is not available in R.")
 }
 
+#' DuckDB function parse_filename
+#'
+#' Returns the last component of the `path` similarly to Python's `os.path.basename` function. If `trim_extension` is `true`, the file extension will be removed (defaults to `false`). `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
+#'
+#' @name parse_filename
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param trim_extension `VARCHAR | BOOLEAN`
+#' @param separator `VARCHAR`
+#' @examples
+#' \dontrun{
+#' parse_filename('path/to/file.csv', true, 'forward_slash')
+#' }
+parse_filename <- function(string = VARCHAR, trim_extension = `VARCHAR | BOOLEAN`, separator = VARCHAR) {
+  stop("DuckDB function parse_filename() is not available in R.")
+}
+
 #' DuckDB function parse_path
 #'
 #' Returns a list of the components (directories and filename) in the `path` similarly to Python's `pathlib.parts` function. `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
@@ -2595,6 +2910,21 @@ power <- function(x = DOUBLE, y = DOUBLE) {
 #' }
 prefix <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function prefix() is not available in R.")
+}
+
+#' DuckDB function quarter
+#'
+#' Extract the quarter component from a date or timestamp.
+#'
+#' @name quarter
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' quarter(timestamp '2021-08-03 11:59:44.123456')
+#' }
+quarter <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function quarter() is not available in R.")
 }
 
 #' DuckDB function radians
@@ -3274,6 +3604,36 @@ timetz_byte_comparable <- function(time_tz = `TIME WITH TIME ZONE`) {
   stop("DuckDB function timetz_byte_comparable() is not available in R.")
 }
 
+#' DuckDB function timezone_hour
+#'
+#' Extract the timezone_hour component from a date or timestamp.
+#'
+#' @name timezone_hour
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' timezone_hour(timestamp '2021-08-03 11:59:44.123456')
+#' }
+timezone_hour <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function timezone_hour() is not available in R.")
+}
+
+#' DuckDB function timezone_minute
+#'
+#' Extract the timezone_minute component from a date or timestamp.
+#'
+#' @name timezone_minute
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' timezone_minute(timestamp '2021-08-03 11:59:44.123456')
+#' }
+timezone_minute <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function timezone_minute() is not available in R.")
+}
+
 #' DuckDB function to_base
 #'
 #' Converts `number` to a string in the given base `radix`, optionally padding with leading zeros to `min_length`.
@@ -3789,5 +4149,80 @@ vector_type <- function(col = ANY) {
 #' }
 version <- function() {
   stop("DuckDB function version() is not available in R.")
+}
+
+#' DuckDB function week
+#'
+#' Extract the week component from a date or timestamp.
+#'
+#' @name week
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' week(timestamp '2021-08-03 11:59:44.123456')
+#' }
+week <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function week() is not available in R.")
+}
+
+#' DuckDB function weekday
+#'
+#' Extract the weekday component from a date or timestamp.
+#'
+#' @name weekday
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' weekday(timestamp '2021-08-03 11:59:44.123456')
+#' }
+weekday <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function weekday() is not available in R.")
+}
+
+#' DuckDB function weekofyear
+#'
+#' Extract the weekofyear component from a date or timestamp.
+#'
+#' @name weekofyear
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' weekofyear(timestamp '2021-08-03 11:59:44.123456')
+#' }
+weekofyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function weekofyear() is not available in R.")
+}
+
+#' DuckDB function year
+#'
+#' Extract the year component from a date or timestamp.
+#'
+#' @name year
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' year(timestamp '2021-08-03 11:59:44.123456')
+#' }
+year <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function year() is not available in R.")
+}
+
+#' DuckDB function yearweek
+#'
+#' Extract the yearweek component from a date or timestamp.
+#'
+#' @name yearweek
+#' @usage NULL
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' yearweek(timestamp '2021-08-03 11:59:44.123456')
+#' }
+yearweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function yearweek() is not available in R.")
 }
 

@@ -87,7 +87,7 @@ funs <-
   select(-n_desc) |>
   # FIXME: More than one overload
   mutate(.by = function_name, n = n()) |>
-  filter_print(n <= 3) |>
+  filter_print(n <= 4) |>
   select(-n) |>
   summarize(
     .by = function_name,
