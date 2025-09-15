@@ -87,7 +87,7 @@ funs <-
   select(-n_desc) |>
   # FIXME: More than one overload
   mutate(.by = function_name, n = n()) |>
-  filter_print(n == 1) |>
+  filter_print(n == 1 | (n <= 2 & row_number() < 10)) |>
   select(-n) |>
   summarize(
     .by = function_name,
@@ -166,3 +166,7 @@ globals_code <- paste0('utils::globalVariables("', globals, '")')
 invisible(parse(text = globals_code))
 
 writeLines(globals_code, "R/globals.R")
+
+Sys.setenv(http_proxy = "0.0.0.0")
+Sys.setenv(https_proxy = "0.0.0.0")
+rcmdcheck::rcmdcheck(args = "--no-manual")

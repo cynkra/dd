@@ -204,6 +204,55 @@ array_position <- function(list = `T[]`, element = T) {
   stop("DuckDB function array_position() is not available in R.")
 }
 
+#' DuckDB function array_reduce
+#'
+#' Reduces all elements of the input `list` into a single scalar value by executing the `lambda` function on a running result and the next list element. The `lambda` function has an optional `initial_value` argument.
+#'
+#' @name array_reduce
+#' @usage NULL
+#' @param list `ANY[]`
+#' @param lambda(x,y) `LAMBDA`
+#' @param initial_value `ANY`
+#' @examples
+#' \dontrun{
+#' array_reduce([1, 2, 3], lambda x, y : x + y)
+#' }
+array_reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY) {
+  stop("DuckDB function array_reduce() is not available in R.")
+}
+
+#' DuckDB function array_resize
+#'
+#' Resizes the `list` to contain `size` elements. Initializes new elements with `value` or `NULL` if `value` is not set.
+#'
+#' @name array_resize
+#' @usage NULL
+#' @param list `ANY[]`
+#' @param size[ `ANY`
+#' @param value] `ANY`
+#' @examples
+#' \dontrun{
+#' array_resize([1, 2, 3], 5, 0)
+#' }
+array_resize <- function(list = `ANY[]`, `size[` = ANY, `value]` = ANY) {
+  stop("DuckDB function array_resize() is not available in R.")
+}
+
+#' DuckDB function array_reverse_sort
+#'
+#' Sorts the elements of the list in reverse order.
+#'
+#' @name array_reverse_sort
+#' @usage array_reverse_sort(list = `ANY[]`)
+#' @param list `ANY[]`
+#' @examples
+#' \dontrun{
+#' array_reverse_sort([3, 6, 1, 2])
+#' }
+array_reverse_sort <- function(list = `ANY[]`) {
+  stop("DuckDB function array_reverse_sort() is not available in R.")
+}
+
 #' DuckDB function array_select
 #'
 #' Returns a list based on the elements selected by the `index_list`.
@@ -1583,6 +1632,22 @@ mismatches <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function mismatches() is not available in R.")
 }
 
+#' DuckDB function nextafter
+#'
+#' Returns the next floating point value after x in the direction of y.
+#'
+#' @name nextafter
+#' @usage NULL
+#' @param x `DOUBLE | FLOAT`
+#' @param y `DOUBLE | FLOAT`
+#' @examples
+#' \dontrun{
+#' nextafter(1::float, 2::float)
+#' }
+nextafter <- function(x = `DOUBLE | FLOAT`, y = `DOUBLE | FLOAT`) {
+  stop("DuckDB function nextafter() is not available in R.")
+}
+
 #' DuckDB function nfc_normalize
 #'
 #' Converts `string` to Unicode NFC normalized string. Useful for comparisons and ordering if text data is mixed between NFC normalized and not.
@@ -2271,6 +2336,21 @@ to_milliseconds <- function(double = DOUBLE) {
 #' }
 to_minutes <- function(integer = BIGINT) {
   stop("DuckDB function to_minutes() is not available in R.")
+}
+
+#' DuckDB function to_quarters
+#'
+#' Construct a quarter interval.
+#'
+#' @name to_quarters
+#' @usage NULL
+#' @param integer `INTEGER | BIGINT`
+#' @examples
+#' \dontrun{
+#' to_quarters(5)
+#' }
+to_quarters <- function(integer = `INTEGER | BIGINT`) {
+  stop("DuckDB function to_quarters() is not available in R.")
 }
 
 #' DuckDB function to_seconds

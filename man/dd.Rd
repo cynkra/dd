@@ -5,7 +5,7 @@
 \alias{dd}
 \title{DuckDB functions}
 \format{
-An object of class \code{list} of length 164.
+An object of class \code{list} of length 169.
 }
 \usage{
 dd
