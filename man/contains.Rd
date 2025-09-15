@@ -3,13 +3,14 @@
 \name{contains}
 \alias{contains}
 \title{DuckDB function contains}
-\usage{
-contains(string = VARCHAR, search_string = VARCHAR)
-}
 \arguments{
 \item{string}{\code{VARCHAR}}
 
 \item{search_string}{\code{VARCHAR}}
+
+\item{col0}{\code{T[] | MAP(K, V) | STRUCT}}
+
+\item{col1}{\code{T | K | ANY}}
 }
 \description{
 Returns \code{true} if \code{search_string} is found within \code{string}.
@@ -17,5 +18,6 @@ Returns \code{true} if \code{search_string} is found within \code{string}.
 \examples{
 \dontrun{
 contains('abc', 'a')
+character(0)
 }
 }

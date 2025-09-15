@@ -2,6 +2,7 @@
 
 #' DuckDB function abs
 #'
+#' @description
 #' Absolute value.
 #'
 #' @name abs
@@ -17,6 +18,7 @@ abs <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | D
 
 #' DuckDB function acos
 #'
+#' @description
 #' Computes the arccosine of x.
 #'
 #' @name acos
@@ -32,6 +34,7 @@ acos <- function(x = DOUBLE) {
 
 #' DuckDB function acosh
 #'
+#' @description
 #' Computes the inverse hyperbolic cos of x.
 #'
 #' @name acosh
@@ -45,8 +48,26 @@ acosh <- function(x = DOUBLE) {
   stop("DuckDB function acosh() is not available in R.")
 }
 
+#' DuckDB function add
+#'
+#' @description
+#' DuckDB function `add()`.
+#'
+#' @name add
+#' @usage NULL
+#' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
+#' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+add <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`) {
+  stop("DuckDB function add() is not available in R.")
+}
+
 #' DuckDB function age
 #'
+#' @description
 #' Subtract arguments, resulting in the time difference between the two timestamps.
 #'
 #' @name age
@@ -62,6 +83,7 @@ age <- function(timestamp = `TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 
 #' DuckDB function alias
 #'
+#' @description
 #' Returns the name of a given expression.
 #'
 #' @name alias
@@ -77,6 +99,7 @@ alias <- function(expr = ANY) {
 
 #' DuckDB function apply
 #'
+#' @description
 #' Returns a list that is the result of applying the `lambda` function to each element of the input `list`. The return type is defined by the return type of the `lambda` function.
 #'
 #' @name apply
@@ -93,6 +116,7 @@ apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 
 #' DuckDB function array_apply
 #'
+#' @description
 #' Returns a list that is the result of applying the `lambda` function to each element of the input `list`. The return type is defined by the return type of the `lambda` function.
 #'
 #' @name array_apply
@@ -109,6 +133,7 @@ array_apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 
 #' DuckDB function array_contains
 #'
+#' @description
 #' Returns true if the list contains the element.
 #'
 #' @name array_contains
@@ -125,6 +150,7 @@ array_contains <- function(list = `T[]`, element = T) {
 
 #' DuckDB function array_cosine_distance
 #'
+#' @description
 #' Computes the cosine distance between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
 #'
 #' @name array_cosine_distance
@@ -141,6 +167,7 @@ array_cosine_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = 
 
 #' DuckDB function array_cosine_similarity
 #'
+#' @description
 #' Computes the cosine similarity between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
 #'
 #' @name array_cosine_similarity
@@ -157,6 +184,7 @@ array_cosine_similarity <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 
 
 #' DuckDB function array_cross_product
 #'
+#' @description
 #' Computes the cross product of two arrays of size 3. The array elements can not be `NULL`.
 #'
 #' @name array_cross_product
@@ -172,6 +200,7 @@ array_cross_product <- function(array = `FLOAT[3] | DOUBLE[3]`) {
 
 #' DuckDB function array_distance
 #'
+#' @description
 #' Computes the distance between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
 #'
 #' @name array_distance
@@ -188,6 +217,7 @@ array_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[
 
 #' DuckDB function array_distinct
 #'
+#' @description
 #' Removes all duplicates and `NULL` values from a list. Does not preserve the original order.
 #'
 #' @name array_distinct
@@ -203,6 +233,7 @@ array_distinct <- function(list = `T[]`) {
 
 #' DuckDB function array_dot_product
 #'
+#' @description
 #' Computes the inner product between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
 #'
 #' @name array_dot_product
@@ -217,8 +248,37 @@ array_dot_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLO
   stop("DuckDB function array_dot_product() is not available in R.")
 }
 
+#' DuckDB function array_extract
+#'
+#' @description
+#' Extracts a single character from a `string` using a (1-based) `index`.
+#'
+#' Extracts the named `entry` from the `STRUCT`.
+#'
+#' Extracts the entry from an unnamed `STRUCT` (tuple) using an index (1-based).
+#'
+#' @name array_extract
+#' @usage NULL
+#' @param col0 `T[]`
+#' @param col1 `BIGINT`
+#' @param string `VARCHAR`
+#' @param index `BIGINT`
+#' @param struct `STRUCT`
+#' @param entry `VARCHAR`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' array_extract('DuckDB', 2)
+#' array_extract({'i': 3, 'v2': 3, 'v3': 0}, 'i')
+#' array_extract(row(42, 84), 1)
+#' }
+array_extract <- function(col0 = `T[]`, col1 = BIGINT, string = VARCHAR, index = BIGINT, struct = STRUCT, entry = VARCHAR) {
+  stop("DuckDB function array_extract() is not available in R.")
+}
+
 #' DuckDB function array_filter
 #'
+#' @description
 #' Constructs a list from those elements of the input `list` for which the `lambda` function returns `true`. DuckDB must be able to cast the `lambda` function's return type to `BOOL`. The return type of `list_filter` is the same as the input list's.
 #'
 #' @name array_filter
@@ -235,6 +295,7 @@ array_filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 
 #' DuckDB function array_grade_up
 #'
+#' @description
 #' Works like list_sort, but the results are the indexes that correspond to the position in the original list instead of the actual values.
 #'
 #' @name array_grade_up
@@ -252,6 +313,7 @@ array_grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
 
 #' DuckDB function array_has
 #'
+#' @description
 #' Returns true if the list contains the element.
 #'
 #' @name array_has
@@ -268,6 +330,7 @@ array_has <- function(list = `T[]`, element = T) {
 
 #' DuckDB function array_has_all
 #'
+#' @description
 #' Returns true if all elements of list2 are in list1. NULLs are ignored.
 #'
 #' @name array_has_all
@@ -284,6 +347,7 @@ array_has_all <- function(list1 = `T[]`, list2 = `T[]`) {
 
 #' DuckDB function array_has_any
 #'
+#' @description
 #' Returns true if the lists have any element in common. NULLs are ignored.
 #'
 #' @name array_has_any
@@ -300,6 +364,7 @@ array_has_any <- function(list1 = `T[]`, list2 = `T[]`) {
 
 #' DuckDB function array_indexof
 #'
+#' @description
 #' Returns the index of the `element` if the `list` contains the `element`. If the `element` is not found, it returns `NULL`.
 #'
 #' @name array_indexof
@@ -316,6 +381,7 @@ array_indexof <- function(list = `T[]`, element = T) {
 
 #' DuckDB function array_inner_product
 #'
+#' @description
 #' Computes the inner product between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
 #'
 #' @name array_inner_product
@@ -330,8 +396,28 @@ array_inner_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `F
   stop("DuckDB function array_inner_product() is not available in R.")
 }
 
+#' DuckDB function array_length
+#'
+#' @description
+#' Returns the length of the `list`.
+#'
+#' `array_length` for lists with dimensions other than 1 not implemented.
+#'
+#' @name array_length
+#' @usage NULL
+#' @param list `ANY[]`
+#' @param dimension `BIGINT`
+#' @examples
+#' \dontrun{
+#' array_length([1, 2, 3])
+#' }
+array_length <- function(list = `ANY[]`, dimension = BIGINT) {
+  stop("DuckDB function array_length() is not available in R.")
+}
+
 #' DuckDB function array_negative_dot_product
 #'
+#' @description
 #' Computes the negative inner product between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
 #'
 #' @name array_negative_dot_product
@@ -348,6 +434,7 @@ array_negative_dot_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, arra
 
 #' DuckDB function array_negative_inner_product
 #'
+#' @description
 #' Computes the negative inner product between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
 #'
 #' @name array_negative_inner_product
@@ -364,6 +451,7 @@ array_negative_inner_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, ar
 
 #' DuckDB function array_position
 #'
+#' @description
 #' Returns the index of the `element` if the `list` contains the `element`. If the `element` is not found, it returns `NULL`.
 #'
 #' @name array_position
@@ -380,6 +468,7 @@ array_position <- function(list = `T[]`, element = T) {
 
 #' DuckDB function array_reduce
 #'
+#' @description
 #' Reduces all elements of the input `list` into a single scalar value by executing the `lambda` function on a running result and the next list element. The `lambda` function has an optional `initial_value` argument.
 #'
 #' @name array_reduce
@@ -397,6 +486,7 @@ array_reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value =
 
 #' DuckDB function array_resize
 #'
+#' @description
 #' Resizes the `list` to contain `size` elements. Initializes new elements with `value` or `NULL` if `value` is not set.
 #'
 #' @name array_resize
@@ -414,6 +504,7 @@ array_resize <- function(list = `ANY[]`, `size[` = ANY, `value]` = ANY) {
 
 #' DuckDB function array_reverse_sort
 #'
+#' @description
 #' Sorts the elements of the list in reverse order.
 #'
 #' @name array_reverse_sort
@@ -430,6 +521,7 @@ array_reverse_sort <- function(list = `ANY[]`, col1 = VARCHAR) {
 
 #' DuckDB function array_select
 #'
+#' @description
 #' Returns a list based on the elements selected by the `index_list`.
 #'
 #' @name array_select
@@ -444,8 +536,31 @@ array_select <- function(value_list = `T[]`, index_list = `BIGINT[]`) {
   stop("DuckDB function array_select() is not available in R.")
 }
 
+#' DuckDB function array_slice
+#'
+#' @description
+#' Extracts a sublist or substring using slice conventions. Negative values are accepted.
+#'
+#' list_slice with added step feature.
+#'
+#' @name array_slice
+#' @usage NULL
+#' @param list `ANY`
+#' @param begin `ANY`
+#' @param end `ANY`
+#' @param step `BIGINT`
+#' @examples
+#' \dontrun{
+#' c("array_slice('DuckDB', 3, 4)", "array_slice('DuckDB', 3, NULL)", "array_slice('DuckDB', 0, -3)")
+#' array_slice([4, 5, 6], 1, 3, 2)
+#' }
+array_slice <- function(list = ANY, begin = ANY, end = ANY, step = BIGINT) {
+  stop("DuckDB function array_slice() is not available in R.")
+}
+
 #' DuckDB function array_sort
 #'
+#' @description
 #' Sorts the elements of the list.
 #'
 #' @name array_sort
@@ -463,6 +578,7 @@ array_sort <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
 
 #' DuckDB function array_transform
 #'
+#' @description
 #' Returns a list that is the result of applying the `lambda` function to each element of the input `list`. The return type is defined by the return type of the `lambda` function.
 #'
 #' @name array_transform
@@ -479,6 +595,7 @@ array_transform <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 
 #' DuckDB function array_unique
 #'
+#' @description
 #' Counts the unique elements of a `list`.
 #'
 #' @name array_unique
@@ -494,6 +611,7 @@ array_unique <- function(list = `ANY[]`) {
 
 #' DuckDB function array_where
 #'
+#' @description
 #' Returns a list with the `BOOLEAN`s in `mask_list` applied as a mask to the `value_list`.
 #'
 #' @name array_where
@@ -510,6 +628,7 @@ array_where <- function(value_list = `T[]`, mask_list = `BOOLEAN[]`) {
 
 #' DuckDB function ascii
 #'
+#' @description
 #' Returns an integer that represents the Unicode code point of the first character of the `string`.
 #'
 #' @name ascii
@@ -525,6 +644,7 @@ ascii <- function(string = VARCHAR) {
 
 #' DuckDB function asin
 #'
+#' @description
 #' Computes the arcsine of x.
 #'
 #' @name asin
@@ -540,6 +660,7 @@ asin <- function(x = DOUBLE) {
 
 #' DuckDB function asinh
 #'
+#' @description
 #' Computes the inverse hyperbolic sin of x.
 #'
 #' @name asinh
@@ -555,6 +676,7 @@ asinh <- function(x = DOUBLE) {
 
 #' DuckDB function atan
 #'
+#' @description
 #' Computes the arctangent of x.
 #'
 #' @name atan
@@ -570,6 +692,7 @@ atan <- function(x = DOUBLE) {
 
 #' DuckDB function atan2
 #'
+#' @description
 #' Computes the arctangent (y, x).
 #'
 #' @name atan2
@@ -586,6 +709,7 @@ atan2 <- function(y = DOUBLE, x = DOUBLE) {
 
 #' DuckDB function atanh
 #'
+#' @description
 #' Computes the inverse hyperbolic tan of x.
 #'
 #' @name atanh
@@ -601,6 +725,7 @@ atanh <- function(x = DOUBLE) {
 
 #' DuckDB function bar
 #'
+#' @description
 #' Draws a band whose width is proportional to (`x - min`) and equal to `width` characters when `x` = `max`. `width` defaults to 80.
 #'
 #' @name bar
@@ -619,6 +744,7 @@ bar <- function(x = DOUBLE, min = DOUBLE, max = DOUBLE, width = DOUBLE) {
 
 #' DuckDB function base64
 #'
+#' @description
 #' Converts a `blob` to a base64 encoded string.
 #'
 #' @name base64
@@ -632,8 +758,29 @@ base64 <- function(blob = BLOB) {
   stop("DuckDB function base64() is not available in R.")
 }
 
+#' DuckDB function bin
+#'
+#' @description
+#' Converts the `string` to binary representation.
+#'
+#' Converts the `value` to binary representation.
+#'
+#' @name bin
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param value `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`
+#' @examples
+#' \dontrun{
+#' bin('Aa')
+#' bin(42)
+#' }
+bin <- function(string = VARCHAR, value = `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`) {
+  stop("DuckDB function bin() is not available in R.")
+}
+
 #' DuckDB function bit_count
 #'
+#' @description
 #' Returns the number of bits that are set.
 #'
 #' @name bit_count
@@ -647,8 +794,29 @@ bit_count <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | BIT
   stop("DuckDB function bit_count() is not available in R.")
 }
 
+#' DuckDB function bit_length
+#'
+#' @description
+#' Number of bits in a `string`.
+#'
+#' Returns the bit-length of the `bit` argument.
+#'
+#' @name bit_length
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param bit `BIT`
+#' @examples
+#' \dontrun{
+#' bit_length('abc')
+#' bit_length(42::TINYINT::BIT)
+#' }
+bit_length <- function(string = VARCHAR, bit = BIT) {
+  stop("DuckDB function bit_length() is not available in R.")
+}
+
 #' DuckDB function bit_position
 #'
+#' @description
 #' Returns first starting index of the specified substring within bits, or zero if it is not present. The first (leftmost) bit is indexed 1.
 #'
 #' @name bit_position
@@ -665,6 +833,7 @@ bit_position <- function(substring = BIT, bitstring = BIT) {
 
 #' DuckDB function bitstring
 #'
+#' @description
 #' Pads the bitstring until the specified length.
 #'
 #' @name bitstring
@@ -681,6 +850,7 @@ bitstring <- function(bitstring = `VARCHAR | BIT`, length = INTEGER) {
 
 #' DuckDB function can_cast_implicitly
 #'
+#' @description
 #' Whether or not we can implicitly cast from the source type to the other type.
 #'
 #' @name can_cast_implicitly
@@ -697,6 +867,7 @@ can_cast_implicitly <- function(source_type = ANY, target_type = ANY) {
 
 #' DuckDB function cast_to_type
 #'
+#' @description
 #' Casts the first argument to the type of the second argument.
 #'
 #' @name cast_to_type
@@ -713,6 +884,7 @@ cast_to_type <- function(param = ANY, type = ANY) {
 
 #' DuckDB function cbrt
 #'
+#' @description
 #' Returns the cube root of x.
 #'
 #' @name cbrt
@@ -728,6 +900,7 @@ cbrt <- function(x = DOUBLE) {
 
 #' DuckDB function ceil
 #'
+#' @description
 #' Rounds the number up.
 #'
 #' @name ceil
@@ -743,6 +916,7 @@ ceil <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
 
 #' DuckDB function ceiling
 #'
+#' @description
 #' Rounds the number up.
 #'
 #' @name ceiling
@@ -758,6 +932,7 @@ ceiling <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
 
 #' DuckDB function century
 #'
+#' @description
 #' Extract the century component from a date or timestamp.
 #'
 #' @name century
@@ -771,8 +946,57 @@ century <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
   stop("DuckDB function century() is not available in R.")
 }
 
+#' DuckDB function char_length
+#'
+#' @description
+#' Number of characters in `string`.
+#'
+#' Returns the bit-length of the `bit` argument.
+#'
+#' Returns the length of the `list`.
+#'
+#' @name char_length
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param bit `BIT`
+#' @param list `ANY[]`
+#' @examples
+#' \dontrun{
+#' char_length('Hello🦆')
+#' char_length(42::TINYINT::BIT)
+#' char_length([1,2,3])
+#' }
+char_length <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
+  stop("DuckDB function char_length() is not available in R.")
+}
+
+#' DuckDB function character_length
+#'
+#' @description
+#' Number of characters in `string`.
+#'
+#' Returns the bit-length of the `bit` argument.
+#'
+#' Returns the length of the `list`.
+#'
+#' @name character_length
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param bit `BIT`
+#' @param list `ANY[]`
+#' @examples
+#' \dontrun{
+#' character_length('Hello🦆')
+#' character_length(42::TINYINT::BIT)
+#' character_length([1,2,3])
+#' }
+character_length <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
+  stop("DuckDB function character_length() is not available in R.")
+}
+
 #' DuckDB function chr
 #'
+#' @description
 #' Returns a character which is corresponding the ASCII code value or Unicode code point.
 #'
 #' @name chr
@@ -786,24 +1010,46 @@ chr <- function(code_point = INTEGER) {
   stop("DuckDB function chr() is not available in R.")
 }
 
+#' DuckDB function combine
+#'
+#' @description
+#' DuckDB function `combine()`.
+#'
+#' @name combine
+#' @usage combine(col0 = `AGGREGATE_STATE<?>`, col1 = ANY)
+#' @param col0 `AGGREGATE_STATE<?>`
+#' @param col1 `ANY`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+combine <- function(col0 = `AGGREGATE_STATE<?>`, col1 = ANY) {
+  stop("DuckDB function combine() is not available in R.")
+}
+
 #' DuckDB function contains
 #'
+#' @description
 #' Returns `true` if `search_string` is found within `string`.
 #'
 #' @name contains
-#' @usage contains(string = VARCHAR, search_string = VARCHAR)
+#' @usage NULL
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
+#' @param col0 `T[] | MAP(K, V) | STRUCT`
+#' @param col1 `T | K | ANY`
 #' @examples
 #' \dontrun{
 #' contains('abc', 'a')
+#' character(0)
 #' }
-contains <- function(string = VARCHAR, search_string = VARCHAR) {
+contains <- function(string = VARCHAR, search_string = VARCHAR, col0 = `T[] | MAP(K, V) | STRUCT`, col1 = `T | K | ANY`) {
   stop("DuckDB function contains() is not available in R.")
 }
 
 #' DuckDB function cos
 #'
+#' @description
 #' Computes the cos of x.
 #'
 #' @name cos
@@ -819,6 +1065,7 @@ cos <- function(x = DOUBLE) {
 
 #' DuckDB function cosh
 #'
+#' @description
 #' Computes the hyperbolic cos of x.
 #'
 #' @name cosh
@@ -834,6 +1081,7 @@ cosh <- function(x = DOUBLE) {
 
 #' DuckDB function cot
 #'
+#' @description
 #' Computes the cotangent of x.
 #'
 #' @name cot
@@ -849,6 +1097,7 @@ cot <- function(x = DOUBLE) {
 
 #' DuckDB function current_setting
 #'
+#' @description
 #' Returns the current value of the configuration setting.
 #'
 #' @name current_setting
@@ -864,6 +1113,7 @@ current_setting <- function(setting_name = VARCHAR) {
 
 #' DuckDB function damerau_levenshtein
 #'
+#' @description
 #' Extension of Levenshtein distance to also include transposition of adjacent characters as an allowed edit operation. In other words, the minimum number of edit operations (insertions, deletions, substitutions or transpositions) required to change one string to another. Characters of different cases (e.g., `a` and `A`) are considered different.
 #'
 #' @name damerau_levenshtein
@@ -880,6 +1130,7 @@ damerau_levenshtein <- function(s1 = VARCHAR, s2 = VARCHAR) {
 
 #' DuckDB function date_diff
 #'
+#' @description
 #' The number of partition boundaries between the timestamps.
 #'
 #' @name date_diff
@@ -897,6 +1148,7 @@ date_diff <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIM
 
 #' DuckDB function date_part
 #'
+#' @description
 #' Get subfield (equivalent to extract).
 #'
 #' @name date_part
@@ -913,6 +1165,7 @@ date_part <- function(ts = `VARCHAR[] | VARCHAR`, col1 = `DATE | INTERVAL | TIME
 
 #' DuckDB function date_sub
 #'
+#' @description
 #' The number of complete partitions between the timestamps.
 #'
 #' @name date_sub
@@ -930,6 +1183,7 @@ date_sub <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIME
 
 #' DuckDB function date_trunc
 #'
+#' @description
 #' Truncate to specified precision.
 #'
 #' @name date_trunc
@@ -946,6 +1200,7 @@ date_trunc <- function(part = VARCHAR, timestamp = `DATE | INTERVAL | TIMESTAMP 
 
 #' DuckDB function datediff
 #'
+#' @description
 #' The number of partition boundaries between the timestamps.
 #'
 #' @name datediff
@@ -963,6 +1218,7 @@ datediff <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIME
 
 #' DuckDB function datepart
 #'
+#' @description
 #' Get subfield (equivalent to extract).
 #'
 #' @name datepart
@@ -979,6 +1235,7 @@ datepart <- function(ts = `VARCHAR[] | VARCHAR`, col1 = `DATE | INTERVAL | TIME 
 
 #' DuckDB function datesub
 #'
+#' @description
 #' The number of complete partitions between the timestamps.
 #'
 #' @name datesub
@@ -996,6 +1253,7 @@ datesub <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMES
 
 #' DuckDB function datetrunc
 #'
+#' @description
 #' Truncate to specified precision.
 #'
 #' @name datetrunc
@@ -1012,6 +1270,7 @@ datetrunc <- function(part = VARCHAR, timestamp = `DATE | INTERVAL | TIMESTAMP |
 
 #' DuckDB function day
 #'
+#' @description
 #' Extract the day component from a date or timestamp.
 #'
 #' @name day
@@ -1027,6 +1286,7 @@ day <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 
 #' DuckDB function dayname
 #'
+#' @description
 #' The (English) name of the weekday.
 #'
 #' @name dayname
@@ -1042,6 +1302,7 @@ dayname <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 
 #' DuckDB function dayofmonth
 #'
+#' @description
 #' Extract the dayofmonth component from a date or timestamp.
 #'
 #' @name dayofmonth
@@ -1057,6 +1318,7 @@ dayofmonth <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME Z
 
 #' DuckDB function dayofweek
 #'
+#' @description
 #' Extract the dayofweek component from a date or timestamp.
 #'
 #' @name dayofweek
@@ -1072,6 +1334,7 @@ dayofweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZO
 
 #' DuckDB function dayofyear
 #'
+#' @description
 #' Extract the dayofyear component from a date or timestamp.
 #'
 #' @name dayofyear
@@ -1087,6 +1350,7 @@ dayofyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZO
 
 #' DuckDB function decade
 #'
+#' @description
 #' Extract the decade component from a date or timestamp.
 #'
 #' @name decade
@@ -1102,6 +1366,7 @@ decade <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 
 #' DuckDB function decode
 #'
+#' @description
 #' Converts `blob` to `VARCHAR`. Fails if `blob` is not valid UTF-8.
 #'
 #' @name decode
@@ -1117,6 +1382,7 @@ decode <- function(blob = BLOB) {
 
 #' DuckDB function degrees
 #'
+#' @description
 #' Converts radians to degrees.
 #'
 #' @name degrees
@@ -1130,8 +1396,26 @@ degrees <- function(x = DOUBLE) {
   stop("DuckDB function degrees() is not available in R.")
 }
 
+#' DuckDB function divide
+#'
+#' @description
+#' DuckDB function `divide()`.
+#'
+#' @name divide
+#' @usage NULL
+#' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
+#' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+divide <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
+  stop("DuckDB function divide() is not available in R.")
+}
+
 #' DuckDB function editdist3
 #'
+#' @description
 #' The minimum number of single-character edits (insertions, deletions or substitutions) required to change one string to the other. Characters of different cases (e.g., `a` and `A`) are considered different.
 #'
 #' @name editdist3
@@ -1148,6 +1432,7 @@ editdist3 <- function(s1 = VARCHAR, s2 = VARCHAR) {
 
 #' DuckDB function element_at
 #'
+#' @description
 #' Returns a list containing the value for a given key or an empty list if the key is not contained in the map. The type of the key provided in the second parameter must match the type of the map’s keys else an error is returned.
 #'
 #' @name element_at
@@ -1164,6 +1449,7 @@ element_at <- function(map = `MAP(K, V)`, key = K) {
 
 #' DuckDB function encode
 #'
+#' @description
 #' Converts the `string` to `BLOB`. Converts UTF-8 characters into literal encoding.
 #'
 #' @name encode
@@ -1179,6 +1465,7 @@ encode <- function(string = VARCHAR) {
 
 #' DuckDB function ends_with
 #'
+#' @description
 #' Returns `true` if `string` ends with `search_string`.
 #'
 #' @name ends_with
@@ -1195,6 +1482,7 @@ ends_with <- function(string = VARCHAR, search_string = VARCHAR) {
 
 #' DuckDB function enum_code
 #'
+#' @description
 #' Returns the numeric value backing the given enum value.
 #'
 #' @name enum_code
@@ -1210,6 +1498,7 @@ enum_code <- function(enum = ANY) {
 
 #' DuckDB function enum_first
 #'
+#' @description
 #' Returns the first value of the input enum type.
 #'
 #' @name enum_first
@@ -1225,6 +1514,7 @@ enum_first <- function(enum = ANY) {
 
 #' DuckDB function enum_last
 #'
+#' @description
 #' Returns the last value of the input enum type.
 #'
 #' @name enum_last
@@ -1240,6 +1530,7 @@ enum_last <- function(enum = ANY) {
 
 #' DuckDB function enum_range
 #'
+#' @description
 #' Returns all values of the input enum type as an array.
 #'
 #' @name enum_range
@@ -1255,6 +1546,7 @@ enum_range <- function(enum = ANY) {
 
 #' DuckDB function enum_range_boundary
 #'
+#' @description
 #' Returns the range between the two given enum values as an array. The values must be of the same enum type. When the first parameter is NULL, the result starts with the first value of the enum type. When the second parameter is NULL, the result ends with the last value of the enum type.
 #'
 #' @name enum_range_boundary
@@ -1271,6 +1563,7 @@ enum_range_boundary <- function(start = ANY, end = ANY) {
 
 #' DuckDB function epoch
 #'
+#' @description
 #' Extract the epoch component from a temporal type.
 #'
 #' @name epoch
@@ -1286,6 +1579,7 @@ epoch <- function(temporal = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
 
 #' DuckDB function epoch_ms
 #'
+#' @description
 #' Extract the epoch component in milliseconds from a temporal type.
 #'
 #' @name epoch_ms
@@ -1301,6 +1595,7 @@ epoch_ms <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | 
 
 #' DuckDB function epoch_ns
 #'
+#' @description
 #' Extract the epoch component in nanoseconds from a temporal type.
 #'
 #' @name epoch_ns
@@ -1316,6 +1611,7 @@ epoch_ns <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | 
 
 #' DuckDB function epoch_us
 #'
+#' @description
 #' Extract the epoch component in microseconds from a temporal type.
 #'
 #' @name epoch_us
@@ -1331,6 +1627,7 @@ epoch_us <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | 
 
 #' DuckDB function equi_width_bins
 #'
+#' @description
 #' Generates bin_count equi-width bins between the min and max. If enabled nice_rounding makes the numbers more readable/less jagged.
 #'
 #' @name equi_width_bins
@@ -1349,6 +1646,7 @@ equi_width_bins <- function(min = `BIGINT | DOUBLE | TIMESTAMP | ANY`, max = `BI
 
 #' DuckDB function era
 #'
+#' @description
 #' Extract the era component from a date or timestamp.
 #'
 #' @name era
@@ -1364,6 +1662,7 @@ era <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 
 #' DuckDB function even
 #'
+#' @description
 #' Rounds x to next even number by rounding away from zero.
 #'
 #' @name even
@@ -1379,6 +1678,7 @@ even <- function(x = DOUBLE) {
 
 #' DuckDB function exp
 #'
+#' @description
 #' Computes e to the power of x.
 #'
 #' @name exp
@@ -1394,6 +1694,7 @@ exp <- function(x = DOUBLE) {
 
 #' DuckDB function factorial
 #'
+#' @description
 #' Factorial of x. Computes the product of the current integer and all integers below it.
 #'
 #' @name factorial
@@ -1409,6 +1710,7 @@ factorial <- function(x = INTEGER) {
 
 #' DuckDB function filter
 #'
+#' @description
 #' Constructs a list from those elements of the input `list` for which the `lambda` function returns `true`. DuckDB must be able to cast the `lambda` function's return type to `BOOL`. The return type of `list_filter` is the same as the input list's.
 #'
 #' @name filter
@@ -1423,8 +1725,25 @@ filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function filter() is not available in R.")
 }
 
+#' DuckDB function finalize
+#'
+#' @description
+#' DuckDB function `finalize()`.
+#'
+#' @name finalize
+#' @usage finalize(col0 = `AGGREGATE_STATE<?>`)
+#' @param col0 `AGGREGATE_STATE<?>`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+finalize <- function(col0 = `AGGREGATE_STATE<?>`) {
+  stop("DuckDB function finalize() is not available in R.")
+}
+
 #' DuckDB function flatten
 #'
+#' @description
 #' Flattens a nested list by one level.
 #'
 #' @name flatten
@@ -1440,6 +1759,7 @@ flatten <- function(nested_list = `T[][]`) {
 
 #' DuckDB function floor
 #'
+#' @description
 #' Rounds the number down.
 #'
 #' @name floor
@@ -1455,6 +1775,7 @@ floor <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
 
 #' DuckDB function formatReadableDecimalSize
 #'
+#' @description
 #' Converts `integer` to a human-readable representation using units based on powers of 10 (KB, MB, GB, etc.).
 #'
 #' @name formatReadableDecimalSize
@@ -1470,6 +1791,7 @@ formatReadableDecimalSize <- function(integer = BIGINT) {
 
 #' DuckDB function formatReadableSize
 #'
+#' @description
 #' Converts `integer` to a human-readable representation using units based on powers of 2 (KiB, MiB, GiB, etc.).
 #'
 #' @name formatReadableSize
@@ -1485,6 +1807,7 @@ formatReadableSize <- function(integer = BIGINT) {
 
 #' DuckDB function format_bytes
 #'
+#' @description
 #' Converts `integer` to a human-readable representation using units based on powers of 2 (KiB, MiB, GiB, etc.).
 #'
 #' @name format_bytes
@@ -1500,6 +1823,7 @@ format_bytes <- function(integer = BIGINT) {
 
 #' DuckDB function from_base64
 #'
+#' @description
 #' Converts a base64 encoded `string` to a character string (`BLOB`).
 #'
 #' @name from_base64
@@ -1515,6 +1839,7 @@ from_base64 <- function(string = VARCHAR) {
 
 #' DuckDB function from_binary
 #'
+#' @description
 #' Converts a `value` from binary representation to a blob.
 #'
 #' @name from_binary
@@ -1530,6 +1855,7 @@ from_binary <- function(value = VARCHAR) {
 
 #' DuckDB function from_hex
 #'
+#' @description
 #' Converts a `value` from hexadecimal representation to a blob.
 #'
 #' @name from_hex
@@ -1545,6 +1871,7 @@ from_hex <- function(value = VARCHAR) {
 
 #' DuckDB function gamma
 #'
+#' @description
 #' Interpolation of (x-1) factorial (so decimal inputs are allowed).
 #'
 #' @name gamma
@@ -1560,6 +1887,7 @@ gamma <- function(x = DOUBLE) {
 
 #' DuckDB function gcd
 #'
+#' @description
 #' Computes the greatest common divisor of x and y.
 #'
 #' @name gcd
@@ -1576,6 +1904,7 @@ gcd <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
 
 #' DuckDB function generate_series
 #'
+#' @description
 #' Creates a list of values between `start` and `stop` - the stop parameter is inclusive.
 #'
 #' @name generate_series
@@ -1593,6 +1922,7 @@ generate_series <- function(start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZO
 
 #' DuckDB function get_bit
 #'
+#' @description
 #' Extracts the nth bit from bitstring; the first (leftmost) bit is indexed 0.
 #'
 #' @name get_bit
@@ -1607,8 +1937,25 @@ get_bit <- function(bitstring = BIT, index = INTEGER) {
   stop("DuckDB function get_bit() is not available in R.")
 }
 
+#' DuckDB function getvariable
+#'
+#' @description
+#' DuckDB function `getvariable()`.
+#'
+#' @name getvariable
+#' @usage getvariable(col0 = VARCHAR)
+#' @param col0 `VARCHAR`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+getvariable <- function(col0 = VARCHAR) {
+  stop("DuckDB function getvariable() is not available in R.")
+}
+
 #' DuckDB function grade_up
 #'
+#' @description
 #' Works like list_sort, but the results are the indexes that correspond to the position in the original list instead of the actual values.
 #'
 #' @name grade_up
@@ -1626,6 +1973,7 @@ grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
 
 #' DuckDB function greatest_common_divisor
 #'
+#' @description
 #' Computes the greatest common divisor of x and y.
 #'
 #' @name greatest_common_divisor
@@ -1642,6 +1990,7 @@ greatest_common_divisor <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEIN
 
 #' DuckDB function hamming
 #'
+#' @description
 #' The Hamming distance between to strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., `a` and `A`) are considered different.
 #'
 #' @name hamming
@@ -1656,8 +2005,33 @@ hamming <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function hamming() is not available in R.")
 }
 
+#' DuckDB function hex
+#'
+#' @description
+#' Converts the `string` to hexadecimal representation.
+#'
+#' Converts the `value` to `VARCHAR` using hexadecimal representation.
+#'
+#' Converts `blob` to `VARCHAR` using hexadecimal encoding.
+#'
+#' @name hex
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param value `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`
+#' @param blob `BLOB`
+#' @examples
+#' \dontrun{
+#' hex('Hello')
+#' hex(42)
+#' hex('\xAA\xBB'::BLOB)
+#' }
+hex <- function(string = VARCHAR, value = `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`, blob = BLOB) {
+  stop("DuckDB function hex() is not available in R.")
+}
+
 #' DuckDB function hour
 #'
+#' @description
 #' Extract the hour component from a date or timestamp.
 #'
 #' @name hour
@@ -1673,6 +2047,7 @@ hour <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE 
 
 #' DuckDB function ilike_escape
 #'
+#' @description
 #' Returns `true` if the `string` matches the `like_specifier` (see Pattern Matching) using case-insensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name ilike_escape
@@ -1690,6 +2065,7 @@ ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_char
 
 #' DuckDB function instr
 #'
+#' @description
 #' Returns location of first occurrence of `search_string` in `string`, counting from 1. Returns 0 if no match found.
 #'
 #' @name instr
@@ -1706,6 +2082,7 @@ instr <- function(string = VARCHAR, search_string = VARCHAR) {
 
 #' DuckDB function is_histogram_other_bin
 #'
+#' @description
 #' Whether or not the provided value is the histogram "other" bin (used for values not belonging to any provided bin).
 #'
 #' @name is_histogram_other_bin
@@ -1721,6 +2098,7 @@ is_histogram_other_bin <- function(val = ANY) {
 
 #' DuckDB function isfinite
 #'
+#' @description
 #' Returns true if the floating point value is finite, false otherwise.
 #'
 #' @name isfinite
@@ -1736,6 +2114,7 @@ isfinite <- function(x = `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIM
 
 #' DuckDB function isinf
 #'
+#' @description
 #' Returns true if the floating point value is infinite, false otherwise.
 #'
 #' @name isinf
@@ -1751,6 +2130,7 @@ isinf <- function(x = `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME Z
 
 #' DuckDB function isnan
 #'
+#' @description
 #' Returns true if the floating point value is not a number, false otherwise.
 #'
 #' @name isnan
@@ -1766,6 +2146,7 @@ isnan <- function(x = `FLOAT | DOUBLE`) {
 
 #' DuckDB function isodow
 #'
+#' @description
 #' Extract the isodow component from a date or timestamp.
 #'
 #' @name isodow
@@ -1781,6 +2162,7 @@ isodow <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 
 #' DuckDB function isoyear
 #'
+#' @description
 #' Extract the isoyear component from a date or timestamp.
 #'
 #' @name isoyear
@@ -1796,6 +2178,7 @@ isoyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 
 #' DuckDB function jaccard
 #'
+#' @description
 #' The Jaccard similarity between two strings. Characters of different cases (e.g., `a` and `A`) are considered different. Returns a number between 0 and 1.
 #'
 #' @name jaccard
@@ -1812,6 +2195,7 @@ jaccard <- function(s1 = VARCHAR, s2 = VARCHAR) {
 
 #' DuckDB function jaro_similarity
 #'
+#' @description
 #' The Jaro similarity between two strings. Characters of different cases (e.g., `a` and `A`) are considered different. Returns a number between 0 and 1. For similarity < `score_cutoff`, 0 is returned instead. `score_cutoff` defaults to 0.
 #'
 #' @name jaro_similarity
@@ -1829,6 +2213,7 @@ jaro_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE) {
 
 #' DuckDB function jaro_winkler_similarity
 #'
+#' @description
 #' The Jaro-Winkler similarity between two strings. Characters of different cases (e.g., `a` and `A`) are considered different. Returns a number between 0 and 1. For similarity < `score_cutoff`, 0 is returned instead. `score_cutoff` defaults to 0.
 #'
 #' @name jaro_winkler_similarity
@@ -1846,6 +2231,7 @@ jaro_winkler_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = D
 
 #' DuckDB function julian
 #'
+#' @description
 #' Extract the Julian Day number from a date or timestamp.
 #'
 #' @name julian
@@ -1861,6 +2247,7 @@ julian <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 
 #' DuckDB function last_day
 #'
+#' @description
 #' Returns the last day of the month.
 #'
 #' @name last_day
@@ -1876,6 +2263,7 @@ last_day <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 
 #' DuckDB function lcase
 #'
+#' @description
 #' Converts `string` to lower case.
 #'
 #' @name lcase
@@ -1891,6 +2279,7 @@ lcase <- function(string = VARCHAR) {
 
 #' DuckDB function lcm
 #'
+#' @description
 #' Computes the least common multiple of x and y.
 #'
 #' @name lcm
@@ -1907,6 +2296,7 @@ lcm <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
 
 #' DuckDB function least_common_multiple
 #'
+#' @description
 #' Computes the least common multiple of x and y.
 #'
 #' @name least_common_multiple
@@ -1923,6 +2313,7 @@ least_common_multiple <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`
 
 #' DuckDB function left
 #'
+#' @description
 #' Extracts the left-most count characters.
 #'
 #' @name left
@@ -1939,6 +2330,7 @@ left <- function(string = VARCHAR, count = BIGINT) {
 
 #' DuckDB function left_grapheme
 #'
+#' @description
 #' Extracts the left-most count grapheme clusters.
 #'
 #' @name left_grapheme
@@ -1953,8 +2345,33 @@ left_grapheme <- function(string = VARCHAR, count = BIGINT) {
   stop("DuckDB function left_grapheme() is not available in R.")
 }
 
+#' DuckDB function len
+#'
+#' @description
+#' Number of characters in `string`.
+#'
+#' Returns the bit-length of the `bit` argument.
+#'
+#' Returns the length of the `list`.
+#'
+#' @name len
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param bit `BIT`
+#' @param list `ANY[]`
+#' @examples
+#' \dontrun{
+#' length('Hello🦆')
+#' length(42::TINYINT::BIT)
+#' length([1,2,3])
+#' }
+len <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
+  stop("DuckDB function len() is not available in R.")
+}
+
 #' DuckDB function length_grapheme
 #'
+#' @description
 #' Number of grapheme clusters in `string`.
 #'
 #' @name length_grapheme
@@ -1970,6 +2387,7 @@ length_grapheme <- function(string = VARCHAR) {
 
 #' DuckDB function levenshtein
 #'
+#' @description
 #' The minimum number of single-character edits (insertions, deletions or substitutions) required to change one string to the other. Characters of different cases (e.g., `a` and `A`) are considered different.
 #'
 #' @name levenshtein
@@ -1986,6 +2404,7 @@ levenshtein <- function(s1 = VARCHAR, s2 = VARCHAR) {
 
 #' DuckDB function lgamma
 #'
+#' @description
 #' Computes the log of the gamma function.
 #'
 #' @name lgamma
@@ -2001,6 +2420,7 @@ lgamma <- function(x = DOUBLE) {
 
 #' DuckDB function like_escape
 #'
+#' @description
 #' Returns `true` if the `string` matches the `like_specifier` (see Pattern Matching) using case-sensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name like_escape
@@ -2018,6 +2438,7 @@ like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_chara
 
 #' DuckDB function list_apply
 #'
+#' @description
 #' Returns a list that is the result of applying the `lambda` function to each element of the input `list`. The return type is defined by the return type of the `lambda` function.
 #'
 #' @name list_apply
@@ -2034,6 +2455,7 @@ list_apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 
 #' DuckDB function list_contains
 #'
+#' @description
 #' Returns true if the list contains the element.
 #'
 #' @name list_contains
@@ -2050,6 +2472,7 @@ list_contains <- function(list = `T[]`, element = T) {
 
 #' DuckDB function list_cosine_distance
 #'
+#' @description
 #' Computes the cosine distance between two same-sized lists.
 #'
 #' @name list_cosine_distance
@@ -2066,6 +2489,7 @@ list_cosine_distance <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] 
 
 #' DuckDB function list_cosine_similarity
 #'
+#' @description
 #' Computes the cosine similarity between two same-sized lists.
 #'
 #' @name list_cosine_similarity
@@ -2082,6 +2506,7 @@ list_cosine_similarity <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[
 
 #' DuckDB function list_distance
 #'
+#' @description
 #' Calculates the Euclidean distance between two points with coordinates given in two inputs lists of equal length.
 #'
 #' @name list_distance
@@ -2098,6 +2523,7 @@ list_distance <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBL
 
 #' DuckDB function list_distinct
 #'
+#' @description
 #' Removes all duplicates and `NULL` values from a list. Does not preserve the original order.
 #'
 #' @name list_distinct
@@ -2113,6 +2539,7 @@ list_distinct <- function(list = `T[]`) {
 
 #' DuckDB function list_dot_product
 #'
+#' @description
 #' Computes the inner product between two same-sized lists.
 #'
 #' @name list_dot_product
@@ -2129,6 +2556,7 @@ list_dot_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DO
 
 #' DuckDB function list_element
 #'
+#' @description
 #' Extract the `index`th (1-based) value from the list.
 #'
 #' @name list_element
@@ -2145,6 +2573,7 @@ list_element <- function(list = `T[] | VARCHAR`, index = BIGINT) {
 
 #' DuckDB function list_extract
 #'
+#' @description
 #' Extract the `index`th (1-based) value from the list.
 #'
 #' @name list_extract
@@ -2161,6 +2590,7 @@ list_extract <- function(list = `T[] | VARCHAR`, index = BIGINT) {
 
 #' DuckDB function list_filter
 #'
+#' @description
 #' Constructs a list from those elements of the input `list` for which the `lambda` function returns `true`. DuckDB must be able to cast the `lambda` function's return type to `BOOL`. The return type of `list_filter` is the same as the input list's.
 #'
 #' @name list_filter
@@ -2177,6 +2607,7 @@ list_filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 
 #' DuckDB function list_grade_up
 #'
+#' @description
 #' Works like list_sort, but the results are the indexes that correspond to the position in the original list instead of the actual values.
 #'
 #' @name list_grade_up
@@ -2194,6 +2625,7 @@ list_grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
 
 #' DuckDB function list_has
 #'
+#' @description
 #' Returns true if the list contains the element.
 #'
 #' @name list_has
@@ -2210,6 +2642,7 @@ list_has <- function(list = `T[]`, element = T) {
 
 #' DuckDB function list_has_all
 #'
+#' @description
 #' Returns true if all elements of list2 are in list1. NULLs are ignored.
 #'
 #' @name list_has_all
@@ -2226,6 +2659,7 @@ list_has_all <- function(list1 = `T[]`, list2 = `T[]`) {
 
 #' DuckDB function list_has_any
 #'
+#' @description
 #' Returns true if the lists have any element in common. NULLs are ignored.
 #'
 #' @name list_has_any
@@ -2242,6 +2676,7 @@ list_has_any <- function(list1 = `T[]`, list2 = `T[]`) {
 
 #' DuckDB function list_indexof
 #'
+#' @description
 #' Returns the index of the `element` if the `list` contains the `element`. If the `element` is not found, it returns `NULL`.
 #'
 #' @name list_indexof
@@ -2258,6 +2693,7 @@ list_indexof <- function(list = `T[]`, element = T) {
 
 #' DuckDB function list_inner_product
 #'
+#' @description
 #' Computes the inner product between two same-sized lists.
 #'
 #' @name list_inner_product
@@ -2274,6 +2710,7 @@ list_inner_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | 
 
 #' DuckDB function list_negative_dot_product
 #'
+#' @description
 #' Computes the negative inner product between two same-sized lists.
 #'
 #' @name list_negative_dot_product
@@ -2290,6 +2727,7 @@ list_negative_dot_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLO
 
 #' DuckDB function list_negative_inner_product
 #'
+#' @description
 #' Computes the negative inner product between two same-sized lists.
 #'
 #' @name list_negative_inner_product
@@ -2306,6 +2744,7 @@ list_negative_inner_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `F
 
 #' DuckDB function list_pack
 #'
+#' @description
 #' Creates a LIST containing the argument values.
 #'
 #' @name list_pack
@@ -2321,6 +2760,7 @@ list_pack <- function() {
 
 #' DuckDB function list_position
 #'
+#' @description
 #' Returns the index of the `element` if the `list` contains the `element`. If the `element` is not found, it returns `NULL`.
 #'
 #' @name list_position
@@ -2337,6 +2777,7 @@ list_position <- function(list = `T[]`, element = T) {
 
 #' DuckDB function list_reduce
 #'
+#' @description
 #' Reduces all elements of the input `list` into a single scalar value by executing the `lambda` function on a running result and the next list element. The `lambda` function has an optional `initial_value` argument.
 #'
 #' @name list_reduce
@@ -2354,6 +2795,7 @@ list_reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = 
 
 #' DuckDB function list_resize
 #'
+#' @description
 #' Resizes the `list` to contain `size` elements. Initializes new elements with `value` or `NULL` if `value` is not set.
 #'
 #' @name list_resize
@@ -2371,6 +2813,7 @@ list_resize <- function(list = `ANY[]`, `size[` = ANY, `value]` = ANY) {
 
 #' DuckDB function list_reverse_sort
 #'
+#' @description
 #' Sorts the elements of the list in reverse order.
 #'
 #' @name list_reverse_sort
@@ -2387,6 +2830,7 @@ list_reverse_sort <- function(list = `ANY[]`, col1 = VARCHAR) {
 
 #' DuckDB function list_select
 #'
+#' @description
 #' Returns a list based on the elements selected by the `index_list`.
 #'
 #' @name list_select
@@ -2401,8 +2845,31 @@ list_select <- function(value_list = `T[]`, index_list = `BIGINT[]`) {
   stop("DuckDB function list_select() is not available in R.")
 }
 
+#' DuckDB function list_slice
+#'
+#' @description
+#' Extracts a sublist or substring using slice conventions. Negative values are accepted.
+#'
+#' list_slice with added step feature.
+#'
+#' @name list_slice
+#' @usage NULL
+#' @param list `ANY`
+#' @param begin `ANY`
+#' @param end `ANY`
+#' @param step `BIGINT`
+#' @examples
+#' \dontrun{
+#' list_slice([4, 5, 6], 2, 3)
+#' list_slice([4, 5, 6], 1, 3, 2)
+#' }
+list_slice <- function(list = ANY, begin = ANY, end = ANY, step = BIGINT) {
+  stop("DuckDB function list_slice() is not available in R.")
+}
+
 #' DuckDB function list_sort
 #'
+#' @description
 #' Sorts the elements of the list.
 #'
 #' @name list_sort
@@ -2420,6 +2887,7 @@ list_sort <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
 
 #' DuckDB function list_transform
 #'
+#' @description
 #' Returns a list that is the result of applying the `lambda` function to each element of the input `list`. The return type is defined by the return type of the `lambda` function.
 #'
 #' @name list_transform
@@ -2436,6 +2904,7 @@ list_transform <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 
 #' DuckDB function list_unique
 #'
+#' @description
 #' Counts the unique elements of a `list`.
 #'
 #' @name list_unique
@@ -2451,6 +2920,7 @@ list_unique <- function(list = `ANY[]`) {
 
 #' DuckDB function list_value
 #'
+#' @description
 #' Creates a LIST containing the argument values.
 #'
 #' @name list_value
@@ -2466,6 +2936,7 @@ list_value <- function() {
 
 #' DuckDB function list_where
 #'
+#' @description
 #' Returns a list with the `BOOLEAN`s in `mask_list` applied as a mask to the `value_list`.
 #'
 #' @name list_where
@@ -2482,6 +2953,7 @@ list_where <- function(value_list = `T[]`, mask_list = `BOOLEAN[]`) {
 
 #' DuckDB function ln
 #'
+#' @description
 #' Computes the natural logarithm of x.
 #'
 #' @name ln
@@ -2497,6 +2969,7 @@ ln <- function(x = DOUBLE) {
 
 #' DuckDB function log
 #'
+#' @description
 #' Computes the logarithm of x to base b. b may be omitted, in which case the default 10.
 #'
 #' @name log
@@ -2513,6 +2986,7 @@ log <- function(b = DOUBLE, x = DOUBLE) {
 
 #' DuckDB function log10
 #'
+#' @description
 #' Computes the 10-log of x.
 #'
 #' @name log10
@@ -2528,6 +3002,7 @@ log10 <- function(x = DOUBLE) {
 
 #' DuckDB function log2
 #'
+#' @description
 #' Computes the 2-log of x.
 #'
 #' @name log2
@@ -2543,6 +3018,7 @@ log2 <- function(x = DOUBLE) {
 
 #' DuckDB function lower
 #'
+#' @description
 #' Converts `string` to lower case.
 #'
 #' @name lower
@@ -2558,6 +3034,7 @@ lower <- function(string = VARCHAR) {
 
 #' DuckDB function lpad
 #'
+#' @description
 #' Pads the `string` with the `character` on the left until it has `count` characters. Truncates the `string` on the right if it has more than `count` characters.
 #'
 #' @name lpad
@@ -2575,6 +3052,7 @@ lpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 
 #' DuckDB function ltrim
 #'
+#' @description
 #' Removes any occurrences of any of the `characters` from the left side of the `string`. `characters` defaults to `space`.
 #'
 #' @name ltrim
@@ -2589,8 +3067,33 @@ ltrim <- function(string = VARCHAR, characters = VARCHAR) {
   stop("DuckDB function ltrim() is not available in R.")
 }
 
+#' DuckDB function make_date
+#'
+#' @description
+#' The date for the given parts.
+#'
+#' The date for the given struct.
+#'
+#' @name make_date
+#' @usage NULL
+#' @param col0 `INTEGER`
+#' @param year `BIGINT`
+#' @param month `BIGINT`
+#' @param day `BIGINT`
+#' @param date-struct `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' make_date(1992, 9, 20)
+#' make_date({'year': 2024, 'month': 11, 'day': 14})
+#' }
+make_date <- function(col0 = INTEGER, year = BIGINT, month = BIGINT, day = BIGINT, `date-struct` = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`) {
+  stop("DuckDB function make_date() is not available in R.")
+}
+
 #' DuckDB function make_time
 #'
+#' @description
 #' The time for the given parts.
 #'
 #' @name make_time
@@ -2608,6 +3111,7 @@ make_time <- function(hour = BIGINT, minute = BIGINT, seconds = DOUBLE) {
 
 #' DuckDB function make_timestamp
 #'
+#' @description
 #' The timestamp for the given parts.
 #'
 #' @name make_timestamp
@@ -2628,6 +3132,7 @@ make_timestamp <- function(year = BIGINT, month = BIGINT, day = BIGINT, hour = B
 
 #' DuckDB function make_timestamp_ms
 #'
+#' @description
 #' The timestamp for the given microseconds since the epoch.
 #'
 #' @name make_timestamp_ms
@@ -2643,6 +3148,7 @@ make_timestamp_ms <- function(nanos = BIGINT) {
 
 #' DuckDB function make_timestamp_ns
 #'
+#' @description
 #' The timestamp for the given nanoseconds since epoch.
 #'
 #' @name make_timestamp_ns
@@ -2658,6 +3164,7 @@ make_timestamp_ns <- function(nanos = BIGINT) {
 
 #' DuckDB function map
 #'
+#' @description
 #' Creates a map from a set of keys and values.
 #'
 #' @name map
@@ -2674,6 +3181,7 @@ map <- function(keys = `K[]`, values = `V[]`) {
 
 #' DuckDB function map_contains
 #'
+#' @description
 #' Checks if a map contains a given key.
 #'
 #' @name map_contains
@@ -2690,6 +3198,7 @@ map_contains <- function(map = `MAP(K, V)`, key = K) {
 
 #' DuckDB function map_entries
 #'
+#' @description
 #' Returns the map entries as a list of keys/values.
 #'
 #' @name map_entries
@@ -2705,6 +3214,7 @@ map_entries <- function(map = `MAP(K, V)`) {
 
 #' DuckDB function map_extract
 #'
+#' @description
 #' Returns a list containing the value for a given key or an empty list if the key is not contained in the map. The type of the key provided in the second parameter must match the type of the map’s keys else an error is returned.
 #'
 #' @name map_extract
@@ -2721,6 +3231,7 @@ map_extract <- function(map = `MAP(K, V)`, key = K) {
 
 #' DuckDB function map_extract_value
 #'
+#' @description
 #' Returns the value for a given key or NULL if the key is not contained in the map. The type of the key provided in the second parameter must match the type of the map’s keys else an error is returned.
 #'
 #' @name map_extract_value
@@ -2737,6 +3248,7 @@ map_extract_value <- function(map = `MAP(K, V)`, key = K) {
 
 #' DuckDB function map_from_entries
 #'
+#' @description
 #' Returns a map created from the entries of the array.
 #'
 #' @name map_from_entries
@@ -2752,6 +3264,7 @@ map_from_entries <- function(map = `STRUCT(K, V)[]`) {
 
 #' DuckDB function map_keys
 #'
+#' @description
 #' Returns the keys of a map as a list.
 #'
 #' @name map_keys
@@ -2767,6 +3280,7 @@ map_keys <- function(map = `MAP(K, V)`) {
 
 #' DuckDB function map_values
 #'
+#' @description
 #' Returns the values of a map as a list.
 #'
 #' @name map_values
@@ -2780,8 +3294,49 @@ map_values <- function(map = `MAP(K, V)`) {
   stop("DuckDB function map_values() is not available in R.")
 }
 
+#' DuckDB function md5
+#'
+#' @description
+#' Returns the MD5 hash of the `string` as a `VARCHAR`.
+#'
+#' Returns the MD5 hash of the `blob` as a `VARCHAR`.
+#'
+#' @name md5
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param blob `BLOB`
+#' @examples
+#' \dontrun{
+#' md5('abc')
+#' md5('\xAA\xBB'::BLOB)
+#' }
+md5 <- function(string = VARCHAR, blob = BLOB) {
+  stop("DuckDB function md5() is not available in R.")
+}
+
+#' DuckDB function md5_number
+#'
+#' @description
+#' Returns the MD5 hash of the `string` as a `HUGEINT`.
+#'
+#' Returns the MD5 hash of the `blob` as a `HUGEINT`.
+#'
+#' @name md5_number
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param blob `BLOB`
+#' @examples
+#' \dontrun{
+#' md5_number('abc')
+#' md5_number('\xAA\xBB'::BLOB)
+#' }
+md5_number <- function(string = VARCHAR, blob = BLOB) {
+  stop("DuckDB function md5_number() is not available in R.")
+}
+
 #' DuckDB function microsecond
 #'
+#' @description
 #' Extract the microsecond component from a date or timestamp.
 #'
 #' @name microsecond
@@ -2797,6 +3352,7 @@ microsecond <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
 
 #' DuckDB function millennium
 #'
+#' @description
 #' Extract the millennium component from a date or timestamp.
 #'
 #' @name millennium
@@ -2812,6 +3368,7 @@ millennium <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME Z
 
 #' DuckDB function millisecond
 #'
+#' @description
 #' Extract the millisecond component from a date or timestamp.
 #'
 #' @name millisecond
@@ -2827,6 +3384,7 @@ millisecond <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
 
 #' DuckDB function minute
 #'
+#' @description
 #' Extract the minute component from a date or timestamp.
 #'
 #' @name minute
@@ -2842,6 +3400,7 @@ minute <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZON
 
 #' DuckDB function mismatches
 #'
+#' @description
 #' The Hamming distance between to strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., `a` and `A`) are considered different.
 #'
 #' @name mismatches
@@ -2856,8 +3415,26 @@ mismatches <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function mismatches() is not available in R.")
 }
 
+#' DuckDB function mod
+#'
+#' @description
+#' DuckDB function `mod()`.
+#'
+#' @name mod
+#' @usage NULL
+#' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
+#' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+mod <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
+  stop("DuckDB function mod() is not available in R.")
+}
+
 #' DuckDB function month
 #'
+#' @description
 #' Extract the month component from a date or timestamp.
 #'
 #' @name month
@@ -2873,6 +3450,7 @@ month <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`)
 
 #' DuckDB function monthname
 #'
+#' @description
 #' The (English) name of the month.
 #'
 #' @name monthname
@@ -2886,8 +3464,26 @@ monthname <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function monthname() is not available in R.")
 }
 
+#' DuckDB function multiply
+#'
+#' @description
+#' DuckDB function `multiply()`.
+#'
+#' @name multiply
+#' @usage NULL
+#' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
+#' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+multiply <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`) {
+  stop("DuckDB function multiply() is not available in R.")
+}
+
 #' DuckDB function nanosecond
 #'
+#' @description
 #' Extract the nanosecond component from a date or timestamp.
 #'
 #' @name nanosecond
@@ -2903,6 +3499,7 @@ nanosecond <- function(tsns = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TI
 
 #' DuckDB function nextafter
 #'
+#' @description
 #' Returns the next floating point value after x in the direction of y.
 #'
 #' @name nextafter
@@ -2919,6 +3516,7 @@ nextafter <- function(x = `DOUBLE | FLOAT`, y = `DOUBLE | FLOAT`) {
 
 #' DuckDB function nfc_normalize
 #'
+#' @description
 #' Converts `string` to Unicode NFC normalized string. Useful for comparisons and ordering if text data is mixed between NFC normalized and not.
 #'
 #' @name nfc_normalize
@@ -2934,6 +3532,7 @@ nfc_normalize <- function(string = VARCHAR) {
 
 #' DuckDB function normalized_interval
 #'
+#' @description
 #' Normalizes an INTERVAL to an equivalent interval.
 #'
 #' @name normalized_interval
@@ -2949,6 +3548,7 @@ normalized_interval <- function(interval = INTERVAL) {
 
 #' DuckDB function not_ilike_escape
 #'
+#' @description
 #' Returns `false` if the `string` matches the `like_specifier` (see Pattern Matching) using case-insensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name not_ilike_escape
@@ -2966,6 +3566,7 @@ not_ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_
 
 #' DuckDB function not_like_escape
 #'
+#' @description
 #' Returns `false` if the `string` matches the `like_specifier` (see Pattern Matching) using case-sensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name not_like_escape
@@ -2981,8 +3582,29 @@ not_like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_c
   stop("DuckDB function not_like_escape() is not available in R.")
 }
 
+#' DuckDB function octet_length
+#'
+#' @description
+#' Number of bytes in `blob`.
+#'
+#' Returns the number of bytes in the `bitstring`.
+#'
+#' @name octet_length
+#' @usage NULL
+#' @param blob `BLOB`
+#' @param bitstring `BIT`
+#' @examples
+#' \dontrun{
+#' octet_length('\xAA\xBB'::BLOB)
+#' octet_length('1101011'::BITSTRING)
+#' }
+octet_length <- function(blob = BLOB, bitstring = BIT) {
+  stop("DuckDB function octet_length() is not available in R.")
+}
+
 #' DuckDB function ord
 #'
+#' @description
 #' Returns an `INTEGER` representing the `unicode` codepoint of the first character in the `string`.
 #'
 #' @name ord
@@ -2998,6 +3620,7 @@ ord <- function(string = VARCHAR) {
 
 #' DuckDB function parse_dirname
 #'
+#' @description
 #' Returns the top-level directory name from the given `path`. `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
 #'
 #' @name parse_dirname
@@ -3014,6 +3637,7 @@ parse_dirname <- function(path = VARCHAR, separator = VARCHAR) {
 
 #' DuckDB function parse_dirpath
 #'
+#' @description
 #' Returns the head of the `path` (the pathname until the last slash) similarly to Python's `os.path.dirname`. `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
 #'
 #' @name parse_dirpath
@@ -3030,6 +3654,7 @@ parse_dirpath <- function(path = VARCHAR, separator = VARCHAR) {
 
 #' DuckDB function parse_duckdb_log_message
 #'
+#' @description
 #' Parse the message into the expected logical type.
 #'
 #' @name parse_duckdb_log_message
@@ -3046,6 +3671,7 @@ parse_duckdb_log_message <- function(type = VARCHAR, message = VARCHAR) {
 
 #' DuckDB function parse_filename
 #'
+#' @description
 #' Returns the last component of the `path` similarly to Python's `os.path.basename` function. If `trim_extension` is `true`, the file extension will be removed (defaults to `false`). `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
 #'
 #' @name parse_filename
@@ -3063,6 +3689,7 @@ parse_filename <- function(string = VARCHAR, trim_extension = `VARCHAR | BOOLEAN
 
 #' DuckDB function parse_path
 #'
+#' @description
 #' Returns a list of the components (directories and filename) in the `path` similarly to Python's `pathlib.parts` function. `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
 #'
 #' @name parse_path
@@ -3079,6 +3706,7 @@ parse_path <- function(path = VARCHAR, separator = VARCHAR) {
 
 #' DuckDB function pi
 #'
+#' @description
 #' Returns the value of pi.
 #'
 #' @name pi
@@ -3094,6 +3722,7 @@ pi <- function() {
 
 #' DuckDB function position
 #'
+#' @description
 #' Returns location of first occurrence of `search_string` in `string`, counting from 1. Returns 0 if no match found.
 #'
 #' @name position
@@ -3110,6 +3739,7 @@ position <- function(string = VARCHAR, search_string = VARCHAR) {
 
 #' DuckDB function pow
 #'
+#' @description
 #' Computes x to the power of y.
 #'
 #' @name pow
@@ -3126,6 +3756,7 @@ pow <- function(x = DOUBLE, y = DOUBLE) {
 
 #' DuckDB function power
 #'
+#' @description
 #' Computes x to the power of y.
 #'
 #' @name power
@@ -3142,6 +3773,7 @@ power <- function(x = DOUBLE, y = DOUBLE) {
 
 #' DuckDB function prefix
 #'
+#' @description
 #' Returns `true` if `string` starts with `search_string`.
 #'
 #' @name prefix
@@ -3158,6 +3790,7 @@ prefix <- function(string = VARCHAR, search_string = VARCHAR) {
 
 #' DuckDB function quarter
 #'
+#' @description
 #' Extract the quarter component from a date or timestamp.
 #'
 #' @name quarter
@@ -3173,6 +3806,7 @@ quarter <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 
 #' DuckDB function radians
 #'
+#' @description
 #' Converts degrees to radians.
 #'
 #' @name radians
@@ -3188,6 +3822,7 @@ radians <- function(x = DOUBLE) {
 
 #' DuckDB function range
 #'
+#' @description
 #' Creates a list of values between `start` and `stop` - the stop parameter is exclusive.
 #'
 #' @name range
@@ -3205,6 +3840,7 @@ range <- function(start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, stop 
 
 #' DuckDB function reduce
 #'
+#' @description
 #' Reduces all elements of the input `list` into a single scalar value by executing the `lambda` function on a running result and the next list element. The `lambda` function has an optional `initial_value` argument.
 #'
 #' @name reduce
@@ -3222,6 +3858,7 @@ reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY) 
 
 #' DuckDB function regexp_escape
 #'
+#' @description
 #' Escapes special patterns to turn `string` into a regular expression similarly to Python's `re.escape` function.
 #'
 #' @name regexp_escape
@@ -3235,8 +3872,35 @@ regexp_escape <- function(string = VARCHAR) {
   stop("DuckDB function regexp_escape() is not available in R.")
 }
 
+#' DuckDB function regexp_extract
+#'
+#' @description
+#' If `string` contains the `regex` pattern, returns the capturing group specified by optional parameter `group`; otherwise, returns the empty string. The `group` must be a constant value. If no `group` is given, it defaults to 0. A set of optional regex `options` can be set.
+#'
+#' If `string` contains the `regex` pattern, returns the capturing groups as a struct with corresponding names from `name_list`; otherwise, returns a struct with the same keys and empty strings as values. A set of optional regex `options` can be set.
+#'
+#' @name regexp_extract
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param regex `VARCHAR`
+#' @param group `INTEGER`
+#' @param options `VARCHAR`
+#' @param name_list `VARCHAR[]`
+#' @examples
+#' \dontrun{
+#' regexp_extract('abcde', '[a-z]{3}')
+#' regexp_extract('abc', '([a-z])(b)', 1)
+#' regexp_extract('ABC', '([a-z])(b)', 1, 'i')
+#' regexp_extract('2023-04-15', '(\d+)-(\d+)-(\d+)', ['y', 'm', 'd'])
+#' regexp_extract('John Doe', '([a-z]+) ([a-z]+)', ['first_name', 'last_name'], 'i')
+#' }
+regexp_extract <- function(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR, name_list = `VARCHAR[]`) {
+  stop("DuckDB function regexp_extract() is not available in R.")
+}
+
 #' DuckDB function regexp_extract_all
 #'
+#' @description
 #' Finds non-overlapping occurrences of the `regex` in the `string` and returns the corresponding values of the capturing `group`. A set of optional regex `options` can be set.
 #'
 #' @name regexp_extract_all
@@ -3255,6 +3919,7 @@ regexp_extract_all <- function(string = VARCHAR, regex = VARCHAR, group = INTEGE
 
 #' DuckDB function regexp_full_match
 #'
+#' @description
 #' Returns `true` if the entire `string` matches the `regex`. A set of optional regex `options` can be set.
 #'
 #' @name regexp_full_match
@@ -3272,6 +3937,7 @@ regexp_full_match <- function(string = VARCHAR, regex = VARCHAR, col2 = VARCHAR)
 
 #' DuckDB function regexp_matches
 #'
+#' @description
 #' Returns `true` if `string` contains the `regex`, `false` otherwise. A set of optional regex `options` can be set.
 #'
 #' @name regexp_matches
@@ -3289,6 +3955,7 @@ regexp_matches <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR)
 
 #' DuckDB function regexp_replace
 #'
+#' @description
 #' If `string` contains the `regex`, replaces the matching part with `replacement`. A set of optional regex `options` can be set.
 #'
 #' @name regexp_replace
@@ -3307,6 +3974,7 @@ regexp_replace <- function(string = VARCHAR, regex = VARCHAR, replacement = VARC
 
 #' DuckDB function regexp_split_to_array
 #'
+#' @description
 #' Splits the `string` along the `regex`. A set of optional regex `options` can be set.
 #'
 #' @name regexp_split_to_array
@@ -3324,6 +3992,7 @@ regexp_split_to_array <- function(string = VARCHAR, regex = VARCHAR, options = V
 
 #' DuckDB function replace
 #'
+#' @description
 #' Replaces any occurrences of the `source` with `target` in `string`.
 #'
 #' @name replace
@@ -3341,6 +4010,7 @@ replace <- function(string = VARCHAR, source = VARCHAR, target = VARCHAR) {
 
 #' DuckDB function replace_type
 #'
+#' @description
 #' Casts all fields of type1 to type2.
 #'
 #' @name replace_type
@@ -3358,6 +4028,7 @@ replace_type <- function(param = ANY, type1 = ANY, type2 = ANY) {
 
 #' DuckDB function reverse
 #'
+#' @description
 #' Reverses the `string`.
 #'
 #' @name reverse
@@ -3373,6 +4044,7 @@ reverse <- function(string = VARCHAR) {
 
 #' DuckDB function right
 #'
+#' @description
 #' Extract the right-most `count` characters.
 #'
 #' @name right
@@ -3389,6 +4061,7 @@ right <- function(string = VARCHAR, count = BIGINT) {
 
 #' DuckDB function right_grapheme
 #'
+#' @description
 #' Extracts the right-most `count` grapheme clusters.
 #'
 #' @name right_grapheme
@@ -3405,6 +4078,7 @@ right_grapheme <- function(string = VARCHAR, count = BIGINT) {
 
 #' DuckDB function round
 #'
+#' @description
 #' Rounds x to s decimal places.
 #'
 #' @name round
@@ -3421,6 +4095,7 @@ round <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT |
 
 #' DuckDB function rpad
 #'
+#' @description
 #' Pads the `string` with the `character` on the right until it has `count` characters. Truncates the `string` on the right if it has more than `count` characters.
 #'
 #' @name rpad
@@ -3438,6 +4113,7 @@ rpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 
 #' DuckDB function rtrim
 #'
+#' @description
 #' Removes any occurrences of any of the `characters` from the right side of the `string`. `characters` defaults to `space`.
 #'
 #' @name rtrim
@@ -3454,6 +4130,7 @@ rtrim <- function(string = VARCHAR, characters = VARCHAR) {
 
 #' DuckDB function second
 #'
+#' @description
 #' Extract the second component from a date or timestamp.
 #'
 #' @name second
@@ -3469,6 +4146,7 @@ second <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZON
 
 #' DuckDB function set_bit
 #'
+#' @description
 #' Sets the nth bit in bitstring to newvalue; the first (leftmost) bit is indexed 0. Returns a new bitstring.
 #'
 #' @name set_bit
@@ -3484,8 +4162,49 @@ set_bit <- function(bitstring = BIT, index = INTEGER, new_value = INTEGER) {
   stop("DuckDB function set_bit() is not available in R.")
 }
 
+#' DuckDB function sha1
+#'
+#' @description
+#' Returns a `VARCHAR` with the SHA-1 hash of the `value`.
+#'
+#' Returns a `VARCHAR` with the SHA-1 hash of the `blob`.
+#'
+#' @name sha1
+#' @usage NULL
+#' @param value `VARCHAR`
+#' @param blob `BLOB`
+#' @examples
+#' \dontrun{
+#' sha1('🦆')
+#' sha1('\xAA\xBB'::BLOB)
+#' }
+sha1 <- function(value = VARCHAR, blob = BLOB) {
+  stop("DuckDB function sha1() is not available in R.")
+}
+
+#' DuckDB function sha256
+#'
+#' @description
+#' Returns a `VARCHAR` with the SHA-256 hash of the `value`.
+#'
+#' Returns a `VARCHAR` with the SHA-256 hash of the `blob`.
+#'
+#' @name sha256
+#' @usage NULL
+#' @param value `VARCHAR`
+#' @param blob `BLOB`
+#' @examples
+#' \dontrun{
+#' sha256('🦆')
+#' sha256('\xAA\xBB'::BLOB)
+#' }
+sha256 <- function(value = VARCHAR, blob = BLOB) {
+  stop("DuckDB function sha256() is not available in R.")
+}
+
 #' DuckDB function sign
 #'
+#' @description
 #' Returns the sign of x as -1, 0 or 1.
 #'
 #' @name sign
@@ -3501,6 +4220,7 @@ sign <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | 
 
 #' DuckDB function signbit
 #'
+#' @description
 #' Returns whether the signbit is set or not.
 #'
 #' @name signbit
@@ -3516,6 +4236,7 @@ signbit <- function(x = `FLOAT | DOUBLE`) {
 
 #' DuckDB function sin
 #'
+#' @description
 #' Computes the sin of x.
 #'
 #' @name sin
@@ -3531,6 +4252,7 @@ sin <- function(x = DOUBLE) {
 
 #' DuckDB function sinh
 #'
+#' @description
 #' Computes the hyperbolic sin of x.
 #'
 #' @name sinh
@@ -3546,6 +4268,7 @@ sinh <- function(x = DOUBLE) {
 
 #' DuckDB function split
 #'
+#' @description
 #' Splits the `string` along the `separator`.
 #'
 #' @name split
@@ -3562,6 +4285,7 @@ split <- function(string = VARCHAR, separator = VARCHAR) {
 
 #' DuckDB function sqrt
 #'
+#' @description
 #' Returns the square root of x.
 #'
 #' @name sqrt
@@ -3577,6 +4301,7 @@ sqrt <- function(x = DOUBLE) {
 
 #' DuckDB function starts_with
 #'
+#' @description
 #' Returns `true` if `string` begins with `search_string`.
 #'
 #' @name starts_with
@@ -3593,6 +4318,7 @@ starts_with <- function(string = VARCHAR, search_string = VARCHAR) {
 
 #' DuckDB function str_split
 #'
+#' @description
 #' Splits the `string` along the `separator`.
 #'
 #' @name str_split
@@ -3609,6 +4335,7 @@ str_split <- function(string = VARCHAR, separator = VARCHAR) {
 
 #' DuckDB function str_split_regex
 #'
+#' @description
 #' Splits the `string` along the `regex`. A set of optional regex `options` can be set.
 #'
 #' @name str_split_regex
@@ -3626,6 +4353,7 @@ str_split_regex <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR
 
 #' DuckDB function strftime
 #'
+#' @description
 #' Converts a `date` to a string according to the format string.
 #'
 #' @name strftime
@@ -3642,6 +4370,7 @@ strftime <- function(data = `DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR`, format 
 
 #' DuckDB function string_split
 #'
+#' @description
 #' Splits the `string` along the `separator`.
 #'
 #' @name string_split
@@ -3658,6 +4387,7 @@ string_split <- function(string = VARCHAR, separator = VARCHAR) {
 
 #' DuckDB function string_split_regex
 #'
+#' @description
 #' Splits the `string` along the `regex`. A set of optional regex `options` can be set.
 #'
 #' @name string_split_regex
@@ -3675,6 +4405,7 @@ string_split_regex <- function(string = VARCHAR, regex = VARCHAR, options = VARC
 
 #' DuckDB function string_to_array
 #'
+#' @description
 #' Splits the `string` along the `separator`.
 #'
 #' @name string_to_array
@@ -3691,6 +4422,7 @@ string_to_array <- function(string = VARCHAR, separator = VARCHAR) {
 
 #' DuckDB function strip_accents
 #'
+#' @description
 #' Strips accents from `string`.
 #'
 #' @name strip_accents
@@ -3706,6 +4438,7 @@ strip_accents <- function(string = VARCHAR) {
 
 #' DuckDB function strlen
 #'
+#' @description
 #' Number of bytes in `string`.
 #'
 #' @name strlen
@@ -3721,6 +4454,7 @@ strlen <- function(string = VARCHAR) {
 
 #' DuckDB function strpos
 #'
+#' @description
 #' Returns location of first occurrence of `search_string` in `string`, counting from 1. Returns 0 if no match found.
 #'
 #' @name strpos
@@ -3735,8 +4469,30 @@ strpos <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function strpos() is not available in R.")
 }
 
+#' DuckDB function strptime
+#'
+#' @description
+#' Converts the `string` text to timestamp according to the format string. Throws an error on failure. To return `NULL` on failure, use try_strptime.
+#'
+#' Converts the `string` text to timestamp applying the format strings in the list until one succeeds. Throws an error on failure. To return `NULL` on failure, use try_strptime.
+#'
+#' @name strptime
+#' @usage NULL
+#' @param text `VARCHAR`
+#' @param format `VARCHAR`
+#' @param format-list `VARCHAR[]`
+#' @examples
+#' \dontrun{
+#' strptime('Wed, 1 January 1992 - 08:38:40 PM', '%a, %-d %B %Y - %I:%M:%S %p')
+#' strptime('4/15/2023 10:56:00', ['%d/%m/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S'])
+#' }
+strptime <- function(text = VARCHAR, format = VARCHAR, `format-list` = `VARCHAR[]`) {
+  stop("DuckDB function strptime() is not available in R.")
+}
+
 #' DuckDB function struct_contains
 #'
+#' @description
 #' Check if an unnamed STRUCT contains the value.
 #'
 #' @name struct_contains
@@ -3753,6 +4509,7 @@ struct_contains <- function(struct = STRUCT, `'entry'` = ANY) {
 
 #' DuckDB function struct_extract
 #'
+#' @description
 #' Extract the named entry from the STRUCT.
 #'
 #' @name struct_extract
@@ -3769,6 +4526,7 @@ struct_extract <- function(struct = STRUCT, `'entry'` = `VARCHAR | BIGINT`) {
 
 #' DuckDB function struct_has
 #'
+#' @description
 #' Check if an unnamed STRUCT contains the value.
 #'
 #' @name struct_has
@@ -3785,6 +4543,7 @@ struct_has <- function(struct = STRUCT, `'entry'` = ANY) {
 
 #' DuckDB function struct_indexof
 #'
+#' @description
 #' Get the position of the entry in an unnamed STRUCT, starting at 1.
 #'
 #' @name struct_indexof
@@ -3801,6 +4560,7 @@ struct_indexof <- function(struct = STRUCT, `'entry'` = ANY) {
 
 #' DuckDB function struct_position
 #'
+#' @description
 #' Get the position of the entry in an unnamed STRUCT, starting at 1.
 #'
 #' @name struct_position
@@ -3817,6 +4577,7 @@ struct_position <- function(struct = STRUCT, `'entry'` = ANY) {
 
 #' DuckDB function substr
 #'
+#' @description
 #' Extracts substring starting from character `start` up to the end of the string. If optional argument `length` is set, extracts a substring of `length` characters instead. Note that a `start` value of `1` refers to the first character of the `string`.
 #'
 #' @name substr
@@ -3834,6 +4595,7 @@ substr <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
 
 #' DuckDB function substring
 #'
+#' @description
 #' Extracts substring starting from character `start` up to the end of the string. If optional argument `length` is set, extracts a substring of `length` characters instead. Note that a `start` value of `1` refers to the first character of the `string`.
 #'
 #' @name substring
@@ -3851,6 +4613,7 @@ substring <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
 
 #' DuckDB function substring_grapheme
 #'
+#' @description
 #' Extracts substring starting from grapheme clusters `start` up to the end of the string. If optional argument `length` is set, extracts a substring of `length` grapheme clusters instead. Note that a `start` value of `1` refers to the `first` character of the `string`.
 #'
 #' @name substring_grapheme
@@ -3866,8 +4629,26 @@ substring_grapheme <- function(string = VARCHAR, start = BIGINT, length = BIGINT
   stop("DuckDB function substring_grapheme() is not available in R.")
 }
 
+#' DuckDB function subtract
+#'
+#' @description
+#' DuckDB function `subtract()`.
+#'
+#' @name subtract
+#' @usage NULL
+#' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL | TIME | TIME WITH TIME ZONE`
+#' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+subtract <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL | TIME | TIME WITH TIME ZONE`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL`) {
+  stop("DuckDB function subtract() is not available in R.")
+}
+
 #' DuckDB function suffix
 #'
+#' @description
 #' Returns `true` if `string` ends with `search_string`.
 #'
 #' @name suffix
@@ -3884,6 +4665,7 @@ suffix <- function(string = VARCHAR, search_string = VARCHAR) {
 
 #' DuckDB function tan
 #'
+#' @description
 #' Computes the tan of x.
 #'
 #' @name tan
@@ -3899,6 +4681,7 @@ tan <- function(x = DOUBLE) {
 
 #' DuckDB function tanh
 #'
+#' @description
 #' Computes the hyperbolic tan of x.
 #'
 #' @name tanh
@@ -3914,6 +4697,7 @@ tanh <- function(x = DOUBLE) {
 
 #' DuckDB function time_bucket
 #'
+#' @description
 #' Truncate TIMESTAMPTZ by the specified interval bucket_width. Buckets are aligned relative to origin TIMESTAMPTZ. The origin defaults to 2000-01-03 00:00:00+00 for buckets that do not include a month or year interval, and to 2000-01-01 00:00:00+00 for month and year buckets.
 #'
 #' @name time_bucket
@@ -3931,6 +4715,7 @@ time_bucket <- function(bucket_width = INTERVAL, timestamp = `DATE | TIMESTAMP |
 
 #' DuckDB function timetz_byte_comparable
 #'
+#' @description
 #' Converts a TIME WITH TIME ZONE to an integer sort key.
 #'
 #' @name timetz_byte_comparable
@@ -3946,6 +4731,7 @@ timetz_byte_comparable <- function(time_tz = `TIME WITH TIME ZONE`) {
 
 #' DuckDB function timezone
 #'
+#' @description
 #' Extract the timezone component from a date or timestamp.
 #'
 #' @name timezone
@@ -3962,6 +4748,7 @@ timezone <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 
 #' DuckDB function timezone_hour
 #'
+#' @description
 #' Extract the timezone_hour component from a date or timestamp.
 #'
 #' @name timezone_hour
@@ -3977,6 +4764,7 @@ timezone_hour <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIM
 
 #' DuckDB function timezone_minute
 #'
+#' @description
 #' Extract the timezone_minute component from a date or timestamp.
 #'
 #' @name timezone_minute
@@ -3992,6 +4780,7 @@ timezone_minute <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH T
 
 #' DuckDB function to_base
 #'
+#' @description
 #' Converts `number` to a string in the given base `radix`, optionally padding with leading zeros to `min_length`.
 #'
 #' @name to_base
@@ -4009,6 +4798,7 @@ to_base <- function(number = BIGINT, radix = INTEGER, min_length = INTEGER) {
 
 #' DuckDB function to_base64
 #'
+#' @description
 #' Converts a `blob` to a base64 encoded string.
 #'
 #' @name to_base64
@@ -4022,8 +4812,29 @@ to_base64 <- function(blob = BLOB) {
   stop("DuckDB function to_base64() is not available in R.")
 }
 
+#' DuckDB function to_binary
+#'
+#' @description
+#' Converts the `string` to binary representation.
+#'
+#' Converts the `value` to binary representation.
+#'
+#' @name to_binary
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param value `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`
+#' @examples
+#' \dontrun{
+#' to_binary('Aa')
+#' to_binary(42)
+#' }
+to_binary <- function(string = VARCHAR, value = `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`) {
+  stop("DuckDB function to_binary() is not available in R.")
+}
+
 #' DuckDB function to_centuries
 #'
+#' @description
 #' Construct a century interval.
 #'
 #' @name to_centuries
@@ -4039,6 +4850,7 @@ to_centuries <- function(integer = `INTEGER | BIGINT`) {
 
 #' DuckDB function to_days
 #'
+#' @description
 #' Construct a day interval.
 #'
 #' @name to_days
@@ -4054,6 +4866,7 @@ to_days <- function(integer = `INTEGER | BIGINT`) {
 
 #' DuckDB function to_decades
 #'
+#' @description
 #' Construct a decade interval.
 #'
 #' @name to_decades
@@ -4067,8 +4880,33 @@ to_decades <- function(integer = `INTEGER | BIGINT`) {
   stop("DuckDB function to_decades() is not available in R.")
 }
 
+#' DuckDB function to_hex
+#'
+#' @description
+#' Converts the `string` to hexadecimal representation.
+#'
+#' Converts the `value` to `VARCHAR` using hexadecimal representation.
+#'
+#' Converts `blob` to `VARCHAR` using hexadecimal encoding.
+#'
+#' @name to_hex
+#' @usage NULL
+#' @param string `VARCHAR`
+#' @param value `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`
+#' @param blob `BLOB`
+#' @examples
+#' \dontrun{
+#' to_hex('Hello')
+#' to_hex(42)
+#' to_hex('\xAA\xBB'::BLOB)
+#' }
+to_hex <- function(string = VARCHAR, value = `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`, blob = BLOB) {
+  stop("DuckDB function to_hex() is not available in R.")
+}
+
 #' DuckDB function to_hours
 #'
+#' @description
 #' Construct a hour interval.
 #'
 #' @name to_hours
@@ -4084,6 +4922,7 @@ to_hours <- function(integer = BIGINT) {
 
 #' DuckDB function to_microseconds
 #'
+#' @description
 #' Construct a microsecond interval.
 #'
 #' @name to_microseconds
@@ -4099,6 +4938,7 @@ to_microseconds <- function(integer = BIGINT) {
 
 #' DuckDB function to_millennia
 #'
+#' @description
 #' Construct a millenium interval.
 #'
 #' @name to_millennia
@@ -4114,6 +4954,7 @@ to_millennia <- function(integer = `INTEGER | BIGINT`) {
 
 #' DuckDB function to_milliseconds
 #'
+#' @description
 #' Construct a millisecond interval.
 #'
 #' @name to_milliseconds
@@ -4129,6 +4970,7 @@ to_milliseconds <- function(double = DOUBLE) {
 
 #' DuckDB function to_minutes
 #'
+#' @description
 #' Construct a minute interval.
 #'
 #' @name to_minutes
@@ -4144,6 +4986,7 @@ to_minutes <- function(integer = BIGINT) {
 
 #' DuckDB function to_months
 #'
+#' @description
 #' Construct a month interval.
 #'
 #' @name to_months
@@ -4159,6 +5002,7 @@ to_months <- function(integer = `INTEGER | BIGINT`) {
 
 #' DuckDB function to_quarters
 #'
+#' @description
 #' Construct a quarter interval.
 #'
 #' @name to_quarters
@@ -4174,6 +5018,7 @@ to_quarters <- function(integer = `INTEGER | BIGINT`) {
 
 #' DuckDB function to_seconds
 #'
+#' @description
 #' Construct a second interval.
 #'
 #' @name to_seconds
@@ -4189,6 +5034,7 @@ to_seconds <- function(double = DOUBLE) {
 
 #' DuckDB function to_timestamp
 #'
+#' @description
 #' Converts secs since epoch to a timestamp with time zone.
 #'
 #' @name to_timestamp
@@ -4204,6 +5050,7 @@ to_timestamp <- function(sec = DOUBLE) {
 
 #' DuckDB function to_weeks
 #'
+#' @description
 #' Construct a week interval.
 #'
 #' @name to_weeks
@@ -4219,6 +5066,7 @@ to_weeks <- function(integer = `INTEGER | BIGINT`) {
 
 #' DuckDB function to_years
 #'
+#' @description
 #' Construct a year interval.
 #'
 #' @name to_years
@@ -4234,6 +5082,7 @@ to_years <- function(integer = `INTEGER | BIGINT`) {
 
 #' DuckDB function translate
 #'
+#' @description
 #' Replaces each character in `string` that matches a character in the `from` set with the corresponding character in the `to` set. If `from` is longer than `to`, occurrences of the extra characters in `from` are deleted.
 #'
 #' @name translate
@@ -4251,6 +5100,7 @@ translate <- function(string = VARCHAR, from = VARCHAR, to = VARCHAR) {
 
 #' DuckDB function trim
 #'
+#' @description
 #' Removes any occurrences of any of the `characters` from either side of the `string`. `characters` defaults to `space`.
 #'
 #' @name trim
@@ -4267,6 +5117,7 @@ trim <- function(string = VARCHAR, characters = VARCHAR) {
 
 #' DuckDB function trunc
 #'
+#' @description
 #' Truncates the number.
 #'
 #' @name trunc
@@ -4283,6 +5134,7 @@ trunc <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT |
 
 #' DuckDB function try_strptime
 #'
+#' @description
 #' Converts the `string` text to timestamp according to the format string. Returns `NULL` on failure.
 #'
 #' @name try_strptime
@@ -4299,6 +5151,7 @@ try_strptime <- function(text = VARCHAR, format = `VARCHAR | VARCHAR[]`) {
 
 #' DuckDB function typeof
 #'
+#' @description
 #' Returns the name of the data type of the result of the expression.
 #'
 #' @name typeof
@@ -4314,6 +5167,7 @@ typeof <- function(expression = ANY) {
 
 #' DuckDB function ucase
 #'
+#' @description
 #' Converts `string` to upper case.
 #'
 #' @name ucase
@@ -4329,6 +5183,7 @@ ucase <- function(string = VARCHAR) {
 
 #' DuckDB function unbin
 #'
+#' @description
 #' Converts a `value` from binary representation to a blob.
 #'
 #' @name unbin
@@ -4344,6 +5199,7 @@ unbin <- function(value = VARCHAR) {
 
 #' DuckDB function unhex
 #'
+#' @description
 #' Converts a `value` from hexadecimal representation to a blob.
 #'
 #' @name unhex
@@ -4359,6 +5215,7 @@ unhex <- function(value = VARCHAR) {
 
 #' DuckDB function unicode
 #'
+#' @description
 #' Returns an `INTEGER` representing the `unicode` codepoint of the first character in the `string`.
 #'
 #' @name unicode
@@ -4374,6 +5231,7 @@ unicode <- function(string = VARCHAR) {
 
 #' DuckDB function union_extract
 #'
+#' @description
 #' Extract the value with the named tags from the union. NULL if the tag is not currently selected.
 #'
 #' @name union_extract
@@ -4390,6 +5248,7 @@ union_extract <- function(union = UNION, tag = VARCHAR) {
 
 #' DuckDB function union_tag
 #'
+#' @description
 #' Retrieve the currently selected tag of the union as an ENUM.
 #'
 #' @name union_tag
@@ -4405,6 +5264,7 @@ union_tag <- function(union = UNION) {
 
 #' DuckDB function upper
 #'
+#' @description
 #' Converts `string` to upper case.
 #'
 #' @name upper
@@ -4420,6 +5280,7 @@ upper <- function(string = VARCHAR) {
 
 #' DuckDB function url_decode
 #'
+#' @description
 #' Decodes a URL from a representation using Percent-Encoding.
 #'
 #' @name url_decode
@@ -4435,6 +5296,7 @@ url_decode <- function(string = VARCHAR) {
 
 #' DuckDB function url_encode
 #'
+#' @description
 #' Encodes a URL to a representation using Percent-Encoding.
 #'
 #' @name url_encode
@@ -4450,6 +5312,7 @@ url_encode <- function(string = VARCHAR) {
 
 #' DuckDB function uuid_extract_timestamp
 #'
+#' @description
 #' Extract the timestamp for the given UUID v7.
 #'
 #' @name uuid_extract_timestamp
@@ -4465,6 +5328,7 @@ uuid_extract_timestamp <- function(uuid = UUID) {
 
 #' DuckDB function uuid_extract_version
 #'
+#' @description
 #' Extract a version for the given UUID.
 #'
 #' @name uuid_extract_version
@@ -4478,8 +5342,26 @@ uuid_extract_version <- function(uuid = UUID) {
   stop("DuckDB function uuid_extract_version() is not available in R.")
 }
 
+#' DuckDB function variant_extract
+#'
+#' @description
+#' DuckDB function `variant_extract()`.
+#'
+#' @name variant_extract
+#' @usage NULL
+#' @param col0 `VARIANT`
+#' @param col1 `VARCHAR | UINTEGER`
+#' @examples
+#' \dontrun{
+#' character(0)
+#' }
+variant_extract <- function(col0 = VARIANT, col1 = `VARCHAR | UINTEGER`) {
+  stop("DuckDB function variant_extract() is not available in R.")
+}
+
 #' DuckDB function variant_typeof
 #'
+#' @description
 #' Returns the internal type of the `input_variant`.
 #'
 #' @name variant_typeof
@@ -4487,7 +5369,7 @@ uuid_extract_version <- function(uuid = UUID) {
 #' @param input_variant `VARIANT`
 #' @examples
 #' \dontrun{
-#' variant_typeof({'a': 42, 'b': [1,2,3]})
+#' variant_typeof({'a': 42, 'b': [1,2,3])::VARIANT)
 #' }
 variant_typeof <- function(input_variant = VARIANT) {
   stop("DuckDB function variant_typeof() is not available in R.")
@@ -4495,6 +5377,7 @@ variant_typeof <- function(input_variant = VARIANT) {
 
 #' DuckDB function vector_type
 #'
+#' @description
 #' Returns the VectorType of a given column.
 #'
 #' @name vector_type
@@ -4510,6 +5393,7 @@ vector_type <- function(col = ANY) {
 
 #' DuckDB function version
 #'
+#' @description
 #' Returns the currently active version of DuckDB in this format: v0.3.2	.
 #'
 #' @name version
@@ -4525,6 +5409,7 @@ version <- function() {
 
 #' DuckDB function week
 #'
+#' @description
 #' Extract the week component from a date or timestamp.
 #'
 #' @name week
@@ -4540,6 +5425,7 @@ week <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) 
 
 #' DuckDB function weekday
 #'
+#' @description
 #' Extract the weekday component from a date or timestamp.
 #'
 #' @name weekday
@@ -4555,6 +5441,7 @@ weekday <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 
 #' DuckDB function weekofyear
 #'
+#' @description
 #' Extract the weekofyear component from a date or timestamp.
 #'
 #' @name weekofyear
@@ -4570,6 +5457,7 @@ weekofyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME Z
 
 #' DuckDB function xor
 #'
+#' @description
 #' Bitwise XOR.
 #'
 #' @name xor
@@ -4586,6 +5474,7 @@ xor <- function(left = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYI
 
 #' DuckDB function year
 #'
+#' @description
 #' Extract the year component from a date or timestamp.
 #'
 #' @name year
@@ -4601,6 +5490,7 @@ year <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) 
 
 #' DuckDB function yearweek
 #'
+#' @description
 #' Extract the yearweek component from a date or timestamp.
 #'
 #' @name yearweek
