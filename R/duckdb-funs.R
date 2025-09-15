@@ -2519,6 +2519,108 @@ create_sort_key <- function(parameters... = ANY) {
   stop("DuckDB function create_sort_key() is not available in R.")
 }
 
+#' DuckDB function current_connection_id
+#'
+#' @description
+#' Get the current connection_id.
+#'
+#' @name current_connection_id
+#' @usage current_connection_id()
+
+#' @return `UBIGINT`
+#' @examples
+#' \dontrun{
+#' current_connection_id()
+#' }
+current_connection_id <- function() {
+  stop("DuckDB function current_connection_id() is not available in R.")
+}
+
+#' DuckDB function current_database
+#'
+#' @description
+#' Returns the name of the currently active database.
+#'
+#' @name current_database
+#' @usage current_database()
+
+#' @return `VARCHAR`
+#' @examples
+#' \dontrun{
+#' current_database()
+#' }
+current_database <- function() {
+  stop("DuckDB function current_database() is not available in R.")
+}
+
+#' DuckDB function current_query
+#'
+#' @description
+#' Returns the current query as a string.
+#'
+#' @name current_query
+#' @usage current_query()
+
+#' @return `VARCHAR`
+#' @examples
+#' \dontrun{
+#' current_query()
+#' }
+current_query <- function() {
+  stop("DuckDB function current_query() is not available in R.")
+}
+
+#' DuckDB function current_query_id
+#'
+#' @description
+#' Get the current query_id.
+#'
+#' @name current_query_id
+#' @usage current_query_id()
+
+#' @return `UBIGINT`
+#' @examples
+#' \dontrun{
+#' current_query_id()
+#' }
+current_query_id <- function() {
+  stop("DuckDB function current_query_id() is not available in R.")
+}
+
+#' DuckDB function current_schema
+#'
+#' @description
+#' Returns the name of the currently active schema. Default is main.
+#'
+#' @name current_schema
+#' @usage current_schema()
+
+#' @return `VARCHAR`
+#' @examples
+#' \dontrun{
+#' current_schema()
+#' }
+current_schema <- function() {
+  stop("DuckDB function current_schema() is not available in R.")
+}
+
+#' DuckDB function current_schemas
+#'
+#' @description
+#' Returns list of schemas. Pass a parameter of True to include implicit schemas.
+#'
+#' @name current_schemas
+#' @usage current_schemas(include_implicit = BOOLEAN)
+#' @param include_implicit `BOOLEAN`
+#' @return `VARCHAR[]`
+#' @examples
+#' \dontrun{
+#' current_schemas(true)
+#' }
+current_schemas <- function(include_implicit = BOOLEAN) {
+  stop("DuckDB function current_schemas() is not available in R.")
+}
+
 #' DuckDB function current_setting
 #'
 #' @description
@@ -2534,6 +2636,40 @@ create_sort_key <- function(parameters... = ANY) {
 #' }
 current_setting <- function(setting_name = VARCHAR) {
   stop("DuckDB function current_setting() is not available in R.")
+}
+
+#' DuckDB function current_transaction_id
+#'
+#' @description
+#' Get the current global transaction_id.
+#'
+#' @name current_transaction_id
+#' @usage current_transaction_id()
+
+#' @return `UBIGINT`
+#' @examples
+#' \dontrun{
+#' current_transaction_id()
+#' }
+current_transaction_id <- function() {
+  stop("DuckDB function current_transaction_id() is not available in R.")
+}
+
+#' DuckDB function currval
+#'
+#' @description
+#' Return the current value of the sequence. Note that nextval must be called at least once prior to calling currval.
+#'
+#' @name currval
+#' @usage currval(`'sequence_name'` = VARCHAR)
+#' @param 'sequence_name' `VARCHAR`
+#' @return `BIGINT`
+#' @examples
+#' \dontrun{
+#' currval('my_sequence_name')
+#' }
+currval <- function(`'sequence_name'` = VARCHAR) {
+  stop("DuckDB function currval() is not available in R.")
 }
 
 #' DuckDB function damerau_levenshtein
@@ -3135,6 +3271,23 @@ era <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function era() is not available in R.")
 }
 
+#' DuckDB function error
+#'
+#' @description
+#' Throws the given error message.
+#'
+#' @name error
+#' @usage error(message = VARCHAR)
+#' @param message `VARCHAR`
+#' @return `"NULL"`
+#' @examples
+#' \dontrun{
+#' error('access_mode')
+#' }
+error <- function(message = VARCHAR) {
+  stop("DuckDB function error() is not available in R.")
+}
+
 #' DuckDB function even
 #'
 #' @description
@@ -3460,6 +3613,23 @@ gcd <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
   stop("DuckDB function gcd() is not available in R.")
 }
 
+#' DuckDB function gen_random_uuid
+#'
+#' @description
+#' Returns a random UUID v4 similar to this: eeccb8c5-9943-b2bb-bb5e-222f4e14b687.
+#'
+#' @name gen_random_uuid
+#' @usage gen_random_uuid()
+
+#' @return `UUID`
+#' @examples
+#' \dontrun{
+#' gen_random_uuid()
+#' }
+gen_random_uuid <- function() {
+  stop("DuckDB function gen_random_uuid() is not available in R.")
+}
+
 #' DuckDB function generate_series
 #'
 #' @description
@@ -3495,6 +3665,23 @@ generate_series <- function(start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZO
 #' }
 get_bit <- function(bitstring = BIT, index = INTEGER) {
   stop("DuckDB function get_bit() is not available in R.")
+}
+
+#' DuckDB function get_current_timestamp
+#'
+#' @description
+#' Returns the current timestamp.
+#'
+#' @name get_current_timestamp
+#' @usage get_current_timestamp()
+
+#' @return `TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' get_current_timestamp()
+#' }
+get_current_timestamp <- function() {
+  stop("DuckDB function get_current_timestamp() is not available in R.")
 }
 
 #' DuckDB function getvariable
@@ -3716,6 +3903,24 @@ hour <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE 
 #' }
 ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
   stop("DuckDB function ilike_escape() is not available in R.")
+}
+
+#' DuckDB function in_search_path
+#'
+#' @description
+#' Returns whether or not the database/schema are in the search path.
+#'
+#' @name in_search_path
+#' @usage in_search_path(database_name = VARCHAR, schema_name = VARCHAR)
+#' @param database_name `VARCHAR`
+#' @param schema_name `VARCHAR`
+#' @return `BOOLEAN`
+#' @examples
+#' \dontrun{
+#' in_search_path('memory', 'main')
+#' }
+in_search_path <- function(database_name = VARCHAR, schema_name = VARCHAR) {
+  stop("DuckDB function in_search_path() is not available in R.")
 }
 
 #' DuckDB function instr
@@ -5620,6 +5825,23 @@ nextafter <- function(x = `DOUBLE | FLOAT`, y = `DOUBLE | FLOAT`) {
   stop("DuckDB function nextafter() is not available in R.")
 }
 
+#' DuckDB function nextval
+#'
+#' @description
+#' Return the following value of the sequence.
+#'
+#' @name nextval
+#' @usage nextval(`'sequence_name'` = VARCHAR)
+#' @param 'sequence_name' `VARCHAR`
+#' @return `BIGINT`
+#' @examples
+#' \dontrun{
+#' nextval('my_sequence_name')
+#' }
+nextval <- function(`'sequence_name'` = VARCHAR) {
+  stop("DuckDB function nextval() is not available in R.")
+}
+
 #' DuckDB function nfc_normalize
 #'
 #' @description
@@ -5690,6 +5912,23 @@ not_ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_
 #' }
 not_like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
   stop("DuckDB function not_like_escape() is not available in R.")
+}
+
+#' DuckDB function now
+#'
+#' @description
+#' Returns the current timestamp.
+#'
+#' @name now
+#' @usage now()
+
+#' @return `TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' now()
+#' }
+now <- function() {
+  stop("DuckDB function now() is not available in R.")
 }
 
 #' DuckDB function octet_length
@@ -6030,6 +6269,23 @@ quarter <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' }
 radians <- function(x = DOUBLE) {
   stop("DuckDB function radians() is not available in R.")
+}
+
+#' DuckDB function random
+#'
+#' @description
+#' Returns a random number between 0 and 1.
+#'
+#' @name random
+#' @usage random()
+
+#' @return `DOUBLE`
+#' @examples
+#' \dontrun{
+#' random()
+#' }
+random <- function() {
+  stop("DuckDB function random() is not available in R.")
 }
 
 #' DuckDB function range
@@ -6633,6 +6889,23 @@ set_bit <- function(bitstring = BIT, index = INTEGER, new_value = INTEGER) {
   stop("DuckDB function set_bit() is not available in R.")
 }
 
+#' DuckDB function setseed
+#'
+#' @description
+#' Sets the seed to be used for the random function.
+#'
+#' @name setseed
+#' @usage setseed(col0 = DOUBLE)
+#' @param col0 `DOUBLE`
+#' @return `"NULL"`
+#' @examples
+#' \dontrun{
+#' setseed(0.42)
+#' }
+setseed <- function(col0 = DOUBLE) {
+  stop("DuckDB function setseed() is not available in R.")
+}
+
 #' DuckDB function sha1
 #'
 #' @description
@@ -6811,6 +7084,23 @@ sqrt <- function(x = DOUBLE) {
 #' }
 starts_with <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function starts_with() is not available in R.")
+}
+
+#' DuckDB function stats
+#'
+#' @description
+#' Returns a string with statistics about the expression. Expression can be a column, constant, or SQL expression.
+#'
+#' @name stats
+#' @usage stats(expression = ANY)
+#' @param expression `ANY`
+#' @return `VARCHAR`
+#' @examples
+#' \dontrun{
+#' stats(5)
+#' }
+stats <- function(expression = ANY) {
+  stop("DuckDB function stats() is not available in R.")
 }
 
 #' DuckDB function stddev
@@ -7810,6 +8100,23 @@ to_years <- function(integer = `INTEGER | BIGINT`) {
   stop("DuckDB function to_years() is not available in R.")
 }
 
+#' DuckDB function transaction_timestamp
+#'
+#' @description
+#' Returns the current timestamp.
+#'
+#' @name transaction_timestamp
+#' @usage transaction_timestamp()
+
+#' @return `TIMESTAMP WITH TIME ZONE`
+#' @examples
+#' \dontrun{
+#' transaction_timestamp()
+#' }
+transaction_timestamp <- function() {
+  stop("DuckDB function transaction_timestamp() is not available in R.")
+}
+
 #' DuckDB function translate
 #'
 #' @description
@@ -7881,6 +8188,23 @@ trunc <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT |
 #' }
 try_strptime <- function(text = VARCHAR, format = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function try_strptime() is not available in R.")
+}
+
+#' DuckDB function txid_current
+#'
+#' @description
+#' Returns the current transaction’s ID (a BIGINT). It will assign a new one if the current transaction does not have one already.
+#'
+#' @name txid_current
+#' @usage txid_current()
+
+#' @return `UBIGINT`
+#' @examples
+#' \dontrun{
+#' txid_current()
+#' }
+txid_current <- function() {
+  stop("DuckDB function txid_current() is not available in R.")
 }
 
 #' DuckDB function typeof
@@ -8088,6 +8412,23 @@ url_encode <- function(string = VARCHAR) {
   stop("DuckDB function url_encode() is not available in R.")
 }
 
+#' DuckDB function uuid
+#'
+#' @description
+#' Returns a random UUID v4 similar to this: eeccb8c5-9943-b2bb-bb5e-222f4e14b687.
+#'
+#' @name uuid
+#' @usage uuid()
+
+#' @return `UUID`
+#' @examples
+#' \dontrun{
+#' uuid()
+#' }
+uuid <- function() {
+  stop("DuckDB function uuid() is not available in R.")
+}
+
 #' DuckDB function uuid_extract_timestamp
 #'
 #' @description
@@ -8120,6 +8461,40 @@ uuid_extract_timestamp <- function(uuid = UUID) {
 #' }
 uuid_extract_version <- function(uuid = UUID) {
   stop("DuckDB function uuid_extract_version() is not available in R.")
+}
+
+#' DuckDB function uuidv4
+#'
+#' @description
+#' Returns a random UUIDv4 similar to this: eeccb8c5-9943-b2bb-bb5e-222f4e14b687.
+#'
+#' @name uuidv4
+#' @usage uuidv4()
+
+#' @return `UUID`
+#' @examples
+#' \dontrun{
+#' uuidv4()
+#' }
+uuidv4 <- function() {
+  stop("DuckDB function uuidv4() is not available in R.")
+}
+
+#' DuckDB function uuidv7
+#'
+#' @description
+#' Returns a random UUID v7 similar to this: 019482e4-1441-7aad-8127-eec99573b0a0.
+#'
+#' @name uuidv7
+#' @usage uuidv7()
+
+#' @return `UUID`
+#' @examples
+#' \dontrun{
+#' uuidv7()
+#' }
+uuidv7 <- function() {
+  stop("DuckDB function uuidv7() is not available in R.")
 }
 
 #' DuckDB function var_pop
@@ -8291,6 +8666,23 @@ weekday <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' }
 weekofyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function weekofyear() is not available in R.")
+}
+
+#' DuckDB function write_log
+#'
+#' @description
+#' Writes to the logger.
+#'
+#' @name write_log
+#' @usage write_log(string = VARCHAR)
+#' @param string `VARCHAR`
+#' @return `ANY`
+#' @examples
+#' \dontrun{
+#' write_log('Hello')
+#' }
+write_log <- function(string = VARCHAR) {
+  stop("DuckDB function write_log() is not available in R.")
 }
 
 #' DuckDB function xor

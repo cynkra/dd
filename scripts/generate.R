@@ -94,14 +94,11 @@ funs <-
   as_tibble() |>
   select(-database_name, -database_oid, -schema_name, -function_oid, -comment, -tags) |>
   # FIXME: Understand meaning of `varargs`
-  filter_print(!has_side_effects) |>
-  select(-has_side_effects) |>
+  # FIXME: Why is this called `has_side_effects`? Called "deterministic" elsewhere.
   filter_print(is.na(macro_definition)) |>
   select(-macro_definition) |>
   filter_print(internal) |>
   select(-internal) |>
-  filter_print(stability == "CONSISTENT") |>
-  select(-stability) |>
   # FIXME: Add support if return type is not given.
   filter_print(!is.na(return_type)) |>
   summarize(
