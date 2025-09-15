@@ -3,11 +3,11 @@
 \name{list_pack}
 \alias{list_pack}
 \title{DuckDB function list_pack}
-\usage{
-list_pack()
+\arguments{
+\item{any}{\code{T}}
 }
 \value{
-\code{"NULL"[]}
+\code{"NULL"[] | T[]}
 }
 \description{
 Creates a LIST containing the argument values.

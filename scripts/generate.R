@@ -14,9 +14,12 @@ filter_print <- function(.data, expr) {
     .data |>
     filter(!!quo)
 
+  delta <- unique(setdiff(.data$function_name, out$function_name))
+
   cli::cli_inform(c(
     "{.expr {rlang::quo_text(quo)}}",
-    i = "{nrow(.data)} -> {nrow(out)}"
+    i = "{nrow(.data)} -> {nrow(out)}",
+    i = if (length(delta) > 0) "{delta}"
   ))
 
   out
@@ -90,8 +93,7 @@ funs <-
   DBI::dbGetQuery(con, "FROM duckdb_functions()") |>
   as_tibble() |>
   select(-database_name, -database_oid, -schema_name, -function_oid, -comment, -tags) |>
-  filter_print(is.na(varargs)) |>
-  select(-varargs) |>
+  # FIXME: Understand meaning of `varargs`
   filter_print(!has_side_effects) |>
   select(-has_side_effects) |>
   filter_print(is.na(macro_definition)) |>

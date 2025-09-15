@@ -152,7 +152,7 @@
 #' @usage NULL
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
-#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | BIGNUM`
+#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | ANY[] | BIGNUM`
 #' @examples
 #' \dontrun{
 #' character(0)
@@ -753,7 +753,7 @@ acosh <- function(x = DOUBLE) {
 #' @usage NULL
 #' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
-#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | BIGNUM`
+#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | ANY[] | BIGNUM`
 #' @examples
 #' \dontrun{
 #' character(0)
@@ -777,6 +777,24 @@ add <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT 
 #' }
 age <- function(timestamp = `TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function age() is not available in R.")
+}
+
+#' DuckDB function aggregate
+#'
+#' @description
+#' Executes the aggregate function `function_name` on the elements of `list`.
+#'
+#' @name aggregate
+#' @usage aggregate(list = `ANY[]`, function_name = VARCHAR)
+#' @param list `ANY[]`
+#' @param function_name `VARCHAR`
+#' @return `ANY`
+#' @examples
+#' \dontrun{
+#' aggregate([1, 2, NULL], 'min')
+#' }
+aggregate <- function(list = `ANY[]`, function_name = VARCHAR) {
+  stop("DuckDB function aggregate() is not available in R.")
 }
 
 #' DuckDB function alias
@@ -1030,6 +1048,42 @@ array_agg <- function(arg = T) {
   stop("DuckDB function array_agg() is not available in R.")
 }
 
+#' DuckDB function array_aggr
+#'
+#' @description
+#' Executes the aggregate function `function_name` on the elements of `list`.
+#'
+#' @name array_aggr
+#' @usage array_aggr(list = `ANY[]`, function_name = VARCHAR)
+#' @param list `ANY[]`
+#' @param function_name `VARCHAR`
+#' @return `ANY`
+#' @examples
+#' \dontrun{
+#' array_aggr([1, 2, NULL], 'min')
+#' }
+array_aggr <- function(list = `ANY[]`, function_name = VARCHAR) {
+  stop("DuckDB function array_aggr() is not available in R.")
+}
+
+#' DuckDB function array_aggregate
+#'
+#' @description
+#' Executes the aggregate function `function_name` on the elements of `list`.
+#'
+#' @name array_aggregate
+#' @usage array_aggregate(list = `ANY[]`, function_name = VARCHAR)
+#' @param list `ANY[]`
+#' @param function_name `VARCHAR`
+#' @return `ANY`
+#' @examples
+#' \dontrun{
+#' array_aggregate([1, 2, NULL], 'min')
+#' }
+array_aggregate <- function(list = `ANY[]`, function_name = VARCHAR) {
+  stop("DuckDB function array_aggregate() is not available in R.")
+}
+
 #' DuckDB function array_apply
 #'
 #' @description
@@ -1046,6 +1100,40 @@ array_agg <- function(arg = T) {
 #' }
 array_apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function array_apply() is not available in R.")
+}
+
+#' DuckDB function array_cat
+#'
+#' @description
+#' Concatenates lists. `NULL` inputs are skipped. See also operator `||`.
+#'
+#' @name array_cat
+#' @usage array_cat()
+
+#' @return `ANY[]`
+#' @examples
+#' \dontrun{
+#' array_cat([2, 3], [4, 5, 6], [7])
+#' }
+array_cat <- function() {
+  stop("DuckDB function array_cat() is not available in R.")
+}
+
+#' DuckDB function array_concat
+#'
+#' @description
+#' Concatenates lists. `NULL` inputs are skipped. See also operator `||`.
+#'
+#' @name array_concat
+#' @usage array_concat()
+
+#' @return `ANY[]`
+#' @examples
+#' \dontrun{
+#' array_concat([2, 3], [4, 5, 6], [7])
+#' }
+array_concat <- function() {
+  stop("DuckDB function array_concat() is not available in R.")
 }
 
 #' DuckDB function array_contains
@@ -1553,6 +1641,23 @@ array_unique <- function(list = `ANY[]`) {
   stop("DuckDB function array_unique() is not available in R.")
 }
 
+#' DuckDB function array_value
+#'
+#' @description
+#' Creates an `ARRAY` containing the argument values.
+#'
+#' @name array_value
+#' @usage array_value()
+
+#' @return `ARRAY`
+#' @examples
+#' \dontrun{
+#' array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT)
+#' }
+array_value <- function() {
+  stop("DuckDB function array_value() is not available in R.")
+}
+
 #' DuckDB function array_where
 #'
 #' @description
@@ -1569,6 +1674,23 @@ array_unique <- function(list = `ANY[]`) {
 #' }
 array_where <- function(value_list = `T[]`, mask_list = `BOOLEAN[]`) {
   stop("DuckDB function array_where() is not available in R.")
+}
+
+#' DuckDB function array_zip
+#'
+#' @description
+#' Zips n `LIST`s to a new `LIST` whose length will be that of the longest list. Its elements are structs of n elements from each list `list_1`, …, `list_n`, missing elements are replaced with `NULL`. If `truncate` is set, all lists are truncated to the smallest list length.
+#'
+#' @name array_zip
+#' @usage array_zip()
+
+#' @return `STRUCT[]`
+#' @examples
+#' \dontrun{
+#' c("array_zip([1, 2], [3, 4], [5, 6])", "array_zip([1, 2], [3, 4], [5, 6, 7])", "array_zip([1, 2], [3, 4], [5, 6, 7], true)")
+#' }
+array_zip <- function() {
+  stop("DuckDB function array_zip() is not available in R.")
 }
 
 #' DuckDB function ascii
@@ -1945,6 +2067,23 @@ can_cast_implicitly <- function(source_type = ANY, target_type = ANY) {
   stop("DuckDB function can_cast_implicitly() is not available in R.")
 }
 
+#' DuckDB function cardinality
+#'
+#' @description
+#' Returns the size of the map (or the number of entries in the map).
+#'
+#' @name cardinality
+#' @usage cardinality(map = ANY)
+#' @param map `ANY`
+#' @return `UBIGINT`
+#' @examples
+#' \dontrun{
+#' cardinality( map([4, 2], ['a', 'b']) );
+#' }
+cardinality <- function(map = ANY) {
+  stop("DuckDB function cardinality() is not available in R.")
+}
+
 #' DuckDB function cast_to_type
 #'
 #' @description
@@ -2114,6 +2253,59 @@ chr <- function(code_point = INTEGER) {
 #' }
 combine <- function(col0 = `AGGREGATE_STATE<?>`, col1 = ANY) {
   stop("DuckDB function combine() is not available in R.")
+}
+
+#' DuckDB function concat
+#'
+#' @description
+#' Concatenates multiple strings or lists. `NULL` inputs are skipped. See also operator `||`.
+#'
+#' @name concat
+#' @usage concat(value = ANY)
+#' @param value `ANY`
+#' @return `ANY`
+#' @examples
+#' \dontrun{
+#' c("concat('Hello', ' ', 'World')", "concat([1, 2, 3], NULL, [4, 5, 6])")
+#' }
+concat <- function(value = ANY) {
+  stop("DuckDB function concat() is not available in R.")
+}
+
+#' DuckDB function concat_ws
+#'
+#' @description
+#' Concatenates many strings, separated by `separator`. `NULL` inputs are skipped.
+#'
+#' @name concat_ws
+#' @usage concat_ws(separator = VARCHAR, string = ANY)
+#' @param separator `VARCHAR`
+#' @param string `ANY`
+#' @return `VARCHAR`
+#' @examples
+#' \dontrun{
+#' concat_ws(', ', 'Banana', 'Apple', 'Melon')
+#' }
+concat_ws <- function(separator = VARCHAR, string = ANY) {
+  stop("DuckDB function concat_ws() is not available in R.")
+}
+
+#' DuckDB function constant_or_null
+#'
+#' @description
+#' If arg2 is NULL, return NULL. Otherwise, return arg1.
+#'
+#' @name constant_or_null
+#' @usage constant_or_null(arg1 = ANY, arg2 = ANY)
+#' @param arg1 `ANY`
+#' @param arg2 `ANY`
+#' @return `ANY`
+#' @examples
+#' \dontrun{
+#' constant_or_null(42, NULL)
+#' }
+constant_or_null <- function(arg1 = ANY, arg2 = ANY) {
+  stop("DuckDB function constant_or_null() is not available in R.")
 }
 
 #' DuckDB function contains
@@ -2308,6 +2500,23 @@ covar_pop <- function(y = DOUBLE, x = DOUBLE) {
 #' }
 covar_samp <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function covar_samp() is not available in R.")
+}
+
+#' DuckDB function create_sort_key
+#'
+#' @description
+#' Constructs a binary-comparable sort key based on a set of input parameters and sort qualifiers.
+#'
+#' @name create_sort_key
+#' @usage create_sort_key(parameters... = ANY)
+#' @param parameters... `ANY`
+#' @return `BLOB`
+#' @examples
+#' \dontrun{
+#' create_sort_key('A', 'DESC')
+#' }
+create_sort_key <- function(parameters... = ANY) {
+  stop("DuckDB function create_sort_key() is not available in R.")
 }
 
 #' DuckDB function current_setting
@@ -3080,6 +3289,23 @@ floor <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
   stop("DuckDB function floor() is not available in R.")
 }
 
+#' DuckDB function format
+#'
+#' @description
+#' Formats a string using the fmt syntax.
+#'
+#' @name format
+#' @usage format(format = VARCHAR)
+#' @param format `VARCHAR`
+#' @return `VARCHAR`
+#' @examples
+#' \dontrun{
+#' format('Benchmark "{}" took {} seconds', 'CSV', 42)
+#' }
+format <- function(format = VARCHAR) {
+  stop("DuckDB function format() is not available in R.")
+}
+
 #' DuckDB function formatReadableDecimalSize
 #'
 #' @description
@@ -3307,6 +3533,23 @@ grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
   stop("DuckDB function grade_up() is not available in R.")
 }
 
+#' DuckDB function greatest
+#'
+#' @description
+#' Returns the largest value. For strings lexicographical ordering is used. Note that lowercase characters are considered “larger” than uppercase characters and collations are not supported.
+#'
+#' @name greatest
+#' @usage greatest(arg1 = ANY)
+#' @param arg1 `ANY`
+#' @return `ANY`
+#' @examples
+#' \dontrun{
+#' c("greatest(42, 84)", "greatest('abc', 'bcd', 'cde', 'EFG')")
+#' }
+greatest <- function(arg1 = ANY) {
+  stop("DuckDB function greatest() is not available in R.")
+}
+
 #' DuckDB function greatest_common_divisor
 #'
 #' @description
@@ -3359,6 +3602,23 @@ group_concat <- function(str = ANY, arg = VARCHAR) {
 #' }
 hamming <- function(s1 = VARCHAR, s2 = VARCHAR) {
   stop("DuckDB function hamming() is not available in R.")
+}
+
+#' DuckDB function hash
+#'
+#' @description
+#' Returns a `UBIGINT` with the hash of the `value`. Note that this is not a cryptographic hash.
+#'
+#' @name hash
+#' @usage hash(value = ANY)
+#' @param value `ANY`
+#' @return `UBIGINT`
+#' @examples
+#' \dontrun{
+#' hash('🦆')
+#' }
+hash <- function(value = ANY) {
+  stop("DuckDB function hash() is not available in R.")
 }
 
 #' DuckDB function hex
@@ -3771,6 +4031,23 @@ lcm <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
   stop("DuckDB function lcm() is not available in R.")
 }
 
+#' DuckDB function least
+#'
+#' @description
+#' Returns the smallest value. For strings lexicographical ordering is used. Note that uppercase characters are considered “smaller” than lowercase characters, and collations are not supported.
+#'
+#' @name least
+#' @usage least(arg1 = ANY)
+#' @param arg1 `ANY`
+#' @return `ANY`
+#' @examples
+#' \dontrun{
+#' c("least(42, 84)", "least('abc', 'bcd', 'cde', 'EFG')")
+#' }
+least <- function(arg1 = ANY) {
+  stop("DuckDB function least() is not available in R.")
+}
+
 #' DuckDB function least_common_multiple
 #'
 #' @description
@@ -3938,6 +4215,42 @@ list <- function(arg = T) {
   stop("DuckDB function list() is not available in R.")
 }
 
+#' DuckDB function list_aggr
+#'
+#' @description
+#' Executes the aggregate function `function_name` on the elements of `list`.
+#'
+#' @name list_aggr
+#' @usage list_aggr(list = `ANY[]`, function_name = VARCHAR)
+#' @param list `ANY[]`
+#' @param function_name `VARCHAR`
+#' @return `ANY`
+#' @examples
+#' \dontrun{
+#' list_aggregate([1, 2, NULL], 'min')
+#' }
+list_aggr <- function(list = `ANY[]`, function_name = VARCHAR) {
+  stop("DuckDB function list_aggr() is not available in R.")
+}
+
+#' DuckDB function list_aggregate
+#'
+#' @description
+#' Executes the aggregate function `function_name` on the elements of `list`.
+#'
+#' @name list_aggregate
+#' @usage list_aggregate(list = `ANY[]`, function_name = VARCHAR)
+#' @param list `ANY[]`
+#' @param function_name `VARCHAR`
+#' @return `ANY`
+#' @examples
+#' \dontrun{
+#' list_aggregate([1, 2, NULL], 'min')
+#' }
+list_aggregate <- function(list = `ANY[]`, function_name = VARCHAR) {
+  stop("DuckDB function list_aggregate() is not available in R.")
+}
+
 #' DuckDB function list_apply
 #'
 #' @description
@@ -3954,6 +4267,40 @@ list <- function(arg = T) {
 #' }
 list_apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
   stop("DuckDB function list_apply() is not available in R.")
+}
+
+#' DuckDB function list_cat
+#'
+#' @description
+#' Concatenates lists. `NULL` inputs are skipped. See also operator `||`.
+#'
+#' @name list_cat
+#' @usage list_cat()
+
+#' @return `ANY[]`
+#' @examples
+#' \dontrun{
+#' list_cat([2, 3], [4, 5, 6], [7])
+#' }
+list_cat <- function() {
+  stop("DuckDB function list_cat() is not available in R.")
+}
+
+#' DuckDB function list_concat
+#'
+#' @description
+#' Concatenates lists. `NULL` inputs are skipped. See also operator `||`.
+#'
+#' @name list_concat
+#' @usage list_concat()
+
+#' @return `ANY[]`
+#' @examples
+#' \dontrun{
+#' list_concat([2, 3], [4, 5, 6], [7])
+#' }
+list_concat <- function() {
+  stop("DuckDB function list_concat() is not available in R.")
 }
 
 #' DuckDB function list_contains
@@ -4268,14 +4615,14 @@ list_negative_inner_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `F
 #' Creates a LIST containing the argument values.
 #'
 #' @name list_pack
-#' @usage list_pack()
-
-#' @return `"NULL"[]`
+#' @usage NULL
+#' @param any `T`
+#' @return `"NULL"[] | T[]`
 #' @examples
 #' \dontrun{
 #' list_pack(4, 5, 6)
 #' }
-list_pack <- function() {
+list_pack <- function(any = T) {
   stop("DuckDB function list_pack() is not available in R.")
 }
 
@@ -4454,14 +4801,14 @@ list_unique <- function(list = `ANY[]`) {
 #' Creates a LIST containing the argument values.
 #'
 #' @name list_value
-#' @usage list_value()
-
-#' @return `"NULL"[]`
+#' @usage NULL
+#' @param any `T`
+#' @return `"NULL"[] | T[]`
 #' @examples
 #' \dontrun{
 #' list_value(4, 5, 6)
 #' }
-list_value <- function() {
+list_value <- function(any = T) {
   stop("DuckDB function list_value() is not available in R.")
 }
 
@@ -4481,6 +4828,23 @@ list_value <- function() {
 #' }
 list_where <- function(value_list = `T[]`, mask_list = `BOOLEAN[]`) {
   stop("DuckDB function list_where() is not available in R.")
+}
+
+#' DuckDB function list_zip
+#'
+#' @description
+#' Zips n `LIST`s to a new `LIST` whose length will be that of the longest list. Its elements are structs of n elements from each list `list_1`, …, `list_n`, missing elements are replaced with `NULL`. If `truncate` is set, all lists are truncated to the smallest list length.
+#'
+#' @name list_zip
+#' @usage list_zip()
+
+#' @return `STRUCT[]`
+#' @examples
+#' \dontrun{
+#' c("list_zip([1, 2], [3, 4], [5, 6])", "list_zip([1, 2], [3, 4], [5, 6, 7])", "list_zip([1, 2], [3, 4], [5, 6, 7], true)")
+#' }
+list_zip <- function() {
+  stop("DuckDB function list_zip() is not available in R.")
 }
 
 #' DuckDB function listagg
@@ -4757,6 +5121,23 @@ make_timestamp_ns <- function(nanos = BIGINT) {
 #' }
 map <- function(keys = `K[]`, values = `V[]`) {
   stop("DuckDB function map() is not available in R.")
+}
+
+#' DuckDB function map_concat
+#'
+#' @description
+#' Returns a map created from merging the input maps, on key collision the value is taken from the last map with that key.
+#'
+#' @name map_concat
+#' @usage map_concat()
+
+#' @return `LIST`
+#' @examples
+#' \dontrun{
+#' map_concat(map([1, 2], ['a', 'b']), map([2, 3], ['c', 'd']));
+#' }
+map_concat <- function() {
+  stop("DuckDB function map_concat() is not available in R.")
 }
 
 #' DuckDB function map_contains
@@ -5529,6 +5910,23 @@ prefix <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function prefix() is not available in R.")
 }
 
+#' DuckDB function printf
+#'
+#' @description
+#' Formats a `string` using printf syntax.
+#'
+#' @name printf
+#' @usage printf(format = VARCHAR)
+#' @param format `VARCHAR`
+#' @return `VARCHAR`
+#' @examples
+#' \dontrun{
+#' printf('Benchmark "%s" took %d seconds', 'CSV', 42)
+#' }
+printf <- function(format = VARCHAR) {
+  stop("DuckDB function printf() is not available in R.")
+}
+
 #' DuckDB function product
 #'
 #' @description
@@ -6128,6 +6526,23 @@ round <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT |
   stop("DuckDB function round() is not available in R.")
 }
 
+#' DuckDB function row
+#'
+#' @description
+#' Create an unnamed STRUCT (tuple) containing the argument values.
+#'
+#' @name row
+#' @usage row()
+
+#' @return `STRUCT`
+#' @examples
+#' \dontrun{
+#' row(i, i % 4, i / 4)
+#' }
+row <- function() {
+  stop("DuckDB function row() is not available in R.")
+}
+
 #' DuckDB function rpad
 #'
 #' @description
@@ -6651,6 +7066,23 @@ strptime <- function(text = VARCHAR, format = VARCHAR, `format-list` = `VARCHAR[
   stop("DuckDB function strptime() is not available in R.")
 }
 
+#' DuckDB function struct_concat
+#'
+#' @description
+#' Merge the multiple STRUCTs into a single STRUCT.
+#'
+#' @name struct_concat
+#' @usage struct_concat()
+
+#' @return `STRUCT`
+#' @examples
+#' \dontrun{
+#' struct_concat(struct_pack(i := 4), struct_pack(s := 'string'))
+#' }
+struct_concat <- function() {
+  stop("DuckDB function struct_concat() is not available in R.")
+}
+
 #' DuckDB function struct_contains
 #'
 #' @description
@@ -6723,6 +7155,40 @@ struct_indexof <- function(struct = STRUCT, `'entry'` = ANY) {
   stop("DuckDB function struct_indexof() is not available in R.")
 }
 
+#' DuckDB function struct_insert
+#'
+#' @description
+#' Adds field(s)/value(s) to an existing STRUCT with the argument values. The entry name(s) will be the bound variable name(s).
+#'
+#' @name struct_insert
+#' @usage struct_insert()
+
+#' @return `STRUCT`
+#' @examples
+#' \dontrun{
+#' struct_insert({'a': 1}, b := 2)
+#' }
+struct_insert <- function() {
+  stop("DuckDB function struct_insert() is not available in R.")
+}
+
+#' DuckDB function struct_pack
+#'
+#' @description
+#' Create a STRUCT containing the argument values. The entry name will be the bound variable name.
+#'
+#' @name struct_pack
+#' @usage struct_pack()
+
+#' @return `STRUCT`
+#' @examples
+#' \dontrun{
+#' struct_pack(i := 4, s := 'string')
+#' }
+struct_pack <- function() {
+  stop("DuckDB function struct_pack() is not available in R.")
+}
+
 #' DuckDB function struct_position
 #'
 #' @description
@@ -6739,6 +7205,23 @@ struct_indexof <- function(struct = STRUCT, `'entry'` = ANY) {
 #' }
 struct_position <- function(struct = STRUCT, `'entry'` = ANY) {
   stop("DuckDB function struct_position() is not available in R.")
+}
+
+#' DuckDB function struct_update
+#'
+#' @description
+#' Changes field(s)/value(s) to an existing STRUCT with the argument values. The entry name(s) will be the bound variable name(s).
+#'
+#' @name struct_update
+#' @usage struct_update()
+
+#' @return `STRUCT`
+#' @examples
+#' \dontrun{
+#' struct_update({'a': 1}, a := 2)
+#' }
+struct_update <- function() {
+  stop("DuckDB function struct_update() is not available in R.")
 }
 
 #' DuckDB function substr
@@ -7518,6 +8001,40 @@ union_extract <- function(union = UNION, tag = VARCHAR) {
 #' }
 union_tag <- function(union = UNION) {
   stop("DuckDB function union_tag() is not available in R.")
+}
+
+#' DuckDB function union_value
+#'
+#' @description
+#' Create a single member UNION containing the argument value. The tag of the value will be the bound variable name.
+#'
+#' @name union_value
+#' @usage union_value()
+
+#' @return `UNION`
+#' @examples
+#' \dontrun{
+#' union_value(k := 'hello')
+#' }
+union_value <- function() {
+  stop("DuckDB function union_value() is not available in R.")
+}
+
+#' DuckDB function unpivot_list
+#'
+#' @description
+#' Identical to list_value, but generated as part of unpivot for better error messages.
+#'
+#' @name unpivot_list
+#' @usage unpivot_list()
+
+#' @return `LIST`
+#' @examples
+#' \dontrun{
+#' unpivot_list(4, 5, 6)
+#' }
+unpivot_list <- function() {
+  stop("DuckDB function unpivot_list() is not available in R.")
 }
 
 #' DuckDB function upper
