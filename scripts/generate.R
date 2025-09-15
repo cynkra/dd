@@ -85,10 +85,6 @@ funs <-
   mutate(.by = function_name, n_desc = length(unique(description))) |>
   filter_print(n_desc == 1) |>
   select(-n_desc) |>
-  # FIXME: More than one overload
-  mutate(.by = function_name, n = n()) |>
-  filter_print(n <= 4) |>
-  select(-n) |>
   summarize(
     .by = function_name,
     alias_of = unique(alias_of),
