@@ -1,4 +1,17 @@
-url: ~
+url: https://cynkra.github.io/dd
+
 template:
+  assets: pkgdown/assets
+  package: cynkratemplate
   bootstrap: 5
 
+development:
+  mode: auto
+
+authors:
+  Kirill Müller:
+    href: http://krlmlr.info
+  cynkra GmbH:
+    html: <img src="https://cynkra.github.io/dm/reference/figures/cynkra-72.png"
+      height="16" alt="cynkra GmbH"/>
+    href: https://www.cynkra.com

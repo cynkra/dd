@@ -1,14 +1,20 @@
 Package: dd
-Title: All DuckDB Functions
+Title: DuckDB Functions
 Version: 0.0.0.9000
 Date: 2025-04-10
-Authors@R: 
-    person("Kirill", "Müller", , "kirill@cynkra.com", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0002-1416-3412"))
-Description: Lists all DuckDB functions for integration in R's help system.
+Authors@R:
+    c(
+      person("Kirill", "Müller", , "kirill@cynkra.com", role = c("aut", "cre"),
+             comment = c(ORCID = "0000-0002-1416-3412"),
+      person(given = "cynkra GmbH",
+             role = c("fnd", "cph"),
+             email = "mail@cynkra.com",
+             comment = c(ROR = "0335t7e62"))
+    )
+Description: Lists DuckDB functions for integration in R's help system.
 License: MIT + file LICENSE
-URL: https://github.com/krlmlr/dd, https://krlmlr.github.io/dd
-BugReports: https://github.com/krlmlr/dd/issues
+URL: https://github.com/krlmlr/dd, https://cynkra.github.io/dd
+BugReports: https://github.com/cynkra/dd/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3.9000
