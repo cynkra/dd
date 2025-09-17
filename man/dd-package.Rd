@@ -3,21 +3,17 @@
 \docType{package}
 \name{dd-package}
 \alias{dd-package}
-\title{dd: All DuckDB Functions}
+\title{dd: DuckDB Functions}
 \description{
-Lists all DuckDB functions for integration in R's help system.
+Lists DuckDB functions for integration in R's help system.
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{https://github.com/krlmlr/dd}
-  \item \url{https://krlmlr.github.io/dd}
-  \item Report bugs at \url{https://github.com/krlmlr/dd/issues}
+  \item \url{https://cynkra.github.io/dd}
+  \item Report bugs at \url{https://github.com/cynkra/dd/issues}
 }
-
-}
-\author{
-\strong{Maintainer}: Kirill Müller \email{kirill@cynkra.com} (\href{https://orcid.org/0000-0002-1416-3412}{ORCID})
 
 }
 \keyword{internal}
