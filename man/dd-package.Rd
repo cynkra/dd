@@ -3,7 +3,7 @@
 \docType{package}
 \name{dd-package}
 \alias{dd-package}
-\title{dd: DuckDB Functions}
+\title{dd: Functions Provided by DuckDB}
 \description{
 Lists DuckDB functions for integration in R's help system.
 }
