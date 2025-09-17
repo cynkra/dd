@@ -4925,25 +4925,6 @@ enable_checkpoint_on_shutdown <- function() {
   stop("DuckDB function enable_checkpoint_on_shutdown() is not available in R.")
 }
 
-#' DuckDB function enable_logging
-#'
-#' @description
-#' DuckDB function `enable_logging()`.
-#'
-#' @name enable_logging
-#' @usage enable_logging(level = VARCHAR, storage = VARCHAR, storage_config = ANY, storage_path = VARCHAR, storage_normalize = BOOLEAN, storage_buffer_size = UBIGINT)
-#' @param level `VARCHAR`
-#' @param storage `VARCHAR`
-#' @param storage_config `ANY`
-#' @param storage_path `VARCHAR`
-#' @param storage_normalize `BOOLEAN`
-#' @param storage_buffer_size `UBIGINT`
-#' @return Unspecified.
-#' @export
-enable_logging <- function(level = VARCHAR, storage = VARCHAR, storage_config = ANY, storage_path = VARCHAR, storage_normalize = BOOLEAN, storage_buffer_size = UBIGINT) {
-  stop("DuckDB function enable_logging() is not available in R.")
-}
-
 #' DuckDB function enable_object_cache
 #'
 #' @description
@@ -12226,66 +12207,6 @@ sinh <- function(x = DOUBLE) {
 #' ```
 skewness <- function(x = DOUBLE) {
   stop("DuckDB function skewness() is not available in R.")
-}
-
-#' DuckDB function sniff_csv
-#'
-#' @description
-#' DuckDB function `sniff_csv()`.
-#'
-#' @name sniff_csv
-#' @usage sniff_csv(col0 = VARCHAR, delim = VARCHAR, dateformat = VARCHAR, column_names = `VARCHAR[]`, sep = VARCHAR, hive_partitioning = BOOLEAN, header = BOOLEAN, escape = VARCHAR, allow_quoted_nulls = BOOLEAN, comment = VARCHAR, maximum_line_size = VARCHAR, new_line = VARCHAR, columns = ANY, rejects_limit = BIGINT, force_not_null = `VARCHAR[]`, timestampformat = VARCHAR, auto_detect = BOOLEAN, sample_size = BIGINT, auto_type_candidates = ANY, nullstr = ANY, encoding = VARCHAR, normalize_names = BOOLEAN, rejects_table = VARCHAR, column_types = ANY, skip = BIGINT, types = ANY, max_line_size = VARCHAR, quote = VARCHAR, rejects_scan = VARCHAR, ignore_errors = BOOLEAN, compression = VARCHAR, names = `VARCHAR[]`, force_match = BOOLEAN, store_rejects = BOOLEAN, all_varchar = BOOLEAN, buffer_size = UBIGINT, decimal_separator = VARCHAR, parallel = BOOLEAN, null_padding = BOOLEAN, dtypes = ANY, strict_mode = BOOLEAN, thousands = VARCHAR, files_to_sniff = BIGINT, filename = ANY, union_by_name = BOOLEAN, hive_types = ANY, hive_types_autocast = BOOLEAN)
-#' @param col0 `VARCHAR`
-#' @param delim `VARCHAR`
-#' @param dateformat `VARCHAR`
-#' @param column_names `VARCHAR[]`
-#' @param sep `VARCHAR`
-#' @param hive_partitioning `BOOLEAN`
-#' @param header `BOOLEAN`
-#' @param escape `VARCHAR`
-#' @param allow_quoted_nulls `BOOLEAN`
-#' @param comment `VARCHAR`
-#' @param maximum_line_size `VARCHAR`
-#' @param new_line `VARCHAR`
-#' @param columns `ANY`
-#' @param rejects_limit `BIGINT`
-#' @param force_not_null `VARCHAR[]`
-#' @param timestampformat `VARCHAR`
-#' @param auto_detect `BOOLEAN`
-#' @param sample_size `BIGINT`
-#' @param auto_type_candidates `ANY`
-#' @param nullstr `ANY`
-#' @param encoding `VARCHAR`
-#' @param normalize_names `BOOLEAN`
-#' @param rejects_table `VARCHAR`
-#' @param column_types `ANY`
-#' @param skip `BIGINT`
-#' @param types `ANY`
-#' @param max_line_size `VARCHAR`
-#' @param quote `VARCHAR`
-#' @param rejects_scan `VARCHAR`
-#' @param ignore_errors `BOOLEAN`
-#' @param compression `VARCHAR`
-#' @param names `VARCHAR[]`
-#' @param force_match `BOOLEAN`
-#' @param store_rejects `BOOLEAN`
-#' @param all_varchar `BOOLEAN`
-#' @param buffer_size `UBIGINT`
-#' @param decimal_separator `VARCHAR`
-#' @param parallel `BOOLEAN`
-#' @param null_padding `BOOLEAN`
-#' @param dtypes `ANY`
-#' @param strict_mode `BOOLEAN`
-#' @param thousands `VARCHAR`
-#' @param files_to_sniff `BIGINT`
-#' @param filename `ANY`
-#' @param union_by_name `BOOLEAN`
-#' @param hive_types `ANY`
-#' @param hive_types_autocast `BOOLEAN`
-#' @return Unspecified.
-#' @export
-sniff_csv <- function(col0 = VARCHAR, delim = VARCHAR, dateformat = VARCHAR, column_names = `VARCHAR[]`, sep = VARCHAR, hive_partitioning = BOOLEAN, header = BOOLEAN, escape = VARCHAR, allow_quoted_nulls = BOOLEAN, comment = VARCHAR, maximum_line_size = VARCHAR, new_line = VARCHAR, columns = ANY, rejects_limit = BIGINT, force_not_null = `VARCHAR[]`, timestampformat = VARCHAR, auto_detect = BOOLEAN, sample_size = BIGINT, auto_type_candidates = ANY, nullstr = ANY, encoding = VARCHAR, normalize_names = BOOLEAN, rejects_table = VARCHAR, column_types = ANY, skip = BIGINT, types = ANY, max_line_size = VARCHAR, quote = VARCHAR, rejects_scan = VARCHAR, ignore_errors = BOOLEAN, compression = VARCHAR, names = `VARCHAR[]`, force_match = BOOLEAN, store_rejects = BOOLEAN, all_varchar = BOOLEAN, buffer_size = UBIGINT, decimal_separator = VARCHAR, parallel = BOOLEAN, null_padding = BOOLEAN, dtypes = ANY, strict_mode = BOOLEAN, thousands = VARCHAR, files_to_sniff = BIGINT, filename = ANY, union_by_name = BOOLEAN, hive_types = ANY, hive_types_autocast = BOOLEAN) {
-  stop("DuckDB function sniff_csv() is not available in R.")
 }
 
 #' DuckDB function split

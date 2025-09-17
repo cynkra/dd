@@ -142,6 +142,8 @@ funs <-
   filter_print(!(function_name %in% c("struct_extract_at"))) |>
   # FIXME: Example too long
   filter_print(!(function_name %in% c("remap_struct"))) |>
+  # FIXME: Usage too long
+  filter_print(!(function_name %in% c("sniff_csv", "enable_logging"))) |>
   # FIXME: Breaks devtools::document()
   filter_print(!(function_name %in% c("length"))) |>
   # FIXME: Breaks R CMD check
