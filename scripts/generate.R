@@ -146,6 +146,8 @@ funs <-
   filter_print(!(function_name %in% c("length"))) |>
   # FIXME: Breaks R CMD check
   filter_print(!(function_name %in% c("<->"))) |>
+  # FIXME: No documentation generated yet
+  filter_print(!(function_name %in% c("-")) & !stringr::str_detect(function_name, "^__internal")) |>
   arrange(function_name)
 
 code <-
@@ -160,6 +162,7 @@ code <-
     {usage_doc}
     {param_doc}
     #' @return {if_else(return_type == "", "Unspecified.", paste0("`", return_type, "`"))}
+    #' @export
     {examples}{tibble:::tick_if_needed(function_name)} <- function({signature}) {{
       stop("DuckDB function {function_name}() is not available in R.")
     }}
