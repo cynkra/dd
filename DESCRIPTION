@@ -5,7 +5,7 @@ Date: 2025-04-10
 Authors@R:
     c(
       person("Kirill", "Müller", , "kirill@cynkra.com", role = c("aut", "cre"),
-             comment = c(ORCID = "0000-0002-1416-3412"),
+             comment = c(ORCID = "0000-0002-1416-3412")),
       person(given = "cynkra GmbH",
              role = c("fnd", "cph"),
              email = "mail@cynkra.com",
