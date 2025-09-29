@@ -170,67 +170,6 @@
   stop("DuckDB function **() is not available in R.")
 }
 
-#' DuckDB function +
-#'
-#' @description
-#' DuckDB function `+()`.
-#'
-#' @name +
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{`+`(col0 = TINYINT)}
-#' \item \code{`+`(col0 = TINYINT, col1 = TINYINT)}
-#' \item \code{`+`(col0 = SMALLINT)}
-#' \item \code{`+`(col0 = SMALLINT, col1 = SMALLINT)}
-#' \item \code{`+`(col0 = INTEGER)}
-#' \item \code{`+`(col0 = INTEGER, col1 = INTEGER)}
-#' \item \code{`+`(col0 = BIGINT)}
-#' \item \code{`+`(col0 = BIGINT, col1 = BIGINT)}
-#' \item \code{`+`(col0 = HUGEINT)}
-#' \item \code{`+`(col0 = HUGEINT, col1 = HUGEINT)}
-#' \item \code{`+`(col0 = FLOAT)}
-#' \item \code{`+`(col0 = FLOAT, col1 = FLOAT)}
-#' \item \code{`+`(col0 = DOUBLE)}
-#' \item \code{`+`(col0 = DOUBLE, col1 = DOUBLE)}
-#' \item \code{`+`(col0 = DECIMAL)}
-#' \item \code{`+`(col0 = DECIMAL, col1 = DECIMAL)}
-#' \item \code{`+`(col0 = UTINYINT)}
-#' \item \code{`+`(col0 = UTINYINT, col1 = UTINYINT)}
-#' \item \code{`+`(col0 = USMALLINT)}
-#' \item \code{`+`(col0 = USMALLINT, col1 = USMALLINT)}
-#' \item \code{`+`(col0 = UINTEGER)}
-#' \item \code{`+`(col0 = UINTEGER, col1 = UINTEGER)}
-#' \item \code{`+`(col0 = UBIGINT)}
-#' \item \code{`+`(col0 = UBIGINT, col1 = UBIGINT)}
-#' \item \code{`+`(col0 = UHUGEINT)}
-#' \item \code{`+`(col0 = UHUGEINT, col1 = UHUGEINT)}
-#' \item \code{`+`(col0 = DATE, col1 = INTEGER)}
-#' \item \code{`+`(col0 = INTEGER, col1 = DATE)}
-#' \item \code{`+`(col0 = INTERVAL, col1 = INTERVAL)}
-#' \item \code{`+`(col0 = DATE, col1 = INTERVAL)}
-#' \item \code{`+`(col0 = INTERVAL, col1 = DATE)}
-#' \item \code{`+`(col0 = TIME, col1 = INTERVAL)}
-#' \item \code{`+`(col0 = INTERVAL, col1 = TIME)}
-#' \item \code{`+`(col0 = TIMESTAMP, col1 = INTERVAL)}
-#' \item \code{`+`(col0 = INTERVAL, col1 = TIMESTAMP)}
-#' \item \code{`+`(col0 = `TIME WITH TIME ZONE`, col1 = INTERVAL)}
-#' \item \code{`+`(col0 = INTERVAL, col1 = `TIME WITH TIME ZONE`)}
-#' \item \code{`+`(col0 = TIME, col1 = DATE)}
-#' \item \code{`+`(col0 = DATE, col1 = TIME)}
-#' \item \code{`+`(col0 = `TIME WITH TIME ZONE`, col1 = DATE)}
-#' \item \code{`+`(col0 = DATE, col1 = `TIME WITH TIME ZONE`)}
-#' \item \code{`+`()}
-#' \item \code{`+`(col0 = BIGNUM, col1 = BIGNUM)}
-#' }
-#' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
-#' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
-#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | ANY[] | BIGNUM`
-#' @export
-`+` <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`) {
-  stop("DuckDB function +() is not available in R.")
-}
-
 #' DuckDB function /
 #'
 #' @description

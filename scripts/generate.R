@@ -147,7 +147,7 @@ funs <-
   # FIXME: Breaks devtools::document()
   filter_print(!(function_name %in% c("length"))) |>
   # FIXME: Breaks R CMD check
-  filter_print(!(function_name %in% c("<->"))) |>
+  filter_print(!(function_name %in% c("<->", "+"))) |>
   # FIXME: No documentation generated yet
   filter_print(!(function_name %in% c("-")) & !stringr::str_detect(function_name, "^__internal")) |>
   arrange(function_name)
