@@ -5523,24 +5523,6 @@ force_checkpoint <- function(col0 = VARCHAR) {
   stop("DuckDB function force_checkpoint() is not available in R.")
 }
 
-#' DuckDB function format
-#'
-#' @description
-#' Formats a string using the fmt syntax.
-#'
-#' @name format
-#' @usage format(format = VARCHAR)
-#' @param format `VARCHAR`
-#' @return `VARCHAR`
-#' @export
-#' @section SQL examples:
-#' ```
-#' format('Benchmark "{}" took {} seconds', 'CSV', 42)
-#' ```
-format <- function(format = VARCHAR) {
-  stop("DuckDB function format() is not available in R.")
-}
-
 #' DuckDB function formatReadableDecimalSize
 #'
 #' @description

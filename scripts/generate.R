@@ -147,7 +147,7 @@ funs <-
   # FIXME: Breaks devtools::document()
   filter_print(!(function_name %in% c("length"))) |>
   # FIXME: Breaks R CMD check
-  filter_print(!(function_name %in% c("<->", "+"))) |>
+  filter_print(!(function_name %in% c("<->", "+", "format"))) |>
   # FIXME: No documentation generated yet
   filter_print(!(function_name %in% c("-")) & !stringr::str_detect(function_name, "^__internal")) |>
   arrange(function_name)
@@ -226,4 +226,4 @@ callr::r(function() devtools::document())
 
 Sys.setenv(http_proxy = "0.0.0.0")
 Sys.setenv(https_proxy = "0.0.0.0")
-rcmdcheck::rcmdcheck(args = "--no-manual")
+rcmdcheck::rcmdcheck(args = c("--no-manual", "--as-cran"))
