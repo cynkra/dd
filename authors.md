@@ -15,13 +15,13 @@
 Source:
 [`DESCRIPTION`](https://github.com/cynkra/dd/blob/main/DESCRIPTION)
 
-Müller K (2025). *dd: Functions Provided by DuckDB*. R package version
+Müller K (2026). *dd: Functions Provided by DuckDB*. R package version
 0.0.0.9000, <https://github.com/krlmlr/dd>.
 
     @Manual{,
       title = {dd: Functions Provided by DuckDB},
       author = {Kirill Müller},
-      year = {2025},
+      year = {2026},
       note = {R package version 0.0.0.9000},
       url = {https://github.com/krlmlr/dd},
     }
