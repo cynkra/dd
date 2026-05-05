@@ -10,12 +10,14 @@ conjunction with [duckplyr](https://duckplyr.tidyverse.org/) and
 You can install the development version of dd like so:
 
 ``` r
+
 pak::pak("cynkra/dd")
 ```
 
 ## Example
 
 ``` r
+
 library(dd)
 dd$acos
 #> function(x = DOUBLE) {
