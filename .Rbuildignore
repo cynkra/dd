@@ -10,3 +10,4 @@
 ^index\.md$
 ^CLAUDE\.md$
 ^\.claude$
+^\.ccache$
