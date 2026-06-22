@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{unhex}
 \alias{unhex}
+\alias{from_hex}
 \title{DuckDB function unhex}
 \usage{
 unhex(value = VARCHAR)

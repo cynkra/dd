@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{struct_contains}
 \alias{struct_contains}
+\alias{struct_has}
 \title{DuckDB function struct_contains}
 \usage{
 struct_contains(struct = STRUCT, `'entry'` = ANY)

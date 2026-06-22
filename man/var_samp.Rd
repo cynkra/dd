@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{var_samp}
 \alias{var_samp}
+\alias{variance}
 \title{DuckDB function var_samp}
 \usage{
 var_samp(x = DOUBLE)

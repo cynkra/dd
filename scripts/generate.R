@@ -42,33 +42,55 @@ usage_signature <- function(function_name, parameters, parameter_types) {
   if (length(parameters) == 0) {
     return(paste0(name, "()"))
   }
-  args <- paste0(tibble:::tick_if_needed(parameters), param_type_tick_if_needed(parameter_types))
+  args <- paste0(
+    tibble:::tick_if_needed(parameters),
+    param_type_tick_if_needed(parameter_types)
+  )
   one_line <- paste0(name, "(", paste0(args, collapse = ", "), ")")
   if (nchar(one_line) <= 90) {
     return(one_line)
   }
   paste0(
-    name, "(\n",
-    paste0("#'   ", args, collapse = ",\n"), "\n",
+    name,
+    "(\n",
+    paste0("#'   ", args, collapse = ",\n"),
+    "\n",
     "#' )"
   )
 }
 
-usage_and_params <- function(function_name, parameters, parameter_types, description, macro_definition, examples) {
+usage_and_params <- function(
+  function_name,
+  parameters,
+  parameter_types,
+  description,
+  macro_definition,
+  examples
+) {
   if (length(parameters) == 1) {
-    usage_doc <- glue("#' @usage {usage_signature(function_name, parameters[[1]], parameter_types[[1]])}")
+    usage_doc <- glue(
+      "#' @usage {usage_signature(function_name, parameters[[1]], parameter_types[[1]])}"
+    )
   } else if (function_name == "%") {
     # FIXME: roxygen2 generates bad .Rd here
     usage_doc <- "#' @usage NULL\n"
   } else {
-    signatures <- map2_chr(parameters, parameter_types, ~ {
-      if (length(.x) == 0) {
-        sig <- "" # No parameters
-      } else {
-        sig <- paste0(tibble:::tick_if_needed(.x), param_type_tick_if_needed(.y), collapse = ", ")
+    signatures <- map2_chr(
+      parameters,
+      parameter_types,
+      ~ {
+        if (length(.x) == 0) {
+          sig <- "" # No parameters
+        } else {
+          sig <- paste0(
+            tibble:::tick_if_needed(.x),
+            param_type_tick_if_needed(.y),
+            collapse = ", "
+          )
+        }
+        glue("{tibble:::tick_if_needed(function_name)}({sig})")
       }
-      glue("{tibble:::tick_if_needed(function_name)}({sig})")
-    })
+    )
     usage_doc <- paste0(
       "#' @usage NULL\n",
       "#' @section Overloads:\n",
@@ -80,24 +102,39 @@ usage_and_params <- function(function_name, parameters, parameter_types, descrip
 
   params <-
     tibble(name = unlist(parameters), type = unlist(parameter_types)) |>
-    summarize(.by = name, type = paste0(na.omit(unique(type)), collapse = " | "))
+    summarize(
+      .by = name,
+      type = paste0(na.omit(unique(type)), collapse = " | ")
+    )
 
   param_doc <-
     params |>
-    mutate(type = if_else(type == "", "Unspecified.", paste0("`", type, "`"))) |>
+    mutate(
+      type = if_else(type == "", "Unspecified.", paste0("`", type, "`"))
+    ) |>
     mutate(out = glue("#' @param {name} {type}")) |>
     pull() |>
     glue_collapse(sep = "\n")
 
   signature <- params |>
-    mutate(out = glue("{tibble:::tick_if_needed(name)}{param_type_tick_if_needed(type)}")) |>
+    mutate(
+      out = glue(
+        "{tibble:::tick_if_needed(name)}{param_type_tick_if_needed(type)}"
+      )
+    ) |>
     pull() |>
     glue_collapse(sep = ", ")
 
   is_macro <- length(macro_definition) == 1 && !is.na(macro_definition)
   description <- na.omit(description)
   if (length(description) == 0) {
-    description <- paste0("#' DuckDB ", if (is_macro) "macro" else "function", " `", function_name, "()`.")
+    description <- paste0(
+      "#' DuckDB ",
+      if (is_macro) "macro" else "function",
+      " `",
+      function_name,
+      "()`."
+    )
   } else {
     description <- unique(description)
     description <- gsub("[.]*$", ".", description)
@@ -139,10 +176,39 @@ rdize_function_name <- function(x) {
   x
 }
 
+is_alnum <- function(x) grepl("^[A-Za-z0-9_]+$", x)
+
+# Pick the representative function for an alias group. DuckDB reports aliases via
+# the `alias_of` column, so a group is the canonical function plus everything
+# pointing at it. We document the group on a single page named after a short,
+# alphanumeric member: the canonical itself when it is alphanumeric and present,
+# otherwise the shortest alphanumeric alias (alphabetical tie-break). This keeps
+# the .Rd file name readable even when the canonical is an operator (e.g. `**`).
+pick_rep <- function(names, canonical) {
+  alnum <- names[is_alnum(names)]
+  if (canonical %in% alnum) {
+    return(canonical)
+  }
+  if (length(alnum) > 0) {
+    return(alnum[order(nchar(alnum), alnum)][[1]])
+  }
+  if (canonical %in% names) {
+    return(canonical)
+  }
+  names[order(nchar(names), names)][[1]]
+}
+
 funs <-
   DBI::dbGetQuery(con, "FROM duckdb_functions()") |>
   as_tibble() |>
-  select(-database_name, -database_oid, -schema_name, -function_oid, -comment, -tags) |>
+  select(
+    -database_name,
+    -database_oid,
+    -schema_name,
+    -function_oid,
+    -comment,
+    -tags
+  ) |>
   # FIXME: Understand meaning of `varargs`
   # FIXME: Why is this called `has_side_effects`? Called "deterministic" elsewhere.
   filter_print(internal) |>
@@ -151,11 +217,24 @@ funs <-
     .by = function_name,
     alias_of = unique(alias_of),
     return_type = paste0(unique(na.omit(return_type)), collapse = " | "),
-    usage_and_params(first(function_name), parameters, parameter_types, description, macro_definition, examples),
+    usage_and_params(
+      first(function_name),
+      parameters,
+      parameter_types,
+      description,
+      macro_definition,
+      examples
+    ),
     categories = list(unique(unlist(categories))),
   ) |>
   # https://github.com/duckdb/duckdb/pull/18977
-  mutate(examples = gsub(r"(variant_typeof\(\{'a': 42, 'b': \[1,2,3\]\)::VARIANT\))", "variant_typeof({'a': 42, 'b': [1,2,3]})::VARIANT)", examples)) |>
+  mutate(
+    examples = gsub(
+      r"(variant_typeof\(\{'a': 42, 'b': \[1,2,3\]\)::VARIANT\))",
+      "variant_typeof({'a': 42, 'b': [1,2,3]})::VARIANT)",
+      examples
+    )
+  ) |>
   # FIXME: Irregular
   filter_print(!(function_name %in% c("struct_extract_at"))) |>
   # FIXME: Example too long
@@ -167,18 +246,37 @@ funs <-
   # FIXME: Breaks R CMD check
   filter_print(!(function_name %in% c("<->", "+", "format"))) |>
   # FIXME: No documentation generated yet
-  filter_print(!(function_name %in% c("-")) & !stringr::str_detect(function_name, "^__internal")) |>
-  arrange(function_name)
+  filter_print(
+    !(function_name %in% c("-")) &
+      !stringr::str_detect(function_name, "^__internal")
+  ) |>
+  arrange(function_name) |>
+  # Resolve alias groups from the catalog's `alias_of` column and route every
+  # member to one canonical page, so e.g. `list_aggr` and `list_aggregate` no
+  # longer produce two separate .Rd files.
+  mutate(canonical = coalesce(alias_of, function_name)) |>
+  mutate(.by = canonical, rep_name = pick_rep(function_name, canonical[[1]])) |>
+  mutate(
+    rd_name = rdize_function_name(rep_name),
+    is_primary = function_name == rep_name
+  ) |>
+  # Emit each group's primary block first so roxygen2 derives the topic `\name`
+  # from the canonical (alphanumeric) member rather than an operator alias.
+  arrange(rd_name, desc(is_primary), function_name)
 
 code <-
   funs |>
-  mutate(roxy = glue(r"(
+  mutate(
+    # The primary (representative) function carries the full documentation and
+    # owns the canonical page via `@name`.
+    primary_roxy = glue(
+      r"(
     #' DuckDB function {function_name}
     #'
     #' @description
     {description}
     #'
-    #' @name {rdize_function_name(function_name)}
+    #' @name {rd_name}
     {usage_doc}
     {param_doc}
     #' @return {if_else(return_type == "", "Unspecified.", paste0("`", return_type, "`"))}
@@ -187,16 +285,36 @@ code <-
       stop("DuckDB function {function_name}() is not available in R.")
     }}
 
-    )")) |>
-  pull()
+    )"
+    ),
+    # Alias functions reuse the canonical page via `@rdname`; roxygen2 adds the
+    # `\alias{{}}` so `?{function_name}` resolves there. `@usage NULL` keeps the
+    # page's usage to the canonical signature.
+    alias_roxy = glue(
+      r"(
+    #' @rdname {rd_name}
+    #' @usage NULL
+    #' @export
+    {tibble:::tick_if_needed(function_name)} <- function({signature}) {{
+      stop("DuckDB function {function_name}() is not available in R.")
+    }}
 
-parsed <- map_lgl(code, ~ tryCatch(
-  {
-    parse(text = .x)
-    TRUE
-  },
-  error = function(e) FALSE
-))
+    )"
+    ),
+    roxy = if_else(is_primary, primary_roxy, alias_roxy)
+  ) |>
+  pull(roxy)
+
+parsed <- map_lgl(
+  code,
+  ~ tryCatch(
+    {
+      parse(text = .x)
+      TRUE
+    },
+    error = function(e) FALSE
+  )
+)
 
 if (!all(parsed)) {
   message("Couldn't parse ", sum(!parsed), " functions.")
@@ -211,7 +329,8 @@ code <- c(
 
 writeLines(code, "R/duckdb-funs.R")
 
-dd_code <- glue(r"(
+dd_code <- glue(
+  r"(
   #' DuckDB functions
   #'
   #' A list of known DuckDB functions.
@@ -222,7 +341,8 @@ dd_code <- glue(r"(
   dd <- base::list(
   {paste0("  ", tibble:::tick_if_needed(funs$function_name[parsed]), " = ", tibble:::tick_if_needed(funs$function_name[parsed]), collapse = ",\n")}
   )
-  )")
+  )"
+)
 
 invisible(parse(text = dd_code))
 
@@ -234,7 +354,11 @@ globals <-
   unique() |>
   sort()
 
-globals_code <- paste0('utils::globalVariables("', gsub('"', '\\\\"', globals), '")')
+globals_code <- paste0(
+  'utils::globalVariables("',
+  gsub('"', '\\\\"', globals),
+  '")'
+)
 
 invisible(parse(text = globals_code))
 

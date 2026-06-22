@@ -2,6 +2,8 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{kahan_sum}
 \alias{kahan_sum}
+\alias{fsum}
+\alias{sumkahan}
 \title{DuckDB function kahan_sum}
 \usage{
 kahan_sum(arg = DOUBLE)

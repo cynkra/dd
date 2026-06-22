@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{stddev_samp}
 \alias{stddev_samp}
+\alias{stddev}
 \title{DuckDB function stddev_samp}
 \usage{
 stddev_samp(x = DOUBLE)

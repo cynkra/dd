@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{substring}
 \alias{substring}
+\alias{substr}
 \title{DuckDB function substring}
 \arguments{
 \item{string}{\code{VARCHAR}}

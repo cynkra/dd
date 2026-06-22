@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_negative_inner_product}
 \alias{list_negative_inner_product}
+\alias{list_negative_dot_product}
 \title{DuckDB function list_negative_inner_product}
 \arguments{
 \item{list1}{\code{FLOAT[] | DOUBLE[]}}

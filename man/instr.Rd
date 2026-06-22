@@ -2,6 +2,8 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{instr}
 \alias{instr}
+\alias{position}
+\alias{strpos}
 \title{DuckDB function instr}
 \usage{
 instr(string = VARCHAR, search_string = VARCHAR)

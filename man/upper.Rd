@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{upper}
 \alias{upper}
+\alias{ucase}
 \title{DuckDB function upper}
 \usage{
 upper(string = VARCHAR)

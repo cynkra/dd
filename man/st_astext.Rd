@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{st_astext}
 \alias{st_astext}
+\alias{st_aswkt}
 \title{DuckDB function st_astext}
 \usage{
 st_astext(geom = GEOMETRY)

@@ -2,6 +2,8 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{string_split_regex}
 \alias{string_split_regex}
+\alias{regexp_split_to_array}
+\alias{str_split_regex}
 \title{DuckDB function string_split_regex}
 \arguments{
 \item{string}{\code{VARCHAR}}

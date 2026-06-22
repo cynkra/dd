@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_inner_product}
 \alias{list_inner_product}
+\alias{list_dot_product}
 \title{DuckDB function list_inner_product}
 \arguments{
 \item{list1}{\code{FLOAT[] | DOUBLE[]}}

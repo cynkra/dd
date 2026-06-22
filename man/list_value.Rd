@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_value}
 \alias{list_value}
+\alias{list_pack}
 \title{DuckDB function list_value}
 \arguments{
 \item{any}{\code{T}}

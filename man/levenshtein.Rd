@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{levenshtein}
 \alias{levenshtein}
+\alias{editdist3}
 \title{DuckDB function levenshtein}
 \usage{
 levenshtein(s1 = VARCHAR, s2 = VARCHAR)

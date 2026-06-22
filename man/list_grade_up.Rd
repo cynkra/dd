@@ -2,6 +2,8 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_grade_up}
 \alias{list_grade_up}
+\alias{array_grade_up}
+\alias{grade_up}
 \title{DuckDB function list_grade_up}
 \arguments{
 \item{list}{\code{ANY[]}}

@@ -2,6 +2,9 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_has_all}
 \alias{list_has_all}
+\alias{<@}
+\alias{@>}
+\alias{array_has_all}
 \title{DuckDB function list_has_all}
 \usage{
 list_has_all(list1 = `T[]`, list2 = `T[]`)

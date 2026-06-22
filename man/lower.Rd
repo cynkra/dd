@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{lower}
 \alias{lower}
+\alias{lcase}
 \title{DuckDB function lower}
 \usage{
 lower(string = VARCHAR)

@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{st_aswkb}
 \alias{st_aswkb}
+\alias{st_asbinary}
 \title{DuckDB function st_aswkb}
 \usage{
 st_aswkb(geom = GEOMETRY)

@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{quantile_disc}
 \alias{quantile_disc}
+\alias{quantile}
 \title{DuckDB function quantile_disc}
 \arguments{
 \item{x}{\code{ANY}}

@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_select}
 \alias{list_select}
+\alias{array_select}
 \title{DuckDB function list_select}
 \usage{
 list_select(value_list = `T[]`, index_list = `BIGINT[]`)

@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_intersect}
 \alias{list_intersect}
+\alias{array_intersect}
 \title{DuckDB function list_intersect}
 \usage{
 list_intersect(list1 = `T[]`, list2 = `T[]`)

@@ -2,6 +2,8 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{get_current_timestamp}
 \alias{get_current_timestamp}
+\alias{now}
+\alias{transaction_timestamp}
 \title{DuckDB function get_current_timestamp}
 \usage{
 get_current_timestamp()

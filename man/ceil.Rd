@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{ceil}
 \alias{ceil}
+\alias{ceiling}
 \title{DuckDB function ceil}
 \arguments{
 \item{x}{\code{FLOAT | DOUBLE | DECIMAL}}

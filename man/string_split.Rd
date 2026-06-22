@@ -2,6 +2,9 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{string_split}
 \alias{string_split}
+\alias{split}
+\alias{str_split}
+\alias{string_to_array}
 \title{DuckDB function string_split}
 \usage{
 string_split(string = VARCHAR, separator = VARCHAR)

@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{array_inner_product}
 \alias{array_inner_product}
+\alias{array_dot_product}
 \title{DuckDB function array_inner_product}
 \arguments{
 \item{array1}{\code{FLOAT[ANY] | DOUBLE[ANY]}}

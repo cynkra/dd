@@ -2,6 +2,8 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{string_agg}
 \alias{string_agg}
+\alias{group_concat}
+\alias{listagg}
 \title{DuckDB function string_agg}
 \arguments{
 \item{str}{\code{ANY}}

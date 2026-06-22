@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{starts_with}
 \alias{starts_with}
+\alias{^@}
 \title{DuckDB function starts_with}
 \usage{
 starts_with(string = VARCHAR, search_string = VARCHAR)

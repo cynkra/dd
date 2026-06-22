@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list}
 \alias{list}
+\alias{array_agg}
 \title{DuckDB function list}
 \usage{
 list(arg = T)

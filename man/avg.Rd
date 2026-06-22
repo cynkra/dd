@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{avg}
 \alias{avg}
+\alias{mean}
 \title{DuckDB function avg}
 \arguments{
 \item{x}{\verb{DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL | DOUBLE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE}}

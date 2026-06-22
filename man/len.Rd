@@ -2,6 +2,8 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{len}
 \alias{len}
+\alias{char_length}
+\alias{character_length}
 \title{DuckDB function len}
 \arguments{
 \item{string}{\code{VARCHAR}}
