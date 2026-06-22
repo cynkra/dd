@@ -9,15 +9,21 @@ ordering.
 
   `DECIMAL | ANY`
 
+- col0:
+
+  `T`
+
 ## Value
 
-`DECIMAL | ANY`
+`DECIMAL | ANY | T`
 
 ## Overloads
 
 - `last(arg = DECIMAL)`
 
 - `last(arg = ANY)`
+
+- `last(col0 = T)`
 
 ## SQL examples
 

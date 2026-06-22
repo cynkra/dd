@@ -50,27 +50,11 @@
 <dd><p><code>BOOLEAN</code></p></dd>
 
 
-<dt id="arg-encryption-config">encryption_config<a class="anchor" aria-label="anchor" href="#arg-encryption-config"></a></dt>
-<dd><p><code>ANY</code></p></dd>
-
-
-<dt id="arg-file-row-number">file_row_number<a class="anchor" aria-label="anchor" href="#arg-file-row-number"></a></dt>
-<dd><p><code>BOOLEAN</code></p></dd>
-
-
-<dt id="arg-schema">schema<a class="anchor" aria-label="anchor" href="#arg-schema"></a></dt>
-<dd><p><code>ANY</code></p></dd>
-
-
-<dt id="arg-parquet-version">parquet_version<a class="anchor" aria-label="anchor" href="#arg-parquet-version"></a></dt>
-<dd><p><code>VARCHAR</code></p></dd>
-
-
 <dt id="arg-filename">filename<a class="anchor" aria-label="anchor" href="#arg-filename"></a></dt>
 <dd><p><code>ANY</code></p></dd>
 
 
-<dt id="arg-binary-as-string">binary_as_string<a class="anchor" aria-label="anchor" href="#arg-binary-as-string"></a></dt>
+<dt id="arg-union-by-name">union_by_name<a class="anchor" aria-label="anchor" href="#arg-union-by-name"></a></dt>
 <dd><p><code>BOOLEAN</code></p></dd>
 
 
@@ -78,7 +62,23 @@
 <dd><p><code>BOOLEAN</code></p></dd>
 
 
-<dt id="arg-union-by-name">union_by_name<a class="anchor" aria-label="anchor" href="#arg-union-by-name"></a></dt>
+<dt id="arg-hive-partitioning">hive_partitioning<a class="anchor" aria-label="anchor" href="#arg-hive-partitioning"></a></dt>
+<dd><p><code>BOOLEAN</code></p></dd>
+
+
+<dt id="arg-parquet-version">parquet_version<a class="anchor" aria-label="anchor" href="#arg-parquet-version"></a></dt>
+<dd><p><code>VARCHAR</code></p></dd>
+
+
+<dt id="arg-encryption-config">encryption_config<a class="anchor" aria-label="anchor" href="#arg-encryption-config"></a></dt>
+<dd><p><code>ANY</code></p></dd>
+
+
+<dt id="arg-hive-types-autocast">hive_types_autocast<a class="anchor" aria-label="anchor" href="#arg-hive-types-autocast"></a></dt>
+<dd><p><code>BOOLEAN</code></p></dd>
+
+
+<dt id="arg-binary-as-string">binary_as_string<a class="anchor" aria-label="anchor" href="#arg-binary-as-string"></a></dt>
 <dd><p><code>BOOLEAN</code></p></dd>
 
 
@@ -90,16 +90,16 @@
 <dd><p><code>VARCHAR</code></p></dd>
 
 
+<dt id="arg-file-row-number">file_row_number<a class="anchor" aria-label="anchor" href="#arg-file-row-number"></a></dt>
+<dd><p><code>BOOLEAN</code></p></dd>
+
+
 <dt id="arg-hive-types">hive_types<a class="anchor" aria-label="anchor" href="#arg-hive-types"></a></dt>
 <dd><p><code>ANY</code></p></dd>
 
 
-<dt id="arg-hive-partitioning">hive_partitioning<a class="anchor" aria-label="anchor" href="#arg-hive-partitioning"></a></dt>
-<dd><p><code>BOOLEAN</code></p></dd>
-
-
-<dt id="arg-hive-types-autocast">hive_types_autocast<a class="anchor" aria-label="anchor" href="#arg-hive-types-autocast"></a></dt>
-<dd><p><code>BOOLEAN</code></p></dd>
+<dt id="arg-schema">schema<a class="anchor" aria-label="anchor" href="#arg-schema"></a></dt>
+<dd><p><code>ANY</code></p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -110,8 +110,8 @@
     <h2 id="overloads">Overloads<a class="anchor" aria-label="anchor" href="#overloads"></a></h2>
 
 
-<ul><li><p><code>read_parquet(col0 = VARCHAR, can_have_nan = BOOLEAN, encryption_config = ANY, file_row_number = BOOLEAN, schema = ANY, parquet_version = VARCHAR, filename = ANY, binary_as_string = BOOLEAN, debug_use_openssl = BOOLEAN, union_by_name = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, hive_types = ANY, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN)</code></p></li>
-<li><p><code>read_parquet(col0 = `VARCHAR[]`, hive_types_autocast = BOOLEAN, hive_partitioning = BOOLEAN, hive_types = ANY, compression = VARCHAR, explicit_cardinality = UBIGINT, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, binary_as_string = BOOLEAN, filename = ANY, parquet_version = VARCHAR, schema = ANY, file_row_number = BOOLEAN, encryption_config = ANY, can_have_nan = BOOLEAN)</code></p></li>
+<ul><li><p><code>read_parquet(col0 = VARCHAR, can_have_nan = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY, schema = ANY)</code></p></li>
+<li><p><code>read_parquet(col0 = `VARCHAR[]`, can_have_nan = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY, schema = ANY)</code></p></li>
 </ul></div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

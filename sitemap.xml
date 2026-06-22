@@ -12,6 +12,7 @@
 <url><loc>https://cynkra.github.io/dd/reference/add_parquet_key.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/age.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/aggregate.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/ago.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/alias.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/all_profiling_output.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/and-and.html</loc></url>
@@ -24,8 +25,10 @@
 <url><loc>https://cynkra.github.io/dd/reference/arbitrary.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/arg_max.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/arg_max_null.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/arg_max_nulls_last.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/arg_min.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/arg_min_null.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/arg_min_nulls_last.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/argmax.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/argmin.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/array_agg.html</loc></url>
@@ -128,6 +131,7 @@
 <url><loc>https://cynkra.github.io/dd/reference/covar_pop.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/covar_samp.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/create_sort_key.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/cume_dist.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/current_catalog.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/current_connection_id.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/current_database.html</loc></url>
@@ -157,11 +161,13 @@
 <url><loc>https://cynkra.github.io/dd/reference/dayofmonth.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/dayofweek.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/dayofyear.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/days_in_month.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/dd-package.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/dd.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/decade.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/decode.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/degrees.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/dense_rank.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/disable_checkpoint_on_shutdown.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/disable_logging.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/disable_object_cache.html</loc></url>
@@ -178,7 +184,9 @@
 <url><loc>https://cynkra.github.io/dd/reference/divide.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/duckdb_approx_database_count.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/duckdb_columns.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/duckdb_connection_count.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/duckdb_constraints.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/duckdb_coordinate_systems.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/duckdb_databases.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/duckdb_dependencies.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/duckdb_extensions.html</loc></url>
@@ -192,6 +200,7 @@
 <url><loc>https://cynkra.github.io/dd/reference/duckdb_memory.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/duckdb_optimizers.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/duckdb_prepared_statements.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/duckdb_profiling_settings.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/duckdb_schemas.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/duckdb_secret_types.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/duckdb_secrets.html</loc></url>
@@ -234,9 +243,11 @@
 <url><loc>https://cynkra.github.io/dd/reference/factorial.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/favg.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/fdiv.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/fill.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/filter.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/finalize.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/first.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/first_value.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/flatten.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/floor.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/fmod.html</loc></url>
@@ -261,6 +272,7 @@
 <url><loc>https://cynkra.github.io/dd/reference/get_bit.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/get_block_size.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/get_current_timestamp.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/get_type.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/getvariable.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/glob.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/grade_up.html</loc></url>
@@ -309,10 +321,13 @@
 <url><loc>https://cynkra.github.io/dd/reference/kahan_sum.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/kurtosis.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/kurtosis_pop.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/lag.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/last.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/last_day.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/last_value.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/lcase.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/lcm.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/lead.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/least.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/least_common_multiple.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/left.html</loc></url>
@@ -407,6 +422,7 @@
 <url><loc>https://cynkra.github.io/dd/reference/make_timestamp.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/make_timestamp_ms.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/make_timestamp_ns.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/make_type.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/map.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/map_concat.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/map_contains.html</loc></url>
@@ -451,6 +467,8 @@
 <url><loc>https://cynkra.github.io/dd/reference/not_ilike_escape.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/not_like_escape.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/now.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/nth_value.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/ntile.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/nullif.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/obj_description.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/octet_length.html</loc></url>
@@ -459,6 +477,7 @@
 <url><loc>https://cynkra.github.io/dd/reference/ord.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/parquet_bloom_probe.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/parquet_file_metadata.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/parquet_full_metadata.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/parquet_kv_metadata.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/parquet_metadata.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/parquet_scan.html</loc></url>
@@ -467,7 +486,9 @@
 <url><loc>https://cynkra.github.io/dd/reference/parse_dirpath.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/parse_duckdb_log_message.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/parse_filename.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/parse_formatted_bytes.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/parse_path.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/percent_rank.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/pg_collation_is_visible.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/pg_conf_load_time.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/pg_conversion_is_visible.html</loc></url>
@@ -483,6 +504,7 @@
 <url><loc>https://cynkra.github.io/dd/reference/pg_opfamily_is_visible.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/pg_postmaster_start_time.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/pg_size_pretty.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/pg_sleep.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/pg_table_is_visible.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/pg_ts_config_is_visible.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/pg_ts_dict_is_visible.html</loc></url>
@@ -518,9 +540,12 @@
 <url><loc>https://cynkra.github.io/dd/reference/radians.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/random.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/range.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/rank.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/rank_dense.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/read_blob.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/read_csv.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/read_csv_auto.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/read_duckdb.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/read_parquet.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/read_text.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/reduce.html</loc></url>
@@ -553,6 +578,7 @@
 <url><loc>https://cynkra.github.io/dd/reference/round_even.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/roundbankers.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/row.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/row_number.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/rpad.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/rtrim.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/second.html</loc></url>
@@ -576,9 +602,18 @@
 <url><loc>https://cynkra.github.io/dd/reference/skewness.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/slash-slash.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/slash.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/sleep_ms.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/split.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/split_part.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/sqrt.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/st_asbinary.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/st_astext.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/st_aswkb.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/st_aswkt.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/st_crs.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/st_geomfromwkb.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/st_intersects_extent.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/st_setcrs.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/starts_with.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/stats.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/stddev.html</loc></url>
@@ -602,9 +637,11 @@
 <url><loc>https://cynkra.github.io/dd/reference/struct_has.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/struct_indexof.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/struct_insert.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/struct_keys.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/struct_pack.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/struct_position.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/struct_update.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/struct_values.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/substr.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/substring.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/substring_grapheme.html</loc></url>
@@ -614,6 +651,7 @@
 <url><loc>https://cynkra.github.io/dd/reference/sum_no_overflow.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/sumkahan.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/summary.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/switch.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/table_info.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/tan.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/tanh.html</loc></url>
@@ -678,7 +716,10 @@
 <url><loc>https://cynkra.github.io/dd/reference/var_pop.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/var_samp.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/variance.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/variant_bytes_to_variant.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/variant_extract.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/variant_normalize.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/variant_to_parquet_variant.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/variant_typeof.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/vector_type.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/verify_external.html</loc></url>

@@ -65,12 +65,14 @@ help(acos, package = "dd")
   function age
 - [`aggregate()`](https://cynkra.github.io/dd/reference/aggregate.md) :
   DuckDB function aggregate
+- [`ago()`](https://cynkra.github.io/dd/reference/ago.md) : DuckDB
+  function ago
 - [`alias()`](https://cynkra.github.io/dd/reference/alias.md) : DuckDB
   function alias
 - [`all_profiling_output()`](https://cynkra.github.io/dd/reference/all_profiling_output.md)
   : DuckDB function all_profiling_output
-- [`` `&&`() ``](https://cynkra.github.io/dd/reference/and-and.md) :
-  DuckDB function &&
+- [`&&`](https://cynkra.github.io/dd/reference/and-and.md) : DuckDB
+  function &&
 - [`&`](https://cynkra.github.io/dd/reference/and.md) : DuckDB function
   &
 - [`any_value`](https://cynkra.github.io/dd/reference/any_value.md) :
@@ -89,10 +91,14 @@ help(acos, package = "dd")
   function arg_max
 - [`arg_max_null`](https://cynkra.github.io/dd/reference/arg_max_null.md)
   : DuckDB function arg_max_null
+- [`arg_max_nulls_last`](https://cynkra.github.io/dd/reference/arg_max_nulls_last.md)
+  : DuckDB function arg_max_nulls_last
 - [`arg_min`](https://cynkra.github.io/dd/reference/arg_min.md) : DuckDB
   function arg_min
 - [`arg_min_null`](https://cynkra.github.io/dd/reference/arg_min_null.md)
   : DuckDB function arg_min_null
+- [`arg_min_nulls_last`](https://cynkra.github.io/dd/reference/arg_min_nulls_last.md)
+  : DuckDB function arg_min_nulls_last
 - [`argmax`](https://cynkra.github.io/dd/reference/argmax.md) : DuckDB
   function argmax
 - [`argmin`](https://cynkra.github.io/dd/reference/argmin.md) : DuckDB
@@ -297,6 +303,8 @@ help(acos, package = "dd")
   : DuckDB function covar_samp
 - [`create_sort_key()`](https://cynkra.github.io/dd/reference/create_sort_key.md)
   : DuckDB function create_sort_key
+- [`cume_dist()`](https://cynkra.github.io/dd/reference/cume_dist.md) :
+  DuckDB function cume_dist
 - [`current_catalog()`](https://cynkra.github.io/dd/reference/current_catalog.md)
   : DuckDB function current_catalog
 - [`current_connection_id()`](https://cynkra.github.io/dd/reference/current_connection_id.md)
@@ -355,13 +363,17 @@ help(acos, package = "dd")
   DuckDB function dayofweek
 - [`dayofyear`](https://cynkra.github.io/dd/reference/dayofyear.md) :
   DuckDB function dayofyear
+- [`days_in_month()`](https://cynkra.github.io/dd/reference/days_in_month.md)
+  : DuckDB function days_in_month
 - [`dd`](https://cynkra.github.io/dd/reference/dd.md) : DuckDB functions
 - [`decade`](https://cynkra.github.io/dd/reference/decade.md) : DuckDB
   function decade
-- [`decode()`](https://cynkra.github.io/dd/reference/decode.md) : DuckDB
+- [`decode`](https://cynkra.github.io/dd/reference/decode.md) : DuckDB
   function decode
 - [`degrees()`](https://cynkra.github.io/dd/reference/degrees.md) :
   DuckDB function degrees
+- [`dense_rank()`](https://cynkra.github.io/dd/reference/dense_rank.md)
+  : DuckDB function dense_rank
 - [`disable_checkpoint_on_shutdown()`](https://cynkra.github.io/dd/reference/disable_checkpoint_on_shutdown.md)
   : DuckDB function disable_checkpoint_on_shutdown
 - [`disable_logging()`](https://cynkra.github.io/dd/reference/disable_logging.md)
@@ -374,7 +386,7 @@ help(acos, package = "dd")
   : DuckDB function disable_print_progress_bar
 - [`disable_profile()`](https://cynkra.github.io/dd/reference/disable_profile.md)
   : DuckDB function disable_profile
-- [`disable_profiling()`](https://cynkra.github.io/dd/reference/disable_profiling.md)
+- [`disable_profiling`](https://cynkra.github.io/dd/reference/disable_profiling.md)
   : DuckDB function disable_profiling
 - [`disable_progress_bar()`](https://cynkra.github.io/dd/reference/disable_progress_bar.md)
   : DuckDB function disable_progress_bar
@@ -394,8 +406,12 @@ help(acos, package = "dd")
   : DuckDB function duckdb_approx_database_count
 - [`duckdb_columns()`](https://cynkra.github.io/dd/reference/duckdb_columns.md)
   : DuckDB function duckdb_columns
+- [`duckdb_connection_count()`](https://cynkra.github.io/dd/reference/duckdb_connection_count.md)
+  : DuckDB function duckdb_connection_count
 - [`duckdb_constraints()`](https://cynkra.github.io/dd/reference/duckdb_constraints.md)
   : DuckDB function duckdb_constraints
+- [`duckdb_coordinate_systems()`](https://cynkra.github.io/dd/reference/duckdb_coordinate_systems.md)
+  : DuckDB function duckdb_coordinate_systems
 - [`duckdb_databases()`](https://cynkra.github.io/dd/reference/duckdb_databases.md)
   : DuckDB function duckdb_databases
 - [`duckdb_dependencies()`](https://cynkra.github.io/dd/reference/duckdb_dependencies.md)
@@ -422,6 +438,8 @@ help(acos, package = "dd")
   : DuckDB function duckdb_optimizers
 - [`duckdb_prepared_statements()`](https://cynkra.github.io/dd/reference/duckdb_prepared_statements.md)
   : DuckDB function duckdb_prepared_statements
+- [`duckdb_profiling_settings()`](https://cynkra.github.io/dd/reference/duckdb_profiling_settings.md)
+  : DuckDB function duckdb_profiling_settings
 - [`duckdb_schemas()`](https://cynkra.github.io/dd/reference/duckdb_schemas.md)
   : DuckDB function duckdb_schemas
 - [`duckdb_secret_types()`](https://cynkra.github.io/dd/reference/duckdb_secret_types.md)
@@ -458,7 +476,7 @@ help(acos, package = "dd")
   : DuckDB function enable_print_progress_bar
 - [`enable_profile()`](https://cynkra.github.io/dd/reference/enable_profile.md)
   : DuckDB function enable_profile
-- [`enable_profiling()`](https://cynkra.github.io/dd/reference/enable_profiling.md)
+- [`enable_profiling`](https://cynkra.github.io/dd/reference/enable_profiling.md)
   : DuckDB function enable_profiling
 - [`enable_progress_bar()`](https://cynkra.github.io/dd/reference/enable_progress_bar.md)
   : DuckDB function enable_progress_bar
@@ -506,12 +524,16 @@ help(acos, package = "dd")
   function favg
 - [`fdiv()`](https://cynkra.github.io/dd/reference/fdiv.md) : DuckDB
   function fdiv
+- [`fill()`](https://cynkra.github.io/dd/reference/fill.md) : DuckDB
+  function fill
 - [`filter()`](https://cynkra.github.io/dd/reference/filter.md) : DuckDB
   function filter
 - [`finalize()`](https://cynkra.github.io/dd/reference/finalize.md) :
   DuckDB function finalize
 - [`first`](https://cynkra.github.io/dd/reference/first.md) : DuckDB
   function first
+- [`first_value()`](https://cynkra.github.io/dd/reference/first_value.md)
+  : DuckDB function first_value
 - [`flatten()`](https://cynkra.github.io/dd/reference/flatten.md) :
   DuckDB function flatten
 - [`floor`](https://cynkra.github.io/dd/reference/floor.md) : DuckDB
@@ -560,6 +582,8 @@ help(acos, package = "dd")
   : DuckDB function get_block_size
 - [`get_current_timestamp()`](https://cynkra.github.io/dd/reference/get_current_timestamp.md)
   : DuckDB function get_current_timestamp
+- [`get_type()`](https://cynkra.github.io/dd/reference/get_type.md) :
+  DuckDB function get_type
 - [`getvariable()`](https://cynkra.github.io/dd/reference/getvariable.md)
   : DuckDB function getvariable
 - [`glob`](https://cynkra.github.io/dd/reference/glob.md) : DuckDB
@@ -654,14 +678,20 @@ help(acos, package = "dd")
   DuckDB function kurtosis
 - [`kurtosis_pop()`](https://cynkra.github.io/dd/reference/kurtosis_pop.md)
   : DuckDB function kurtosis_pop
+- [`lag()`](https://cynkra.github.io/dd/reference/lag.md) : DuckDB
+  function lag
 - [`last`](https://cynkra.github.io/dd/reference/last.md) : DuckDB
   function last
 - [`last_day`](https://cynkra.github.io/dd/reference/last_day.md) :
   DuckDB function last_day
+- [`last_value()`](https://cynkra.github.io/dd/reference/last_value.md)
+  : DuckDB function last_value
 - [`lcase()`](https://cynkra.github.io/dd/reference/lcase.md) : DuckDB
   function lcase
 - [`lcm`](https://cynkra.github.io/dd/reference/lcm.md) : DuckDB
   function lcm
+- [`lead()`](https://cynkra.github.io/dd/reference/lead.md) : DuckDB
+  function lead
 - [`least()`](https://cynkra.github.io/dd/reference/least.md) : DuckDB
   function least
 - [`least_common_multiple`](https://cynkra.github.io/dd/reference/least_common_multiple.md)
@@ -850,6 +880,8 @@ help(acos, package = "dd")
   : DuckDB function make_timestamp_ms
 - [`make_timestamp_ns()`](https://cynkra.github.io/dd/reference/make_timestamp_ns.md)
   : DuckDB function make_timestamp_ns
+- [`make_type()`](https://cynkra.github.io/dd/reference/make_type.md) :
+  DuckDB function make_type
 - [`map`](https://cynkra.github.io/dd/reference/map.md) : DuckDB
   function map
 - [`map_concat()`](https://cynkra.github.io/dd/reference/map_concat.md)
@@ -938,6 +970,10 @@ help(acos, package = "dd")
   : DuckDB function not_like_escape
 - [`now()`](https://cynkra.github.io/dd/reference/now.md) : DuckDB
   function now
+- [`nth_value()`](https://cynkra.github.io/dd/reference/nth_value.md) :
+  DuckDB function nth_value
+- [`ntile()`](https://cynkra.github.io/dd/reference/ntile.md) : DuckDB
+  function ntile
 - [`nullif()`](https://cynkra.github.io/dd/reference/nullif.md) : DuckDB
   function nullif
 - [`obj_description()`](https://cynkra.github.io/dd/reference/obj_description.md)
@@ -955,6 +991,8 @@ help(acos, package = "dd")
   : DuckDB function parquet_bloom_probe
 - [`parquet_file_metadata`](https://cynkra.github.io/dd/reference/parquet_file_metadata.md)
   : DuckDB function parquet_file_metadata
+- [`parquet_full_metadata`](https://cynkra.github.io/dd/reference/parquet_full_metadata.md)
+  : DuckDB function parquet_full_metadata
 - [`parquet_kv_metadata`](https://cynkra.github.io/dd/reference/parquet_kv_metadata.md)
   : DuckDB function parquet_kv_metadata
 - [`parquet_metadata`](https://cynkra.github.io/dd/reference/parquet_metadata.md)
@@ -971,8 +1009,12 @@ help(acos, package = "dd")
   : DuckDB function parse_duckdb_log_message
 - [`parse_filename`](https://cynkra.github.io/dd/reference/parse_filename.md)
   : DuckDB function parse_filename
+- [`parse_formatted_bytes()`](https://cynkra.github.io/dd/reference/parse_formatted_bytes.md)
+  : DuckDB function parse_formatted_bytes
 - [`parse_path`](https://cynkra.github.io/dd/reference/parse_path.md) :
   DuckDB function parse_path
+- [`percent_rank()`](https://cynkra.github.io/dd/reference/percent_rank.md)
+  : DuckDB function percent_rank
 - [`pg_collation_is_visible()`](https://cynkra.github.io/dd/reference/pg_collation_is_visible.md)
   : DuckDB function pg_collation_is_visible
 - [`pg_conf_load_time()`](https://cynkra.github.io/dd/reference/pg_conf_load_time.md)
@@ -1003,6 +1045,8 @@ help(acos, package = "dd")
   : DuckDB function pg_postmaster_start_time
 - [`pg_size_pretty()`](https://cynkra.github.io/dd/reference/pg_size_pretty.md)
   : DuckDB function pg_size_pretty
+- [`pg_sleep()`](https://cynkra.github.io/dd/reference/pg_sleep.md) :
+  DuckDB function pg_sleep
 - [`pg_table_is_visible()`](https://cynkra.github.io/dd/reference/pg_table_is_visible.md)
   : DuckDB function pg_table_is_visible
 - [`pg_ts_config_is_visible()`](https://cynkra.github.io/dd/reference/pg_ts_config_is_visible.md)
@@ -1074,12 +1118,18 @@ help(acos, package = "dd")
   function random
 - [`range`](https://cynkra.github.io/dd/reference/range.md) : DuckDB
   function range
+- [`rank()`](https://cynkra.github.io/dd/reference/rank.md) : DuckDB
+  function rank
+- [`rank_dense()`](https://cynkra.github.io/dd/reference/rank_dense.md)
+  : DuckDB function rank_dense
 - [`read_blob`](https://cynkra.github.io/dd/reference/read_blob.md) :
   DuckDB function read_blob
 - [`read_csv`](https://cynkra.github.io/dd/reference/read_csv.md) :
   DuckDB function read_csv
 - [`read_csv_auto`](https://cynkra.github.io/dd/reference/read_csv_auto.md)
   : DuckDB function read_csv_auto
+- [`read_duckdb`](https://cynkra.github.io/dd/reference/read_duckdb.md)
+  : DuckDB function read_duckdb
 - [`read_parquet`](https://cynkra.github.io/dd/reference/read_parquet.md)
   : DuckDB function read_parquet
 - [`read_text`](https://cynkra.github.io/dd/reference/read_text.md) :
@@ -1144,6 +1194,8 @@ help(acos, package = "dd")
   : DuckDB function roundbankers
 - [`row()`](https://cynkra.github.io/dd/reference/row.md) : DuckDB
   function row
+- [`row_number()`](https://cynkra.github.io/dd/reference/row_number.md)
+  : DuckDB function row_number
 - [`rpad()`](https://cynkra.github.io/dd/reference/rpad.md) : DuckDB
   function rpad
 - [`rtrim`](https://cynkra.github.io/dd/reference/rtrim.md) : DuckDB
@@ -1190,12 +1242,30 @@ help(acos, package = "dd")
   function //
 - [`/`](https://cynkra.github.io/dd/reference/slash.md) : DuckDB
   function /
+- [`sleep_ms()`](https://cynkra.github.io/dd/reference/sleep_ms.md) :
+  DuckDB function sleep_ms
 - [`split()`](https://cynkra.github.io/dd/reference/split.md) : DuckDB
   function split
 - [`split_part()`](https://cynkra.github.io/dd/reference/split_part.md)
   : DuckDB function split_part
 - [`sqrt()`](https://cynkra.github.io/dd/reference/sqrt.md) : DuckDB
   function sqrt
+- [`st_asbinary()`](https://cynkra.github.io/dd/reference/st_asbinary.md)
+  : DuckDB function st_asbinary
+- [`st_astext()`](https://cynkra.github.io/dd/reference/st_astext.md) :
+  DuckDB function st_astext
+- [`st_aswkb()`](https://cynkra.github.io/dd/reference/st_aswkb.md) :
+  DuckDB function st_aswkb
+- [`st_aswkt()`](https://cynkra.github.io/dd/reference/st_aswkt.md) :
+  DuckDB function st_aswkt
+- [`st_crs()`](https://cynkra.github.io/dd/reference/st_crs.md) : DuckDB
+  function st_crs
+- [`st_geomfromwkb()`](https://cynkra.github.io/dd/reference/st_geomfromwkb.md)
+  : DuckDB function st_geomfromwkb
+- [`st_intersects_extent()`](https://cynkra.github.io/dd/reference/st_intersects_extent.md)
+  : DuckDB function st_intersects_extent
+- [`st_setcrs()`](https://cynkra.github.io/dd/reference/st_setcrs.md) :
+  DuckDB function st_setcrs
 - [`starts_with()`](https://cynkra.github.io/dd/reference/starts_with.md)
   : DuckDB function starts_with
 - [`stats()`](https://cynkra.github.io/dd/reference/stats.md) : DuckDB
@@ -1242,12 +1312,16 @@ help(acos, package = "dd")
   : DuckDB function struct_indexof
 - [`struct_insert()`](https://cynkra.github.io/dd/reference/struct_insert.md)
   : DuckDB function struct_insert
+- [`struct_keys()`](https://cynkra.github.io/dd/reference/struct_keys.md)
+  : DuckDB function struct_keys
 - [`struct_pack()`](https://cynkra.github.io/dd/reference/struct_pack.md)
   : DuckDB function struct_pack
 - [`struct_position()`](https://cynkra.github.io/dd/reference/struct_position.md)
   : DuckDB function struct_position
 - [`struct_update()`](https://cynkra.github.io/dd/reference/struct_update.md)
   : DuckDB function struct_update
+- [`struct_values()`](https://cynkra.github.io/dd/reference/struct_values.md)
+  : DuckDB function struct_values
 - [`substr`](https://cynkra.github.io/dd/reference/substr.md) : DuckDB
   function substr
 - [`substring`](https://cynkra.github.io/dd/reference/substring.md) :
@@ -1266,6 +1340,8 @@ help(acos, package = "dd")
   DuckDB function sumkahan
 - [`summary()`](https://cynkra.github.io/dd/reference/summary.md) :
   DuckDB function summary
+- [`switch`](https://cynkra.github.io/dd/reference/switch.md) : DuckDB
+  function switch
 - [`table_info()`](https://cynkra.github.io/dd/reference/table_info.md)
   : DuckDB function table_info
 - [`tan()`](https://cynkra.github.io/dd/reference/tan.md) : DuckDB
@@ -1394,8 +1470,14 @@ help(acos, package = "dd")
   DuckDB function var_samp
 - [`variance()`](https://cynkra.github.io/dd/reference/variance.md) :
   DuckDB function variance
+- [`variant_bytes_to_variant()`](https://cynkra.github.io/dd/reference/variant_bytes_to_variant.md)
+  : DuckDB function variant_bytes_to_variant
 - [`variant_extract`](https://cynkra.github.io/dd/reference/variant_extract.md)
   : DuckDB function variant_extract
+- [`variant_normalize()`](https://cynkra.github.io/dd/reference/variant_normalize.md)
+  : DuckDB function variant_normalize
+- [`variant_to_parquet_variant()`](https://cynkra.github.io/dd/reference/variant_to_parquet_variant.md)
+  : DuckDB function variant_to_parquet_variant
 - [`variant_typeof()`](https://cynkra.github.io/dd/reference/variant_typeof.md)
   : DuckDB function variant_typeof
 - [`vector_type()`](https://cynkra.github.io/dd/reference/vector_type.md)

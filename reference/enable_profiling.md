@@ -2,12 +2,34 @@
 
 DuckDB function `enable_profiling()`.
 
-## Usage
+## Arguments
 
-``` r
-enable_profiling()
-```
+- mode:
+
+  `VARCHAR`
+
+- metrics:
+
+  `ANY`
+
+- save_location:
+
+  `VARCHAR`
+
+- coverage:
+
+  `VARCHAR`
+
+- format:
+
+  `VARCHAR`
 
 ## Value
 
 Unspecified.
+
+## Overloads
+
+- `enable_profiling(mode = VARCHAR, metrics = ANY, save_location = VARCHAR, coverage = VARCHAR, format = VARCHAR)`
+
+- `enable_profiling()`

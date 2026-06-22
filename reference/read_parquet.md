@@ -12,27 +12,11 @@ DuckDB function `read_parquet()`.
 
   `BOOLEAN`
 
-- encryption_config:
-
-  `ANY`
-
-- file_row_number:
-
-  `BOOLEAN`
-
-- schema:
-
-  `ANY`
-
-- parquet_version:
-
-  `VARCHAR`
-
 - filename:
 
   `ANY`
 
-- binary_as_string:
+- union_by_name:
 
   `BOOLEAN`
 
@@ -40,7 +24,23 @@ DuckDB function `read_parquet()`.
 
   `BOOLEAN`
 
-- union_by_name:
+- hive_partitioning:
+
+  `BOOLEAN`
+
+- parquet_version:
+
+  `VARCHAR`
+
+- encryption_config:
+
+  `ANY`
+
+- hive_types_autocast:
+
+  `BOOLEAN`
+
+- binary_as_string:
 
   `BOOLEAN`
 
@@ -52,17 +52,17 @@ DuckDB function `read_parquet()`.
 
   `VARCHAR`
 
+- file_row_number:
+
+  `BOOLEAN`
+
 - hive_types:
 
   `ANY`
 
-- hive_partitioning:
+- schema:
 
-  `BOOLEAN`
-
-- hive_types_autocast:
-
-  `BOOLEAN`
+  `ANY`
 
 ## Value
 
@@ -70,6 +70,6 @@ Unspecified.
 
 ## Overloads
 
-- `read_parquet(col0 = VARCHAR, can_have_nan = BOOLEAN, encryption_config = ANY, file_row_number = BOOLEAN, schema = ANY, parquet_version = VARCHAR, filename = ANY, binary_as_string = BOOLEAN, debug_use_openssl = BOOLEAN, union_by_name = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, hive_types = ANY, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN)`
+- `read_parquet(col0 = VARCHAR, can_have_nan = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY, schema = ANY)`
 
-- `` read_parquet(col0 = `VARCHAR[]`, hive_types_autocast = BOOLEAN, hive_partitioning = BOOLEAN, hive_types = ANY, compression = VARCHAR, explicit_cardinality = UBIGINT, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, binary_as_string = BOOLEAN, filename = ANY, parquet_version = VARCHAR, schema = ANY, file_row_number = BOOLEAN, encryption_config = ANY, can_have_nan = BOOLEAN) ``
+- `` read_parquet(col0 = `VARCHAR[]`, can_have_nan = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY, schema = ANY) ``

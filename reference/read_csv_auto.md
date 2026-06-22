@@ -8,63 +8,103 @@ DuckDB function `read_csv_auto()`.
 
   `VARCHAR | VARCHAR[]`
 
-- hive_types_autocast:
+- thousands:
+
+  `VARCHAR`
+
+- strict_mode:
 
   `BOOLEAN`
 
-- skip:
-
-  `BIGINT`
-
-- types:
+- dtypes:
 
   `ANY`
 
-- nullstr:
+- column_types:
 
   `ANY`
 
-- encoding:
-
-  `VARCHAR`
-
-- hive_types:
-
-  `ANY`
-
-- filename:
-
-  `ANY`
-
-- header:
+- null_padding:
 
   `BOOLEAN`
-
-- delim:
-
-  `VARCHAR`
-
-- dateformat:
-
-  `VARCHAR`
 
 - column_names:
 
   `VARCHAR[]`
 
-- union_by_name:
+- buffer_size:
+
+  `UBIGINT`
+
+- parallel:
 
   `BOOLEAN`
+
+- force_not_null:
+
+  `VARCHAR[]`
+
+- hive_types:
+
+  `ANY`
 
 - new_line:
 
   `VARCHAR`
 
+- files_to_sniff:
+
+  `BIGINT`
+
+- dateformat:
+
+  `VARCHAR`
+
+- delim:
+
+  `VARCHAR`
+
+- sep:
+
+  `VARCHAR`
+
+- decimal_separator:
+
+  `VARCHAR`
+
+- nullstr:
+
+  `ANY`
+
 - escape:
 
   `VARCHAR`
 
-- allow_quoted_nulls:
+- compression:
+
+  `VARCHAR`
+
+- encoding:
+
+  `VARCHAR`
+
+- hive_types_autocast:
+
+  `BOOLEAN`
+
+- all_varchar:
+
+  `BOOLEAN`
+
+- columns:
+
+  `ANY`
+
+- hive_partitioning:
+
+  `BOOLEAN`
+
+- auto_detect:
 
   `BOOLEAN`
 
@@ -72,27 +112,35 @@ DuckDB function `read_csv_auto()`.
 
   `VARCHAR`
 
-- hive_partitioning:
-
-  `BOOLEAN`
-
-- sep:
+- quote:
 
   `VARCHAR`
 
-- columns:
+- max_line_size:
+
+  `VARCHAR`
+
+- store_rejects:
+
+  `BOOLEAN`
+
+- union_by_name:
+
+  `BOOLEAN`
+
+- header:
+
+  `BOOLEAN`
+
+- types:
 
   `ANY`
 
-- rejects_limit:
+- skip:
 
   `BIGINT`
 
-- force_not_null:
-
-  `VARCHAR[]`
-
-- auto_type_candidates:
+- filename:
 
   `ANY`
 
@@ -104,33 +152,9 @@ DuckDB function `read_csv_auto()`.
 
   `VARCHAR`
 
-- auto_detect:
-
-  `BOOLEAN`
-
-- all_varchar:
-
-  `BOOLEAN`
-
-- store_rejects:
-
-  `BOOLEAN`
-
 - normalize_names:
 
   `BOOLEAN`
-
-- rejects_table:
-
-  `VARCHAR`
-
-- column_types:
-
-  `ANY`
-
-- compression:
-
-  `VARCHAR`
 
 - ignore_errors:
 
@@ -140,51 +164,27 @@ DuckDB function `read_csv_auto()`.
 
   `VARCHAR[]`
 
-- max_line_size:
+- allow_quoted_nulls:
 
-  `VARCHAR`
-
-- quote:
-
-  `VARCHAR`
+  `BOOLEAN`
 
 - maximum_line_size:
 
   `VARCHAR`
 
+- rejects_table:
+
+  `VARCHAR`
+
+- auto_type_candidates:
+
+  `ANY`
+
 - rejects_scan:
 
   `VARCHAR`
 
-- buffer_size:
-
-  `UBIGINT`
-
-- decimal_separator:
-
-  `VARCHAR`
-
-- parallel:
-
-  `BOOLEAN`
-
-- null_padding:
-
-  `BOOLEAN`
-
-- dtypes:
-
-  `ANY`
-
-- strict_mode:
-
-  `BOOLEAN`
-
-- thousands:
-
-  `VARCHAR`
-
-- files_to_sniff:
+- rejects_limit:
 
   `BIGINT`
 
@@ -194,6 +194,6 @@ Unspecified.
 
 ## Overloads
 
-- `` read_csv_auto(col0 = VARCHAR, hive_types_autocast = BOOLEAN, skip = BIGINT, types = ANY, nullstr = ANY, encoding = VARCHAR, hive_types = ANY, filename = ANY, header = BOOLEAN, delim = VARCHAR, dateformat = VARCHAR, column_names = `VARCHAR[]`, union_by_name = BOOLEAN, new_line = VARCHAR, escape = VARCHAR, allow_quoted_nulls = BOOLEAN, comment = VARCHAR, hive_partitioning = BOOLEAN, sep = VARCHAR, columns = ANY, rejects_limit = BIGINT, force_not_null = `VARCHAR[]`, auto_type_candidates = ANY, sample_size = BIGINT, timestampformat = VARCHAR, auto_detect = BOOLEAN, all_varchar = BOOLEAN, store_rejects = BOOLEAN, normalize_names = BOOLEAN, rejects_table = VARCHAR, column_types = ANY, compression = VARCHAR, ignore_errors = BOOLEAN, names = `VARCHAR[]`, max_line_size = VARCHAR, quote = VARCHAR, maximum_line_size = VARCHAR, rejects_scan = VARCHAR, buffer_size = UBIGINT, decimal_separator = VARCHAR, parallel = BOOLEAN, null_padding = BOOLEAN, dtypes = ANY, strict_mode = BOOLEAN, thousands = VARCHAR, files_to_sniff = BIGINT) ``
+- `` read_csv_auto(col0 = VARCHAR, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, column_types = ANY, null_padding = BOOLEAN, column_names = `VARCHAR[]`, buffer_size = UBIGINT, parallel = BOOLEAN, force_not_null = `VARCHAR[]`, hive_types = ANY, new_line = VARCHAR, files_to_sniff = BIGINT, dateformat = VARCHAR, delim = VARCHAR, sep = VARCHAR, decimal_separator = VARCHAR, nullstr = ANY, escape = VARCHAR, compression = VARCHAR, encoding = VARCHAR, hive_types_autocast = BOOLEAN, all_varchar = BOOLEAN, columns = ANY, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, comment = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, store_rejects = BOOLEAN, union_by_name = BOOLEAN, header = BOOLEAN, types = ANY, skip = BIGINT, filename = ANY, sample_size = BIGINT, timestampformat = VARCHAR, normalize_names = BOOLEAN, ignore_errors = BOOLEAN, names = `VARCHAR[]`, allow_quoted_nulls = BOOLEAN, maximum_line_size = VARCHAR, rejects_table = VARCHAR, auto_type_candidates = ANY, rejects_scan = VARCHAR, rejects_limit = BIGINT) ``
 
-- `` read_csv_auto(col0 = `VARCHAR[]`, files_to_sniff = BIGINT, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, null_padding = BOOLEAN, parallel = BOOLEAN, decimal_separator = VARCHAR, buffer_size = UBIGINT, rejects_scan = VARCHAR, maximum_line_size = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, names = `VARCHAR[]`, ignore_errors = BOOLEAN, compression = VARCHAR, column_types = ANY, rejects_table = VARCHAR, normalize_names = BOOLEAN, store_rejects = BOOLEAN, all_varchar = BOOLEAN, auto_detect = BOOLEAN, timestampformat = VARCHAR, sample_size = BIGINT, auto_type_candidates = ANY, force_not_null = `VARCHAR[]`, rejects_limit = BIGINT, columns = ANY, sep = VARCHAR, hive_partitioning = BOOLEAN, comment = VARCHAR, allow_quoted_nulls = BOOLEAN, escape = VARCHAR, new_line = VARCHAR, union_by_name = BOOLEAN, column_names = `VARCHAR[]`, dateformat = VARCHAR, delim = VARCHAR, header = BOOLEAN, filename = ANY, hive_types = ANY, encoding = VARCHAR, nullstr = ANY, types = ANY, skip = BIGINT, hive_types_autocast = BOOLEAN) ``
+- `` read_csv_auto(col0 = `VARCHAR[]`, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, column_types = ANY, null_padding = BOOLEAN, column_names = `VARCHAR[]`, buffer_size = UBIGINT, parallel = BOOLEAN, force_not_null = `VARCHAR[]`, hive_types = ANY, new_line = VARCHAR, files_to_sniff = BIGINT, dateformat = VARCHAR, delim = VARCHAR, sep = VARCHAR, decimal_separator = VARCHAR, nullstr = ANY, escape = VARCHAR, compression = VARCHAR, encoding = VARCHAR, hive_types_autocast = BOOLEAN, all_varchar = BOOLEAN, columns = ANY, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, comment = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, store_rejects = BOOLEAN, union_by_name = BOOLEAN, header = BOOLEAN, types = ANY, skip = BIGINT, filename = ANY, sample_size = BIGINT, timestampformat = VARCHAR, normalize_names = BOOLEAN, ignore_errors = BOOLEAN, names = `VARCHAR[]`, allow_quoted_nulls = BOOLEAN, maximum_line_size = VARCHAR, rejects_table = VARCHAR, auto_type_candidates = ANY, rejects_scan = VARCHAR, rejects_limit = BIGINT) ``

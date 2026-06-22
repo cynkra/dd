@@ -43,11 +43,11 @@
 
 
 <dl><dt id="arg-data">data<a class="anchor" aria-label="anchor" href="#arg-data"></a></dt>
-<dd><p><code>DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR</code></p></dd>
+<dd><p><code>DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR | TIMESTAMP WITH TIME ZONE</code></p></dd>
 
 
 <dt id="arg-format">format<a class="anchor" aria-label="anchor" href="#arg-format"></a></dt>
-<dd><p><code>VARCHAR | DATE | TIMESTAMP | TIMESTAMP_NS</code></p></dd>
+<dd><p><code>VARCHAR | DATE | TIMESTAMP | TIMESTAMP_NS | TIMESTAMP WITH TIME ZONE</code></p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -64,6 +64,8 @@
 <li><p><code>strftime(data = VARCHAR, format = DATE)</code></p></li>
 <li><p><code>strftime(data = VARCHAR, format = TIMESTAMP)</code></p></li>
 <li><p><code>strftime(data = VARCHAR, format = TIMESTAMP_NS)</code></p></li>
+<li><p><code>strftime(data = `TIMESTAMP WITH TIME ZONE`, format = VARCHAR)</code></p></li>
+<li><p><code>strftime(data = VARCHAR, format = `TIMESTAMP WITH TIME ZONE`)</code></p></li>
 </ul></div>
     <div class="section level2">
     <h2 id="sql-examples">SQL examples<a class="anchor" aria-label="anchor" href="#sql-examples"></a></h2>

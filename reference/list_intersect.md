@@ -1,23 +1,28 @@
 # DuckDB function list_intersect
 
-DuckDB macro `list_intersect()`.
+Returns a list containing the distinct elements that are present in both
+`list1` and `list2`.
 
 ## Usage
 
 ``` r
-list_intersect(l1, l2)
+list_intersect(list1 = `T[]`, list2 = `T[]`)
 ```
 
 ## Arguments
 
-- l1:
+- list1:
 
-  Unspecified.
+  `T[]`
 
-- l2:
+- list2:
 
-  Unspecified.
+  `T[]`
 
 ## Value
 
-Unspecified.
+`T[]`
+
+## SQL examples
+
+    list_intersect([1, 2, 3], [2, 3, 4])

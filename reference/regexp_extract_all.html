@@ -51,7 +51,7 @@
 
 
 <dt id="arg-group">group<a class="anchor" aria-label="anchor" href="#arg-group"></a></dt>
-<dd><p><code>INTEGER</code></p></dd>
+<dd><p><code>INTEGER | VARCHAR[]</code></p></dd>
 
 
 <dt id="arg-options">options<a class="anchor" aria-label="anchor" href="#arg-options"></a></dt>
@@ -69,6 +69,8 @@
 <ul><li><p><code>regexp_extract_all(string = VARCHAR, regex = VARCHAR)</code></p></li>
 <li><p><code>regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = INTEGER)</code></p></li>
 <li><p><code>regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR)</code></p></li>
+<li><p><code>regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = `VARCHAR[]`)</code></p></li>
+<li><p><code>regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = `VARCHAR[]`, options = VARCHAR)</code></p></li>
 </ul></div>
     <div class="section level2">
     <h2 id="sql-examples">SQL examples<a class="anchor" aria-label="anchor" href="#sql-examples"></a></h2>

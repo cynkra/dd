@@ -1,27 +1,27 @@
 # DuckDB function &&
 
-Returns true if the lists have any element in common. NULLs are ignored.
-
-## Usage
-
-``` r
-`T[]` && `T[]`
-```
+Returns true if the geometries bounding boxes intersect.
 
 ## Arguments
 
-- list1:
+- geom1:
 
-  `T[]`
+  `GEOMETRY | T[]`
 
-- list2:
+- geom2:
 
-  `T[]`
+  `GEOMETRY | T[]`
 
 ## Value
 
 `BOOLEAN`
 
+## Overloads
+
+- `` `&&`(geom1 = GEOMETRY, geom2 = GEOMETRY) ``
+
+- `` `&&`(geom1 = `T[]`, geom2 = `T[]`) ``
+
 ## SQL examples
 
-    list_has_any([1, 2, 3], [2, 3, 4])
+    'POINT(5 5)'::GEOMETRY && 'LINESTRING(0 0, 10 20)'::GEOMETRY;

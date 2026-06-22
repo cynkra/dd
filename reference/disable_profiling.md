@@ -2,12 +2,12 @@
 
 DuckDB function `disable_profiling()`.
 
-## Usage
-
-``` r
-disable_profiling()
-```
-
 ## Value
 
 Unspecified.
+
+## Overloads
+
+- `disable_profiling()`
+
+- `disable_profiling()`

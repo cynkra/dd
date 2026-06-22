@@ -9,15 +9,21 @@ affected by ordering.
 
   `DECIMAL | ANY`
 
+- col0:
+
+  `T`
+
 ## Value
 
-`DECIMAL | ANY`
+`DECIMAL | ANY | T`
 
 ## Overloads
 
 - `first(arg = DECIMAL)`
 
 - `first(arg = ANY)`
+
+- `first(col0 = T)`
 
 ## SQL examples
 

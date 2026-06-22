@@ -16,7 +16,7 @@ optional regex `options` can be set.
 
 - group:
 
-  `INTEGER`
+  `INTEGER | VARCHAR[]`
 
 - options:
 
@@ -33,6 +33,10 @@ optional regex `options` can be set.
 - `regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = INTEGER)`
 
 - `regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR)`
+
+- `` regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = `VARCHAR[]`) ``
+
+- `` regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = `VARCHAR[]`, options = VARCHAR) ``
 
 ## SQL examples
 
