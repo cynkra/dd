@@ -8,7 +8,7 @@
 
 \item{regex}{\code{VARCHAR}}
 
-\item{group}{\code{INTEGER}}
+\item{group}{\code{INTEGER | VARCHAR[]}}
 
 \item{options}{\code{VARCHAR}}
 }
@@ -24,6 +24,8 @@ Finds non-overlapping occurrences of the \code{regex} in the \code{string} and r
 \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR)}
 \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = INTEGER)}
 \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR)}
+\item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = `VARCHAR[]`)}
+\item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = `VARCHAR[]`, options = VARCHAR)}
 }
 }
 

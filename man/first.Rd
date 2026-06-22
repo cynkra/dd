@@ -5,9 +5,11 @@
 \title{DuckDB function first}
 \arguments{
 \item{arg}{\code{DECIMAL | ANY}}
+
+\item{col0}{\code{T}}
 }
 \value{
-\code{DECIMAL | ANY}
+\code{DECIMAL | ANY | T}
 }
 \description{
 Returns the first value (NULL or non-NULL) from arg. This function is affected by ordering.
@@ -17,6 +19,7 @@ Returns the first value (NULL or non-NULL) from arg. This function is affected b
 \itemize{
 \item \code{first(arg = DECIMAL)}
 \item \code{first(arg = ANY)}
+\item \code{first(col0 = T)}
 }
 }
 

@@ -1,10 +1,8 @@
-rlang::local_options(conflicts.policy = list(warn = FALSE))
+withr::local_options(conflicts.policy = list(warn = FALSE))
 library(dplyr)
 library(tidyr)
 library(purrr)
 library(glue)
-library(conflicted)
-conflicts_prefer(dplyr::filter)
 
 con <- DBI::dbConnect(duckdb::duckdb())
 
@@ -12,7 +10,7 @@ filter_print <- function(.data, expr) {
   quo <- rlang::enquo(expr)
   out <-
     .data |>
-    filter(!!quo)
+    dplyr::filter(!!quo)
 
   delta <- unique(setdiff(.data$function_name, out$function_name))
 
@@ -36,21 +34,41 @@ param_type_tick_if_needed <- function(x) {
   if_else(is.na(x) | x == "", "", paste0(" = ", tibble:::tick_if_needed(x)))
 }
 
+# Build the `@usage` signature for a single overload, wrapping one argument per
+# line when the one-line form would exceed the Rd 90-character usage width that
+# R CMD check flags.
+usage_signature <- function(function_name, parameters, parameter_types) {
+  name <- tibble:::tick_if_needed(function_name)
+  if (length(parameters) == 0) {
+    return(paste0(name, "()"))
+  }
+  args <- paste0(tibble:::tick_if_needed(parameters), param_type_tick_if_needed(parameter_types))
+  one_line <- paste0(name, "(", paste0(args, collapse = ", "), ")")
+  if (nchar(one_line) <= 90) {
+    return(one_line)
+  }
+  paste0(
+    name, "(\n",
+    paste0("#'   ", args, collapse = ",\n"), "\n",
+    "#' )"
+  )
+}
+
 usage_and_params <- function(function_name, parameters, parameter_types, description, macro_definition, examples) {
-  signatures <- map2_chr(parameters, parameter_types, ~ {
-    if (length(.x) == 0) {
-      usage_signature <- "" # No parameters
-    } else {
-      usage_signature <- paste0(tibble:::tick_if_needed(.x), param_type_tick_if_needed(.y), collapse = ", ")
-    }
-    glue("{tibble:::tick_if_needed(function_name)}({usage_signature})")
-  })
   if (length(parameters) == 1) {
-    usage_doc <- glue("#' @usage {signatures}")
+    usage_doc <- glue("#' @usage {usage_signature(function_name, parameters[[1]], parameter_types[[1]])}")
   } else if (function_name == "%") {
     # FIXME: roxygen2 generates bad .Rd here
     usage_doc <- "#' @usage NULL\n"
   } else {
+    signatures <- map2_chr(parameters, parameter_types, ~ {
+      if (length(.x) == 0) {
+        sig <- "" # No parameters
+      } else {
+        sig <- paste0(tibble:::tick_if_needed(.x), param_type_tick_if_needed(.y), collapse = ", ")
+      }
+      glue("{tibble:::tick_if_needed(function_name)}({sig})")
+    })
     usage_doc <- paste0(
       "#' @usage NULL\n",
       "#' @section Overloads:\n",

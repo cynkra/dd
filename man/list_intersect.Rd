@@ -4,16 +4,23 @@
 \alias{list_intersect}
 \title{DuckDB function list_intersect}
 \usage{
-list_intersect(l1, l2)
+list_intersect(list1 = `T[]`, list2 = `T[]`)
 }
 \arguments{
-\item{l1}{Unspecified.}
+\item{list1}{\code{T[]}}
 
-\item{l2}{Unspecified.}
+\item{list2}{\code{T[]}}
 }
 \value{
-Unspecified.
+\code{T[]}
 }
 \description{
-DuckDB macro \code{list_intersect()}.
+Returns a list containing the distinct elements that are present in both \code{list1} and \code{list2}.
 }
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{list_intersect([1, 2, 3], [2, 3, 4])
+}\if{html}{\out{</div>}}
+}
+

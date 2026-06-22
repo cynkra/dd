@@ -3,22 +3,31 @@
 \name{decode}
 \alias{decode}
 \title{DuckDB function decode}
-\usage{
-decode(blob = BLOB)
-}
 \arguments{
 \item{blob}{\code{BLOB}}
+
+\item{varchar}{\code{VARCHAR}}
 }
 \value{
 \code{VARCHAR}
 }
 \description{
-Converts \code{blob} to \code{VARCHAR}. Fails if \code{blob} is not valid UTF-8.
+Converts \code{blob} to \code{VARCHAR}. Invalid UTF-8 is handled based on the error behavior argument. Can be 'strict' (default, fail), 'replace' to replace invalid characters with '?', or 'ignore' to skip invalid characters.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{decode(blob = BLOB)}
+\item \code{decode(blob = BLOB, varchar = VARCHAR)}
+}
+}
+
 \section{SQL examples}{
 
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{decode('\\xC3\\xBC'::BLOB)
+decode('\\xA0'::BLOB, 'replace')
+decode('\\xA0'::BLOB, 'ignore')
 }\if{html}{\out{</div>}}
 }
 
