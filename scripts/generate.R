@@ -55,20 +55,20 @@ usage_signature <- function(function_name, parameters, parameter_types) {
 }
 
 usage_and_params <- function(function_name, parameters, parameter_types, description, macro_definition, examples) {
-  signatures <- map2_chr(parameters, parameter_types, ~ {
-    if (length(.x) == 0) {
-      usage_signature <- "" # No parameters
-    } else {
-      usage_signature <- paste0(tibble:::tick_if_needed(.x), param_type_tick_if_needed(.y), collapse = ", ")
-    }
-    glue("{tibble:::tick_if_needed(function_name)}({usage_signature})")
-  })
   if (length(parameters) == 1) {
     usage_doc <- glue("#' @usage {usage_signature(function_name, parameters[[1]], parameter_types[[1]])}")
   } else if (function_name == "%") {
     # FIXME: roxygen2 generates bad .Rd here
     usage_doc <- "#' @usage NULL\n"
   } else {
+    signatures <- map2_chr(parameters, parameter_types, ~ {
+      if (length(.x) == 0) {
+        sig <- "" # No parameters
+      } else {
+        sig <- paste0(tibble:::tick_if_needed(.x), param_type_tick_if_needed(.y), collapse = ", ")
+      }
+      glue("{tibble:::tick_if_needed(function_name)}({sig})")
+    })
     usage_doc <- paste0(
       "#' @usage NULL\n",
       "#' @section Overloads:\n",
