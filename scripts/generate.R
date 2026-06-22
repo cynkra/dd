@@ -3,8 +3,6 @@ library(dplyr)
 library(tidyr)
 library(purrr)
 library(glue)
-library(conflicted)
-conflicts_prefer(dplyr::filter)
 
 con <- DBI::dbConnect(duckdb::duckdb())
 
@@ -12,7 +10,7 @@ filter_print <- function(.data, expr) {
   quo <- rlang::enquo(expr)
   out <-
     .data |>
-    filter(!!quo)
+    dplyr::filter(!!quo)
 
   delta <- unique(setdiff(.data$function_name, out$function_name))
 
