@@ -1,4 +1,4 @@
-options(conflicts.policy = list(warn = FALSE))
+withr::local_options(conflicts.policy = list(warn = FALSE))
 library(dplyr)
 library(tidyr)
 library(purrr)
