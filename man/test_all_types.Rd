@@ -4,12 +4,12 @@
 \alias{test_all_types}
 \title{DuckDB function test_all_types}
 \usage{
-test_all_types(use_large_enum = BOOLEAN, use_large_bignum = BOOLEAN)
+test_all_types(use_large_bignum = BOOLEAN, use_large_enum = BOOLEAN)
 }
 \arguments{
-\item{use_large_enum}{\code{BOOLEAN}}
-
 \item{use_large_bignum}{\code{BOOLEAN}}
+
+\item{use_large_enum}{\code{BOOLEAN}}
 }
 \value{
 Unspecified.

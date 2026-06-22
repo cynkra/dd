@@ -4,9 +4,9 @@
 \alias{strftime}
 \title{DuckDB function strftime}
 \arguments{
-\item{data}{\code{DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR}}
+\item{data}{\verb{DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR | TIMESTAMP WITH TIME ZONE}}
 
-\item{format}{\code{VARCHAR | DATE | TIMESTAMP | TIMESTAMP_NS}}
+\item{format}{\verb{VARCHAR | DATE | TIMESTAMP | TIMESTAMP_NS | TIMESTAMP WITH TIME ZONE}}
 }
 \value{
 \code{VARCHAR}
@@ -23,6 +23,8 @@ Converts a \code{date} to a string according to the format string.
 \item \code{strftime(data = VARCHAR, format = DATE)}
 \item \code{strftime(data = VARCHAR, format = TIMESTAMP)}
 \item \code{strftime(data = VARCHAR, format = TIMESTAMP_NS)}
+\item \code{strftime(data = `TIMESTAMP WITH TIME ZONE`, format = VARCHAR)}
+\item \code{strftime(data = VARCHAR, format = `TIMESTAMP WITH TIME ZONE`)}
 }
 }
 

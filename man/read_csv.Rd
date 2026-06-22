@@ -6,95 +6,95 @@
 \arguments{
 \item{col0}{\code{VARCHAR | VARCHAR[]}}
 
-\item{hive_types_autocast}{\code{BOOLEAN}}
+\item{thousands}{\code{VARCHAR}}
 
-\item{skip}{\code{BIGINT}}
+\item{strict_mode}{\code{BOOLEAN}}
 
-\item{types}{\code{ANY}}
+\item{dtypes}{\code{ANY}}
 
-\item{nullstr}{\code{ANY}}
+\item{column_types}{\code{ANY}}
 
-\item{encoding}{\code{VARCHAR}}
-
-\item{hive_types}{\code{ANY}}
-
-\item{filename}{\code{ANY}}
-
-\item{header}{\code{BOOLEAN}}
-
-\item{delim}{\code{VARCHAR}}
-
-\item{dateformat}{\code{VARCHAR}}
+\item{null_padding}{\code{BOOLEAN}}
 
 \item{column_names}{\code{VARCHAR[]}}
 
-\item{union_by_name}{\code{BOOLEAN}}
+\item{buffer_size}{\code{UBIGINT}}
 
-\item{new_line}{\code{VARCHAR}}
-
-\item{escape}{\code{VARCHAR}}
-
-\item{allow_quoted_nulls}{\code{BOOLEAN}}
-
-\item{comment}{\code{VARCHAR}}
-
-\item{hive_partitioning}{\code{BOOLEAN}}
-
-\item{sep}{\code{VARCHAR}}
-
-\item{columns}{\code{ANY}}
-
-\item{rejects_limit}{\code{BIGINT}}
+\item{parallel}{\code{BOOLEAN}}
 
 \item{force_not_null}{\code{VARCHAR[]}}
 
-\item{auto_type_candidates}{\code{ANY}}
+\item{hive_types}{\code{ANY}}
+
+\item{new_line}{\code{VARCHAR}}
+
+\item{files_to_sniff}{\code{BIGINT}}
+
+\item{dateformat}{\code{VARCHAR}}
+
+\item{delim}{\code{VARCHAR}}
+
+\item{sep}{\code{VARCHAR}}
+
+\item{decimal_separator}{\code{VARCHAR}}
+
+\item{nullstr}{\code{ANY}}
+
+\item{escape}{\code{VARCHAR}}
+
+\item{compression}{\code{VARCHAR}}
+
+\item{encoding}{\code{VARCHAR}}
+
+\item{hive_types_autocast}{\code{BOOLEAN}}
+
+\item{all_varchar}{\code{BOOLEAN}}
+
+\item{columns}{\code{ANY}}
+
+\item{hive_partitioning}{\code{BOOLEAN}}
+
+\item{auto_detect}{\code{BOOLEAN}}
+
+\item{comment}{\code{VARCHAR}}
+
+\item{quote}{\code{VARCHAR}}
+
+\item{max_line_size}{\code{VARCHAR}}
+
+\item{store_rejects}{\code{BOOLEAN}}
+
+\item{union_by_name}{\code{BOOLEAN}}
+
+\item{header}{\code{BOOLEAN}}
+
+\item{types}{\code{ANY}}
+
+\item{skip}{\code{BIGINT}}
+
+\item{filename}{\code{ANY}}
 
 \item{sample_size}{\code{BIGINT}}
 
 \item{timestampformat}{\code{VARCHAR}}
 
-\item{auto_detect}{\code{BOOLEAN}}
-
-\item{all_varchar}{\code{BOOLEAN}}
-
-\item{store_rejects}{\code{BOOLEAN}}
-
 \item{normalize_names}{\code{BOOLEAN}}
-
-\item{rejects_table}{\code{VARCHAR}}
-
-\item{column_types}{\code{ANY}}
-
-\item{compression}{\code{VARCHAR}}
 
 \item{ignore_errors}{\code{BOOLEAN}}
 
 \item{names}{\code{VARCHAR[]}}
 
-\item{max_line_size}{\code{VARCHAR}}
-
-\item{quote}{\code{VARCHAR}}
+\item{allow_quoted_nulls}{\code{BOOLEAN}}
 
 \item{maximum_line_size}{\code{VARCHAR}}
 
+\item{rejects_table}{\code{VARCHAR}}
+
+\item{auto_type_candidates}{\code{ANY}}
+
 \item{rejects_scan}{\code{VARCHAR}}
 
-\item{buffer_size}{\code{UBIGINT}}
-
-\item{decimal_separator}{\code{VARCHAR}}
-
-\item{parallel}{\code{BOOLEAN}}
-
-\item{null_padding}{\code{BOOLEAN}}
-
-\item{dtypes}{\code{ANY}}
-
-\item{strict_mode}{\code{BOOLEAN}}
-
-\item{thousands}{\code{VARCHAR}}
-
-\item{files_to_sniff}{\code{BIGINT}}
+\item{rejects_limit}{\code{BIGINT}}
 }
 \value{
 Unspecified.
@@ -105,8 +105,8 @@ DuckDB function \code{read_csv()}.
 \section{Overloads}{
 
 \itemize{
-\item \code{read_csv(col0 = VARCHAR, hive_types_autocast = BOOLEAN, skip = BIGINT, types = ANY, nullstr = ANY, encoding = VARCHAR, hive_types = ANY, filename = ANY, header = BOOLEAN, delim = VARCHAR, dateformat = VARCHAR, column_names = `VARCHAR[]`, union_by_name = BOOLEAN, new_line = VARCHAR, escape = VARCHAR, allow_quoted_nulls = BOOLEAN, comment = VARCHAR, hive_partitioning = BOOLEAN, sep = VARCHAR, columns = ANY, rejects_limit = BIGINT, force_not_null = `VARCHAR[]`, auto_type_candidates = ANY, sample_size = BIGINT, timestampformat = VARCHAR, auto_detect = BOOLEAN, all_varchar = BOOLEAN, store_rejects = BOOLEAN, normalize_names = BOOLEAN, rejects_table = VARCHAR, column_types = ANY, compression = VARCHAR, ignore_errors = BOOLEAN, names = `VARCHAR[]`, max_line_size = VARCHAR, quote = VARCHAR, maximum_line_size = VARCHAR, rejects_scan = VARCHAR, buffer_size = UBIGINT, decimal_separator = VARCHAR, parallel = BOOLEAN, null_padding = BOOLEAN, dtypes = ANY, strict_mode = BOOLEAN, thousands = VARCHAR, files_to_sniff = BIGINT)}
-\item \code{read_csv(col0 = `VARCHAR[]`, files_to_sniff = BIGINT, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, null_padding = BOOLEAN, parallel = BOOLEAN, decimal_separator = VARCHAR, buffer_size = UBIGINT, rejects_scan = VARCHAR, maximum_line_size = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, names = `VARCHAR[]`, ignore_errors = BOOLEAN, compression = VARCHAR, column_types = ANY, rejects_table = VARCHAR, normalize_names = BOOLEAN, store_rejects = BOOLEAN, all_varchar = BOOLEAN, auto_detect = BOOLEAN, timestampformat = VARCHAR, sample_size = BIGINT, auto_type_candidates = ANY, force_not_null = `VARCHAR[]`, rejects_limit = BIGINT, columns = ANY, sep = VARCHAR, hive_partitioning = BOOLEAN, comment = VARCHAR, allow_quoted_nulls = BOOLEAN, escape = VARCHAR, new_line = VARCHAR, union_by_name = BOOLEAN, column_names = `VARCHAR[]`, dateformat = VARCHAR, delim = VARCHAR, header = BOOLEAN, filename = ANY, hive_types = ANY, encoding = VARCHAR, nullstr = ANY, types = ANY, skip = BIGINT, hive_types_autocast = BOOLEAN)}
+\item \code{read_csv(col0 = VARCHAR, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, column_types = ANY, null_padding = BOOLEAN, column_names = `VARCHAR[]`, buffer_size = UBIGINT, parallel = BOOLEAN, force_not_null = `VARCHAR[]`, hive_types = ANY, new_line = VARCHAR, files_to_sniff = BIGINT, dateformat = VARCHAR, delim = VARCHAR, sep = VARCHAR, decimal_separator = VARCHAR, nullstr = ANY, escape = VARCHAR, compression = VARCHAR, encoding = VARCHAR, hive_types_autocast = BOOLEAN, all_varchar = BOOLEAN, columns = ANY, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, comment = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, store_rejects = BOOLEAN, union_by_name = BOOLEAN, header = BOOLEAN, types = ANY, skip = BIGINT, filename = ANY, sample_size = BIGINT, timestampformat = VARCHAR, normalize_names = BOOLEAN, ignore_errors = BOOLEAN, names = `VARCHAR[]`, allow_quoted_nulls = BOOLEAN, maximum_line_size = VARCHAR, rejects_table = VARCHAR, auto_type_candidates = ANY, rejects_scan = VARCHAR, rejects_limit = BIGINT)}
+\item \code{read_csv(col0 = `VARCHAR[]`, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, column_types = ANY, null_padding = BOOLEAN, column_names = `VARCHAR[]`, buffer_size = UBIGINT, parallel = BOOLEAN, force_not_null = `VARCHAR[]`, hive_types = ANY, new_line = VARCHAR, files_to_sniff = BIGINT, dateformat = VARCHAR, delim = VARCHAR, sep = VARCHAR, decimal_separator = VARCHAR, nullstr = ANY, escape = VARCHAR, compression = VARCHAR, encoding = VARCHAR, hive_types_autocast = BOOLEAN, all_varchar = BOOLEAN, columns = ANY, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, comment = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, store_rejects = BOOLEAN, union_by_name = BOOLEAN, header = BOOLEAN, types = ANY, skip = BIGINT, filename = ANY, sample_size = BIGINT, timestampformat = VARCHAR, normalize_names = BOOLEAN, ignore_errors = BOOLEAN, names = `VARCHAR[]`, allow_quoted_nulls = BOOLEAN, maximum_line_size = VARCHAR, rejects_table = VARCHAR, auto_type_candidates = ANY, rejects_scan = VARCHAR, rejects_limit = BIGINT)}
 }
 }
 

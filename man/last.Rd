@@ -5,9 +5,11 @@
 \title{DuckDB function last}
 \arguments{
 \item{arg}{\code{DECIMAL | ANY}}
+
+\item{col0}{\code{T}}
 }
 \value{
-\code{DECIMAL | ANY}
+\code{DECIMAL | ANY | T}
 }
 \description{
 Returns the last value of a column. This function is affected by ordering.
@@ -17,6 +19,7 @@ Returns the last value of a column. This function is affected by ordering.
 \itemize{
 \item \code{last(arg = DECIMAL)}
 \item \code{last(arg = ANY)}
+\item \code{last(col0 = T)}
 }
 }
 

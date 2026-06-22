@@ -5,16 +5,6 @@
 \title{DuckDB function read_text}
 \arguments{
 \item{col0}{\code{VARCHAR | VARCHAR[]}}
-
-\item{union_by_name}{\code{BOOLEAN}}
-
-\item{hive_partitioning}{\code{BOOLEAN}}
-
-\item{hive_types_autocast}{\code{BOOLEAN}}
-
-\item{hive_types}{\code{ANY}}
-
-\item{filename}{\code{ANY}}
 }
 \value{
 Unspecified.
@@ -25,8 +15,8 @@ DuckDB function \code{read_text()}.
 \section{Overloads}{
 
 \itemize{
-\item \code{read_text(col0 = VARCHAR, union_by_name = BOOLEAN, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN, hive_types = ANY, filename = ANY)}
-\item \code{read_text(col0 = `VARCHAR[]`, filename = ANY, hive_types = ANY, hive_types_autocast = BOOLEAN, hive_partitioning = BOOLEAN, union_by_name = BOOLEAN)}
+\item \code{read_text(col0 = VARCHAR)}
+\item \code{read_text(col0 = `VARCHAR[]`)}
 }
 }
 

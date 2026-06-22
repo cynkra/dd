@@ -8,31 +8,31 @@
 
 \item{can_have_nan}{\code{BOOLEAN}}
 
-\item{encryption_config}{\code{ANY}}
-
-\item{file_row_number}{\code{BOOLEAN}}
-
-\item{schema}{\code{ANY}}
-
-\item{parquet_version}{\code{VARCHAR}}
-
 \item{filename}{\code{ANY}}
 
-\item{binary_as_string}{\code{BOOLEAN}}
+\item{union_by_name}{\code{BOOLEAN}}
 
 \item{debug_use_openssl}{\code{BOOLEAN}}
 
-\item{union_by_name}{\code{BOOLEAN}}
+\item{hive_partitioning}{\code{BOOLEAN}}
+
+\item{parquet_version}{\code{VARCHAR}}
+
+\item{encryption_config}{\code{ANY}}
+
+\item{hive_types_autocast}{\code{BOOLEAN}}
+
+\item{binary_as_string}{\code{BOOLEAN}}
 
 \item{explicit_cardinality}{\code{UBIGINT}}
 
 \item{compression}{\code{VARCHAR}}
 
+\item{file_row_number}{\code{BOOLEAN}}
+
 \item{hive_types}{\code{ANY}}
 
-\item{hive_partitioning}{\code{BOOLEAN}}
-
-\item{hive_types_autocast}{\code{BOOLEAN}}
+\item{schema}{\code{ANY}}
 }
 \value{
 Unspecified.
@@ -43,8 +43,8 @@ DuckDB function \code{read_parquet()}.
 \section{Overloads}{
 
 \itemize{
-\item \code{read_parquet(col0 = VARCHAR, can_have_nan = BOOLEAN, encryption_config = ANY, file_row_number = BOOLEAN, schema = ANY, parquet_version = VARCHAR, filename = ANY, binary_as_string = BOOLEAN, debug_use_openssl = BOOLEAN, union_by_name = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, hive_types = ANY, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN)}
-\item \code{read_parquet(col0 = `VARCHAR[]`, hive_types_autocast = BOOLEAN, hive_partitioning = BOOLEAN, hive_types = ANY, compression = VARCHAR, explicit_cardinality = UBIGINT, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, binary_as_string = BOOLEAN, filename = ANY, parquet_version = VARCHAR, schema = ANY, file_row_number = BOOLEAN, encryption_config = ANY, can_have_nan = BOOLEAN)}
+\item \code{read_parquet(col0 = VARCHAR, can_have_nan = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY, schema = ANY)}
+\item \code{read_parquet(col0 = `VARCHAR[]`, can_have_nan = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY, schema = ANY)}
 }
 }
 

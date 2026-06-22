@@ -3,8 +3,16 @@
 \name{enable_profiling}
 \alias{enable_profiling}
 \title{DuckDB function enable_profiling}
-\usage{
-enable_profiling()
+\arguments{
+\item{mode}{\code{VARCHAR}}
+
+\item{metrics}{\code{ANY}}
+
+\item{save_location}{\code{VARCHAR}}
+
+\item{coverage}{\code{VARCHAR}}
+
+\item{format}{\code{VARCHAR}}
 }
 \value{
 Unspecified.
@@ -12,3 +20,11 @@ Unspecified.
 \description{
 DuckDB function \code{enable_profiling()}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{enable_profiling(mode = VARCHAR, metrics = ANY, save_location = VARCHAR, coverage = VARCHAR, format = VARCHAR)}
+\item \code{enable_profiling()}
+}
+}
+

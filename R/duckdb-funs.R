@@ -100,19 +100,24 @@
 #' DuckDB function &&
 #'
 #' @description
-#' Returns true if the lists have any element in common. NULLs are ignored.
+#' Returns true if the geometries bounding boxes intersect.
 #'
 #' @name &&
-#' @usage `&&`(list1 = `T[]`, list2 = `T[]`)
-#' @param list1 `T[]`
-#' @param list2 `T[]`
+#' @usage NULL
+#' @section Overloads:
+#' \itemize{
+#' \item \code{`&&`(geom1 = GEOMETRY, geom2 = GEOMETRY)}
+#' \item \code{`&&`(geom1 = `T[]`, geom2 = `T[]`)}
+#' }
+#' @param geom1 `GEOMETRY | T[]`
+#' @param geom2 `GEOMETRY | T[]`
 #' @return `BOOLEAN`
 #' @export
 #' @section SQL examples:
 #' ```
-#' list_has_any([1, 2, 3], [2, 3, 4])
+#' 'POINT(5 5)'::GEOMETRY && 'LINESTRING(0 0, 10 20)'::GEOMETRY;
 #' ```
-`&&` <- function(list1 = `T[]`, list2 = `T[]`) {
+`&&` <- function(geom1 = `GEOMETRY | T[]`, geom2 = `GEOMETRY | T[]`) {
   stop("DuckDB function &&() is not available in R.")
 }
 
@@ -611,6 +616,20 @@ aggregate <- function(list = `ANY[]`, function_name = VARCHAR) {
   stop("DuckDB function aggregate() is not available in R.")
 }
 
+#' DuckDB function ago
+#'
+#' @description
+#' DuckDB macro `ago()`.
+#'
+#' @name ago
+#' @usage ago(i)
+#' @param i Unspecified.
+#' @return Unspecified.
+#' @export
+ago <- function(i) {
+  stop("DuckDB function ago() is not available in R.")
+}
+
 #' DuckDB function alias
 #'
 #' @description
@@ -1015,6 +1034,121 @@ arg_max_null <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIM
   stop("DuckDB function arg_max_null() is not available in R.")
 }
 
+#' DuckDB function arg_max_nulls_last
+#'
+#' @description
+#' Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#'
+#' @name arg_max_nulls_last
+#' @usage NULL
+#' @section Overloads:
+#' \itemize{
+#' \item \code{arg_max_nulls_last(arg = INTEGER, val = INTEGER)}
+#' \item \code{arg_max_nulls_last(arg = INTEGER, val = BIGINT)}
+#' \item \code{arg_max_nulls_last(arg = INTEGER, val = HUGEINT)}
+#' \item \code{arg_max_nulls_last(arg = INTEGER, val = DOUBLE)}
+#' \item \code{arg_max_nulls_last(arg = INTEGER, val = VARCHAR)}
+#' \item \code{arg_max_nulls_last(arg = INTEGER, val = DATE)}
+#' \item \code{arg_max_nulls_last(arg = INTEGER, val = TIMESTAMP)}
+#' \item \code{arg_max_nulls_last(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_max_nulls_last(arg = INTEGER, val = BLOB)}
+#' \item \code{arg_max_nulls_last(arg = BIGINT, val = INTEGER)}
+#' \item \code{arg_max_nulls_last(arg = BIGINT, val = BIGINT)}
+#' \item \code{arg_max_nulls_last(arg = BIGINT, val = HUGEINT)}
+#' \item \code{arg_max_nulls_last(arg = BIGINT, val = DOUBLE)}
+#' \item \code{arg_max_nulls_last(arg = BIGINT, val = VARCHAR)}
+#' \item \code{arg_max_nulls_last(arg = BIGINT, val = DATE)}
+#' \item \code{arg_max_nulls_last(arg = BIGINT, val = TIMESTAMP)}
+#' \item \code{arg_max_nulls_last(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_max_nulls_last(arg = BIGINT, val = BLOB)}
+#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = INTEGER)}
+#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = BIGINT)}
+#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = HUGEINT)}
+#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = DOUBLE)}
+#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = VARCHAR)}
+#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = DATE)}
+#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = TIMESTAMP)}
+#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = BLOB)}
+#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = INTEGER)}
+#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = BIGINT)}
+#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = HUGEINT)}
+#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = DOUBLE)}
+#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = VARCHAR)}
+#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = DATE)}
+#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = TIMESTAMP)}
+#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = BLOB)}
+#' \item \code{arg_max_nulls_last(arg = DATE, val = INTEGER)}
+#' \item \code{arg_max_nulls_last(arg = DATE, val = BIGINT)}
+#' \item \code{arg_max_nulls_last(arg = DATE, val = HUGEINT)}
+#' \item \code{arg_max_nulls_last(arg = DATE, val = DOUBLE)}
+#' \item \code{arg_max_nulls_last(arg = DATE, val = VARCHAR)}
+#' \item \code{arg_max_nulls_last(arg = DATE, val = DATE)}
+#' \item \code{arg_max_nulls_last(arg = DATE, val = TIMESTAMP)}
+#' \item \code{arg_max_nulls_last(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_max_nulls_last(arg = DATE, val = BLOB)}
+#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = INTEGER)}
+#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = BIGINT)}
+#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = HUGEINT)}
+#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = DOUBLE)}
+#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = VARCHAR)}
+#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = DATE)}
+#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = TIMESTAMP)}
+#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = BLOB)}
+#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}
+#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}
+#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}
+#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}
+#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}
+#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}
+#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}
+#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}
+#' \item \code{arg_max_nulls_last(arg = BLOB, val = INTEGER)}
+#' \item \code{arg_max_nulls_last(arg = BLOB, val = BIGINT)}
+#' \item \code{arg_max_nulls_last(arg = BLOB, val = HUGEINT)}
+#' \item \code{arg_max_nulls_last(arg = BLOB, val = DOUBLE)}
+#' \item \code{arg_max_nulls_last(arg = BLOB, val = VARCHAR)}
+#' \item \code{arg_max_nulls_last(arg = BLOB, val = DATE)}
+#' \item \code{arg_max_nulls_last(arg = BLOB, val = TIMESTAMP)}
+#' \item \code{arg_max_nulls_last(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_max_nulls_last(arg = BLOB, val = BLOB)}
+#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = INTEGER)}
+#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = BIGINT)}
+#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = HUGEINT)}
+#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = DOUBLE)}
+#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = VARCHAR)}
+#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = DATE)}
+#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = TIMESTAMP)}
+#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = BLOB)}
+#' \item \code{arg_max_nulls_last(arg = ANY, val = INTEGER)}
+#' \item \code{arg_max_nulls_last(arg = ANY, val = BIGINT)}
+#' \item \code{arg_max_nulls_last(arg = ANY, val = HUGEINT)}
+#' \item \code{arg_max_nulls_last(arg = ANY, val = DOUBLE)}
+#' \item \code{arg_max_nulls_last(arg = ANY, val = VARCHAR)}
+#' \item \code{arg_max_nulls_last(arg = ANY, val = DATE)}
+#' \item \code{arg_max_nulls_last(arg = ANY, val = TIMESTAMP)}
+#' \item \code{arg_max_nulls_last(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_max_nulls_last(arg = ANY, val = BLOB)}
+#' \item \code{arg_max_nulls_last(arg = ANY, val = ANY)}
+#' \item \code{arg_max_nulls_last(arg = ANY, val = ANY, N = BIGINT)}
+#' }
+#' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
+#' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
+#' @param N `BIGINT`
+#' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
+#' @export
+#' @section SQL examples:
+#' ```
+#' arg_min_null_val(A, B, N)
+#' ```
+arg_max_nulls_last <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, N = BIGINT) {
+  stop("DuckDB function arg_max_nulls_last() is not available in R.")
+}
+
 #' DuckDB function arg_min
 #'
 #' @description
@@ -1241,6 +1375,121 @@ arg_min <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAM
 #' ```
 arg_min_null <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`) {
   stop("DuckDB function arg_min_null() is not available in R.")
+}
+
+#' DuckDB function arg_min_nulls_last
+#'
+#' @description
+#' Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#'
+#' @name arg_min_nulls_last
+#' @usage NULL
+#' @section Overloads:
+#' \itemize{
+#' \item \code{arg_min_nulls_last(arg = INTEGER, val = INTEGER)}
+#' \item \code{arg_min_nulls_last(arg = INTEGER, val = BIGINT)}
+#' \item \code{arg_min_nulls_last(arg = INTEGER, val = HUGEINT)}
+#' \item \code{arg_min_nulls_last(arg = INTEGER, val = DOUBLE)}
+#' \item \code{arg_min_nulls_last(arg = INTEGER, val = VARCHAR)}
+#' \item \code{arg_min_nulls_last(arg = INTEGER, val = DATE)}
+#' \item \code{arg_min_nulls_last(arg = INTEGER, val = TIMESTAMP)}
+#' \item \code{arg_min_nulls_last(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_min_nulls_last(arg = INTEGER, val = BLOB)}
+#' \item \code{arg_min_nulls_last(arg = BIGINT, val = INTEGER)}
+#' \item \code{arg_min_nulls_last(arg = BIGINT, val = BIGINT)}
+#' \item \code{arg_min_nulls_last(arg = BIGINT, val = HUGEINT)}
+#' \item \code{arg_min_nulls_last(arg = BIGINT, val = DOUBLE)}
+#' \item \code{arg_min_nulls_last(arg = BIGINT, val = VARCHAR)}
+#' \item \code{arg_min_nulls_last(arg = BIGINT, val = DATE)}
+#' \item \code{arg_min_nulls_last(arg = BIGINT, val = TIMESTAMP)}
+#' \item \code{arg_min_nulls_last(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_min_nulls_last(arg = BIGINT, val = BLOB)}
+#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = INTEGER)}
+#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = BIGINT)}
+#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = HUGEINT)}
+#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = DOUBLE)}
+#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = VARCHAR)}
+#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = DATE)}
+#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = TIMESTAMP)}
+#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = BLOB)}
+#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = INTEGER)}
+#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = BIGINT)}
+#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = HUGEINT)}
+#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = DOUBLE)}
+#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = VARCHAR)}
+#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = DATE)}
+#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = TIMESTAMP)}
+#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = BLOB)}
+#' \item \code{arg_min_nulls_last(arg = DATE, val = INTEGER)}
+#' \item \code{arg_min_nulls_last(arg = DATE, val = BIGINT)}
+#' \item \code{arg_min_nulls_last(arg = DATE, val = HUGEINT)}
+#' \item \code{arg_min_nulls_last(arg = DATE, val = DOUBLE)}
+#' \item \code{arg_min_nulls_last(arg = DATE, val = VARCHAR)}
+#' \item \code{arg_min_nulls_last(arg = DATE, val = DATE)}
+#' \item \code{arg_min_nulls_last(arg = DATE, val = TIMESTAMP)}
+#' \item \code{arg_min_nulls_last(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_min_nulls_last(arg = DATE, val = BLOB)}
+#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = INTEGER)}
+#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = BIGINT)}
+#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = HUGEINT)}
+#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = DOUBLE)}
+#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = VARCHAR)}
+#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = DATE)}
+#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = TIMESTAMP)}
+#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = BLOB)}
+#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}
+#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}
+#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}
+#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}
+#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}
+#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}
+#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}
+#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}
+#' \item \code{arg_min_nulls_last(arg = BLOB, val = INTEGER)}
+#' \item \code{arg_min_nulls_last(arg = BLOB, val = BIGINT)}
+#' \item \code{arg_min_nulls_last(arg = BLOB, val = HUGEINT)}
+#' \item \code{arg_min_nulls_last(arg = BLOB, val = DOUBLE)}
+#' \item \code{arg_min_nulls_last(arg = BLOB, val = VARCHAR)}
+#' \item \code{arg_min_nulls_last(arg = BLOB, val = DATE)}
+#' \item \code{arg_min_nulls_last(arg = BLOB, val = TIMESTAMP)}
+#' \item \code{arg_min_nulls_last(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_min_nulls_last(arg = BLOB, val = BLOB)}
+#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = INTEGER)}
+#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = BIGINT)}
+#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = HUGEINT)}
+#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = DOUBLE)}
+#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = VARCHAR)}
+#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = DATE)}
+#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = TIMESTAMP)}
+#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = BLOB)}
+#' \item \code{arg_min_nulls_last(arg = ANY, val = INTEGER)}
+#' \item \code{arg_min_nulls_last(arg = ANY, val = BIGINT)}
+#' \item \code{arg_min_nulls_last(arg = ANY, val = HUGEINT)}
+#' \item \code{arg_min_nulls_last(arg = ANY, val = DOUBLE)}
+#' \item \code{arg_min_nulls_last(arg = ANY, val = VARCHAR)}
+#' \item \code{arg_min_nulls_last(arg = ANY, val = DATE)}
+#' \item \code{arg_min_nulls_last(arg = ANY, val = TIMESTAMP)}
+#' \item \code{arg_min_nulls_last(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{arg_min_nulls_last(arg = ANY, val = BLOB)}
+#' \item \code{arg_min_nulls_last(arg = ANY, val = ANY)}
+#' \item \code{arg_min_nulls_last(arg = ANY, val = ANY, N = BIGINT)}
+#' }
+#' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
+#' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
+#' @param N `BIGINT`
+#' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
+#' @export
+#' @section SQL examples:
+#' ```
+#' arg_min_null_val(A, B, N)
+#' ```
+arg_min_nulls_last <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, N = BIGINT) {
+  stop("DuckDB function arg_min_nulls_last() is not available in R.")
 }
 
 #' DuckDB function argmax
@@ -1939,15 +2188,19 @@ array_inner_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `F
 #' DuckDB function array_intersect
 #'
 #' @description
-#' DuckDB macro `array_intersect()`.
+#' Returns a list containing the distinct elements that are present in both `list1` and `list2`.
 #'
 #' @name array_intersect
-#' @usage array_intersect(l1, l2)
-#' @param l1 Unspecified.
-#' @param l2 Unspecified.
-#' @return Unspecified.
+#' @usage array_intersect(list1 = `T[]`, list2 = `T[]`)
+#' @param list1 `T[]`
+#' @param list2 `T[]`
+#' @return `T[]`
 #' @export
-array_intersect <- function(l1, l2) {
+#' @section SQL examples:
+#' ```
+#' array_intersect([1, 2, 3], [2, 3, 4])
+#' ```
+array_intersect <- function(list1 = `T[]`, list2 = `T[]`) {
   stop("DuckDB function array_intersect() is not available in R.")
 }
 
@@ -3519,6 +3772,20 @@ create_sort_key <- function(parameters... = ANY) {
   stop("DuckDB function create_sort_key() is not available in R.")
 }
 
+#' DuckDB function cume_dist
+#'
+#' @description
+#' DuckDB function `cume_dist()`.
+#'
+#' @name cume_dist
+#' @usage cume_dist()
+
+#' @return `DOUBLE`
+#' @export
+cume_dist <- function() {
+  stop("DuckDB function cume_dist() is not available in R.")
+}
+
 #' DuckDB function current_catalog
 #'
 #' @description
@@ -4161,6 +4428,20 @@ dayofyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZO
   stop("DuckDB function dayofyear() is not available in R.")
 }
 
+#' DuckDB function days_in_month
+#'
+#' @description
+#' DuckDB macro `days_in_month()`.
+#'
+#' @name days_in_month
+#' @usage days_in_month(date)
+#' @param date Unspecified.
+#' @return Unspecified.
+#' @export
+days_in_month <- function(date) {
+  stop("DuckDB function days_in_month() is not available in R.")
+}
+
 #' DuckDB function decade
 #'
 #' @description
@@ -4189,18 +4470,26 @@ decade <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' DuckDB function decode
 #'
 #' @description
-#' Converts `blob` to `VARCHAR`. Fails if `blob` is not valid UTF-8.
+#' Converts `blob` to `VARCHAR`. Invalid UTF-8 is handled based on the error behavior argument. Can be 'strict' (default, fail), 'replace' to replace invalid characters with '?', or 'ignore' to skip invalid characters.
 #'
 #' @name decode
-#' @usage decode(blob = BLOB)
+#' @usage NULL
+#' @section Overloads:
+#' \itemize{
+#' \item \code{decode(blob = BLOB)}
+#' \item \code{decode(blob = BLOB, varchar = VARCHAR)}
+#' }
 #' @param blob `BLOB`
+#' @param varchar `VARCHAR`
 #' @return `VARCHAR`
 #' @export
 #' @section SQL examples:
 #' ```
 #' decode('\xC3\xBC'::BLOB)
+#' decode('\xA0'::BLOB, 'replace')
+#' decode('\xA0'::BLOB, 'ignore')
 #' ```
-decode <- function(blob = BLOB) {
+decode <- function(blob = BLOB, varchar = VARCHAR) {
   stop("DuckDB function decode() is not available in R.")
 }
 
@@ -4220,6 +4509,20 @@ decode <- function(blob = BLOB) {
 #' ```
 degrees <- function(x = DOUBLE) {
   stop("DuckDB function degrees() is not available in R.")
+}
+
+#' DuckDB function dense_rank
+#'
+#' @description
+#' DuckDB function `dense_rank()`.
+#'
+#' @name dense_rank
+#' @usage dense_rank()
+
+#' @return `BIGINT`
+#' @export
+dense_rank <- function() {
+  stop("DuckDB function dense_rank() is not available in R.")
 }
 
 #' DuckDB function disable_checkpoint_on_shutdown
@@ -4312,7 +4615,12 @@ disable_profile <- function() {
 #' DuckDB function `disable_profiling()`.
 #'
 #' @name disable_profiling
-#' @usage disable_profiling()
+#' @usage NULL
+#' @section Overloads:
+#' \itemize{
+#' \item \code{disable_profiling()}
+#' \item \code{disable_profiling()}
+#' }
 
 #' @return Unspecified.
 #' @export
@@ -4462,6 +4770,20 @@ duckdb_columns <- function() {
   stop("DuckDB function duckdb_columns() is not available in R.")
 }
 
+#' DuckDB function duckdb_connection_count
+#'
+#' @description
+#' DuckDB function `duckdb_connection_count()`.
+#'
+#' @name duckdb_connection_count
+#' @usage duckdb_connection_count()
+
+#' @return Unspecified.
+#' @export
+duckdb_connection_count <- function() {
+  stop("DuckDB function duckdb_connection_count() is not available in R.")
+}
+
 #' DuckDB function duckdb_constraints
 #'
 #' @description
@@ -4474,6 +4796,20 @@ duckdb_columns <- function() {
 #' @export
 duckdb_constraints <- function() {
   stop("DuckDB function duckdb_constraints() is not available in R.")
+}
+
+#' DuckDB function duckdb_coordinate_systems
+#'
+#' @description
+#' DuckDB function `duckdb_coordinate_systems()`.
+#'
+#' @name duckdb_coordinate_systems
+#' @usage duckdb_coordinate_systems()
+
+#' @return Unspecified.
+#' @export
+duckdb_coordinate_systems <- function() {
+  stop("DuckDB function duckdb_coordinate_systems() is not available in R.")
 }
 
 #' DuckDB function duckdb_databases
@@ -4656,6 +4992,20 @@ duckdb_optimizers <- function() {
 #' @export
 duckdb_prepared_statements <- function() {
   stop("DuckDB function duckdb_prepared_statements() is not available in R.")
+}
+
+#' DuckDB function duckdb_profiling_settings
+#'
+#' @description
+#' DuckDB macro `duckdb_profiling_settings()`.
+#'
+#' @name duckdb_profiling_settings
+#' @usage duckdb_profiling_settings()
+
+#' @return Unspecified.
+#' @export
+duckdb_profiling_settings <- function() {
+  stop("DuckDB function duckdb_profiling_settings() is not available in R.")
 }
 
 #' DuckDB function duckdb_schemas
@@ -4926,11 +5276,20 @@ enable_profile <- function() {
 #' DuckDB function `enable_profiling()`.
 #'
 #' @name enable_profiling
-#' @usage enable_profiling()
-
+#' @usage NULL
+#' @section Overloads:
+#' \itemize{
+#' \item \code{enable_profiling(mode = VARCHAR, metrics = ANY, save_location = VARCHAR, coverage = VARCHAR, format = VARCHAR)}
+#' \item \code{enable_profiling()}
+#' }
+#' @param mode `VARCHAR`
+#' @param metrics `ANY`
+#' @param save_location `VARCHAR`
+#' @param coverage `VARCHAR`
+#' @param format `VARCHAR`
 #' @return Unspecified.
 #' @export
-enable_profiling <- function() {
+enable_profiling <- function(mode = VARCHAR, metrics = ANY, save_location = VARCHAR, coverage = VARCHAR, format = VARCHAR) {
   stop("DuckDB function enable_profiling() is not available in R.")
 }
 
@@ -5390,6 +5749,20 @@ fdiv <- function(x, y) {
   stop("DuckDB function fdiv() is not available in R.")
 }
 
+#' DuckDB function fill
+#'
+#' @description
+#' DuckDB function `fill()`.
+#'
+#' @name fill
+#' @usage fill(col0 = T)
+#' @param col0 `T`
+#' @return `T`
+#' @export
+fill <- function(col0 = T) {
+  stop("DuckDB function fill() is not available in R.")
+}
+
 #' DuckDB function filter
 #'
 #' @description
@@ -5434,16 +5807,32 @@ finalize <- function(col0 = `AGGREGATE_STATE<?>`) {
 #' \itemize{
 #' \item \code{first(arg = DECIMAL)}
 #' \item \code{first(arg = ANY)}
+#' \item \code{first(col0 = T)}
 #' }
 #' @param arg `DECIMAL | ANY`
-#' @return `DECIMAL | ANY`
+#' @param col0 `T`
+#' @return `DECIMAL | ANY | T`
 #' @export
 #' @section SQL examples:
 #' ```
 #' first(A)
 #' ```
-first <- function(arg = `DECIMAL | ANY`) {
+first <- function(arg = `DECIMAL | ANY`, col0 = T) {
   stop("DuckDB function first() is not available in R.")
+}
+
+#' DuckDB function first_value
+#'
+#' @description
+#' DuckDB function `first_value()`.
+#'
+#' @name first_value
+#' @usage first_value(col0 = T)
+#' @param col0 `T`
+#' @return `T`
+#' @export
+first_value <- function(col0 = T) {
+  stop("DuckDB function first_value() is not available in R.")
 }
 
 #' DuckDB function flatten
@@ -5880,6 +6269,24 @@ get_block_size <- function(db_name) {
 #' ```
 get_current_timestamp <- function() {
   stop("DuckDB function get_current_timestamp() is not available in R.")
+}
+
+#' DuckDB function get_type
+#'
+#' @description
+#' Returns the type of the result of the expression.
+#'
+#' @name get_type
+#' @usage get_type(expression = ANY)
+#' @param expression `ANY`
+#' @return `TYPE`
+#' @export
+#' @section SQL examples:
+#' ```
+#' get_type('abc')
+#' ```
+get_type <- function(expression = ANY) {
+  stop("DuckDB function get_type() is not available in R.")
 }
 
 #' DuckDB function getvariable
@@ -6816,6 +7223,22 @@ kurtosis_pop <- function(x = DOUBLE) {
   stop("DuckDB function kurtosis_pop() is not available in R.")
 }
 
+#' DuckDB function lag
+#'
+#' @description
+#' DuckDB function `lag()`.
+#'
+#' @name lag
+#' @usage lag(col0 = T, col1 = BIGINT, col2 = T)
+#' @param col0 `T`
+#' @param col1 `BIGINT`
+#' @param col2 `T`
+#' @return `T`
+#' @export
+lag <- function(col0 = T, col1 = BIGINT, col2 = T) {
+  stop("DuckDB function lag() is not available in R.")
+}
+
 #' DuckDB function last
 #'
 #' @description
@@ -6827,15 +7250,17 @@ kurtosis_pop <- function(x = DOUBLE) {
 #' \itemize{
 #' \item \code{last(arg = DECIMAL)}
 #' \item \code{last(arg = ANY)}
+#' \item \code{last(col0 = T)}
 #' }
 #' @param arg `DECIMAL | ANY`
-#' @return `DECIMAL | ANY`
+#' @param col0 `T`
+#' @return `DECIMAL | ANY | T`
 #' @export
 #' @section SQL examples:
 #' ```
 #' last(A)
 #' ```
-last <- function(arg = `DECIMAL | ANY`) {
+last <- function(arg = `DECIMAL | ANY`, col0 = T) {
   stop("DuckDB function last() is not available in R.")
 }
 
@@ -6861,6 +7286,20 @@ last <- function(arg = `DECIMAL | ANY`) {
 #' ```
 last_day <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function last_day() is not available in R.")
+}
+
+#' DuckDB function last_value
+#'
+#' @description
+#' DuckDB function `last_value()`.
+#'
+#' @name last_value
+#' @usage last_value(col0 = T)
+#' @param col0 `T`
+#' @return `T`
+#' @export
+last_value <- function(col0 = T) {
+  stop("DuckDB function last_value() is not available in R.")
 }
 
 #' DuckDB function lcase
@@ -6903,6 +7342,22 @@ lcase <- function(string = VARCHAR) {
 #' ```
 lcm <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
   stop("DuckDB function lcm() is not available in R.")
+}
+
+#' DuckDB function lead
+#'
+#' @description
+#' DuckDB function `lead()`.
+#'
+#' @name lead
+#' @usage lead(col0 = T, col1 = BIGINT, col2 = T)
+#' @param col0 `T`
+#' @param col1 `BIGINT`
+#' @param col2 `T`
+#' @return `T`
+#' @export
+lead <- function(col0 = T, col1 = BIGINT, col2 = T) {
+  stop("DuckDB function lead() is not available in R.")
 }
 
 #' DuckDB function least
@@ -7716,15 +8171,19 @@ list_inner_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | 
 #' DuckDB function list_intersect
 #'
 #' @description
-#' DuckDB macro `list_intersect()`.
+#' Returns a list containing the distinct elements that are present in both `list1` and `list2`.
 #'
 #' @name list_intersect
-#' @usage list_intersect(l1, l2)
-#' @param l1 Unspecified.
-#' @param l2 Unspecified.
-#' @return Unspecified.
+#' @usage list_intersect(list1 = `T[]`, list2 = `T[]`)
+#' @param list1 `T[]`
+#' @param list2 `T[]`
+#' @return `T[]`
 #' @export
-list_intersect <- function(l1, l2) {
+#' @section SQL examples:
+#' ```
+#' list_intersect([1, 2, 3], [2, 3, 4])
+#' ```
+list_intersect <- function(list1 = `T[]`, list2 = `T[]`) {
   stop("DuckDB function list_intersect() is not available in R.")
 }
 
@@ -8639,6 +9098,24 @@ make_timestamp_ms <- function(nanos = BIGINT) {
 #' ```
 make_timestamp_ns <- function(nanos = BIGINT) {
   stop("DuckDB function make_timestamp_ns() is not available in R.")
+}
+
+#' DuckDB function make_type
+#'
+#' @description
+#' Construct a type from its name and optional parameters.
+#'
+#' @name make_type
+#' @usage make_type(name = VARCHAR)
+#' @param name `VARCHAR`
+#' @return `TYPE`
+#' @export
+#' @section SQL examples:
+#' ```
+#' make_type('DECIMAL', 10, 2)
+#' ```
+make_type <- function(name = VARCHAR) {
+  stop("DuckDB function make_type() is not available in R.")
 }
 
 #' DuckDB function map
@@ -9703,6 +10180,35 @@ now <- function() {
   stop("DuckDB function now() is not available in R.")
 }
 
+#' DuckDB function nth_value
+#'
+#' @description
+#' DuckDB function `nth_value()`.
+#'
+#' @name nth_value
+#' @usage nth_value(col0 = T, col1 = BIGINT)
+#' @param col0 `T`
+#' @param col1 `BIGINT`
+#' @return `T`
+#' @export
+nth_value <- function(col0 = T, col1 = BIGINT) {
+  stop("DuckDB function nth_value() is not available in R.")
+}
+
+#' DuckDB function ntile
+#'
+#' @description
+#' DuckDB function `ntile()`.
+#'
+#' @name ntile
+#' @usage ntile(col0 = BIGINT)
+#' @param col0 `BIGINT`
+#' @return `BIGINT`
+#' @export
+ntile <- function(col0 = BIGINT) {
+  stop("DuckDB function ntile() is not available in R.")
+}
+
 #' DuckDB function nullif
 #'
 #' @description
@@ -9818,6 +10324,25 @@ parquet_file_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function parquet_file_metadata() is not available in R.")
 }
 
+#' DuckDB function parquet_full_metadata
+#'
+#' @description
+#' DuckDB function `parquet_full_metadata()`.
+#'
+#' @name parquet_full_metadata
+#' @usage NULL
+#' @section Overloads:
+#' \itemize{
+#' \item \code{parquet_full_metadata(col0 = VARCHAR)}
+#' \item \code{parquet_full_metadata(col0 = `VARCHAR[]`)}
+#' }
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @return Unspecified.
+#' @export
+parquet_full_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function parquet_full_metadata() is not available in R.")
+}
+
 #' DuckDB function parquet_kv_metadata
 #'
 #' @description
@@ -9865,27 +10390,27 @@ parquet_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{parquet_scan(col0 = VARCHAR, can_have_nan = BOOLEAN, encryption_config = ANY, file_row_number = BOOLEAN, schema = ANY, parquet_version = VARCHAR, filename = ANY, binary_as_string = BOOLEAN, debug_use_openssl = BOOLEAN, union_by_name = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, hive_types = ANY, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN)}
-#' \item \code{parquet_scan(col0 = `VARCHAR[]`, hive_types_autocast = BOOLEAN, hive_partitioning = BOOLEAN, hive_types = ANY, compression = VARCHAR, explicit_cardinality = UBIGINT, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, binary_as_string = BOOLEAN, filename = ANY, parquet_version = VARCHAR, schema = ANY, file_row_number = BOOLEAN, encryption_config = ANY, can_have_nan = BOOLEAN)}
+#' \item \code{parquet_scan(col0 = VARCHAR, can_have_nan = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY, schema = ANY)}
+#' \item \code{parquet_scan(col0 = `VARCHAR[]`, can_have_nan = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY, schema = ANY)}
 #' }
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @param can_have_nan `BOOLEAN`
-#' @param encryption_config `ANY`
-#' @param file_row_number `BOOLEAN`
-#' @param schema `ANY`
-#' @param parquet_version `VARCHAR`
 #' @param filename `ANY`
-#' @param binary_as_string `BOOLEAN`
-#' @param debug_use_openssl `BOOLEAN`
 #' @param union_by_name `BOOLEAN`
+#' @param debug_use_openssl `BOOLEAN`
+#' @param hive_partitioning `BOOLEAN`
+#' @param parquet_version `VARCHAR`
+#' @param encryption_config `ANY`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param binary_as_string `BOOLEAN`
 #' @param explicit_cardinality `UBIGINT`
 #' @param compression `VARCHAR`
+#' @param file_row_number `BOOLEAN`
 #' @param hive_types `ANY`
-#' @param hive_partitioning `BOOLEAN`
-#' @param hive_types_autocast `BOOLEAN`
+#' @param schema `ANY`
 #' @return Unspecified.
 #' @export
-parquet_scan <- function(col0 = `VARCHAR | VARCHAR[]`, can_have_nan = BOOLEAN, encryption_config = ANY, file_row_number = BOOLEAN, schema = ANY, parquet_version = VARCHAR, filename = ANY, binary_as_string = BOOLEAN, debug_use_openssl = BOOLEAN, union_by_name = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, hive_types = ANY, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN) {
+parquet_scan <- function(col0 = `VARCHAR | VARCHAR[]`, can_have_nan = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY, schema = ANY) {
   stop("DuckDB function parquet_scan() is not available in R.")
 }
 
@@ -10002,6 +10527,24 @@ parse_filename <- function(string = VARCHAR, trim_extension = `VARCHAR | BOOLEAN
   stop("DuckDB function parse_filename() is not available in R.")
 }
 
+#' DuckDB function parse_formatted_bytes
+#'
+#' @description
+#' Parses a human-readable representation of a size in bytes into an integer.
+#'
+#' @name parse_formatted_bytes
+#' @usage parse_formatted_bytes(string = VARCHAR)
+#' @param string `VARCHAR`
+#' @return `UBIGINT`
+#' @export
+#' @section SQL examples:
+#' ```
+#' parse_formatted_bytes('16 KiB')
+#' ```
+parse_formatted_bytes <- function(string = VARCHAR) {
+  stop("DuckDB function parse_formatted_bytes() is not available in R.")
+}
+
 #' DuckDB function parse_path
 #'
 #' @description
@@ -10024,6 +10567,20 @@ parse_filename <- function(string = VARCHAR, trim_extension = `VARCHAR | BOOLEAN
 #' ```
 parse_path <- function(path = VARCHAR, separator = VARCHAR) {
   stop("DuckDB function parse_path() is not available in R.")
+}
+
+#' DuckDB function percent_rank
+#'
+#' @description
+#' DuckDB function `percent_rank()`.
+#'
+#' @name percent_rank
+#' @usage percent_rank()
+
+#' @return `DOUBLE`
+#' @export
+percent_rank <- function() {
+  stop("DuckDB function percent_rank() is not available in R.")
 }
 
 #' DuckDB function pg_collation_is_visible
@@ -10248,6 +10805,20 @@ pg_postmaster_start_time <- function() {
 #' @export
 pg_size_pretty <- function(bytes) {
   stop("DuckDB function pg_size_pretty() is not available in R.")
+}
+
+#' DuckDB function pg_sleep
+#'
+#' @description
+#' DuckDB macro `pg_sleep()`.
+#'
+#' @name pg_sleep
+#' @usage pg_sleep(seconds)
+#' @param seconds Unspecified.
+#' @return Unspecified.
+#' @export
+pg_sleep <- function(seconds) {
+  stop("DuckDB function pg_sleep() is not available in R.")
 }
 
 #' DuckDB function pg_table_is_visible
@@ -10788,13 +11359,14 @@ query_table <- function(col0 = `VARCHAR | VARCHAR[]`, col1 = BOOLEAN) {
 #' DuckDB function `r_dataframe_scan()`.
 #'
 #' @name r_dataframe_scan
-#' @usage r_dataframe_scan(col0 = POINTER, experimental = BOOLEAN, integer64 = BOOLEAN)
+#' @usage r_dataframe_scan(col0 = POINTER, map_list_of = BOOLEAN, experimental = BOOLEAN, integer64 = BOOLEAN)
 #' @param col0 `POINTER`
+#' @param map_list_of `BOOLEAN`
 #' @param experimental `BOOLEAN`
 #' @param integer64 `BOOLEAN`
 #' @return Unspecified.
 #' @export
-r_dataframe_scan <- function(col0 = POINTER, experimental = BOOLEAN, integer64 = BOOLEAN) {
+r_dataframe_scan <- function(col0 = POINTER, map_list_of = BOOLEAN, experimental = BOOLEAN, integer64 = BOOLEAN) {
   stop("DuckDB function r_dataframe_scan() is not available in R.")
 }
 
@@ -10869,6 +11441,34 @@ range <- function(col0 = `BIGINT | TIMESTAMP`, col1 = `BIGINT | TIMESTAMP`, col2
   stop("DuckDB function range() is not available in R.")
 }
 
+#' DuckDB function rank
+#'
+#' @description
+#' DuckDB function `rank()`.
+#'
+#' @name rank
+#' @usage rank()
+
+#' @return `BIGINT`
+#' @export
+rank <- function() {
+  stop("DuckDB function rank() is not available in R.")
+}
+
+#' DuckDB function rank_dense
+#'
+#' @description
+#' DuckDB function `rank_dense()`.
+#'
+#' @name rank_dense
+#' @usage rank_dense()
+
+#' @return `BIGINT`
+#' @export
+rank_dense <- function() {
+  stop("DuckDB function rank_dense() is not available in R.")
+}
+
 #' DuckDB function read_blob
 #'
 #' @description
@@ -10878,18 +11478,13 @@ range <- function(col0 = `BIGINT | TIMESTAMP`, col1 = `BIGINT | TIMESTAMP`, col2
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{read_blob(col0 = VARCHAR, union_by_name = BOOLEAN, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN, hive_types = ANY, filename = ANY)}
-#' \item \code{read_blob(col0 = `VARCHAR[]`, filename = ANY, hive_types = ANY, hive_types_autocast = BOOLEAN, hive_partitioning = BOOLEAN, union_by_name = BOOLEAN)}
+#' \item \code{read_blob(col0 = VARCHAR)}
+#' \item \code{read_blob(col0 = `VARCHAR[]`)}
 #' }
 #' @param col0 `VARCHAR | VARCHAR[]`
-#' @param union_by_name `BOOLEAN`
-#' @param hive_partitioning `BOOLEAN`
-#' @param hive_types_autocast `BOOLEAN`
-#' @param hive_types `ANY`
-#' @param filename `ANY`
 #' @return Unspecified.
 #' @export
-read_blob <- function(col0 = `VARCHAR | VARCHAR[]`, union_by_name = BOOLEAN, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN, hive_types = ANY, filename = ANY) {
+read_blob <- function(col0 = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function read_blob() is not available in R.")
 }
 
@@ -10902,58 +11497,58 @@ read_blob <- function(col0 = `VARCHAR | VARCHAR[]`, union_by_name = BOOLEAN, hiv
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{read_csv(col0 = VARCHAR, hive_types_autocast = BOOLEAN, skip = BIGINT, types = ANY, nullstr = ANY, encoding = VARCHAR, hive_types = ANY, filename = ANY, header = BOOLEAN, delim = VARCHAR, dateformat = VARCHAR, column_names = `VARCHAR[]`, union_by_name = BOOLEAN, new_line = VARCHAR, escape = VARCHAR, allow_quoted_nulls = BOOLEAN, comment = VARCHAR, hive_partitioning = BOOLEAN, sep = VARCHAR, columns = ANY, rejects_limit = BIGINT, force_not_null = `VARCHAR[]`, auto_type_candidates = ANY, sample_size = BIGINT, timestampformat = VARCHAR, auto_detect = BOOLEAN, all_varchar = BOOLEAN, store_rejects = BOOLEAN, normalize_names = BOOLEAN, rejects_table = VARCHAR, column_types = ANY, compression = VARCHAR, ignore_errors = BOOLEAN, names = `VARCHAR[]`, max_line_size = VARCHAR, quote = VARCHAR, maximum_line_size = VARCHAR, rejects_scan = VARCHAR, buffer_size = UBIGINT, decimal_separator = VARCHAR, parallel = BOOLEAN, null_padding = BOOLEAN, dtypes = ANY, strict_mode = BOOLEAN, thousands = VARCHAR, files_to_sniff = BIGINT)}
-#' \item \code{read_csv(col0 = `VARCHAR[]`, files_to_sniff = BIGINT, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, null_padding = BOOLEAN, parallel = BOOLEAN, decimal_separator = VARCHAR, buffer_size = UBIGINT, rejects_scan = VARCHAR, maximum_line_size = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, names = `VARCHAR[]`, ignore_errors = BOOLEAN, compression = VARCHAR, column_types = ANY, rejects_table = VARCHAR, normalize_names = BOOLEAN, store_rejects = BOOLEAN, all_varchar = BOOLEAN, auto_detect = BOOLEAN, timestampformat = VARCHAR, sample_size = BIGINT, auto_type_candidates = ANY, force_not_null = `VARCHAR[]`, rejects_limit = BIGINT, columns = ANY, sep = VARCHAR, hive_partitioning = BOOLEAN, comment = VARCHAR, allow_quoted_nulls = BOOLEAN, escape = VARCHAR, new_line = VARCHAR, union_by_name = BOOLEAN, column_names = `VARCHAR[]`, dateformat = VARCHAR, delim = VARCHAR, header = BOOLEAN, filename = ANY, hive_types = ANY, encoding = VARCHAR, nullstr = ANY, types = ANY, skip = BIGINT, hive_types_autocast = BOOLEAN)}
+#' \item \code{read_csv(col0 = VARCHAR, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, column_types = ANY, null_padding = BOOLEAN, column_names = `VARCHAR[]`, buffer_size = UBIGINT, parallel = BOOLEAN, force_not_null = `VARCHAR[]`, hive_types = ANY, new_line = VARCHAR, files_to_sniff = BIGINT, dateformat = VARCHAR, delim = VARCHAR, sep = VARCHAR, decimal_separator = VARCHAR, nullstr = ANY, escape = VARCHAR, compression = VARCHAR, encoding = VARCHAR, hive_types_autocast = BOOLEAN, all_varchar = BOOLEAN, columns = ANY, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, comment = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, store_rejects = BOOLEAN, union_by_name = BOOLEAN, header = BOOLEAN, types = ANY, skip = BIGINT, filename = ANY, sample_size = BIGINT, timestampformat = VARCHAR, normalize_names = BOOLEAN, ignore_errors = BOOLEAN, names = `VARCHAR[]`, allow_quoted_nulls = BOOLEAN, maximum_line_size = VARCHAR, rejects_table = VARCHAR, auto_type_candidates = ANY, rejects_scan = VARCHAR, rejects_limit = BIGINT)}
+#' \item \code{read_csv(col0 = `VARCHAR[]`, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, column_types = ANY, null_padding = BOOLEAN, column_names = `VARCHAR[]`, buffer_size = UBIGINT, parallel = BOOLEAN, force_not_null = `VARCHAR[]`, hive_types = ANY, new_line = VARCHAR, files_to_sniff = BIGINT, dateformat = VARCHAR, delim = VARCHAR, sep = VARCHAR, decimal_separator = VARCHAR, nullstr = ANY, escape = VARCHAR, compression = VARCHAR, encoding = VARCHAR, hive_types_autocast = BOOLEAN, all_varchar = BOOLEAN, columns = ANY, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, comment = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, store_rejects = BOOLEAN, union_by_name = BOOLEAN, header = BOOLEAN, types = ANY, skip = BIGINT, filename = ANY, sample_size = BIGINT, timestampformat = VARCHAR, normalize_names = BOOLEAN, ignore_errors = BOOLEAN, names = `VARCHAR[]`, allow_quoted_nulls = BOOLEAN, maximum_line_size = VARCHAR, rejects_table = VARCHAR, auto_type_candidates = ANY, rejects_scan = VARCHAR, rejects_limit = BIGINT)}
 #' }
 #' @param col0 `VARCHAR | VARCHAR[]`
-#' @param hive_types_autocast `BOOLEAN`
-#' @param skip `BIGINT`
-#' @param types `ANY`
-#' @param nullstr `ANY`
-#' @param encoding `VARCHAR`
-#' @param hive_types `ANY`
-#' @param filename `ANY`
-#' @param header `BOOLEAN`
-#' @param delim `VARCHAR`
-#' @param dateformat `VARCHAR`
+#' @param thousands `VARCHAR`
+#' @param strict_mode `BOOLEAN`
+#' @param dtypes `ANY`
+#' @param column_types `ANY`
+#' @param null_padding `BOOLEAN`
 #' @param column_names `VARCHAR[]`
-#' @param union_by_name `BOOLEAN`
-#' @param new_line `VARCHAR`
-#' @param escape `VARCHAR`
-#' @param allow_quoted_nulls `BOOLEAN`
-#' @param comment `VARCHAR`
-#' @param hive_partitioning `BOOLEAN`
-#' @param sep `VARCHAR`
-#' @param columns `ANY`
-#' @param rejects_limit `BIGINT`
+#' @param buffer_size `UBIGINT`
+#' @param parallel `BOOLEAN`
 #' @param force_not_null `VARCHAR[]`
-#' @param auto_type_candidates `ANY`
+#' @param hive_types `ANY`
+#' @param new_line `VARCHAR`
+#' @param files_to_sniff `BIGINT`
+#' @param dateformat `VARCHAR`
+#' @param delim `VARCHAR`
+#' @param sep `VARCHAR`
+#' @param decimal_separator `VARCHAR`
+#' @param nullstr `ANY`
+#' @param escape `VARCHAR`
+#' @param compression `VARCHAR`
+#' @param encoding `VARCHAR`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param all_varchar `BOOLEAN`
+#' @param columns `ANY`
+#' @param hive_partitioning `BOOLEAN`
+#' @param auto_detect `BOOLEAN`
+#' @param comment `VARCHAR`
+#' @param quote `VARCHAR`
+#' @param max_line_size `VARCHAR`
+#' @param store_rejects `BOOLEAN`
+#' @param union_by_name `BOOLEAN`
+#' @param header `BOOLEAN`
+#' @param types `ANY`
+#' @param skip `BIGINT`
+#' @param filename `ANY`
 #' @param sample_size `BIGINT`
 #' @param timestampformat `VARCHAR`
-#' @param auto_detect `BOOLEAN`
-#' @param all_varchar `BOOLEAN`
-#' @param store_rejects `BOOLEAN`
 #' @param normalize_names `BOOLEAN`
-#' @param rejects_table `VARCHAR`
-#' @param column_types `ANY`
-#' @param compression `VARCHAR`
 #' @param ignore_errors `BOOLEAN`
 #' @param names `VARCHAR[]`
-#' @param max_line_size `VARCHAR`
-#' @param quote `VARCHAR`
+#' @param allow_quoted_nulls `BOOLEAN`
 #' @param maximum_line_size `VARCHAR`
+#' @param rejects_table `VARCHAR`
+#' @param auto_type_candidates `ANY`
 #' @param rejects_scan `VARCHAR`
-#' @param buffer_size `UBIGINT`
-#' @param decimal_separator `VARCHAR`
-#' @param parallel `BOOLEAN`
-#' @param null_padding `BOOLEAN`
-#' @param dtypes `ANY`
-#' @param strict_mode `BOOLEAN`
-#' @param thousands `VARCHAR`
-#' @param files_to_sniff `BIGINT`
+#' @param rejects_limit `BIGINT`
 #' @return Unspecified.
 #' @export
-read_csv <- function(col0 = `VARCHAR | VARCHAR[]`, hive_types_autocast = BOOLEAN, skip = BIGINT, types = ANY, nullstr = ANY, encoding = VARCHAR, hive_types = ANY, filename = ANY, header = BOOLEAN, delim = VARCHAR, dateformat = VARCHAR, column_names = `VARCHAR[]`, union_by_name = BOOLEAN, new_line = VARCHAR, escape = VARCHAR, allow_quoted_nulls = BOOLEAN, comment = VARCHAR, hive_partitioning = BOOLEAN, sep = VARCHAR, columns = ANY, rejects_limit = BIGINT, force_not_null = `VARCHAR[]`, auto_type_candidates = ANY, sample_size = BIGINT, timestampformat = VARCHAR, auto_detect = BOOLEAN, all_varchar = BOOLEAN, store_rejects = BOOLEAN, normalize_names = BOOLEAN, rejects_table = VARCHAR, column_types = ANY, compression = VARCHAR, ignore_errors = BOOLEAN, names = `VARCHAR[]`, max_line_size = VARCHAR, quote = VARCHAR, maximum_line_size = VARCHAR, rejects_scan = VARCHAR, buffer_size = UBIGINT, decimal_separator = VARCHAR, parallel = BOOLEAN, null_padding = BOOLEAN, dtypes = ANY, strict_mode = BOOLEAN, thousands = VARCHAR, files_to_sniff = BIGINT) {
+read_csv <- function(col0 = `VARCHAR | VARCHAR[]`, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, column_types = ANY, null_padding = BOOLEAN, column_names = `VARCHAR[]`, buffer_size = UBIGINT, parallel = BOOLEAN, force_not_null = `VARCHAR[]`, hive_types = ANY, new_line = VARCHAR, files_to_sniff = BIGINT, dateformat = VARCHAR, delim = VARCHAR, sep = VARCHAR, decimal_separator = VARCHAR, nullstr = ANY, escape = VARCHAR, compression = VARCHAR, encoding = VARCHAR, hive_types_autocast = BOOLEAN, all_varchar = BOOLEAN, columns = ANY, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, comment = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, store_rejects = BOOLEAN, union_by_name = BOOLEAN, header = BOOLEAN, types = ANY, skip = BIGINT, filename = ANY, sample_size = BIGINT, timestampformat = VARCHAR, normalize_names = BOOLEAN, ignore_errors = BOOLEAN, names = `VARCHAR[]`, allow_quoted_nulls = BOOLEAN, maximum_line_size = VARCHAR, rejects_table = VARCHAR, auto_type_candidates = ANY, rejects_scan = VARCHAR, rejects_limit = BIGINT) {
   stop("DuckDB function read_csv() is not available in R.")
 }
 
@@ -10966,59 +11561,85 @@ read_csv <- function(col0 = `VARCHAR | VARCHAR[]`, hive_types_autocast = BOOLEAN
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{read_csv_auto(col0 = VARCHAR, hive_types_autocast = BOOLEAN, skip = BIGINT, types = ANY, nullstr = ANY, encoding = VARCHAR, hive_types = ANY, filename = ANY, header = BOOLEAN, delim = VARCHAR, dateformat = VARCHAR, column_names = `VARCHAR[]`, union_by_name = BOOLEAN, new_line = VARCHAR, escape = VARCHAR, allow_quoted_nulls = BOOLEAN, comment = VARCHAR, hive_partitioning = BOOLEAN, sep = VARCHAR, columns = ANY, rejects_limit = BIGINT, force_not_null = `VARCHAR[]`, auto_type_candidates = ANY, sample_size = BIGINT, timestampformat = VARCHAR, auto_detect = BOOLEAN, all_varchar = BOOLEAN, store_rejects = BOOLEAN, normalize_names = BOOLEAN, rejects_table = VARCHAR, column_types = ANY, compression = VARCHAR, ignore_errors = BOOLEAN, names = `VARCHAR[]`, max_line_size = VARCHAR, quote = VARCHAR, maximum_line_size = VARCHAR, rejects_scan = VARCHAR, buffer_size = UBIGINT, decimal_separator = VARCHAR, parallel = BOOLEAN, null_padding = BOOLEAN, dtypes = ANY, strict_mode = BOOLEAN, thousands = VARCHAR, files_to_sniff = BIGINT)}
-#' \item \code{read_csv_auto(col0 = `VARCHAR[]`, files_to_sniff = BIGINT, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, null_padding = BOOLEAN, parallel = BOOLEAN, decimal_separator = VARCHAR, buffer_size = UBIGINT, rejects_scan = VARCHAR, maximum_line_size = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, names = `VARCHAR[]`, ignore_errors = BOOLEAN, compression = VARCHAR, column_types = ANY, rejects_table = VARCHAR, normalize_names = BOOLEAN, store_rejects = BOOLEAN, all_varchar = BOOLEAN, auto_detect = BOOLEAN, timestampformat = VARCHAR, sample_size = BIGINT, auto_type_candidates = ANY, force_not_null = `VARCHAR[]`, rejects_limit = BIGINT, columns = ANY, sep = VARCHAR, hive_partitioning = BOOLEAN, comment = VARCHAR, allow_quoted_nulls = BOOLEAN, escape = VARCHAR, new_line = VARCHAR, union_by_name = BOOLEAN, column_names = `VARCHAR[]`, dateformat = VARCHAR, delim = VARCHAR, header = BOOLEAN, filename = ANY, hive_types = ANY, encoding = VARCHAR, nullstr = ANY, types = ANY, skip = BIGINT, hive_types_autocast = BOOLEAN)}
+#' \item \code{read_csv_auto(col0 = VARCHAR, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, column_types = ANY, null_padding = BOOLEAN, column_names = `VARCHAR[]`, buffer_size = UBIGINT, parallel = BOOLEAN, force_not_null = `VARCHAR[]`, hive_types = ANY, new_line = VARCHAR, files_to_sniff = BIGINT, dateformat = VARCHAR, delim = VARCHAR, sep = VARCHAR, decimal_separator = VARCHAR, nullstr = ANY, escape = VARCHAR, compression = VARCHAR, encoding = VARCHAR, hive_types_autocast = BOOLEAN, all_varchar = BOOLEAN, columns = ANY, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, comment = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, store_rejects = BOOLEAN, union_by_name = BOOLEAN, header = BOOLEAN, types = ANY, skip = BIGINT, filename = ANY, sample_size = BIGINT, timestampformat = VARCHAR, normalize_names = BOOLEAN, ignore_errors = BOOLEAN, names = `VARCHAR[]`, allow_quoted_nulls = BOOLEAN, maximum_line_size = VARCHAR, rejects_table = VARCHAR, auto_type_candidates = ANY, rejects_scan = VARCHAR, rejects_limit = BIGINT)}
+#' \item \code{read_csv_auto(col0 = `VARCHAR[]`, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, column_types = ANY, null_padding = BOOLEAN, column_names = `VARCHAR[]`, buffer_size = UBIGINT, parallel = BOOLEAN, force_not_null = `VARCHAR[]`, hive_types = ANY, new_line = VARCHAR, files_to_sniff = BIGINT, dateformat = VARCHAR, delim = VARCHAR, sep = VARCHAR, decimal_separator = VARCHAR, nullstr = ANY, escape = VARCHAR, compression = VARCHAR, encoding = VARCHAR, hive_types_autocast = BOOLEAN, all_varchar = BOOLEAN, columns = ANY, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, comment = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, store_rejects = BOOLEAN, union_by_name = BOOLEAN, header = BOOLEAN, types = ANY, skip = BIGINT, filename = ANY, sample_size = BIGINT, timestampformat = VARCHAR, normalize_names = BOOLEAN, ignore_errors = BOOLEAN, names = `VARCHAR[]`, allow_quoted_nulls = BOOLEAN, maximum_line_size = VARCHAR, rejects_table = VARCHAR, auto_type_candidates = ANY, rejects_scan = VARCHAR, rejects_limit = BIGINT)}
 #' }
 #' @param col0 `VARCHAR | VARCHAR[]`
-#' @param hive_types_autocast `BOOLEAN`
-#' @param skip `BIGINT`
-#' @param types `ANY`
-#' @param nullstr `ANY`
-#' @param encoding `VARCHAR`
-#' @param hive_types `ANY`
-#' @param filename `ANY`
-#' @param header `BOOLEAN`
-#' @param delim `VARCHAR`
-#' @param dateformat `VARCHAR`
+#' @param thousands `VARCHAR`
+#' @param strict_mode `BOOLEAN`
+#' @param dtypes `ANY`
+#' @param column_types `ANY`
+#' @param null_padding `BOOLEAN`
 #' @param column_names `VARCHAR[]`
-#' @param union_by_name `BOOLEAN`
-#' @param new_line `VARCHAR`
-#' @param escape `VARCHAR`
-#' @param allow_quoted_nulls `BOOLEAN`
-#' @param comment `VARCHAR`
-#' @param hive_partitioning `BOOLEAN`
-#' @param sep `VARCHAR`
-#' @param columns `ANY`
-#' @param rejects_limit `BIGINT`
+#' @param buffer_size `UBIGINT`
+#' @param parallel `BOOLEAN`
 #' @param force_not_null `VARCHAR[]`
-#' @param auto_type_candidates `ANY`
+#' @param hive_types `ANY`
+#' @param new_line `VARCHAR`
+#' @param files_to_sniff `BIGINT`
+#' @param dateformat `VARCHAR`
+#' @param delim `VARCHAR`
+#' @param sep `VARCHAR`
+#' @param decimal_separator `VARCHAR`
+#' @param nullstr `ANY`
+#' @param escape `VARCHAR`
+#' @param compression `VARCHAR`
+#' @param encoding `VARCHAR`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param all_varchar `BOOLEAN`
+#' @param columns `ANY`
+#' @param hive_partitioning `BOOLEAN`
+#' @param auto_detect `BOOLEAN`
+#' @param comment `VARCHAR`
+#' @param quote `VARCHAR`
+#' @param max_line_size `VARCHAR`
+#' @param store_rejects `BOOLEAN`
+#' @param union_by_name `BOOLEAN`
+#' @param header `BOOLEAN`
+#' @param types `ANY`
+#' @param skip `BIGINT`
+#' @param filename `ANY`
 #' @param sample_size `BIGINT`
 #' @param timestampformat `VARCHAR`
-#' @param auto_detect `BOOLEAN`
-#' @param all_varchar `BOOLEAN`
-#' @param store_rejects `BOOLEAN`
 #' @param normalize_names `BOOLEAN`
-#' @param rejects_table `VARCHAR`
-#' @param column_types `ANY`
-#' @param compression `VARCHAR`
 #' @param ignore_errors `BOOLEAN`
 #' @param names `VARCHAR[]`
-#' @param max_line_size `VARCHAR`
-#' @param quote `VARCHAR`
+#' @param allow_quoted_nulls `BOOLEAN`
 #' @param maximum_line_size `VARCHAR`
+#' @param rejects_table `VARCHAR`
+#' @param auto_type_candidates `ANY`
 #' @param rejects_scan `VARCHAR`
-#' @param buffer_size `UBIGINT`
-#' @param decimal_separator `VARCHAR`
-#' @param parallel `BOOLEAN`
-#' @param null_padding `BOOLEAN`
-#' @param dtypes `ANY`
-#' @param strict_mode `BOOLEAN`
-#' @param thousands `VARCHAR`
-#' @param files_to_sniff `BIGINT`
+#' @param rejects_limit `BIGINT`
 #' @return Unspecified.
 #' @export
-read_csv_auto <- function(col0 = `VARCHAR | VARCHAR[]`, hive_types_autocast = BOOLEAN, skip = BIGINT, types = ANY, nullstr = ANY, encoding = VARCHAR, hive_types = ANY, filename = ANY, header = BOOLEAN, delim = VARCHAR, dateformat = VARCHAR, column_names = `VARCHAR[]`, union_by_name = BOOLEAN, new_line = VARCHAR, escape = VARCHAR, allow_quoted_nulls = BOOLEAN, comment = VARCHAR, hive_partitioning = BOOLEAN, sep = VARCHAR, columns = ANY, rejects_limit = BIGINT, force_not_null = `VARCHAR[]`, auto_type_candidates = ANY, sample_size = BIGINT, timestampformat = VARCHAR, auto_detect = BOOLEAN, all_varchar = BOOLEAN, store_rejects = BOOLEAN, normalize_names = BOOLEAN, rejects_table = VARCHAR, column_types = ANY, compression = VARCHAR, ignore_errors = BOOLEAN, names = `VARCHAR[]`, max_line_size = VARCHAR, quote = VARCHAR, maximum_line_size = VARCHAR, rejects_scan = VARCHAR, buffer_size = UBIGINT, decimal_separator = VARCHAR, parallel = BOOLEAN, null_padding = BOOLEAN, dtypes = ANY, strict_mode = BOOLEAN, thousands = VARCHAR, files_to_sniff = BIGINT) {
+read_csv_auto <- function(col0 = `VARCHAR | VARCHAR[]`, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, column_types = ANY, null_padding = BOOLEAN, column_names = `VARCHAR[]`, buffer_size = UBIGINT, parallel = BOOLEAN, force_not_null = `VARCHAR[]`, hive_types = ANY, new_line = VARCHAR, files_to_sniff = BIGINT, dateformat = VARCHAR, delim = VARCHAR, sep = VARCHAR, decimal_separator = VARCHAR, nullstr = ANY, escape = VARCHAR, compression = VARCHAR, encoding = VARCHAR, hive_types_autocast = BOOLEAN, all_varchar = BOOLEAN, columns = ANY, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, comment = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, store_rejects = BOOLEAN, union_by_name = BOOLEAN, header = BOOLEAN, types = ANY, skip = BIGINT, filename = ANY, sample_size = BIGINT, timestampformat = VARCHAR, normalize_names = BOOLEAN, ignore_errors = BOOLEAN, names = `VARCHAR[]`, allow_quoted_nulls = BOOLEAN, maximum_line_size = VARCHAR, rejects_table = VARCHAR, auto_type_candidates = ANY, rejects_scan = VARCHAR, rejects_limit = BIGINT) {
   stop("DuckDB function read_csv_auto() is not available in R.")
+}
+
+#' DuckDB function read_duckdb
+#'
+#' @description
+#' DuckDB function `read_duckdb()`.
+#'
+#' @name read_duckdb
+#' @usage NULL
+#' @section Overloads:
+#' \itemize{
+#' \item \code{read_duckdb(col0 = VARCHAR, table_name = VARCHAR, schema_name = VARCHAR, hive_types_autocast = BOOLEAN, hive_types = ANY, hive_partitioning = BOOLEAN, union_by_name = BOOLEAN, filename = ANY)}
+#' \item \code{read_duckdb(col0 = `VARCHAR[]`, table_name = VARCHAR, schema_name = VARCHAR, hive_types_autocast = BOOLEAN, hive_types = ANY, hive_partitioning = BOOLEAN, union_by_name = BOOLEAN, filename = ANY)}
+#' }
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param table_name `VARCHAR`
+#' @param schema_name `VARCHAR`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param hive_types `ANY`
+#' @param hive_partitioning `BOOLEAN`
+#' @param union_by_name `BOOLEAN`
+#' @param filename `ANY`
+#' @return Unspecified.
+#' @export
+read_duckdb <- function(col0 = `VARCHAR | VARCHAR[]`, table_name = VARCHAR, schema_name = VARCHAR, hive_types_autocast = BOOLEAN, hive_types = ANY, hive_partitioning = BOOLEAN, union_by_name = BOOLEAN, filename = ANY) {
+  stop("DuckDB function read_duckdb() is not available in R.")
 }
 
 #' DuckDB function read_parquet
@@ -11030,27 +11651,27 @@ read_csv_auto <- function(col0 = `VARCHAR | VARCHAR[]`, hive_types_autocast = BO
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{read_parquet(col0 = VARCHAR, can_have_nan = BOOLEAN, encryption_config = ANY, file_row_number = BOOLEAN, schema = ANY, parquet_version = VARCHAR, filename = ANY, binary_as_string = BOOLEAN, debug_use_openssl = BOOLEAN, union_by_name = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, hive_types = ANY, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN)}
-#' \item \code{read_parquet(col0 = `VARCHAR[]`, hive_types_autocast = BOOLEAN, hive_partitioning = BOOLEAN, hive_types = ANY, compression = VARCHAR, explicit_cardinality = UBIGINT, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, binary_as_string = BOOLEAN, filename = ANY, parquet_version = VARCHAR, schema = ANY, file_row_number = BOOLEAN, encryption_config = ANY, can_have_nan = BOOLEAN)}
+#' \item \code{read_parquet(col0 = VARCHAR, can_have_nan = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY, schema = ANY)}
+#' \item \code{read_parquet(col0 = `VARCHAR[]`, can_have_nan = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY, schema = ANY)}
 #' }
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @param can_have_nan `BOOLEAN`
-#' @param encryption_config `ANY`
-#' @param file_row_number `BOOLEAN`
-#' @param schema `ANY`
-#' @param parquet_version `VARCHAR`
 #' @param filename `ANY`
-#' @param binary_as_string `BOOLEAN`
-#' @param debug_use_openssl `BOOLEAN`
 #' @param union_by_name `BOOLEAN`
+#' @param debug_use_openssl `BOOLEAN`
+#' @param hive_partitioning `BOOLEAN`
+#' @param parquet_version `VARCHAR`
+#' @param encryption_config `ANY`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param binary_as_string `BOOLEAN`
 #' @param explicit_cardinality `UBIGINT`
 #' @param compression `VARCHAR`
+#' @param file_row_number `BOOLEAN`
 #' @param hive_types `ANY`
-#' @param hive_partitioning `BOOLEAN`
-#' @param hive_types_autocast `BOOLEAN`
+#' @param schema `ANY`
 #' @return Unspecified.
 #' @export
-read_parquet <- function(col0 = `VARCHAR | VARCHAR[]`, can_have_nan = BOOLEAN, encryption_config = ANY, file_row_number = BOOLEAN, schema = ANY, parquet_version = VARCHAR, filename = ANY, binary_as_string = BOOLEAN, debug_use_openssl = BOOLEAN, union_by_name = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, hive_types = ANY, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN) {
+read_parquet <- function(col0 = `VARCHAR | VARCHAR[]`, can_have_nan = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY, schema = ANY) {
   stop("DuckDB function read_parquet() is not available in R.")
 }
 
@@ -11063,18 +11684,13 @@ read_parquet <- function(col0 = `VARCHAR | VARCHAR[]`, can_have_nan = BOOLEAN, e
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{read_text(col0 = VARCHAR, union_by_name = BOOLEAN, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN, hive_types = ANY, filename = ANY)}
-#' \item \code{read_text(col0 = `VARCHAR[]`, filename = ANY, hive_types = ANY, hive_types_autocast = BOOLEAN, hive_partitioning = BOOLEAN, union_by_name = BOOLEAN)}
+#' \item \code{read_text(col0 = VARCHAR)}
+#' \item \code{read_text(col0 = `VARCHAR[]`)}
 #' }
 #' @param col0 `VARCHAR | VARCHAR[]`
-#' @param union_by_name `BOOLEAN`
-#' @param hive_partitioning `BOOLEAN`
-#' @param hive_types_autocast `BOOLEAN`
-#' @param hive_types `ANY`
-#' @param filename `ANY`
 #' @return Unspecified.
 #' @export
-read_text <- function(col0 = `VARCHAR | VARCHAR[]`, union_by_name = BOOLEAN, hive_partitioning = BOOLEAN, hive_types_autocast = BOOLEAN, hive_types = ANY, filename = ANY) {
+read_text <- function(col0 = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function read_text() is not available in R.")
 }
 
@@ -11169,10 +11785,12 @@ regexp_extract <- function(string = VARCHAR, regex = VARCHAR, group = INTEGER, o
 #' \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR)}
 #' \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = INTEGER)}
 #' \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR)}
+#' \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = `VARCHAR[]`)}
+#' \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = `VARCHAR[]`, options = VARCHAR)}
 #' }
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
-#' @param group `INTEGER`
+#' @param group `INTEGER | VARCHAR[]`
 #' @param options `VARCHAR`
 #' @return `VARCHAR[]`
 #' @export
@@ -11180,7 +11798,7 @@ regexp_extract <- function(string = VARCHAR, regex = VARCHAR, group = INTEGER, o
 #' ```
 #' regexp_extract_all('Peter: 33, Paul:14', '(\w+):\s*(\d+)', 2)
 #' ```
-regexp_extract_all <- function(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR) {
+regexp_extract_all <- function(string = VARCHAR, regex = VARCHAR, group = `INTEGER | VARCHAR[]`, options = VARCHAR) {
   stop("DuckDB function regexp_extract_all() is not available in R.")
 }
 
@@ -11742,6 +12360,20 @@ row <- function() {
   stop("DuckDB function row() is not available in R.")
 }
 
+#' DuckDB function row_number
+#'
+#' @description
+#' DuckDB function `row_number()`.
+#'
+#' @name row_number
+#' @usage row_number()
+
+#' @return `BIGINT`
+#' @export
+row_number <- function() {
+  stop("DuckDB function row_number() is not available in R.")
+}
+
 #' DuckDB function rpad
 #'
 #' @description
@@ -12130,6 +12762,24 @@ skewness <- function(x = DOUBLE) {
   stop("DuckDB function skewness() is not available in R.")
 }
 
+#' DuckDB function sleep_ms
+#'
+#' @description
+#' Sleeps for the specified number of milliseconds and returns NULL.
+#'
+#' @name sleep_ms
+#' @usage sleep_ms(milliseconds = BIGINT)
+#' @param milliseconds `BIGINT`
+#' @return `"NULL"`
+#' @export
+#' @section SQL examples:
+#' ```
+#' sleep_ms(100)
+#' ```
+sleep_ms <- function(milliseconds = BIGINT) {
+  stop("DuckDB function sleep_ms() is not available in R.")
+}
+
 #' DuckDB function split
 #'
 #' @description
@@ -12181,6 +12831,144 @@ split_part <- function(string, delimiter, position) {
 #' ```
 sqrt <- function(x = DOUBLE) {
   stop("DuckDB function sqrt() is not available in R.")
+}
+
+#' DuckDB function st_asbinary
+#'
+#' @description
+#' Returns the Well-Known Binary (WKB) representation of the geometry.
+#'
+#' @name st_asbinary
+#' @usage st_asbinary(geom = GEOMETRY)
+#' @param geom `GEOMETRY`
+#' @return `BLOB`
+#' @export
+#' @section SQL examples:
+#' ```
+#' st_asbinary(ST_GeomFromWKB(X'01010000000000000000000000000000000000000000000000000'))
+#' ```
+st_asbinary <- function(geom = GEOMETRY) {
+  stop("DuckDB function st_asbinary() is not available in R.")
+}
+
+#' DuckDB function st_astext
+#'
+#' @description
+#' Returns the Well-Known Text (WKT) representation of the geometry.
+#'
+#' @name st_astext
+#' @usage st_astext(geom = GEOMETRY)
+#' @param geom `GEOMETRY`
+#' @return `VARCHAR`
+#' @export
+#' @section SQL examples:
+#' ```
+#' ST_AsText(ST_GeomFromWKB(X'01010000000000000000000000000000000000000000000000'))
+#' ```
+st_astext <- function(geom = GEOMETRY) {
+  stop("DuckDB function st_astext() is not available in R.")
+}
+
+#' DuckDB function st_aswkb
+#'
+#' @description
+#' Returns the Well-Known Binary (WKB) representation of the geometry.
+#'
+#' @name st_aswkb
+#' @usage st_aswkb(geom = GEOMETRY)
+#' @param geom `GEOMETRY`
+#' @return `BLOB`
+#' @export
+#' @section SQL examples:
+#' ```
+#' st_aswkb(ST_GeomFromWKB(X'01010000000000000000000000000000000000000000000000000'))
+#' ```
+st_aswkb <- function(geom = GEOMETRY) {
+  stop("DuckDB function st_aswkb() is not available in R.")
+}
+
+#' DuckDB function st_aswkt
+#'
+#' @description
+#' Returns the Well-Known Text (WKT) representation of the geometry.
+#'
+#' @name st_aswkt
+#' @usage st_aswkt(geom = GEOMETRY)
+#' @param geom `GEOMETRY`
+#' @return `VARCHAR`
+#' @export
+#' @section SQL examples:
+#' ```
+#' ST_AsText(ST_GeomFromWKB(X'01010000000000000000000000000000000000000000000000'))
+#' ```
+st_aswkt <- function(geom = GEOMETRY) {
+  stop("DuckDB function st_aswkt() is not available in R.")
+}
+
+#' DuckDB function st_crs
+#'
+#' @description
+#' Returns the Coordinate Reference System (CRS) identifier of the geometry.
+#'
+#' @name st_crs
+#' @usage st_crs(geom = GEOMETRY)
+#' @param geom `GEOMETRY`
+#' @return `VARCHAR`
+#' @export
+st_crs <- function(geom = GEOMETRY) {
+  stop("DuckDB function st_crs() is not available in R.")
+}
+
+#' DuckDB function st_geomfromwkb
+#'
+#' @description
+#' Creates a geometry from Well-Known Binary (WKB) representation.
+#'
+#' @name st_geomfromwkb
+#' @usage st_geomfromwkb(wkb = BLOB)
+#' @param wkb `BLOB`
+#' @return `GEOMETRY`
+#' @export
+#' @section SQL examples:
+#' ```
+#' ST_GeomFromWKB(X'01010000000000000000000000000000000000000000000000')
+#' ```
+st_geomfromwkb <- function(wkb = BLOB) {
+  stop("DuckDB function st_geomfromwkb() is not available in R.")
+}
+
+#' DuckDB function st_intersects_extent
+#'
+#' @description
+#' Returns true if the geometries bounding boxes intersect.
+#'
+#' @name st_intersects_extent
+#' @usage st_intersects_extent(geom1 = GEOMETRY, geom2 = GEOMETRY)
+#' @param geom1 `GEOMETRY`
+#' @param geom2 `GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section SQL examples:
+#' ```
+#' 'POINT(5 5)'::GEOMETRY && 'LINESTRING(0 0, 10 20)'::GEOMETRY;
+#' ```
+st_intersects_extent <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function st_intersects_extent() is not available in R.")
+}
+
+#' DuckDB function st_setcrs
+#'
+#' @description
+#' Sets the Coordinate Reference System (CRS) identifier of the geometry.
+#'
+#' @name st_setcrs
+#' @usage st_setcrs(geom = GEOMETRY, crs = VARCHAR)
+#' @param geom `GEOMETRY`
+#' @param crs `VARCHAR`
+#' @return `GEOMETRY`
+#' @export
+st_setcrs <- function(geom = GEOMETRY, crs = VARCHAR) {
+  stop("DuckDB function st_setcrs() is not available in R.")
 }
 
 #' DuckDB function starts_with
@@ -12347,16 +13135,18 @@ str_split_regex <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR
 #' \item \code{strftime(data = VARCHAR, format = DATE)}
 #' \item \code{strftime(data = VARCHAR, format = TIMESTAMP)}
 #' \item \code{strftime(data = VARCHAR, format = TIMESTAMP_NS)}
+#' \item \code{strftime(data = `TIMESTAMP WITH TIME ZONE`, format = VARCHAR)}
+#' \item \code{strftime(data = VARCHAR, format = `TIMESTAMP WITH TIME ZONE`)}
 #' }
-#' @param data `DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR`
-#' @param format `VARCHAR | DATE | TIMESTAMP | TIMESTAMP_NS`
+#' @param data `DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR | TIMESTAMP WITH TIME ZONE`
+#' @param format `VARCHAR | DATE | TIMESTAMP | TIMESTAMP_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `VARCHAR`
 #' @export
 #' @section SQL examples:
 #' ```
 #' strftime(date '1992-01-01', '%a, %-d %B %Y')
 #' ```
-strftime <- function(data = `DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR`, format = `VARCHAR | DATE | TIMESTAMP | TIMESTAMP_NS`) {
+strftime <- function(data = `DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR | TIMESTAMP WITH TIME ZONE`, format = `VARCHAR | DATE | TIMESTAMP | TIMESTAMP_NS | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function strftime() is not available in R.")
 }
 
@@ -12647,6 +13437,24 @@ struct_insert <- function() {
   stop("DuckDB function struct_insert() is not available in R.")
 }
 
+#' DuckDB function struct_keys
+#'
+#' @description
+#' Returns the field names of a STRUCT as a list.
+#'
+#' @name struct_keys
+#' @usage struct_keys(struct = ANY)
+#' @param struct `ANY`
+#' @return `VARCHAR[]`
+#' @export
+#' @section SQL examples:
+#' ```
+#' struct_keys({'a': 1, 'b': 2})
+#' ```
+struct_keys <- function(struct = ANY) {
+  stop("DuckDB function struct_keys() is not available in R.")
+}
+
 #' DuckDB function struct_pack
 #'
 #' @description
@@ -12700,6 +13508,24 @@ struct_position <- function(struct = STRUCT, `'entry'` = ANY) {
 #' ```
 struct_update <- function() {
   stop("DuckDB function struct_update() is not available in R.")
+}
+
+#' DuckDB function struct_values
+#'
+#' @description
+#' Returns the field values of a STRUCT as an UnnamedStruct.
+#'
+#' @name struct_values
+#' @usage struct_values(struct = STRUCT)
+#' @param struct `STRUCT`
+#' @return `STRUCT`
+#' @export
+#' @section SQL examples:
+#' ```
+#' struct_values({'a': 1, 'b': 'world'})
+#' ```
+struct_values <- function(struct = STRUCT) {
+  stop("DuckDB function struct_values() is not available in R.")
 }
 
 #' DuckDB function substr
@@ -12939,6 +13765,33 @@ summary <- function(col0 = TABLE) {
   stop("DuckDB function summary() is not available in R.")
 }
 
+#' DuckDB function switch
+#'
+#' @description
+#' Creates a switch statement similar to CASE WHEN/THEN.
+#'
+#' @name switch
+#' @usage NULL
+#' @section Overloads:
+#' \itemize{
+#' \item \code{switch(key = K, map = `MAP(K, V)`)}
+#' \item \code{switch(key = K, map = `MAP(K, V)`, value = V)}
+#' \item \code{switch(key = `MAP(K, V)`, map = V)}
+#' \item \code{switch(key = `MAP(K, V)`)}
+#' }
+#' @param key `K | MAP(K, V)`
+#' @param map `MAP(K, V) | V`
+#' @param value `V`
+#' @return `V`
+#' @export
+#' @section SQL examples:
+#' ```
+#' switch(x, map({1 : 1}, default)
+#' ```
+switch <- function(key = `K | MAP(K, V)`, map = `MAP(K, V) | V`, value = V) {
+  stop("DuckDB function switch() is not available in R.")
+}
+
 #' DuckDB function table_info
 #'
 #' @description
@@ -12995,12 +13848,12 @@ tanh <- function(x = DOUBLE) {
 #' DuckDB function `test_all_types()`.
 #'
 #' @name test_all_types
-#' @usage test_all_types(use_large_enum = BOOLEAN, use_large_bignum = BOOLEAN)
-#' @param use_large_enum `BOOLEAN`
+#' @usage test_all_types(use_large_bignum = BOOLEAN, use_large_enum = BOOLEAN)
 #' @param use_large_bignum `BOOLEAN`
+#' @param use_large_enum `BOOLEAN`
 #' @return Unspecified.
 #' @export
-test_all_types <- function(use_large_enum = BOOLEAN, use_large_bignum = BOOLEAN) {
+test_all_types <- function(use_large_bignum = BOOLEAN, use_large_enum = BOOLEAN) {
   stop("DuckDB function test_all_types() is not available in R.")
 }
 
@@ -14118,6 +14971,20 @@ variance <- function(x = DOUBLE) {
   stop("DuckDB function variance() is not available in R.")
 }
 
+#' DuckDB function variant_bytes_to_variant
+#'
+#' @description
+#' DuckDB function `variant_bytes_to_variant()`.
+#'
+#' @name variant_bytes_to_variant
+#' @usage variant_bytes_to_variant(col0 = BLOB)
+#' @param col0 `BLOB`
+#' @return `VARIANT`
+#' @export
+variant_bytes_to_variant <- function(col0 = BLOB) {
+  stop("DuckDB function variant_bytes_to_variant() is not available in R.")
+}
+
 #' DuckDB function variant_extract
 #'
 #' @description
@@ -14136,6 +15003,38 @@ variance <- function(x = DOUBLE) {
 #' @export
 variant_extract <- function(col0 = VARIANT, col1 = `VARCHAR | UINTEGER`) {
   stop("DuckDB function variant_extract() is not available in R.")
+}
+
+#' DuckDB function variant_normalize
+#'
+#' @description
+#' Normalizes the `input_variant` to a canonical representation.
+#'
+#' @name variant_normalize
+#' @usage variant_normalize(input_variant = VARIANT)
+#' @param input_variant `VARIANT`
+#' @return `VARIANT`
+#' @export
+#' @section SQL examples:
+#' ```
+#' variant_normalize({'b': [1,2,3], 'a': 42})::VARIANT)
+#' ```
+variant_normalize <- function(input_variant = VARIANT) {
+  stop("DuckDB function variant_normalize() is not available in R.")
+}
+
+#' DuckDB function variant_to_parquet_variant
+#'
+#' @description
+#' DuckDB function `variant_to_parquet_variant()`.
+#'
+#' @name variant_to_parquet_variant
+#' @usage variant_to_parquet_variant(col0 = VARIANT)
+#' @param col0 `VARIANT`
+#' @return `ANY`
+#' @export
+variant_to_parquet_variant <- function(col0 = VARIANT) {
+  stop("DuckDB function variant_to_parquet_variant() is not available in R.")
 }
 
 #' DuckDB function variant_typeof
