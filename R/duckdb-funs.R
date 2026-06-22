@@ -11359,7 +11359,12 @@ query_table <- function(col0 = `VARCHAR | VARCHAR[]`, col1 = BOOLEAN) {
 #' DuckDB function `r_dataframe_scan()`.
 #'
 #' @name r_dataframe_scan
-#' @usage r_dataframe_scan(col0 = POINTER, map_list_of = BOOLEAN, experimental = BOOLEAN, integer64 = BOOLEAN)
+#' @usage r_dataframe_scan(
+#'   col0 = POINTER,
+#'   map_list_of = BOOLEAN,
+#'   experimental = BOOLEAN,
+#'   integer64 = BOOLEAN
+#' )
 #' @param col0 `POINTER`
 #' @param map_list_of `BOOLEAN`
 #' @param experimental `BOOLEAN`
