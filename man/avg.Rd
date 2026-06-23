@@ -13,23 +13,6 @@
 \description{
 Calculates the average value for all tuples in x.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{avg(x = DECIMAL)}: Calculates the average value for all tuples in x.
-\item \code{avg(x = SMALLINT)}: Calculates the average value for all tuples in x.
-\item \code{avg(x = INTEGER)}: Calculates the average value for all tuples in x.
-\item \code{avg(x = BIGINT)}: Calculates the average value for all tuples in x.
-\item \code{avg(x = HUGEINT)}: Calculates the average value for all tuples in x.
-\item \code{avg(x = INTERVAL)}: Calculates the average value for all tuples in x.
-\item \code{avg(x = DOUBLE)}: Calculates the average value for all tuples in x.
-\item \code{avg(x = TIMESTAMP)}: Calculates the average value for all tuples in x.
-\item \code{avg(x = `TIMESTAMP WITH TIME ZONE`)}: Calculates the average value for all tuples in x.
-\item \code{avg(x = TIME)}: Calculates the average value for all tuples in x.
-\item \code{avg(x = `TIME WITH TIME ZONE`)}: Calculates the average value for all tuples in x.
-}
-}
-
 \section{SQL examples}{
 
 

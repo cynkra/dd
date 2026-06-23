@@ -12,16 +12,6 @@
 \description{
 Extract the isoyear component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{isoyear(ts = DATE)}: Extract the isoyear component from a date or timestamp.
-\item \code{isoyear(ts = INTERVAL)}: Extract the isoyear component from a date or timestamp.
-\item \code{isoyear(ts = TIMESTAMP)}: Extract the isoyear component from a date or timestamp.
-\item \code{isoyear(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the isoyear component from a date or timestamp.
-}
-}
-
 \section{SQL examples}{
 
 

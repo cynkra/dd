@@ -15,14 +15,6 @@
 \description{
 Computes the greatest common divisor of x and y.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{greatest_common_divisor(x = BIGINT, y = BIGINT)}: Computes the greatest common divisor of x and y.
-\item \code{greatest_common_divisor(x = HUGEINT, y = HUGEINT)}: Computes the greatest common divisor of x and y.
-}
-}
-
 \section{SQL examples}{
 
 

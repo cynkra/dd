@@ -12,16 +12,6 @@
 \description{
 Extract the decade component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{decade(ts = DATE)}: Extract the decade component from a date or timestamp.
-\item \code{decade(ts = INTERVAL)}: Extract the decade component from a date or timestamp.
-\item \code{decade(ts = TIMESTAMP)}: Extract the decade component from a date or timestamp.
-\item \code{decade(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the decade component from a date or timestamp.
-}
-}
-
 \section{SQL examples}{
 
 

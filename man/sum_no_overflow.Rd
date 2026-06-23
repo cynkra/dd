@@ -12,15 +12,6 @@
 \description{
 Internal only. Calculates the sum value for all tuples in arg without overflow checks.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{sum_no_overflow(arg = INTEGER)}: Internal only. Calculates the sum value for all tuples in arg without overflow checks.
-\item \code{sum_no_overflow(arg = BIGINT)}: Internal only. Calculates the sum value for all tuples in arg without overflow checks.
-\item \code{sum_no_overflow(arg = DECIMAL)}: Internal only. Calculates the sum value for all tuples in arg without overflow checks.
-}
-}
-
 \section{SQL examples}{
 
 

@@ -25,7 +25,7 @@ The date for the given struct.
 \section{Overloads}{
 
 \itemize{
-\item \code{make_date(col0 = INTEGER)}
+\item \code{make_date(col0 = INTEGER)}: (Description missing.)
 \item \code{make_date(year = BIGINT, month = BIGINT, day = BIGINT)}: The date for the given parts.
 \item \code{make_date(`date-struct` = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`)}: The date for the given struct.
 }

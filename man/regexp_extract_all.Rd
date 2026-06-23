@@ -18,17 +18,6 @@
 \description{
 Finds non-overlapping occurrences of the \code{regex} in the \code{string} and returns the corresponding values of the capturing \code{group}. A set of optional regex \code{options} can be set.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR)}: Finds non-overlapping occurrences of the \code{regex} in the \code{string} and returns the corresponding values of the capturing \code{group}. A set of optional regex \code{options} can be set.
-\item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = INTEGER)}: Finds non-overlapping occurrences of the \code{regex} in the \code{string} and returns the corresponding values of the capturing \code{group}. A set of optional regex \code{options} can be set.
-\item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR)}: Finds non-overlapping occurrences of the \code{regex} in the \code{string} and returns the corresponding values of the capturing \code{group}. A set of optional regex \code{options} can be set.
-\item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = `VARCHAR[]`)}: Finds non-overlapping occurrences of the \code{regex} in the \code{string} and returns the corresponding values of the capturing \code{group}. A set of optional regex \code{options} can be set.
-\item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = `VARCHAR[]`, options = VARCHAR)}: Finds non-overlapping occurrences of the \code{regex} in the \code{string} and returns the corresponding values of the capturing \code{group}. A set of optional regex \code{options} can be set.
-}
-}
-
 \section{SQL examples}{
 
 

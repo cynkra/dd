@@ -14,36 +14,6 @@
 \description{
 Computes the approximate quantile using T-Digest.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{approx_quantile(x = DECIMAL, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = SMALLINT, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = INTEGER, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = BIGINT, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = HUGEINT, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = DOUBLE, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = DATE, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = TIME, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = `TIME WITH TIME ZONE`, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = TIMESTAMP, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = `TIMESTAMP WITH TIME ZONE`, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = DECIMAL, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = TINYINT, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = SMALLINT, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = INTEGER, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = BIGINT, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = HUGEINT, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = FLOAT, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = DOUBLE, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = DATE, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = TIME, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = `TIME WITH TIME ZONE`, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = TIMESTAMP, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
-\item \code{approx_quantile(x = `TIMESTAMP WITH TIME ZONE`, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
-}
-}
-
 \section{SQL examples}{
 
 

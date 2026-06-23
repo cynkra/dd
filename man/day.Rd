@@ -12,16 +12,6 @@
 \description{
 Extract the day component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{day(ts = DATE)}: Extract the day component from a date or timestamp.
-\item \code{day(ts = INTERVAL)}: Extract the day component from a date or timestamp.
-\item \code{day(ts = TIMESTAMP)}: Extract the day component from a date or timestamp.
-\item \code{day(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the day component from a date or timestamp.
-}
-}
-
 \section{SQL examples}{
 
 

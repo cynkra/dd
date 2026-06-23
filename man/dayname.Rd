@@ -12,15 +12,6 @@
 \description{
 The (English) name of the weekday.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{dayname(ts = DATE)}: The (English) name of the weekday.
-\item \code{dayname(ts = TIMESTAMP)}: The (English) name of the weekday.
-\item \code{dayname(ts = `TIMESTAMP WITH TIME ZONE`)}: The (English) name of the weekday.
-}
-}
-
 \section{SQL examples}{
 
 

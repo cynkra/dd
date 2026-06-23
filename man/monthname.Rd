@@ -12,15 +12,6 @@
 \description{
 The (English) name of the month.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{monthname(ts = DATE)}: The (English) name of the month.
-\item \code{monthname(ts = TIMESTAMP)}: The (English) name of the month.
-\item \code{monthname(ts = `TIMESTAMP WITH TIME ZONE`)}: The (English) name of the month.
-}
-}
-
 \section{SQL examples}{
 
 

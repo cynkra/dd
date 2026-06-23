@@ -14,23 +14,6 @@
 \description{
 Bitwise XOR.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{xor(left = TINYINT, right = TINYINT)}: Bitwise XOR.
-\item \code{xor(left = SMALLINT, right = SMALLINT)}: Bitwise XOR.
-\item \code{xor(left = INTEGER, right = INTEGER)}: Bitwise XOR.
-\item \code{xor(left = BIGINT, right = BIGINT)}: Bitwise XOR.
-\item \code{xor(left = HUGEINT, right = HUGEINT)}: Bitwise XOR.
-\item \code{xor(left = UTINYINT, right = UTINYINT)}: Bitwise XOR.
-\item \code{xor(left = USMALLINT, right = USMALLINT)}: Bitwise XOR.
-\item \code{xor(left = UINTEGER, right = UINTEGER)}: Bitwise XOR.
-\item \code{xor(left = UBIGINT, right = UBIGINT)}: Bitwise XOR.
-\item \code{xor(left = UHUGEINT, right = UHUGEINT)}: Bitwise XOR.
-\item \code{xor(left = BIT, right = BIT)}: Bitwise XOR.
-}
-}
-
 \section{SQL examples}{
 
 

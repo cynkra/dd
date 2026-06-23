@@ -14,20 +14,6 @@
 \description{
 Extract the timezone component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{timezone(ts = DATE)}: Extract the timezone component from a date or timestamp.
-\item \code{timezone(ts = INTERVAL)}: Extract the timezone component from a date or timestamp.
-\item \code{timezone(ts = INTERVAL, col1 = `TIME WITH TIME ZONE`)}: Extract the timezone component from a date or timestamp.
-\item \code{timezone(ts = TIMESTAMP)}: Extract the timezone component from a date or timestamp.
-\item \code{timezone(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the timezone component from a date or timestamp.
-\item \code{timezone(ts = VARCHAR, col1 = TIMESTAMP)}: Extract the timezone component from a date or timestamp.
-\item \code{timezone(ts = VARCHAR, col1 = `TIMESTAMP WITH TIME ZONE`)}: Extract the timezone component from a date or timestamp.
-\item \code{timezone(ts = VARCHAR, col1 = `TIME WITH TIME ZONE`)}: Extract the timezone component from a date or timestamp.
-}
-}
-
 \section{SQL examples}{
 
 

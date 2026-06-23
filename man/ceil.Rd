@@ -13,15 +13,6 @@
 \description{
 Rounds the number up.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{ceil(x = FLOAT)}: Rounds the number up.
-\item \code{ceil(x = DOUBLE)}: Rounds the number up.
-\item \code{ceil(x = DECIMAL)}: Rounds the number up.
-}
-}
-
 \section{SQL examples}{
 
 

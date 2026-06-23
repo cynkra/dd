@@ -12,14 +12,6 @@
 \description{
 Construct a month interval.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{to_months(integer = INTEGER)}: Construct a month interval.
-\item \code{to_months(integer = BIGINT)}: Construct a month interval.
-}
-}
-
 \section{SQL examples}{
 
 

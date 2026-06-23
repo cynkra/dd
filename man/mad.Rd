@@ -12,20 +12,6 @@
 \description{
 Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{mad(x = DECIMAL)}: Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
-\item \code{mad(x = FLOAT)}: Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
-\item \code{mad(x = DOUBLE)}: Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
-\item \code{mad(x = DATE)}: Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
-\item \code{mad(x = TIMESTAMP)}: Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
-\item \code{mad(x = TIME)}: Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
-\item \code{mad(x = `TIMESTAMP WITH TIME ZONE`)}: Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
-\item \code{mad(x = `TIME WITH TIME ZONE`)}: Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
-}
-}
-
 \section{SQL examples}{
 
 

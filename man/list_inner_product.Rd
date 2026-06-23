@@ -15,14 +15,6 @@
 \description{
 Computes the inner product between two same-sized lists.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{list_inner_product(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}: Computes the inner product between two same-sized lists.
-\item \code{list_inner_product(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}: Computes the inner product between two same-sized lists.
-}
-}
-
 \section{SQL examples}{
 
 

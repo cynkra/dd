@@ -130,8 +130,7 @@ usage_and_params <- function(
     # FIXME: roxygen2 generates bad .Rd here
     usage_doc <- "#' @usage NULL\n"
   } else {
-    # One itemize entry per distinct signature, annotated with the description
-    # that applies to it when known.
+    # Pair each distinct signature with the description that applies to it.
     overloads <-
       tibble(sig = signatures, desc = sig_desc) |>
       summarize(
@@ -145,18 +144,43 @@ usage_and_params <- function(
           }
         }
       )
-    items <- if_else(
-      is.na(overloads$desc),
-      paste0("#' \\item \\code{", overloads$sig, "}\n"),
-      paste0("#' \\item \\code{", overloads$sig, "}: ", overloads$desc, "\n")
-    )
-    usage_doc <- paste0(
-      "#' @usage NULL\n",
-      "#' @section Overloads:\n",
-      "#' \\itemize{\n",
-      paste0(items, collapse = ""),
-      "#' }"
-    )
+    distinct_desc <- unique(na.omit(overloads$desc))
+
+    if (length(distinct_desc) == 1) {
+      # A single description applies to every overload (a description that is
+      # merely missing for some overloads is assumed to be the shared one). The
+      # signatures differ only by type, so don't list them: the description is
+      # shown in @description and the types in @param.
+      usage_doc <- "#' @usage NULL\n"
+    } else if (length(distinct_desc) == 0) {
+      # No descriptions at all: list the bare signatures so the overloads stay
+      # visible.
+      usage_doc <- paste0(
+        "#' @usage NULL\n",
+        "#' @section Overloads:\n",
+        "#' \\itemize{\n",
+        paste0("#' \\item \\code{", overloads$sig, "}\n", collapse = ""),
+        "#' }"
+      )
+    } else {
+      # Several descriptions: group the signatures that share a description so
+      # it is not repeated, and flag overloads whose description is missing.
+      grouped <-
+        overloads |>
+        mutate(desc = if_else(is.na(desc), "(Description missing.)", desc)) |>
+        summarize(
+          .by = desc,
+          sigs = paste0("\\code{", sig, "}", collapse = ", ")
+        )
+      items <- paste0("#' \\item ", grouped$sigs, ": ", grouped$desc, "\n")
+      usage_doc <- paste0(
+        "#' @usage NULL\n",
+        "#' @section Overloads:\n",
+        "#' \\itemize{\n",
+        paste0(items, collapse = ""),
+        "#' }"
+      )
+    }
   }
 
   params <-

@@ -12,16 +12,6 @@
 \description{
 Extract the dayofmonth component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{dayofmonth(ts = DATE)}: Extract the dayofmonth component from a date or timestamp.
-\item \code{dayofmonth(ts = INTERVAL)}: Extract the dayofmonth component from a date or timestamp.
-\item \code{dayofmonth(ts = TIMESTAMP)}: Extract the dayofmonth component from a date or timestamp.
-\item \code{dayofmonth(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the dayofmonth component from a date or timestamp.
-}
-}
-
 \section{SQL examples}{
 
 

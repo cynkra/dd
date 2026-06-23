@@ -12,16 +12,6 @@
 \description{
 Subtract arguments, resulting in the time difference between the two timestamps.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{age(timestamp = TIMESTAMP)}: Subtract arguments, resulting in the time difference between the two timestamps.
-\item \code{age(timestamp = TIMESTAMP, timestamp = TIMESTAMP)}: Subtract arguments, resulting in the time difference between the two timestamps.
-\item \code{age(timestamp = `TIMESTAMP WITH TIME ZONE`)}: Subtract arguments, resulting in the time difference between the two timestamps.
-\item \code{age(timestamp = `TIMESTAMP WITH TIME ZONE`, timestamp = `TIMESTAMP WITH TIME ZONE`)}: Subtract arguments, resulting in the time difference between the two timestamps.
-}
-}
-
 \section{SQL examples}{
 
 

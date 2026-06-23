@@ -22,21 +22,6 @@
 \description{
 Creates a list of values between \code{start} and \code{stop} - the stop parameter is inclusive.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{generate_series(col0 = BIGINT)}
-\item \code{generate_series(col0 = BIGINT, col1 = BIGINT)}
-\item \code{generate_series(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT)}
-\item \code{generate_series(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)}
-\item \code{generate_series(start = BIGINT)}: Creates a list of values between \code{start} and \code{stop} - the stop parameter is inclusive.
-\item \code{generate_series(start = BIGINT, stop = BIGINT)}: Creates a list of values between \code{start} and \code{stop} - the stop parameter is inclusive.
-\item \code{generate_series(start = BIGINT, stop = BIGINT, step = BIGINT)}: Creates a list of values between \code{start} and \code{stop} - the stop parameter is inclusive.
-\item \code{generate_series(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}: Creates a list of values between \code{start} and \code{stop} - the stop parameter is inclusive.
-\item \code{generate_series(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}: Creates a list of values between \code{start} and \code{stop} - the stop parameter is inclusive.
-}
-}
-
 \section{SQL examples}{
 
 

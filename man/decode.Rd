@@ -14,14 +14,6 @@
 \description{
 Converts \code{blob} to \code{VARCHAR}. Invalid UTF-8 is handled based on the error behavior argument. Can be 'strict' (default, fail), 'replace' to replace invalid characters with '?', or 'ignore' to skip invalid characters.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{decode(blob = BLOB)}: Converts \code{blob} to \code{VARCHAR}. Invalid UTF-8 is handled based on the error behavior argument. Can be 'strict' (default, fail), 'replace' to replace invalid characters with '?', or 'ignore' to skip invalid characters.
-\item \code{decode(blob = BLOB, varchar = VARCHAR)}: Converts \code{blob} to \code{VARCHAR}. Invalid UTF-8 is handled based on the error behavior argument. Can be 'strict' (default, fail), 'replace' to replace invalid characters with '?', or 'ignore' to skip invalid characters.
-}
-}
-
 \section{SQL examples}{
 
 

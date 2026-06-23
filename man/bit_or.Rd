@@ -12,23 +12,6 @@
 \description{
 Returns the bitwise OR of all bits in a given expression.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{bit_or(arg = TINYINT)}: Returns the bitwise OR of all bits in a given expression.
-\item \code{bit_or(arg = SMALLINT)}: Returns the bitwise OR of all bits in a given expression.
-\item \code{bit_or(arg = INTEGER)}: Returns the bitwise OR of all bits in a given expression.
-\item \code{bit_or(arg = BIGINT)}: Returns the bitwise OR of all bits in a given expression.
-\item \code{bit_or(arg = HUGEINT)}: Returns the bitwise OR of all bits in a given expression.
-\item \code{bit_or(arg = UTINYINT)}: Returns the bitwise OR of all bits in a given expression.
-\item \code{bit_or(arg = USMALLINT)}: Returns the bitwise OR of all bits in a given expression.
-\item \code{bit_or(arg = UINTEGER)}: Returns the bitwise OR of all bits in a given expression.
-\item \code{bit_or(arg = UBIGINT)}: Returns the bitwise OR of all bits in a given expression.
-\item \code{bit_or(arg = UHUGEINT)}: Returns the bitwise OR of all bits in a given expression.
-\item \code{bit_or(arg = BIT)}: Returns the bitwise OR of all bits in a given expression.
-}
-}
-
 \section{SQL examples}{
 
 

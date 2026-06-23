@@ -12,15 +12,6 @@
 \description{
 Rounds the number down.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{floor(x = FLOAT)}: Rounds the number down.
-\item \code{floor(x = DOUBLE)}: Rounds the number down.
-\item \code{floor(x = DECIMAL)}: Rounds the number down.
-}
-}
-
 \section{SQL examples}{
 
 

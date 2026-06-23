@@ -12,14 +12,6 @@
 \description{
 Construct a year interval.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{to_years(integer = INTEGER)}: Construct a year interval.
-\item \code{to_years(integer = BIGINT)}: Construct a year interval.
-}
-}
-
 \section{SQL examples}{
 
 

@@ -12,14 +12,6 @@
 \description{
 Returns true if the floating point value is not a number, false otherwise.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{isnan(x = FLOAT)}: Returns true if the floating point value is not a number, false otherwise.
-\item \code{isnan(x = DOUBLE)}: Returns true if the floating point value is not a number, false otherwise.
-}
-}
-
 \section{SQL examples}{
 
 

@@ -15,14 +15,6 @@
 \description{
 Sorts the elements of the list in reverse order.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{list_reverse_sort(list = `ANY[]`)}: Sorts the elements of the list in reverse order.
-\item \code{list_reverse_sort(list = `ANY[]`, col1 = VARCHAR)}: Sorts the elements of the list in reverse order.
-}
-}
-
 \section{SQL examples}{
 
 

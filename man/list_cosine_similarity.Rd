@@ -14,14 +14,6 @@
 \description{
 Computes the cosine similarity between two same-sized lists.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{list_cosine_similarity(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}: Computes the cosine similarity between two same-sized lists.
-\item \code{list_cosine_similarity(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}: Computes the cosine similarity between two same-sized lists.
-}
-}
-
 \section{SQL examples}{
 
 

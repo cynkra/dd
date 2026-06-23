@@ -12,19 +12,6 @@
 \description{
 Extract the hour component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{hour(ts = DATE)}: Extract the hour component from a date or timestamp.
-\item \code{hour(ts = INTERVAL)}: Extract the hour component from a date or timestamp.
-\item \code{hour(ts = TIME)}: Extract the hour component from a date or timestamp.
-\item \code{hour(ts = TIMESTAMP)}: Extract the hour component from a date or timestamp.
-\item \code{hour(ts = `TIME WITH TIME ZONE`)}: Extract the hour component from a date or timestamp.
-\item \code{hour(ts = TIME_NS)}: Extract the hour component from a date or timestamp.
-\item \code{hour(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the hour component from a date or timestamp.
-}
-}
-
 \section{SQL examples}{
 
 

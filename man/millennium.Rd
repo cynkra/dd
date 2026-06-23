@@ -12,16 +12,6 @@
 \description{
 Extract the millennium component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{millennium(ts = DATE)}: Extract the millennium component from a date or timestamp.
-\item \code{millennium(ts = INTERVAL)}: Extract the millennium component from a date or timestamp.
-\item \code{millennium(ts = TIMESTAMP)}: Extract the millennium component from a date or timestamp.
-\item \code{millennium(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the millennium component from a date or timestamp.
-}
-}
-
 \section{SQL examples}{
 
 

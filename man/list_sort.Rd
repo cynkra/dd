@@ -17,15 +17,6 @@
 \description{
 Sorts the elements of the list.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{list_sort(list = `ANY[]`)}: Sorts the elements of the list.
-\item \code{list_sort(list = `ANY[]`, col1 = VARCHAR)}: Sorts the elements of the list.
-\item \code{list_sort(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR)}: Sorts the elements of the list.
-}
-}
-
 \section{SQL examples}{
 
 

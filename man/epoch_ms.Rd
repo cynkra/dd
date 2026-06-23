@@ -12,20 +12,6 @@
 \description{
 Extract the epoch component in milliseconds from a temporal type.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{epoch_ms(temporal = DATE)}: Extract the epoch component in milliseconds from a temporal type.
-\item \code{epoch_ms(temporal = TIMESTAMP)}: Extract the epoch component in milliseconds from a temporal type.
-\item \code{epoch_ms(temporal = INTERVAL)}: Extract the epoch component in milliseconds from a temporal type.
-\item \code{epoch_ms(temporal = TIME)}: Extract the epoch component in milliseconds from a temporal type.
-\item \code{epoch_ms(temporal = TIME_NS)}: Extract the epoch component in milliseconds from a temporal type.
-\item \code{epoch_ms(temporal = `TIME WITH TIME ZONE`)}: Extract the epoch component in milliseconds from a temporal type.
-\item \code{epoch_ms(temporal = `TIMESTAMP WITH TIME ZONE`)}: Extract the epoch component in milliseconds from a temporal type.
-\item \code{epoch_ms(temporal = BIGINT)}: Extract the epoch component in milliseconds from a temporal type.
-}
-}
-
 \section{SQL examples}{
 
 

@@ -15,15 +15,6 @@
 \description{
 Returns the first value (NULL or non-NULL) from arg. This function is affected by ordering.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{first(arg = DECIMAL)}: Returns the first value (NULL or non-NULL) from arg. This function is affected by ordering.
-\item \code{first(arg = ANY)}: Returns the first value (NULL or non-NULL) from arg. This function is affected by ordering.
-\item \code{first(col0 = T)}
-}
-}
-
 \section{SQL examples}{
 
 

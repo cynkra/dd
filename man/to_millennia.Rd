@@ -12,14 +12,6 @@
 \description{
 Construct a millenium interval.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{to_millennia(integer = INTEGER)}: Construct a millenium interval.
-\item \code{to_millennia(integer = BIGINT)}: Construct a millenium interval.
-}
-}
-
 \section{SQL examples}{
 
 

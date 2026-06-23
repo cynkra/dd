@@ -12,16 +12,6 @@
 \description{
 Extract the isodow component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{isodow(ts = DATE)}: Extract the isodow component from a date or timestamp.
-\item \code{isodow(ts = INTERVAL)}: Extract the isodow component from a date or timestamp.
-\item \code{isodow(ts = TIMESTAMP)}: Extract the isodow component from a date or timestamp.
-\item \code{isodow(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the isodow component from a date or timestamp.
-}
-}
-
 \section{SQL examples}{
 
 

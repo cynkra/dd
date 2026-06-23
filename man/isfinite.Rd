@@ -12,17 +12,6 @@
 \description{
 Returns true if the floating point value is finite, false otherwise.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{isfinite(x = FLOAT)}: Returns true if the floating point value is finite, false otherwise.
-\item \code{isfinite(x = DOUBLE)}: Returns true if the floating point value is finite, false otherwise.
-\item \code{isfinite(x = DATE)}: Returns true if the floating point value is finite, false otherwise.
-\item \code{isfinite(x = TIMESTAMP)}: Returns true if the floating point value is finite, false otherwise.
-\item \code{isfinite(x = `TIMESTAMP WITH TIME ZONE`)}: Returns true if the floating point value is finite, false otherwise.
-}
-}
-
 \section{SQL examples}{
 
 

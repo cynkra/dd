@@ -12,23 +12,6 @@
 \description{
 Bitwise NOT.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{`~`(input = TINYINT)}: Bitwise NOT.
-\item \code{`~`(input = SMALLINT)}: Bitwise NOT.
-\item \code{`~`(input = INTEGER)}: Bitwise NOT.
-\item \code{`~`(input = BIGINT)}: Bitwise NOT.
-\item \code{`~`(input = HUGEINT)}: Bitwise NOT.
-\item \code{`~`(input = UTINYINT)}: Bitwise NOT.
-\item \code{`~`(input = USMALLINT)}: Bitwise NOT.
-\item \code{`~`(input = UINTEGER)}: Bitwise NOT.
-\item \code{`~`(input = UBIGINT)}: Bitwise NOT.
-\item \code{`~`(input = UHUGEINT)}: Bitwise NOT.
-\item \code{`~`(input = BIT)}: Bitwise NOT.
-}
-}
-
 \section{SQL examples}{
 
 

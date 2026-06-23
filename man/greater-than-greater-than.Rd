@@ -14,23 +14,6 @@
 \description{
 Bitwise shift right.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{`>>`(input = TINYINT, col1 = TINYINT)}: Bitwise shift right.
-\item \code{`>>`(input = SMALLINT, col1 = SMALLINT)}: Bitwise shift right.
-\item \code{`>>`(input = INTEGER, col1 = INTEGER)}: Bitwise shift right.
-\item \code{`>>`(input = BIGINT, col1 = BIGINT)}: Bitwise shift right.
-\item \code{`>>`(input = HUGEINT, col1 = HUGEINT)}: Bitwise shift right.
-\item \code{`>>`(input = UTINYINT, col1 = UTINYINT)}: Bitwise shift right.
-\item \code{`>>`(input = USMALLINT, col1 = USMALLINT)}: Bitwise shift right.
-\item \code{`>>`(input = UINTEGER, col1 = UINTEGER)}: Bitwise shift right.
-\item \code{`>>`(input = UBIGINT, col1 = UBIGINT)}: Bitwise shift right.
-\item \code{`>>`(input = UHUGEINT, col1 = UHUGEINT)}: Bitwise shift right.
-\item \code{`>>`(input = BIT, col1 = INTEGER)}: Bitwise shift right.
-}
-}
-
 \section{SQL examples}{
 
 

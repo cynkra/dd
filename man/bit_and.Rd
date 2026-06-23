@@ -12,23 +12,6 @@
 \description{
 Returns the bitwise AND of all bits in a given expression.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{bit_and(arg = TINYINT)}: Returns the bitwise AND of all bits in a given expression.
-\item \code{bit_and(arg = SMALLINT)}: Returns the bitwise AND of all bits in a given expression.
-\item \code{bit_and(arg = INTEGER)}: Returns the bitwise AND of all bits in a given expression.
-\item \code{bit_and(arg = BIGINT)}: Returns the bitwise AND of all bits in a given expression.
-\item \code{bit_and(arg = HUGEINT)}: Returns the bitwise AND of all bits in a given expression.
-\item \code{bit_and(arg = UTINYINT)}: Returns the bitwise AND of all bits in a given expression.
-\item \code{bit_and(arg = USMALLINT)}: Returns the bitwise AND of all bits in a given expression.
-\item \code{bit_and(arg = UINTEGER)}: Returns the bitwise AND of all bits in a given expression.
-\item \code{bit_and(arg = UBIGINT)}: Returns the bitwise AND of all bits in a given expression.
-\item \code{bit_and(arg = UHUGEINT)}: Returns the bitwise AND of all bits in a given expression.
-\item \code{bit_and(arg = BIT)}: Returns the bitwise AND of all bits in a given expression.
-}
-}
-
 \section{SQL examples}{
 
 

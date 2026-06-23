@@ -17,16 +17,6 @@
 \description{
 The number of complete partitions between the timestamps.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{date_sub(part = VARCHAR, startdate = DATE, enddate = DATE)}: The number of complete partitions between the timestamps.
-\item \code{date_sub(part = VARCHAR, startdate = TIME, enddate = TIME)}: The number of complete partitions between the timestamps.
-\item \code{date_sub(part = VARCHAR, startdate = TIMESTAMP, enddate = TIMESTAMP)}: The number of complete partitions between the timestamps.
-\item \code{date_sub(part = VARCHAR, startdate = `TIMESTAMP WITH TIME ZONE`, enddate = `TIMESTAMP WITH TIME ZONE`)}: The number of complete partitions between the timestamps.
-}
-}
-
 \section{SQL examples}{
 
 

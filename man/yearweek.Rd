@@ -12,16 +12,6 @@
 \description{
 Extract the yearweek component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{yearweek(ts = DATE)}: Extract the yearweek component from a date or timestamp.
-\item \code{yearweek(ts = INTERVAL)}: Extract the yearweek component from a date or timestamp.
-\item \code{yearweek(ts = TIMESTAMP)}: Extract the yearweek component from a date or timestamp.
-\item \code{yearweek(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the yearweek component from a date or timestamp.
-}
-}
-
 \section{SQL examples}{
 
 

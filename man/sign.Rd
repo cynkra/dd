@@ -12,24 +12,6 @@
 \description{
 Returns the sign of x as -1, 0 or 1.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{sign(x = TINYINT)}: Returns the sign of x as -1, 0 or 1.
-\item \code{sign(x = SMALLINT)}: Returns the sign of x as -1, 0 or 1.
-\item \code{sign(x = INTEGER)}: Returns the sign of x as -1, 0 or 1.
-\item \code{sign(x = BIGINT)}: Returns the sign of x as -1, 0 or 1.
-\item \code{sign(x = HUGEINT)}: Returns the sign of x as -1, 0 or 1.
-\item \code{sign(x = FLOAT)}: Returns the sign of x as -1, 0 or 1.
-\item \code{sign(x = DOUBLE)}: Returns the sign of x as -1, 0 or 1.
-\item \code{sign(x = UTINYINT)}: Returns the sign of x as -1, 0 or 1.
-\item \code{sign(x = USMALLINT)}: Returns the sign of x as -1, 0 or 1.
-\item \code{sign(x = UINTEGER)}: Returns the sign of x as -1, 0 or 1.
-\item \code{sign(x = UBIGINT)}: Returns the sign of x as -1, 0 or 1.
-\item \code{sign(x = UHUGEINT)}: Returns the sign of x as -1, 0 or 1.
-}
-}
-
 \section{SQL examples}{
 
 

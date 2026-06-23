@@ -14,14 +14,6 @@
 \description{
 Returns the minimum value present in arg.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{min(arg = ANY)}: Returns the minimum value present in arg.
-\item \code{min(arg = ANY, col1 = BIGINT)}: Returns the minimum value present in arg.
-}
-}
-
 \section{SQL examples}{
 
 

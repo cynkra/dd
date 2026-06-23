@@ -12,14 +12,6 @@
 \description{
 Construct a quarter interval.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{to_quarters(integer = INTEGER)}: Construct a quarter interval.
-\item \code{to_quarters(integer = BIGINT)}: Construct a quarter interval.
-}
-}
-
 \section{SQL examples}{
 
 

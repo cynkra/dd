@@ -12,14 +12,6 @@
 \description{
 Construct a century interval.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{to_centuries(integer = INTEGER)}: Construct a century interval.
-\item \code{to_centuries(integer = BIGINT)}: Construct a century interval.
-}
-}
-
 \section{SQL examples}{
 
 

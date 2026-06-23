@@ -16,14 +16,6 @@
 \description{
 Concatenates the column string values with an optional separator.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{string_agg(str = ANY)}: Concatenates the column string values with an optional separator.
-\item \code{string_agg(str = ANY, arg = VARCHAR)}: Concatenates the column string values with an optional separator.
-}
-}
-
 \section{SQL examples}{
 
 

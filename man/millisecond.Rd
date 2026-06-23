@@ -12,19 +12,6 @@
 \description{
 Extract the millisecond component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{millisecond(ts = DATE)}: Extract the millisecond component from a date or timestamp.
-\item \code{millisecond(ts = INTERVAL)}: Extract the millisecond component from a date or timestamp.
-\item \code{millisecond(ts = TIME)}: Extract the millisecond component from a date or timestamp.
-\item \code{millisecond(ts = TIMESTAMP)}: Extract the millisecond component from a date or timestamp.
-\item \code{millisecond(ts = `TIME WITH TIME ZONE`)}: Extract the millisecond component from a date or timestamp.
-\item \code{millisecond(ts = TIME_NS)}: Extract the millisecond component from a date or timestamp.
-\item \code{millisecond(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the millisecond component from a date or timestamp.
-}
-}
-
 \section{SQL examples}{
 
 

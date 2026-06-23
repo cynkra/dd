@@ -14,23 +14,6 @@
 \description{
 Bitwise AND.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{`&`(left = TINYINT, right = TINYINT)}: Bitwise AND.
-\item \code{`&`(left = SMALLINT, right = SMALLINT)}: Bitwise AND.
-\item \code{`&`(left = INTEGER, right = INTEGER)}: Bitwise AND.
-\item \code{`&`(left = BIGINT, right = BIGINT)}: Bitwise AND.
-\item \code{`&`(left = HUGEINT, right = HUGEINT)}: Bitwise AND.
-\item \code{`&`(left = UTINYINT, right = UTINYINT)}: Bitwise AND.
-\item \code{`&`(left = USMALLINT, right = USMALLINT)}: Bitwise AND.
-\item \code{`&`(left = UINTEGER, right = UINTEGER)}: Bitwise AND.
-\item \code{`&`(left = UBIGINT, right = UBIGINT)}: Bitwise AND.
-\item \code{`&`(left = UHUGEINT, right = UHUGEINT)}: Bitwise AND.
-\item \code{`&`(left = BIT, right = BIT)}: Bitwise AND.
-}
-}
-
 \section{SQL examples}{
 
 

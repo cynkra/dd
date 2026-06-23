@@ -12,16 +12,6 @@
 \description{
 Extract the year component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{year(ts = DATE)}: Extract the year component from a date or timestamp.
-\item \code{year(ts = INTERVAL)}: Extract the year component from a date or timestamp.
-\item \code{year(ts = TIMESTAMP)}: Extract the year component from a date or timestamp.
-\item \code{year(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the year component from a date or timestamp.
-}
-}
-
 \section{SQL examples}{
 
 

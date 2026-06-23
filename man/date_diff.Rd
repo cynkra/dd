@@ -17,16 +17,6 @@
 \description{
 The number of partition boundaries between the timestamps.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{date_diff(part = VARCHAR, startdate = DATE, enddate = DATE)}: The number of partition boundaries between the timestamps.
-\item \code{date_diff(part = VARCHAR, startdate = TIME, enddate = TIME)}: The number of partition boundaries between the timestamps.
-\item \code{date_diff(part = VARCHAR, startdate = TIMESTAMP, enddate = TIMESTAMP)}: The number of partition boundaries between the timestamps.
-\item \code{date_diff(part = VARCHAR, startdate = `TIMESTAMP WITH TIME ZONE`, enddate = `TIMESTAMP WITH TIME ZONE`)}: The number of partition boundaries between the timestamps.
-}
-}
-
 \section{SQL examples}{
 
 

@@ -25,12 +25,8 @@ Converts \code{blob} to \code{VARCHAR} using hexadecimal encoding.
 
 \itemize{
 \item \code{hex(string = VARCHAR)}: Converts the \code{string} to hexadecimal representation.
-\item \code{hex(value = BIGNUM)}: Converts the \code{value} to \code{VARCHAR} using hexadecimal representation.
+\item \code{hex(value = BIGNUM)}, \code{hex(value = BIGINT)}, \code{hex(value = UBIGINT)}, \code{hex(value = HUGEINT)}, \code{hex(value = UHUGEINT)}: Converts the \code{value} to \code{VARCHAR} using hexadecimal representation.
 \item \code{hex(blob = BLOB)}: Converts \code{blob} to \code{VARCHAR} using hexadecimal encoding.
-\item \code{hex(value = BIGINT)}: Converts the \code{value} to \code{VARCHAR} using hexadecimal representation.
-\item \code{hex(value = UBIGINT)}: Converts the \code{value} to \code{VARCHAR} using hexadecimal representation.
-\item \code{hex(value = HUGEINT)}: Converts the \code{value} to \code{VARCHAR} using hexadecimal representation.
-\item \code{hex(value = UHUGEINT)}: Converts the \code{value} to \code{VARCHAR} using hexadecimal representation.
 }
 }
 

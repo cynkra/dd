@@ -12,23 +12,6 @@
 \description{
 Returns the bitwise XOR of all bits in a given expression.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{bit_xor(arg = TINYINT)}: Returns the bitwise XOR of all bits in a given expression.
-\item \code{bit_xor(arg = SMALLINT)}: Returns the bitwise XOR of all bits in a given expression.
-\item \code{bit_xor(arg = INTEGER)}: Returns the bitwise XOR of all bits in a given expression.
-\item \code{bit_xor(arg = BIGINT)}: Returns the bitwise XOR of all bits in a given expression.
-\item \code{bit_xor(arg = HUGEINT)}: Returns the bitwise XOR of all bits in a given expression.
-\item \code{bit_xor(arg = UTINYINT)}: Returns the bitwise XOR of all bits in a given expression.
-\item \code{bit_xor(arg = USMALLINT)}: Returns the bitwise XOR of all bits in a given expression.
-\item \code{bit_xor(arg = UINTEGER)}: Returns the bitwise XOR of all bits in a given expression.
-\item \code{bit_xor(arg = UBIGINT)}: Returns the bitwise XOR of all bits in a given expression.
-\item \code{bit_xor(arg = UHUGEINT)}: Returns the bitwise XOR of all bits in a given expression.
-\item \code{bit_xor(arg = BIT)}: Returns the bitwise XOR of all bits in a given expression.
-}
-}
-
 \section{SQL examples}{
 
 

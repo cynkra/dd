@@ -12,14 +12,6 @@
 \description{
 Returns whether the signbit is set or not.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{signbit(x = FLOAT)}: Returns whether the signbit is set or not.
-\item \code{signbit(x = DOUBLE)}: Returns whether the signbit is set or not.
-}
-}
-
 \section{SQL examples}{
 
 

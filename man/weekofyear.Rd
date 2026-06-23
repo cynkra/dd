@@ -12,16 +12,6 @@
 \description{
 Extract the weekofyear component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{weekofyear(ts = DATE)}: Extract the weekofyear component from a date or timestamp.
-\item \code{weekofyear(ts = INTERVAL)}: Extract the weekofyear component from a date or timestamp.
-\item \code{weekofyear(ts = TIMESTAMP)}: Extract the weekofyear component from a date or timestamp.
-\item \code{weekofyear(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the weekofyear component from a date or timestamp.
-}
-}
-
 \section{SQL examples}{
 
 

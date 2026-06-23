@@ -18,14 +18,6 @@
 \description{
 Splits the \code{string} along the \code{regex}. A set of optional regex \code{options} can be set.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{string_split_regex(string = VARCHAR, regex = VARCHAR)}: Splits the \code{string} along the \code{regex}. A set of optional regex \code{options} can be set.
-\item \code{string_split_regex(string = VARCHAR, regex = VARCHAR, options = VARCHAR)}: Splits the \code{string} along the \code{regex}. A set of optional regex \code{options} can be set.
-}
-}
-
 \section{SQL examples}{
 
 

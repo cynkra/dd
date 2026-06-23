@@ -12,14 +12,6 @@
 \description{
 Construct a decade interval.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{to_decades(integer = INTEGER)}: Construct a decade interval.
-\item \code{to_decades(integer = BIGINT)}: Construct a decade interval.
-}
-}
-
 \section{SQL examples}{
 
 

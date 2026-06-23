@@ -12,19 +12,6 @@
 \description{
 Extract the second component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{second(ts = DATE)}: Extract the second component from a date or timestamp.
-\item \code{second(ts = INTERVAL)}: Extract the second component from a date or timestamp.
-\item \code{second(ts = TIME)}: Extract the second component from a date or timestamp.
-\item \code{second(ts = TIMESTAMP)}: Extract the second component from a date or timestamp.
-\item \code{second(ts = `TIME WITH TIME ZONE`)}: Extract the second component from a date or timestamp.
-\item \code{second(ts = TIME_NS)}: Extract the second component from a date or timestamp.
-\item \code{second(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the second component from a date or timestamp.
-}
-}
-
 \section{SQL examples}{
 
 

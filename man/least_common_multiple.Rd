@@ -15,14 +15,6 @@
 \description{
 Computes the least common multiple of x and y.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{least_common_multiple(x = BIGINT, y = BIGINT)}: Computes the least common multiple of x and y.
-\item \code{least_common_multiple(x = HUGEINT, y = HUGEINT)}: Computes the least common multiple of x and y.
-}
-}
-
 \section{SQL examples}{
 
 

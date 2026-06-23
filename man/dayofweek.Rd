@@ -12,16 +12,6 @@
 \description{
 Extract the dayofweek component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{dayofweek(ts = DATE)}: Extract the dayofweek component from a date or timestamp.
-\item \code{dayofweek(ts = INTERVAL)}: Extract the dayofweek component from a date or timestamp.
-\item \code{dayofweek(ts = TIMESTAMP)}: Extract the dayofweek component from a date or timestamp.
-\item \code{dayofweek(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the dayofweek component from a date or timestamp.
-}
-}
-
 \section{SQL examples}{
 
 

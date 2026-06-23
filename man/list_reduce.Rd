@@ -18,14 +18,6 @@
 \description{
 Reduces all elements of the input \code{list} into a single scalar value by executing the \code{lambda} function on a running result and the next list element. The \code{lambda} function has an optional \code{initial_value} argument.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{list_reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA)}: Reduces all elements of the input \code{list} into a single scalar value by executing the \code{lambda} function on a running result and the next list element. The \code{lambda} function has an optional \code{initial_value} argument.
-\item \code{list_reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY)}: Reduces all elements of the input \code{list} into a single scalar value by executing the \code{lambda} function on a running result and the next list element. The \code{lambda} function has an optional \code{initial_value} argument.
-}
-}
-
 \section{SQL examples}{
 
 

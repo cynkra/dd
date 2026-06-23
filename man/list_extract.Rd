@@ -15,14 +15,6 @@
 \description{
 Extract the \code{index}th (1-based) value from the list.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{list_extract(list = `T[]`, index = BIGINT)}: Extract the \code{index}th (1-based) value from the list.
-\item \code{list_extract(list = VARCHAR, index = BIGINT)}: Extract the \code{index}th (1-based) value from the list.
-}
-}
-
 \section{SQL examples}{
 
 

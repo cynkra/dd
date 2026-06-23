@@ -16,14 +16,6 @@
 \description{
 The Jaro-Winkler similarity between two strings. Characters of different cases (e.g., \code{a} and \code{A}) are considered different. Returns a number between 0 and 1. For similarity < \code{score_cutoff}, 0 is returned instead. \code{score_cutoff} defaults to 0.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{jaro_winkler_similarity(s1 = VARCHAR, s2 = VARCHAR)}: The Jaro-Winkler similarity between two strings. Characters of different cases (e.g., \code{a} and \code{A}) are considered different. Returns a number between 0 and 1. For similarity < \code{score_cutoff}, 0 is returned instead. \code{score_cutoff} defaults to 0.
-\item \code{jaro_winkler_similarity(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE)}: The Jaro-Winkler similarity between two strings. Characters of different cases (e.g., \code{a} and \code{A}) are considered different. Returns a number between 0 and 1. For similarity < \code{score_cutoff}, 0 is returned instead. \code{score_cutoff} defaults to 0.
-}
-}
-
 \section{SQL examples}{
 
 

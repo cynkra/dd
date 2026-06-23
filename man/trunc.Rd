@@ -14,38 +14,6 @@
 \description{
 Truncates the number.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{trunc(x = TINYINT)}: Truncates the number.
-\item \code{trunc(x = TINYINT, col1 = INTEGER)}: Truncates the number.
-\item \code{trunc(x = SMALLINT)}: Truncates the number.
-\item \code{trunc(x = SMALLINT, col1 = INTEGER)}: Truncates the number.
-\item \code{trunc(x = INTEGER)}: Truncates the number.
-\item \code{trunc(x = INTEGER, col1 = INTEGER)}: Truncates the number.
-\item \code{trunc(x = BIGINT)}: Truncates the number.
-\item \code{trunc(x = BIGINT, col1 = INTEGER)}: Truncates the number.
-\item \code{trunc(x = HUGEINT)}: Truncates the number.
-\item \code{trunc(x = HUGEINT, col1 = INTEGER)}: Truncates the number.
-\item \code{trunc(x = FLOAT)}: Truncates the number.
-\item \code{trunc(x = FLOAT, col1 = INTEGER)}: Truncates the number.
-\item \code{trunc(x = DOUBLE)}: Truncates the number.
-\item \code{trunc(x = DOUBLE, col1 = INTEGER)}: Truncates the number.
-\item \code{trunc(x = DECIMAL)}: Truncates the number.
-\item \code{trunc(x = DECIMAL, col1 = INTEGER)}: Truncates the number.
-\item \code{trunc(x = UTINYINT)}: Truncates the number.
-\item \code{trunc(x = UTINYINT, col1 = INTEGER)}: Truncates the number.
-\item \code{trunc(x = USMALLINT)}: Truncates the number.
-\item \code{trunc(x = USMALLINT, col1 = INTEGER)}: Truncates the number.
-\item \code{trunc(x = UINTEGER)}: Truncates the number.
-\item \code{trunc(x = UINTEGER, col1 = INTEGER)}: Truncates the number.
-\item \code{trunc(x = UBIGINT)}: Truncates the number.
-\item \code{trunc(x = UBIGINT, col1 = INTEGER)}: Truncates the number.
-\item \code{trunc(x = UHUGEINT)}: Truncates the number.
-\item \code{trunc(x = UHUGEINT, col1 = INTEGER)}: Truncates the number.
-}
-}
-
 \section{SQL examples}{
 
 

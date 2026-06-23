@@ -15,23 +15,6 @@
 \description{
 Bitwise OR.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{`|`(left = TINYINT, right = TINYINT)}: Bitwise OR.
-\item \code{`|`(left = SMALLINT, right = SMALLINT)}: Bitwise OR.
-\item \code{`|`(left = INTEGER, right = INTEGER)}: Bitwise OR.
-\item \code{`|`(left = BIGINT, right = BIGINT)}: Bitwise OR.
-\item \code{`|`(left = HUGEINT, right = HUGEINT)}: Bitwise OR.
-\item \code{`|`(left = UTINYINT, right = UTINYINT)}: Bitwise OR.
-\item \code{`|`(left = USMALLINT, right = USMALLINT)}: Bitwise OR.
-\item \code{`|`(left = UINTEGER, right = UINTEGER)}: Bitwise OR.
-\item \code{`|`(left = UBIGINT, right = UBIGINT)}: Bitwise OR.
-\item \code{`|`(left = UHUGEINT, right = UHUGEINT)}: Bitwise OR.
-\item \code{`|`(left = BIT, right = BIT)}: Bitwise OR.
-}
-}
-
 \section{SQL examples}{
 
 

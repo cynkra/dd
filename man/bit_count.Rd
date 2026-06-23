@@ -12,18 +12,6 @@
 \description{
 Returns the number of bits that are set.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{bit_count(x = TINYINT)}: Returns the number of bits that are set.
-\item \code{bit_count(x = SMALLINT)}: Returns the number of bits that are set.
-\item \code{bit_count(x = INTEGER)}: Returns the number of bits that are set.
-\item \code{bit_count(x = BIGINT)}: Returns the number of bits that are set.
-\item \code{bit_count(x = HUGEINT)}: Returns the number of bits that are set.
-\item \code{bit_count(x = BIT)}: Returns the number of bits that are set.
-}
-}
-
 \section{SQL examples}{
 
 

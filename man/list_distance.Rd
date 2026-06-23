@@ -14,14 +14,6 @@
 \description{
 Calculates the Euclidean distance between two points with coordinates given in two inputs lists of equal length.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{list_distance(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}: Calculates the Euclidean distance between two points with coordinates given in two inputs lists of equal length.
-\item \code{list_distance(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}: Calculates the Euclidean distance between two points with coordinates given in two inputs lists of equal length.
-}
-}
-
 \section{SQL examples}{
 
 

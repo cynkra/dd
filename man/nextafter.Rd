@@ -14,14 +14,6 @@
 \description{
 Returns the next floating point value after x in the direction of y.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{nextafter(x = DOUBLE, y = DOUBLE)}: Returns the next floating point value after x in the direction of y.
-\item \code{nextafter(x = FLOAT, y = FLOAT)}: Returns the next floating point value after x in the direction of y.
-}
-}
-
 \section{SQL examples}{
 
 
