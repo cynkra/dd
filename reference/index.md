@@ -21,8 +21,6 @@
   function alias
 - [`all_profiling_output()`](https://cynkra.github.io/dd/reference/all_profiling_output.md)
   : DuckDB function all_profiling_output
-- [`&&`](https://cynkra.github.io/dd/reference/and-and.md) : DuckDB
-  function &&
 - [`&`](https://cynkra.github.io/dd/reference/and.md) : DuckDB function
   &
 - [`any_value`](https://cynkra.github.io/dd/reference/any_value.md) :
@@ -218,22 +216,18 @@
   : DuckDB function database_size
 - [`date_add()`](https://cynkra.github.io/dd/reference/date_add.md) :
   DuckDB function date_add
-- [`date_diff`](https://cynkra.github.io/dd/reference/date_diff.md) :
+- [`date_diff`](https://cynkra.github.io/dd/reference/date_diff.md)
+  [`datediff`](https://cynkra.github.io/dd/reference/date_diff.md) :
   DuckDB function date_diff
-- [`date_part`](https://cynkra.github.io/dd/reference/date_part.md) :
+- [`date_part`](https://cynkra.github.io/dd/reference/date_part.md)
+  [`datepart`](https://cynkra.github.io/dd/reference/date_part.md) :
   DuckDB function date_part
-- [`date_sub`](https://cynkra.github.io/dd/reference/date_sub.md) :
+- [`date_sub`](https://cynkra.github.io/dd/reference/date_sub.md)
+  [`datesub`](https://cynkra.github.io/dd/reference/date_sub.md) :
   DuckDB function date_sub
-- [`date_trunc`](https://cynkra.github.io/dd/reference/date_trunc.md) :
+- [`date_trunc`](https://cynkra.github.io/dd/reference/date_trunc.md)
+  [`datetrunc`](https://cynkra.github.io/dd/reference/date_trunc.md) :
   DuckDB function date_trunc
-- [`datediff`](https://cynkra.github.io/dd/reference/datediff.md) :
-  DuckDB function datediff
-- [`datepart`](https://cynkra.github.io/dd/reference/datepart.md) :
-  DuckDB function datepart
-- [`datesub`](https://cynkra.github.io/dd/reference/datesub.md) : DuckDB
-  function datesub
-- [`datetrunc`](https://cynkra.github.io/dd/reference/datetrunc.md) :
-  DuckDB function datetrunc
 - [`day`](https://cynkra.github.io/dd/reference/day.md) : DuckDB
   function day
 - [`dayname`](https://cynkra.github.io/dd/reference/dayname.md) : DuckDB
@@ -1077,8 +1071,6 @@
   function st_crs
 - [`st_geomfromwkb()`](https://cynkra.github.io/dd/reference/st_geomfromwkb.md)
   : DuckDB function st_geomfromwkb
-- [`st_intersects_extent()`](https://cynkra.github.io/dd/reference/st_intersects_extent.md)
-  : DuckDB function st_intersects_extent
 - [`st_setcrs()`](https://cynkra.github.io/dd/reference/st_setcrs.md) :
   DuckDB function st_setcrs
 - [`starts_with()`](https://cynkra.github.io/dd/reference/starts_with.md)

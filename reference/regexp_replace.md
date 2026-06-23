@@ -34,3 +34,13 @@ If `string` contains the `regex`, replaces the matching part with
 ## SQL examples
 
     regexp_replace('hello', '[lo]', '-')
+
+## See also
+
+Other regex:
+[`regexp_escape()`](https://cynkra.github.io/dd/reference/regexp_escape.md),
+[`regexp_extract()`](https://cynkra.github.io/dd/reference/regexp_extract.md),
+[`regexp_extract_all()`](https://cynkra.github.io/dd/reference/regexp_extract_all.md),
+[`regexp_full_match()`](https://cynkra.github.io/dd/reference/regexp_full_match.md),
+[`regexp_matches()`](https://cynkra.github.io/dd/reference/regexp_matches.md),
+[`string_split_regex()`](https://cynkra.github.io/dd/reference/string_split_regex.md)

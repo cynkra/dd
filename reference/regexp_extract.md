@@ -55,3 +55,13 @@ of optional regex `options` can be set.
     regexp_extract('ABC', '([a-z])(b)', 1, 'i')
     regexp_extract('2023-04-15', '(\d+)-(\d+)-(\d+)', ['y', 'm', 'd'])
     regexp_extract('John Doe', '([a-z]+) ([a-z]+)', ['first_name', 'last_name'], 'i')
+
+## See also
+
+Other regex:
+[`regexp_escape()`](https://cynkra.github.io/dd/reference/regexp_escape.md),
+[`regexp_extract_all()`](https://cynkra.github.io/dd/reference/regexp_extract_all.md),
+[`regexp_full_match()`](https://cynkra.github.io/dd/reference/regexp_full_match.md),
+[`regexp_matches()`](https://cynkra.github.io/dd/reference/regexp_matches.md),
+[`regexp_replace()`](https://cynkra.github.io/dd/reference/regexp_replace.md),
+[`string_split_regex()`](https://cynkra.github.io/dd/reference/string_split_regex.md)

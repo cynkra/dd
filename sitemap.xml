@@ -14,7 +14,6 @@
 <url><loc>https://cynkra.github.io/dd/reference/ago.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/alias.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/all_profiling_output.html</loc></url>
-<url><loc>https://cynkra.github.io/dd/reference/and-and.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/and.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/any_value.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/approx_count_distinct.html</loc></url>
@@ -112,10 +111,6 @@
 <url><loc>https://cynkra.github.io/dd/reference/date_part.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/date_sub.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/date_trunc.html</loc></url>
-<url><loc>https://cynkra.github.io/dd/reference/datediff.html</loc></url>
-<url><loc>https://cynkra.github.io/dd/reference/datepart.html</loc></url>
-<url><loc>https://cynkra.github.io/dd/reference/datesub.html</loc></url>
-<url><loc>https://cynkra.github.io/dd/reference/datetrunc.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/day.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/dayname.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/dayofmonth.html</loc></url>
@@ -528,7 +523,6 @@
 <url><loc>https://cynkra.github.io/dd/reference/st_aswkb.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/st_crs.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/st_geomfromwkb.html</loc></url>
-<url><loc>https://cynkra.github.io/dd/reference/st_intersects_extent.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/st_setcrs.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/starts_with.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/stats.html</loc></url>

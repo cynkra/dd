@@ -26,3 +26,5 @@ pow(x = DOUBLE, y = DOUBLE)
 
     pow(2, 3)
     power(2, 3)
+    2 ** 3
+    2 ^ 3

@@ -21,3 +21,9 @@ variant_typeof(input_variant = VARIANT)
 ## SQL examples
 
     variant_typeof({'a': 42, 'b': [1,2,3]})::VARIANT)
+
+## See also
+
+Other variant:
+[`variant_extract()`](https://cynkra.github.io/dd/reference/variant_extract.md),
+[`variant_normalize()`](https://cynkra.github.io/dd/reference/variant_normalize.md)
