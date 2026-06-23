@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_cosine_distance}
 \alias{list_cosine_distance}
+\alias{<=>}
 \title{DuckDB function list_cosine_distance}
 \arguments{
 \item{list1}{\code{FLOAT[] | DOUBLE[]}}

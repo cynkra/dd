@@ -2,6 +2,9 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_position}
 \alias{list_position}
+\alias{array_indexof}
+\alias{array_position}
+\alias{list_indexof}
 \title{DuckDB function list_position}
 \usage{
 list_position(list = `T[]`, element = T)

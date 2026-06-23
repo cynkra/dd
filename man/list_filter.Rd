@@ -2,6 +2,8 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_filter}
 \alias{list_filter}
+\alias{array_filter}
+\alias{filter}
 \title{DuckDB function list_filter}
 \usage{
 list_filter(list = `ANY[]`, `lambda(x)` = LAMBDA)

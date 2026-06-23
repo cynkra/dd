@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{bin}
 \alias{bin}
+\alias{to_binary}
 \title{DuckDB function bin}
 \arguments{
 \item{string}{\code{VARCHAR}}

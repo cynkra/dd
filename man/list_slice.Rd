@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_slice}
 \alias{list_slice}
+\alias{array_slice}
 \title{DuckDB function list_slice}
 \arguments{
 \item{list}{\code{ANY}}

@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{struct_position}
 \alias{struct_position}
+\alias{struct_indexof}
 \title{DuckDB function struct_position}
 \usage{
 struct_position(struct = STRUCT, `'entry'` = ANY)

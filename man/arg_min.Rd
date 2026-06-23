@@ -2,6 +2,8 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{arg_min}
 \alias{arg_min}
+\alias{argmin}
+\alias{min_by}
 \title{DuckDB function arg_min}
 \arguments{
 \item{arg}{\verb{INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY}}

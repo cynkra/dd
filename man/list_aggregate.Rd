@@ -2,6 +2,10 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_aggregate}
 \alias{list_aggregate}
+\alias{aggregate}
+\alias{array_aggr}
+\alias{array_aggregate}
+\alias{list_aggr}
 \title{DuckDB function list_aggregate}
 \usage{
 list_aggregate(list = `ANY[]`, function_name = VARCHAR)

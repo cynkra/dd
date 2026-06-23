@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_where}
 \alias{list_where}
+\alias{array_where}
 \title{DuckDB function list_where}
 \usage{
 list_where(value_list = `T[]`, mask_list = `BOOLEAN[]`)

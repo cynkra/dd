@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{count_if}
 \alias{count_if}
+\alias{countif}
 \title{DuckDB function count_if}
 \usage{
 count_if(arg = BOOLEAN)

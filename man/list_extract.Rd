@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_extract}
 \alias{list_extract}
+\alias{list_element}
 \title{DuckDB function list_extract}
 \arguments{
 \item{list}{\code{T[] | VARCHAR}}

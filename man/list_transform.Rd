@@ -2,6 +2,10 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_transform}
 \alias{list_transform}
+\alias{apply}
+\alias{array_apply}
+\alias{array_transform}
+\alias{list_apply}
 \title{DuckDB function list_transform}
 \usage{
 list_transform(list = `ANY[]`, `lambda(x)` = LAMBDA)

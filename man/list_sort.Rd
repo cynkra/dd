@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_sort}
 \alias{list_sort}
+\alias{array_sort}
 \title{DuckDB function list_sort}
 \arguments{
 \item{list}{\code{ANY[]}}

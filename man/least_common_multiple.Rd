@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{least_common_multiple}
 \alias{least_common_multiple}
+\alias{lcm}
 \title{DuckDB function least_common_multiple}
 \arguments{
 \item{x}{\code{BIGINT | HUGEINT}}

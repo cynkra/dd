@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{uuid}
 \alias{uuid}
+\alias{gen_random_uuid}
 \title{DuckDB function uuid}
 \usage{
 uuid()

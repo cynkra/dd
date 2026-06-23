@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{suffix}
 \alias{suffix}
+\alias{ends_with}
 \title{DuckDB function suffix}
 \usage{
 suffix(string = VARCHAR, search_string = VARCHAR)

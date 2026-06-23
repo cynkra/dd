@@ -2,6 +2,9 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_contains}
 \alias{list_contains}
+\alias{array_contains}
+\alias{array_has}
+\alias{list_has}
 \title{DuckDB function list_contains}
 \usage{
 list_contains(list = `T[]`, element = T)

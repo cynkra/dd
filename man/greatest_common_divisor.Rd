@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{greatest_common_divisor}
 \alias{greatest_common_divisor}
+\alias{gcd}
 \title{DuckDB function greatest_common_divisor}
 \arguments{
 \item{x}{\code{BIGINT | HUGEINT}}

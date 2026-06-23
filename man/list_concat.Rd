@@ -2,6 +2,9 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_concat}
 \alias{list_concat}
+\alias{array_cat}
+\alias{array_concat}
+\alias{list_cat}
 \title{DuckDB function list_concat}
 \usage{
 list_concat()

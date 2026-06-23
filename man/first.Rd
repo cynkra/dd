@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{first}
 \alias{first}
+\alias{arbitrary}
 \title{DuckDB function first}
 \arguments{
 \item{arg}{\code{DECIMAL | ANY}}

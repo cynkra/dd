@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{map_extract}
 \alias{map_extract}
+\alias{element_at}
 \title{DuckDB function map_extract}
 \usage{
 map_extract(map = `MAP(K, V)`, key = K)

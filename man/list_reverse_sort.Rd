@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_reverse_sort}
 \alias{list_reverse_sort}
+\alias{array_reverse_sort}
 \title{DuckDB function list_reverse_sort}
 \arguments{
 \item{list}{\code{ANY[]}}

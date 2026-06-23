@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{abs}
 \alias{abs}
+\alias{@}
 \title{DuckDB function abs}
 \arguments{
 \item{x}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT}}

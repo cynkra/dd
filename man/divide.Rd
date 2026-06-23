@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{divide}
 \alias{divide}
+\alias{//}
 \title{DuckDB function divide}
 \arguments{
 \item{col0}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT}}

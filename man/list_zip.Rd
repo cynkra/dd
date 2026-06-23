@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_zip}
 \alias{list_zip}
+\alias{array_zip}
 \title{DuckDB function list_zip}
 \usage{
 list_zip()

@@ -2,6 +2,8 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{arg_max}
 \alias{arg_max}
+\alias{argmax}
+\alias{max_by}
 \title{DuckDB function arg_max}
 \arguments{
 \item{arg}{\verb{INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY}}

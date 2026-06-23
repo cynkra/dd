@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{factorial}
 \alias{factorial}
+\alias{!__postfix}
 \title{DuckDB function factorial}
 \usage{
 factorial(x = INTEGER)

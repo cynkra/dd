@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{hamming}
 \alias{hamming}
+\alias{mismatches}
 \title{DuckDB function hamming}
 \usage{
 hamming(s1 = VARCHAR, s2 = VARCHAR)

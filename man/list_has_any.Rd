@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_has_any}
 \alias{list_has_any}
+\alias{array_has_any}
 \title{DuckDB function list_has_any}
 \usage{
 list_has_any(list1 = `T[]`, list2 = `T[]`)

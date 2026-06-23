@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{unbin}
 \alias{unbin}
+\alias{from_binary}
 \title{DuckDB function unbin}
 \usage{
 unbin(value = VARCHAR)

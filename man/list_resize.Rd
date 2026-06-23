@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_resize}
 \alias{list_resize}
+\alias{array_resize}
 \title{DuckDB function list_resize}
 \arguments{
 \item{list}{\code{ANY[]}}

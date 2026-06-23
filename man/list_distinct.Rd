@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_distinct}
 \alias{list_distinct}
+\alias{array_distinct}
 \title{DuckDB function list_distinct}
 \usage{
 list_distinct(list = `T[]`)

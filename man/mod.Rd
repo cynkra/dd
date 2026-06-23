@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{mod}
 \alias{mod}
+\alias{\%}
 \title{DuckDB function mod}
 \arguments{
 \item{col0}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT}}
