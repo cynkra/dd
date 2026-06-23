@@ -21,6 +21,8 @@
 Repeats the \code{string} \code{count} number of times.
 
 Repeats the \code{blob} \code{count} number of times.
+
+Repeats the \code{list} \code{count} number of times.
 }
 \section{Overloads}{
 
@@ -37,6 +39,132 @@ Repeats the \code{blob} \code{count} number of times.
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{repeat('A', 5)
 repeat('\\xAA\\xBB'::BLOB, 5)
+repeat([1, 2, 3], 5)
 }\if{html}{\out{</div>}}
 }
 
+\seealso{
+Other blob:
+\code{\link[=decode]{decode()}},
+\code{\link[=encode]{encode()}},
+\code{\link[=from_base64]{from_base64()}},
+\code{\link[=hex]{hex()}},
+\code{\link[=md5]{md5()}},
+\code{\link[=md5_number]{md5_number()}},
+\code{\link[=octet_length]{octet_length()}},
+\code{\link{or--or}},
+\code{\link[=sha1]{sha1()}},
+\code{\link[=sha256]{sha256()}},
+\code{\link[=to_base64]{to_base64()}},
+\code{\link[=unbin]{unbin()}},
+\code{\link[=unhex]{unhex()}}
+
+Other list:
+\code{\link[=array_extract]{array_extract()}},
+\code{\link[=array_length]{array_length()}},
+\code{\link[=concat]{concat()}},
+\code{\link[=contains]{contains()}},
+\code{\link[=flatten]{flatten()}},
+\code{\link[=generate_series]{generate_series()}},
+\code{\link[=len]{len()}},
+\code{\link[=list_aggregate]{list_aggregate()}},
+\code{\link[=list_concat]{list_concat()}},
+\code{\link[=list_contains]{list_contains()}},
+\code{\link[=list_cosine_distance]{list_cosine_distance()}},
+\code{\link[=list_cosine_similarity]{list_cosine_similarity()}},
+\code{\link[=list_distance]{list_distance()}},
+\code{\link[=list_distinct]{list_distinct()}},
+\code{\link[=list_extract]{list_extract()}},
+\code{\link[=list_filter]{list_filter()}},
+\code{\link[=list_grade_up]{list_grade_up()}},
+\code{\link[=list_has_all]{list_has_all()}},
+\code{\link[=list_has_any]{list_has_any()}},
+\code{\link[=list_inner_product]{list_inner_product()}},
+\code{\link[=list_intersect]{list_intersect()}},
+\code{\link[=list_negative_inner_product]{list_negative_inner_product()}},
+\code{\link[=list_position]{list_position()}},
+\code{\link[=list_reduce]{list_reduce()}},
+\code{\link[=list_resize]{list_resize()}},
+\code{\link[=list_reverse_sort]{list_reverse_sort()}},
+\code{\link[=list_select]{list_select()}},
+\code{\link[=list_slice]{list_slice()}},
+\code{\link[=list_sort]{list_sort()}},
+\code{\link[=list_transform]{list_transform()}},
+\code{\link[=list_unique]{list_unique()}},
+\code{\link[=list_value]{list_value()}},
+\code{\link[=list_where]{list_where()}},
+\code{\link[=list_zip]{list_zip()}},
+\code{\link{or--or}},
+\code{\link[=range]{range()}},
+\code{\link[=unpivot_list]{unpivot_list()}}
+
+Other string:
+\code{\link[=array_extract]{array_extract()}},
+\code{\link[=ascii]{ascii()}},
+\code{\link[=bar]{bar()}},
+\code{\link[=bin]{bin()}},
+\code{\link[=bit_length]{bit_length()}},
+\code{\link[=chr]{chr()}},
+\code{\link[=concat]{concat()}},
+\code{\link[=concat_ws]{concat_ws()}},
+\code{\link[=contains]{contains()}},
+\code{\link[=formatReadableDecimalSize]{formatReadableDecimalSize()}},
+\code{\link[=format_bytes]{format_bytes()}},
+\code{\link[=from_base64]{from_base64()}},
+\code{\link[=greatest]{greatest()}},
+\code{\link[=hash]{hash()}},
+\code{\link[=hex]{hex()}},
+\code{\link[=ilike_escape]{ilike_escape()}},
+\code{\link[=instr]{instr()}},
+\code{\link[=least]{least()}},
+\code{\link[=left]{left()}},
+\code{\link[=left_grapheme]{left_grapheme()}},
+\code{\link[=len]{len()}},
+\code{\link[=length_grapheme]{length_grapheme()}},
+\code{\link[=like_escape]{like_escape()}},
+\code{\link[=list_slice]{list_slice()}},
+\code{\link[=lower]{lower()}},
+\code{\link[=lpad]{lpad()}},
+\code{\link[=ltrim]{ltrim()}},
+\code{\link[=md5]{md5()}},
+\code{\link[=md5_number]{md5_number()}},
+\code{\link[=nfc_normalize]{nfc_normalize()}},
+\code{\link[=not_ilike_escape]{not_ilike_escape()}},
+\code{\link[=not_like_escape]{not_like_escape()}},
+\code{\link{or--or}},
+\code{\link[=parse_dirname]{parse_dirname()}},
+\code{\link[=parse_dirpath]{parse_dirpath()}},
+\code{\link[=parse_filename]{parse_filename()}},
+\code{\link[=parse_formatted_bytes]{parse_formatted_bytes()}},
+\code{\link[=parse_path]{parse_path()}},
+\code{\link[=prefix]{prefix()}},
+\code{\link[=printf]{printf()}},
+\code{\link[=replace]{replace()}},
+\code{\link[=reverse]{reverse()}},
+\code{\link[=right]{right()}},
+\code{\link[=right_grapheme]{right_grapheme()}},
+\code{\link[=rpad]{rpad()}},
+\code{\link[=rtrim]{rtrim()}},
+\code{\link[=sha1]{sha1()}},
+\code{\link[=sha256]{sha256()}},
+\code{\link[=starts_with]{starts_with()}},
+\code{\link[=string_split]{string_split()}},
+\code{\link[=strip_accents]{strip_accents()}},
+\code{\link[=strlen]{strlen()}},
+\code{\link[=substring]{substring()}},
+\code{\link[=substring_grapheme]{substring_grapheme()}},
+\code{\link[=suffix]{suffix()}},
+\code{\link[=to_base]{to_base()}},
+\code{\link[=to_base64]{to_base64()}},
+\code{\link[=translate]{translate()}},
+\code{\link[=trim]{trim()}},
+\code{\link[=unbin]{unbin()}},
+\code{\link[=unhex]{unhex()}},
+\code{\link[=unicode]{unicode()}},
+\code{\link[=upper]{upper()}},
+\code{\link[=url_decode]{url_decode()}},
+\code{\link[=url_encode]{url_encode()}}
+}
+\concept{blob}
+\concept{list}
+\concept{string}

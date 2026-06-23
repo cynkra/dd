@@ -22,3 +22,9 @@ Normalizes the \code{input_variant} to a canonical representation.
 }\if{html}{\out{</div>}}
 }
 
+\seealso{
+Other variant:
+\code{\link[=variant_extract]{variant_extract()}},
+\code{\link[=variant_typeof]{variant_typeof()}}
+}
+\concept{variant}

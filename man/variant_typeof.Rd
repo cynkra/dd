@@ -22,3 +22,9 @@ Returns the internal type of the \code{input_variant}.
 }\if{html}{\out{</div>}}
 }
 
+\seealso{
+Other variant:
+\code{\link[=variant_extract]{variant_extract()}},
+\code{\link[=variant_normalize]{variant_normalize()}}
+}
+\concept{variant}

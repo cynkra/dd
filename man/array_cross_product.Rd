@@ -27,3 +27,13 @@ Computes the cross product of two arrays of size 3. The array elements can not b
 }\if{html}{\out{</div>}}
 }
 
+\seealso{
+Other array:
+\code{\link[=array_cosine_distance]{array_cosine_distance()}},
+\code{\link[=array_cosine_similarity]{array_cosine_similarity()}},
+\code{\link[=array_distance]{array_distance()}},
+\code{\link[=array_inner_product]{array_inner_product()}},
+\code{\link[=array_negative_inner_product]{array_negative_inner_product()}},
+\code{\link[=array_value]{array_value()}}
+}
+\concept{array}

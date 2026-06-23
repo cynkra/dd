@@ -12,7 +12,9 @@
 \code{VARIANT}
 }
 \description{
-DuckDB function \code{variant_extract()}.
+Returns the \code{field} from the \code{input_variant} if it's an OBJECT.
+
+Returns the entry at \code{index} from the \code{input_variant} if it's an ARRAY.
 }
 \section{Overloads}{
 
@@ -22,3 +24,17 @@ DuckDB function \code{variant_extract()}.
 }
 }
 
+\section{SQL examples}{
+
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{variant_extract(\{'a': 42, 'b': [1,2,3])::VARIANT, 'b')
+variant_extract([1,2,3])::VARIANT, 0)
+}\if{html}{\out{</div>}}
+}
+
+\seealso{
+Other variant:
+\code{\link[=variant_normalize]{variant_normalize()}},
+\code{\link[=variant_typeof]{variant_typeof()}}
+}
+\concept{variant}

@@ -33,30 +33,6 @@
   stop("DuckDB function &() is not available in R.")
 }
 
-#' DuckDB function &&
-#'
-#' @description
-#' Returns true if the geometries bounding boxes intersect.
-#'
-#' @name &&
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{`&&`(geom1 = GEOMETRY, geom2 = GEOMETRY)}
-#' \item \code{`&&`(geom1 = `T[]`, geom2 = `T[]`)}
-#' }
-#' @param geom1 `GEOMETRY | T[]`
-#' @param geom2 `GEOMETRY | T[]`
-#' @return `BOOLEAN`
-#' @export
-#' @section SQL examples:
-#' ```
-#' 'POINT(5 5)'::GEOMETRY && 'LINESTRING(0 0, 10 20)'::GEOMETRY;
-#' ```
-`&&` <- function(geom1 = `GEOMETRY | T[]`, geom2 = `GEOMETRY | T[]`) {
-  stop("DuckDB function &&() is not available in R.")
-}
-
 #' DuckDB function /
 #'
 #' @description
@@ -1215,6 +1191,7 @@ array_append <- function(arr, el) {
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
 #' @export
+#' @family array
 #' @section SQL examples:
 #' ```
 #' array_cosine_distance(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
@@ -1239,6 +1216,7 @@ array_cosine_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = 
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
 #' @export
+#' @family array
 #' @section SQL examples:
 #' ```
 #' array_cosine_similarity(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
@@ -1262,6 +1240,7 @@ array_cosine_similarity <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 
 #' @param array `FLOAT[3] | DOUBLE[3]`
 #' @return `FLOAT[3] | DOUBLE[3]`
 #' @export
+#' @family array
 #' @section SQL examples:
 #' ```
 #' array_cross_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
@@ -1286,6 +1265,7 @@ array_cross_product <- function(array = `FLOAT[3] | DOUBLE[3]`) {
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
 #' @export
+#' @family array
 #' @section SQL examples:
 #' ```
 #' array_distance(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
@@ -1302,6 +1282,8 @@ array_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[
 #' Extracts the named `entry` from the `STRUCT`.
 #'
 #' Extracts the entry from an unnamed `STRUCT` (tuple) using an index (1-based).
+#'
+#' Extracts the `index`th (1-based) value from the `list`.
 #'
 #' @name array_extract
 #' @usage NULL
@@ -1320,11 +1302,15 @@ array_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[
 #' @param entry `VARCHAR`
 #' @return `T | VARCHAR | ANY`
 #' @export
+#' @family list
+#' @family string
+#' @family struct
 #' @section SQL examples:
 #' ```
 #' array_extract('DuckDB', 2)
 #' array_extract({'i': 3, 'v2': 3, 'v3': 0}, 'i')
 #' array_extract(row(42, 84), 1)
+#' array_extract([4, 5, 6], 3)
 #' ```
 array_extract <- function(col0 = `T[]`, col1 = BIGINT, string = VARCHAR, index = BIGINT, struct = STRUCT, entry = VARCHAR) {
   stop("DuckDB function array_extract() is not available in R.")
@@ -1346,6 +1332,7 @@ array_extract <- function(col0 = `T[]`, col1 = BIGINT, string = VARCHAR, index =
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
 #' @export
+#' @family array
 #' @section SQL examples:
 #' ```
 #' array_inner_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
@@ -1379,6 +1366,7 @@ array_dot_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLO
 #' @param dimension `BIGINT`
 #' @return `BIGINT`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' array_length([1, 2, 3])
@@ -1403,6 +1391,7 @@ array_length <- function(list = `ANY[]`, dimension = BIGINT) {
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
 #' @export
+#' @family array
 #' @section SQL examples:
 #' ```
 #' array_negative_inner_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
@@ -1545,6 +1534,7 @@ array_to_string_comma_default <- function(arr, sep) {
 
 #' @return `ARRAY`
 #' @export
+#' @family array
 #' @section SQL examples:
 #' ```
 #' array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT)
@@ -1595,6 +1585,7 @@ arrow_scan_dumb <- function(col0 = POINTER, col1 = POINTER, col2 = POINTER) {
 #' @param string `VARCHAR`
 #' @return `INTEGER`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' ascii('Ω')
@@ -1751,6 +1742,7 @@ mean <- function(x = `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL
 #' @param width `DOUBLE`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' bar(5, 0, 20, 10)
@@ -1781,6 +1773,8 @@ bar <- function(x = DOUBLE, min = DOUBLE, max = DOUBLE, width = DOUBLE) {
 #' @param value `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`
 #' @return `VARCHAR`
 #' @export
+#' @family numeric
+#' @family string
 #' @section SQL examples:
 #' ```
 #' bin('Aa')
@@ -1874,6 +1868,8 @@ bit_count <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | BIT
 #' @param bit `BIT`
 #' @return `BIGINT`
 #' @export
+#' @family numeric
+#' @family string
 #' @section SQL examples:
 #' ```
 #' bit_length('abc')
@@ -2228,6 +2224,7 @@ checkpoint <- function(col0 = VARCHAR) {
 #' @param code_point `INTEGER`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' chr(65)
@@ -2290,6 +2287,8 @@ combine <- function(col0 = `AGGREGATE_STATE<?>`, col1 = ANY) {
 #' @param value `ANY`
 #' @return `ANY`
 #' @export
+#' @family list
+#' @family string
 #' @section SQL examples:
 #' ```
 #' concat('Hello', ' ', 'World')
@@ -2310,6 +2309,7 @@ concat <- function(value = ANY) {
 #' @param string `ANY`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' concat_ws(', ', 'Banana', 'Apple', 'Melon')
@@ -2342,6 +2342,10 @@ constant_or_null <- function(arg1 = ANY, arg2 = ANY) {
 #' @description
 #' Returns `true` if `search_string` is found within `string`.
 #'
+#' Returns `true` if the `list` contains the `element`.
+#'
+#' Checks if a `map` contains a given `key`.
+#'
 #' @name contains
 #' @usage NULL
 #' @section Overloads:
@@ -2357,9 +2361,14 @@ constant_or_null <- function(arg1 = ANY, arg2 = ANY) {
 #' @param col1 `T | K | ANY`
 #' @return `BOOLEAN`
 #' @export
+#' @family list
+#' @family map
+#' @family string
 #' @section SQL examples:
 #' ```
 #' contains('abc', 'a')
+#' contains([1, 2, NULL], 1)
+#' contains(MAP {'key1': 10, 'key2': 20, 'key3': 30}, 'key2')
 #' ```
 contains <- function(string = VARCHAR, search_string = VARCHAR, col0 = `T[] | MAP(K, V) | STRUCT`, col1 = `T | K | ANY`) {
   stop("DuckDB function contains() is not available in R.")
@@ -2805,6 +2814,7 @@ currval <- function(`'sequence_name'` = VARCHAR) {
 #' @param s2 `VARCHAR`
 #' @return `BIGINT`
 #' @export
+#' @family text_similarity
 #' @section SQL examples:
 #' ```
 #' damerau_levenshtein('duckdb', 'udckbd')
@@ -2883,6 +2893,13 @@ date_diff <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIM
   stop("DuckDB function date_diff() is not available in R.")
 }
 
+#' @rdname date_diff
+#' @usage NULL
+#' @export
+datediff <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, enddate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function datediff() is not available in R.")
+}
+
 #' DuckDB function date_part
 #'
 #' @description
@@ -2919,6 +2936,13 @@ date_part <- function(ts = `VARCHAR[] | VARCHAR`, col1 = `DATE | INTERVAL | TIME
   stop("DuckDB function date_part() is not available in R.")
 }
 
+#' @rdname date_part
+#' @usage NULL
+#' @export
+datepart <- function(ts = `VARCHAR[] | VARCHAR`, col1 = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function datepart() is not available in R.")
+}
+
 #' DuckDB function date_sub
 #'
 #' @description
@@ -2944,6 +2968,13 @@ date_part <- function(ts = `VARCHAR[] | VARCHAR`, col1 = `DATE | INTERVAL | TIME
 #' ```
 date_sub <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, enddate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function date_sub() is not available in R.")
+}
+
+#' @rdname date_sub
+#' @usage NULL
+#' @export
+datesub <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, enddate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function datesub() is not available in R.")
 }
 
 #' DuckDB function date_trunc
@@ -2972,118 +3003,9 @@ date_trunc <- function(part = VARCHAR, timestamp = `DATE | INTERVAL | TIMESTAMP 
   stop("DuckDB function date_trunc() is not available in R.")
 }
 
-#' DuckDB function datediff
-#'
-#' @description
-#' The number of partition boundaries between the timestamps.
-#'
-#' @name datediff
+#' @rdname date_trunc
 #' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{datediff(part = VARCHAR, startdate = DATE, enddate = DATE)}
-#' \item \code{datediff(part = VARCHAR, startdate = TIME, enddate = TIME)}
-#' \item \code{datediff(part = VARCHAR, startdate = TIMESTAMP, enddate = TIMESTAMP)}
-#' \item \code{datediff(part = VARCHAR, startdate = `TIMESTAMP WITH TIME ZONE`, enddate = `TIMESTAMP WITH TIME ZONE`)}
-#' }
-#' @param part `VARCHAR`
-#' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @return `BIGINT`
 #' @export
-#' @section SQL examples:
-#' ```
-#' datediff('hour', TIMESTAMPTZ '1992-09-30 23:59:59', TIMESTAMPTZ '1992-10-01 01:58:00')
-#' ```
-datediff <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, enddate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
-  stop("DuckDB function datediff() is not available in R.")
-}
-
-#' DuckDB function datepart
-#'
-#' @description
-#' Get subfield (equivalent to extract).
-#'
-#' @name datepart
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{datepart(ts = `VARCHAR[]`, col1 = DATE)}
-#' \item \code{datepart(ts = `VARCHAR[]`, col1 = INTERVAL)}
-#' \item \code{datepart(ts = `VARCHAR[]`, col1 = TIME)}
-#' \item \code{datepart(ts = `VARCHAR[]`, col1 = TIMESTAMP)}
-#' \item \code{datepart(ts = `VARCHAR[]`, col1 = `TIME WITH TIME ZONE`)}
-#' \item \code{datepart(ts = `VARCHAR[]`, col1 = TIME_NS)}
-#' \item \code{datepart(ts = VARCHAR, col1 = DATE)}
-#' \item \code{datepart(ts = VARCHAR, col1 = INTERVAL)}
-#' \item \code{datepart(ts = VARCHAR, col1 = TIME)}
-#' \item \code{datepart(ts = VARCHAR, col1 = TIMESTAMP)}
-#' \item \code{datepart(ts = VARCHAR, col1 = `TIME WITH TIME ZONE`)}
-#' \item \code{datepart(ts = VARCHAR, col1 = TIME_NS)}
-#' \item \code{datepart(ts = `VARCHAR[]`, col1 = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{datepart(ts = VARCHAR, col1 = `TIMESTAMP WITH TIME ZONE`)}
-#' }
-#' @param ts `VARCHAR[] | VARCHAR`
-#' @param col1 `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
-#' @return `STRUCT() | BIGINT`
-#' @export
-#' @section SQL examples:
-#' ```
-#' datepart('minute', TIMESTAMP '1992-09-20 20:38:40')
-#' ```
-datepart <- function(ts = `VARCHAR[] | VARCHAR`, col1 = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`) {
-  stop("DuckDB function datepart() is not available in R.")
-}
-
-#' DuckDB function datesub
-#'
-#' @description
-#' The number of complete partitions between the timestamps.
-#'
-#' @name datesub
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{datesub(part = VARCHAR, startdate = DATE, enddate = DATE)}
-#' \item \code{datesub(part = VARCHAR, startdate = TIME, enddate = TIME)}
-#' \item \code{datesub(part = VARCHAR, startdate = TIMESTAMP, enddate = TIMESTAMP)}
-#' \item \code{datesub(part = VARCHAR, startdate = `TIMESTAMP WITH TIME ZONE`, enddate = `TIMESTAMP WITH TIME ZONE`)}
-#' }
-#' @param part `VARCHAR`
-#' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @return `BIGINT`
-#' @export
-#' @section SQL examples:
-#' ```
-#' datesub('hour', TIMESTAMPTZ '1992-09-30 23:59:59', TIMESTAMPTZ '1992-10-01 01:58:00')
-#' ```
-datesub <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, enddate = `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
-  stop("DuckDB function datesub() is not available in R.")
-}
-
-#' DuckDB function datetrunc
-#'
-#' @description
-#' Truncate to specified precision.
-#'
-#' @name datetrunc
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{datetrunc(part = VARCHAR, timestamp = DATE)}
-#' \item \code{datetrunc(part = VARCHAR, timestamp = INTERVAL)}
-#' \item \code{datetrunc(part = VARCHAR, timestamp = TIMESTAMP)}
-#' \item \code{datetrunc(part = VARCHAR, timestamp = `TIMESTAMP WITH TIME ZONE`)}
-#' }
-#' @param part `VARCHAR`
-#' @param timestamp `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @return `TIMESTAMP | INTERVAL | TIMESTAMP WITH TIME ZONE`
-#' @export
-#' @section SQL examples:
-#' ```
-#' datetrunc('hour', TIMESTAMPTZ '1992-09-20 20:38:40')
-#' ```
 datetrunc <- function(part = VARCHAR, timestamp = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function datetrunc() is not available in R.")
 }
@@ -3267,6 +3189,7 @@ decade <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param varchar `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family blob
 #' @section SQL examples:
 #' ```
 #' decode('\xC3\xBC'::BLOB)
@@ -4079,6 +4002,7 @@ enable_verification <- function() {
 #' @param string `VARCHAR`
 #' @return `BLOB`
 #' @export
+#' @family blob
 #' @section SQL examples:
 #' ```
 #' encode('my_string_with_ü')
@@ -4569,6 +4493,7 @@ first_value <- function(col0 = T) {
 #' @param nested_list `T[][]`
 #' @return `T[]`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' flatten([[1, 2, 3], [4, 5]])
@@ -4645,6 +4570,8 @@ force_checkpoint <- function(col0 = VARCHAR) {
 #' @param integer `BIGINT`
 #' @return `VARCHAR`
 #' @export
+#' @family numeric
+#' @family string
 #' @section SQL examples:
 #' ```
 #' formatReadableDecimalSize(16_000)
@@ -4663,6 +4590,8 @@ formatReadableDecimalSize <- function(integer = BIGINT) {
 #' @param integer `BIGINT`
 #' @return `VARCHAR`
 #' @export
+#' @family numeric
+#' @family string
 #' @section SQL examples:
 #' ```
 #' format_bytes(16_000)
@@ -4718,6 +4647,8 @@ format_type <- function(type_oid, typemod) {
 #' @param string `VARCHAR`
 #' @return `BLOB`
 #' @export
+#' @family blob
+#' @family string
 #' @section SQL examples:
 #' ```
 #' from_base64('QQ==')
@@ -4785,6 +4716,7 @@ gamma <- function(x = DOUBLE) {
 #' @param step `BIGINT | INTERVAL`
 #' @return `BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' generate_series(2, 5, 3)
@@ -4962,6 +4894,11 @@ glob <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' @param arg1 `ANY`
 #' @return `ANY`
 #' @export
+#' @family aggregate
+#' @family date
+#' @family numeric
+#' @family string
+#' @family timestamp
 #' @section SQL examples:
 #' ```
 #' greatest(42, 84)
@@ -5013,6 +4950,7 @@ gcd <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
 #' @param s2 `VARCHAR`
 #' @return `BIGINT`
 #' @export
+#' @family text_similarity
 #' @section SQL examples:
 #' ```
 #' hamming('duck', 'luck')
@@ -5270,6 +5208,7 @@ has_tablespace_privilege <- function(tablespace, privilege, user) {
 #' @param value `ANY`
 #' @return `UBIGINT`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' hash('🦆')
@@ -5304,6 +5243,9 @@ hash <- function(value = ANY) {
 #' @param blob `BLOB`
 #' @return `VARCHAR`
 #' @export
+#' @family blob
+#' @family numeric
+#' @family string
 #' @section SQL examples:
 #' ```
 #' hex('Hello')
@@ -5426,6 +5368,7 @@ hour <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE 
 #' @param escape_character `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' ilike_escape('A%c', 'a$%C', '$')
@@ -5534,9 +5477,11 @@ inet_server_port <- function() {
 #' @param search_string `VARCHAR`
 #' @return `BIGINT`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' instr('test test', 'es')
+#' position('b' IN 'abc')
 #' ```
 instr <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function instr() is not available in R.")
@@ -5710,6 +5655,7 @@ isoyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' @param s2 `VARCHAR`
 #' @return `DOUBLE`
 #' @export
+#' @family text_similarity
 #' @section SQL examples:
 #' ```
 #' jaccard('duck', 'luck')
@@ -5735,6 +5681,7 @@ jaccard <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' @param score_cutoff `DOUBLE`
 #' @return `DOUBLE`
 #' @export
+#' @family text_similarity
 #' @section SQL examples:
 #' ```
 #' jaro_similarity('duck', 'duckdb')
@@ -5760,6 +5707,7 @@ jaro_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE) {
 #' @param score_cutoff `DOUBLE`
 #' @return `DOUBLE`
 #' @export
+#' @family text_similarity
 #' @section SQL examples:
 #' ```
 #' jaro_winkler_similarity('duck', 'duckdb')
@@ -5957,6 +5905,11 @@ lead <- function(col0 = T, col1 = BIGINT, col2 = T) {
 #' @param arg1 `ANY`
 #' @return `ANY`
 #' @export
+#' @family aggregate
+#' @family date
+#' @family numeric
+#' @family string
+#' @family timestamp
 #' @section SQL examples:
 #' ```
 #' least(42, 84)
@@ -6008,6 +5961,7 @@ lcm <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
 #' @param count `BIGINT`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' left('Hello🦆', 2)
@@ -6027,6 +5981,7 @@ left <- function(string = VARCHAR, count = BIGINT) {
 #' @param count `BIGINT`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' left_grapheme('🤦🏼‍♂️🤦🏽‍♀️', 1)
@@ -6057,6 +6012,9 @@ left_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #' @param list `ANY[]`
 #' @return `BIGINT`
 #' @export
+#' @family list
+#' @family numeric
+#' @family string
 #' @section SQL examples:
 #' ```
 #' length('Hello🦆')
@@ -6091,6 +6049,7 @@ character_length <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
 #' @param string `VARCHAR`
 #' @return `BIGINT`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' length_grapheme('🤦🏼‍♂️🤦🏽‍♀️')
@@ -6110,6 +6069,7 @@ length_grapheme <- function(string = VARCHAR) {
 #' @param s2 `VARCHAR`
 #' @return `BIGINT`
 #' @export
+#' @family text_similarity
 #' @section SQL examples:
 #' ```
 #' levenshtein('duck', 'db')
@@ -6155,6 +6115,7 @@ lgamma <- function(x = DOUBLE) {
 #' @param escape_character `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' like_escape('a%c', 'a$%c', '$')
@@ -6199,6 +6160,7 @@ array_agg <- function(arg = T) {
 #' @param function_name `VARCHAR`
 #' @return `ANY`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_aggregate([1, 2, NULL], 'min')
@@ -6372,6 +6334,7 @@ list_bool_or <- function(l) {
 
 #' @return `ANY[]`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_concat([2, 3], [4, 5, 6], [7])
@@ -6412,6 +6375,7 @@ list_cat <- function() {
 #' @param element `T`
 #' @return `BOOLEAN`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_contains([1, 2, NULL], 1)
@@ -6457,6 +6421,7 @@ list_has <- function(list = `T[]`, element = T) {
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_cosine_distance([1, 2, 3], [1, 2, 3])
@@ -6488,6 +6453,7 @@ list_cosine_distance <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] 
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_cosine_similarity([1, 2, 3], [1, 2, 3])
@@ -6526,6 +6492,7 @@ list_count <- function(l) {
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_distance([1, 2, 3], [1, 2, 5])
@@ -6544,6 +6511,7 @@ list_distance <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBL
 #' @param list `T[]`
 #' @return `T[]`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_distinct([1, 1, NULL, -3, 1, 5])
@@ -6589,6 +6557,7 @@ list_entropy <- function(l) {
 #' @param index `BIGINT`
 #' @return `T | VARCHAR`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_extract([4, 5, 6], 3)
@@ -6615,6 +6584,8 @@ list_element <- function(list = `T[] | VARCHAR`, index = BIGINT) {
 #' @param lambda(x) `LAMBDA`
 #' @return `ANY[]`
 #' @export
+#' @family lambda
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_filter([3, 4, 5], lambda x : x > 4)
@@ -6669,6 +6640,7 @@ list_first <- function(l) {
 #' @param col2 `VARCHAR`
 #' @return `ANY[]`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_grade_up([3, 6, 1, 2])
@@ -6702,6 +6674,7 @@ grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
 #' @param list2 `T[]`
 #' @return `BOOLEAN`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_has_all([1, 2, 3], [2, 3])
@@ -6742,6 +6715,7 @@ array_has_all <- function(list1 = `T[]`, list2 = `T[]`) {
 #' @param list2 `T[]`
 #' @return `BOOLEAN`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_has_any([1, 2, 3], [2, 3, 4])
@@ -6753,8 +6727,22 @@ list_has_any <- function(list1 = `T[]`, list2 = `T[]`) {
 #' @rdname list_has_any
 #' @usage NULL
 #' @export
+`&&` <- function(geom1 = `GEOMETRY | T[]`, geom2 = `GEOMETRY | T[]`) {
+  stop("DuckDB function &&() is not available in R.")
+}
+
+#' @rdname list_has_any
+#' @usage NULL
+#' @export
 array_has_any <- function(list1 = `T[]`, list2 = `T[]`) {
   stop("DuckDB function array_has_any() is not available in R.")
+}
+
+#' @rdname list_has_any
+#' @usage NULL
+#' @export
+st_intersects_extent <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function st_intersects_extent() is not available in R.")
 }
 
 #' DuckDB function list_histogram
@@ -6787,6 +6775,7 @@ list_histogram <- function(l) {
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_inner_product([1, 2, 3], [1, 2, 3])
@@ -6813,6 +6802,7 @@ list_dot_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DO
 #' @param list2 `T[]`
 #' @return `T[]`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_intersect([1, 2, 3], [2, 3, 4])
@@ -6956,6 +6946,7 @@ list_mode <- function(l) {
 #' @param list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_negative_inner_product([1, 2, 3], [1, 2, 3])
@@ -6982,6 +6973,7 @@ list_negative_dot_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLO
 #' @param element `T`
 #' @return `INTEGER`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_position([1, 2, NULL], 2)
@@ -7057,6 +7049,8 @@ list_product <- function(l) {
 #' @param initial_value `ANY`
 #' @return `ANY`
 #' @export
+#' @family lambda
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_reduce([1, 2, 3], lambda x, y : x + y)
@@ -7096,6 +7090,7 @@ reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY) 
 #' @param value] `ANY`
 #' @return `ANY[]`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_resize([1, 2, 3], 5, 0)
@@ -7141,6 +7136,7 @@ list_reverse <- function(l) {
 #' @param col1 `VARCHAR`
 #' @return `ANY[]`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_reverse_sort([3, 6, 1, 2])
@@ -7167,6 +7163,7 @@ array_reverse_sort <- function(list = `ANY[]`, col1 = VARCHAR) {
 #' @param index_list `BIGINT[]`
 #' @return `T[]`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_select([10, 20, 30, 40], [1, 4])
@@ -7230,10 +7227,15 @@ list_skewness <- function(l) {
 #' @param step `BIGINT`
 #' @return `ANY`
 #' @export
+#' @family list
+#' @family string
 #' @section SQL examples:
 #' ```
 #' list_slice([4, 5, 6], 2, 3)
 #' list_slice([4, 5, 6], 1, 3, 2)
+#' array_slice('DuckDB', 3, 4)
+#' array_slice('DuckDB', 3, NULL)
+#' array_slice('DuckDB', 0, -3)
 #' ```
 list_slice <- function(list = ANY, begin = ANY, end = ANY, step = BIGINT) {
   stop("DuckDB function list_slice() is not available in R.")
@@ -7264,6 +7266,7 @@ array_slice <- function(list = ANY, begin = ANY, end = ANY, step = BIGINT) {
 #' @param col2 `VARCHAR`
 #' @return `ANY[]`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_sort([3, 6, 1, 2])
@@ -7346,6 +7349,8 @@ list_sum <- function(l) {
 #' @param lambda(x) `LAMBDA`
 #' @return `ANY[]`
 #' @export
+#' @family lambda
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_transform([1, 2, 3], lambda x : x + 1)
@@ -7392,6 +7397,7 @@ list_apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' @param list `ANY[]`
 #' @return `UBIGINT`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_unique([1, 1, NULL, -3, 1, 5])
@@ -7422,6 +7428,7 @@ array_unique <- function(list = `ANY[]`) {
 #' @param any `T`
 #' @return `"NULL"[] | T[]`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_value(4, 5, 6)
@@ -7476,6 +7483,7 @@ list_var_samp <- function(l) {
 #' @param mask_list `BOOLEAN[]`
 #' @return `T[]`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_where([10, 20, 30, 40], [true, false, false, true])
@@ -7501,6 +7509,7 @@ array_where <- function(value_list = `T[]`, mask_list = `BOOLEAN[]`) {
 
 #' @return `STRUCT[]`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' list_zip([1, 2], [3, 4], [5, 6])
@@ -7606,6 +7615,7 @@ log2 <- function(x = DOUBLE) {
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' lower('Hello')
@@ -7633,6 +7643,7 @@ lcase <- function(string = VARCHAR) {
 #' @param character `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' lpad('hello', 8, '>')
@@ -7657,6 +7668,7 @@ lpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #' @param characters `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' ltrim('    test  ')
@@ -8093,6 +8105,8 @@ max <- function(arg = ANY, col1 = BIGINT) {
 #' @param blob `BLOB`
 #' @return `VARCHAR`
 #' @export
+#' @family blob
+#' @family string
 #' @section SQL examples:
 #' ```
 #' md5('abc')
@@ -8120,6 +8134,8 @@ md5 <- function(string = VARCHAR, blob = BLOB) {
 #' @param blob `BLOB`
 #' @return `UHUGEINT`
 #' @export
+#' @family blob
+#' @family string
 #' @section SQL examples:
 #' ```
 #' md5_number('abc')
@@ -8546,6 +8562,7 @@ nextval <- function(`'sequence_name'` = VARCHAR) {
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' nfc_normalize('ardèch')
@@ -8614,6 +8631,7 @@ normalized_interval <- function(interval = INTERVAL) {
 #' @param escape_character `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' not_ilike_escape('A%c', 'a$%C', '$')
@@ -8634,6 +8652,7 @@ not_ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_
 #' @param escape_character `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' not_like_escape('a%c', 'a$%c', '$')
@@ -8719,6 +8738,8 @@ obj_description <- function(object_oid, catalog_name) {
 #' @param bitstring `BIT`
 #' @return `BIGINT`
 #' @export
+#' @family bitstring
+#' @family blob
 #' @section SQL examples:
 #' ```
 #' octet_length('\xAA\xBB'::BLOB)
@@ -8772,6 +8793,9 @@ octet_length <- function(blob = BLOB, bitstring = BIT) {
 #' @param arg2 `ANY`
 #' @return `ANY`
 #' @export
+#' @family blob
+#' @family list
+#' @family string
 #' @section SQL examples:
 #' ```
 #' 'Duck' || 'DB'
@@ -8947,6 +8971,7 @@ parquet_schema <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' @param separator `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' parse_dirname('path/to/file.csv', 'system')
@@ -8971,6 +8996,7 @@ parse_dirname <- function(path = VARCHAR, separator = VARCHAR) {
 #' @param separator `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' parse_dirpath('path/to/file.csv', 'forward_slash')
@@ -9017,6 +9043,7 @@ parse_duckdb_log_message <- function(type = VARCHAR, message = VARCHAR) {
 #' @param separator `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' parse_filename('path/to/file.csv', true, 'forward_slash')
@@ -9035,6 +9062,8 @@ parse_filename <- function(string = VARCHAR, trim_extension = `VARCHAR | BOOLEAN
 #' @param string `VARCHAR`
 #' @return `UBIGINT`
 #' @export
+#' @family numeric
+#' @family string
 #' @section SQL examples:
 #' ```
 #' parse_formatted_bytes('16 KiB')
@@ -9059,6 +9088,7 @@ parse_formatted_bytes <- function(string = VARCHAR) {
 #' @param separator `VARCHAR`
 #' @return `VARCHAR[]`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' parse_path('path/to/file.csv', 'system')
@@ -9464,6 +9494,8 @@ platform <- function() {
 #' ```
 #' pow(2, 3)
 #' power(2, 3)
+#' 2 ** 3
+#' 2 ^ 3
 #' ```
 pow <- function(x = DOUBLE, y = DOUBLE) {
   stop("DuckDB function pow() is not available in R.")
@@ -9632,6 +9664,7 @@ pragma_version <- function() {
 #' @param search_string `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' prefix('abc', 'ab')
@@ -9650,6 +9683,7 @@ prefix <- function(string = VARCHAR, search_string = VARCHAR) {
 #' @param format `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' printf('Benchmark "%s" took %d seconds', 'CSV', 42)
@@ -9901,6 +9935,7 @@ random <- function() {
 #' @param step `BIGINT | INTERVAL`
 #' @return `BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' range(2, 5, 3)
@@ -10172,6 +10207,7 @@ read_text <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family regex
 #' @section SQL examples:
 #' ```
 #' regexp_escape('https://duckdb.org')
@@ -10204,6 +10240,7 @@ regexp_escape <- function(string = VARCHAR) {
 #' @param name_list `VARCHAR[]`
 #' @return `VARCHAR`
 #' @export
+#' @family regex
 #' @section SQL examples:
 #' ```
 #' regexp_extract('abcde', '[a-z]{3}')
@@ -10237,6 +10274,7 @@ regexp_extract <- function(string = VARCHAR, regex = VARCHAR, group = INTEGER, o
 #' @param options `VARCHAR`
 #' @return `VARCHAR[]`
 #' @export
+#' @family regex
 #' @section SQL examples:
 #' ```
 #' regexp_extract_all('Peter: 33, Paul:14', '(\w+):\s*(\d+)', 2)
@@ -10262,6 +10300,7 @@ regexp_extract_all <- function(string = VARCHAR, regex = VARCHAR, group = `INTEG
 #' @param col2 `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
+#' @family regex
 #' @section SQL examples:
 #' ```
 #' regexp_full_match('anabanana', '(an)*')
@@ -10287,6 +10326,7 @@ regexp_full_match <- function(string = VARCHAR, regex = VARCHAR, col2 = VARCHAR)
 #' @param options `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
+#' @family regex
 #' @section SQL examples:
 #' ```
 #' regexp_matches('anabanana', '(an)*')
@@ -10313,6 +10353,7 @@ regexp_matches <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR)
 #' @param options `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family regex
 #' @section SQL examples:
 #' ```
 #' regexp_replace('hello', '[lo]', '-')
@@ -10502,6 +10543,8 @@ regr_syy <- function(y = DOUBLE, x = DOUBLE) {
 #'
 #' Repeats the `blob` `count` number of times.
 #'
+#' Repeats the `list` `count` number of times.
+#'
 #' @name repeat
 #' @usage NULL
 #' @section Overloads:
@@ -10518,10 +10561,14 @@ regr_syy <- function(y = DOUBLE, x = DOUBLE) {
 #' @param blob `BLOB`
 #' @return `VARCHAR | BLOB | T[]`
 #' @export
+#' @family blob
+#' @family list
+#' @family string
 #' @section SQL examples:
 #' ```
 #' repeat('A', 5)
 #' repeat('\xAA\xBB'::BLOB, 5)
+#' repeat([1, 2, 3], 5)
 #' ```
 `repeat` <- function(col0 = `ANY | T[]`, col1 = BIGINT, string = VARCHAR, count = BIGINT, blob = BLOB) {
   stop("DuckDB function repeat() is not available in R.")
@@ -10553,6 +10600,7 @@ repeat_row <- function(num_rows = BIGINT) {
 #' @param target `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' replace('hello', 'l', '-')
@@ -10646,6 +10694,7 @@ reservoir_quantile <- function(x = `DECIMAL | TINYINT | SMALLINT | INTEGER | BIG
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' reverse('hello')
@@ -10665,6 +10714,7 @@ reverse <- function(string = VARCHAR) {
 #' @param count `BIGINT`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' right('Hello🦆', 3)
@@ -10684,6 +10734,7 @@ right <- function(string = VARCHAR, count = BIGINT) {
 #' @param count `BIGINT`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' right_grapheme('🤦🏼‍♂️🤦🏽‍♀️', 1)
@@ -10804,6 +10855,7 @@ row_number <- function() {
 #' @param character `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' rpad('hello', 10, '<')
@@ -10828,6 +10880,7 @@ rpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #' @param characters `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' rtrim('    test  ')
@@ -10963,6 +11016,8 @@ setseed <- function(col0 = DOUBLE) {
 #' @param blob `BLOB`
 #' @return `VARCHAR`
 #' @export
+#' @family blob
+#' @family string
 #' @section SQL examples:
 #' ```
 #' sha1('🦆')
@@ -10990,6 +11045,8 @@ sha1 <- function(value = VARCHAR, blob = BLOB) {
 #' @param blob `BLOB`
 #' @return `VARCHAR`
 #' @export
+#' @family blob
+#' @family string
 #' @section SQL examples:
 #' ```
 #' sha256('🦆')
@@ -11242,6 +11299,7 @@ sqrt <- function(x = DOUBLE) {
 #' @param geom `GEOMETRY`
 #' @return `VARCHAR`
 #' @export
+#' @family geometry
 #' @section SQL examples:
 #' ```
 #' ST_AsText(ST_GeomFromWKB(X'01010000000000000000000000000000000000000000000000'))
@@ -11267,6 +11325,7 @@ st_aswkt <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `BLOB`
 #' @export
+#' @family geometry
 #' @section SQL examples:
 #' ```
 #' st_aswkb(ST_GeomFromWKB(X'01010000000000000000000000000000000000000000000000000'))
@@ -11292,6 +11351,7 @@ st_asbinary <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `VARCHAR`
 #' @export
+#' @family geometry
 st_crs <- function(geom = GEOMETRY) {
   stop("DuckDB function st_crs() is not available in R.")
 }
@@ -11306,31 +11366,13 @@ st_crs <- function(geom = GEOMETRY) {
 #' @param wkb `BLOB`
 #' @return `GEOMETRY`
 #' @export
+#' @family geometry
 #' @section SQL examples:
 #' ```
 #' ST_GeomFromWKB(X'01010000000000000000000000000000000000000000000000')
 #' ```
 st_geomfromwkb <- function(wkb = BLOB) {
   stop("DuckDB function st_geomfromwkb() is not available in R.")
-}
-
-#' DuckDB function st_intersects_extent
-#'
-#' @description
-#' Returns true if the geometries bounding boxes intersect.
-#'
-#' @name st_intersects_extent
-#' @usage st_intersects_extent(geom1 = GEOMETRY, geom2 = GEOMETRY)
-#' @param geom1 `GEOMETRY`
-#' @param geom2 `GEOMETRY`
-#' @return `BOOLEAN`
-#' @export
-#' @section SQL examples:
-#' ```
-#' 'POINT(5 5)'::GEOMETRY && 'LINESTRING(0 0, 10 20)'::GEOMETRY;
-#' ```
-st_intersects_extent <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
-  stop("DuckDB function st_intersects_extent() is not available in R.")
 }
 
 #' DuckDB function st_setcrs
@@ -11359,6 +11401,7 @@ st_setcrs <- function(geom = GEOMETRY, crs = VARCHAR) {
 #' @param search_string `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' starts_with('abc', 'a')
@@ -11528,6 +11571,7 @@ listagg <- function(str = ANY, arg = VARCHAR) {
 #' @param separator `VARCHAR`
 #' @return `VARCHAR[]`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' string_split('hello-world', '-')
@@ -11574,6 +11618,7 @@ string_to_array <- function(string = VARCHAR, separator = VARCHAR) {
 #' @param options `VARCHAR`
 #' @return `VARCHAR[]`
 #' @export
+#' @family regex
 #' @section SQL examples:
 #' ```
 #' string_split_regex('hello world; 42', ';? ')
@@ -11606,6 +11651,7 @@ str_split_regex <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' strip_accents('mühleisen')
@@ -11624,6 +11670,7 @@ strip_accents <- function(string = VARCHAR) {
 #' @param string `VARCHAR`
 #' @return `BIGINT`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' strlen('🦆')
@@ -11861,6 +11908,7 @@ struct_values <- function(struct = STRUCT) {
 #' @param length `BIGINT`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' substring('Hello', 2)
@@ -11894,6 +11942,7 @@ substr <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
 #' @param length `BIGINT`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3)
@@ -11969,6 +12018,7 @@ subtract <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | F
 #' @param search_string `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' suffix('abc', 'bc')
@@ -12306,6 +12356,8 @@ timezone_minute <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH T
 #' @param min_length `INTEGER`
 #' @return `VARCHAR`
 #' @export
+#' @family numeric
+#' @family string
 #' @section SQL examples:
 #' ```
 #' to_base(42, 16, 5)
@@ -12324,6 +12376,8 @@ to_base <- function(number = BIGINT, radix = INTEGER, min_length = INTEGER) {
 #' @param blob `BLOB`
 #' @return `VARCHAR`
 #' @export
+#' @family blob
+#' @family string
 #' @section SQL examples:
 #' ```
 #' to_base64('A'::BLOB)
@@ -12643,6 +12697,7 @@ to_years <- function(integer = `INTEGER | BIGINT`) {
 #' @param to `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' translate('12345', '143', 'ax')
@@ -12667,6 +12722,7 @@ translate <- function(string = VARCHAR, from = VARCHAR, to = VARCHAR) {
 #' @param characters `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' trim('    test  ')
@@ -12808,6 +12864,8 @@ typeof <- function(expression = ANY) {
 #' @param value `VARCHAR`
 #' @return `BLOB`
 #' @export
+#' @family blob
+#' @family string
 #' @section SQL examples:
 #' ```
 #' unbin('0110')
@@ -12833,6 +12891,8 @@ from_binary <- function(value = VARCHAR) {
 #' @param value `VARCHAR`
 #' @return `BLOB`
 #' @export
+#' @family blob
+#' @family string
 #' @section SQL examples:
 #' ```
 #' unhex('2A')
@@ -12858,6 +12918,7 @@ from_hex <- function(value = VARCHAR) {
 #' @param string `VARCHAR`
 #' @return `INTEGER`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' [unicode('âbcd'), unicode('â'), unicode(''), unicode(NULL)]
@@ -12952,6 +13013,7 @@ unnest <- function(col0 = ANY) {
 
 #' @return `LIST`
 #' @export
+#' @family list
 #' @section SQL examples:
 #' ```
 #' unpivot_list(4, 5, 6)
@@ -12970,6 +13032,7 @@ unpivot_list <- function() {
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' upper('Hello')
@@ -12995,6 +13058,7 @@ ucase <- function(string = VARCHAR) {
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' url_decode('https%3A%2F%2Fduckdb.org%2Fwhy_duckdb%23portable')
@@ -13013,6 +13077,7 @@ url_decode <- function(string = VARCHAR) {
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @family string
 #' @section SQL examples:
 #' ```
 #' url_encode('this string has/ special+ characters>')
@@ -13202,7 +13267,9 @@ variant_bytes_to_variant <- function(col0 = BLOB) {
 #' DuckDB function variant_extract
 #'
 #' @description
-#' DuckDB function `variant_extract()`.
+#' Returns the `field` from the `input_variant` if it's an OBJECT.
+#'
+#' Returns the entry at `index` from the `input_variant` if it's an ARRAY.
 #'
 #' @name variant_extract
 #' @usage NULL
@@ -13215,6 +13282,12 @@ variant_bytes_to_variant <- function(col0 = BLOB) {
 #' @param col1 `VARCHAR | UINTEGER`
 #' @return `VARIANT`
 #' @export
+#' @family variant
+#' @section SQL examples:
+#' ```
+#' variant_extract({'a': 42, 'b': [1,2,3])::VARIANT, 'b')
+#' variant_extract([1,2,3])::VARIANT, 0)
+#' ```
 variant_extract <- function(col0 = VARIANT, col1 = `VARCHAR | UINTEGER`) {
   stop("DuckDB function variant_extract() is not available in R.")
 }
@@ -13229,6 +13302,7 @@ variant_extract <- function(col0 = VARIANT, col1 = `VARCHAR | UINTEGER`) {
 #' @param input_variant `VARIANT`
 #' @return `VARIANT`
 #' @export
+#' @family variant
 #' @section SQL examples:
 #' ```
 #' variant_normalize({'b': [1,2,3], 'a': 42})::VARIANT)
@@ -13261,6 +13335,7 @@ variant_to_parquet_variant <- function(col0 = VARIANT) {
 #' @param input_variant `VARIANT`
 #' @return `VARCHAR`
 #' @export
+#' @family variant
 #' @section SQL examples:
 #' ```
 #' variant_typeof({'a': 42, 'b': [1,2,3]})::VARIANT)

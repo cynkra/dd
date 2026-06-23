@@ -22,3 +22,20 @@ Converts the \code{string} to \code{BLOB}. Converts UTF-8 characters into litera
 }\if{html}{\out{</div>}}
 }
 
+\seealso{
+Other blob:
+\code{\link[=decode]{decode()}},
+\code{\link[=from_base64]{from_base64()}},
+\code{\link[=hex]{hex()}},
+\code{\link[=md5]{md5()}},
+\code{\link[=md5_number]{md5_number()}},
+\code{\link[=octet_length]{octet_length()}},
+\code{\link{or--or}},
+\code{\link[=repeat]{repeat()}},
+\code{\link[=sha1]{sha1()}},
+\code{\link[=sha256]{sha256()}},
+\code{\link[=to_base64]{to_base64()}},
+\code{\link[=unbin]{unbin()}},
+\code{\link[=unhex]{unhex()}}
+}
+\concept{blob}

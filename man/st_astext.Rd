@@ -23,3 +23,10 @@ Returns the Well-Known Text (WKT) representation of the geometry.
 }\if{html}{\out{</div>}}
 }
 
+\seealso{
+Other geometry:
+\code{\link[=st_aswkb]{st_aswkb()}},
+\code{\link[=st_crs]{st_crs()}},
+\code{\link[=st_geomfromwkb]{st_geomfromwkb()}}
+}
+\concept{geometry}

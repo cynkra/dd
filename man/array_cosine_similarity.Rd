@@ -29,3 +29,13 @@ Computes the cosine similarity between two arrays of the same size. The array el
 }\if{html}{\out{</div>}}
 }
 
+\seealso{
+Other array:
+\code{\link[=array_cosine_distance]{array_cosine_distance()}},
+\code{\link[=array_cross_product]{array_cross_product()}},
+\code{\link[=array_distance]{array_distance()}},
+\code{\link[=array_inner_product]{array_inner_product()}},
+\code{\link[=array_negative_inner_product]{array_negative_inner_product()}},
+\code{\link[=array_value]{array_value()}}
+}
+\concept{array}

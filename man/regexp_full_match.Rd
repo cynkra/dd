@@ -31,3 +31,13 @@ Returns \code{true} if the entire \code{string} matches the \code{regex}. A set 
 }\if{html}{\out{</div>}}
 }
 
+\seealso{
+Other regex:
+\code{\link[=regexp_escape]{regexp_escape()}},
+\code{\link[=regexp_extract]{regexp_extract()}},
+\code{\link[=regexp_extract_all]{regexp_extract_all()}},
+\code{\link[=regexp_matches]{regexp_matches()}},
+\code{\link[=regexp_replace]{regexp_replace()}},
+\code{\link[=string_split_regex]{string_split_regex()}}
+}
+\concept{regex}

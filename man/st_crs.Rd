@@ -15,3 +15,10 @@ st_crs(geom = GEOMETRY)
 \description{
 Returns the Coordinate Reference System (CRS) identifier of the geometry.
 }
+\seealso{
+Other geometry:
+\code{\link[=st_astext]{st_astext()}},
+\code{\link[=st_aswkb]{st_aswkb()}},
+\code{\link[=st_geomfromwkb]{st_geomfromwkb()}}
+}
+\concept{geometry}

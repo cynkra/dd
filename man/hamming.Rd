@@ -25,3 +25,12 @@ The Hamming distance between to strings, i.e., the number of positions with diff
 }\if{html}{\out{</div>}}
 }
 
+\seealso{
+Other text_similarity:
+\code{\link[=damerau_levenshtein]{damerau_levenshtein()}},
+\code{\link[=jaccard]{jaccard()}},
+\code{\link[=jaro_similarity]{jaro_similarity()}},
+\code{\link[=jaro_winkler_similarity]{jaro_winkler_similarity()}},
+\code{\link[=levenshtein]{levenshtein()}}
+}
+\concept{text_similarity}

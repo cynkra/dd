@@ -22,3 +22,10 @@ Creates a geometry from Well-Known Binary (WKB) representation.
 }\if{html}{\out{</div>}}
 }
 
+\seealso{
+Other geometry:
+\code{\link[=st_astext]{st_astext()}},
+\code{\link[=st_aswkb]{st_aswkb()}},
+\code{\link[=st_crs]{st_crs()}}
+}
+\concept{geometry}

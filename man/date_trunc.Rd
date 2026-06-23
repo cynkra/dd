@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{date_trunc}
 \alias{date_trunc}
+\alias{datetrunc}
 \title{DuckDB function date_trunc}
 \arguments{
 \item{part}{\code{VARCHAR}}

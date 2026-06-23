@@ -44,3 +44,13 @@ regexp_extract('John Doe', '([a-z]+) ([a-z]+)', ['first_name', 'last_name'], 'i'
 }\if{html}{\out{</div>}}
 }
 
+\seealso{
+Other regex:
+\code{\link[=regexp_escape]{regexp_escape()}},
+\code{\link[=regexp_extract_all]{regexp_extract_all()}},
+\code{\link[=regexp_full_match]{regexp_full_match()}},
+\code{\link[=regexp_matches]{regexp_matches()}},
+\code{\link[=regexp_replace]{regexp_replace()}},
+\code{\link[=string_split_regex]{string_split_regex()}}
+}
+\concept{regex}

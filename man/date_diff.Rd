@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{date_diff}
 \alias{date_diff}
+\alias{datediff}
 \title{DuckDB function date_diff}
 \arguments{
 \item{part}{\code{VARCHAR}}

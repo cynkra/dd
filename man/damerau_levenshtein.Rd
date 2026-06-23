@@ -24,3 +24,12 @@ Extension of Levenshtein distance to also include transposition of adjacent char
 }\if{html}{\out{</div>}}
 }
 
+\seealso{
+Other text_similarity:
+\code{\link[=hamming]{hamming()}},
+\code{\link[=jaccard]{jaccard()}},
+\code{\link[=jaro_similarity]{jaro_similarity()}},
+\code{\link[=jaro_winkler_similarity]{jaro_winkler_similarity()}},
+\code{\link[=levenshtein]{levenshtein()}}
+}
+\concept{text_similarity}

@@ -25,3 +25,12 @@ The minimum number of single-character edits (insertions, deletions or substitut
 }\if{html}{\out{</div>}}
 }
 
+\seealso{
+Other text_similarity:
+\code{\link[=damerau_levenshtein]{damerau_levenshtein()}},
+\code{\link[=hamming]{hamming()}},
+\code{\link[=jaccard]{jaccard()}},
+\code{\link[=jaro_similarity]{jaro_similarity()}},
+\code{\link[=jaro_winkler_similarity]{jaro_winkler_similarity()}}
+}
+\concept{text_similarity}

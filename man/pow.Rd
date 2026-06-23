@@ -25,6 +25,8 @@ Computes x to the power of y.
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{pow(2, 3)
 power(2, 3)
+2 ** 3
+2 ^ 3
 }\if{html}{\out{</div>}}
 }
 

@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{date_part}
 \alias{date_part}
+\alias{datepart}
 \title{DuckDB function date_part}
 \arguments{
 \item{ts}{\code{VARCHAR[] | VARCHAR}}

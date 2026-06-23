@@ -33,3 +33,13 @@ If \code{string} contains the \code{regex}, replaces the matching part with \cod
 }\if{html}{\out{</div>}}
 }
 
+\seealso{
+Other regex:
+\code{\link[=regexp_escape]{regexp_escape()}},
+\code{\link[=regexp_extract]{regexp_extract()}},
+\code{\link[=regexp_extract_all]{regexp_extract_all()}},
+\code{\link[=regexp_full_match]{regexp_full_match()}},
+\code{\link[=regexp_matches]{regexp_matches()}},
+\code{\link[=string_split_regex]{string_split_regex()}}
+}
+\concept{regex}

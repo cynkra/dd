@@ -31,3 +31,12 @@ The Jaro similarity between two strings. Characters of different cases (e.g., \c
 }\if{html}{\out{</div>}}
 }
 
+\seealso{
+Other text_similarity:
+\code{\link[=damerau_levenshtein]{damerau_levenshtein()}},
+\code{\link[=hamming]{hamming()}},
+\code{\link[=jaccard]{jaccard()}},
+\code{\link[=jaro_winkler_similarity]{jaro_winkler_similarity()}},
+\code{\link[=levenshtein]{levenshtein()}}
+}
+\concept{text_similarity}

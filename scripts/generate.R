@@ -4,6 +4,23 @@ library(tidyr)
 library(purrr)
 library(glue)
 
+# How much of the metadata from DuckDB's source `functions.json` files to merge
+# into the generated documentation. The `duckdb_functions()` catalog already
+# exposes descriptions, examples, parameters and categories for many functions,
+# but leaves some empty (notably function *sets* defined via `variants`, such as
+# `array_extract`, and the arithmetic/bitwise operators). The JSON files in the
+# DuckDB sources fill those gaps and additionally provide category groupings and
+# alias lists. Flip this switch to control the behaviour:
+#   "full" : fill gaps in description/examples/categories from the JSON *and*
+#            tag each function with its categories via roxygen2 `@family`
+#            (which generates `\concept{}` entries and "See also" links).
+#   "gaps" : only fill description/examples/categories where the catalog is
+#            empty; do not emit the `@family` tags.
+#   "off"  : ignore the JSON files entirely (previous behaviour).
+# The JSON alias lists feed the alias grouping below regardless of this switch,
+# so roxygen2 records aliases as `\alias{}` entries on the canonical page.
+json_merge_mode <- "full"
+
 con <- DBI::dbConnect(duckdb::duckdb())
 
 filter_print <- function(.data, expr) {
@@ -65,7 +82,11 @@ usage_and_params <- function(
   parameter_types,
   description,
   macro_definition,
-  examples
+  examples,
+  json_description = NULL,
+  json_examples = NULL,
+  json_categories = NULL,
+  merge_mode = "off"
 ) {
   signatures <- map2_chr(
     parameters,
@@ -133,7 +154,14 @@ usage_and_params <- function(
     glue_collapse(sep = ", ")
 
   is_macro <- length(macro_definition) == 1 && !is.na(macro_definition)
-  description <- na.omit(description)
+  # Fill gaps: add any descriptions/examples present in the JSON but not in the
+  # catalog. The catalog is generated from these same JSON files, so this is
+  # usually a no-op; it recovers per-overload descriptions the catalog drops
+  # (e.g. the list variant of `array_extract`, `contains`, `repeat`).
+  description <- unique(na.omit(description))
+  if (merge_mode != "off") {
+    description <- unique(c(description, na.omit(json_description)))
+  }
   if (length(description) == 0) {
     description <- paste0(
       "#' DuckDB ",
@@ -143,14 +171,17 @@ usage_and_params <- function(
       "()`."
     )
   } else {
-    description <- unique(description)
     description <- gsub("[.]*$", ".", description)
     description <- paste0("#' ", description, collapse = "\n#'\n")
   }
 
   examples <- na.omit(unique(unlist(examples)))
   examples <- examples[examples != ""]
-  if (length(examples >= 0)) {
+  if (merge_mode != "off") {
+    json_ex <- na.omit(unique(unlist(json_examples)))
+    examples <- unique(c(examples, json_ex[json_ex != ""]))
+  }
+  if (length(examples) > 0) {
     examples <- paste0(
       "#' @section SQL examples:\n",
       "#' ```\n",
@@ -161,6 +192,19 @@ usage_and_params <- function(
     examples <- ""
   }
 
+  # In "full" mode, expose the JSON category groupings as roxygen2 `@family`
+  # tags. roxygen2 turns each family into a `\concept{}` entry *and* an
+  # auto-generated "See also" list linking the other functions in the category,
+  # which a home-grown section cannot do.
+  family_doc <- ""
+  if (merge_mode == "full") {
+    cats <- sort(unique(unlist(json_categories)))
+    cats <- cats[!is.na(cats) & cats != ""]
+    if (length(cats) > 0) {
+      family_doc <- paste0("#' @family ", cats, "\n", collapse = "")
+    }
+  }
+
   tibble(
     usage_doc,
     param_doc,
@@ -168,6 +212,7 @@ usage_and_params <- function(
     types = list(params$type),
     description,
     examples,
+    family_doc,
   )
 }
 
@@ -205,6 +250,196 @@ pick_rep <- function(names, canonical) {
   names[order(nchar(names), names)][[1]]
 }
 
+# Download the DuckDB sources for the *exact* engine version that is running and
+# extract every `functions.json` file from them. Pinning to `library_version`
+# (the DuckDB git tag, e.g. "v1.5.4") guarantees the JSON matches the catalog we
+# query above. The location of these files moves between releases (e.g.
+# `src/core_functions/` became `extension/core_functions/`), so we discover them
+# dynamically rather than hard-coding paths.
+duckdb_json_files <- function(ref) {
+  cache <- file.path(
+    tempdir(),
+    paste0("duckdb-json-", gsub("[^A-Za-z0-9._-]", "_", ref))
+  )
+  marker <- file.path(cache, ".extracted")
+  if (!file.exists(marker)) {
+    dir.create(cache, recursive = TRUE, showWarnings = FALSE)
+    url <- paste0("https://codeload.github.com/duckdb/duckdb/tar.gz/", ref)
+    tarball <- tempfile(fileext = ".tar.gz")
+    cli::cli_inform(
+      "Downloading DuckDB {.val {ref}} sources to extract {.file functions.json}."
+    )
+    utils::download.file(url, tarball, mode = "wb", quiet = TRUE)
+    json_paths <- grep(
+      "/functions\\.json$",
+      utils::untar(tarball, list = TRUE),
+      value = TRUE
+    )
+    utils::untar(tarball, files = json_paths, exdir = cache)
+    unlink(tarball)
+    file.create(marker)
+  }
+  list.files(
+    cache,
+    pattern = "functions\\.json$",
+    recursive = TRUE,
+    full.names = TRUE
+  )
+}
+
+# Flatten one JSON entry into one row per overload/variant. `parameters` may be a
+# comma-separated string or, inside `variants`, an array of `{name, type}`.
+parse_json_entry <- function(entry) {
+  blank_to_na <- function(x) {
+    if (is.null(x) || length(x) == 0 || identical(x, "")) NA_character_ else x
+  }
+  aliases <- if (length(entry$aliases) > 0) {
+    unlist(entry$aliases)
+  } else {
+    character(0)
+  }
+  one_variant <- function(v) {
+    params <- v$parameters
+    param_names <- if (is.character(params)) {
+      blank_to_na(params)
+    } else if (length(params) > 0) {
+      paste(map_chr(params, ~ .x$name %||% ""), collapse = ",")
+    } else {
+      NA_character_
+    }
+    examples <- if (length(v$examples) > 0) {
+      unlist(v$examples)
+    } else if (length(v$example) > 0) {
+      v$example
+    } else {
+      character(0)
+    }
+    examples <- examples[!is.na(examples) & examples != ""]
+    tibble(
+      function_name = entry$name,
+      parameters = param_names,
+      description = blank_to_na(v$description),
+      examples = list(examples),
+      categories = list(
+        if (length(v$categories) > 0) unlist(v$categories) else character(0)
+      ),
+      aliases = list(aliases)
+    )
+  }
+  if (length(entry$variants) > 0) {
+    map_dfr(entry$variants, one_variant)
+  } else {
+    one_variant(entry)
+  }
+}
+
+# Summarise the JSON metadata for the running engine. Returns:
+#   `meta`  - one row per function name (and per alias, so catalog entries that
+#             are themselves aliases pick up their canonical's metadata).
+#   `edges` - alias -> canonical relationships declared in the JSON, used below
+#             to extend the catalog's alias grouping.
+build_json_meta <- function(ref) {
+  json_long <-
+    duckdb_json_files(ref) |>
+    map(~ jsonlite::fromJSON(.x, simplifyVector = FALSE)) |>
+    map_dfr(~ map_dfr(.x, parse_json_entry))
+
+  meta <-
+    json_long |>
+    summarize(
+      .by = function_name,
+      json_description = list(unique(na.omit(description))),
+      json_examples = list(unique(unlist(examples))),
+      json_categories = list(sort(unique(unlist(categories)))),
+      json_aliases = list(sort(unique(unlist(aliases)))),
+    )
+
+  edges <-
+    meta |>
+    select(to = function_name, json_aliases) |>
+    tidyr::unnest_longer(json_aliases) |>
+    filter(!is.na(json_aliases), json_aliases != "") |>
+    transmute(from = json_aliases, to) |>
+    distinct()
+
+  alias_meta <-
+    edges |>
+    rename(function_name = from, canonical = to) |>
+    distinct(function_name, .keep_all = TRUE) |>
+    left_join(meta, by = c("canonical" = "function_name")) |>
+    select(-canonical)
+
+  meta <-
+    bind_rows(meta, alias_meta) |>
+    distinct(function_name, .keep_all = TRUE)
+
+  list(meta = meta, edges = edges)
+}
+
+if (json_merge_mode == "off") {
+  json_meta <- tibble(
+    function_name = character(),
+    json_description = list(),
+    json_examples = list(),
+    json_categories = list(),
+    json_aliases = list(),
+  )
+  json_alias_edges <- tibble(from = character(), to = character())
+} else {
+  json_bits <- build_json_meta(
+    DBI::dbGetQuery(con, "PRAGMA version")$library_version
+  )
+  json_meta <- json_bits$meta
+  json_alias_edges <- json_bits$edges
+}
+
+# Group function names into alias equivalence classes by union-find over the
+# (alias -> canonical) edges. The catalog's `alias_of` column and the DuckDB
+# source JSON each contribute edges; the JSON catches relationships the catalog
+# omits (e.g. `datetrunc` -> `date_trunc`).
+alias_components <- function(nodes, from, to) {
+  parent <- new.env(parent = emptyenv())
+  for (n in nodes) {
+    assign(n, n, envir = parent)
+  }
+  find <- function(x) {
+    root <- x
+    while (!identical(get(root, envir = parent), root)) {
+      root <- get(root, envir = parent)
+    }
+    while (!identical(x, root)) {
+      nxt <- get(x, envir = parent)
+      assign(x, root, envir = parent)
+      x <- nxt
+    }
+    root
+  }
+  for (i in seq_along(from)) {
+    ra <- find(from[[i]])
+    rb <- find(to[[i]])
+    if (!identical(ra, rb)) {
+      assign(ra, rb, envir = parent)
+    }
+  }
+  vapply(nodes, find, character(1))
+}
+
+# Canonical member of an alias group: the unique "sink" that is never an alias
+# of another member. Falls back to the shortest alphanumeric name when the
+# edges leave it ambiguous (no sink, e.g. a cycle, or several).
+pick_canonical <- function(names, froms) {
+  sinks <- names[!(names %in% froms)]
+  if (length(sinks) == 1) {
+    return(sinks)
+  }
+  candidates <- if (length(sinks) > 0) sinks else names
+  alnum <- candidates[is_alnum(candidates)]
+  if (length(alnum) > 0) {
+    return(alnum[order(nchar(alnum), alnum)][[1]])
+  }
+  candidates[order(nchar(candidates), candidates)][[1]]
+}
+
 funs <-
   DBI::dbGetQuery(con, "FROM duckdb_functions()") |>
   as_tibble() |>
@@ -220,6 +455,7 @@ funs <-
   # FIXME: Why is this called `has_side_effects`? Called "deterministic" elsewhere.
   filter_print(internal) |>
   select(-internal) |>
+  left_join(json_meta, by = "function_name") |>
   summarize(
     .by = function_name,
     alias_of = unique(alias_of),
@@ -230,9 +466,16 @@ funs <-
       parameter_types,
       description,
       macro_definition,
-      examples
+      examples,
+      json_description = first(json_description),
+      json_examples = first(json_examples),
+      json_categories = first(json_categories),
+      merge_mode = json_merge_mode
     ),
-    categories = list(unique(unlist(categories))),
+    categories = list(sort(unique(c(
+      unlist(categories),
+      unlist(first(json_categories))
+    )))),
   ) |>
   # https://github.com/duckdb/duckdb/pull/18977
   mutate(
@@ -257,12 +500,38 @@ funs <-
     !(function_name %in% c("-")) &
       !stringr::str_detect(function_name, "^__internal")
   ) |>
-  arrange(function_name) |>
-  # Resolve alias groups from the catalog's `alias_of` column and route every
-  # member to one canonical page, so e.g. `list_aggr` and `list_aggregate` no
-  # longer produce two separate .Rd files.
-  mutate(canonical = coalesce(alias_of, function_name)) |>
-  mutate(.by = canonical, rep_name = pick_rep(function_name, canonical[[1]])) |>
+  arrange(function_name)
+
+# Resolve alias groups from the catalog's `alias_of` column *and* the DuckDB
+# source JSON, then route every member to one canonical page, so e.g.
+# `list_aggr`/`list_aggregate` and `datetrunc`/`date_trunc` no longer produce
+# separate .Rd files.
+alias_edges <-
+  bind_rows(
+    funs |>
+      filter(!is.na(alias_of)) |>
+      transmute(from = function_name, to = alias_of),
+    json_alias_edges
+  ) |>
+  # The alias being documented must be a function we still emit, but its
+  # canonical may have been filtered out above (e.g. `length`). Keep those
+  # edges so its surviving aliases (`len`, `char_length`, ...) still share one
+  # page instead of splitting into singletons.
+  filter(from %in% funs$function_name, from != to) |>
+  distinct()
+
+nodes <- unique(c(funs$function_name, alias_edges$to))
+group_of <- alias_components(nodes, alias_edges$from, alias_edges$to)
+edge_froms <- unique(alias_edges$from)
+
+funs <-
+  funs |>
+  mutate(group_id = group_of[function_name]) |>
+  mutate(
+    .by = group_id,
+    canonical = pick_canonical(function_name, edge_froms)
+  ) |>
+  mutate(.by = group_id, rep_name = pick_rep(function_name, canonical[[1]])) |>
   mutate(
     rd_name = rdize_function_name(rep_name),
     is_primary = function_name == rep_name
@@ -288,7 +557,7 @@ code <-
     {param_doc}
     #' @return {if_else(return_type == "", "Unspecified.", paste0("`", return_type, "`"))}
     #' @export
-    {examples}{tibble:::tick_if_needed(function_name)} <- function({signature}) {{
+    {family_doc}{examples}{tibble:::tick_if_needed(function_name)} <- function({signature}) {{
       stop("DuckDB function {function_name}() is not available in R.")
     }}
 
