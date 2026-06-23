@@ -329,6 +329,8 @@ code <- c(
 
 writeLines(code, "R/duckdb-funs.R")
 
+dd_names <- sort(funs$function_name[parsed], method = "radix")
+
 dd_code <- glue(
   r"(
   #' DuckDB functions
@@ -339,7 +341,7 @@ dd_code <- glue(
   #' @examples
   #' dd[1:3]
   dd <- base::list(
-  {paste0("  ", tibble:::tick_if_needed(sort(funs$function_name[parsed], method = "radix")), " = ", tibble:::tick_if_needed(sort(funs$function_name[parsed], method = "radix")), collapse = ",\n")}
+  {paste0("  ", tibble:::tick_if_needed(dd_names), " = ", tibble:::tick_if_needed(dd_names), collapse = ",\n")}
   )
   )"
 )
