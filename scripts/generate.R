@@ -76,6 +76,84 @@ usage_signature <- function(function_name, parameters, parameter_types) {
   )
 }
 
+is_generic_name <- function(x) grepl("^col[0-9]+$", x)
+
+# Are two parameter-type lists compatible position-by-position? Used to line up
+# a catalog overload with a JSON overload. DuckDB spells type variables
+# differently on each side (catalog `T[]`/`BIGINT` vs JSON `ANY[]`/`ANY`), so we
+# compare list-ness exactly and treat `ANY`, empty, and single-letter type
+# variables (`T`, `K`, ...) as wildcards. An unknown (NA) JSON type matches
+# anything (flat JSON entries carry names but no types).
+type_compatible <- function(catalog_types, json_types) {
+  if (length(catalog_types) != length(json_types)) {
+    return(FALSE)
+  }
+  is_list <- function(t) grepl("\\[\\]$", t)
+  base <- function(t) sub("\\(.*", "", toupper(trimws(gsub("\\[\\]$", "", t))))
+  is_wild <- function(b) b == "ANY" | b == "" | grepl("^[A-Z]$", b)
+  for (i in seq_along(catalog_types)) {
+    jt <- json_types[[i]]
+    if (is.na(jt)) {
+      next
+    }
+    ct <- catalog_types[[i]]
+    if (is_list(ct) != is_list(jt)) {
+      return(FALSE)
+    }
+    bc <- base(ct)
+    bj <- base(jt)
+    if (!(bc == bj || is_wild(bc) || is_wild(bj))) {
+      return(FALSE)
+    }
+  }
+  TRUE
+}
+
+# Replace the generic argument names (`col0`, `col1`, ...) that DuckDB's
+# `duckdb_functions()` catalog reports for some overloads with the real names
+# recorded in the source JSON. Each generic overload is matched to a JSON
+# overload by arity and type compatibility; a name is only substituted on an
+# unambiguous (single-candidate) match. JSON overloads already represented by a
+# properly named catalog overload are not borrowed again.
+#
+# NOTE (upstream): for ~85 functions the JSON carries no argument names either
+# (no `variants`, or the C++ registration named nothing), so `col0`/`col1`
+# survive here. The real fix belongs upstream in duckdb/duckdb: name those
+# parameters in the function definitions / functions.json so `duckdb_functions()`
+# exposes them. Until then there is nothing to extract.
+recover_param_names <- function(parameters, parameter_types, json_overloads) {
+  if (length(json_overloads) == 0) {
+    return(parameters)
+  }
+  json_keys <- map_chr(json_overloads, ~ paste(.x$names, collapse = ","))
+  named_keys <- parameters |>
+    keep(~ !any(is_generic_name(.x))) |>
+    map_chr(~ paste(.x, collapse = ","))
+  taken <- json_keys %in% named_keys
+  for (i in seq_along(parameters)) {
+    nm <- parameters[[i]]
+    if (!any(is_generic_name(nm))) {
+      next
+    }
+    cand <- which(
+      !taken &
+        map_lgl(json_overloads, ~ length(.x$names) == length(nm)) &
+        map_lgl(
+          json_overloads,
+          ~ type_compatible(parameter_types[[i]], .x$types)
+        )
+    )
+    if (length(cand) == 1) {
+      replacement <- json_overloads[[cand]]$names
+      generic <- is_generic_name(nm)
+      nm[generic] <- replacement[generic]
+      parameters[[i]] <- make.unique(nm, sep = "")
+      taken[cand] <- TRUE
+    }
+  }
+  parameters
+}
+
 usage_and_params <- function(
   function_name,
   parameters,
@@ -87,8 +165,16 @@ usage_and_params <- function(
   json_examples = NULL,
   json_categories = NULL,
   json_variant_desc = NULL,
+  json_overloads = NULL,
   merge_mode = "off"
 ) {
+  if (merge_mode != "off") {
+    parameters <- recover_param_names(
+      parameters,
+      parameter_types,
+      json_overloads %||% list()
+    )
+  }
   param_keys <- map_chr(parameters, ~ paste(.x, collapse = ","))
   signatures <- map2_chr(
     parameters,
@@ -355,10 +441,23 @@ parse_json_entry <- function(entry) {
   }
   one_variant <- function(v) {
     params <- v$parameters
-    param_names <- if (is.character(params)) {
-      blank_to_na(params)
+    if (is.character(params)) {
+      # Flat entry: a comma-separated name string, no types.
+      names <- if (identical(params, "") || length(params) == 0) {
+        character(0)
+      } else {
+        trimws(strsplit(params, ",")[[1]])
+      }
+      types <- rep(NA_character_, length(names))
     } else if (length(params) > 0) {
-      paste(map_chr(params, ~ .x$name %||% ""), collapse = ",")
+      names <- map_chr(params, ~ .x$name %||% "")
+      types <- map_chr(params, ~ .x$type %||% NA_character_)
+    } else {
+      names <- character(0)
+      types <- character(0)
+    }
+    param_names <- if (length(names) > 0) {
+      paste(names, collapse = ",")
     } else {
       NA_character_
     }
@@ -373,6 +472,8 @@ parse_json_entry <- function(entry) {
     tibble(
       function_name = entry$name,
       parameters = param_names,
+      param_names = list(names),
+      param_types = list(types),
       description = blank_to_na(v$description),
       examples = list(examples),
       categories = list(
@@ -421,6 +522,17 @@ build_json_meta <- function(ref) {
     )
   meta <- meta |> left_join(variant_desc, by = "function_name")
 
+  # The (names, types) of each JSON overload, used to recover the real argument
+  # names for overloads the catalog only exposes as `col0`, `col1`, ...
+  overloads <-
+    json_long |>
+    distinct(function_name, parameters, .keep_all = TRUE) |>
+    mutate(
+      ovl = map2(param_names, param_types, ~ list(names = .x, types = .y))
+    ) |>
+    summarize(.by = function_name, json_overloads = list(ovl))
+  meta <- meta |> left_join(overloads, by = "function_name")
+
   edges <-
     meta |>
     select(to = function_name, json_aliases) |>
@@ -451,6 +563,7 @@ if (json_merge_mode == "off") {
     json_categories = list(),
     json_aliases = list(),
     json_variant_desc = list(),
+    json_overloads = list(),
   )
   json_alias_edges <- tibble(from = character(), to = character())
 } else {
@@ -539,6 +652,7 @@ funs <-
       json_examples = first(json_examples),
       json_categories = first(json_categories),
       json_variant_desc = first(json_variant_desc),
+      json_overloads = first(json_overloads),
       merge_mode = json_merge_mode
     ),
     categories = list(sort(unique(c(

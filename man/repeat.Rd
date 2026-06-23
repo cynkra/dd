@@ -4,7 +4,7 @@
 \alias{repeat}
 \title{DuckDB function repeat}
 \arguments{
-\item{col0}{\code{ANY | T[]}}
+\item{col0}{\code{ANY}}
 
 \item{col1}{\code{BIGINT}}
 
@@ -13,6 +13,8 @@
 \item{count}{\code{BIGINT}}
 
 \item{blob}{\code{BLOB}}
+
+\item{list}{\code{T[]}}
 }
 \value{
 \code{VARCHAR | BLOB | T[]}
@@ -27,9 +29,10 @@ Repeats the \code{list} \code{count} number of times.
 \section{Overloads}{
 
 \itemize{
-\item \code{`repeat`(col0 = ANY, col1 = BIGINT)}, \code{`repeat`(col0 = `T[]`, col1 = BIGINT)}: (Description missing.)
+\item \code{`repeat`(col0 = ANY, col1 = BIGINT)}: (Description missing.)
 \item \code{`repeat`(string = VARCHAR, count = BIGINT)}: Repeats the \code{string} \code{count} number of times.
 \item \code{`repeat`(blob = BLOB, count = BIGINT)}: Repeats the \code{blob} \code{count} number of times.
+\item \code{`repeat`(list = `T[]`, count = BIGINT)}: Repeats the \code{list} \code{count} number of times.
 }
 }
 

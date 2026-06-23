@@ -8,9 +8,17 @@
 
 \item{search_string}{\code{VARCHAR}}
 
-\item{col0}{\code{T[] | MAP(K, V) | STRUCT}}
+\item{list}{\code{T[]}}
 
-\item{col1}{\code{T | K | ANY}}
+\item{element}{\code{T}}
+
+\item{map}{\code{MAP(K, V)}}
+
+\item{key}{\code{K}}
+
+\item{col0}{\code{STRUCT}}
+
+\item{col1}{\code{ANY}}
 }
 \value{
 \code{BOOLEAN}
@@ -22,6 +30,16 @@ Returns \code{true} if the \code{list} contains the \code{element}.
 
 Checks if a \code{map} contains a given \code{key}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{contains(string = VARCHAR, search_string = VARCHAR)}: Returns \code{true} if \code{search_string} is found within \code{string}.
+\item \code{contains(list = `T[]`, element = T)}: Returns \code{true} if the \code{list} contains the \code{element}.
+\item \code{contains(map = `MAP(K, V)`, key = K)}: Checks if a \code{map} contains a given \code{key}.
+\item \code{contains(col0 = STRUCT, col1 = ANY)}: (Description missing.)
+}
+}
+
 \section{SQL examples}{
 
 

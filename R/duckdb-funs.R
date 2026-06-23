@@ -621,15 +621,14 @@ array_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{array_extract(col0 = `T[]`, col1 = BIGINT)}: (Description missing.)
+#' \item \code{array_extract(list = `T[]`, index = BIGINT)}: Extracts the `index`th (1-based) value from the `list`.
 #' \item \code{array_extract(string = VARCHAR, index = BIGINT)}: Extracts a single character from a `string` using a (1-based) `index`.
 #' \item \code{array_extract(struct = STRUCT, entry = VARCHAR)}: Extracts the named `entry` from the `STRUCT`.
 #' \item \code{array_extract(struct = STRUCT, index = BIGINT)}: Extracts the entry from an unnamed `STRUCT` (tuple) using an index (1-based).
 #' }
-#' @param col0 `T[]`
-#' @param col1 `BIGINT`
-#' @param string `VARCHAR`
+#' @param list `T[]`
 #' @param index `BIGINT`
+#' @param string `VARCHAR`
 #' @param struct `STRUCT`
 #' @param entry `VARCHAR`
 #' @return `T | VARCHAR | ANY`
@@ -644,7 +643,7 @@ array_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[
 #' array_extract(row(42, 84), 1)
 #' array_extract([4, 5, 6], 3)
 #' ```
-array_extract <- function(col0 = `T[]`, col1 = BIGINT, string = VARCHAR, index = BIGINT, struct = STRUCT, entry = VARCHAR) {
+array_extract <- function(list = `T[]`, index = BIGINT, string = VARCHAR, struct = STRUCT, entry = VARCHAR) {
   stop("DuckDB function array_extract() is not available in R.")
 }
 
@@ -1567,11 +1566,21 @@ constant_or_null <- function(arg1 = ANY, arg2 = ANY) {
 #'
 #' @name contains
 #' @usage NULL
-
+#' @section Overloads:
+#' \itemize{
+#' \item \code{contains(string = VARCHAR, search_string = VARCHAR)}: Returns `true` if `search_string` is found within `string`.
+#' \item \code{contains(list = `T[]`, element = T)}: Returns `true` if the `list` contains the `element`.
+#' \item \code{contains(map = `MAP(K, V)`, key = K)}: Checks if a `map` contains a given `key`.
+#' \item \code{contains(col0 = STRUCT, col1 = ANY)}: (Description missing.)
+#' }
 #' @param string `VARCHAR`
 #' @param search_string `VARCHAR`
-#' @param col0 `T[] | MAP(K, V) | STRUCT`
-#' @param col1 `T | K | ANY`
+#' @param list `T[]`
+#' @param element `T`
+#' @param map `MAP(K, V)`
+#' @param key `K`
+#' @param col0 `STRUCT`
+#' @param col1 `ANY`
 #' @return `BOOLEAN`
 #' @export
 #' @family list
@@ -1583,7 +1592,7 @@ constant_or_null <- function(arg1 = ANY, arg2 = ANY) {
 #' contains([1, 2, NULL], 1)
 #' contains(MAP {'key1': 10, 'key2': 20, 'key3': 30}, 'key2')
 #' ```
-contains <- function(string = VARCHAR, search_string = VARCHAR, col0 = `T[] | MAP(K, V) | STRUCT`, col1 = `T | K | ANY`) {
+contains <- function(string = VARCHAR, search_string = VARCHAR, list = `T[]`, element = T, map = `MAP(K, V)`, key = K, col0 = STRUCT, col1 = ANY) {
   stop("DuckDB function contains() is not available in R.")
 }
 
@@ -9286,15 +9295,17 @@ regr_syy <- function(y = DOUBLE, x = DOUBLE) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{`repeat`(col0 = ANY, col1 = BIGINT)}, \code{`repeat`(col0 = `T[]`, col1 = BIGINT)}: (Description missing.)
+#' \item \code{`repeat`(col0 = ANY, col1 = BIGINT)}: (Description missing.)
 #' \item \code{`repeat`(string = VARCHAR, count = BIGINT)}: Repeats the `string` `count` number of times.
 #' \item \code{`repeat`(blob = BLOB, count = BIGINT)}: Repeats the `blob` `count` number of times.
+#' \item \code{`repeat`(list = `T[]`, count = BIGINT)}: Repeats the `list` `count` number of times.
 #' }
-#' @param col0 `ANY | T[]`
+#' @param col0 `ANY`
 #' @param col1 `BIGINT`
 #' @param string `VARCHAR`
 #' @param count `BIGINT`
 #' @param blob `BLOB`
+#' @param list `T[]`
 #' @return `VARCHAR | BLOB | T[]`
 #' @export
 #' @family blob
@@ -9306,7 +9317,7 @@ regr_syy <- function(y = DOUBLE, x = DOUBLE) {
 #' repeat('\xAA\xBB'::BLOB, 5)
 #' repeat([1, 2, 3], 5)
 #' ```
-`repeat` <- function(col0 = `ANY | T[]`, col1 = BIGINT, string = VARCHAR, count = BIGINT, blob = BLOB) {
+`repeat` <- function(col0 = ANY, col1 = BIGINT, string = VARCHAR, count = BIGINT, blob = BLOB, list = `T[]`) {
   stop("DuckDB function repeat() is not available in R.")
 }
 
@@ -11771,11 +11782,12 @@ variant_bytes_to_variant <- function(col0 = BLOB) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{variant_extract(col0 = VARIANT, col1 = VARCHAR)}
-#' \item \code{variant_extract(col0 = VARIANT, col1 = UINTEGER)}
+#' \item \code{variant_extract(input_variant = VARIANT, field = VARCHAR)}: Returns the `field` from the `input_variant` if it's an OBJECT.
+#' \item \code{variant_extract(input_variant = VARIANT, index = UINTEGER)}: Returns the entry at `index` from the `input_variant` if it's an ARRAY.
 #' }
-#' @param col0 `VARIANT`
-#' @param col1 `VARCHAR | UINTEGER`
+#' @param input_variant `VARIANT`
+#' @param field `VARCHAR`
+#' @param index `UINTEGER`
 #' @return `VARIANT`
 #' @export
 #' @family variant
@@ -11784,7 +11796,7 @@ variant_bytes_to_variant <- function(col0 = BLOB) {
 #' variant_extract({'a': 42, 'b': [1,2,3])::VARIANT, 'b')
 #' variant_extract([1,2,3])::VARIANT, 0)
 #' ```
-variant_extract <- function(col0 = VARIANT, col1 = `VARCHAR | UINTEGER`) {
+variant_extract <- function(input_variant = VARIANT, field = VARCHAR, index = UINTEGER) {
   stop("DuckDB function variant_extract() is not available in R.")
 }
 
