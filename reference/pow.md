@@ -1,14 +1,10 @@
-# DuckDB function ^
-
-Computes x to the power of y.
+# DuckDB function pow
 
 Computes x to the power of y.
 
 ## Usage
 
 ``` r
-DOUBLE^DOUBLE
-
 pow(x = DOUBLE, y = DOUBLE)
 ```
 
@@ -26,11 +22,7 @@ pow(x = DOUBLE, y = DOUBLE)
 
 `DOUBLE`
 
-`DOUBLE`
-
 ## SQL examples
-
-    2 ^ 3
 
     pow(2, 3)
     power(2, 3)
