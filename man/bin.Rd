@@ -20,12 +20,12 @@ Converts the \code{value} to binary representation.
 \section{Overloads}{
 
 \itemize{
-\item \code{bin(string = VARCHAR)}
-\item \code{bin(value = BIGNUM)}
-\item \code{bin(value = UBIGINT)}
-\item \code{bin(value = BIGINT)}
-\item \code{bin(value = HUGEINT)}
-\item \code{bin(value = UHUGEINT)}
+\item \code{bin(string = VARCHAR)}: Converts the \code{string} to binary representation.
+\item \code{bin(value = BIGNUM)}: Converts the \code{value} to binary representation.
+\item \code{bin(value = UBIGINT)}: Converts the \code{value} to binary representation.
+\item \code{bin(value = BIGINT)}: Converts the \code{value} to binary representation.
+\item \code{bin(value = HUGEINT)}: Converts the \code{value} to binary representation.
+\item \code{bin(value = UHUGEINT)}: Converts the \code{value} to binary representation.
 }
 }
 

@@ -15,10 +15,10 @@ Extract the millennium component from a date or timestamp.
 \section{Overloads}{
 
 \itemize{
-\item \code{millennium(ts = DATE)}
-\item \code{millennium(ts = INTERVAL)}
-\item \code{millennium(ts = TIMESTAMP)}
-\item \code{millennium(ts = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{millennium(ts = DATE)}: Extract the millennium component from a date or timestamp.
+\item \code{millennium(ts = INTERVAL)}: Extract the millennium component from a date or timestamp.
+\item \code{millennium(ts = TIMESTAMP)}: Extract the millennium component from a date or timestamp.
+\item \code{millennium(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the millennium component from a date or timestamp.
 }
 }
 

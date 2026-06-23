@@ -15,9 +15,9 @@ Returns the last day of the month.
 \section{Overloads}{
 
 \itemize{
-\item \code{last_day(ts = DATE)}
-\item \code{last_day(ts = TIMESTAMP)}
-\item \code{last_day(ts = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{last_day(ts = DATE)}: Returns the last day of the month.
+\item \code{last_day(ts = TIMESTAMP)}: Returns the last day of the month.
+\item \code{last_day(ts = `TIMESTAMP WITH TIME ZONE`)}: Returns the last day of the month.
 }
 }
 

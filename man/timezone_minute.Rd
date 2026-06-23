@@ -15,10 +15,10 @@ Extract the timezone_minute component from a date or timestamp.
 \section{Overloads}{
 
 \itemize{
-\item \code{timezone_minute(ts = DATE)}
-\item \code{timezone_minute(ts = INTERVAL)}
-\item \code{timezone_minute(ts = TIMESTAMP)}
-\item \code{timezone_minute(ts = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{timezone_minute(ts = DATE)}: Extract the timezone_minute component from a date or timestamp.
+\item \code{timezone_minute(ts = INTERVAL)}: Extract the timezone_minute component from a date or timestamp.
+\item \code{timezone_minute(ts = TIMESTAMP)}: Extract the timezone_minute component from a date or timestamp.
+\item \code{timezone_minute(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the timezone_minute component from a date or timestamp.
 }
 }
 

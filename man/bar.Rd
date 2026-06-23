@@ -21,8 +21,8 @@ Draws a band whose width is proportional to (\code{x - min}) and equal to \code{
 \section{Overloads}{
 
 \itemize{
-\item \code{bar(x = DOUBLE, min = DOUBLE, max = DOUBLE, width = DOUBLE)}
-\item \code{bar(x = DOUBLE, min = DOUBLE, max = DOUBLE)}
+\item \code{bar(x = DOUBLE, min = DOUBLE, max = DOUBLE, width = DOUBLE)}: Draws a band whose width is proportional to (\code{x - min}) and equal to \code{width} characters when \code{x} = \code{max}. \code{width} defaults to 80.
+\item \code{bar(x = DOUBLE, min = DOUBLE, max = DOUBLE)}: Draws a band whose width is proportional to (\code{x - min}) and equal to \code{width} characters when \code{x} = \code{max}. \code{width} defaults to 80.
 }
 }
 

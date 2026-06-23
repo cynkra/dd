@@ -21,8 +21,8 @@ If \code{string} contains the \code{regex}, replaces the matching part with \cod
 \section{Overloads}{
 
 \itemize{
-\item \code{regexp_replace(string = VARCHAR, regex = VARCHAR, replacement = VARCHAR)}
-\item \code{regexp_replace(string = VARCHAR, regex = VARCHAR, replacement = VARCHAR, options = VARCHAR)}
+\item \code{regexp_replace(string = VARCHAR, regex = VARCHAR, replacement = VARCHAR)}: If \code{string} contains the \code{regex}, replaces the matching part with \code{replacement}. A set of optional regex \code{options} can be set.
+\item \code{regexp_replace(string = VARCHAR, regex = VARCHAR, replacement = VARCHAR, options = VARCHAR)}: If \code{string} contains the \code{regex}, replaces the matching part with \code{replacement}. A set of optional regex \code{options} can be set.
 }
 }
 

@@ -21,98 +21,98 @@ Finds the row with the maximum val. Calculates the non-NULL arg expression at th
 \section{Overloads}{
 
 \itemize{
-\item \code{arg_max(arg = INTEGER, val = INTEGER)}
-\item \code{arg_max(arg = INTEGER, val = BIGINT)}
-\item \code{arg_max(arg = INTEGER, val = HUGEINT)}
-\item \code{arg_max(arg = INTEGER, val = DOUBLE)}
-\item \code{arg_max(arg = INTEGER, val = VARCHAR)}
-\item \code{arg_max(arg = INTEGER, val = DATE)}
-\item \code{arg_max(arg = INTEGER, val = TIMESTAMP)}
-\item \code{arg_max(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max(arg = INTEGER, val = BLOB)}
-\item \code{arg_max(arg = BIGINT, val = INTEGER)}
-\item \code{arg_max(arg = BIGINT, val = BIGINT)}
-\item \code{arg_max(arg = BIGINT, val = HUGEINT)}
-\item \code{arg_max(arg = BIGINT, val = DOUBLE)}
-\item \code{arg_max(arg = BIGINT, val = VARCHAR)}
-\item \code{arg_max(arg = BIGINT, val = DATE)}
-\item \code{arg_max(arg = BIGINT, val = TIMESTAMP)}
-\item \code{arg_max(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max(arg = BIGINT, val = BLOB)}
-\item \code{arg_max(arg = DOUBLE, val = INTEGER)}
-\item \code{arg_max(arg = DOUBLE, val = BIGINT)}
-\item \code{arg_max(arg = DOUBLE, val = HUGEINT)}
-\item \code{arg_max(arg = DOUBLE, val = DOUBLE)}
-\item \code{arg_max(arg = DOUBLE, val = VARCHAR)}
-\item \code{arg_max(arg = DOUBLE, val = DATE)}
-\item \code{arg_max(arg = DOUBLE, val = TIMESTAMP)}
-\item \code{arg_max(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max(arg = DOUBLE, val = BLOB)}
-\item \code{arg_max(arg = VARCHAR, val = INTEGER)}
-\item \code{arg_max(arg = VARCHAR, val = BIGINT)}
-\item \code{arg_max(arg = VARCHAR, val = HUGEINT)}
-\item \code{arg_max(arg = VARCHAR, val = DOUBLE)}
-\item \code{arg_max(arg = VARCHAR, val = VARCHAR)}
-\item \code{arg_max(arg = VARCHAR, val = DATE)}
-\item \code{arg_max(arg = VARCHAR, val = TIMESTAMP)}
-\item \code{arg_max(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max(arg = VARCHAR, val = BLOB)}
-\item \code{arg_max(arg = DATE, val = INTEGER)}
-\item \code{arg_max(arg = DATE, val = BIGINT)}
-\item \code{arg_max(arg = DATE, val = HUGEINT)}
-\item \code{arg_max(arg = DATE, val = DOUBLE)}
-\item \code{arg_max(arg = DATE, val = VARCHAR)}
-\item \code{arg_max(arg = DATE, val = DATE)}
-\item \code{arg_max(arg = DATE, val = TIMESTAMP)}
-\item \code{arg_max(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max(arg = DATE, val = BLOB)}
-\item \code{arg_max(arg = TIMESTAMP, val = INTEGER)}
-\item \code{arg_max(arg = TIMESTAMP, val = BIGINT)}
-\item \code{arg_max(arg = TIMESTAMP, val = HUGEINT)}
-\item \code{arg_max(arg = TIMESTAMP, val = DOUBLE)}
-\item \code{arg_max(arg = TIMESTAMP, val = VARCHAR)}
-\item \code{arg_max(arg = TIMESTAMP, val = DATE)}
-\item \code{arg_max(arg = TIMESTAMP, val = TIMESTAMP)}
-\item \code{arg_max(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max(arg = TIMESTAMP, val = BLOB)}
-\item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}
-\item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}
-\item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}
-\item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}
-\item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}
-\item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}
-\item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}
-\item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}
-\item \code{arg_max(arg = BLOB, val = INTEGER)}
-\item \code{arg_max(arg = BLOB, val = BIGINT)}
-\item \code{arg_max(arg = BLOB, val = HUGEINT)}
-\item \code{arg_max(arg = BLOB, val = DOUBLE)}
-\item \code{arg_max(arg = BLOB, val = VARCHAR)}
-\item \code{arg_max(arg = BLOB, val = DATE)}
-\item \code{arg_max(arg = BLOB, val = TIMESTAMP)}
-\item \code{arg_max(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max(arg = BLOB, val = BLOB)}
-\item \code{arg_max(arg = DECIMAL, val = INTEGER)}
-\item \code{arg_max(arg = DECIMAL, val = BIGINT)}
-\item \code{arg_max(arg = DECIMAL, val = HUGEINT)}
-\item \code{arg_max(arg = DECIMAL, val = DOUBLE)}
-\item \code{arg_max(arg = DECIMAL, val = VARCHAR)}
-\item \code{arg_max(arg = DECIMAL, val = DATE)}
-\item \code{arg_max(arg = DECIMAL, val = TIMESTAMP)}
-\item \code{arg_max(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max(arg = DECIMAL, val = BLOB)}
-\item \code{arg_max(arg = ANY, val = INTEGER)}
-\item \code{arg_max(arg = ANY, val = BIGINT)}
-\item \code{arg_max(arg = ANY, val = HUGEINT)}
-\item \code{arg_max(arg = ANY, val = DOUBLE)}
-\item \code{arg_max(arg = ANY, val = VARCHAR)}
-\item \code{arg_max(arg = ANY, val = DATE)}
-\item \code{arg_max(arg = ANY, val = TIMESTAMP)}
-\item \code{arg_max(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max(arg = ANY, val = BLOB)}
-\item \code{arg_max(arg = ANY, val = ANY)}
-\item \code{arg_max(arg = ANY, val = ANY, col2 = BIGINT)}
+\item \code{arg_max(arg = INTEGER, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = INTEGER, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = INTEGER, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = INTEGER, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = INTEGER, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = INTEGER, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = INTEGER, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = INTEGER, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = BIGINT, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = BIGINT, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = BIGINT, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = BIGINT, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = BIGINT, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = BIGINT, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = BIGINT, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = BIGINT, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DOUBLE, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DOUBLE, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DOUBLE, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DOUBLE, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DOUBLE, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DOUBLE, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DOUBLE, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DOUBLE, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = VARCHAR, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = VARCHAR, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = VARCHAR, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = VARCHAR, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = VARCHAR, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = VARCHAR, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = VARCHAR, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = VARCHAR, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DATE, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DATE, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DATE, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DATE, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DATE, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DATE, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DATE, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DATE, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = TIMESTAMP, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = TIMESTAMP, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = TIMESTAMP, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = TIMESTAMP, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = TIMESTAMP, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = TIMESTAMP, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = TIMESTAMP, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = TIMESTAMP, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = BLOB, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = BLOB, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = BLOB, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = BLOB, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = BLOB, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = BLOB, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = BLOB, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = BLOB, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DECIMAL, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DECIMAL, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DECIMAL, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DECIMAL, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DECIMAL, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DECIMAL, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DECIMAL, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = DECIMAL, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = ANY, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = ANY, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = ANY, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = ANY, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = ANY, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = ANY, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = ANY, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = ANY, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = ANY, val = ANY)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+\item \code{arg_max(arg = ANY, val = ANY, col2 = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
 }
 }
 

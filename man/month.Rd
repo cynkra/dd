@@ -15,10 +15,10 @@ Extract the month component from a date or timestamp.
 \section{Overloads}{
 
 \itemize{
-\item \code{month(ts = DATE)}
-\item \code{month(ts = INTERVAL)}
-\item \code{month(ts = TIMESTAMP)}
-\item \code{month(ts = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{month(ts = DATE)}: Extract the month component from a date or timestamp.
+\item \code{month(ts = INTERVAL)}: Extract the month component from a date or timestamp.
+\item \code{month(ts = TIMESTAMP)}: Extract the month component from a date or timestamp.
+\item \code{month(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the month component from a date or timestamp.
 }
 }
 

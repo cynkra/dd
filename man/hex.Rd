@@ -24,13 +24,13 @@ Converts \code{blob} to \code{VARCHAR} using hexadecimal encoding.
 \section{Overloads}{
 
 \itemize{
-\item \code{hex(string = VARCHAR)}
-\item \code{hex(value = BIGNUM)}
-\item \code{hex(blob = BLOB)}
-\item \code{hex(value = BIGINT)}
-\item \code{hex(value = UBIGINT)}
-\item \code{hex(value = HUGEINT)}
-\item \code{hex(value = UHUGEINT)}
+\item \code{hex(string = VARCHAR)}: Converts the \code{string} to hexadecimal representation.
+\item \code{hex(value = BIGNUM)}: Converts the \code{value} to \code{VARCHAR} using hexadecimal representation.
+\item \code{hex(blob = BLOB)}: Converts \code{blob} to \code{VARCHAR} using hexadecimal encoding.
+\item \code{hex(value = BIGINT)}: Converts the \code{value} to \code{VARCHAR} using hexadecimal representation.
+\item \code{hex(value = UBIGINT)}: Converts the \code{value} to \code{VARCHAR} using hexadecimal representation.
+\item \code{hex(value = HUGEINT)}: Converts the \code{value} to \code{VARCHAR} using hexadecimal representation.
+\item \code{hex(value = UHUGEINT)}: Converts the \code{value} to \code{VARCHAR} using hexadecimal representation.
 }
 }
 

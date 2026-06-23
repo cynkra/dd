@@ -17,8 +17,8 @@ Removes any occurrences of any of the \code{characters} from the left side of th
 \section{Overloads}{
 
 \itemize{
-\item \code{ltrim(string = VARCHAR)}
-\item \code{ltrim(string = VARCHAR, characters = VARCHAR)}
+\item \code{ltrim(string = VARCHAR)}: Removes any occurrences of any of the \code{characters} from the left side of the \code{string}. \code{characters} defaults to \code{space}.
+\item \code{ltrim(string = VARCHAR, characters = VARCHAR)}: Removes any occurrences of any of the \code{characters} from the left side of the \code{string}. \code{characters} defaults to \code{space}.
 }
 }
 

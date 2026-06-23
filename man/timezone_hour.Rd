@@ -15,10 +15,10 @@ Extract the timezone_hour component from a date or timestamp.
 \section{Overloads}{
 
 \itemize{
-\item \code{timezone_hour(ts = DATE)}
-\item \code{timezone_hour(ts = INTERVAL)}
-\item \code{timezone_hour(ts = TIMESTAMP)}
-\item \code{timezone_hour(ts = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{timezone_hour(ts = DATE)}: Extract the timezone_hour component from a date or timestamp.
+\item \code{timezone_hour(ts = INTERVAL)}: Extract the timezone_hour component from a date or timestamp.
+\item \code{timezone_hour(ts = TIMESTAMP)}: Extract the timezone_hour component from a date or timestamp.
+\item \code{timezone_hour(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the timezone_hour component from a date or timestamp.
 }
 }
 

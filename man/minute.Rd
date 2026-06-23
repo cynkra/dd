@@ -15,13 +15,13 @@ Extract the minute component from a date or timestamp.
 \section{Overloads}{
 
 \itemize{
-\item \code{minute(ts = DATE)}
-\item \code{minute(ts = INTERVAL)}
-\item \code{minute(ts = TIME)}
-\item \code{minute(ts = TIMESTAMP)}
-\item \code{minute(ts = `TIME WITH TIME ZONE`)}
-\item \code{minute(ts = TIME_NS)}
-\item \code{minute(ts = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{minute(ts = DATE)}: Extract the minute component from a date or timestamp.
+\item \code{minute(ts = INTERVAL)}: Extract the minute component from a date or timestamp.
+\item \code{minute(ts = TIME)}: Extract the minute component from a date or timestamp.
+\item \code{minute(ts = TIMESTAMP)}: Extract the minute component from a date or timestamp.
+\item \code{minute(ts = `TIME WITH TIME ZONE`)}: Extract the minute component from a date or timestamp.
+\item \code{minute(ts = TIME_NS)}: Extract the minute component from a date or timestamp.
+\item \code{minute(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the minute component from a date or timestamp.
 }
 }
 

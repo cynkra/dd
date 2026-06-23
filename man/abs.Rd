@@ -16,19 +16,19 @@ Absolute value.
 \section{Overloads}{
 
 \itemize{
-\item \code{abs(x = TINYINT)}
-\item \code{abs(x = SMALLINT)}
-\item \code{abs(x = INTEGER)}
-\item \code{abs(x = BIGINT)}
-\item \code{abs(x = HUGEINT)}
-\item \code{abs(x = FLOAT)}
-\item \code{abs(x = DOUBLE)}
-\item \code{abs(x = DECIMAL)}
-\item \code{abs(x = UTINYINT)}
-\item \code{abs(x = USMALLINT)}
-\item \code{abs(x = UINTEGER)}
-\item \code{abs(x = UBIGINT)}
-\item \code{abs(x = UHUGEINT)}
+\item \code{abs(x = TINYINT)}: Absolute value.
+\item \code{abs(x = SMALLINT)}: Absolute value.
+\item \code{abs(x = INTEGER)}: Absolute value.
+\item \code{abs(x = BIGINT)}: Absolute value.
+\item \code{abs(x = HUGEINT)}: Absolute value.
+\item \code{abs(x = FLOAT)}: Absolute value.
+\item \code{abs(x = DOUBLE)}: Absolute value.
+\item \code{abs(x = DECIMAL)}: Absolute value.
+\item \code{abs(x = UTINYINT)}: Absolute value.
+\item \code{abs(x = USMALLINT)}: Absolute value.
+\item \code{abs(x = UINTEGER)}: Absolute value.
+\item \code{abs(x = UBIGINT)}: Absolute value.
+\item \code{abs(x = UHUGEINT)}: Absolute value.
 }
 }
 

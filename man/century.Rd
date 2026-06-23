@@ -15,10 +15,10 @@ Extract the century component from a date or timestamp.
 \section{Overloads}{
 
 \itemize{
-\item \code{century(ts = DATE)}
-\item \code{century(ts = INTERVAL)}
-\item \code{century(ts = TIMESTAMP)}
-\item \code{century(ts = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{century(ts = DATE)}: Extract the century component from a date or timestamp.
+\item \code{century(ts = INTERVAL)}: Extract the century component from a date or timestamp.
+\item \code{century(ts = TIMESTAMP)}: Extract the century component from a date or timestamp.
+\item \code{century(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the century component from a date or timestamp.
 }
 }
 

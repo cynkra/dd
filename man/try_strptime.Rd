@@ -17,8 +17,8 @@ Converts the \code{string} text to timestamp according to the format string. Ret
 \section{Overloads}{
 
 \itemize{
-\item \code{try_strptime(text = VARCHAR, format = VARCHAR)}
-\item \code{try_strptime(text = VARCHAR, format = `VARCHAR[]`)}
+\item \code{try_strptime(text = VARCHAR, format = VARCHAR)}: Converts the \code{string} text to timestamp according to the format string. Returns \code{NULL} on failure.
+\item \code{try_strptime(text = VARCHAR, format = `VARCHAR[]`)}: Converts the \code{string} text to timestamp according to the format string. Returns \code{NULL} on failure.
 }
 }
 

@@ -15,8 +15,8 @@ Returns the number of non-NULL values in arg.
 \section{Overloads}{
 
 \itemize{
-\item \code{count(arg = ANY)}
-\item \code{count()}
+\item \code{count(arg = ANY)}: Returns the number of non-NULL values in arg.
+\item \code{count()}: Returns the number of non-NULL values in arg.
 }
 }
 

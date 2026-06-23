@@ -19,98 +19,98 @@ Finds the rows with N maximum vals, including nulls. Calculates the arg expressi
 \section{Overloads}{
 
 \itemize{
-\item \code{arg_max_nulls_last(arg = INTEGER, val = INTEGER)}
-\item \code{arg_max_nulls_last(arg = INTEGER, val = BIGINT)}
-\item \code{arg_max_nulls_last(arg = INTEGER, val = HUGEINT)}
-\item \code{arg_max_nulls_last(arg = INTEGER, val = DOUBLE)}
-\item \code{arg_max_nulls_last(arg = INTEGER, val = VARCHAR)}
-\item \code{arg_max_nulls_last(arg = INTEGER, val = DATE)}
-\item \code{arg_max_nulls_last(arg = INTEGER, val = TIMESTAMP)}
-\item \code{arg_max_nulls_last(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max_nulls_last(arg = INTEGER, val = BLOB)}
-\item \code{arg_max_nulls_last(arg = BIGINT, val = INTEGER)}
-\item \code{arg_max_nulls_last(arg = BIGINT, val = BIGINT)}
-\item \code{arg_max_nulls_last(arg = BIGINT, val = HUGEINT)}
-\item \code{arg_max_nulls_last(arg = BIGINT, val = DOUBLE)}
-\item \code{arg_max_nulls_last(arg = BIGINT, val = VARCHAR)}
-\item \code{arg_max_nulls_last(arg = BIGINT, val = DATE)}
-\item \code{arg_max_nulls_last(arg = BIGINT, val = TIMESTAMP)}
-\item \code{arg_max_nulls_last(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max_nulls_last(arg = BIGINT, val = BLOB)}
-\item \code{arg_max_nulls_last(arg = DOUBLE, val = INTEGER)}
-\item \code{arg_max_nulls_last(arg = DOUBLE, val = BIGINT)}
-\item \code{arg_max_nulls_last(arg = DOUBLE, val = HUGEINT)}
-\item \code{arg_max_nulls_last(arg = DOUBLE, val = DOUBLE)}
-\item \code{arg_max_nulls_last(arg = DOUBLE, val = VARCHAR)}
-\item \code{arg_max_nulls_last(arg = DOUBLE, val = DATE)}
-\item \code{arg_max_nulls_last(arg = DOUBLE, val = TIMESTAMP)}
-\item \code{arg_max_nulls_last(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max_nulls_last(arg = DOUBLE, val = BLOB)}
-\item \code{arg_max_nulls_last(arg = VARCHAR, val = INTEGER)}
-\item \code{arg_max_nulls_last(arg = VARCHAR, val = BIGINT)}
-\item \code{arg_max_nulls_last(arg = VARCHAR, val = HUGEINT)}
-\item \code{arg_max_nulls_last(arg = VARCHAR, val = DOUBLE)}
-\item \code{arg_max_nulls_last(arg = VARCHAR, val = VARCHAR)}
-\item \code{arg_max_nulls_last(arg = VARCHAR, val = DATE)}
-\item \code{arg_max_nulls_last(arg = VARCHAR, val = TIMESTAMP)}
-\item \code{arg_max_nulls_last(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max_nulls_last(arg = VARCHAR, val = BLOB)}
-\item \code{arg_max_nulls_last(arg = DATE, val = INTEGER)}
-\item \code{arg_max_nulls_last(arg = DATE, val = BIGINT)}
-\item \code{arg_max_nulls_last(arg = DATE, val = HUGEINT)}
-\item \code{arg_max_nulls_last(arg = DATE, val = DOUBLE)}
-\item \code{arg_max_nulls_last(arg = DATE, val = VARCHAR)}
-\item \code{arg_max_nulls_last(arg = DATE, val = DATE)}
-\item \code{arg_max_nulls_last(arg = DATE, val = TIMESTAMP)}
-\item \code{arg_max_nulls_last(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max_nulls_last(arg = DATE, val = BLOB)}
-\item \code{arg_max_nulls_last(arg = TIMESTAMP, val = INTEGER)}
-\item \code{arg_max_nulls_last(arg = TIMESTAMP, val = BIGINT)}
-\item \code{arg_max_nulls_last(arg = TIMESTAMP, val = HUGEINT)}
-\item \code{arg_max_nulls_last(arg = TIMESTAMP, val = DOUBLE)}
-\item \code{arg_max_nulls_last(arg = TIMESTAMP, val = VARCHAR)}
-\item \code{arg_max_nulls_last(arg = TIMESTAMP, val = DATE)}
-\item \code{arg_max_nulls_last(arg = TIMESTAMP, val = TIMESTAMP)}
-\item \code{arg_max_nulls_last(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max_nulls_last(arg = TIMESTAMP, val = BLOB)}
-\item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}
-\item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}
-\item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}
-\item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}
-\item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}
-\item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}
-\item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}
-\item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}
-\item \code{arg_max_nulls_last(arg = BLOB, val = INTEGER)}
-\item \code{arg_max_nulls_last(arg = BLOB, val = BIGINT)}
-\item \code{arg_max_nulls_last(arg = BLOB, val = HUGEINT)}
-\item \code{arg_max_nulls_last(arg = BLOB, val = DOUBLE)}
-\item \code{arg_max_nulls_last(arg = BLOB, val = VARCHAR)}
-\item \code{arg_max_nulls_last(arg = BLOB, val = DATE)}
-\item \code{arg_max_nulls_last(arg = BLOB, val = TIMESTAMP)}
-\item \code{arg_max_nulls_last(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max_nulls_last(arg = BLOB, val = BLOB)}
-\item \code{arg_max_nulls_last(arg = DECIMAL, val = INTEGER)}
-\item \code{arg_max_nulls_last(arg = DECIMAL, val = BIGINT)}
-\item \code{arg_max_nulls_last(arg = DECIMAL, val = HUGEINT)}
-\item \code{arg_max_nulls_last(arg = DECIMAL, val = DOUBLE)}
-\item \code{arg_max_nulls_last(arg = DECIMAL, val = VARCHAR)}
-\item \code{arg_max_nulls_last(arg = DECIMAL, val = DATE)}
-\item \code{arg_max_nulls_last(arg = DECIMAL, val = TIMESTAMP)}
-\item \code{arg_max_nulls_last(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max_nulls_last(arg = DECIMAL, val = BLOB)}
-\item \code{arg_max_nulls_last(arg = ANY, val = INTEGER)}
-\item \code{arg_max_nulls_last(arg = ANY, val = BIGINT)}
-\item \code{arg_max_nulls_last(arg = ANY, val = HUGEINT)}
-\item \code{arg_max_nulls_last(arg = ANY, val = DOUBLE)}
-\item \code{arg_max_nulls_last(arg = ANY, val = VARCHAR)}
-\item \code{arg_max_nulls_last(arg = ANY, val = DATE)}
-\item \code{arg_max_nulls_last(arg = ANY, val = TIMESTAMP)}
-\item \code{arg_max_nulls_last(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{arg_max_nulls_last(arg = ANY, val = BLOB)}
-\item \code{arg_max_nulls_last(arg = ANY, val = ANY)}
-\item \code{arg_max_nulls_last(arg = ANY, val = ANY, N = BIGINT)}
+\item \code{arg_max_nulls_last(arg = INTEGER, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = INTEGER, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = INTEGER, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = INTEGER, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = INTEGER, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = INTEGER, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = INTEGER, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = INTEGER, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = BIGINT, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = BIGINT, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = BIGINT, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = BIGINT, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = BIGINT, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = BIGINT, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = BIGINT, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = BIGINT, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DOUBLE, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DOUBLE, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DOUBLE, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DOUBLE, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DOUBLE, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DOUBLE, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DOUBLE, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DOUBLE, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = VARCHAR, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = VARCHAR, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = VARCHAR, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = VARCHAR, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = VARCHAR, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = VARCHAR, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = VARCHAR, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = VARCHAR, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DATE, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DATE, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DATE, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DATE, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DATE, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DATE, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DATE, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DATE, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = TIMESTAMP, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = TIMESTAMP, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = TIMESTAMP, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = TIMESTAMP, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = TIMESTAMP, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = TIMESTAMP, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = TIMESTAMP, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = TIMESTAMP, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = BLOB, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = BLOB, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = BLOB, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = BLOB, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = BLOB, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = BLOB, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = BLOB, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = BLOB, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DECIMAL, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DECIMAL, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DECIMAL, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DECIMAL, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DECIMAL, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DECIMAL, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DECIMAL, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = DECIMAL, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = ANY, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = ANY, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = ANY, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = ANY, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = ANY, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = ANY, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = ANY, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = ANY, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = ANY, val = ANY)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+\item \code{arg_max_nulls_last(arg = ANY, val = ANY, N = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
 }
 }
 

@@ -15,13 +15,13 @@ Extract the epoch component from a temporal type.
 \section{Overloads}{
 
 \itemize{
-\item \code{epoch(temporal = DATE)}
-\item \code{epoch(temporal = INTERVAL)}
-\item \code{epoch(temporal = TIME)}
-\item \code{epoch(temporal = TIMESTAMP)}
-\item \code{epoch(temporal = `TIME WITH TIME ZONE`)}
-\item \code{epoch(temporal = TIME_NS)}
-\item \code{epoch(temporal = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{epoch(temporal = DATE)}: Extract the epoch component from a temporal type.
+\item \code{epoch(temporal = INTERVAL)}: Extract the epoch component from a temporal type.
+\item \code{epoch(temporal = TIME)}: Extract the epoch component from a temporal type.
+\item \code{epoch(temporal = TIMESTAMP)}: Extract the epoch component from a temporal type.
+\item \code{epoch(temporal = `TIME WITH TIME ZONE`)}: Extract the epoch component from a temporal type.
+\item \code{epoch(temporal = TIME_NS)}: Extract the epoch component from a temporal type.
+\item \code{epoch(temporal = `TIMESTAMP WITH TIME ZONE`)}: Extract the epoch component from a temporal type.
 }
 }
 

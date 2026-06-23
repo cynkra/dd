@@ -15,9 +15,9 @@ The (English) name of the weekday.
 \section{Overloads}{
 
 \itemize{
-\item \code{dayname(ts = DATE)}
-\item \code{dayname(ts = TIMESTAMP)}
-\item \code{dayname(ts = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{dayname(ts = DATE)}: The (English) name of the weekday.
+\item \code{dayname(ts = TIMESTAMP)}: The (English) name of the weekday.
+\item \code{dayname(ts = `TIMESTAMP WITH TIME ZONE`)}: The (English) name of the weekday.
 }
 }
 

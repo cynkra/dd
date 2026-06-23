@@ -15,13 +15,13 @@ Extract the epoch component in microseconds from a temporal type.
 \section{Overloads}{
 
 \itemize{
-\item \code{epoch_us(temporal = DATE)}
-\item \code{epoch_us(temporal = TIMESTAMP)}
-\item \code{epoch_us(temporal = INTERVAL)}
-\item \code{epoch_us(temporal = TIME)}
-\item \code{epoch_us(temporal = TIME_NS)}
-\item \code{epoch_us(temporal = `TIME WITH TIME ZONE`)}
-\item \code{epoch_us(temporal = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{epoch_us(temporal = DATE)}: Extract the epoch component in microseconds from a temporal type.
+\item \code{epoch_us(temporal = TIMESTAMP)}: Extract the epoch component in microseconds from a temporal type.
+\item \code{epoch_us(temporal = INTERVAL)}: Extract the epoch component in microseconds from a temporal type.
+\item \code{epoch_us(temporal = TIME)}: Extract the epoch component in microseconds from a temporal type.
+\item \code{epoch_us(temporal = TIME_NS)}: Extract the epoch component in microseconds from a temporal type.
+\item \code{epoch_us(temporal = `TIME WITH TIME ZONE`)}: Extract the epoch component in microseconds from a temporal type.
+\item \code{epoch_us(temporal = `TIMESTAMP WITH TIME ZONE`)}: Extract the epoch component in microseconds from a temporal type.
 }
 }
 

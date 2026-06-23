@@ -25,9 +25,9 @@ Returns the length of the \code{list}.
 \section{Overloads}{
 
 \itemize{
-\item \code{len(string = VARCHAR)}
-\item \code{len(bit = BIT)}
-\item \code{len(list = `ANY[]`)}
+\item \code{len(string = VARCHAR)}: Number of characters in \code{string}.
+\item \code{len(bit = BIT)}: Returns the bit-length of the \code{bit} argument.
+\item \code{len(list = `ANY[]`)}: Returns the length of the \code{list}.
 }
 }
 

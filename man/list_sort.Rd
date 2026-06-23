@@ -20,9 +20,9 @@ Sorts the elements of the list.
 \section{Overloads}{
 
 \itemize{
-\item \code{list_sort(list = `ANY[]`)}
-\item \code{list_sort(list = `ANY[]`, col1 = VARCHAR)}
-\item \code{list_sort(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR)}
+\item \code{list_sort(list = `ANY[]`)}: Sorts the elements of the list.
+\item \code{list_sort(list = `ANY[]`, col1 = VARCHAR)}: Sorts the elements of the list.
+\item \code{list_sort(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR)}: Sorts the elements of the list.
 }
 }
 

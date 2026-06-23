@@ -17,8 +17,8 @@ Creates a map from a set of keys and values.
 \section{Overloads}{
 
 \itemize{
-\item \code{map()}
-\item \code{map(keys = `K[]`, values = `V[]`)}
+\item \code{map()}: Creates a map from a set of keys and values.
+\item \code{map(keys = `K[]`, values = `V[]`)}: Creates a map from a set of keys and values.
 }
 }
 

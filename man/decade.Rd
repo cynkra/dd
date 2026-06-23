@@ -15,10 +15,10 @@ Extract the decade component from a date or timestamp.
 \section{Overloads}{
 
 \itemize{
-\item \code{decade(ts = DATE)}
-\item \code{decade(ts = INTERVAL)}
-\item \code{decade(ts = TIMESTAMP)}
-\item \code{decade(ts = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{decade(ts = DATE)}: Extract the decade component from a date or timestamp.
+\item \code{decade(ts = INTERVAL)}: Extract the decade component from a date or timestamp.
+\item \code{decade(ts = TIMESTAMP)}: Extract the decade component from a date or timestamp.
+\item \code{decade(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the decade component from a date or timestamp.
 }
 }
 

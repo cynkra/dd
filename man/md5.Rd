@@ -19,8 +19,8 @@ Returns the MD5 hash of the \code{blob} as a \code{VARCHAR}.
 \section{Overloads}{
 
 \itemize{
-\item \code{md5(string = VARCHAR)}
-\item \code{md5(blob = BLOB)}
+\item \code{md5(string = VARCHAR)}: Returns the MD5 hash of the \code{string} as a \code{VARCHAR}.
+\item \code{md5(blob = BLOB)}: Returns the MD5 hash of the \code{blob} as a \code{VARCHAR}.
 }
 }
 

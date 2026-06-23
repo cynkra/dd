@@ -19,10 +19,10 @@ Returns the last component of the \code{path} similarly to Python's \code{os.pat
 \section{Overloads}{
 
 \itemize{
-\item \code{parse_filename(string = VARCHAR)}
-\item \code{parse_filename(string = VARCHAR, trim_extension = VARCHAR)}
-\item \code{parse_filename(string = VARCHAR, trim_extension = BOOLEAN)}
-\item \code{parse_filename(string = VARCHAR, trim_extension = BOOLEAN, separator = VARCHAR)}
+\item \code{parse_filename(string = VARCHAR)}: Returns the last component of the \code{path} similarly to Python's \code{os.path.basename} function. If \code{trim_extension} is \code{true}, the file extension will be removed (defaults to \code{false}). \code{separator} options: \code{system}, \code{both_slash} (default), \code{forward_slash}, \code{backslash}.
+\item \code{parse_filename(string = VARCHAR, trim_extension = VARCHAR)}: Returns the last component of the \code{path} similarly to Python's \code{os.path.basename} function. If \code{trim_extension} is \code{true}, the file extension will be removed (defaults to \code{false}). \code{separator} options: \code{system}, \code{both_slash} (default), \code{forward_slash}, \code{backslash}.
+\item \code{parse_filename(string = VARCHAR, trim_extension = BOOLEAN)}: Returns the last component of the \code{path} similarly to Python's \code{os.path.basename} function. If \code{trim_extension} is \code{true}, the file extension will be removed (defaults to \code{false}). \code{separator} options: \code{system}, \code{both_slash} (default), \code{forward_slash}, \code{backslash}.
+\item \code{parse_filename(string = VARCHAR, trim_extension = BOOLEAN, separator = VARCHAR)}: Returns the last component of the \code{path} similarly to Python's \code{os.path.basename} function. If \code{trim_extension} is \code{true}, the file extension will be removed (defaults to \code{false}). \code{separator} options: \code{system}, \code{both_slash} (default), \code{forward_slash}, \code{backslash}.
 }
 }
 

@@ -15,13 +15,13 @@ Extract the hour component from a date or timestamp.
 \section{Overloads}{
 
 \itemize{
-\item \code{hour(ts = DATE)}
-\item \code{hour(ts = INTERVAL)}
-\item \code{hour(ts = TIME)}
-\item \code{hour(ts = TIMESTAMP)}
-\item \code{hour(ts = `TIME WITH TIME ZONE`)}
-\item \code{hour(ts = TIME_NS)}
-\item \code{hour(ts = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{hour(ts = DATE)}: Extract the hour component from a date or timestamp.
+\item \code{hour(ts = INTERVAL)}: Extract the hour component from a date or timestamp.
+\item \code{hour(ts = TIME)}: Extract the hour component from a date or timestamp.
+\item \code{hour(ts = TIMESTAMP)}: Extract the hour component from a date or timestamp.
+\item \code{hour(ts = `TIME WITH TIME ZONE`)}: Extract the hour component from a date or timestamp.
+\item \code{hour(ts = TIME_NS)}: Extract the hour component from a date or timestamp.
+\item \code{hour(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the hour component from a date or timestamp.
 }
 }
 

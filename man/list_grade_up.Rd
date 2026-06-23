@@ -21,9 +21,9 @@ Works like list_sort, but the results are the indexes that correspond to the pos
 \section{Overloads}{
 
 \itemize{
-\item \code{list_grade_up(list = `ANY[]`)}
-\item \code{list_grade_up(list = `ANY[]`, col1 = VARCHAR)}
-\item \code{list_grade_up(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR)}
+\item \code{list_grade_up(list = `ANY[]`)}: Works like list_sort, but the results are the indexes that correspond to the position in the original list instead of the actual values.
+\item \code{list_grade_up(list = `ANY[]`, col1 = VARCHAR)}: Works like list_sort, but the results are the indexes that correspond to the position in the original list instead of the actual values.
+\item \code{list_grade_up(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR)}: Works like list_sort, but the results are the indexes that correspond to the position in the original list instead of the actual values.
 }
 }
 

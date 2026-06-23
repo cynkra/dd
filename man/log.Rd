@@ -17,8 +17,8 @@ Computes the logarithm of x to base b. b may be omitted, in which case the defau
 \section{Overloads}{
 
 \itemize{
-\item \code{log(b = DOUBLE)}
-\item \code{log(b = DOUBLE, x = DOUBLE)}
+\item \code{log(b = DOUBLE)}: Computes the logarithm of x to base b. b may be omitted, in which case the default 10.
+\item \code{log(b = DOUBLE, x = DOUBLE)}: Computes the logarithm of x to base b. b may be omitted, in which case the default 10.
 }
 }
 

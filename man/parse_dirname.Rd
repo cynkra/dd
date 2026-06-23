@@ -17,8 +17,8 @@ Returns the top-level directory name from the given \code{path}. \code{separator
 \section{Overloads}{
 
 \itemize{
-\item \code{parse_dirname(path = VARCHAR)}
-\item \code{parse_dirname(path = VARCHAR, separator = VARCHAR)}
+\item \code{parse_dirname(path = VARCHAR)}: Returns the top-level directory name from the given \code{path}. \code{separator} options: \code{system}, \code{both_slash} (default), \code{forward_slash}, \code{backslash}.
+\item \code{parse_dirname(path = VARCHAR, separator = VARCHAR)}: Returns the top-level directory name from the given \code{path}. \code{separator} options: \code{system}, \code{both_slash} (default), \code{forward_slash}, \code{backslash}.
 }
 }
 

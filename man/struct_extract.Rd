@@ -17,8 +17,8 @@ Extract the named entry from the STRUCT.
 \section{Overloads}{
 
 \itemize{
-\item \code{struct_extract(struct = STRUCT, `'entry'` = VARCHAR)}
-\item \code{struct_extract(struct = STRUCT, `'entry'` = BIGINT)}
+\item \code{struct_extract(struct = STRUCT, `'entry'` = VARCHAR)}: Extract the named entry from the STRUCT.
+\item \code{struct_extract(struct = STRUCT, `'entry'` = BIGINT)}: Extract the named entry from the STRUCT.
 }
 }
 

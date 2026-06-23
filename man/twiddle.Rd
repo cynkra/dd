@@ -15,17 +15,17 @@ Bitwise NOT.
 \section{Overloads}{
 
 \itemize{
-\item \code{`~`(input = TINYINT)}
-\item \code{`~`(input = SMALLINT)}
-\item \code{`~`(input = INTEGER)}
-\item \code{`~`(input = BIGINT)}
-\item \code{`~`(input = HUGEINT)}
-\item \code{`~`(input = UTINYINT)}
-\item \code{`~`(input = USMALLINT)}
-\item \code{`~`(input = UINTEGER)}
-\item \code{`~`(input = UBIGINT)}
-\item \code{`~`(input = UHUGEINT)}
-\item \code{`~`(input = BIT)}
+\item \code{`~`(input = TINYINT)}: Bitwise NOT.
+\item \code{`~`(input = SMALLINT)}: Bitwise NOT.
+\item \code{`~`(input = INTEGER)}: Bitwise NOT.
+\item \code{`~`(input = BIGINT)}: Bitwise NOT.
+\item \code{`~`(input = HUGEINT)}: Bitwise NOT.
+\item \code{`~`(input = UTINYINT)}: Bitwise NOT.
+\item \code{`~`(input = USMALLINT)}: Bitwise NOT.
+\item \code{`~`(input = UINTEGER)}: Bitwise NOT.
+\item \code{`~`(input = UBIGINT)}: Bitwise NOT.
+\item \code{`~`(input = UHUGEINT)}: Bitwise NOT.
+\item \code{`~`(input = BIT)}: Bitwise NOT.
 }
 }
 

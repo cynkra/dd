@@ -17,17 +17,17 @@ Bitwise shift right.
 \section{Overloads}{
 
 \itemize{
-\item \code{`>>`(input = TINYINT, col1 = TINYINT)}
-\item \code{`>>`(input = SMALLINT, col1 = SMALLINT)}
-\item \code{`>>`(input = INTEGER, col1 = INTEGER)}
-\item \code{`>>`(input = BIGINT, col1 = BIGINT)}
-\item \code{`>>`(input = HUGEINT, col1 = HUGEINT)}
-\item \code{`>>`(input = UTINYINT, col1 = UTINYINT)}
-\item \code{`>>`(input = USMALLINT, col1 = USMALLINT)}
-\item \code{`>>`(input = UINTEGER, col1 = UINTEGER)}
-\item \code{`>>`(input = UBIGINT, col1 = UBIGINT)}
-\item \code{`>>`(input = UHUGEINT, col1 = UHUGEINT)}
-\item \code{`>>`(input = BIT, col1 = INTEGER)}
+\item \code{`>>`(input = TINYINT, col1 = TINYINT)}: Bitwise shift right.
+\item \code{`>>`(input = SMALLINT, col1 = SMALLINT)}: Bitwise shift right.
+\item \code{`>>`(input = INTEGER, col1 = INTEGER)}: Bitwise shift right.
+\item \code{`>>`(input = BIGINT, col1 = BIGINT)}: Bitwise shift right.
+\item \code{`>>`(input = HUGEINT, col1 = HUGEINT)}: Bitwise shift right.
+\item \code{`>>`(input = UTINYINT, col1 = UTINYINT)}: Bitwise shift right.
+\item \code{`>>`(input = USMALLINT, col1 = USMALLINT)}: Bitwise shift right.
+\item \code{`>>`(input = UINTEGER, col1 = UINTEGER)}: Bitwise shift right.
+\item \code{`>>`(input = UBIGINT, col1 = UBIGINT)}: Bitwise shift right.
+\item \code{`>>`(input = UHUGEINT, col1 = UHUGEINT)}: Bitwise shift right.
+\item \code{`>>`(input = BIT, col1 = INTEGER)}: Bitwise shift right.
 }
 }
 

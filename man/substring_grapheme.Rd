@@ -19,8 +19,8 @@ Extracts substring starting from grapheme clusters \code{start} up to the end of
 \section{Overloads}{
 
 \itemize{
-\item \code{substring_grapheme(string = VARCHAR, start = BIGINT, length = BIGINT)}
-\item \code{substring_grapheme(string = VARCHAR, start = BIGINT)}
+\item \code{substring_grapheme(string = VARCHAR, start = BIGINT, length = BIGINT)}: Extracts substring starting from grapheme clusters \code{start} up to the end of the string. If optional argument \code{length} is set, extracts a substring of \code{length} grapheme clusters instead. Note that a \code{start} value of \code{1} refers to the \code{first} character of the \code{string}.
+\item \code{substring_grapheme(string = VARCHAR, start = BIGINT)}: Extracts substring starting from grapheme clusters \code{start} up to the end of the string. If optional argument \code{length} is set, extracts a substring of \code{length} grapheme clusters instead. Note that a \code{start} value of \code{1} refers to the \code{first} character of the \code{string}.
 }
 }
 

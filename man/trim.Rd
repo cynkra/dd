@@ -17,8 +17,8 @@ Removes any occurrences of any of the \code{characters} from either side of the 
 \section{Overloads}{
 
 \itemize{
-\item \code{trim(string = VARCHAR)}
-\item \code{trim(string = VARCHAR, characters = VARCHAR)}
+\item \code{trim(string = VARCHAR)}: Removes any occurrences of any of the \code{characters} from either side of the \code{string}. \code{characters} defaults to \code{space}.
+\item \code{trim(string = VARCHAR, characters = VARCHAR)}: Removes any occurrences of any of the \code{characters} from either side of the \code{string}. \code{characters} defaults to \code{space}.
 }
 }
 

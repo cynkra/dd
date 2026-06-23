@@ -15,10 +15,10 @@ Extract the week component from a date or timestamp.
 \section{Overloads}{
 
 \itemize{
-\item \code{week(ts = DATE)}
-\item \code{week(ts = INTERVAL)}
-\item \code{week(ts = TIMESTAMP)}
-\item \code{week(ts = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{week(ts = DATE)}: Extract the week component from a date or timestamp.
+\item \code{week(ts = INTERVAL)}: Extract the week component from a date or timestamp.
+\item \code{week(ts = TIMESTAMP)}: Extract the week component from a date or timestamp.
+\item \code{week(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the week component from a date or timestamp.
 }
 }
 

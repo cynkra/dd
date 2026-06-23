@@ -17,22 +17,22 @@ Rounds x to s decimal places.
 \section{Overloads}{
 
 \itemize{
-\item \code{round(x = TINYINT)}
-\item \code{round(x = TINYINT, precision = INTEGER)}
-\item \code{round(x = SMALLINT)}
-\item \code{round(x = SMALLINT, precision = INTEGER)}
-\item \code{round(x = INTEGER)}
-\item \code{round(x = INTEGER, precision = INTEGER)}
-\item \code{round(x = BIGINT)}
-\item \code{round(x = BIGINT, precision = INTEGER)}
-\item \code{round(x = HUGEINT)}
-\item \code{round(x = HUGEINT, precision = INTEGER)}
-\item \code{round(x = FLOAT)}
-\item \code{round(x = FLOAT, precision = INTEGER)}
-\item \code{round(x = DOUBLE)}
-\item \code{round(x = DOUBLE, precision = INTEGER)}
-\item \code{round(x = DECIMAL)}
-\item \code{round(x = DECIMAL, precision = INTEGER)}
+\item \code{round(x = TINYINT)}: Rounds x to s decimal places.
+\item \code{round(x = TINYINT, precision = INTEGER)}: Rounds x to s decimal places.
+\item \code{round(x = SMALLINT)}: Rounds x to s decimal places.
+\item \code{round(x = SMALLINT, precision = INTEGER)}: Rounds x to s decimal places.
+\item \code{round(x = INTEGER)}: Rounds x to s decimal places.
+\item \code{round(x = INTEGER, precision = INTEGER)}: Rounds x to s decimal places.
+\item \code{round(x = BIGINT)}: Rounds x to s decimal places.
+\item \code{round(x = BIGINT, precision = INTEGER)}: Rounds x to s decimal places.
+\item \code{round(x = HUGEINT)}: Rounds x to s decimal places.
+\item \code{round(x = HUGEINT, precision = INTEGER)}: Rounds x to s decimal places.
+\item \code{round(x = FLOAT)}: Rounds x to s decimal places.
+\item \code{round(x = FLOAT, precision = INTEGER)}: Rounds x to s decimal places.
+\item \code{round(x = DOUBLE)}: Rounds x to s decimal places.
+\item \code{round(x = DOUBLE, precision = INTEGER)}: Rounds x to s decimal places.
+\item \code{round(x = DECIMAL)}: Rounds x to s decimal places.
+\item \code{round(x = DECIMAL, precision = INTEGER)}: Rounds x to s decimal places.
 }
 }
 

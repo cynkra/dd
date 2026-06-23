@@ -25,8 +25,8 @@ The timestamp for the given parts.
 \section{Overloads}{
 
 \itemize{
-\item \code{make_timestamp(year = BIGINT, month = BIGINT, day = BIGINT, hour = BIGINT, minute = BIGINT, seconds = DOUBLE)}
-\item \code{make_timestamp(year = BIGINT)}
+\item \code{make_timestamp(year = BIGINT, month = BIGINT, day = BIGINT, hour = BIGINT, minute = BIGINT, seconds = DOUBLE)}: The timestamp for the given parts.
+\item \code{make_timestamp(year = BIGINT)}: The timestamp for the given parts.
 }
 }
 

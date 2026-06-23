@@ -17,8 +17,8 @@ Returns the head of the \code{path} (the pathname until the last slash) similarl
 \section{Overloads}{
 
 \itemize{
-\item \code{parse_dirpath(path = VARCHAR)}
-\item \code{parse_dirpath(path = VARCHAR, separator = VARCHAR)}
+\item \code{parse_dirpath(path = VARCHAR)}: Returns the head of the \code{path} (the pathname until the last slash) similarly to Python's \code{os.path.dirname}. \code{separator} options: \code{system}, \code{both_slash} (default), \code{forward_slash}, \code{backslash}.
+\item \code{parse_dirpath(path = VARCHAR, separator = VARCHAR)}: Returns the head of the \code{path} (the pathname until the last slash) similarly to Python's \code{os.path.dirname}. \code{separator} options: \code{system}, \code{both_slash} (default), \code{forward_slash}, \code{backslash}.
 }
 }
 

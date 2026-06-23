@@ -15,18 +15,18 @@ Returns the sign of x as -1, 0 or 1.
 \section{Overloads}{
 
 \itemize{
-\item \code{sign(x = TINYINT)}
-\item \code{sign(x = SMALLINT)}
-\item \code{sign(x = INTEGER)}
-\item \code{sign(x = BIGINT)}
-\item \code{sign(x = HUGEINT)}
-\item \code{sign(x = FLOAT)}
-\item \code{sign(x = DOUBLE)}
-\item \code{sign(x = UTINYINT)}
-\item \code{sign(x = USMALLINT)}
-\item \code{sign(x = UINTEGER)}
-\item \code{sign(x = UBIGINT)}
-\item \code{sign(x = UHUGEINT)}
+\item \code{sign(x = TINYINT)}: Returns the sign of x as -1, 0 or 1.
+\item \code{sign(x = SMALLINT)}: Returns the sign of x as -1, 0 or 1.
+\item \code{sign(x = INTEGER)}: Returns the sign of x as -1, 0 or 1.
+\item \code{sign(x = BIGINT)}: Returns the sign of x as -1, 0 or 1.
+\item \code{sign(x = HUGEINT)}: Returns the sign of x as -1, 0 or 1.
+\item \code{sign(x = FLOAT)}: Returns the sign of x as -1, 0 or 1.
+\item \code{sign(x = DOUBLE)}: Returns the sign of x as -1, 0 or 1.
+\item \code{sign(x = UTINYINT)}: Returns the sign of x as -1, 0 or 1.
+\item \code{sign(x = USMALLINT)}: Returns the sign of x as -1, 0 or 1.
+\item \code{sign(x = UINTEGER)}: Returns the sign of x as -1, 0 or 1.
+\item \code{sign(x = UBIGINT)}: Returns the sign of x as -1, 0 or 1.
+\item \code{sign(x = UHUGEINT)}: Returns the sign of x as -1, 0 or 1.
 }
 }
 

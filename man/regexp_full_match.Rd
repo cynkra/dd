@@ -19,8 +19,8 @@ Returns \code{true} if the entire \code{string} matches the \code{regex}. A set 
 \section{Overloads}{
 
 \itemize{
-\item \code{regexp_full_match(string = VARCHAR, regex = VARCHAR)}
-\item \code{regexp_full_match(string = VARCHAR, regex = VARCHAR, col2 = VARCHAR)}
+\item \code{regexp_full_match(string = VARCHAR, regex = VARCHAR)}: Returns \code{true} if the entire \code{string} matches the \code{regex}. A set of optional regex \code{options} can be set.
+\item \code{regexp_full_match(string = VARCHAR, regex = VARCHAR, col2 = VARCHAR)}: Returns \code{true} if the entire \code{string} matches the \code{regex}. A set of optional regex \code{options} can be set.
 }
 }
 

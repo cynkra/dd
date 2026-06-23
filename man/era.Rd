@@ -15,10 +15,10 @@ Extract the era component from a date or timestamp.
 \section{Overloads}{
 
 \itemize{
-\item \code{era(ts = DATE)}
-\item \code{era(ts = INTERVAL)}
-\item \code{era(ts = TIMESTAMP)}
-\item \code{era(ts = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{era(ts = DATE)}: Extract the era component from a date or timestamp.
+\item \code{era(ts = INTERVAL)}: Extract the era component from a date or timestamp.
+\item \code{era(ts = TIMESTAMP)}: Extract the era component from a date or timestamp.
+\item \code{era(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the era component from a date or timestamp.
 }
 }
 

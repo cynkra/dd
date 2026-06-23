@@ -32,9 +32,9 @@ Extracts the \code{index}th (1-based) value from the \code{list}.
 
 \itemize{
 \item \code{array_extract(col0 = `T[]`, col1 = BIGINT)}
-\item \code{array_extract(string = VARCHAR, index = BIGINT)}
-\item \code{array_extract(struct = STRUCT, entry = VARCHAR)}
-\item \code{array_extract(struct = STRUCT, index = BIGINT)}
+\item \code{array_extract(string = VARCHAR, index = BIGINT)}: Extracts a single character from a \code{string} using a (1-based) \code{index}.
+\item \code{array_extract(struct = STRUCT, entry = VARCHAR)}: Extracts the named \code{entry} from the \code{STRUCT}.
+\item \code{array_extract(struct = STRUCT, index = BIGINT)}: Extracts the entry from an unnamed \code{STRUCT} (tuple) using an index (1-based).
 }
 }
 

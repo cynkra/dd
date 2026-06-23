@@ -15,14 +15,14 @@ Calculates the sum value for all tuples in arg.
 \section{Overloads}{
 
 \itemize{
-\item \code{sum(arg = DECIMAL)}
-\item \code{sum(arg = BOOLEAN)}
-\item \code{sum(arg = SMALLINT)}
-\item \code{sum(arg = INTEGER)}
-\item \code{sum(arg = BIGINT)}
-\item \code{sum(arg = HUGEINT)}
-\item \code{sum(arg = DOUBLE)}
-\item \code{sum(arg = BIGNUM)}
+\item \code{sum(arg = DECIMAL)}: Calculates the sum value for all tuples in arg.
+\item \code{sum(arg = BOOLEAN)}: Calculates the sum value for all tuples in arg.
+\item \code{sum(arg = SMALLINT)}: Calculates the sum value for all tuples in arg.
+\item \code{sum(arg = INTEGER)}: Calculates the sum value for all tuples in arg.
+\item \code{sum(arg = BIGINT)}: Calculates the sum value for all tuples in arg.
+\item \code{sum(arg = HUGEINT)}: Calculates the sum value for all tuples in arg.
+\item \code{sum(arg = DOUBLE)}: Calculates the sum value for all tuples in arg.
+\item \code{sum(arg = BIGNUM)}: Calculates the sum value for all tuples in arg.
 }
 }
 

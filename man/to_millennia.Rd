@@ -15,8 +15,8 @@ Construct a millenium interval.
 \section{Overloads}{
 
 \itemize{
-\item \code{to_millennia(integer = INTEGER)}
-\item \code{to_millennia(integer = BIGINT)}
+\item \code{to_millennia(integer = INTEGER)}: Construct a millenium interval.
+\item \code{to_millennia(integer = BIGINT)}: Construct a millenium interval.
 }
 }
 

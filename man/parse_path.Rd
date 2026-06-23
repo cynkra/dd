@@ -17,8 +17,8 @@ Returns a list of the components (directories and filename) in the \code{path} s
 \section{Overloads}{
 
 \itemize{
-\item \code{parse_path(path = VARCHAR)}
-\item \code{parse_path(path = VARCHAR, separator = VARCHAR)}
+\item \code{parse_path(path = VARCHAR)}: Returns a list of the components (directories and filename) in the \code{path} similarly to Python's \code{pathlib.parts} function. \code{separator} options: \code{system}, \code{both_slash} (default), \code{forward_slash}, \code{backslash}.
+\item \code{parse_path(path = VARCHAR, separator = VARCHAR)}: Returns a list of the components (directories and filename) in the \code{path} similarly to Python's \code{pathlib.parts} function. \code{separator} options: \code{system}, \code{both_slash} (default), \code{forward_slash}, \code{backslash}.
 }
 }
 

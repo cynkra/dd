@@ -15,9 +15,9 @@ Extract the Julian Day number from a date or timestamp.
 \section{Overloads}{
 
 \itemize{
-\item \code{julian(ts = DATE)}
-\item \code{julian(ts = TIMESTAMP)}
-\item \code{julian(ts = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{julian(ts = DATE)}: Extract the Julian Day number from a date or timestamp.
+\item \code{julian(ts = TIMESTAMP)}: Extract the Julian Day number from a date or timestamp.
+\item \code{julian(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the Julian Day number from a date or timestamp.
 }
 }
 

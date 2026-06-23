@@ -15,8 +15,8 @@ Construct a week interval.
 \section{Overloads}{
 
 \itemize{
-\item \code{to_weeks(integer = INTEGER)}
-\item \code{to_weeks(integer = BIGINT)}
+\item \code{to_weeks(integer = INTEGER)}: Construct a week interval.
+\item \code{to_weeks(integer = BIGINT)}: Construct a week interval.
 }
 }
 

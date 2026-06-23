@@ -15,13 +15,13 @@ Extract the microsecond component from a date or timestamp.
 \section{Overloads}{
 
 \itemize{
-\item \code{microsecond(ts = DATE)}
-\item \code{microsecond(ts = INTERVAL)}
-\item \code{microsecond(ts = TIME)}
-\item \code{microsecond(ts = TIMESTAMP)}
-\item \code{microsecond(ts = `TIME WITH TIME ZONE`)}
-\item \code{microsecond(ts = TIME_NS)}
-\item \code{microsecond(ts = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{microsecond(ts = DATE)}: Extract the microsecond component from a date or timestamp.
+\item \code{microsecond(ts = INTERVAL)}: Extract the microsecond component from a date or timestamp.
+\item \code{microsecond(ts = TIME)}: Extract the microsecond component from a date or timestamp.
+\item \code{microsecond(ts = TIMESTAMP)}: Extract the microsecond component from a date or timestamp.
+\item \code{microsecond(ts = `TIME WITH TIME ZONE`)}: Extract the microsecond component from a date or timestamp.
+\item \code{microsecond(ts = TIME_NS)}: Extract the microsecond component from a date or timestamp.
+\item \code{microsecond(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the microsecond component from a date or timestamp.
 }
 }
 

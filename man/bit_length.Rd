@@ -19,8 +19,8 @@ Returns the bit-length of the \code{bit} argument.
 \section{Overloads}{
 
 \itemize{
-\item \code{bit_length(string = VARCHAR)}
-\item \code{bit_length(bit = BIT)}
+\item \code{bit_length(string = VARCHAR)}: Number of bits in a \code{string}.
+\item \code{bit_length(bit = BIT)}: Returns the bit-length of the \code{bit} argument.
 }
 }
 

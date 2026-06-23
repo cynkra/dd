@@ -18,20 +18,20 @@ Get subfield (equivalent to extract).
 \section{Overloads}{
 
 \itemize{
-\item \code{date_part(ts = `VARCHAR[]`, col1 = DATE)}
-\item \code{date_part(ts = `VARCHAR[]`, col1 = INTERVAL)}
-\item \code{date_part(ts = `VARCHAR[]`, col1 = TIME)}
-\item \code{date_part(ts = `VARCHAR[]`, col1 = TIMESTAMP)}
-\item \code{date_part(ts = `VARCHAR[]`, col1 = `TIME WITH TIME ZONE`)}
-\item \code{date_part(ts = `VARCHAR[]`, col1 = TIME_NS)}
-\item \code{date_part(ts = VARCHAR, col1 = DATE)}
-\item \code{date_part(ts = VARCHAR, col1 = INTERVAL)}
-\item \code{date_part(ts = VARCHAR, col1 = TIME)}
-\item \code{date_part(ts = VARCHAR, col1 = TIMESTAMP)}
-\item \code{date_part(ts = VARCHAR, col1 = `TIME WITH TIME ZONE`)}
-\item \code{date_part(ts = VARCHAR, col1 = TIME_NS)}
-\item \code{date_part(ts = `VARCHAR[]`, col1 = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{date_part(ts = VARCHAR, col1 = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{date_part(ts = `VARCHAR[]`, col1 = DATE)}: Get subfield (equivalent to extract).
+\item \code{date_part(ts = `VARCHAR[]`, col1 = INTERVAL)}: Get subfield (equivalent to extract).
+\item \code{date_part(ts = `VARCHAR[]`, col1 = TIME)}: Get subfield (equivalent to extract).
+\item \code{date_part(ts = `VARCHAR[]`, col1 = TIMESTAMP)}: Get subfield (equivalent to extract).
+\item \code{date_part(ts = `VARCHAR[]`, col1 = `TIME WITH TIME ZONE`)}: Get subfield (equivalent to extract).
+\item \code{date_part(ts = `VARCHAR[]`, col1 = TIME_NS)}: Get subfield (equivalent to extract).
+\item \code{date_part(ts = VARCHAR, col1 = DATE)}: Get subfield (equivalent to extract).
+\item \code{date_part(ts = VARCHAR, col1 = INTERVAL)}: Get subfield (equivalent to extract).
+\item \code{date_part(ts = VARCHAR, col1 = TIME)}: Get subfield (equivalent to extract).
+\item \code{date_part(ts = VARCHAR, col1 = TIMESTAMP)}: Get subfield (equivalent to extract).
+\item \code{date_part(ts = VARCHAR, col1 = `TIME WITH TIME ZONE`)}: Get subfield (equivalent to extract).
+\item \code{date_part(ts = VARCHAR, col1 = TIME_NS)}: Get subfield (equivalent to extract).
+\item \code{date_part(ts = `VARCHAR[]`, col1 = `TIMESTAMP WITH TIME ZONE`)}: Get subfield (equivalent to extract).
+\item \code{date_part(ts = VARCHAR, col1 = `TIMESTAMP WITH TIME ZONE`)}: Get subfield (equivalent to extract).
 }
 }
 

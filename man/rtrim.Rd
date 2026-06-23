@@ -17,8 +17,8 @@ Removes any occurrences of any of the \code{characters} from the right side of t
 \section{Overloads}{
 
 \itemize{
-\item \code{rtrim(string = VARCHAR)}
-\item \code{rtrim(string = VARCHAR, characters = VARCHAR)}
+\item \code{rtrim(string = VARCHAR)}: Removes any occurrences of any of the \code{characters} from the right side of the \code{string}. \code{characters} defaults to \code{space}.
+\item \code{rtrim(string = VARCHAR, characters = VARCHAR)}: Removes any occurrences of any of the \code{characters} from the right side of the \code{string}. \code{characters} defaults to \code{space}.
 }
 }
 

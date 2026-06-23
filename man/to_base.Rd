@@ -19,8 +19,8 @@ Converts \code{number} to a string in the given base \code{radix}, optionally pa
 \section{Overloads}{
 
 \itemize{
-\item \code{to_base(number = BIGINT, radix = INTEGER)}
-\item \code{to_base(number = BIGINT, radix = INTEGER, min_length = INTEGER)}
+\item \code{to_base(number = BIGINT, radix = INTEGER)}: Converts \code{number} to a string in the given base \code{radix}, optionally padding with leading zeros to \code{min_length}.
+\item \code{to_base(number = BIGINT, radix = INTEGER, min_length = INTEGER)}: Converts \code{number} to a string in the given base \code{radix}, optionally padding with leading zeros to \code{min_length}.
 }
 }
 

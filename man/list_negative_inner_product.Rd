@@ -18,8 +18,8 @@ Computes the negative inner product between two same-sized lists.
 \section{Overloads}{
 
 \itemize{
-\item \code{list_negative_inner_product(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}
-\item \code{list_negative_inner_product(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}
+\item \code{list_negative_inner_product(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}: Computes the negative inner product between two same-sized lists.
+\item \code{list_negative_inner_product(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}: Computes the negative inner product between two same-sized lists.
 }
 }
 

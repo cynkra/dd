@@ -15,9 +15,9 @@ Internal only. Calculates the sum value for all tuples in arg without overflow c
 \section{Overloads}{
 
 \itemize{
-\item \code{sum_no_overflow(arg = INTEGER)}
-\item \code{sum_no_overflow(arg = BIGINT)}
-\item \code{sum_no_overflow(arg = DECIMAL)}
+\item \code{sum_no_overflow(arg = INTEGER)}: Internal only. Calculates the sum value for all tuples in arg without overflow checks.
+\item \code{sum_no_overflow(arg = BIGINT)}: Internal only. Calculates the sum value for all tuples in arg without overflow checks.
+\item \code{sum_no_overflow(arg = DECIMAL)}: Internal only. Calculates the sum value for all tuples in arg without overflow checks.
 }
 }
 

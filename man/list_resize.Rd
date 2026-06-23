@@ -20,8 +20,8 @@ Resizes the \code{list} to contain \code{size} elements. Initializes new element
 \section{Overloads}{
 
 \itemize{
-\item \code{list_resize(list = `ANY[]`, `size[` = ANY)}
-\item \code{list_resize(list = `ANY[]`, `size[` = ANY, `value]` = ANY)}
+\item \code{list_resize(list = `ANY[]`, `size[` = ANY)}: Resizes the \code{list} to contain \code{size} elements. Initializes new elements with \code{value} or \code{NULL} if \code{value} is not set.
+\item \code{list_resize(list = `ANY[]`, `size[` = ANY, `value]` = ANY)}: Resizes the \code{list} to contain \code{size} elements. Initializes new elements with \code{value} or \code{NULL} if \code{value} is not set.
 }
 }
 

@@ -15,8 +15,8 @@ Construct a day interval.
 \section{Overloads}{
 
 \itemize{
-\item \code{to_days(integer = INTEGER)}
-\item \code{to_days(integer = BIGINT)}
+\item \code{to_days(integer = INTEGER)}: Construct a day interval.
+\item \code{to_days(integer = BIGINT)}: Construct a day interval.
 }
 }
 

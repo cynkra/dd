@@ -19,8 +19,8 @@ Returns a \code{VARCHAR} with the SHA-256 hash of the \code{blob}.
 \section{Overloads}{
 
 \itemize{
-\item \code{sha256(value = VARCHAR)}
-\item \code{sha256(blob = BLOB)}
+\item \code{sha256(value = VARCHAR)}: Returns a \code{VARCHAR} with the SHA-256 hash of the \code{value}.
+\item \code{sha256(blob = BLOB)}: Returns a \code{VARCHAR} with the SHA-256 hash of the \code{blob}.
 }
 }
 

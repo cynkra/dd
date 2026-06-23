@@ -15,9 +15,9 @@ Rounds the number down.
 \section{Overloads}{
 
 \itemize{
-\item \code{floor(x = FLOAT)}
-\item \code{floor(x = DOUBLE)}
-\item \code{floor(x = DECIMAL)}
+\item \code{floor(x = FLOAT)}: Rounds the number down.
+\item \code{floor(x = DOUBLE)}: Rounds the number down.
+\item \code{floor(x = DECIMAL)}: Rounds the number down.
 }
 }
 

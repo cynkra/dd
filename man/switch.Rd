@@ -19,10 +19,10 @@ Creates a switch statement similar to CASE WHEN/THEN.
 \section{Overloads}{
 
 \itemize{
-\item \code{switch(key = K, map = `MAP(K, V)`)}
-\item \code{switch(key = K, map = `MAP(K, V)`, value = V)}
-\item \code{switch(key = `MAP(K, V)`, map = V)}
-\item \code{switch(key = `MAP(K, V)`)}
+\item \code{switch(key = K, map = `MAP(K, V)`)}: Creates a switch statement similar to CASE WHEN/THEN.
+\item \code{switch(key = K, map = `MAP(K, V)`, value = V)}: Creates a switch statement similar to CASE WHEN/THEN.
+\item \code{switch(key = `MAP(K, V)`, map = V)}: Creates a switch statement similar to CASE WHEN/THEN.
+\item \code{switch(key = `MAP(K, V)`)}: Creates a switch statement similar to CASE WHEN/THEN.
 }
 }
 

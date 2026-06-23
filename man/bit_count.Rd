@@ -15,12 +15,12 @@ Returns the number of bits that are set.
 \section{Overloads}{
 
 \itemize{
-\item \code{bit_count(x = TINYINT)}
-\item \code{bit_count(x = SMALLINT)}
-\item \code{bit_count(x = INTEGER)}
-\item \code{bit_count(x = BIGINT)}
-\item \code{bit_count(x = HUGEINT)}
-\item \code{bit_count(x = BIT)}
+\item \code{bit_count(x = TINYINT)}: Returns the number of bits that are set.
+\item \code{bit_count(x = SMALLINT)}: Returns the number of bits that are set.
+\item \code{bit_count(x = INTEGER)}: Returns the number of bits that are set.
+\item \code{bit_count(x = BIGINT)}: Returns the number of bits that are set.
+\item \code{bit_count(x = HUGEINT)}: Returns the number of bits that are set.
+\item \code{bit_count(x = BIT)}: Returns the number of bits that are set.
 }
 }
 

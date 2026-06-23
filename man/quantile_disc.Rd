@@ -18,9 +18,9 @@ Returns the exact quantile number between 0 and 1 . If pos is a LIST of FLOATs, 
 \section{Overloads}{
 
 \itemize{
-\item \code{quantile_disc(x = ANY, pos = DOUBLE)}
-\item \code{quantile_disc(x = ANY, pos = `DOUBLE[]`)}
-\item \code{quantile_disc(x = ANY)}
+\item \code{quantile_disc(x = ANY, pos = DOUBLE)}: Returns the exact quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding exact quantiles.
+\item \code{quantile_disc(x = ANY, pos = `DOUBLE[]`)}: Returns the exact quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding exact quantiles.
+\item \code{quantile_disc(x = ANY)}: Returns the exact quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding exact quantiles.
 }
 }
 

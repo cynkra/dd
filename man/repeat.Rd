@@ -28,8 +28,8 @@ Repeats the \code{list} \code{count} number of times.
 
 \itemize{
 \item \code{`repeat`(col0 = ANY, col1 = BIGINT)}
-\item \code{`repeat`(string = VARCHAR, count = BIGINT)}
-\item \code{`repeat`(blob = BLOB, count = BIGINT)}
+\item \code{`repeat`(string = VARCHAR, count = BIGINT)}: Repeats the \code{string} \code{count} number of times.
+\item \code{`repeat`(blob = BLOB, count = BIGINT)}: Repeats the \code{blob} \code{count} number of times.
 \item \code{`repeat`(col0 = `T[]`, col1 = BIGINT)}
 }
 }

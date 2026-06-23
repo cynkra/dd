@@ -15,14 +15,14 @@ Extract the epoch component in nanoseconds from a temporal type.
 \section{Overloads}{
 
 \itemize{
-\item \code{epoch_ns(temporal = DATE)}
-\item \code{epoch_ns(temporal = TIMESTAMP)}
-\item \code{epoch_ns(temporal = INTERVAL)}
-\item \code{epoch_ns(temporal = TIME)}
-\item \code{epoch_ns(temporal = TIME_NS)}
-\item \code{epoch_ns(temporal = `TIME WITH TIME ZONE`)}
-\item \code{epoch_ns(temporal = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{epoch_ns(temporal = TIMESTAMP_NS)}
+\item \code{epoch_ns(temporal = DATE)}: Extract the epoch component in nanoseconds from a temporal type.
+\item \code{epoch_ns(temporal = TIMESTAMP)}: Extract the epoch component in nanoseconds from a temporal type.
+\item \code{epoch_ns(temporal = INTERVAL)}: Extract the epoch component in nanoseconds from a temporal type.
+\item \code{epoch_ns(temporal = TIME)}: Extract the epoch component in nanoseconds from a temporal type.
+\item \code{epoch_ns(temporal = TIME_NS)}: Extract the epoch component in nanoseconds from a temporal type.
+\item \code{epoch_ns(temporal = `TIME WITH TIME ZONE`)}: Extract the epoch component in nanoseconds from a temporal type.
+\item \code{epoch_ns(temporal = `TIMESTAMP WITH TIME ZONE`)}: Extract the epoch component in nanoseconds from a temporal type.
+\item \code{epoch_ns(temporal = TIMESTAMP_NS)}: Extract the epoch component in nanoseconds from a temporal type.
 }
 }
 

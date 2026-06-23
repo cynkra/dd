@@ -9,17 +9,17 @@
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{`&`(left = TINYINT, right = TINYINT)}
-#' \item \code{`&`(left = SMALLINT, right = SMALLINT)}
-#' \item \code{`&`(left = INTEGER, right = INTEGER)}
-#' \item \code{`&`(left = BIGINT, right = BIGINT)}
-#' \item \code{`&`(left = HUGEINT, right = HUGEINT)}
-#' \item \code{`&`(left = UTINYINT, right = UTINYINT)}
-#' \item \code{`&`(left = USMALLINT, right = USMALLINT)}
-#' \item \code{`&`(left = UINTEGER, right = UINTEGER)}
-#' \item \code{`&`(left = UBIGINT, right = UBIGINT)}
-#' \item \code{`&`(left = UHUGEINT, right = UHUGEINT)}
-#' \item \code{`&`(left = BIT, right = BIT)}
+#' \item \code{`&`(left = TINYINT, right = TINYINT)}: Bitwise AND.
+#' \item \code{`&`(left = SMALLINT, right = SMALLINT)}: Bitwise AND.
+#' \item \code{`&`(left = INTEGER, right = INTEGER)}: Bitwise AND.
+#' \item \code{`&`(left = BIGINT, right = BIGINT)}: Bitwise AND.
+#' \item \code{`&`(left = HUGEINT, right = HUGEINT)}: Bitwise AND.
+#' \item \code{`&`(left = UTINYINT, right = UTINYINT)}: Bitwise AND.
+#' \item \code{`&`(left = USMALLINT, right = USMALLINT)}: Bitwise AND.
+#' \item \code{`&`(left = UINTEGER, right = UINTEGER)}: Bitwise AND.
+#' \item \code{`&`(left = UBIGINT, right = UBIGINT)}: Bitwise AND.
+#' \item \code{`&`(left = UHUGEINT, right = UHUGEINT)}: Bitwise AND.
+#' \item \code{`&`(left = BIT, right = BIT)}: Bitwise AND.
 #' }
 #' @param left `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @param right `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
@@ -63,17 +63,17 @@
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{`<<`(input = TINYINT, col1 = TINYINT)}
-#' \item \code{`<<`(input = SMALLINT, col1 = SMALLINT)}
-#' \item \code{`<<`(input = INTEGER, col1 = INTEGER)}
-#' \item \code{`<<`(input = BIGINT, col1 = BIGINT)}
-#' \item \code{`<<`(input = HUGEINT, col1 = HUGEINT)}
-#' \item \code{`<<`(input = UTINYINT, col1 = UTINYINT)}
-#' \item \code{`<<`(input = USMALLINT, col1 = USMALLINT)}
-#' \item \code{`<<`(input = UINTEGER, col1 = UINTEGER)}
-#' \item \code{`<<`(input = UBIGINT, col1 = UBIGINT)}
-#' \item \code{`<<`(input = UHUGEINT, col1 = UHUGEINT)}
-#' \item \code{`<<`(input = BIT, col1 = INTEGER)}
+#' \item \code{`<<`(input = TINYINT, col1 = TINYINT)}: Bitwise shift left.
+#' \item \code{`<<`(input = SMALLINT, col1 = SMALLINT)}: Bitwise shift left.
+#' \item \code{`<<`(input = INTEGER, col1 = INTEGER)}: Bitwise shift left.
+#' \item \code{`<<`(input = BIGINT, col1 = BIGINT)}: Bitwise shift left.
+#' \item \code{`<<`(input = HUGEINT, col1 = HUGEINT)}: Bitwise shift left.
+#' \item \code{`<<`(input = UTINYINT, col1 = UTINYINT)}: Bitwise shift left.
+#' \item \code{`<<`(input = USMALLINT, col1 = USMALLINT)}: Bitwise shift left.
+#' \item \code{`<<`(input = UINTEGER, col1 = UINTEGER)}: Bitwise shift left.
+#' \item \code{`<<`(input = UBIGINT, col1 = UBIGINT)}: Bitwise shift left.
+#' \item \code{`<<`(input = UHUGEINT, col1 = UHUGEINT)}: Bitwise shift left.
+#' \item \code{`<<`(input = BIT, col1 = INTEGER)}: Bitwise shift left.
 #' }
 #' @param input `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
@@ -96,17 +96,17 @@
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{`>>`(input = TINYINT, col1 = TINYINT)}
-#' \item \code{`>>`(input = SMALLINT, col1 = SMALLINT)}
-#' \item \code{`>>`(input = INTEGER, col1 = INTEGER)}
-#' \item \code{`>>`(input = BIGINT, col1 = BIGINT)}
-#' \item \code{`>>`(input = HUGEINT, col1 = HUGEINT)}
-#' \item \code{`>>`(input = UTINYINT, col1 = UTINYINT)}
-#' \item \code{`>>`(input = USMALLINT, col1 = USMALLINT)}
-#' \item \code{`>>`(input = UINTEGER, col1 = UINTEGER)}
-#' \item \code{`>>`(input = UBIGINT, col1 = UBIGINT)}
-#' \item \code{`>>`(input = UHUGEINT, col1 = UHUGEINT)}
-#' \item \code{`>>`(input = BIT, col1 = INTEGER)}
+#' \item \code{`>>`(input = TINYINT, col1 = TINYINT)}: Bitwise shift right.
+#' \item \code{`>>`(input = SMALLINT, col1 = SMALLINT)}: Bitwise shift right.
+#' \item \code{`>>`(input = INTEGER, col1 = INTEGER)}: Bitwise shift right.
+#' \item \code{`>>`(input = BIGINT, col1 = BIGINT)}: Bitwise shift right.
+#' \item \code{`>>`(input = HUGEINT, col1 = HUGEINT)}: Bitwise shift right.
+#' \item \code{`>>`(input = UTINYINT, col1 = UTINYINT)}: Bitwise shift right.
+#' \item \code{`>>`(input = USMALLINT, col1 = USMALLINT)}: Bitwise shift right.
+#' \item \code{`>>`(input = UINTEGER, col1 = UINTEGER)}: Bitwise shift right.
+#' \item \code{`>>`(input = UBIGINT, col1 = UBIGINT)}: Bitwise shift right.
+#' \item \code{`>>`(input = UHUGEINT, col1 = UHUGEINT)}: Bitwise shift right.
+#' \item \code{`>>`(input = BIT, col1 = INTEGER)}: Bitwise shift right.
 #' }
 #' @param input `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
@@ -129,19 +129,19 @@
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{abs(x = TINYINT)}
-#' \item \code{abs(x = SMALLINT)}
-#' \item \code{abs(x = INTEGER)}
-#' \item \code{abs(x = BIGINT)}
-#' \item \code{abs(x = HUGEINT)}
-#' \item \code{abs(x = FLOAT)}
-#' \item \code{abs(x = DOUBLE)}
-#' \item \code{abs(x = DECIMAL)}
-#' \item \code{abs(x = UTINYINT)}
-#' \item \code{abs(x = USMALLINT)}
-#' \item \code{abs(x = UINTEGER)}
-#' \item \code{abs(x = UBIGINT)}
-#' \item \code{abs(x = UHUGEINT)}
+#' \item \code{abs(x = TINYINT)}: Absolute value.
+#' \item \code{abs(x = SMALLINT)}: Absolute value.
+#' \item \code{abs(x = INTEGER)}: Absolute value.
+#' \item \code{abs(x = BIGINT)}: Absolute value.
+#' \item \code{abs(x = HUGEINT)}: Absolute value.
+#' \item \code{abs(x = FLOAT)}: Absolute value.
+#' \item \code{abs(x = DOUBLE)}: Absolute value.
+#' \item \code{abs(x = DECIMAL)}: Absolute value.
+#' \item \code{abs(x = UTINYINT)}: Absolute value.
+#' \item \code{abs(x = USMALLINT)}: Absolute value.
+#' \item \code{abs(x = UINTEGER)}: Absolute value.
+#' \item \code{abs(x = UBIGINT)}: Absolute value.
+#' \item \code{abs(x = UHUGEINT)}: Absolute value.
 #' }
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
@@ -282,10 +282,10 @@ add_parquet_key <- function(col0 = VARCHAR, col1 = VARCHAR) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{age(timestamp = TIMESTAMP)}
-#' \item \code{age(timestamp = TIMESTAMP, timestamp = TIMESTAMP)}
-#' \item \code{age(timestamp = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{age(timestamp = `TIMESTAMP WITH TIME ZONE`, timestamp = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{age(timestamp = TIMESTAMP)}: Subtract arguments, resulting in the time difference between the two timestamps.
+#' \item \code{age(timestamp = TIMESTAMP, timestamp = TIMESTAMP)}: Subtract arguments, resulting in the time difference between the two timestamps.
+#' \item \code{age(timestamp = `TIMESTAMP WITH TIME ZONE`)}: Subtract arguments, resulting in the time difference between the two timestamps.
+#' \item \code{age(timestamp = `TIMESTAMP WITH TIME ZONE`, timestamp = `TIMESTAMP WITH TIME ZONE`)}: Subtract arguments, resulting in the time difference between the two timestamps.
 #' }
 #' @param timestamp `TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `INTERVAL`
@@ -353,8 +353,8 @@ all_profiling_output <- function() {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{any_value(arg = DECIMAL)}
-#' \item \code{any_value(arg = ANY)}
+#' \item \code{any_value(arg = DECIMAL)}: Returns the first non-NULL value from arg. This function is affected by ordering.
+#' \item \code{any_value(arg = ANY)}: Returns the first non-NULL value from arg. This function is affected by ordering.
 #' }
 #' @param arg `DECIMAL | ANY`
 #' @return `DECIMAL | ANY`
@@ -390,30 +390,30 @@ approx_count_distinct <- function(any = ANY) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{approx_quantile(x = DECIMAL, pos = FLOAT)}
-#' \item \code{approx_quantile(x = SMALLINT, pos = FLOAT)}
-#' \item \code{approx_quantile(x = INTEGER, pos = FLOAT)}
-#' \item \code{approx_quantile(x = BIGINT, pos = FLOAT)}
-#' \item \code{approx_quantile(x = HUGEINT, pos = FLOAT)}
-#' \item \code{approx_quantile(x = DOUBLE, pos = FLOAT)}
-#' \item \code{approx_quantile(x = DATE, pos = FLOAT)}
-#' \item \code{approx_quantile(x = TIME, pos = FLOAT)}
-#' \item \code{approx_quantile(x = `TIME WITH TIME ZONE`, pos = FLOAT)}
-#' \item \code{approx_quantile(x = TIMESTAMP, pos = FLOAT)}
-#' \item \code{approx_quantile(x = `TIMESTAMP WITH TIME ZONE`, pos = FLOAT)}
-#' \item \code{approx_quantile(x = DECIMAL, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = TINYINT, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = SMALLINT, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = INTEGER, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = BIGINT, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = HUGEINT, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = FLOAT, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = DOUBLE, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = DATE, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = TIME, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = `TIME WITH TIME ZONE`, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = TIMESTAMP, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = `TIMESTAMP WITH TIME ZONE`, pos = `FLOAT[]`)}
+#' \item \code{approx_quantile(x = DECIMAL, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = SMALLINT, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = INTEGER, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = BIGINT, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = HUGEINT, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = DOUBLE, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = DATE, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = TIME, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = `TIME WITH TIME ZONE`, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = TIMESTAMP, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = `TIMESTAMP WITH TIME ZONE`, pos = FLOAT)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = DECIMAL, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = TINYINT, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = SMALLINT, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = INTEGER, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = BIGINT, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = HUGEINT, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = FLOAT, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = DOUBLE, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = DATE, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = TIME, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = `TIME WITH TIME ZONE`, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = TIMESTAMP, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
+#' \item \code{approx_quantile(x = `TIMESTAMP WITH TIME ZONE`, pos = `FLOAT[]`)}: Computes the approximate quantile using T-Digest.
 #' }
 #' @param x `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | DATE | TIME | TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TINYINT | FLOAT`
 #' @param pos `FLOAT | FLOAT[]`
@@ -455,98 +455,98 @@ approx_top_k <- function(val = ANY, k = BIGINT) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{arg_max(arg = INTEGER, val = INTEGER)}
-#' \item \code{arg_max(arg = INTEGER, val = BIGINT)}
-#' \item \code{arg_max(arg = INTEGER, val = HUGEINT)}
-#' \item \code{arg_max(arg = INTEGER, val = DOUBLE)}
-#' \item \code{arg_max(arg = INTEGER, val = VARCHAR)}
-#' \item \code{arg_max(arg = INTEGER, val = DATE)}
-#' \item \code{arg_max(arg = INTEGER, val = TIMESTAMP)}
-#' \item \code{arg_max(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max(arg = INTEGER, val = BLOB)}
-#' \item \code{arg_max(arg = BIGINT, val = INTEGER)}
-#' \item \code{arg_max(arg = BIGINT, val = BIGINT)}
-#' \item \code{arg_max(arg = BIGINT, val = HUGEINT)}
-#' \item \code{arg_max(arg = BIGINT, val = DOUBLE)}
-#' \item \code{arg_max(arg = BIGINT, val = VARCHAR)}
-#' \item \code{arg_max(arg = BIGINT, val = DATE)}
-#' \item \code{arg_max(arg = BIGINT, val = TIMESTAMP)}
-#' \item \code{arg_max(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max(arg = BIGINT, val = BLOB)}
-#' \item \code{arg_max(arg = DOUBLE, val = INTEGER)}
-#' \item \code{arg_max(arg = DOUBLE, val = BIGINT)}
-#' \item \code{arg_max(arg = DOUBLE, val = HUGEINT)}
-#' \item \code{arg_max(arg = DOUBLE, val = DOUBLE)}
-#' \item \code{arg_max(arg = DOUBLE, val = VARCHAR)}
-#' \item \code{arg_max(arg = DOUBLE, val = DATE)}
-#' \item \code{arg_max(arg = DOUBLE, val = TIMESTAMP)}
-#' \item \code{arg_max(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max(arg = DOUBLE, val = BLOB)}
-#' \item \code{arg_max(arg = VARCHAR, val = INTEGER)}
-#' \item \code{arg_max(arg = VARCHAR, val = BIGINT)}
-#' \item \code{arg_max(arg = VARCHAR, val = HUGEINT)}
-#' \item \code{arg_max(arg = VARCHAR, val = DOUBLE)}
-#' \item \code{arg_max(arg = VARCHAR, val = VARCHAR)}
-#' \item \code{arg_max(arg = VARCHAR, val = DATE)}
-#' \item \code{arg_max(arg = VARCHAR, val = TIMESTAMP)}
-#' \item \code{arg_max(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max(arg = VARCHAR, val = BLOB)}
-#' \item \code{arg_max(arg = DATE, val = INTEGER)}
-#' \item \code{arg_max(arg = DATE, val = BIGINT)}
-#' \item \code{arg_max(arg = DATE, val = HUGEINT)}
-#' \item \code{arg_max(arg = DATE, val = DOUBLE)}
-#' \item \code{arg_max(arg = DATE, val = VARCHAR)}
-#' \item \code{arg_max(arg = DATE, val = DATE)}
-#' \item \code{arg_max(arg = DATE, val = TIMESTAMP)}
-#' \item \code{arg_max(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max(arg = DATE, val = BLOB)}
-#' \item \code{arg_max(arg = TIMESTAMP, val = INTEGER)}
-#' \item \code{arg_max(arg = TIMESTAMP, val = BIGINT)}
-#' \item \code{arg_max(arg = TIMESTAMP, val = HUGEINT)}
-#' \item \code{arg_max(arg = TIMESTAMP, val = DOUBLE)}
-#' \item \code{arg_max(arg = TIMESTAMP, val = VARCHAR)}
-#' \item \code{arg_max(arg = TIMESTAMP, val = DATE)}
-#' \item \code{arg_max(arg = TIMESTAMP, val = TIMESTAMP)}
-#' \item \code{arg_max(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max(arg = TIMESTAMP, val = BLOB)}
-#' \item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}
-#' \item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}
-#' \item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}
-#' \item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}
-#' \item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}
-#' \item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}
-#' \item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}
-#' \item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}
-#' \item \code{arg_max(arg = BLOB, val = INTEGER)}
-#' \item \code{arg_max(arg = BLOB, val = BIGINT)}
-#' \item \code{arg_max(arg = BLOB, val = HUGEINT)}
-#' \item \code{arg_max(arg = BLOB, val = DOUBLE)}
-#' \item \code{arg_max(arg = BLOB, val = VARCHAR)}
-#' \item \code{arg_max(arg = BLOB, val = DATE)}
-#' \item \code{arg_max(arg = BLOB, val = TIMESTAMP)}
-#' \item \code{arg_max(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max(arg = BLOB, val = BLOB)}
-#' \item \code{arg_max(arg = DECIMAL, val = INTEGER)}
-#' \item \code{arg_max(arg = DECIMAL, val = BIGINT)}
-#' \item \code{arg_max(arg = DECIMAL, val = HUGEINT)}
-#' \item \code{arg_max(arg = DECIMAL, val = DOUBLE)}
-#' \item \code{arg_max(arg = DECIMAL, val = VARCHAR)}
-#' \item \code{arg_max(arg = DECIMAL, val = DATE)}
-#' \item \code{arg_max(arg = DECIMAL, val = TIMESTAMP)}
-#' \item \code{arg_max(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max(arg = DECIMAL, val = BLOB)}
-#' \item \code{arg_max(arg = ANY, val = INTEGER)}
-#' \item \code{arg_max(arg = ANY, val = BIGINT)}
-#' \item \code{arg_max(arg = ANY, val = HUGEINT)}
-#' \item \code{arg_max(arg = ANY, val = DOUBLE)}
-#' \item \code{arg_max(arg = ANY, val = VARCHAR)}
-#' \item \code{arg_max(arg = ANY, val = DATE)}
-#' \item \code{arg_max(arg = ANY, val = TIMESTAMP)}
-#' \item \code{arg_max(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max(arg = ANY, val = BLOB)}
-#' \item \code{arg_max(arg = ANY, val = ANY)}
-#' \item \code{arg_max(arg = ANY, val = ANY, col2 = BIGINT)}
+#' \item \code{arg_max(arg = INTEGER, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = INTEGER, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = INTEGER, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = INTEGER, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = INTEGER, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = INTEGER, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = INTEGER, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = INTEGER, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = BIGINT, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = BIGINT, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = BIGINT, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = BIGINT, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = BIGINT, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = BIGINT, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = BIGINT, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = BIGINT, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DOUBLE, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DOUBLE, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DOUBLE, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DOUBLE, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DOUBLE, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DOUBLE, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DOUBLE, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DOUBLE, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = VARCHAR, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = VARCHAR, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = VARCHAR, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = VARCHAR, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = VARCHAR, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = VARCHAR, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = VARCHAR, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = VARCHAR, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DATE, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DATE, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DATE, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DATE, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DATE, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DATE, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DATE, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DATE, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = TIMESTAMP, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = TIMESTAMP, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = TIMESTAMP, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = TIMESTAMP, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = TIMESTAMP, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = TIMESTAMP, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = TIMESTAMP, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = TIMESTAMP, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = BLOB, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = BLOB, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = BLOB, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = BLOB, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = BLOB, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = BLOB, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = BLOB, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = BLOB, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DECIMAL, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DECIMAL, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DECIMAL, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DECIMAL, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DECIMAL, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DECIMAL, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DECIMAL, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = DECIMAL, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = ANY, val = INTEGER)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = ANY, val = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = ANY, val = HUGEINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = ANY, val = DOUBLE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = ANY, val = VARCHAR)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = ANY, val = DATE)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = ANY, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = ANY, val = BLOB)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = ANY, val = ANY)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_max(arg = ANY, val = ANY, col2 = BIGINT)}: Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
 #' }
 #' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
@@ -584,97 +584,97 @@ max_by <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{arg_max_null(arg = INTEGER, val = INTEGER)}
-#' \item \code{arg_max_null(arg = INTEGER, val = BIGINT)}
-#' \item \code{arg_max_null(arg = INTEGER, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = INTEGER, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = INTEGER, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = INTEGER, val = DATE)}
-#' \item \code{arg_max_null(arg = INTEGER, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = INTEGER, val = BLOB)}
-#' \item \code{arg_max_null(arg = BIGINT, val = INTEGER)}
-#' \item \code{arg_max_null(arg = BIGINT, val = BIGINT)}
-#' \item \code{arg_max_null(arg = BIGINT, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = BIGINT, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = BIGINT, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = BIGINT, val = DATE)}
-#' \item \code{arg_max_null(arg = BIGINT, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = BIGINT, val = BLOB)}
-#' \item \code{arg_max_null(arg = DOUBLE, val = INTEGER)}
-#' \item \code{arg_max_null(arg = DOUBLE, val = BIGINT)}
-#' \item \code{arg_max_null(arg = DOUBLE, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = DOUBLE, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = DOUBLE, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = DOUBLE, val = DATE)}
-#' \item \code{arg_max_null(arg = DOUBLE, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = DOUBLE, val = BLOB)}
-#' \item \code{arg_max_null(arg = VARCHAR, val = INTEGER)}
-#' \item \code{arg_max_null(arg = VARCHAR, val = BIGINT)}
-#' \item \code{arg_max_null(arg = VARCHAR, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = VARCHAR, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = VARCHAR, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = VARCHAR, val = DATE)}
-#' \item \code{arg_max_null(arg = VARCHAR, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = VARCHAR, val = BLOB)}
-#' \item \code{arg_max_null(arg = DATE, val = INTEGER)}
-#' \item \code{arg_max_null(arg = DATE, val = BIGINT)}
-#' \item \code{arg_max_null(arg = DATE, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = DATE, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = DATE, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = DATE, val = DATE)}
-#' \item \code{arg_max_null(arg = DATE, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = DATE, val = BLOB)}
-#' \item \code{arg_max_null(arg = TIMESTAMP, val = INTEGER)}
-#' \item \code{arg_max_null(arg = TIMESTAMP, val = BIGINT)}
-#' \item \code{arg_max_null(arg = TIMESTAMP, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = TIMESTAMP, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = TIMESTAMP, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = TIMESTAMP, val = DATE)}
-#' \item \code{arg_max_null(arg = TIMESTAMP, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = TIMESTAMP, val = BLOB)}
-#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}
-#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}
-#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}
-#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}
-#' \item \code{arg_max_null(arg = BLOB, val = INTEGER)}
-#' \item \code{arg_max_null(arg = BLOB, val = BIGINT)}
-#' \item \code{arg_max_null(arg = BLOB, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = BLOB, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = BLOB, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = BLOB, val = DATE)}
-#' \item \code{arg_max_null(arg = BLOB, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = BLOB, val = BLOB)}
-#' \item \code{arg_max_null(arg = DECIMAL, val = INTEGER)}
-#' \item \code{arg_max_null(arg = DECIMAL, val = BIGINT)}
-#' \item \code{arg_max_null(arg = DECIMAL, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = DECIMAL, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = DECIMAL, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = DECIMAL, val = DATE)}
-#' \item \code{arg_max_null(arg = DECIMAL, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = DECIMAL, val = BLOB)}
-#' \item \code{arg_max_null(arg = ANY, val = INTEGER)}
-#' \item \code{arg_max_null(arg = ANY, val = BIGINT)}
-#' \item \code{arg_max_null(arg = ANY, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = ANY, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = ANY, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = ANY, val = DATE)}
-#' \item \code{arg_max_null(arg = ANY, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = ANY, val = BLOB)}
-#' \item \code{arg_max_null(arg = ANY, val = ANY)}
+#' \item \code{arg_max_null(arg = INTEGER, val = INTEGER)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = INTEGER, val = BIGINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = INTEGER, val = HUGEINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = INTEGER, val = DOUBLE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = INTEGER, val = VARCHAR)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = INTEGER, val = DATE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = INTEGER, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = INTEGER, val = BLOB)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = BIGINT, val = INTEGER)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = BIGINT, val = BIGINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = BIGINT, val = HUGEINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = BIGINT, val = DOUBLE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = BIGINT, val = VARCHAR)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = BIGINT, val = DATE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = BIGINT, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = BIGINT, val = BLOB)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DOUBLE, val = INTEGER)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DOUBLE, val = BIGINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DOUBLE, val = HUGEINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DOUBLE, val = DOUBLE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DOUBLE, val = VARCHAR)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DOUBLE, val = DATE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DOUBLE, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DOUBLE, val = BLOB)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = VARCHAR, val = INTEGER)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = VARCHAR, val = BIGINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = VARCHAR, val = HUGEINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = VARCHAR, val = DOUBLE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = VARCHAR, val = VARCHAR)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = VARCHAR, val = DATE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = VARCHAR, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = VARCHAR, val = BLOB)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DATE, val = INTEGER)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DATE, val = BIGINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DATE, val = HUGEINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DATE, val = DOUBLE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DATE, val = VARCHAR)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DATE, val = DATE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DATE, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DATE, val = BLOB)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = TIMESTAMP, val = INTEGER)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = TIMESTAMP, val = BIGINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = TIMESTAMP, val = HUGEINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = TIMESTAMP, val = DOUBLE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = TIMESTAMP, val = VARCHAR)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = TIMESTAMP, val = DATE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = TIMESTAMP, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = TIMESTAMP, val = BLOB)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = BLOB, val = INTEGER)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = BLOB, val = BIGINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = BLOB, val = HUGEINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = BLOB, val = DOUBLE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = BLOB, val = VARCHAR)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = BLOB, val = DATE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = BLOB, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = BLOB, val = BLOB)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DECIMAL, val = INTEGER)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DECIMAL, val = BIGINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DECIMAL, val = HUGEINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DECIMAL, val = DOUBLE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DECIMAL, val = VARCHAR)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DECIMAL, val = DATE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DECIMAL, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = DECIMAL, val = BLOB)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = ANY, val = INTEGER)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = ANY, val = BIGINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = ANY, val = HUGEINT)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = ANY, val = DOUBLE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = ANY, val = VARCHAR)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = ANY, val = DATE)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = ANY, val = TIMESTAMP)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = ANY, val = BLOB)}: Finds the row with the maximum val. Calculates the arg expression at that row.
+#' \item \code{arg_max_null(arg = ANY, val = ANY)}: Finds the row with the maximum val. Calculates the arg expression at that row.
 #' }
 #' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
@@ -697,98 +697,98 @@ arg_max_null <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIM
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{arg_max_nulls_last(arg = INTEGER, val = INTEGER)}
-#' \item \code{arg_max_nulls_last(arg = INTEGER, val = BIGINT)}
-#' \item \code{arg_max_nulls_last(arg = INTEGER, val = HUGEINT)}
-#' \item \code{arg_max_nulls_last(arg = INTEGER, val = DOUBLE)}
-#' \item \code{arg_max_nulls_last(arg = INTEGER, val = VARCHAR)}
-#' \item \code{arg_max_nulls_last(arg = INTEGER, val = DATE)}
-#' \item \code{arg_max_nulls_last(arg = INTEGER, val = TIMESTAMP)}
-#' \item \code{arg_max_nulls_last(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_nulls_last(arg = INTEGER, val = BLOB)}
-#' \item \code{arg_max_nulls_last(arg = BIGINT, val = INTEGER)}
-#' \item \code{arg_max_nulls_last(arg = BIGINT, val = BIGINT)}
-#' \item \code{arg_max_nulls_last(arg = BIGINT, val = HUGEINT)}
-#' \item \code{arg_max_nulls_last(arg = BIGINT, val = DOUBLE)}
-#' \item \code{arg_max_nulls_last(arg = BIGINT, val = VARCHAR)}
-#' \item \code{arg_max_nulls_last(arg = BIGINT, val = DATE)}
-#' \item \code{arg_max_nulls_last(arg = BIGINT, val = TIMESTAMP)}
-#' \item \code{arg_max_nulls_last(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_nulls_last(arg = BIGINT, val = BLOB)}
-#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = INTEGER)}
-#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = BIGINT)}
-#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = HUGEINT)}
-#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = DOUBLE)}
-#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = VARCHAR)}
-#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = DATE)}
-#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = TIMESTAMP)}
-#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = BLOB)}
-#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = INTEGER)}
-#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = BIGINT)}
-#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = HUGEINT)}
-#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = DOUBLE)}
-#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = VARCHAR)}
-#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = DATE)}
-#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = TIMESTAMP)}
-#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = BLOB)}
-#' \item \code{arg_max_nulls_last(arg = DATE, val = INTEGER)}
-#' \item \code{arg_max_nulls_last(arg = DATE, val = BIGINT)}
-#' \item \code{arg_max_nulls_last(arg = DATE, val = HUGEINT)}
-#' \item \code{arg_max_nulls_last(arg = DATE, val = DOUBLE)}
-#' \item \code{arg_max_nulls_last(arg = DATE, val = VARCHAR)}
-#' \item \code{arg_max_nulls_last(arg = DATE, val = DATE)}
-#' \item \code{arg_max_nulls_last(arg = DATE, val = TIMESTAMP)}
-#' \item \code{arg_max_nulls_last(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_nulls_last(arg = DATE, val = BLOB)}
-#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = INTEGER)}
-#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = BIGINT)}
-#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = HUGEINT)}
-#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = DOUBLE)}
-#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = VARCHAR)}
-#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = DATE)}
-#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = TIMESTAMP)}
-#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = BLOB)}
-#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}
-#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}
-#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}
-#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}
-#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}
-#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}
-#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}
-#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}
-#' \item \code{arg_max_nulls_last(arg = BLOB, val = INTEGER)}
-#' \item \code{arg_max_nulls_last(arg = BLOB, val = BIGINT)}
-#' \item \code{arg_max_nulls_last(arg = BLOB, val = HUGEINT)}
-#' \item \code{arg_max_nulls_last(arg = BLOB, val = DOUBLE)}
-#' \item \code{arg_max_nulls_last(arg = BLOB, val = VARCHAR)}
-#' \item \code{arg_max_nulls_last(arg = BLOB, val = DATE)}
-#' \item \code{arg_max_nulls_last(arg = BLOB, val = TIMESTAMP)}
-#' \item \code{arg_max_nulls_last(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_nulls_last(arg = BLOB, val = BLOB)}
-#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = INTEGER)}
-#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = BIGINT)}
-#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = HUGEINT)}
-#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = DOUBLE)}
-#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = VARCHAR)}
-#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = DATE)}
-#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = TIMESTAMP)}
-#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = BLOB)}
-#' \item \code{arg_max_nulls_last(arg = ANY, val = INTEGER)}
-#' \item \code{arg_max_nulls_last(arg = ANY, val = BIGINT)}
-#' \item \code{arg_max_nulls_last(arg = ANY, val = HUGEINT)}
-#' \item \code{arg_max_nulls_last(arg = ANY, val = DOUBLE)}
-#' \item \code{arg_max_nulls_last(arg = ANY, val = VARCHAR)}
-#' \item \code{arg_max_nulls_last(arg = ANY, val = DATE)}
-#' \item \code{arg_max_nulls_last(arg = ANY, val = TIMESTAMP)}
-#' \item \code{arg_max_nulls_last(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_nulls_last(arg = ANY, val = BLOB)}
-#' \item \code{arg_max_nulls_last(arg = ANY, val = ANY)}
-#' \item \code{arg_max_nulls_last(arg = ANY, val = ANY, N = BIGINT)}
+#' \item \code{arg_max_nulls_last(arg = INTEGER, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = INTEGER, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = INTEGER, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = INTEGER, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = INTEGER, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = INTEGER, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = INTEGER, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = INTEGER, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = BIGINT, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = BIGINT, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = BIGINT, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = BIGINT, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = BIGINT, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = BIGINT, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = BIGINT, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = BIGINT, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DOUBLE, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = VARCHAR, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DATE, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DATE, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DATE, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DATE, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DATE, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DATE, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DATE, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DATE, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = TIMESTAMP, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = BLOB, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = BLOB, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = BLOB, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = BLOB, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = BLOB, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = BLOB, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = BLOB, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = BLOB, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = DECIMAL, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = ANY, val = INTEGER)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = ANY, val = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = ANY, val = HUGEINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = ANY, val = DOUBLE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = ANY, val = VARCHAR)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = ANY, val = DATE)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = ANY, val = TIMESTAMP)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = ANY, val = BLOB)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = ANY, val = ANY)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_max_nulls_last(arg = ANY, val = ANY, N = BIGINT)}: Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
 #' }
 #' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
@@ -812,98 +812,98 @@ arg_max_nulls_last <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{arg_min(arg = INTEGER, val = INTEGER)}
-#' \item \code{arg_min(arg = INTEGER, val = BIGINT)}
-#' \item \code{arg_min(arg = INTEGER, val = HUGEINT)}
-#' \item \code{arg_min(arg = INTEGER, val = DOUBLE)}
-#' \item \code{arg_min(arg = INTEGER, val = VARCHAR)}
-#' \item \code{arg_min(arg = INTEGER, val = DATE)}
-#' \item \code{arg_min(arg = INTEGER, val = TIMESTAMP)}
-#' \item \code{arg_min(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min(arg = INTEGER, val = BLOB)}
-#' \item \code{arg_min(arg = BIGINT, val = INTEGER)}
-#' \item \code{arg_min(arg = BIGINT, val = BIGINT)}
-#' \item \code{arg_min(arg = BIGINT, val = HUGEINT)}
-#' \item \code{arg_min(arg = BIGINT, val = DOUBLE)}
-#' \item \code{arg_min(arg = BIGINT, val = VARCHAR)}
-#' \item \code{arg_min(arg = BIGINT, val = DATE)}
-#' \item \code{arg_min(arg = BIGINT, val = TIMESTAMP)}
-#' \item \code{arg_min(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min(arg = BIGINT, val = BLOB)}
-#' \item \code{arg_min(arg = DOUBLE, val = INTEGER)}
-#' \item \code{arg_min(arg = DOUBLE, val = BIGINT)}
-#' \item \code{arg_min(arg = DOUBLE, val = HUGEINT)}
-#' \item \code{arg_min(arg = DOUBLE, val = DOUBLE)}
-#' \item \code{arg_min(arg = DOUBLE, val = VARCHAR)}
-#' \item \code{arg_min(arg = DOUBLE, val = DATE)}
-#' \item \code{arg_min(arg = DOUBLE, val = TIMESTAMP)}
-#' \item \code{arg_min(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min(arg = DOUBLE, val = BLOB)}
-#' \item \code{arg_min(arg = VARCHAR, val = INTEGER)}
-#' \item \code{arg_min(arg = VARCHAR, val = BIGINT)}
-#' \item \code{arg_min(arg = VARCHAR, val = HUGEINT)}
-#' \item \code{arg_min(arg = VARCHAR, val = DOUBLE)}
-#' \item \code{arg_min(arg = VARCHAR, val = VARCHAR)}
-#' \item \code{arg_min(arg = VARCHAR, val = DATE)}
-#' \item \code{arg_min(arg = VARCHAR, val = TIMESTAMP)}
-#' \item \code{arg_min(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min(arg = VARCHAR, val = BLOB)}
-#' \item \code{arg_min(arg = DATE, val = INTEGER)}
-#' \item \code{arg_min(arg = DATE, val = BIGINT)}
-#' \item \code{arg_min(arg = DATE, val = HUGEINT)}
-#' \item \code{arg_min(arg = DATE, val = DOUBLE)}
-#' \item \code{arg_min(arg = DATE, val = VARCHAR)}
-#' \item \code{arg_min(arg = DATE, val = DATE)}
-#' \item \code{arg_min(arg = DATE, val = TIMESTAMP)}
-#' \item \code{arg_min(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min(arg = DATE, val = BLOB)}
-#' \item \code{arg_min(arg = TIMESTAMP, val = INTEGER)}
-#' \item \code{arg_min(arg = TIMESTAMP, val = BIGINT)}
-#' \item \code{arg_min(arg = TIMESTAMP, val = HUGEINT)}
-#' \item \code{arg_min(arg = TIMESTAMP, val = DOUBLE)}
-#' \item \code{arg_min(arg = TIMESTAMP, val = VARCHAR)}
-#' \item \code{arg_min(arg = TIMESTAMP, val = DATE)}
-#' \item \code{arg_min(arg = TIMESTAMP, val = TIMESTAMP)}
-#' \item \code{arg_min(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min(arg = TIMESTAMP, val = BLOB)}
-#' \item \code{arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}
-#' \item \code{arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}
-#' \item \code{arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}
-#' \item \code{arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}
-#' \item \code{arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}
-#' \item \code{arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}
-#' \item \code{arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}
-#' \item \code{arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}
-#' \item \code{arg_min(arg = BLOB, val = INTEGER)}
-#' \item \code{arg_min(arg = BLOB, val = BIGINT)}
-#' \item \code{arg_min(arg = BLOB, val = HUGEINT)}
-#' \item \code{arg_min(arg = BLOB, val = DOUBLE)}
-#' \item \code{arg_min(arg = BLOB, val = VARCHAR)}
-#' \item \code{arg_min(arg = BLOB, val = DATE)}
-#' \item \code{arg_min(arg = BLOB, val = TIMESTAMP)}
-#' \item \code{arg_min(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min(arg = BLOB, val = BLOB)}
-#' \item \code{arg_min(arg = DECIMAL, val = INTEGER)}
-#' \item \code{arg_min(arg = DECIMAL, val = BIGINT)}
-#' \item \code{arg_min(arg = DECIMAL, val = HUGEINT)}
-#' \item \code{arg_min(arg = DECIMAL, val = DOUBLE)}
-#' \item \code{arg_min(arg = DECIMAL, val = VARCHAR)}
-#' \item \code{arg_min(arg = DECIMAL, val = DATE)}
-#' \item \code{arg_min(arg = DECIMAL, val = TIMESTAMP)}
-#' \item \code{arg_min(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min(arg = DECIMAL, val = BLOB)}
-#' \item \code{arg_min(arg = ANY, val = INTEGER)}
-#' \item \code{arg_min(arg = ANY, val = BIGINT)}
-#' \item \code{arg_min(arg = ANY, val = HUGEINT)}
-#' \item \code{arg_min(arg = ANY, val = DOUBLE)}
-#' \item \code{arg_min(arg = ANY, val = VARCHAR)}
-#' \item \code{arg_min(arg = ANY, val = DATE)}
-#' \item \code{arg_min(arg = ANY, val = TIMESTAMP)}
-#' \item \code{arg_min(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min(arg = ANY, val = BLOB)}
-#' \item \code{arg_min(arg = ANY, val = ANY)}
-#' \item \code{arg_min(arg = ANY, val = ANY, col2 = BIGINT)}
+#' \item \code{arg_min(arg = INTEGER, val = INTEGER)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = INTEGER, val = BIGINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = INTEGER, val = HUGEINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = INTEGER, val = DOUBLE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = INTEGER, val = VARCHAR)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = INTEGER, val = DATE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = INTEGER, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = INTEGER, val = BLOB)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = BIGINT, val = INTEGER)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = BIGINT, val = BIGINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = BIGINT, val = HUGEINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = BIGINT, val = DOUBLE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = BIGINT, val = VARCHAR)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = BIGINT, val = DATE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = BIGINT, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = BIGINT, val = BLOB)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DOUBLE, val = INTEGER)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DOUBLE, val = BIGINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DOUBLE, val = HUGEINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DOUBLE, val = DOUBLE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DOUBLE, val = VARCHAR)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DOUBLE, val = DATE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DOUBLE, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DOUBLE, val = BLOB)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = VARCHAR, val = INTEGER)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = VARCHAR, val = BIGINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = VARCHAR, val = HUGEINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = VARCHAR, val = DOUBLE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = VARCHAR, val = VARCHAR)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = VARCHAR, val = DATE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = VARCHAR, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = VARCHAR, val = BLOB)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DATE, val = INTEGER)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DATE, val = BIGINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DATE, val = HUGEINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DATE, val = DOUBLE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DATE, val = VARCHAR)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DATE, val = DATE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DATE, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DATE, val = BLOB)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = TIMESTAMP, val = INTEGER)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = TIMESTAMP, val = BIGINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = TIMESTAMP, val = HUGEINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = TIMESTAMP, val = DOUBLE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = TIMESTAMP, val = VARCHAR)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = TIMESTAMP, val = DATE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = TIMESTAMP, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = TIMESTAMP, val = BLOB)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = BLOB, val = INTEGER)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = BLOB, val = BIGINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = BLOB, val = HUGEINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = BLOB, val = DOUBLE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = BLOB, val = VARCHAR)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = BLOB, val = DATE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = BLOB, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = BLOB, val = BLOB)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DECIMAL, val = INTEGER)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DECIMAL, val = BIGINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DECIMAL, val = HUGEINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DECIMAL, val = DOUBLE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DECIMAL, val = VARCHAR)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DECIMAL, val = DATE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DECIMAL, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = DECIMAL, val = BLOB)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = ANY, val = INTEGER)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = ANY, val = BIGINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = ANY, val = HUGEINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = ANY, val = DOUBLE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = ANY, val = VARCHAR)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = ANY, val = DATE)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = ANY, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = ANY, val = BLOB)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = ANY, val = ANY)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
+#' \item \code{arg_min(arg = ANY, val = ANY, col2 = BIGINT)}: Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
 #' }
 #' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
@@ -941,97 +941,97 @@ min_by <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{arg_min_null(arg = INTEGER, val = INTEGER)}
-#' \item \code{arg_min_null(arg = INTEGER, val = BIGINT)}
-#' \item \code{arg_min_null(arg = INTEGER, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = INTEGER, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = INTEGER, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = INTEGER, val = DATE)}
-#' \item \code{arg_min_null(arg = INTEGER, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = INTEGER, val = BLOB)}
-#' \item \code{arg_min_null(arg = BIGINT, val = INTEGER)}
-#' \item \code{arg_min_null(arg = BIGINT, val = BIGINT)}
-#' \item \code{arg_min_null(arg = BIGINT, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = BIGINT, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = BIGINT, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = BIGINT, val = DATE)}
-#' \item \code{arg_min_null(arg = BIGINT, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = BIGINT, val = BLOB)}
-#' \item \code{arg_min_null(arg = DOUBLE, val = INTEGER)}
-#' \item \code{arg_min_null(arg = DOUBLE, val = BIGINT)}
-#' \item \code{arg_min_null(arg = DOUBLE, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = DOUBLE, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = DOUBLE, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = DOUBLE, val = DATE)}
-#' \item \code{arg_min_null(arg = DOUBLE, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = DOUBLE, val = BLOB)}
-#' \item \code{arg_min_null(arg = VARCHAR, val = INTEGER)}
-#' \item \code{arg_min_null(arg = VARCHAR, val = BIGINT)}
-#' \item \code{arg_min_null(arg = VARCHAR, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = VARCHAR, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = VARCHAR, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = VARCHAR, val = DATE)}
-#' \item \code{arg_min_null(arg = VARCHAR, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = VARCHAR, val = BLOB)}
-#' \item \code{arg_min_null(arg = DATE, val = INTEGER)}
-#' \item \code{arg_min_null(arg = DATE, val = BIGINT)}
-#' \item \code{arg_min_null(arg = DATE, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = DATE, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = DATE, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = DATE, val = DATE)}
-#' \item \code{arg_min_null(arg = DATE, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = DATE, val = BLOB)}
-#' \item \code{arg_min_null(arg = TIMESTAMP, val = INTEGER)}
-#' \item \code{arg_min_null(arg = TIMESTAMP, val = BIGINT)}
-#' \item \code{arg_min_null(arg = TIMESTAMP, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = TIMESTAMP, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = TIMESTAMP, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = TIMESTAMP, val = DATE)}
-#' \item \code{arg_min_null(arg = TIMESTAMP, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = TIMESTAMP, val = BLOB)}
-#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}
-#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}
-#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}
-#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}
-#' \item \code{arg_min_null(arg = BLOB, val = INTEGER)}
-#' \item \code{arg_min_null(arg = BLOB, val = BIGINT)}
-#' \item \code{arg_min_null(arg = BLOB, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = BLOB, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = BLOB, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = BLOB, val = DATE)}
-#' \item \code{arg_min_null(arg = BLOB, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = BLOB, val = BLOB)}
-#' \item \code{arg_min_null(arg = DECIMAL, val = INTEGER)}
-#' \item \code{arg_min_null(arg = DECIMAL, val = BIGINT)}
-#' \item \code{arg_min_null(arg = DECIMAL, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = DECIMAL, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = DECIMAL, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = DECIMAL, val = DATE)}
-#' \item \code{arg_min_null(arg = DECIMAL, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = DECIMAL, val = BLOB)}
-#' \item \code{arg_min_null(arg = ANY, val = INTEGER)}
-#' \item \code{arg_min_null(arg = ANY, val = BIGINT)}
-#' \item \code{arg_min_null(arg = ANY, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = ANY, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = ANY, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = ANY, val = DATE)}
-#' \item \code{arg_min_null(arg = ANY, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = ANY, val = BLOB)}
-#' \item \code{arg_min_null(arg = ANY, val = ANY)}
+#' \item \code{arg_min_null(arg = INTEGER, val = INTEGER)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = INTEGER, val = BIGINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = INTEGER, val = HUGEINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = INTEGER, val = DOUBLE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = INTEGER, val = VARCHAR)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = INTEGER, val = DATE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = INTEGER, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = INTEGER, val = BLOB)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = BIGINT, val = INTEGER)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = BIGINT, val = BIGINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = BIGINT, val = HUGEINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = BIGINT, val = DOUBLE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = BIGINT, val = VARCHAR)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = BIGINT, val = DATE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = BIGINT, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = BIGINT, val = BLOB)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DOUBLE, val = INTEGER)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DOUBLE, val = BIGINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DOUBLE, val = HUGEINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DOUBLE, val = DOUBLE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DOUBLE, val = VARCHAR)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DOUBLE, val = DATE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DOUBLE, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DOUBLE, val = BLOB)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = VARCHAR, val = INTEGER)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = VARCHAR, val = BIGINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = VARCHAR, val = HUGEINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = VARCHAR, val = DOUBLE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = VARCHAR, val = VARCHAR)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = VARCHAR, val = DATE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = VARCHAR, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = VARCHAR, val = BLOB)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DATE, val = INTEGER)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DATE, val = BIGINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DATE, val = HUGEINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DATE, val = DOUBLE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DATE, val = VARCHAR)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DATE, val = DATE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DATE, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DATE, val = BLOB)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = TIMESTAMP, val = INTEGER)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = TIMESTAMP, val = BIGINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = TIMESTAMP, val = HUGEINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = TIMESTAMP, val = DOUBLE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = TIMESTAMP, val = VARCHAR)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = TIMESTAMP, val = DATE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = TIMESTAMP, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = TIMESTAMP, val = BLOB)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = BLOB, val = INTEGER)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = BLOB, val = BIGINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = BLOB, val = HUGEINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = BLOB, val = DOUBLE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = BLOB, val = VARCHAR)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = BLOB, val = DATE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = BLOB, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = BLOB, val = BLOB)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DECIMAL, val = INTEGER)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DECIMAL, val = BIGINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DECIMAL, val = HUGEINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DECIMAL, val = DOUBLE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DECIMAL, val = VARCHAR)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DECIMAL, val = DATE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DECIMAL, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = DECIMAL, val = BLOB)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = ANY, val = INTEGER)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = ANY, val = BIGINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = ANY, val = HUGEINT)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = ANY, val = DOUBLE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = ANY, val = VARCHAR)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = ANY, val = DATE)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = ANY, val = TIMESTAMP)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = ANY, val = BLOB)}: Finds the row with the minimum val. Calculates the arg expression at that row.
+#' \item \code{arg_min_null(arg = ANY, val = ANY)}: Finds the row with the minimum val. Calculates the arg expression at that row.
 #' }
 #' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
@@ -1054,98 +1054,98 @@ arg_min_null <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIM
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{arg_min_nulls_last(arg = INTEGER, val = INTEGER)}
-#' \item \code{arg_min_nulls_last(arg = INTEGER, val = BIGINT)}
-#' \item \code{arg_min_nulls_last(arg = INTEGER, val = HUGEINT)}
-#' \item \code{arg_min_nulls_last(arg = INTEGER, val = DOUBLE)}
-#' \item \code{arg_min_nulls_last(arg = INTEGER, val = VARCHAR)}
-#' \item \code{arg_min_nulls_last(arg = INTEGER, val = DATE)}
-#' \item \code{arg_min_nulls_last(arg = INTEGER, val = TIMESTAMP)}
-#' \item \code{arg_min_nulls_last(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_nulls_last(arg = INTEGER, val = BLOB)}
-#' \item \code{arg_min_nulls_last(arg = BIGINT, val = INTEGER)}
-#' \item \code{arg_min_nulls_last(arg = BIGINT, val = BIGINT)}
-#' \item \code{arg_min_nulls_last(arg = BIGINT, val = HUGEINT)}
-#' \item \code{arg_min_nulls_last(arg = BIGINT, val = DOUBLE)}
-#' \item \code{arg_min_nulls_last(arg = BIGINT, val = VARCHAR)}
-#' \item \code{arg_min_nulls_last(arg = BIGINT, val = DATE)}
-#' \item \code{arg_min_nulls_last(arg = BIGINT, val = TIMESTAMP)}
-#' \item \code{arg_min_nulls_last(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_nulls_last(arg = BIGINT, val = BLOB)}
-#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = INTEGER)}
-#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = BIGINT)}
-#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = HUGEINT)}
-#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = DOUBLE)}
-#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = VARCHAR)}
-#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = DATE)}
-#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = TIMESTAMP)}
-#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = BLOB)}
-#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = INTEGER)}
-#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = BIGINT)}
-#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = HUGEINT)}
-#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = DOUBLE)}
-#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = VARCHAR)}
-#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = DATE)}
-#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = TIMESTAMP)}
-#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = BLOB)}
-#' \item \code{arg_min_nulls_last(arg = DATE, val = INTEGER)}
-#' \item \code{arg_min_nulls_last(arg = DATE, val = BIGINT)}
-#' \item \code{arg_min_nulls_last(arg = DATE, val = HUGEINT)}
-#' \item \code{arg_min_nulls_last(arg = DATE, val = DOUBLE)}
-#' \item \code{arg_min_nulls_last(arg = DATE, val = VARCHAR)}
-#' \item \code{arg_min_nulls_last(arg = DATE, val = DATE)}
-#' \item \code{arg_min_nulls_last(arg = DATE, val = TIMESTAMP)}
-#' \item \code{arg_min_nulls_last(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_nulls_last(arg = DATE, val = BLOB)}
-#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = INTEGER)}
-#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = BIGINT)}
-#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = HUGEINT)}
-#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = DOUBLE)}
-#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = VARCHAR)}
-#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = DATE)}
-#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = TIMESTAMP)}
-#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = BLOB)}
-#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}
-#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}
-#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}
-#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}
-#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}
-#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}
-#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}
-#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}
-#' \item \code{arg_min_nulls_last(arg = BLOB, val = INTEGER)}
-#' \item \code{arg_min_nulls_last(arg = BLOB, val = BIGINT)}
-#' \item \code{arg_min_nulls_last(arg = BLOB, val = HUGEINT)}
-#' \item \code{arg_min_nulls_last(arg = BLOB, val = DOUBLE)}
-#' \item \code{arg_min_nulls_last(arg = BLOB, val = VARCHAR)}
-#' \item \code{arg_min_nulls_last(arg = BLOB, val = DATE)}
-#' \item \code{arg_min_nulls_last(arg = BLOB, val = TIMESTAMP)}
-#' \item \code{arg_min_nulls_last(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_nulls_last(arg = BLOB, val = BLOB)}
-#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = INTEGER)}
-#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = BIGINT)}
-#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = HUGEINT)}
-#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = DOUBLE)}
-#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = VARCHAR)}
-#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = DATE)}
-#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = TIMESTAMP)}
-#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = BLOB)}
-#' \item \code{arg_min_nulls_last(arg = ANY, val = INTEGER)}
-#' \item \code{arg_min_nulls_last(arg = ANY, val = BIGINT)}
-#' \item \code{arg_min_nulls_last(arg = ANY, val = HUGEINT)}
-#' \item \code{arg_min_nulls_last(arg = ANY, val = DOUBLE)}
-#' \item \code{arg_min_nulls_last(arg = ANY, val = VARCHAR)}
-#' \item \code{arg_min_nulls_last(arg = ANY, val = DATE)}
-#' \item \code{arg_min_nulls_last(arg = ANY, val = TIMESTAMP)}
-#' \item \code{arg_min_nulls_last(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_nulls_last(arg = ANY, val = BLOB)}
-#' \item \code{arg_min_nulls_last(arg = ANY, val = ANY)}
-#' \item \code{arg_min_nulls_last(arg = ANY, val = ANY, N = BIGINT)}
+#' \item \code{arg_min_nulls_last(arg = INTEGER, val = INTEGER)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = INTEGER, val = BIGINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = INTEGER, val = HUGEINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = INTEGER, val = DOUBLE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = INTEGER, val = VARCHAR)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = INTEGER, val = DATE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = INTEGER, val = TIMESTAMP)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = INTEGER, val = BLOB)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = BIGINT, val = INTEGER)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = BIGINT, val = BIGINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = BIGINT, val = HUGEINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = BIGINT, val = DOUBLE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = BIGINT, val = VARCHAR)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = BIGINT, val = DATE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = BIGINT, val = TIMESTAMP)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = BIGINT, val = BLOB)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = INTEGER)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = BIGINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = HUGEINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = DOUBLE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = VARCHAR)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = DATE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = TIMESTAMP)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DOUBLE, val = BLOB)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = INTEGER)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = BIGINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = HUGEINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = DOUBLE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = VARCHAR)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = DATE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = TIMESTAMP)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = VARCHAR, val = BLOB)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DATE, val = INTEGER)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DATE, val = BIGINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DATE, val = HUGEINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DATE, val = DOUBLE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DATE, val = VARCHAR)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DATE, val = DATE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DATE, val = TIMESTAMP)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DATE, val = BLOB)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = INTEGER)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = BIGINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = HUGEINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = DOUBLE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = VARCHAR)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = DATE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = TIMESTAMP)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = TIMESTAMP, val = BLOB)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = BLOB, val = INTEGER)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = BLOB, val = BIGINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = BLOB, val = HUGEINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = BLOB, val = DOUBLE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = BLOB, val = VARCHAR)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = BLOB, val = DATE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = BLOB, val = TIMESTAMP)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = BLOB, val = BLOB)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = INTEGER)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = BIGINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = HUGEINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = DOUBLE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = VARCHAR)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = DATE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = TIMESTAMP)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = DECIMAL, val = BLOB)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = ANY, val = INTEGER)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = ANY, val = BIGINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = ANY, val = HUGEINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = ANY, val = DOUBLE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = ANY, val = VARCHAR)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = ANY, val = DATE)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = ANY, val = TIMESTAMP)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = ANY, val = BLOB)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = ANY, val = ANY)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
+#' \item \code{arg_min_nulls_last(arg = ANY, val = ANY, N = BIGINT)}: Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
 #' }
 #' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
@@ -1184,8 +1184,8 @@ array_append <- function(arr, el) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{array_cosine_distance(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)}
-#' \item \code{array_cosine_distance(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)}
+#' \item \code{array_cosine_distance(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)}: Computes the cosine distance between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
+#' \item \code{array_cosine_distance(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)}: Computes the cosine distance between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
 #' }
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
@@ -1209,8 +1209,8 @@ array_cosine_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = 
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{array_cosine_similarity(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)}
-#' \item \code{array_cosine_similarity(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)}
+#' \item \code{array_cosine_similarity(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)}: Computes the cosine similarity between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
+#' \item \code{array_cosine_similarity(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)}: Computes the cosine similarity between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
 #' }
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
@@ -1234,8 +1234,8 @@ array_cosine_similarity <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{array_cross_product(array = `FLOAT[3]`, array = `FLOAT[3]`)}
-#' \item \code{array_cross_product(array = `DOUBLE[3]`, array = `DOUBLE[3]`)}
+#' \item \code{array_cross_product(array = `FLOAT[3]`, array = `FLOAT[3]`)}: Computes the cross product of two arrays of size 3. The array elements can not be `NULL`.
+#' \item \code{array_cross_product(array = `DOUBLE[3]`, array = `DOUBLE[3]`)}: Computes the cross product of two arrays of size 3. The array elements can not be `NULL`.
 #' }
 #' @param array `FLOAT[3] | DOUBLE[3]`
 #' @return `FLOAT[3] | DOUBLE[3]`
@@ -1258,8 +1258,8 @@ array_cross_product <- function(array = `FLOAT[3] | DOUBLE[3]`) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{array_distance(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)}
-#' \item \code{array_distance(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)}
+#' \item \code{array_distance(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)}: Computes the distance between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
+#' \item \code{array_distance(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)}: Computes the distance between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
 #' }
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
@@ -1290,9 +1290,9 @@ array_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[
 #' @section Overloads:
 #' \itemize{
 #' \item \code{array_extract(col0 = `T[]`, col1 = BIGINT)}
-#' \item \code{array_extract(string = VARCHAR, index = BIGINT)}
-#' \item \code{array_extract(struct = STRUCT, entry = VARCHAR)}
-#' \item \code{array_extract(struct = STRUCT, index = BIGINT)}
+#' \item \code{array_extract(string = VARCHAR, index = BIGINT)}: Extracts a single character from a `string` using a (1-based) `index`.
+#' \item \code{array_extract(struct = STRUCT, entry = VARCHAR)}: Extracts the named `entry` from the `STRUCT`.
+#' \item \code{array_extract(struct = STRUCT, index = BIGINT)}: Extracts the entry from an unnamed `STRUCT` (tuple) using an index (1-based).
 #' }
 #' @param col0 `T[]`
 #' @param col1 `BIGINT`
@@ -1325,8 +1325,8 @@ array_extract <- function(col0 = `T[]`, col1 = BIGINT, string = VARCHAR, index =
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{array_inner_product(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)}
-#' \item \code{array_inner_product(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)}
+#' \item \code{array_inner_product(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)}: Computes the inner product between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
+#' \item \code{array_inner_product(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)}: Computes the inner product between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
 #' }
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
@@ -1359,8 +1359,8 @@ array_dot_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLO
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{array_length(list = `ANY[]`)}
-#' \item \code{array_length(list = `ANY[]`, dimension = BIGINT)}
+#' \item \code{array_length(list = `ANY[]`)}: Returns the length of the `list`.
+#' \item \code{array_length(list = `ANY[]`, dimension = BIGINT)}: `array_length` for lists with dimensions other than 1 not implemented.
 #' }
 #' @param list `ANY[]`
 #' @param dimension `BIGINT`
@@ -1384,8 +1384,8 @@ array_length <- function(list = `ANY[]`, dimension = BIGINT) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{array_negative_inner_product(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)}
-#' \item \code{array_negative_inner_product(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)}
+#' \item \code{array_negative_inner_product(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)}: Computes the negative inner product between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
+#' \item \code{array_negative_inner_product(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)}: Computes the negative inner product between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
 #' }
 #' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
@@ -1694,17 +1694,17 @@ atanh <- function(x = DOUBLE) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{avg(x = DECIMAL)}
-#' \item \code{avg(x = SMALLINT)}
-#' \item \code{avg(x = INTEGER)}
-#' \item \code{avg(x = BIGINT)}
-#' \item \code{avg(x = HUGEINT)}
-#' \item \code{avg(x = INTERVAL)}
-#' \item \code{avg(x = DOUBLE)}
-#' \item \code{avg(x = TIMESTAMP)}
-#' \item \code{avg(x = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{avg(x = TIME)}
-#' \item \code{avg(x = `TIME WITH TIME ZONE`)}
+#' \item \code{avg(x = DECIMAL)}: Calculates the average value for all tuples in x.
+#' \item \code{avg(x = SMALLINT)}: Calculates the average value for all tuples in x.
+#' \item \code{avg(x = INTEGER)}: Calculates the average value for all tuples in x.
+#' \item \code{avg(x = BIGINT)}: Calculates the average value for all tuples in x.
+#' \item \code{avg(x = HUGEINT)}: Calculates the average value for all tuples in x.
+#' \item \code{avg(x = INTERVAL)}: Calculates the average value for all tuples in x.
+#' \item \code{avg(x = DOUBLE)}: Calculates the average value for all tuples in x.
+#' \item \code{avg(x = TIMESTAMP)}: Calculates the average value for all tuples in x.
+#' \item \code{avg(x = `TIMESTAMP WITH TIME ZONE`)}: Calculates the average value for all tuples in x.
+#' \item \code{avg(x = TIME)}: Calculates the average value for all tuples in x.
+#' \item \code{avg(x = `TIME WITH TIME ZONE`)}: Calculates the average value for all tuples in x.
 #' }
 #' @param x `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL | DOUBLE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`
 #' @return `DECIMAL | DOUBLE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`
@@ -1733,8 +1733,8 @@ mean <- function(x = `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{bar(x = DOUBLE, min = DOUBLE, max = DOUBLE, width = DOUBLE)}
-#' \item \code{bar(x = DOUBLE, min = DOUBLE, max = DOUBLE)}
+#' \item \code{bar(x = DOUBLE, min = DOUBLE, max = DOUBLE, width = DOUBLE)}: Draws a band whose width is proportional to (`x - min`) and equal to `width` characters when `x` = `max`. `width` defaults to 80.
+#' \item \code{bar(x = DOUBLE, min = DOUBLE, max = DOUBLE)}: Draws a band whose width is proportional to (`x - min`) and equal to `width` characters when `x` = `max`. `width` defaults to 80.
 #' }
 #' @param x `DOUBLE`
 #' @param min `DOUBLE`
@@ -1762,12 +1762,12 @@ bar <- function(x = DOUBLE, min = DOUBLE, max = DOUBLE, width = DOUBLE) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{bin(string = VARCHAR)}
-#' \item \code{bin(value = BIGNUM)}
-#' \item \code{bin(value = UBIGINT)}
-#' \item \code{bin(value = BIGINT)}
-#' \item \code{bin(value = HUGEINT)}
-#' \item \code{bin(value = UHUGEINT)}
+#' \item \code{bin(string = VARCHAR)}: Converts the `string` to binary representation.
+#' \item \code{bin(value = BIGNUM)}: Converts the `value` to binary representation.
+#' \item \code{bin(value = UBIGINT)}: Converts the `value` to binary representation.
+#' \item \code{bin(value = BIGINT)}: Converts the `value` to binary representation.
+#' \item \code{bin(value = HUGEINT)}: Converts the `value` to binary representation.
+#' \item \code{bin(value = UHUGEINT)}: Converts the `value` to binary representation.
 #' }
 #' @param string `VARCHAR`
 #' @param value `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`
@@ -1800,17 +1800,17 @@ to_binary <- function(string = VARCHAR, value = `BIGNUM | UBIGINT | BIGINT | HUG
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{bit_and(arg = TINYINT)}
-#' \item \code{bit_and(arg = SMALLINT)}
-#' \item \code{bit_and(arg = INTEGER)}
-#' \item \code{bit_and(arg = BIGINT)}
-#' \item \code{bit_and(arg = HUGEINT)}
-#' \item \code{bit_and(arg = UTINYINT)}
-#' \item \code{bit_and(arg = USMALLINT)}
-#' \item \code{bit_and(arg = UINTEGER)}
-#' \item \code{bit_and(arg = UBIGINT)}
-#' \item \code{bit_and(arg = UHUGEINT)}
-#' \item \code{bit_and(arg = BIT)}
+#' \item \code{bit_and(arg = TINYINT)}: Returns the bitwise AND of all bits in a given expression.
+#' \item \code{bit_and(arg = SMALLINT)}: Returns the bitwise AND of all bits in a given expression.
+#' \item \code{bit_and(arg = INTEGER)}: Returns the bitwise AND of all bits in a given expression.
+#' \item \code{bit_and(arg = BIGINT)}: Returns the bitwise AND of all bits in a given expression.
+#' \item \code{bit_and(arg = HUGEINT)}: Returns the bitwise AND of all bits in a given expression.
+#' \item \code{bit_and(arg = UTINYINT)}: Returns the bitwise AND of all bits in a given expression.
+#' \item \code{bit_and(arg = USMALLINT)}: Returns the bitwise AND of all bits in a given expression.
+#' \item \code{bit_and(arg = UINTEGER)}: Returns the bitwise AND of all bits in a given expression.
+#' \item \code{bit_and(arg = UBIGINT)}: Returns the bitwise AND of all bits in a given expression.
+#' \item \code{bit_and(arg = UHUGEINT)}: Returns the bitwise AND of all bits in a given expression.
+#' \item \code{bit_and(arg = BIT)}: Returns the bitwise AND of all bits in a given expression.
 #' }
 #' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
@@ -1832,12 +1832,12 @@ bit_and <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTI
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{bit_count(x = TINYINT)}
-#' \item \code{bit_count(x = SMALLINT)}
-#' \item \code{bit_count(x = INTEGER)}
-#' \item \code{bit_count(x = BIGINT)}
-#' \item \code{bit_count(x = HUGEINT)}
-#' \item \code{bit_count(x = BIT)}
+#' \item \code{bit_count(x = TINYINT)}: Returns the number of bits that are set.
+#' \item \code{bit_count(x = SMALLINT)}: Returns the number of bits that are set.
+#' \item \code{bit_count(x = INTEGER)}: Returns the number of bits that are set.
+#' \item \code{bit_count(x = BIGINT)}: Returns the number of bits that are set.
+#' \item \code{bit_count(x = HUGEINT)}: Returns the number of bits that are set.
+#' \item \code{bit_count(x = BIT)}: Returns the number of bits that are set.
 #' }
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | BIT`
 #' @return `TINYINT | BIGINT`
@@ -1861,8 +1861,8 @@ bit_count <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | BIT
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{bit_length(string = VARCHAR)}
-#' \item \code{bit_length(bit = BIT)}
+#' \item \code{bit_length(string = VARCHAR)}: Number of bits in a `string`.
+#' \item \code{bit_length(bit = BIT)}: Returns the bit-length of the `bit` argument.
 #' }
 #' @param string `VARCHAR`
 #' @param bit `BIT`
@@ -1888,17 +1888,17 @@ bit_length <- function(string = VARCHAR, bit = BIT) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{bit_or(arg = TINYINT)}
-#' \item \code{bit_or(arg = SMALLINT)}
-#' \item \code{bit_or(arg = INTEGER)}
-#' \item \code{bit_or(arg = BIGINT)}
-#' \item \code{bit_or(arg = HUGEINT)}
-#' \item \code{bit_or(arg = UTINYINT)}
-#' \item \code{bit_or(arg = USMALLINT)}
-#' \item \code{bit_or(arg = UINTEGER)}
-#' \item \code{bit_or(arg = UBIGINT)}
-#' \item \code{bit_or(arg = UHUGEINT)}
-#' \item \code{bit_or(arg = BIT)}
+#' \item \code{bit_or(arg = TINYINT)}: Returns the bitwise OR of all bits in a given expression.
+#' \item \code{bit_or(arg = SMALLINT)}: Returns the bitwise OR of all bits in a given expression.
+#' \item \code{bit_or(arg = INTEGER)}: Returns the bitwise OR of all bits in a given expression.
+#' \item \code{bit_or(arg = BIGINT)}: Returns the bitwise OR of all bits in a given expression.
+#' \item \code{bit_or(arg = HUGEINT)}: Returns the bitwise OR of all bits in a given expression.
+#' \item \code{bit_or(arg = UTINYINT)}: Returns the bitwise OR of all bits in a given expression.
+#' \item \code{bit_or(arg = USMALLINT)}: Returns the bitwise OR of all bits in a given expression.
+#' \item \code{bit_or(arg = UINTEGER)}: Returns the bitwise OR of all bits in a given expression.
+#' \item \code{bit_or(arg = UBIGINT)}: Returns the bitwise OR of all bits in a given expression.
+#' \item \code{bit_or(arg = UHUGEINT)}: Returns the bitwise OR of all bits in a given expression.
+#' \item \code{bit_or(arg = BIT)}: Returns the bitwise OR of all bits in a given expression.
 #' }
 #' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
@@ -1939,17 +1939,17 @@ bit_position <- function(substring = BIT, bitstring = BIT) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{bit_xor(arg = TINYINT)}
-#' \item \code{bit_xor(arg = SMALLINT)}
-#' \item \code{bit_xor(arg = INTEGER)}
-#' \item \code{bit_xor(arg = BIGINT)}
-#' \item \code{bit_xor(arg = HUGEINT)}
-#' \item \code{bit_xor(arg = UTINYINT)}
-#' \item \code{bit_xor(arg = USMALLINT)}
-#' \item \code{bit_xor(arg = UINTEGER)}
-#' \item \code{bit_xor(arg = UBIGINT)}
-#' \item \code{bit_xor(arg = UHUGEINT)}
-#' \item \code{bit_xor(arg = BIT)}
+#' \item \code{bit_xor(arg = TINYINT)}: Returns the bitwise XOR of all bits in a given expression.
+#' \item \code{bit_xor(arg = SMALLINT)}: Returns the bitwise XOR of all bits in a given expression.
+#' \item \code{bit_xor(arg = INTEGER)}: Returns the bitwise XOR of all bits in a given expression.
+#' \item \code{bit_xor(arg = BIGINT)}: Returns the bitwise XOR of all bits in a given expression.
+#' \item \code{bit_xor(arg = HUGEINT)}: Returns the bitwise XOR of all bits in a given expression.
+#' \item \code{bit_xor(arg = UTINYINT)}: Returns the bitwise XOR of all bits in a given expression.
+#' \item \code{bit_xor(arg = USMALLINT)}: Returns the bitwise XOR of all bits in a given expression.
+#' \item \code{bit_xor(arg = UINTEGER)}: Returns the bitwise XOR of all bits in a given expression.
+#' \item \code{bit_xor(arg = UBIGINT)}: Returns the bitwise XOR of all bits in a given expression.
+#' \item \code{bit_xor(arg = UHUGEINT)}: Returns the bitwise XOR of all bits in a given expression.
+#' \item \code{bit_xor(arg = BIT)}: Returns the bitwise XOR of all bits in a given expression.
 #' }
 #' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
@@ -1971,8 +1971,8 @@ bit_xor <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTI
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{bitstring(bitstring = VARCHAR, length = INTEGER)}
-#' \item \code{bitstring(bitstring = BIT, length = INTEGER)}
+#' \item \code{bitstring(bitstring = VARCHAR, length = INTEGER)}: Pads the bitstring until the specified length.
+#' \item \code{bitstring(bitstring = BIT, length = INTEGER)}: Pads the bitstring until the specified length.
 #' }
 #' @param bitstring `VARCHAR | BIT`
 #' @param length `INTEGER`
@@ -1995,26 +1995,26 @@ bitstring <- function(bitstring = `VARCHAR | BIT`, length = INTEGER) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{bitstring_agg(arg = TINYINT)}
-#' \item \code{bitstring_agg(arg = TINYINT, col1 = TINYINT, col2 = TINYINT)}
-#' \item \code{bitstring_agg(arg = SMALLINT)}
-#' \item \code{bitstring_agg(arg = SMALLINT, col1 = SMALLINT, col2 = SMALLINT)}
-#' \item \code{bitstring_agg(arg = INTEGER)}
-#' \item \code{bitstring_agg(arg = INTEGER, col1 = INTEGER, col2 = INTEGER)}
-#' \item \code{bitstring_agg(arg = BIGINT)}
-#' \item \code{bitstring_agg(arg = BIGINT, col1 = BIGINT, col2 = BIGINT)}
-#' \item \code{bitstring_agg(arg = HUGEINT)}
-#' \item \code{bitstring_agg(arg = HUGEINT, col1 = HUGEINT, col2 = HUGEINT)}
-#' \item \code{bitstring_agg(arg = UTINYINT)}
-#' \item \code{bitstring_agg(arg = UTINYINT, col1 = UTINYINT, col2 = UTINYINT)}
-#' \item \code{bitstring_agg(arg = USMALLINT)}
-#' \item \code{bitstring_agg(arg = USMALLINT, col1 = USMALLINT, col2 = USMALLINT)}
-#' \item \code{bitstring_agg(arg = UINTEGER)}
-#' \item \code{bitstring_agg(arg = UINTEGER, col1 = UINTEGER, col2 = UINTEGER)}
-#' \item \code{bitstring_agg(arg = UBIGINT)}
-#' \item \code{bitstring_agg(arg = UBIGINT, col1 = UBIGINT, col2 = UBIGINT)}
-#' \item \code{bitstring_agg(arg = UHUGEINT)}
-#' \item \code{bitstring_agg(arg = UHUGEINT, col1 = UHUGEINT, col2 = UHUGEINT)}
+#' \item \code{bitstring_agg(arg = TINYINT)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = TINYINT, col1 = TINYINT, col2 = TINYINT)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = SMALLINT)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = SMALLINT, col1 = SMALLINT, col2 = SMALLINT)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = INTEGER)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = INTEGER, col1 = INTEGER, col2 = INTEGER)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = BIGINT)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = BIGINT, col1 = BIGINT, col2 = BIGINT)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = HUGEINT)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = HUGEINT, col1 = HUGEINT, col2 = HUGEINT)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = UTINYINT)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = UTINYINT, col1 = UTINYINT, col2 = UTINYINT)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = USMALLINT)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = USMALLINT, col1 = USMALLINT, col2 = USMALLINT)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = UINTEGER)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = UINTEGER, col1 = UINTEGER, col2 = UINTEGER)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = UBIGINT)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = UBIGINT, col1 = UBIGINT, col2 = UBIGINT)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = UHUGEINT)}: Returns a bitstring with bits set for each distinct value.
+#' \item \code{bitstring_agg(arg = UHUGEINT, col1 = UHUGEINT, col2 = UHUGEINT)}: Returns a bitstring with bits set for each distinct value.
 #' }
 #' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
@@ -2148,9 +2148,9 @@ cbrt <- function(x = DOUBLE) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{ceil(x = FLOAT)}
-#' \item \code{ceil(x = DOUBLE)}
-#' \item \code{ceil(x = DECIMAL)}
+#' \item \code{ceil(x = FLOAT)}: Rounds the number up.
+#' \item \code{ceil(x = DOUBLE)}: Rounds the number up.
+#' \item \code{ceil(x = DECIMAL)}: Rounds the number up.
 #' }
 #' @param x `FLOAT | DOUBLE | DECIMAL`
 #' @return `FLOAT | DOUBLE | DECIMAL`
@@ -2179,10 +2179,10 @@ ceiling <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{century(ts = DATE)}
-#' \item \code{century(ts = INTERVAL)}
-#' \item \code{century(ts = TIMESTAMP)}
-#' \item \code{century(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{century(ts = DATE)}: Extract the century component from a date or timestamp.
+#' \item \code{century(ts = INTERVAL)}: Extract the century component from a date or timestamp.
+#' \item \code{century(ts = TIMESTAMP)}: Extract the century component from a date or timestamp.
+#' \item \code{century(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the century component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -2350,7 +2350,7 @@ constant_or_null <- function(arg1 = ANY, arg2 = ANY) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{contains(string = VARCHAR, search_string = VARCHAR)}
+#' \item \code{contains(string = VARCHAR, search_string = VARCHAR)}: Returns `true` if `search_string` is found within `string`.
 #' \item \code{contains(col0 = `T[]`, col1 = T)}
 #' \item \code{contains(col0 = `MAP(K, V)`, col1 = K)}
 #' \item \code{contains(col0 = STRUCT, col1 = ANY)}
@@ -2471,8 +2471,8 @@ cot <- function(x = DOUBLE) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{count(arg = ANY)}
-#' \item \code{count()}
+#' \item \code{count(arg = ANY)}: Returns the number of non-NULL values in arg.
+#' \item \code{count()}: Returns the number of non-NULL values in arg.
 #' }
 #' @param arg `ANY`
 #' @return `BIGINT`
@@ -2721,8 +2721,8 @@ current_schema <- function() {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{current_schemas(include_implicit = BOOLEAN)}
-#' \item \code{current_schemas(include_implicit)}
+#' \item \code{current_schemas(include_implicit = BOOLEAN)}: Returns list of schemas. Pass a parameter of True to include implicit schemas.
+#' \item \code{current_schemas(include_implicit)}: Returns list of schemas. Pass a parameter of True to include implicit schemas.
 #' }
 #' @param include_implicit `BOOLEAN`
 #' @return `VARCHAR[]`
@@ -2875,10 +2875,10 @@ date_add <- function(date, interval) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{date_diff(part = VARCHAR, startdate = DATE, enddate = DATE)}
-#' \item \code{date_diff(part = VARCHAR, startdate = TIME, enddate = TIME)}
-#' \item \code{date_diff(part = VARCHAR, startdate = TIMESTAMP, enddate = TIMESTAMP)}
-#' \item \code{date_diff(part = VARCHAR, startdate = `TIMESTAMP WITH TIME ZONE`, enddate = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{date_diff(part = VARCHAR, startdate = DATE, enddate = DATE)}: The number of partition boundaries between the timestamps.
+#' \item \code{date_diff(part = VARCHAR, startdate = TIME, enddate = TIME)}: The number of partition boundaries between the timestamps.
+#' \item \code{date_diff(part = VARCHAR, startdate = TIMESTAMP, enddate = TIMESTAMP)}: The number of partition boundaries between the timestamps.
+#' \item \code{date_diff(part = VARCHAR, startdate = `TIMESTAMP WITH TIME ZONE`, enddate = `TIMESTAMP WITH TIME ZONE`)}: The number of partition boundaries between the timestamps.
 #' }
 #' @param part `VARCHAR`
 #' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
@@ -2909,20 +2909,20 @@ datediff <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIME
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{date_part(ts = `VARCHAR[]`, col1 = DATE)}
-#' \item \code{date_part(ts = `VARCHAR[]`, col1 = INTERVAL)}
-#' \item \code{date_part(ts = `VARCHAR[]`, col1 = TIME)}
-#' \item \code{date_part(ts = `VARCHAR[]`, col1 = TIMESTAMP)}
-#' \item \code{date_part(ts = `VARCHAR[]`, col1 = `TIME WITH TIME ZONE`)}
-#' \item \code{date_part(ts = `VARCHAR[]`, col1 = TIME_NS)}
-#' \item \code{date_part(ts = VARCHAR, col1 = DATE)}
-#' \item \code{date_part(ts = VARCHAR, col1 = INTERVAL)}
-#' \item \code{date_part(ts = VARCHAR, col1 = TIME)}
-#' \item \code{date_part(ts = VARCHAR, col1 = TIMESTAMP)}
-#' \item \code{date_part(ts = VARCHAR, col1 = `TIME WITH TIME ZONE`)}
-#' \item \code{date_part(ts = VARCHAR, col1 = TIME_NS)}
-#' \item \code{date_part(ts = `VARCHAR[]`, col1 = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{date_part(ts = VARCHAR, col1 = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{date_part(ts = `VARCHAR[]`, col1 = DATE)}: Get subfield (equivalent to extract).
+#' \item \code{date_part(ts = `VARCHAR[]`, col1 = INTERVAL)}: Get subfield (equivalent to extract).
+#' \item \code{date_part(ts = `VARCHAR[]`, col1 = TIME)}: Get subfield (equivalent to extract).
+#' \item \code{date_part(ts = `VARCHAR[]`, col1 = TIMESTAMP)}: Get subfield (equivalent to extract).
+#' \item \code{date_part(ts = `VARCHAR[]`, col1 = `TIME WITH TIME ZONE`)}: Get subfield (equivalent to extract).
+#' \item \code{date_part(ts = `VARCHAR[]`, col1 = TIME_NS)}: Get subfield (equivalent to extract).
+#' \item \code{date_part(ts = VARCHAR, col1 = DATE)}: Get subfield (equivalent to extract).
+#' \item \code{date_part(ts = VARCHAR, col1 = INTERVAL)}: Get subfield (equivalent to extract).
+#' \item \code{date_part(ts = VARCHAR, col1 = TIME)}: Get subfield (equivalent to extract).
+#' \item \code{date_part(ts = VARCHAR, col1 = TIMESTAMP)}: Get subfield (equivalent to extract).
+#' \item \code{date_part(ts = VARCHAR, col1 = `TIME WITH TIME ZONE`)}: Get subfield (equivalent to extract).
+#' \item \code{date_part(ts = VARCHAR, col1 = TIME_NS)}: Get subfield (equivalent to extract).
+#' \item \code{date_part(ts = `VARCHAR[]`, col1 = `TIMESTAMP WITH TIME ZONE`)}: Get subfield (equivalent to extract).
+#' \item \code{date_part(ts = VARCHAR, col1 = `TIMESTAMP WITH TIME ZONE`)}: Get subfield (equivalent to extract).
 #' }
 #' @param ts `VARCHAR[] | VARCHAR`
 #' @param col1 `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
@@ -2952,10 +2952,10 @@ datepart <- function(ts = `VARCHAR[] | VARCHAR`, col1 = `DATE | INTERVAL | TIME 
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{date_sub(part = VARCHAR, startdate = DATE, enddate = DATE)}
-#' \item \code{date_sub(part = VARCHAR, startdate = TIME, enddate = TIME)}
-#' \item \code{date_sub(part = VARCHAR, startdate = TIMESTAMP, enddate = TIMESTAMP)}
-#' \item \code{date_sub(part = VARCHAR, startdate = `TIMESTAMP WITH TIME ZONE`, enddate = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{date_sub(part = VARCHAR, startdate = DATE, enddate = DATE)}: The number of complete partitions between the timestamps.
+#' \item \code{date_sub(part = VARCHAR, startdate = TIME, enddate = TIME)}: The number of complete partitions between the timestamps.
+#' \item \code{date_sub(part = VARCHAR, startdate = TIMESTAMP, enddate = TIMESTAMP)}: The number of complete partitions between the timestamps.
+#' \item \code{date_sub(part = VARCHAR, startdate = `TIMESTAMP WITH TIME ZONE`, enddate = `TIMESTAMP WITH TIME ZONE`)}: The number of complete partitions between the timestamps.
 #' }
 #' @param part `VARCHAR`
 #' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
@@ -2986,10 +2986,10 @@ datesub <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMES
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{date_trunc(part = VARCHAR, timestamp = DATE)}
-#' \item \code{date_trunc(part = VARCHAR, timestamp = INTERVAL)}
-#' \item \code{date_trunc(part = VARCHAR, timestamp = TIMESTAMP)}
-#' \item \code{date_trunc(part = VARCHAR, timestamp = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{date_trunc(part = VARCHAR, timestamp = DATE)}: Truncate to specified precision.
+#' \item \code{date_trunc(part = VARCHAR, timestamp = INTERVAL)}: Truncate to specified precision.
+#' \item \code{date_trunc(part = VARCHAR, timestamp = TIMESTAMP)}: Truncate to specified precision.
+#' \item \code{date_trunc(part = VARCHAR, timestamp = `TIMESTAMP WITH TIME ZONE`)}: Truncate to specified precision.
 #' }
 #' @param part `VARCHAR`
 #' @param timestamp `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
@@ -3019,10 +3019,10 @@ datetrunc <- function(part = VARCHAR, timestamp = `DATE | INTERVAL | TIMESTAMP |
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{day(ts = DATE)}
-#' \item \code{day(ts = INTERVAL)}
-#' \item \code{day(ts = TIMESTAMP)}
-#' \item \code{day(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{day(ts = DATE)}: Extract the day component from a date or timestamp.
+#' \item \code{day(ts = INTERVAL)}: Extract the day component from a date or timestamp.
+#' \item \code{day(ts = TIMESTAMP)}: Extract the day component from a date or timestamp.
+#' \item \code{day(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the day component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -3044,9 +3044,9 @@ day <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{dayname(ts = DATE)}
-#' \item \code{dayname(ts = TIMESTAMP)}
-#' \item \code{dayname(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{dayname(ts = DATE)}: The (English) name of the weekday.
+#' \item \code{dayname(ts = TIMESTAMP)}: The (English) name of the weekday.
+#' \item \code{dayname(ts = `TIMESTAMP WITH TIME ZONE`)}: The (English) name of the weekday.
 #' }
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `VARCHAR`
@@ -3068,10 +3068,10 @@ dayname <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{dayofmonth(ts = DATE)}
-#' \item \code{dayofmonth(ts = INTERVAL)}
-#' \item \code{dayofmonth(ts = TIMESTAMP)}
-#' \item \code{dayofmonth(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{dayofmonth(ts = DATE)}: Extract the dayofmonth component from a date or timestamp.
+#' \item \code{dayofmonth(ts = INTERVAL)}: Extract the dayofmonth component from a date or timestamp.
+#' \item \code{dayofmonth(ts = TIMESTAMP)}: Extract the dayofmonth component from a date or timestamp.
+#' \item \code{dayofmonth(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the dayofmonth component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -3093,10 +3093,10 @@ dayofmonth <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME Z
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{dayofweek(ts = DATE)}
-#' \item \code{dayofweek(ts = INTERVAL)}
-#' \item \code{dayofweek(ts = TIMESTAMP)}
-#' \item \code{dayofweek(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{dayofweek(ts = DATE)}: Extract the dayofweek component from a date or timestamp.
+#' \item \code{dayofweek(ts = INTERVAL)}: Extract the dayofweek component from a date or timestamp.
+#' \item \code{dayofweek(ts = TIMESTAMP)}: Extract the dayofweek component from a date or timestamp.
+#' \item \code{dayofweek(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the dayofweek component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -3118,10 +3118,10 @@ dayofweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZO
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{dayofyear(ts = DATE)}
-#' \item \code{dayofyear(ts = INTERVAL)}
-#' \item \code{dayofyear(ts = TIMESTAMP)}
-#' \item \code{dayofyear(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{dayofyear(ts = DATE)}: Extract the dayofyear component from a date or timestamp.
+#' \item \code{dayofyear(ts = INTERVAL)}: Extract the dayofyear component from a date or timestamp.
+#' \item \code{dayofyear(ts = TIMESTAMP)}: Extract the dayofyear component from a date or timestamp.
+#' \item \code{dayofyear(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the dayofyear component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -3157,10 +3157,10 @@ days_in_month <- function(date) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{decade(ts = DATE)}
-#' \item \code{decade(ts = INTERVAL)}
-#' \item \code{decade(ts = TIMESTAMP)}
-#' \item \code{decade(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{decade(ts = DATE)}: Extract the decade component from a date or timestamp.
+#' \item \code{decade(ts = INTERVAL)}: Extract the decade component from a date or timestamp.
+#' \item \code{decade(ts = TIMESTAMP)}: Extract the decade component from a date or timestamp.
+#' \item \code{decade(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the decade component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -3182,8 +3182,8 @@ decade <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{decode(blob = BLOB)}
-#' \item \code{decode(blob = BLOB, varchar = VARCHAR)}
+#' \item \code{decode(blob = BLOB)}: Converts `blob` to `VARCHAR`. Invalid UTF-8 is handled based on the error behavior argument. Can be 'strict' (default, fail), 'replace' to replace invalid characters with '?', or 'ignore' to skip invalid characters.
+#' \item \code{decode(blob = BLOB, varchar = VARCHAR)}: Converts `blob` to `VARCHAR`. Invalid UTF-8 is handled based on the error behavior argument. Can be 'strict' (default, fail), 'replace' to replace invalid characters with '?', or 'ignore' to skip invalid characters.
 #' }
 #' @param blob `BLOB`
 #' @param varchar `VARCHAR`
@@ -4125,13 +4125,13 @@ enum_range_boundary <- function(start = ANY, end = ANY) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{epoch(temporal = DATE)}
-#' \item \code{epoch(temporal = INTERVAL)}
-#' \item \code{epoch(temporal = TIME)}
-#' \item \code{epoch(temporal = TIMESTAMP)}
-#' \item \code{epoch(temporal = `TIME WITH TIME ZONE`)}
-#' \item \code{epoch(temporal = TIME_NS)}
-#' \item \code{epoch(temporal = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{epoch(temporal = DATE)}: Extract the epoch component from a temporal type.
+#' \item \code{epoch(temporal = INTERVAL)}: Extract the epoch component from a temporal type.
+#' \item \code{epoch(temporal = TIME)}: Extract the epoch component from a temporal type.
+#' \item \code{epoch(temporal = TIMESTAMP)}: Extract the epoch component from a temporal type.
+#' \item \code{epoch(temporal = `TIME WITH TIME ZONE`)}: Extract the epoch component from a temporal type.
+#' \item \code{epoch(temporal = TIME_NS)}: Extract the epoch component from a temporal type.
+#' \item \code{epoch(temporal = `TIMESTAMP WITH TIME ZONE`)}: Extract the epoch component from a temporal type.
 #' }
 #' @param temporal `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `DOUBLE`
@@ -4153,14 +4153,14 @@ epoch <- function(temporal = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{epoch_ms(temporal = DATE)}
-#' \item \code{epoch_ms(temporal = TIMESTAMP)}
-#' \item \code{epoch_ms(temporal = INTERVAL)}
-#' \item \code{epoch_ms(temporal = TIME)}
-#' \item \code{epoch_ms(temporal = TIME_NS)}
-#' \item \code{epoch_ms(temporal = `TIME WITH TIME ZONE`)}
-#' \item \code{epoch_ms(temporal = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{epoch_ms(temporal = BIGINT)}
+#' \item \code{epoch_ms(temporal = DATE)}: Extract the epoch component in milliseconds from a temporal type.
+#' \item \code{epoch_ms(temporal = TIMESTAMP)}: Extract the epoch component in milliseconds from a temporal type.
+#' \item \code{epoch_ms(temporal = INTERVAL)}: Extract the epoch component in milliseconds from a temporal type.
+#' \item \code{epoch_ms(temporal = TIME)}: Extract the epoch component in milliseconds from a temporal type.
+#' \item \code{epoch_ms(temporal = TIME_NS)}: Extract the epoch component in milliseconds from a temporal type.
+#' \item \code{epoch_ms(temporal = `TIME WITH TIME ZONE`)}: Extract the epoch component in milliseconds from a temporal type.
+#' \item \code{epoch_ms(temporal = `TIMESTAMP WITH TIME ZONE`)}: Extract the epoch component in milliseconds from a temporal type.
+#' \item \code{epoch_ms(temporal = BIGINT)}: Extract the epoch component in milliseconds from a temporal type.
 #' }
 #' @param temporal `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | BIGINT`
 #' @return `BIGINT | TIMESTAMP`
@@ -4182,14 +4182,14 @@ epoch_ms <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | 
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{epoch_ns(temporal = DATE)}
-#' \item \code{epoch_ns(temporal = TIMESTAMP)}
-#' \item \code{epoch_ns(temporal = INTERVAL)}
-#' \item \code{epoch_ns(temporal = TIME)}
-#' \item \code{epoch_ns(temporal = TIME_NS)}
-#' \item \code{epoch_ns(temporal = `TIME WITH TIME ZONE`)}
-#' \item \code{epoch_ns(temporal = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{epoch_ns(temporal = TIMESTAMP_NS)}
+#' \item \code{epoch_ns(temporal = DATE)}: Extract the epoch component in nanoseconds from a temporal type.
+#' \item \code{epoch_ns(temporal = TIMESTAMP)}: Extract the epoch component in nanoseconds from a temporal type.
+#' \item \code{epoch_ns(temporal = INTERVAL)}: Extract the epoch component in nanoseconds from a temporal type.
+#' \item \code{epoch_ns(temporal = TIME)}: Extract the epoch component in nanoseconds from a temporal type.
+#' \item \code{epoch_ns(temporal = TIME_NS)}: Extract the epoch component in nanoseconds from a temporal type.
+#' \item \code{epoch_ns(temporal = `TIME WITH TIME ZONE`)}: Extract the epoch component in nanoseconds from a temporal type.
+#' \item \code{epoch_ns(temporal = `TIMESTAMP WITH TIME ZONE`)}: Extract the epoch component in nanoseconds from a temporal type.
+#' \item \code{epoch_ns(temporal = TIMESTAMP_NS)}: Extract the epoch component in nanoseconds from a temporal type.
 #' }
 #' @param temporal `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | TIMESTAMP_NS`
 #' @return `BIGINT`
@@ -4211,13 +4211,13 @@ epoch_ns <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | 
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{epoch_us(temporal = DATE)}
-#' \item \code{epoch_us(temporal = TIMESTAMP)}
-#' \item \code{epoch_us(temporal = INTERVAL)}
-#' \item \code{epoch_us(temporal = TIME)}
-#' \item \code{epoch_us(temporal = TIME_NS)}
-#' \item \code{epoch_us(temporal = `TIME WITH TIME ZONE`)}
-#' \item \code{epoch_us(temporal = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{epoch_us(temporal = DATE)}: Extract the epoch component in microseconds from a temporal type.
+#' \item \code{epoch_us(temporal = TIMESTAMP)}: Extract the epoch component in microseconds from a temporal type.
+#' \item \code{epoch_us(temporal = INTERVAL)}: Extract the epoch component in microseconds from a temporal type.
+#' \item \code{epoch_us(temporal = TIME)}: Extract the epoch component in microseconds from a temporal type.
+#' \item \code{epoch_us(temporal = TIME_NS)}: Extract the epoch component in microseconds from a temporal type.
+#' \item \code{epoch_us(temporal = `TIME WITH TIME ZONE`)}: Extract the epoch component in microseconds from a temporal type.
+#' \item \code{epoch_us(temporal = `TIMESTAMP WITH TIME ZONE`)}: Extract the epoch component in microseconds from a temporal type.
 #' }
 #' @param temporal `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -4239,10 +4239,10 @@ epoch_us <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | 
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{equi_width_bins(min = BIGINT, max = BIGINT, bin_count = BIGINT, nice_rounding = BOOLEAN)}
-#' \item \code{equi_width_bins(min = DOUBLE, max = DOUBLE, bin_count = BIGINT, nice_rounding = BOOLEAN)}
-#' \item \code{equi_width_bins(min = TIMESTAMP, max = TIMESTAMP, bin_count = BIGINT, nice_rounding = BOOLEAN)}
-#' \item \code{equi_width_bins(min = ANY, max = ANY, bin_count = BIGINT, nice_rounding = BOOLEAN)}
+#' \item \code{equi_width_bins(min = BIGINT, max = BIGINT, bin_count = BIGINT, nice_rounding = BOOLEAN)}: Generates bin_count equi-width bins between the min and max. If enabled nice_rounding makes the numbers more readable/less jagged.
+#' \item \code{equi_width_bins(min = DOUBLE, max = DOUBLE, bin_count = BIGINT, nice_rounding = BOOLEAN)}: Generates bin_count equi-width bins between the min and max. If enabled nice_rounding makes the numbers more readable/less jagged.
+#' \item \code{equi_width_bins(min = TIMESTAMP, max = TIMESTAMP, bin_count = BIGINT, nice_rounding = BOOLEAN)}: Generates bin_count equi-width bins between the min and max. If enabled nice_rounding makes the numbers more readable/less jagged.
+#' \item \code{equi_width_bins(min = ANY, max = ANY, bin_count = BIGINT, nice_rounding = BOOLEAN)}: Generates bin_count equi-width bins between the min and max. If enabled nice_rounding makes the numbers more readable/less jagged.
 #' }
 #' @param min `BIGINT | DOUBLE | TIMESTAMP | ANY`
 #' @param max `BIGINT | DOUBLE | TIMESTAMP | ANY`
@@ -4267,10 +4267,10 @@ equi_width_bins <- function(min = `BIGINT | DOUBLE | TIMESTAMP | ANY`, max = `BI
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{era(ts = DATE)}
-#' \item \code{era(ts = INTERVAL)}
-#' \item \code{era(ts = TIMESTAMP)}
-#' \item \code{era(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{era(ts = DATE)}: Extract the era component from a date or timestamp.
+#' \item \code{era(ts = INTERVAL)}: Extract the era component from a date or timestamp.
+#' \item \code{era(ts = TIMESTAMP)}: Extract the era component from a date or timestamp.
+#' \item \code{era(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the era component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -4446,8 +4446,8 @@ finalize <- function(col0 = `AGGREGATE_STATE<?>`) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{first(arg = DECIMAL)}
-#' \item \code{first(arg = ANY)}
+#' \item \code{first(arg = DECIMAL)}: Returns the first value (NULL or non-NULL) from arg. This function is affected by ordering.
+#' \item \code{first(arg = ANY)}: Returns the first value (NULL or non-NULL) from arg. This function is affected by ordering.
 #' \item \code{first(col0 = T)}
 #' }
 #' @param arg `DECIMAL | ANY`
@@ -4511,9 +4511,9 @@ flatten <- function(nested_list = `T[][]`) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{floor(x = FLOAT)}
-#' \item \code{floor(x = DOUBLE)}
-#' \item \code{floor(x = DECIMAL)}
+#' \item \code{floor(x = FLOAT)}: Rounds the number down.
+#' \item \code{floor(x = DOUBLE)}: Rounds the number down.
+#' \item \code{floor(x = DECIMAL)}: Rounds the number down.
 #' }
 #' @param x `FLOAT | DOUBLE | DECIMAL`
 #' @return `FLOAT | DOUBLE | DECIMAL`
@@ -4702,11 +4702,11 @@ gamma <- function(x = DOUBLE) {
 #' \item \code{generate_series(col0 = BIGINT, col1 = BIGINT)}
 #' \item \code{generate_series(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT)}
 #' \item \code{generate_series(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)}
-#' \item \code{generate_series(start = BIGINT)}
-#' \item \code{generate_series(start = BIGINT, stop = BIGINT)}
-#' \item \code{generate_series(start = BIGINT, stop = BIGINT, step = BIGINT)}
-#' \item \code{generate_series(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}
-#' \item \code{generate_series(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}
+#' \item \code{generate_series(start = BIGINT)}: Creates a list of values between `start` and `stop` - the stop parameter is inclusive.
+#' \item \code{generate_series(start = BIGINT, stop = BIGINT)}: Creates a list of values between `start` and `stop` - the stop parameter is inclusive.
+#' \item \code{generate_series(start = BIGINT, stop = BIGINT, step = BIGINT)}: Creates a list of values between `start` and `stop` - the stop parameter is inclusive.
+#' \item \code{generate_series(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}: Creates a list of values between `start` and `stop` - the stop parameter is inclusive.
+#' \item \code{generate_series(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}: Creates a list of values between `start` and `stop` - the stop parameter is inclusive.
 #' }
 #' @param col0 `BIGINT | TIMESTAMP`
 #' @param col1 `BIGINT | TIMESTAMP`
@@ -4917,8 +4917,8 @@ greatest <- function(arg1 = ANY) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{greatest_common_divisor(x = BIGINT, y = BIGINT)}
-#' \item \code{greatest_common_divisor(x = HUGEINT, y = HUGEINT)}
+#' \item \code{greatest_common_divisor(x = BIGINT, y = BIGINT)}: Computes the greatest common divisor of x and y.
+#' \item \code{greatest_common_divisor(x = HUGEINT, y = HUGEINT)}: Computes the greatest common divisor of x and y.
 #' }
 #' @param x `BIGINT | HUGEINT`
 #' @param y `BIGINT | HUGEINT`
@@ -5230,13 +5230,13 @@ hash <- function(value = ANY) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{hex(string = VARCHAR)}
-#' \item \code{hex(value = BIGNUM)}
-#' \item \code{hex(blob = BLOB)}
-#' \item \code{hex(value = BIGINT)}
-#' \item \code{hex(value = UBIGINT)}
-#' \item \code{hex(value = HUGEINT)}
-#' \item \code{hex(value = UHUGEINT)}
+#' \item \code{hex(string = VARCHAR)}: Converts the `string` to hexadecimal representation.
+#' \item \code{hex(value = BIGNUM)}: Converts the `value` to `VARCHAR` using hexadecimal representation.
+#' \item \code{hex(blob = BLOB)}: Converts `blob` to `VARCHAR` using hexadecimal encoding.
+#' \item \code{hex(value = BIGINT)}: Converts the `value` to `VARCHAR` using hexadecimal representation.
+#' \item \code{hex(value = UBIGINT)}: Converts the `value` to `VARCHAR` using hexadecimal representation.
+#' \item \code{hex(value = HUGEINT)}: Converts the `value` to `VARCHAR` using hexadecimal representation.
+#' \item \code{hex(value = UHUGEINT)}: Converts the `value` to `VARCHAR` using hexadecimal representation.
 #' }
 #' @param string `VARCHAR`
 #' @param value `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`
@@ -5272,8 +5272,8 @@ to_hex <- function(string = VARCHAR, value = `BIGNUM | BIGINT | UBIGINT | HUGEIN
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{histogram(arg = ANY, col1 = `ANY[]`)}
-#' \item \code{histogram(arg = ANY)}
+#' \item \code{histogram(arg = ANY, col1 = `ANY[]`)}: Returns a LIST of STRUCTs with the fields bucket and count.
+#' \item \code{histogram(arg = ANY)}: Returns a LIST of STRUCTs with the fields bucket and count.
 #' \item \code{histogram(source, col_name, bin_count, technique)}
 #' }
 #' @param arg `ANY`
@@ -5337,13 +5337,13 @@ histogram_values <- function(source, col_name, bin_count, technique) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{hour(ts = DATE)}
-#' \item \code{hour(ts = INTERVAL)}
-#' \item \code{hour(ts = TIME)}
-#' \item \code{hour(ts = TIMESTAMP)}
-#' \item \code{hour(ts = `TIME WITH TIME ZONE`)}
-#' \item \code{hour(ts = TIME_NS)}
-#' \item \code{hour(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{hour(ts = DATE)}: Extract the hour component from a date or timestamp.
+#' \item \code{hour(ts = INTERVAL)}: Extract the hour component from a date or timestamp.
+#' \item \code{hour(ts = TIME)}: Extract the hour component from a date or timestamp.
+#' \item \code{hour(ts = TIMESTAMP)}: Extract the hour component from a date or timestamp.
+#' \item \code{hour(ts = `TIME WITH TIME ZONE`)}: Extract the hour component from a date or timestamp.
+#' \item \code{hour(ts = TIME_NS)}: Extract the hour component from a date or timestamp.
+#' \item \code{hour(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the hour component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -5528,11 +5528,11 @@ is_histogram_other_bin <- function(val = ANY) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{isfinite(x = FLOAT)}
-#' \item \code{isfinite(x = DOUBLE)}
-#' \item \code{isfinite(x = DATE)}
-#' \item \code{isfinite(x = TIMESTAMP)}
-#' \item \code{isfinite(x = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{isfinite(x = FLOAT)}: Returns true if the floating point value is finite, false otherwise.
+#' \item \code{isfinite(x = DOUBLE)}: Returns true if the floating point value is finite, false otherwise.
+#' \item \code{isfinite(x = DATE)}: Returns true if the floating point value is finite, false otherwise.
+#' \item \code{isfinite(x = TIMESTAMP)}: Returns true if the floating point value is finite, false otherwise.
+#' \item \code{isfinite(x = `TIMESTAMP WITH TIME ZONE`)}: Returns true if the floating point value is finite, false otherwise.
 #' }
 #' @param x `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BOOLEAN`
@@ -5554,11 +5554,11 @@ isfinite <- function(x = `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIM
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{isinf(x = FLOAT)}
-#' \item \code{isinf(x = DOUBLE)}
-#' \item \code{isinf(x = DATE)}
-#' \item \code{isinf(x = TIMESTAMP)}
-#' \item \code{isinf(x = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{isinf(x = FLOAT)}: Returns true if the floating point value is infinite, false otherwise.
+#' \item \code{isinf(x = DOUBLE)}: Returns true if the floating point value is infinite, false otherwise.
+#' \item \code{isinf(x = DATE)}: Returns true if the floating point value is infinite, false otherwise.
+#' \item \code{isinf(x = TIMESTAMP)}: Returns true if the floating point value is infinite, false otherwise.
+#' \item \code{isinf(x = `TIMESTAMP WITH TIME ZONE`)}: Returns true if the floating point value is infinite, false otherwise.
 #' }
 #' @param x `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BOOLEAN`
@@ -5580,8 +5580,8 @@ isinf <- function(x = `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME Z
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{isnan(x = FLOAT)}
-#' \item \code{isnan(x = DOUBLE)}
+#' \item \code{isnan(x = FLOAT)}: Returns true if the floating point value is not a number, false otherwise.
+#' \item \code{isnan(x = DOUBLE)}: Returns true if the floating point value is not a number, false otherwise.
 #' }
 #' @param x `FLOAT | DOUBLE`
 #' @return `BOOLEAN`
@@ -5603,10 +5603,10 @@ isnan <- function(x = `FLOAT | DOUBLE`) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{isodow(ts = DATE)}
-#' \item \code{isodow(ts = INTERVAL)}
-#' \item \code{isodow(ts = TIMESTAMP)}
-#' \item \code{isodow(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{isodow(ts = DATE)}: Extract the isodow component from a date or timestamp.
+#' \item \code{isodow(ts = INTERVAL)}: Extract the isodow component from a date or timestamp.
+#' \item \code{isodow(ts = TIMESTAMP)}: Extract the isodow component from a date or timestamp.
+#' \item \code{isodow(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the isodow component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -5628,10 +5628,10 @@ isodow <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{isoyear(ts = DATE)}
-#' \item \code{isoyear(ts = INTERVAL)}
-#' \item \code{isoyear(ts = TIMESTAMP)}
-#' \item \code{isoyear(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{isoyear(ts = DATE)}: Extract the isoyear component from a date or timestamp.
+#' \item \code{isoyear(ts = INTERVAL)}: Extract the isoyear component from a date or timestamp.
+#' \item \code{isoyear(ts = TIMESTAMP)}: Extract the isoyear component from a date or timestamp.
+#' \item \code{isoyear(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the isoyear component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -5673,8 +5673,8 @@ jaccard <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{jaro_similarity(s1 = VARCHAR, s2 = VARCHAR)}
-#' \item \code{jaro_similarity(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE)}
+#' \item \code{jaro_similarity(s1 = VARCHAR, s2 = VARCHAR)}: The Jaro similarity between two strings. Characters of different cases (e.g., `a` and `A`) are considered different. Returns a number between 0 and 1. For similarity < `score_cutoff`, 0 is returned instead. `score_cutoff` defaults to 0.
+#' \item \code{jaro_similarity(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE)}: The Jaro similarity between two strings. Characters of different cases (e.g., `a` and `A`) are considered different. Returns a number between 0 and 1. For similarity < `score_cutoff`, 0 is returned instead. `score_cutoff` defaults to 0.
 #' }
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
@@ -5699,8 +5699,8 @@ jaro_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{jaro_winkler_similarity(s1 = VARCHAR, s2 = VARCHAR)}
-#' \item \code{jaro_winkler_similarity(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE)}
+#' \item \code{jaro_winkler_similarity(s1 = VARCHAR, s2 = VARCHAR)}: The Jaro-Winkler similarity between two strings. Characters of different cases (e.g., `a` and `A`) are considered different. Returns a number between 0 and 1. For similarity < `score_cutoff`, 0 is returned instead. `score_cutoff` defaults to 0.
+#' \item \code{jaro_winkler_similarity(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE)}: The Jaro-Winkler similarity between two strings. Characters of different cases (e.g., `a` and `A`) are considered different. Returns a number between 0 and 1. For similarity < `score_cutoff`, 0 is returned instead. `score_cutoff` defaults to 0.
 #' }
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
@@ -5725,9 +5725,9 @@ jaro_winkler_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = D
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{julian(ts = DATE)}
-#' \item \code{julian(ts = TIMESTAMP)}
-#' \item \code{julian(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{julian(ts = DATE)}: Extract the Julian Day number from a date or timestamp.
+#' \item \code{julian(ts = TIMESTAMP)}: Extract the Julian Day number from a date or timestamp.
+#' \item \code{julian(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the Julian Day number from a date or timestamp.
 #' }
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `DOUBLE`
@@ -5825,8 +5825,8 @@ lag <- function(col0 = T, col1 = BIGINT, col2 = T) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{last(arg = DECIMAL)}
-#' \item \code{last(arg = ANY)}
+#' \item \code{last(arg = DECIMAL)}: Returns the last value of a column. This function is affected by ordering.
+#' \item \code{last(arg = ANY)}: Returns the last value of a column. This function is affected by ordering.
 #' \item \code{last(col0 = T)}
 #' }
 #' @param arg `DECIMAL | ANY`
@@ -5850,9 +5850,9 @@ last <- function(arg = `DECIMAL | ANY`, col0 = T) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{last_day(ts = DATE)}
-#' \item \code{last_day(ts = TIMESTAMP)}
-#' \item \code{last_day(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{last_day(ts = DATE)}: Returns the last day of the month.
+#' \item \code{last_day(ts = TIMESTAMP)}: Returns the last day of the month.
+#' \item \code{last_day(ts = `TIMESTAMP WITH TIME ZONE`)}: Returns the last day of the month.
 #' }
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `DATE`
@@ -5928,8 +5928,8 @@ least <- function(arg1 = ANY) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{least_common_multiple(x = BIGINT, y = BIGINT)}
-#' \item \code{least_common_multiple(x = HUGEINT, y = HUGEINT)}
+#' \item \code{least_common_multiple(x = BIGINT, y = BIGINT)}: Computes the least common multiple of x and y.
+#' \item \code{least_common_multiple(x = HUGEINT, y = HUGEINT)}: Computes the least common multiple of x and y.
 #' }
 #' @param x `BIGINT | HUGEINT`
 #' @param y `BIGINT | HUGEINT`
@@ -6003,9 +6003,9 @@ left_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{len(string = VARCHAR)}
-#' \item \code{len(bit = BIT)}
-#' \item \code{len(list = `ANY[]`)}
+#' \item \code{len(string = VARCHAR)}: Number of characters in `string`.
+#' \item \code{len(bit = BIT)}: Returns the bit-length of the `bit` argument.
+#' \item \code{len(list = `ANY[]`)}: Returns the length of the `list`.
 #' }
 #' @param string `VARCHAR`
 #' @param bit `BIT`
@@ -6414,8 +6414,8 @@ list_has <- function(list = `T[]`, element = T) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{list_cosine_distance(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}
-#' \item \code{list_cosine_distance(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}
+#' \item \code{list_cosine_distance(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}: Computes the cosine distance between two same-sized lists.
+#' \item \code{list_cosine_distance(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}: Computes the cosine distance between two same-sized lists.
 #' }
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
@@ -6446,8 +6446,8 @@ list_cosine_distance <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] 
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{list_cosine_similarity(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}
-#' \item \code{list_cosine_similarity(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}
+#' \item \code{list_cosine_similarity(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}: Computes the cosine similarity between two same-sized lists.
+#' \item \code{list_cosine_similarity(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}: Computes the cosine similarity between two same-sized lists.
 #' }
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
@@ -6485,8 +6485,8 @@ list_count <- function(l) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{list_distance(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}
-#' \item \code{list_distance(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}
+#' \item \code{list_distance(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}: Calculates the Euclidean distance between two points with coordinates given in two inputs lists of equal length.
+#' \item \code{list_distance(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}: Calculates the Euclidean distance between two points with coordinates given in two inputs lists of equal length.
 #' }
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
@@ -6550,8 +6550,8 @@ list_entropy <- function(l) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{list_extract(list = `T[]`, index = BIGINT)}
-#' \item \code{list_extract(list = VARCHAR, index = BIGINT)}
+#' \item \code{list_extract(list = `T[]`, index = BIGINT)}: Extract the `index`th (1-based) value from the list.
+#' \item \code{list_extract(list = VARCHAR, index = BIGINT)}: Extract the `index`th (1-based) value from the list.
 #' }
 #' @param list `T[] | VARCHAR`
 #' @param index `BIGINT`
@@ -6631,9 +6631,9 @@ list_first <- function(l) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{list_grade_up(list = `ANY[]`)}
-#' \item \code{list_grade_up(list = `ANY[]`, col1 = VARCHAR)}
-#' \item \code{list_grade_up(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR)}
+#' \item \code{list_grade_up(list = `ANY[]`)}: Works like list_sort, but the results are the indexes that correspond to the position in the original list instead of the actual values.
+#' \item \code{list_grade_up(list = `ANY[]`, col1 = VARCHAR)}: Works like list_sort, but the results are the indexes that correspond to the position in the original list instead of the actual values.
+#' \item \code{list_grade_up(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR)}: Works like list_sort, but the results are the indexes that correspond to the position in the original list instead of the actual values.
 #' }
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
@@ -6768,8 +6768,8 @@ list_histogram <- function(l) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{list_inner_product(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}
-#' \item \code{list_inner_product(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}
+#' \item \code{list_inner_product(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}: Computes the inner product between two same-sized lists.
+#' \item \code{list_inner_product(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}: Computes the inner product between two same-sized lists.
 #' }
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
@@ -6939,8 +6939,8 @@ list_mode <- function(l) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{list_negative_inner_product(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}
-#' \item \code{list_negative_inner_product(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}
+#' \item \code{list_negative_inner_product(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}: Computes the negative inner product between two same-sized lists.
+#' \item \code{list_negative_inner_product(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}: Computes the negative inner product between two same-sized lists.
 #' }
 #' @param list1 `FLOAT[] | DOUBLE[]`
 #' @param list2 `FLOAT[] | DOUBLE[]`
@@ -7041,8 +7041,8 @@ list_product <- function(l) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{list_reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA)}
-#' \item \code{list_reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY)}
+#' \item \code{list_reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA)}: Reduces all elements of the input `list` into a single scalar value by executing the `lambda` function on a running result and the next list element. The `lambda` function has an optional `initial_value` argument.
+#' \item \code{list_reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY)}: Reduces all elements of the input `list` into a single scalar value by executing the `lambda` function on a running result and the next list element. The `lambda` function has an optional `initial_value` argument.
 #' }
 #' @param list `ANY[]`
 #' @param lambda(x,y) `LAMBDA`
@@ -7082,8 +7082,8 @@ reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY) 
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{list_resize(list = `ANY[]`, `size[` = ANY)}
-#' \item \code{list_resize(list = `ANY[]`, `size[` = ANY, `value]` = ANY)}
+#' \item \code{list_resize(list = `ANY[]`, `size[` = ANY)}: Resizes the `list` to contain `size` elements. Initializes new elements with `value` or `NULL` if `value` is not set.
+#' \item \code{list_resize(list = `ANY[]`, `size[` = ANY, `value]` = ANY)}: Resizes the `list` to contain `size` elements. Initializes new elements with `value` or `NULL` if `value` is not set.
 #' }
 #' @param list `ANY[]`
 #' @param size[ `ANY`
@@ -7129,8 +7129,8 @@ list_reverse <- function(l) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{list_reverse_sort(list = `ANY[]`)}
-#' \item \code{list_reverse_sort(list = `ANY[]`, col1 = VARCHAR)}
+#' \item \code{list_reverse_sort(list = `ANY[]`)}: Sorts the elements of the list in reverse order.
+#' \item \code{list_reverse_sort(list = `ANY[]`, col1 = VARCHAR)}: Sorts the elements of the list in reverse order.
 #' }
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
@@ -7218,8 +7218,8 @@ list_skewness <- function(l) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{list_slice(list = ANY, begin = ANY, end = ANY)}
-#' \item \code{list_slice(list = ANY, begin = ANY, end = ANY, step = BIGINT)}
+#' \item \code{list_slice(list = ANY, begin = ANY, end = ANY)}: Extracts a sublist or substring using slice conventions. Negative values are accepted.
+#' \item \code{list_slice(list = ANY, begin = ANY, end = ANY, step = BIGINT)}: list_slice with added step feature.
 #' }
 #' @param list `ANY`
 #' @param begin `ANY`
@@ -7257,9 +7257,9 @@ array_slice <- function(list = ANY, begin = ANY, end = ANY, step = BIGINT) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{list_sort(list = `ANY[]`)}
-#' \item \code{list_sort(list = `ANY[]`, col1 = VARCHAR)}
-#' \item \code{list_sort(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR)}
+#' \item \code{list_sort(list = `ANY[]`)}: Sorts the elements of the list.
+#' \item \code{list_sort(list = `ANY[]`, col1 = VARCHAR)}: Sorts the elements of the list.
+#' \item \code{list_sort(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR)}: Sorts the elements of the list.
 #' }
 #' @param list `ANY[]`
 #' @param col1 `VARCHAR`
@@ -7422,8 +7422,8 @@ array_unique <- function(list = `ANY[]`) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{list_value()}
-#' \item \code{list_value(any = T)}
+#' \item \code{list_value()}: Creates a LIST containing the argument values.
+#' \item \code{list_value(any = T)}: Creates a LIST containing the argument values.
 #' }
 #' @param any `T`
 #' @return `"NULL"[] | T[]`
@@ -7554,8 +7554,8 @@ ln <- function(x = DOUBLE) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{log(b = DOUBLE)}
-#' \item \code{log(b = DOUBLE, x = DOUBLE)}
+#' \item \code{log(b = DOUBLE)}: Computes the logarithm of x to base b. b may be omitted, in which case the default 10.
+#' \item \code{log(b = DOUBLE, x = DOUBLE)}: Computes the logarithm of x to base b. b may be omitted, in which case the default 10.
 #' }
 #' @param b `DOUBLE`
 #' @param x `DOUBLE`
@@ -7661,8 +7661,8 @@ lpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{ltrim(string = VARCHAR)}
-#' \item \code{ltrim(string = VARCHAR, characters = VARCHAR)}
+#' \item \code{ltrim(string = VARCHAR)}: Removes any occurrences of any of the `characters` from the left side of the `string`. `characters` defaults to `space`.
+#' \item \code{ltrim(string = VARCHAR, characters = VARCHAR)}: Removes any occurrences of any of the `characters` from the left side of the `string`. `characters` defaults to `space`.
 #' }
 #' @param string `VARCHAR`
 #' @param characters `VARCHAR`
@@ -7687,14 +7687,14 @@ ltrim <- function(string = VARCHAR, characters = VARCHAR) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{mad(x = DECIMAL)}
-#' \item \code{mad(x = FLOAT)}
-#' \item \code{mad(x = DOUBLE)}
-#' \item \code{mad(x = DATE)}
-#' \item \code{mad(x = TIMESTAMP)}
-#' \item \code{mad(x = TIME)}
-#' \item \code{mad(x = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{mad(x = `TIME WITH TIME ZONE`)}
+#' \item \code{mad(x = DECIMAL)}: Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
+#' \item \code{mad(x = FLOAT)}: Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
+#' \item \code{mad(x = DOUBLE)}: Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
+#' \item \code{mad(x = DATE)}: Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
+#' \item \code{mad(x = TIMESTAMP)}: Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
+#' \item \code{mad(x = TIME)}: Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
+#' \item \code{mad(x = `TIMESTAMP WITH TIME ZONE`)}: Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
+#' \item \code{mad(x = `TIME WITH TIME ZONE`)}: Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
 #' }
 #' @param x `DECIMAL | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE`
 #' @return `DECIMAL | FLOAT | DOUBLE | INTERVAL`
@@ -7719,8 +7719,8 @@ mad <- function(x = `DECIMAL | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMEST
 #' @section Overloads:
 #' \itemize{
 #' \item \code{make_date(col0 = INTEGER)}
-#' \item \code{make_date(year = BIGINT, month = BIGINT, day = BIGINT)}
-#' \item \code{make_date(`date-struct` = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`)}
+#' \item \code{make_date(year = BIGINT, month = BIGINT, day = BIGINT)}: The date for the given parts.
+#' \item \code{make_date(`date-struct` = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`)}: The date for the given struct.
 #' }
 #' @param col0 `INTEGER`
 #' @param year `BIGINT`
@@ -7767,8 +7767,8 @@ make_time <- function(hour = BIGINT, minute = BIGINT, seconds = DOUBLE) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{make_timestamp(year = BIGINT, month = BIGINT, day = BIGINT, hour = BIGINT, minute = BIGINT, seconds = DOUBLE)}
-#' \item \code{make_timestamp(year = BIGINT)}
+#' \item \code{make_timestamp(year = BIGINT, month = BIGINT, day = BIGINT, hour = BIGINT, minute = BIGINT, seconds = DOUBLE)}: The timestamp for the given parts.
+#' \item \code{make_timestamp(year = BIGINT)}: The timestamp for the given parts.
 #' }
 #' @param year `BIGINT`
 #' @param month `BIGINT`
@@ -7849,8 +7849,8 @@ make_type <- function(name = VARCHAR) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{map()}
-#' \item \code{map(keys = `K[]`, values = `V[]`)}
+#' \item \code{map()}: Creates a map from a set of keys and values.
+#' \item \code{map(keys = `K[]`, values = `V[]`)}: Creates a map from a set of keys and values.
 #' }
 #' @param keys `K[]`
 #' @param values `V[]`
@@ -8072,8 +8072,8 @@ map_values <- function(map = `MAP(K, V)`) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{max(arg = ANY)}
-#' \item \code{max(arg = ANY, col1 = BIGINT)}
+#' \item \code{max(arg = ANY)}: Returns the maximum value present in arg.
+#' \item \code{max(arg = ANY, col1 = BIGINT)}: Returns the maximum value present in arg.
 #' }
 #' @param arg `ANY`
 #' @param col1 `BIGINT`
@@ -8098,8 +8098,8 @@ max <- function(arg = ANY, col1 = BIGINT) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{md5(string = VARCHAR)}
-#' \item \code{md5(blob = BLOB)}
+#' \item \code{md5(string = VARCHAR)}: Returns the MD5 hash of the `string` as a `VARCHAR`.
+#' \item \code{md5(blob = BLOB)}: Returns the MD5 hash of the `blob` as a `VARCHAR`.
 #' }
 #' @param string `VARCHAR`
 #' @param blob `BLOB`
@@ -8127,8 +8127,8 @@ md5 <- function(string = VARCHAR, blob = BLOB) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{md5_number(string = VARCHAR)}
-#' \item \code{md5_number(blob = BLOB)}
+#' \item \code{md5_number(string = VARCHAR)}: Returns the MD5 hash of the `string` as a `HUGEINT`.
+#' \item \code{md5_number(blob = BLOB)}: Returns the MD5 hash of the `blob` as a `HUGEINT`.
 #' }
 #' @param string `VARCHAR`
 #' @param blob `BLOB`
@@ -8214,13 +8214,13 @@ metadata_info <- function() {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{microsecond(ts = DATE)}
-#' \item \code{microsecond(ts = INTERVAL)}
-#' \item \code{microsecond(ts = TIME)}
-#' \item \code{microsecond(ts = TIMESTAMP)}
-#' \item \code{microsecond(ts = `TIME WITH TIME ZONE`)}
-#' \item \code{microsecond(ts = TIME_NS)}
-#' \item \code{microsecond(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{microsecond(ts = DATE)}: Extract the microsecond component from a date or timestamp.
+#' \item \code{microsecond(ts = INTERVAL)}: Extract the microsecond component from a date or timestamp.
+#' \item \code{microsecond(ts = TIME)}: Extract the microsecond component from a date or timestamp.
+#' \item \code{microsecond(ts = TIMESTAMP)}: Extract the microsecond component from a date or timestamp.
+#' \item \code{microsecond(ts = `TIME WITH TIME ZONE`)}: Extract the microsecond component from a date or timestamp.
+#' \item \code{microsecond(ts = TIME_NS)}: Extract the microsecond component from a date or timestamp.
+#' \item \code{microsecond(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the microsecond component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -8242,10 +8242,10 @@ microsecond <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{millennium(ts = DATE)}
-#' \item \code{millennium(ts = INTERVAL)}
-#' \item \code{millennium(ts = TIMESTAMP)}
-#' \item \code{millennium(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{millennium(ts = DATE)}: Extract the millennium component from a date or timestamp.
+#' \item \code{millennium(ts = INTERVAL)}: Extract the millennium component from a date or timestamp.
+#' \item \code{millennium(ts = TIMESTAMP)}: Extract the millennium component from a date or timestamp.
+#' \item \code{millennium(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the millennium component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -8267,13 +8267,13 @@ millennium <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME Z
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{millisecond(ts = DATE)}
-#' \item \code{millisecond(ts = INTERVAL)}
-#' \item \code{millisecond(ts = TIME)}
-#' \item \code{millisecond(ts = TIMESTAMP)}
-#' \item \code{millisecond(ts = `TIME WITH TIME ZONE`)}
-#' \item \code{millisecond(ts = TIME_NS)}
-#' \item \code{millisecond(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{millisecond(ts = DATE)}: Extract the millisecond component from a date or timestamp.
+#' \item \code{millisecond(ts = INTERVAL)}: Extract the millisecond component from a date or timestamp.
+#' \item \code{millisecond(ts = TIME)}: Extract the millisecond component from a date or timestamp.
+#' \item \code{millisecond(ts = TIMESTAMP)}: Extract the millisecond component from a date or timestamp.
+#' \item \code{millisecond(ts = `TIME WITH TIME ZONE`)}: Extract the millisecond component from a date or timestamp.
+#' \item \code{millisecond(ts = TIME_NS)}: Extract the millisecond component from a date or timestamp.
+#' \item \code{millisecond(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the millisecond component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -8295,8 +8295,8 @@ millisecond <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{min(arg = ANY)}
-#' \item \code{min(arg = ANY, col1 = BIGINT)}
+#' \item \code{min(arg = ANY)}: Returns the minimum value present in arg.
+#' \item \code{min(arg = ANY, col1 = BIGINT)}: Returns the minimum value present in arg.
 #' }
 #' @param arg `ANY`
 #' @param col1 `BIGINT`
@@ -8319,13 +8319,13 @@ min <- function(arg = ANY, col1 = BIGINT) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{minute(ts = DATE)}
-#' \item \code{minute(ts = INTERVAL)}
-#' \item \code{minute(ts = TIME)}
-#' \item \code{minute(ts = TIMESTAMP)}
-#' \item \code{minute(ts = `TIME WITH TIME ZONE`)}
-#' \item \code{minute(ts = TIME_NS)}
-#' \item \code{minute(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{minute(ts = DATE)}: Extract the minute component from a date or timestamp.
+#' \item \code{minute(ts = INTERVAL)}: Extract the minute component from a date or timestamp.
+#' \item \code{minute(ts = TIME)}: Extract the minute component from a date or timestamp.
+#' \item \code{minute(ts = TIMESTAMP)}: Extract the minute component from a date or timestamp.
+#' \item \code{minute(ts = `TIME WITH TIME ZONE`)}: Extract the minute component from a date or timestamp.
+#' \item \code{minute(ts = TIME_NS)}: Extract the minute component from a date or timestamp.
+#' \item \code{minute(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the minute component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -8399,10 +8399,10 @@ mode <- function(x = ANY) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{month(ts = DATE)}
-#' \item \code{month(ts = INTERVAL)}
-#' \item \code{month(ts = TIMESTAMP)}
-#' \item \code{month(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{month(ts = DATE)}: Extract the month component from a date or timestamp.
+#' \item \code{month(ts = INTERVAL)}: Extract the month component from a date or timestamp.
+#' \item \code{month(ts = TIMESTAMP)}: Extract the month component from a date or timestamp.
+#' \item \code{month(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the month component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -8424,9 +8424,9 @@ month <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`)
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{monthname(ts = DATE)}
-#' \item \code{monthname(ts = TIMESTAMP)}
-#' \item \code{monthname(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{monthname(ts = DATE)}: The (English) name of the month.
+#' \item \code{monthname(ts = TIMESTAMP)}: The (English) name of the month.
+#' \item \code{monthname(ts = `TIMESTAMP WITH TIME ZONE`)}: The (English) name of the month.
 #' }
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `VARCHAR`
@@ -8490,14 +8490,14 @@ multiply <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | F
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{nanosecond(tsns = DATE)}
-#' \item \code{nanosecond(tsns = TIMESTAMP)}
-#' \item \code{nanosecond(tsns = INTERVAL)}
-#' \item \code{nanosecond(tsns = TIME)}
-#' \item \code{nanosecond(tsns = TIME_NS)}
-#' \item \code{nanosecond(tsns = `TIME WITH TIME ZONE`)}
-#' \item \code{nanosecond(tsns = TIMESTAMP_NS)}
-#' \item \code{nanosecond(tsns = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{nanosecond(tsns = DATE)}: Extract the nanosecond component from a date or timestamp.
+#' \item \code{nanosecond(tsns = TIMESTAMP)}: Extract the nanosecond component from a date or timestamp.
+#' \item \code{nanosecond(tsns = INTERVAL)}: Extract the nanosecond component from a date or timestamp.
+#' \item \code{nanosecond(tsns = TIME)}: Extract the nanosecond component from a date or timestamp.
+#' \item \code{nanosecond(tsns = TIME_NS)}: Extract the nanosecond component from a date or timestamp.
+#' \item \code{nanosecond(tsns = `TIME WITH TIME ZONE`)}: Extract the nanosecond component from a date or timestamp.
+#' \item \code{nanosecond(tsns = TIMESTAMP_NS)}: Extract the nanosecond component from a date or timestamp.
+#' \item \code{nanosecond(tsns = `TIMESTAMP WITH TIME ZONE`)}: Extract the nanosecond component from a date or timestamp.
 #' }
 #' @param tsns `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -8519,8 +8519,8 @@ nanosecond <- function(tsns = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TI
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{nextafter(x = DOUBLE, y = DOUBLE)}
-#' \item \code{nextafter(x = FLOAT, y = FLOAT)}
+#' \item \code{nextafter(x = DOUBLE, y = DOUBLE)}: Returns the next floating point value after x in the direction of y.
+#' \item \code{nextafter(x = FLOAT, y = FLOAT)}: Returns the next floating point value after x in the direction of y.
 #' }
 #' @param x `DOUBLE | FLOAT`
 #' @param y `DOUBLE | FLOAT`
@@ -8731,8 +8731,8 @@ obj_description <- function(object_oid, catalog_name) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{octet_length(blob = BLOB)}
-#' \item \code{octet_length(bitstring = BIT)}
+#' \item \code{octet_length(blob = BLOB)}: Number of bytes in `blob`.
+#' \item \code{octet_length(bitstring = BIT)}: Returns the number of bytes in the `bitstring`.
 #' }
 #' @param blob `BLOB`
 #' @param bitstring `BIT`
@@ -8758,17 +8758,17 @@ octet_length <- function(blob = BLOB, bitstring = BIT) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{`|`(left = TINYINT, right = TINYINT)}
-#' \item \code{`|`(left = SMALLINT, right = SMALLINT)}
-#' \item \code{`|`(left = INTEGER, right = INTEGER)}
-#' \item \code{`|`(left = BIGINT, right = BIGINT)}
-#' \item \code{`|`(left = HUGEINT, right = HUGEINT)}
-#' \item \code{`|`(left = UTINYINT, right = UTINYINT)}
-#' \item \code{`|`(left = USMALLINT, right = USMALLINT)}
-#' \item \code{`|`(left = UINTEGER, right = UINTEGER)}
-#' \item \code{`|`(left = UBIGINT, right = UBIGINT)}
-#' \item \code{`|`(left = UHUGEINT, right = UHUGEINT)}
-#' \item \code{`|`(left = BIT, right = BIT)}
+#' \item \code{`|`(left = TINYINT, right = TINYINT)}: Bitwise OR.
+#' \item \code{`|`(left = SMALLINT, right = SMALLINT)}: Bitwise OR.
+#' \item \code{`|`(left = INTEGER, right = INTEGER)}: Bitwise OR.
+#' \item \code{`|`(left = BIGINT, right = BIGINT)}: Bitwise OR.
+#' \item \code{`|`(left = HUGEINT, right = HUGEINT)}: Bitwise OR.
+#' \item \code{`|`(left = UTINYINT, right = UTINYINT)}: Bitwise OR.
+#' \item \code{`|`(left = USMALLINT, right = USMALLINT)}: Bitwise OR.
+#' \item \code{`|`(left = UINTEGER, right = UINTEGER)}: Bitwise OR.
+#' \item \code{`|`(left = UBIGINT, right = UBIGINT)}: Bitwise OR.
+#' \item \code{`|`(left = UHUGEINT, right = UHUGEINT)}: Bitwise OR.
+#' \item \code{`|`(left = BIT, right = BIT)}: Bitwise OR.
 #' }
 #' @param left `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @param right `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
@@ -8964,8 +8964,8 @@ parquet_schema <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{parse_dirname(path = VARCHAR)}
-#' \item \code{parse_dirname(path = VARCHAR, separator = VARCHAR)}
+#' \item \code{parse_dirname(path = VARCHAR)}: Returns the top-level directory name from the given `path`. `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
+#' \item \code{parse_dirname(path = VARCHAR, separator = VARCHAR)}: Returns the top-level directory name from the given `path`. `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
 #' }
 #' @param path `VARCHAR`
 #' @param separator `VARCHAR`
@@ -8989,8 +8989,8 @@ parse_dirname <- function(path = VARCHAR, separator = VARCHAR) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{parse_dirpath(path = VARCHAR)}
-#' \item \code{parse_dirpath(path = VARCHAR, separator = VARCHAR)}
+#' \item \code{parse_dirpath(path = VARCHAR)}: Returns the head of the `path` (the pathname until the last slash) similarly to Python's `os.path.dirname`. `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
+#' \item \code{parse_dirpath(path = VARCHAR, separator = VARCHAR)}: Returns the head of the `path` (the pathname until the last slash) similarly to Python's `os.path.dirname`. `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
 #' }
 #' @param path `VARCHAR`
 #' @param separator `VARCHAR`
@@ -9033,10 +9033,10 @@ parse_duckdb_log_message <- function(type = VARCHAR, message = VARCHAR) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{parse_filename(string = VARCHAR)}
-#' \item \code{parse_filename(string = VARCHAR, trim_extension = VARCHAR)}
-#' \item \code{parse_filename(string = VARCHAR, trim_extension = BOOLEAN)}
-#' \item \code{parse_filename(string = VARCHAR, trim_extension = BOOLEAN, separator = VARCHAR)}
+#' \item \code{parse_filename(string = VARCHAR)}: Returns the last component of the `path` similarly to Python's `os.path.basename` function. If `trim_extension` is `true`, the file extension will be removed (defaults to `false`). `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
+#' \item \code{parse_filename(string = VARCHAR, trim_extension = VARCHAR)}: Returns the last component of the `path` similarly to Python's `os.path.basename` function. If `trim_extension` is `true`, the file extension will be removed (defaults to `false`). `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
+#' \item \code{parse_filename(string = VARCHAR, trim_extension = BOOLEAN)}: Returns the last component of the `path` similarly to Python's `os.path.basename` function. If `trim_extension` is `true`, the file extension will be removed (defaults to `false`). `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
+#' \item \code{parse_filename(string = VARCHAR, trim_extension = BOOLEAN, separator = VARCHAR)}: Returns the last component of the `path` similarly to Python's `os.path.basename` function. If `trim_extension` is `true`, the file extension will be removed (defaults to `false`). `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
 #' }
 #' @param string `VARCHAR`
 #' @param trim_extension `VARCHAR | BOOLEAN`
@@ -9081,8 +9081,8 @@ parse_formatted_bytes <- function(string = VARCHAR) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{parse_path(path = VARCHAR)}
-#' \item \code{parse_path(path = VARCHAR, separator = VARCHAR)}
+#' \item \code{parse_path(path = VARCHAR)}: Returns a list of the components (directories and filename) in the `path` similarly to Python's `pathlib.parts` function. `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
+#' \item \code{parse_path(path = VARCHAR, separator = VARCHAR)}: Returns a list of the components (directories and filename) in the `path` similarly to Python's `pathlib.parts` function. `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
 #' }
 #' @param path `VARCHAR`
 #' @param separator `VARCHAR`
@@ -9719,32 +9719,32 @@ product <- function(arg = DOUBLE) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{quantile_cont(x = DECIMAL, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = DECIMAL, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = TINYINT, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = TINYINT, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = SMALLINT, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = SMALLINT, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = INTEGER, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = INTEGER, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = BIGINT, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = BIGINT, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = HUGEINT, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = HUGEINT, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = FLOAT, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = FLOAT, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = DOUBLE, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = DOUBLE, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = DATE, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = DATE, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = TIMESTAMP, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = TIMESTAMP, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = TIME, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = TIME, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = `TIMESTAMP WITH TIME ZONE`, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = `TIMESTAMP WITH TIME ZONE`, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = `TIME WITH TIME ZONE`, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = `TIME WITH TIME ZONE`, pos = `DOUBLE[]`)}
+#' \item \code{quantile_cont(x = DECIMAL, pos = DOUBLE)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = DECIMAL, pos = `DOUBLE[]`)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = TINYINT, pos = DOUBLE)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = TINYINT, pos = `DOUBLE[]`)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = SMALLINT, pos = DOUBLE)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = SMALLINT, pos = `DOUBLE[]`)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = INTEGER, pos = DOUBLE)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = INTEGER, pos = `DOUBLE[]`)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = BIGINT, pos = DOUBLE)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = BIGINT, pos = `DOUBLE[]`)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = HUGEINT, pos = DOUBLE)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = HUGEINT, pos = `DOUBLE[]`)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = FLOAT, pos = DOUBLE)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = FLOAT, pos = `DOUBLE[]`)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = DOUBLE, pos = DOUBLE)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = DOUBLE, pos = `DOUBLE[]`)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = DATE, pos = DOUBLE)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = DATE, pos = `DOUBLE[]`)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = TIMESTAMP, pos = DOUBLE)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = TIMESTAMP, pos = `DOUBLE[]`)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = TIME, pos = DOUBLE)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = TIME, pos = `DOUBLE[]`)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = `TIMESTAMP WITH TIME ZONE`, pos = DOUBLE)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = `TIMESTAMP WITH TIME ZONE`, pos = `DOUBLE[]`)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = `TIME WITH TIME ZONE`, pos = DOUBLE)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
+#' \item \code{quantile_cont(x = `TIME WITH TIME ZONE`, pos = `DOUBLE[]`)}: Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
 #' }
 #' @param x `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE`
 #' @param pos `DOUBLE | DOUBLE[]`
@@ -9767,9 +9767,9 @@ quantile_cont <- function(x = `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT |
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{quantile_disc(x = ANY, pos = DOUBLE)}
-#' \item \code{quantile_disc(x = ANY, pos = `DOUBLE[]`)}
-#' \item \code{quantile_disc(x = ANY)}
+#' \item \code{quantile_disc(x = ANY, pos = DOUBLE)}: Returns the exact quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding exact quantiles.
+#' \item \code{quantile_disc(x = ANY, pos = `DOUBLE[]`)}: Returns the exact quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding exact quantiles.
+#' \item \code{quantile_disc(x = ANY)}: Returns the exact quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding exact quantiles.
 #' }
 #' @param x `ANY`
 #' @param pos `DOUBLE | DOUBLE[]`
@@ -9799,10 +9799,10 @@ quantile <- function(x = ANY, pos = `DOUBLE | DOUBLE[]`) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{quarter(ts = DATE)}
-#' \item \code{quarter(ts = INTERVAL)}
-#' \item \code{quarter(ts = TIMESTAMP)}
-#' \item \code{quarter(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{quarter(ts = DATE)}: Extract the quarter component from a date or timestamp.
+#' \item \code{quarter(ts = INTERVAL)}: Extract the quarter component from a date or timestamp.
+#' \item \code{quarter(ts = TIMESTAMP)}: Extract the quarter component from a date or timestamp.
+#' \item \code{quarter(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the quarter component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -9921,11 +9921,11 @@ random <- function() {
 #' \item \code{range(col0 = BIGINT, col1 = BIGINT)}
 #' \item \code{range(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT)}
 #' \item \code{range(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)}
-#' \item \code{range(start = BIGINT)}
-#' \item \code{range(start = BIGINT, stop = BIGINT)}
-#' \item \code{range(start = BIGINT, stop = BIGINT, step = BIGINT)}
-#' \item \code{range(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}
-#' \item \code{range(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}
+#' \item \code{range(start = BIGINT)}: Creates a list of values between `start` and `stop` - the stop parameter is exclusive.
+#' \item \code{range(start = BIGINT, stop = BIGINT)}: Creates a list of values between `start` and `stop` - the stop parameter is exclusive.
+#' \item \code{range(start = BIGINT, stop = BIGINT, step = BIGINT)}: Creates a list of values between `start` and `stop` - the stop parameter is exclusive.
+#' \item \code{range(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}: Creates a list of values between `start` and `stop` - the stop parameter is exclusive.
+#' \item \code{range(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}: Creates a list of values between `start` and `stop` - the stop parameter is exclusive.
 #' }
 #' @param col0 `BIGINT | TIMESTAMP`
 #' @param col1 `BIGINT | TIMESTAMP`
@@ -10227,11 +10227,11 @@ regexp_escape <- function(string = VARCHAR) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{regexp_extract(string = VARCHAR, regex = VARCHAR)}
-#' \item \code{regexp_extract(string = VARCHAR, regex = VARCHAR, group = INTEGER)}
-#' \item \code{regexp_extract(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR)}
-#' \item \code{regexp_extract(string = VARCHAR, regex = VARCHAR, name_list = `VARCHAR[]`)}
-#' \item \code{regexp_extract(string = VARCHAR, regex = VARCHAR, name_list = `VARCHAR[]`, options = VARCHAR)}
+#' \item \code{regexp_extract(string = VARCHAR, regex = VARCHAR)}: If `string` contains the `regex` pattern, returns the capturing group specified by optional parameter `group`; otherwise, returns the empty string. The `group` must be a constant value. If no `group` is given, it defaults to 0. A set of optional regex `options` can be set.
+#' \item \code{regexp_extract(string = VARCHAR, regex = VARCHAR, group = INTEGER)}: If `string` contains the `regex` pattern, returns the capturing group specified by optional parameter `group`; otherwise, returns the empty string. The `group` must be a constant value. If no `group` is given, it defaults to 0. A set of optional regex `options` can be set.
+#' \item \code{regexp_extract(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR)}: If `string` contains the `regex` pattern, returns the capturing group specified by optional parameter `group`; otherwise, returns the empty string. The `group` must be a constant value. If no `group` is given, it defaults to 0. A set of optional regex `options` can be set.
+#' \item \code{regexp_extract(string = VARCHAR, regex = VARCHAR, name_list = `VARCHAR[]`)}: If `string` contains the `regex` pattern, returns the capturing groups as a struct with corresponding names from `name_list`; otherwise, returns a struct with the same keys and empty strings as values. A set of optional regex `options` can be set.
+#' \item \code{regexp_extract(string = VARCHAR, regex = VARCHAR, name_list = `VARCHAR[]`, options = VARCHAR)}: If `string` contains the `regex` pattern, returns the capturing groups as a struct with corresponding names from `name_list`; otherwise, returns a struct with the same keys and empty strings as values. A set of optional regex `options` can be set.
 #' }
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
@@ -10262,11 +10262,11 @@ regexp_extract <- function(string = VARCHAR, regex = VARCHAR, group = INTEGER, o
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR)}
-#' \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = INTEGER)}
-#' \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR)}
-#' \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = `VARCHAR[]`)}
-#' \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = `VARCHAR[]`, options = VARCHAR)}
+#' \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR)}: Finds non-overlapping occurrences of the `regex` in the `string` and returns the corresponding values of the capturing `group`. A set of optional regex `options` can be set.
+#' \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = INTEGER)}: Finds non-overlapping occurrences of the `regex` in the `string` and returns the corresponding values of the capturing `group`. A set of optional regex `options` can be set.
+#' \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR)}: Finds non-overlapping occurrences of the `regex` in the `string` and returns the corresponding values of the capturing `group`. A set of optional regex `options` can be set.
+#' \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = `VARCHAR[]`)}: Finds non-overlapping occurrences of the `regex` in the `string` and returns the corresponding values of the capturing `group`. A set of optional regex `options` can be set.
+#' \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = `VARCHAR[]`, options = VARCHAR)}: Finds non-overlapping occurrences of the `regex` in the `string` and returns the corresponding values of the capturing `group`. A set of optional regex `options` can be set.
 #' }
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
@@ -10292,8 +10292,8 @@ regexp_extract_all <- function(string = VARCHAR, regex = VARCHAR, group = `INTEG
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{regexp_full_match(string = VARCHAR, regex = VARCHAR)}
-#' \item \code{regexp_full_match(string = VARCHAR, regex = VARCHAR, col2 = VARCHAR)}
+#' \item \code{regexp_full_match(string = VARCHAR, regex = VARCHAR)}: Returns `true` if the entire `string` matches the `regex`. A set of optional regex `options` can be set.
+#' \item \code{regexp_full_match(string = VARCHAR, regex = VARCHAR, col2 = VARCHAR)}: Returns `true` if the entire `string` matches the `regex`. A set of optional regex `options` can be set.
 #' }
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
@@ -10318,8 +10318,8 @@ regexp_full_match <- function(string = VARCHAR, regex = VARCHAR, col2 = VARCHAR)
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{regexp_matches(string = VARCHAR, regex = VARCHAR)}
-#' \item \code{regexp_matches(string = VARCHAR, regex = VARCHAR, options = VARCHAR)}
+#' \item \code{regexp_matches(string = VARCHAR, regex = VARCHAR)}: Returns `true` if `string` contains the `regex`, `false` otherwise. A set of optional regex `options` can be set.
+#' \item \code{regexp_matches(string = VARCHAR, regex = VARCHAR, options = VARCHAR)}: Returns `true` if `string` contains the `regex`, `false` otherwise. A set of optional regex `options` can be set.
 #' }
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
@@ -10344,8 +10344,8 @@ regexp_matches <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR)
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{regexp_replace(string = VARCHAR, regex = VARCHAR, replacement = VARCHAR)}
-#' \item \code{regexp_replace(string = VARCHAR, regex = VARCHAR, replacement = VARCHAR, options = VARCHAR)}
+#' \item \code{regexp_replace(string = VARCHAR, regex = VARCHAR, replacement = VARCHAR)}: If `string` contains the `regex`, replaces the matching part with `replacement`. A set of optional regex `options` can be set.
+#' \item \code{regexp_replace(string = VARCHAR, regex = VARCHAR, replacement = VARCHAR, options = VARCHAR)}: If `string` contains the `regex`, replaces the matching part with `replacement`. A set of optional regex `options` can be set.
 #' }
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
@@ -10550,8 +10550,8 @@ regr_syy <- function(y = DOUBLE, x = DOUBLE) {
 #' @section Overloads:
 #' \itemize{
 #' \item \code{`repeat`(col0 = ANY, col1 = BIGINT)}
-#' \item \code{`repeat`(string = VARCHAR, count = BIGINT)}
-#' \item \code{`repeat`(blob = BLOB, count = BIGINT)}
+#' \item \code{`repeat`(string = VARCHAR, count = BIGINT)}: Repeats the `string` `count` number of times.
+#' \item \code{`repeat`(blob = BLOB, count = BIGINT)}: Repeats the `blob` `count` number of times.
 #' \item \code{`repeat`(col0 = `T[]`, col1 = BIGINT)}
 #' }
 #' @param col0 `ANY | T[]`
@@ -10638,38 +10638,38 @@ replace_type <- function(param = ANY, type1 = ANY, type2 = ANY) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{reservoir_quantile(x = DECIMAL, quantile = DOUBLE)}
-#' \item \code{reservoir_quantile(x = DECIMAL, quantile = DOUBLE, sample_size = INTEGER)}
-#' \item \code{reservoir_quantile(x = DECIMAL, quantile = `DOUBLE[]`)}
-#' \item \code{reservoir_quantile(x = DECIMAL, quantile = `DOUBLE[]`, sample_size = INTEGER)}
-#' \item \code{reservoir_quantile(x = TINYINT, quantile = DOUBLE)}
-#' \item \code{reservoir_quantile(x = TINYINT, quantile = DOUBLE, sample_size = INTEGER)}
-#' \item \code{reservoir_quantile(x = TINYINT, quantile = `DOUBLE[]`)}
-#' \item \code{reservoir_quantile(x = TINYINT, quantile = `DOUBLE[]`, sample_size = INTEGER)}
-#' \item \code{reservoir_quantile(x = SMALLINT, quantile = DOUBLE)}
-#' \item \code{reservoir_quantile(x = SMALLINT, quantile = DOUBLE, sample_size = INTEGER)}
-#' \item \code{reservoir_quantile(x = SMALLINT, quantile = `DOUBLE[]`)}
-#' \item \code{reservoir_quantile(x = SMALLINT, quantile = `DOUBLE[]`, sample_size = INTEGER)}
-#' \item \code{reservoir_quantile(x = INTEGER, quantile = DOUBLE)}
-#' \item \code{reservoir_quantile(x = INTEGER, quantile = DOUBLE, sample_size = INTEGER)}
-#' \item \code{reservoir_quantile(x = INTEGER, quantile = `DOUBLE[]`)}
-#' \item \code{reservoir_quantile(x = INTEGER, quantile = `DOUBLE[]`, sample_size = INTEGER)}
-#' \item \code{reservoir_quantile(x = BIGINT, quantile = DOUBLE)}
-#' \item \code{reservoir_quantile(x = BIGINT, quantile = DOUBLE, sample_size = INTEGER)}
-#' \item \code{reservoir_quantile(x = BIGINT, quantile = `DOUBLE[]`)}
-#' \item \code{reservoir_quantile(x = BIGINT, quantile = `DOUBLE[]`, sample_size = INTEGER)}
-#' \item \code{reservoir_quantile(x = HUGEINT, quantile = DOUBLE)}
-#' \item \code{reservoir_quantile(x = HUGEINT, quantile = DOUBLE, sample_size = INTEGER)}
-#' \item \code{reservoir_quantile(x = HUGEINT, quantile = `DOUBLE[]`)}
-#' \item \code{reservoir_quantile(x = HUGEINT, quantile = `DOUBLE[]`, sample_size = INTEGER)}
-#' \item \code{reservoir_quantile(x = FLOAT, quantile = DOUBLE)}
-#' \item \code{reservoir_quantile(x = FLOAT, quantile = DOUBLE, sample_size = INTEGER)}
-#' \item \code{reservoir_quantile(x = FLOAT, quantile = `DOUBLE[]`)}
-#' \item \code{reservoir_quantile(x = FLOAT, quantile = `DOUBLE[]`, sample_size = INTEGER)}
-#' \item \code{reservoir_quantile(x = DOUBLE, quantile = DOUBLE)}
-#' \item \code{reservoir_quantile(x = DOUBLE, quantile = DOUBLE, sample_size = INTEGER)}
-#' \item \code{reservoir_quantile(x = DOUBLE, quantile = `DOUBLE[]`)}
-#' \item \code{reservoir_quantile(x = DOUBLE, quantile = `DOUBLE[]`, sample_size = INTEGER)}
+#' \item \code{reservoir_quantile(x = DECIMAL, quantile = DOUBLE)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = DECIMAL, quantile = DOUBLE, sample_size = INTEGER)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = DECIMAL, quantile = `DOUBLE[]`)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = DECIMAL, quantile = `DOUBLE[]`, sample_size = INTEGER)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = TINYINT, quantile = DOUBLE)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = TINYINT, quantile = DOUBLE, sample_size = INTEGER)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = TINYINT, quantile = `DOUBLE[]`)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = TINYINT, quantile = `DOUBLE[]`, sample_size = INTEGER)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = SMALLINT, quantile = DOUBLE)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = SMALLINT, quantile = DOUBLE, sample_size = INTEGER)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = SMALLINT, quantile = `DOUBLE[]`)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = SMALLINT, quantile = `DOUBLE[]`, sample_size = INTEGER)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = INTEGER, quantile = DOUBLE)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = INTEGER, quantile = DOUBLE, sample_size = INTEGER)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = INTEGER, quantile = `DOUBLE[]`)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = INTEGER, quantile = `DOUBLE[]`, sample_size = INTEGER)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = BIGINT, quantile = DOUBLE)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = BIGINT, quantile = DOUBLE, sample_size = INTEGER)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = BIGINT, quantile = `DOUBLE[]`)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = BIGINT, quantile = `DOUBLE[]`, sample_size = INTEGER)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = HUGEINT, quantile = DOUBLE)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = HUGEINT, quantile = DOUBLE, sample_size = INTEGER)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = HUGEINT, quantile = `DOUBLE[]`)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = HUGEINT, quantile = `DOUBLE[]`, sample_size = INTEGER)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = FLOAT, quantile = DOUBLE)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = FLOAT, quantile = DOUBLE, sample_size = INTEGER)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = FLOAT, quantile = `DOUBLE[]`)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = FLOAT, quantile = `DOUBLE[]`, sample_size = INTEGER)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = DOUBLE, quantile = DOUBLE)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = DOUBLE, quantile = DOUBLE, sample_size = INTEGER)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = DOUBLE, quantile = `DOUBLE[]`)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
+#' \item \code{reservoir_quantile(x = DOUBLE, quantile = `DOUBLE[]`, sample_size = INTEGER)}: Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
 #' }
 #' @param x `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE`
 #' @param quantile `DOUBLE | DOUBLE[]`
@@ -10752,22 +10752,22 @@ right_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{round(x = TINYINT)}
-#' \item \code{round(x = TINYINT, precision = INTEGER)}
-#' \item \code{round(x = SMALLINT)}
-#' \item \code{round(x = SMALLINT, precision = INTEGER)}
-#' \item \code{round(x = INTEGER)}
-#' \item \code{round(x = INTEGER, precision = INTEGER)}
-#' \item \code{round(x = BIGINT)}
-#' \item \code{round(x = BIGINT, precision = INTEGER)}
-#' \item \code{round(x = HUGEINT)}
-#' \item \code{round(x = HUGEINT, precision = INTEGER)}
-#' \item \code{round(x = FLOAT)}
-#' \item \code{round(x = FLOAT, precision = INTEGER)}
-#' \item \code{round(x = DOUBLE)}
-#' \item \code{round(x = DOUBLE, precision = INTEGER)}
-#' \item \code{round(x = DECIMAL)}
-#' \item \code{round(x = DECIMAL, precision = INTEGER)}
+#' \item \code{round(x = TINYINT)}: Rounds x to s decimal places.
+#' \item \code{round(x = TINYINT, precision = INTEGER)}: Rounds x to s decimal places.
+#' \item \code{round(x = SMALLINT)}: Rounds x to s decimal places.
+#' \item \code{round(x = SMALLINT, precision = INTEGER)}: Rounds x to s decimal places.
+#' \item \code{round(x = INTEGER)}: Rounds x to s decimal places.
+#' \item \code{round(x = INTEGER, precision = INTEGER)}: Rounds x to s decimal places.
+#' \item \code{round(x = BIGINT)}: Rounds x to s decimal places.
+#' \item \code{round(x = BIGINT, precision = INTEGER)}: Rounds x to s decimal places.
+#' \item \code{round(x = HUGEINT)}: Rounds x to s decimal places.
+#' \item \code{round(x = HUGEINT, precision = INTEGER)}: Rounds x to s decimal places.
+#' \item \code{round(x = FLOAT)}: Rounds x to s decimal places.
+#' \item \code{round(x = FLOAT, precision = INTEGER)}: Rounds x to s decimal places.
+#' \item \code{round(x = DOUBLE)}: Rounds x to s decimal places.
+#' \item \code{round(x = DOUBLE, precision = INTEGER)}: Rounds x to s decimal places.
+#' \item \code{round(x = DECIMAL)}: Rounds x to s decimal places.
+#' \item \code{round(x = DECIMAL, precision = INTEGER)}: Rounds x to s decimal places.
 #' }
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL`
 #' @param precision `INTEGER`
@@ -10873,8 +10873,8 @@ rpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{rtrim(string = VARCHAR)}
-#' \item \code{rtrim(string = VARCHAR, characters = VARCHAR)}
+#' \item \code{rtrim(string = VARCHAR)}: Removes any occurrences of any of the `characters` from the right side of the `string`. `characters` defaults to `space`.
+#' \item \code{rtrim(string = VARCHAR, characters = VARCHAR)}: Removes any occurrences of any of the `characters` from the right side of the `string`. `characters` defaults to `space`.
 #' }
 #' @param string `VARCHAR`
 #' @param characters `VARCHAR`
@@ -10899,13 +10899,13 @@ rtrim <- function(string = VARCHAR, characters = VARCHAR) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{second(ts = DATE)}
-#' \item \code{second(ts = INTERVAL)}
-#' \item \code{second(ts = TIME)}
-#' \item \code{second(ts = TIMESTAMP)}
-#' \item \code{second(ts = `TIME WITH TIME ZONE`)}
-#' \item \code{second(ts = TIME_NS)}
-#' \item \code{second(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{second(ts = DATE)}: Extract the second component from a date or timestamp.
+#' \item \code{second(ts = INTERVAL)}: Extract the second component from a date or timestamp.
+#' \item \code{second(ts = TIME)}: Extract the second component from a date or timestamp.
+#' \item \code{second(ts = TIMESTAMP)}: Extract the second component from a date or timestamp.
+#' \item \code{second(ts = `TIME WITH TIME ZONE`)}: Extract the second component from a date or timestamp.
+#' \item \code{second(ts = TIME_NS)}: Extract the second component from a date or timestamp.
+#' \item \code{second(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the second component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -11009,8 +11009,8 @@ setseed <- function(col0 = DOUBLE) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{sha1(value = VARCHAR)}
-#' \item \code{sha1(blob = BLOB)}
+#' \item \code{sha1(value = VARCHAR)}: Returns a `VARCHAR` with the SHA-1 hash of the `value`.
+#' \item \code{sha1(blob = BLOB)}: Returns a `VARCHAR` with the SHA-1 hash of the `blob`.
 #' }
 #' @param value `VARCHAR`
 #' @param blob `BLOB`
@@ -11038,8 +11038,8 @@ sha1 <- function(value = VARCHAR, blob = BLOB) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{sha256(value = VARCHAR)}
-#' \item \code{sha256(blob = BLOB)}
+#' \item \code{sha256(value = VARCHAR)}: Returns a `VARCHAR` with the SHA-256 hash of the `value`.
+#' \item \code{sha256(blob = BLOB)}: Returns a `VARCHAR` with the SHA-256 hash of the `blob`.
 #' }
 #' @param value `VARCHAR`
 #' @param blob `BLOB`
@@ -11136,18 +11136,18 @@ show_tables_expanded <- function() {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{sign(x = TINYINT)}
-#' \item \code{sign(x = SMALLINT)}
-#' \item \code{sign(x = INTEGER)}
-#' \item \code{sign(x = BIGINT)}
-#' \item \code{sign(x = HUGEINT)}
-#' \item \code{sign(x = FLOAT)}
-#' \item \code{sign(x = DOUBLE)}
-#' \item \code{sign(x = UTINYINT)}
-#' \item \code{sign(x = USMALLINT)}
-#' \item \code{sign(x = UINTEGER)}
-#' \item \code{sign(x = UBIGINT)}
-#' \item \code{sign(x = UHUGEINT)}
+#' \item \code{sign(x = TINYINT)}: Returns the sign of x as -1, 0 or 1.
+#' \item \code{sign(x = SMALLINT)}: Returns the sign of x as -1, 0 or 1.
+#' \item \code{sign(x = INTEGER)}: Returns the sign of x as -1, 0 or 1.
+#' \item \code{sign(x = BIGINT)}: Returns the sign of x as -1, 0 or 1.
+#' \item \code{sign(x = HUGEINT)}: Returns the sign of x as -1, 0 or 1.
+#' \item \code{sign(x = FLOAT)}: Returns the sign of x as -1, 0 or 1.
+#' \item \code{sign(x = DOUBLE)}: Returns the sign of x as -1, 0 or 1.
+#' \item \code{sign(x = UTINYINT)}: Returns the sign of x as -1, 0 or 1.
+#' \item \code{sign(x = USMALLINT)}: Returns the sign of x as -1, 0 or 1.
+#' \item \code{sign(x = UINTEGER)}: Returns the sign of x as -1, 0 or 1.
+#' \item \code{sign(x = UBIGINT)}: Returns the sign of x as -1, 0 or 1.
+#' \item \code{sign(x = UHUGEINT)}: Returns the sign of x as -1, 0 or 1.
 #' }
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT`
@@ -11169,8 +11169,8 @@ sign <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | 
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{signbit(x = FLOAT)}
-#' \item \code{signbit(x = DOUBLE)}
+#' \item \code{signbit(x = FLOAT)}: Returns whether the signbit is set or not.
+#' \item \code{signbit(x = DOUBLE)}: Returns whether the signbit is set or not.
 #' }
 #' @param x `FLOAT | DOUBLE`
 #' @return `BOOLEAN`
@@ -11501,14 +11501,14 @@ storage_info <- function(col0 = VARCHAR) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{strftime(data = DATE, format = VARCHAR)}
-#' \item \code{strftime(data = TIMESTAMP, format = VARCHAR)}
-#' \item \code{strftime(data = TIMESTAMP_NS, format = VARCHAR)}
-#' \item \code{strftime(data = VARCHAR, format = DATE)}
-#' \item \code{strftime(data = VARCHAR, format = TIMESTAMP)}
-#' \item \code{strftime(data = VARCHAR, format = TIMESTAMP_NS)}
-#' \item \code{strftime(data = `TIMESTAMP WITH TIME ZONE`, format = VARCHAR)}
-#' \item \code{strftime(data = VARCHAR, format = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{strftime(data = DATE, format = VARCHAR)}: Converts a `date` to a string according to the format string.
+#' \item \code{strftime(data = TIMESTAMP, format = VARCHAR)}: Converts a `date` to a string according to the format string.
+#' \item \code{strftime(data = TIMESTAMP_NS, format = VARCHAR)}: Converts a `date` to a string according to the format string.
+#' \item \code{strftime(data = VARCHAR, format = DATE)}: Converts a `date` to a string according to the format string.
+#' \item \code{strftime(data = VARCHAR, format = TIMESTAMP)}: Converts a `date` to a string according to the format string.
+#' \item \code{strftime(data = VARCHAR, format = TIMESTAMP_NS)}: Converts a `date` to a string according to the format string.
+#' \item \code{strftime(data = `TIMESTAMP WITH TIME ZONE`, format = VARCHAR)}: Converts a `date` to a string according to the format string.
+#' \item \code{strftime(data = VARCHAR, format = `TIMESTAMP WITH TIME ZONE`)}: Converts a `date` to a string according to the format string.
 #' }
 #' @param data `DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR | TIMESTAMP WITH TIME ZONE`
 #' @param format `VARCHAR | DATE | TIMESTAMP | TIMESTAMP_NS | TIMESTAMP WITH TIME ZONE`
@@ -11531,8 +11531,8 @@ strftime <- function(data = `DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR | TIMESTA
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{string_agg(str = ANY)}
-#' \item \code{string_agg(str = ANY, arg = VARCHAR)}
+#' \item \code{string_agg(str = ANY)}: Concatenates the column string values with an optional separator.
+#' \item \code{string_agg(str = ANY, arg = VARCHAR)}: Concatenates the column string values with an optional separator.
 #' }
 #' @param str `ANY`
 #' @param arg `VARCHAR`
@@ -11610,8 +11610,8 @@ string_to_array <- function(string = VARCHAR, separator = VARCHAR) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{string_split_regex(string = VARCHAR, regex = VARCHAR)}
-#' \item \code{string_split_regex(string = VARCHAR, regex = VARCHAR, options = VARCHAR)}
+#' \item \code{string_split_regex(string = VARCHAR, regex = VARCHAR)}: Splits the `string` along the `regex`. A set of optional regex `options` can be set.
+#' \item \code{string_split_regex(string = VARCHAR, regex = VARCHAR, options = VARCHAR)}: Splits the `string` along the `regex`. A set of optional regex `options` can be set.
 #' }
 #' @param string `VARCHAR`
 #' @param regex `VARCHAR`
@@ -11690,8 +11690,8 @@ strlen <- function(string = VARCHAR) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{strptime(text = VARCHAR, format = VARCHAR)}
-#' \item \code{strptime(text = VARCHAR, `format-list` = `VARCHAR[]`)}
+#' \item \code{strptime(text = VARCHAR, format = VARCHAR)}: Converts the `string` text to timestamp according to the format string. Throws an error on failure. To return `NULL` on failure, use try_strptime.
+#' \item \code{strptime(text = VARCHAR, `format-list` = `VARCHAR[]`)}: Converts the `string` text to timestamp applying the format strings in the list until one succeeds. Throws an error on failure. To return `NULL` on failure, use try_strptime.
 #' }
 #' @param text `VARCHAR`
 #' @param format `VARCHAR`
@@ -11760,8 +11760,8 @@ struct_has <- function(struct = STRUCT, `'entry'` = ANY) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{struct_extract(struct = STRUCT, `'entry'` = VARCHAR)}
-#' \item \code{struct_extract(struct = STRUCT, `'entry'` = BIGINT)}
+#' \item \code{struct_extract(struct = STRUCT, `'entry'` = VARCHAR)}: Extract the named entry from the STRUCT.
+#' \item \code{struct_extract(struct = STRUCT, `'entry'` = BIGINT)}: Extract the named entry from the STRUCT.
 #' }
 #' @param struct `STRUCT`
 #' @param 'entry' `VARCHAR | BIGINT`
@@ -11900,8 +11900,8 @@ struct_values <- function(struct = STRUCT) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{substring(string = VARCHAR, start = BIGINT, length = BIGINT)}
-#' \item \code{substring(string = VARCHAR, start = BIGINT)}
+#' \item \code{substring(string = VARCHAR, start = BIGINT, length = BIGINT)}: Extracts substring starting from character `start` up to the end of the string. If optional argument `length` is set, extracts a substring of `length` characters instead. Note that a `start` value of `1` refers to the first character of the `string`.
+#' \item \code{substring(string = VARCHAR, start = BIGINT)}: Extracts substring starting from character `start` up to the end of the string. If optional argument `length` is set, extracts a substring of `length` characters instead. Note that a `start` value of `1` refers to the first character of the `string`.
 #' }
 #' @param string `VARCHAR`
 #' @param start `BIGINT`
@@ -11934,8 +11934,8 @@ substr <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{substring_grapheme(string = VARCHAR, start = BIGINT, length = BIGINT)}
-#' \item \code{substring_grapheme(string = VARCHAR, start = BIGINT)}
+#' \item \code{substring_grapheme(string = VARCHAR, start = BIGINT, length = BIGINT)}: Extracts substring starting from grapheme clusters `start` up to the end of the string. If optional argument `length` is set, extracts a substring of `length` grapheme clusters instead. Note that a `start` value of `1` refers to the `first` character of the `string`.
+#' \item \code{substring_grapheme(string = VARCHAR, start = BIGINT)}: Extracts substring starting from grapheme clusters `start` up to the end of the string. If optional argument `length` is set, extracts a substring of `length` grapheme clusters instead. Note that a `start` value of `1` refers to the `first` character of the `string`.
 #' }
 #' @param string `VARCHAR`
 #' @param start `BIGINT`
@@ -12043,14 +12043,14 @@ ends_with <- function(string = VARCHAR, search_string = VARCHAR) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{sum(arg = DECIMAL)}
-#' \item \code{sum(arg = BOOLEAN)}
-#' \item \code{sum(arg = SMALLINT)}
-#' \item \code{sum(arg = INTEGER)}
-#' \item \code{sum(arg = BIGINT)}
-#' \item \code{sum(arg = HUGEINT)}
-#' \item \code{sum(arg = DOUBLE)}
-#' \item \code{sum(arg = BIGNUM)}
+#' \item \code{sum(arg = DECIMAL)}: Calculates the sum value for all tuples in arg.
+#' \item \code{sum(arg = BOOLEAN)}: Calculates the sum value for all tuples in arg.
+#' \item \code{sum(arg = SMALLINT)}: Calculates the sum value for all tuples in arg.
+#' \item \code{sum(arg = INTEGER)}: Calculates the sum value for all tuples in arg.
+#' \item \code{sum(arg = BIGINT)}: Calculates the sum value for all tuples in arg.
+#' \item \code{sum(arg = HUGEINT)}: Calculates the sum value for all tuples in arg.
+#' \item \code{sum(arg = DOUBLE)}: Calculates the sum value for all tuples in arg.
+#' \item \code{sum(arg = BIGNUM)}: Calculates the sum value for all tuples in arg.
 #' }
 #' @param arg `DECIMAL | BOOLEAN | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | BIGNUM`
 #' @return `DECIMAL | HUGEINT | DOUBLE | BIGNUM`
@@ -12072,9 +12072,9 @@ sum <- function(arg = `DECIMAL | BOOLEAN | SMALLINT | INTEGER | BIGINT | HUGEINT
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{sum_no_overflow(arg = INTEGER)}
-#' \item \code{sum_no_overflow(arg = BIGINT)}
-#' \item \code{sum_no_overflow(arg = DECIMAL)}
+#' \item \code{sum_no_overflow(arg = INTEGER)}: Internal only. Calculates the sum value for all tuples in arg without overflow checks.
+#' \item \code{sum_no_overflow(arg = BIGINT)}: Internal only. Calculates the sum value for all tuples in arg without overflow checks.
+#' \item \code{sum_no_overflow(arg = DECIMAL)}: Internal only. Calculates the sum value for all tuples in arg without overflow checks.
 #' }
 #' @param arg `INTEGER | BIGINT | DECIMAL`
 #' @return `HUGEINT | DECIMAL`
@@ -12110,10 +12110,10 @@ summary <- function(col0 = TABLE) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{switch(key = K, map = `MAP(K, V)`)}
-#' \item \code{switch(key = K, map = `MAP(K, V)`, value = V)}
-#' \item \code{switch(key = `MAP(K, V)`, map = V)}
-#' \item \code{switch(key = `MAP(K, V)`)}
+#' \item \code{switch(key = K, map = `MAP(K, V)`)}: Creates a switch statement similar to CASE WHEN/THEN.
+#' \item \code{switch(key = K, map = `MAP(K, V)`, value = V)}: Creates a switch statement similar to CASE WHEN/THEN.
+#' \item \code{switch(key = `MAP(K, V)`, map = V)}: Creates a switch statement similar to CASE WHEN/THEN.
+#' \item \code{switch(key = `MAP(K, V)`)}: Creates a switch statement similar to CASE WHEN/THEN.
 #' }
 #' @param key `K | MAP(K, V)`
 #' @param map `MAP(K, V) | V`
@@ -12217,16 +12217,16 @@ test_vector_types <- function(col0 = ANY, all_flat = BOOLEAN) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = DATE)}
-#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = DATE, origin = DATE)}
-#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = DATE, origin = INTERVAL)}
-#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = TIMESTAMP)}
-#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = TIMESTAMP, origin = INTERVAL)}
-#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = TIMESTAMP, origin = TIMESTAMP)}
-#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = `TIMESTAMP WITH TIME ZONE`, origin = INTERVAL)}
-#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = `TIMESTAMP WITH TIME ZONE`, origin = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = `TIMESTAMP WITH TIME ZONE`, origin = VARCHAR)}
+#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = DATE)}: Truncate TIMESTAMPTZ by the specified interval bucket_width. Buckets are aligned relative to origin TIMESTAMPTZ. The origin defaults to 2000-01-03 00:00:00+00 for buckets that do not include a month or year interval, and to 2000-01-01 00:00:00+00 for month and year buckets.
+#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = DATE, origin = DATE)}: Truncate TIMESTAMPTZ by the specified interval bucket_width. Buckets are aligned relative to origin TIMESTAMPTZ. The origin defaults to 2000-01-03 00:00:00+00 for buckets that do not include a month or year interval, and to 2000-01-01 00:00:00+00 for month and year buckets.
+#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = DATE, origin = INTERVAL)}: Truncate TIMESTAMPTZ by the specified interval bucket_width. Buckets are aligned relative to origin TIMESTAMPTZ. The origin defaults to 2000-01-03 00:00:00+00 for buckets that do not include a month or year interval, and to 2000-01-01 00:00:00+00 for month and year buckets.
+#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = TIMESTAMP)}: Truncate TIMESTAMPTZ by the specified interval bucket_width. Buckets are aligned relative to origin TIMESTAMPTZ. The origin defaults to 2000-01-03 00:00:00+00 for buckets that do not include a month or year interval, and to 2000-01-01 00:00:00+00 for month and year buckets.
+#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = TIMESTAMP, origin = INTERVAL)}: Truncate TIMESTAMPTZ by the specified interval bucket_width. Buckets are aligned relative to origin TIMESTAMPTZ. The origin defaults to 2000-01-03 00:00:00+00 for buckets that do not include a month or year interval, and to 2000-01-01 00:00:00+00 for month and year buckets.
+#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = TIMESTAMP, origin = TIMESTAMP)}: Truncate TIMESTAMPTZ by the specified interval bucket_width. Buckets are aligned relative to origin TIMESTAMPTZ. The origin defaults to 2000-01-03 00:00:00+00 for buckets that do not include a month or year interval, and to 2000-01-01 00:00:00+00 for month and year buckets.
+#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = `TIMESTAMP WITH TIME ZONE`)}: Truncate TIMESTAMPTZ by the specified interval bucket_width. Buckets are aligned relative to origin TIMESTAMPTZ. The origin defaults to 2000-01-03 00:00:00+00 for buckets that do not include a month or year interval, and to 2000-01-01 00:00:00+00 for month and year buckets.
+#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = `TIMESTAMP WITH TIME ZONE`, origin = INTERVAL)}: Truncate TIMESTAMPTZ by the specified interval bucket_width. Buckets are aligned relative to origin TIMESTAMPTZ. The origin defaults to 2000-01-03 00:00:00+00 for buckets that do not include a month or year interval, and to 2000-01-01 00:00:00+00 for month and year buckets.
+#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = `TIMESTAMP WITH TIME ZONE`, origin = `TIMESTAMP WITH TIME ZONE`)}: Truncate TIMESTAMPTZ by the specified interval bucket_width. Buckets are aligned relative to origin TIMESTAMPTZ. The origin defaults to 2000-01-03 00:00:00+00 for buckets that do not include a month or year interval, and to 2000-01-01 00:00:00+00 for month and year buckets.
+#' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = `TIMESTAMP WITH TIME ZONE`, origin = VARCHAR)}: Truncate TIMESTAMPTZ by the specified interval bucket_width. Buckets are aligned relative to origin TIMESTAMPTZ. The origin defaults to 2000-01-03 00:00:00+00 for buckets that do not include a month or year interval, and to 2000-01-01 00:00:00+00 for month and year buckets.
 #' }
 #' @param bucket_width `INTERVAL`
 #' @param timestamp `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
@@ -12268,14 +12268,14 @@ timetz_byte_comparable <- function(time_tz = `TIME WITH TIME ZONE`) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{timezone(ts = DATE)}
-#' \item \code{timezone(ts = INTERVAL)}
-#' \item \code{timezone(ts = INTERVAL, col1 = `TIME WITH TIME ZONE`)}
-#' \item \code{timezone(ts = TIMESTAMP)}
-#' \item \code{timezone(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{timezone(ts = VARCHAR, col1 = TIMESTAMP)}
-#' \item \code{timezone(ts = VARCHAR, col1 = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{timezone(ts = VARCHAR, col1 = `TIME WITH TIME ZONE`)}
+#' \item \code{timezone(ts = DATE)}: Extract the timezone component from a date or timestamp.
+#' \item \code{timezone(ts = INTERVAL)}: Extract the timezone component from a date or timestamp.
+#' \item \code{timezone(ts = INTERVAL, col1 = `TIME WITH TIME ZONE`)}: Extract the timezone component from a date or timestamp.
+#' \item \code{timezone(ts = TIMESTAMP)}: Extract the timezone component from a date or timestamp.
+#' \item \code{timezone(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the timezone component from a date or timestamp.
+#' \item \code{timezone(ts = VARCHAR, col1 = TIMESTAMP)}: Extract the timezone component from a date or timestamp.
+#' \item \code{timezone(ts = VARCHAR, col1 = `TIMESTAMP WITH TIME ZONE`)}: Extract the timezone component from a date or timestamp.
+#' \item \code{timezone(ts = VARCHAR, col1 = `TIME WITH TIME ZONE`)}: Extract the timezone component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | VARCHAR`
 #' @param col1 `TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
@@ -12298,10 +12298,10 @@ timezone <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{timezone_hour(ts = DATE)}
-#' \item \code{timezone_hour(ts = INTERVAL)}
-#' \item \code{timezone_hour(ts = TIMESTAMP)}
-#' \item \code{timezone_hour(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{timezone_hour(ts = DATE)}: Extract the timezone_hour component from a date or timestamp.
+#' \item \code{timezone_hour(ts = INTERVAL)}: Extract the timezone_hour component from a date or timestamp.
+#' \item \code{timezone_hour(ts = TIMESTAMP)}: Extract the timezone_hour component from a date or timestamp.
+#' \item \code{timezone_hour(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the timezone_hour component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -12323,10 +12323,10 @@ timezone_hour <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIM
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{timezone_minute(ts = DATE)}
-#' \item \code{timezone_minute(ts = INTERVAL)}
-#' \item \code{timezone_minute(ts = TIMESTAMP)}
-#' \item \code{timezone_minute(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{timezone_minute(ts = DATE)}: Extract the timezone_minute component from a date or timestamp.
+#' \item \code{timezone_minute(ts = INTERVAL)}: Extract the timezone_minute component from a date or timestamp.
+#' \item \code{timezone_minute(ts = TIMESTAMP)}: Extract the timezone_minute component from a date or timestamp.
+#' \item \code{timezone_minute(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the timezone_minute component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -12348,8 +12348,8 @@ timezone_minute <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH T
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{to_base(number = BIGINT, radix = INTEGER)}
-#' \item \code{to_base(number = BIGINT, radix = INTEGER, min_length = INTEGER)}
+#' \item \code{to_base(number = BIGINT, radix = INTEGER)}: Converts `number` to a string in the given base `radix`, optionally padding with leading zeros to `min_length`.
+#' \item \code{to_base(number = BIGINT, radix = INTEGER, min_length = INTEGER)}: Converts `number` to a string in the given base `radix`, optionally padding with leading zeros to `min_length`.
 #' }
 #' @param number `BIGINT`
 #' @param radix `INTEGER`
@@ -12402,8 +12402,8 @@ base64 <- function(blob = BLOB) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{to_centuries(integer = INTEGER)}
-#' \item \code{to_centuries(integer = BIGINT)}
+#' \item \code{to_centuries(integer = INTEGER)}: Construct a century interval.
+#' \item \code{to_centuries(integer = BIGINT)}: Construct a century interval.
 #' }
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
@@ -12425,8 +12425,8 @@ to_centuries <- function(integer = `INTEGER | BIGINT`) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{to_days(integer = INTEGER)}
-#' \item \code{to_days(integer = BIGINT)}
+#' \item \code{to_days(integer = INTEGER)}: Construct a day interval.
+#' \item \code{to_days(integer = BIGINT)}: Construct a day interval.
 #' }
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
@@ -12448,8 +12448,8 @@ to_days <- function(integer = `INTEGER | BIGINT`) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{to_decades(integer = INTEGER)}
-#' \item \code{to_decades(integer = BIGINT)}
+#' \item \code{to_decades(integer = INTEGER)}: Construct a decade interval.
+#' \item \code{to_decades(integer = BIGINT)}: Construct a decade interval.
 #' }
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
@@ -12507,8 +12507,8 @@ to_microseconds <- function(integer = BIGINT) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{to_millennia(integer = INTEGER)}
-#' \item \code{to_millennia(integer = BIGINT)}
+#' \item \code{to_millennia(integer = INTEGER)}: Construct a millenium interval.
+#' \item \code{to_millennia(integer = BIGINT)}: Construct a millenium interval.
 #' }
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
@@ -12566,8 +12566,8 @@ to_minutes <- function(integer = BIGINT) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{to_months(integer = INTEGER)}
-#' \item \code{to_months(integer = BIGINT)}
+#' \item \code{to_months(integer = INTEGER)}: Construct a month interval.
+#' \item \code{to_months(integer = BIGINT)}: Construct a month interval.
 #' }
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
@@ -12589,8 +12589,8 @@ to_months <- function(integer = `INTEGER | BIGINT`) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{to_quarters(integer = INTEGER)}
-#' \item \code{to_quarters(integer = BIGINT)}
+#' \item \code{to_quarters(integer = INTEGER)}: Construct a quarter interval.
+#' \item \code{to_quarters(integer = BIGINT)}: Construct a quarter interval.
 #' }
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
@@ -12648,8 +12648,8 @@ to_timestamp <- function(sec = DOUBLE) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{to_weeks(integer = INTEGER)}
-#' \item \code{to_weeks(integer = BIGINT)}
+#' \item \code{to_weeks(integer = INTEGER)}: Construct a week interval.
+#' \item \code{to_weeks(integer = BIGINT)}: Construct a week interval.
 #' }
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
@@ -12671,8 +12671,8 @@ to_weeks <- function(integer = `INTEGER | BIGINT`) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{to_years(integer = INTEGER)}
-#' \item \code{to_years(integer = BIGINT)}
+#' \item \code{to_years(integer = INTEGER)}: Construct a year interval.
+#' \item \code{to_years(integer = BIGINT)}: Construct a year interval.
 #' }
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
@@ -12715,8 +12715,8 @@ translate <- function(string = VARCHAR, from = VARCHAR, to = VARCHAR) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{trim(string = VARCHAR)}
-#' \item \code{trim(string = VARCHAR, characters = VARCHAR)}
+#' \item \code{trim(string = VARCHAR)}: Removes any occurrences of any of the `characters` from either side of the `string`. `characters` defaults to `space`.
+#' \item \code{trim(string = VARCHAR, characters = VARCHAR)}: Removes any occurrences of any of the `characters` from either side of the `string`. `characters` defaults to `space`.
 #' }
 #' @param string `VARCHAR`
 #' @param characters `VARCHAR`
@@ -12741,32 +12741,32 @@ trim <- function(string = VARCHAR, characters = VARCHAR) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{trunc(x = TINYINT)}
-#' \item \code{trunc(x = TINYINT, col1 = INTEGER)}
-#' \item \code{trunc(x = SMALLINT)}
-#' \item \code{trunc(x = SMALLINT, col1 = INTEGER)}
-#' \item \code{trunc(x = INTEGER)}
-#' \item \code{trunc(x = INTEGER, col1 = INTEGER)}
-#' \item \code{trunc(x = BIGINT)}
-#' \item \code{trunc(x = BIGINT, col1 = INTEGER)}
-#' \item \code{trunc(x = HUGEINT)}
-#' \item \code{trunc(x = HUGEINT, col1 = INTEGER)}
-#' \item \code{trunc(x = FLOAT)}
-#' \item \code{trunc(x = FLOAT, col1 = INTEGER)}
-#' \item \code{trunc(x = DOUBLE)}
-#' \item \code{trunc(x = DOUBLE, col1 = INTEGER)}
-#' \item \code{trunc(x = DECIMAL)}
-#' \item \code{trunc(x = DECIMAL, col1 = INTEGER)}
-#' \item \code{trunc(x = UTINYINT)}
-#' \item \code{trunc(x = UTINYINT, col1 = INTEGER)}
-#' \item \code{trunc(x = USMALLINT)}
-#' \item \code{trunc(x = USMALLINT, col1 = INTEGER)}
-#' \item \code{trunc(x = UINTEGER)}
-#' \item \code{trunc(x = UINTEGER, col1 = INTEGER)}
-#' \item \code{trunc(x = UBIGINT)}
-#' \item \code{trunc(x = UBIGINT, col1 = INTEGER)}
-#' \item \code{trunc(x = UHUGEINT)}
-#' \item \code{trunc(x = UHUGEINT, col1 = INTEGER)}
+#' \item \code{trunc(x = TINYINT)}: Truncates the number.
+#' \item \code{trunc(x = TINYINT, col1 = INTEGER)}: Truncates the number.
+#' \item \code{trunc(x = SMALLINT)}: Truncates the number.
+#' \item \code{trunc(x = SMALLINT, col1 = INTEGER)}: Truncates the number.
+#' \item \code{trunc(x = INTEGER)}: Truncates the number.
+#' \item \code{trunc(x = INTEGER, col1 = INTEGER)}: Truncates the number.
+#' \item \code{trunc(x = BIGINT)}: Truncates the number.
+#' \item \code{trunc(x = BIGINT, col1 = INTEGER)}: Truncates the number.
+#' \item \code{trunc(x = HUGEINT)}: Truncates the number.
+#' \item \code{trunc(x = HUGEINT, col1 = INTEGER)}: Truncates the number.
+#' \item \code{trunc(x = FLOAT)}: Truncates the number.
+#' \item \code{trunc(x = FLOAT, col1 = INTEGER)}: Truncates the number.
+#' \item \code{trunc(x = DOUBLE)}: Truncates the number.
+#' \item \code{trunc(x = DOUBLE, col1 = INTEGER)}: Truncates the number.
+#' \item \code{trunc(x = DECIMAL)}: Truncates the number.
+#' \item \code{trunc(x = DECIMAL, col1 = INTEGER)}: Truncates the number.
+#' \item \code{trunc(x = UTINYINT)}: Truncates the number.
+#' \item \code{trunc(x = UTINYINT, col1 = INTEGER)}: Truncates the number.
+#' \item \code{trunc(x = USMALLINT)}: Truncates the number.
+#' \item \code{trunc(x = USMALLINT, col1 = INTEGER)}: Truncates the number.
+#' \item \code{trunc(x = UINTEGER)}: Truncates the number.
+#' \item \code{trunc(x = UINTEGER, col1 = INTEGER)}: Truncates the number.
+#' \item \code{trunc(x = UBIGINT)}: Truncates the number.
+#' \item \code{trunc(x = UBIGINT, col1 = INTEGER)}: Truncates the number.
+#' \item \code{trunc(x = UHUGEINT)}: Truncates the number.
+#' \item \code{trunc(x = UHUGEINT, col1 = INTEGER)}: Truncates the number.
 #' }
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @param col1 `INTEGER`
@@ -12803,8 +12803,8 @@ truncate_duckdb_logs <- function() {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{try_strptime(text = VARCHAR, format = VARCHAR)}
-#' \item \code{try_strptime(text = VARCHAR, format = `VARCHAR[]`)}
+#' \item \code{try_strptime(text = VARCHAR, format = VARCHAR)}: Converts the `string` text to timestamp according to the format string. Returns `NULL` on failure.
+#' \item \code{try_strptime(text = VARCHAR, format = `VARCHAR[]`)}: Converts the `string` text to timestamp according to the format string. Returns `NULL` on failure.
 #' }
 #' @param text `VARCHAR`
 #' @param format `VARCHAR | VARCHAR[]`
@@ -13460,10 +13460,10 @@ wavg <- function(value, weight) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{week(ts = DATE)}
-#' \item \code{week(ts = INTERVAL)}
-#' \item \code{week(ts = TIMESTAMP)}
-#' \item \code{week(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{week(ts = DATE)}: Extract the week component from a date or timestamp.
+#' \item \code{week(ts = INTERVAL)}: Extract the week component from a date or timestamp.
+#' \item \code{week(ts = TIMESTAMP)}: Extract the week component from a date or timestamp.
+#' \item \code{week(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the week component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -13485,10 +13485,10 @@ week <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) 
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{weekday(ts = DATE)}
-#' \item \code{weekday(ts = INTERVAL)}
-#' \item \code{weekday(ts = TIMESTAMP)}
-#' \item \code{weekday(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{weekday(ts = DATE)}: Extract the weekday component from a date or timestamp.
+#' \item \code{weekday(ts = INTERVAL)}: Extract the weekday component from a date or timestamp.
+#' \item \code{weekday(ts = TIMESTAMP)}: Extract the weekday component from a date or timestamp.
+#' \item \code{weekday(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the weekday component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -13510,10 +13510,10 @@ weekday <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{weekofyear(ts = DATE)}
-#' \item \code{weekofyear(ts = INTERVAL)}
-#' \item \code{weekofyear(ts = TIMESTAMP)}
-#' \item \code{weekofyear(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{weekofyear(ts = DATE)}: Extract the weekofyear component from a date or timestamp.
+#' \item \code{weekofyear(ts = INTERVAL)}: Extract the weekofyear component from a date or timestamp.
+#' \item \code{weekofyear(ts = TIMESTAMP)}: Extract the weekofyear component from a date or timestamp.
+#' \item \code{weekofyear(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the weekofyear component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -13583,17 +13583,17 @@ write_log <- function(string = VARCHAR) {
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{xor(left = TINYINT, right = TINYINT)}
-#' \item \code{xor(left = SMALLINT, right = SMALLINT)}
-#' \item \code{xor(left = INTEGER, right = INTEGER)}
-#' \item \code{xor(left = BIGINT, right = BIGINT)}
-#' \item \code{xor(left = HUGEINT, right = HUGEINT)}
-#' \item \code{xor(left = UTINYINT, right = UTINYINT)}
-#' \item \code{xor(left = USMALLINT, right = USMALLINT)}
-#' \item \code{xor(left = UINTEGER, right = UINTEGER)}
-#' \item \code{xor(left = UBIGINT, right = UBIGINT)}
-#' \item \code{xor(left = UHUGEINT, right = UHUGEINT)}
-#' \item \code{xor(left = BIT, right = BIT)}
+#' \item \code{xor(left = TINYINT, right = TINYINT)}: Bitwise XOR.
+#' \item \code{xor(left = SMALLINT, right = SMALLINT)}: Bitwise XOR.
+#' \item \code{xor(left = INTEGER, right = INTEGER)}: Bitwise XOR.
+#' \item \code{xor(left = BIGINT, right = BIGINT)}: Bitwise XOR.
+#' \item \code{xor(left = HUGEINT, right = HUGEINT)}: Bitwise XOR.
+#' \item \code{xor(left = UTINYINT, right = UTINYINT)}: Bitwise XOR.
+#' \item \code{xor(left = USMALLINT, right = USMALLINT)}: Bitwise XOR.
+#' \item \code{xor(left = UINTEGER, right = UINTEGER)}: Bitwise XOR.
+#' \item \code{xor(left = UBIGINT, right = UBIGINT)}: Bitwise XOR.
+#' \item \code{xor(left = UHUGEINT, right = UHUGEINT)}: Bitwise XOR.
+#' \item \code{xor(left = BIT, right = BIT)}: Bitwise XOR.
 #' }
 #' @param left `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @param right `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
@@ -13616,10 +13616,10 @@ xor <- function(left = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYI
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{year(ts = DATE)}
-#' \item \code{year(ts = INTERVAL)}
-#' \item \code{year(ts = TIMESTAMP)}
-#' \item \code{year(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{year(ts = DATE)}: Extract the year component from a date or timestamp.
+#' \item \code{year(ts = INTERVAL)}: Extract the year component from a date or timestamp.
+#' \item \code{year(ts = TIMESTAMP)}: Extract the year component from a date or timestamp.
+#' \item \code{year(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the year component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -13641,10 +13641,10 @@ year <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) 
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{yearweek(ts = DATE)}
-#' \item \code{yearweek(ts = INTERVAL)}
-#' \item \code{yearweek(ts = TIMESTAMP)}
-#' \item \code{yearweek(ts = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{yearweek(ts = DATE)}: Extract the yearweek component from a date or timestamp.
+#' \item \code{yearweek(ts = INTERVAL)}: Extract the yearweek component from a date or timestamp.
+#' \item \code{yearweek(ts = TIMESTAMP)}: Extract the yearweek component from a date or timestamp.
+#' \item \code{yearweek(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the yearweek component from a date or timestamp.
 #' }
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
@@ -13666,17 +13666,17 @@ yearweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #' @usage NULL
 #' @section Overloads:
 #' \itemize{
-#' \item \code{`~`(input = TINYINT)}
-#' \item \code{`~`(input = SMALLINT)}
-#' \item \code{`~`(input = INTEGER)}
-#' \item \code{`~`(input = BIGINT)}
-#' \item \code{`~`(input = HUGEINT)}
-#' \item \code{`~`(input = UTINYINT)}
-#' \item \code{`~`(input = USMALLINT)}
-#' \item \code{`~`(input = UINTEGER)}
-#' \item \code{`~`(input = UBIGINT)}
-#' \item \code{`~`(input = UHUGEINT)}
-#' \item \code{`~`(input = BIT)}
+#' \item \code{`~`(input = TINYINT)}: Bitwise NOT.
+#' \item \code{`~`(input = SMALLINT)}: Bitwise NOT.
+#' \item \code{`~`(input = INTEGER)}: Bitwise NOT.
+#' \item \code{`~`(input = BIGINT)}: Bitwise NOT.
+#' \item \code{`~`(input = HUGEINT)}: Bitwise NOT.
+#' \item \code{`~`(input = UTINYINT)}: Bitwise NOT.
+#' \item \code{`~`(input = USMALLINT)}: Bitwise NOT.
+#' \item \code{`~`(input = UINTEGER)}: Bitwise NOT.
+#' \item \code{`~`(input = UBIGINT)}: Bitwise NOT.
+#' \item \code{`~`(input = UHUGEINT)}: Bitwise NOT.
+#' \item \code{`~`(input = BIT)}: Bitwise NOT.
 #' }
 #' @param input `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`

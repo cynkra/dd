@@ -86,8 +86,10 @@ usage_and_params <- function(
   json_description = NULL,
   json_examples = NULL,
   json_categories = NULL,
+  json_variant_desc = NULL,
   merge_mode = "off"
 ) {
+  param_keys <- map_chr(parameters, ~ paste(.x, collapse = ","))
   signatures <- map2_chr(
     parameters,
     parameter_types,
@@ -104,6 +106,16 @@ usage_and_params <- function(
       glue("{tibble:::tick_if_needed(function_name)}({sig})")
     }
   )
+
+  # Match each overload's description to its signature. The catalog pairs them
+  # row by row; where its description is missing, fall back to the JSON variant
+  # with the same parameter names.
+  sig_desc <- description
+  if (merge_mode != "off" && length(json_variant_desc) > 0) {
+    gap <- is.na(sig_desc) & param_keys %in% names(json_variant_desc)
+    sig_desc[gap] <- unname(json_variant_desc[param_keys[gap]])
+  }
+
   # DuckDB registers some functions under several `function_type`s (e.g. both a
   # table function and a pragma) with identical parameters, yielding duplicate
   # overloads. Keep each distinct signature once.
@@ -118,12 +130,31 @@ usage_and_params <- function(
     # FIXME: roxygen2 generates bad .Rd here
     usage_doc <- "#' @usage NULL\n"
   } else {
-    signatures <- signatures[dedup]
+    # One itemize entry per distinct signature, annotated with the description
+    # that applies to it when known.
+    overloads <-
+      tibble(sig = signatures, desc = sig_desc) |>
+      summarize(
+        .by = sig,
+        desc = {
+          d <- unique(na.omit(desc))
+          if (length(d) > 0) {
+            paste(gsub("[.]*$", ".", d), collapse = " ")
+          } else {
+            NA_character_
+          }
+        }
+      )
+    items <- if_else(
+      is.na(overloads$desc),
+      paste0("#' \\item \\code{", overloads$sig, "}\n"),
+      paste0("#' \\item \\code{", overloads$sig, "}: ", overloads$desc, "\n")
+    )
     usage_doc <- paste0(
       "#' @usage NULL\n",
       "#' @section Overloads:\n",
       "#' \\itemize{\n",
-      paste0("#' \\item \\code{", signatures, "}\n", collapse = ""),
+      paste0(items, collapse = ""),
       "#' }"
     )
   }
@@ -354,6 +385,18 @@ build_json_meta <- function(ref) {
       json_aliases = list(sort(unique(unlist(aliases)))),
     )
 
+  # Per-variant description keyed by parameter names ("a,b"), so a signature
+  # whose catalog description is missing can recover it (see usage_and_params).
+  variant_desc <-
+    json_long |>
+    filter(!is.na(parameters), !is.na(description)) |>
+    distinct(function_name, parameters, description) |>
+    summarize(
+      .by = function_name,
+      json_variant_desc = list(setNames(description, parameters))
+    )
+  meta <- meta |> left_join(variant_desc, by = "function_name")
+
   edges <-
     meta |>
     select(to = function_name, json_aliases) |>
@@ -383,6 +426,7 @@ if (json_merge_mode == "off") {
     json_examples = list(),
     json_categories = list(),
     json_aliases = list(),
+    json_variant_desc = list(),
   )
   json_alias_edges <- tibble(from = character(), to = character())
 } else {
@@ -470,6 +514,7 @@ funs <-
       json_description = first(json_description),
       json_examples = first(json_examples),
       json_categories = first(json_categories),
+      json_variant_desc = first(json_variant_desc),
       merge_mode = json_merge_mode
     ),
     categories = list(sort(unique(c(

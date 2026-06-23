@@ -25,8 +25,8 @@ Returns a LIST of STRUCTs with the fields bucket and count.
 \section{Overloads}{
 
 \itemize{
-\item \code{histogram(arg = ANY, col1 = `ANY[]`)}
-\item \code{histogram(arg = ANY)}
+\item \code{histogram(arg = ANY, col1 = `ANY[]`)}: Returns a LIST of STRUCTs with the fields bucket and count.
+\item \code{histogram(arg = ANY)}: Returns a LIST of STRUCTs with the fields bucket and count.
 \item \code{histogram(source, col_name, bin_count, technique)}
 }
 }

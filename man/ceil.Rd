@@ -16,9 +16,9 @@ Rounds the number up.
 \section{Overloads}{
 
 \itemize{
-\item \code{ceil(x = FLOAT)}
-\item \code{ceil(x = DOUBLE)}
-\item \code{ceil(x = DECIMAL)}
+\item \code{ceil(x = FLOAT)}: Rounds the number up.
+\item \code{ceil(x = DOUBLE)}: Rounds the number up.
+\item \code{ceil(x = DECIMAL)}: Rounds the number up.
 }
 }
 

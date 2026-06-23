@@ -17,8 +17,8 @@ Returns the maximum value present in arg.
 \section{Overloads}{
 
 \itemize{
-\item \code{max(arg = ANY)}
-\item \code{max(arg = ANY, col1 = BIGINT)}
+\item \code{max(arg = ANY)}: Returns the maximum value present in arg.
+\item \code{max(arg = ANY, col1 = BIGINT)}: Returns the maximum value present in arg.
 }
 }
 

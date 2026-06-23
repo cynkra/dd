@@ -17,14 +17,14 @@ Converts a \code{date} to a string according to the format string.
 \section{Overloads}{
 
 \itemize{
-\item \code{strftime(data = DATE, format = VARCHAR)}
-\item \code{strftime(data = TIMESTAMP, format = VARCHAR)}
-\item \code{strftime(data = TIMESTAMP_NS, format = VARCHAR)}
-\item \code{strftime(data = VARCHAR, format = DATE)}
-\item \code{strftime(data = VARCHAR, format = TIMESTAMP)}
-\item \code{strftime(data = VARCHAR, format = TIMESTAMP_NS)}
-\item \code{strftime(data = `TIMESTAMP WITH TIME ZONE`, format = VARCHAR)}
-\item \code{strftime(data = VARCHAR, format = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{strftime(data = DATE, format = VARCHAR)}: Converts a \code{date} to a string according to the format string.
+\item \code{strftime(data = TIMESTAMP, format = VARCHAR)}: Converts a \code{date} to a string according to the format string.
+\item \code{strftime(data = TIMESTAMP_NS, format = VARCHAR)}: Converts a \code{date} to a string according to the format string.
+\item \code{strftime(data = VARCHAR, format = DATE)}: Converts a \code{date} to a string according to the format string.
+\item \code{strftime(data = VARCHAR, format = TIMESTAMP)}: Converts a \code{date} to a string according to the format string.
+\item \code{strftime(data = VARCHAR, format = TIMESTAMP_NS)}: Converts a \code{date} to a string according to the format string.
+\item \code{strftime(data = `TIMESTAMP WITH TIME ZONE`, format = VARCHAR)}: Converts a \code{date} to a string according to the format string.
+\item \code{strftime(data = VARCHAR, format = `TIMESTAMP WITH TIME ZONE`)}: Converts a \code{date} to a string according to the format string.
 }
 }
 

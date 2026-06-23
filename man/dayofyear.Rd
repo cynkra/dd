@@ -15,10 +15,10 @@ Extract the dayofyear component from a date or timestamp.
 \section{Overloads}{
 
 \itemize{
-\item \code{dayofyear(ts = DATE)}
-\item \code{dayofyear(ts = INTERVAL)}
-\item \code{dayofyear(ts = TIMESTAMP)}
-\item \code{dayofyear(ts = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{dayofyear(ts = DATE)}: Extract the dayofyear component from a date or timestamp.
+\item \code{dayofyear(ts = INTERVAL)}: Extract the dayofyear component from a date or timestamp.
+\item \code{dayofyear(ts = TIMESTAMP)}: Extract the dayofyear component from a date or timestamp.
+\item \code{dayofyear(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the dayofyear component from a date or timestamp.
 }
 }
 

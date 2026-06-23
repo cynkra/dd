@@ -15,10 +15,10 @@ Extract the quarter component from a date or timestamp.
 \section{Overloads}{
 
 \itemize{
-\item \code{quarter(ts = DATE)}
-\item \code{quarter(ts = INTERVAL)}
-\item \code{quarter(ts = TIMESTAMP)}
-\item \code{quarter(ts = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{quarter(ts = DATE)}: Extract the quarter component from a date or timestamp.
+\item \code{quarter(ts = INTERVAL)}: Extract the quarter component from a date or timestamp.
+\item \code{quarter(ts = TIMESTAMP)}: Extract the quarter component from a date or timestamp.
+\item \code{quarter(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the quarter component from a date or timestamp.
 }
 }
 

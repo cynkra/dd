@@ -17,8 +17,8 @@ Pads the bitstring until the specified length.
 \section{Overloads}{
 
 \itemize{
-\item \code{bitstring(bitstring = VARCHAR, length = INTEGER)}
-\item \code{bitstring(bitstring = BIT, length = INTEGER)}
+\item \code{bitstring(bitstring = VARCHAR, length = INTEGER)}: Pads the bitstring until the specified length.
+\item \code{bitstring(bitstring = BIT, length = INTEGER)}: Pads the bitstring until the specified length.
 }
 }
 

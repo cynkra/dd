@@ -26,8 +26,8 @@ The date for the given struct.
 
 \itemize{
 \item \code{make_date(col0 = INTEGER)}
-\item \code{make_date(year = BIGINT, month = BIGINT, day = BIGINT)}
-\item \code{make_date(`date-struct` = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`)}
+\item \code{make_date(year = BIGINT, month = BIGINT, day = BIGINT)}: The date for the given parts.
+\item \code{make_date(`date-struct` = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`)}: The date for the given struct.
 }
 }
 

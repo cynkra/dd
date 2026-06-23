@@ -19,8 +19,8 @@ Returns the number of bytes in the \code{bitstring}.
 \section{Overloads}{
 
 \itemize{
-\item \code{octet_length(blob = BLOB)}
-\item \code{octet_length(bitstring = BIT)}
+\item \code{octet_length(blob = BLOB)}: Number of bytes in \code{blob}.
+\item \code{octet_length(bitstring = BIT)}: Returns the number of bytes in the \code{bitstring}.
 }
 }
 

@@ -15,11 +15,11 @@ Returns true if the floating point value is infinite, false otherwise.
 \section{Overloads}{
 
 \itemize{
-\item \code{isinf(x = FLOAT)}
-\item \code{isinf(x = DOUBLE)}
-\item \code{isinf(x = DATE)}
-\item \code{isinf(x = TIMESTAMP)}
-\item \code{isinf(x = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{isinf(x = FLOAT)}: Returns true if the floating point value is infinite, false otherwise.
+\item \code{isinf(x = DOUBLE)}: Returns true if the floating point value is infinite, false otherwise.
+\item \code{isinf(x = DATE)}: Returns true if the floating point value is infinite, false otherwise.
+\item \code{isinf(x = TIMESTAMP)}: Returns true if the floating point value is infinite, false otherwise.
+\item \code{isinf(x = `TIMESTAMP WITH TIME ZONE`)}: Returns true if the floating point value is infinite, false otherwise.
 }
 }
 

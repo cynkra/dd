@@ -19,8 +19,8 @@ Returns \code{true} if \code{string} contains the \code{regex}, \code{false} oth
 \section{Overloads}{
 
 \itemize{
-\item \code{regexp_matches(string = VARCHAR, regex = VARCHAR)}
-\item \code{regexp_matches(string = VARCHAR, regex = VARCHAR, options = VARCHAR)}
+\item \code{regexp_matches(string = VARCHAR, regex = VARCHAR)}: Returns \code{true} if \code{string} contains the \code{regex}, \code{false} otherwise. A set of optional regex \code{options} can be set.
+\item \code{regexp_matches(string = VARCHAR, regex = VARCHAR, options = VARCHAR)}: Returns \code{true} if \code{string} contains the \code{regex}, \code{false} otherwise. A set of optional regex \code{options} can be set.
 }
 }
 

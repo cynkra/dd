@@ -29,11 +29,11 @@ Creates a list of values between \code{start} and \code{stop} - the stop paramet
 \item \code{range(col0 = BIGINT, col1 = BIGINT)}
 \item \code{range(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT)}
 \item \code{range(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)}
-\item \code{range(start = BIGINT)}
-\item \code{range(start = BIGINT, stop = BIGINT)}
-\item \code{range(start = BIGINT, stop = BIGINT, step = BIGINT)}
-\item \code{range(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}
-\item \code{range(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}
+\item \code{range(start = BIGINT)}: Creates a list of values between \code{start} and \code{stop} - the stop parameter is exclusive.
+\item \code{range(start = BIGINT, stop = BIGINT)}: Creates a list of values between \code{start} and \code{stop} - the stop parameter is exclusive.
+\item \code{range(start = BIGINT, stop = BIGINT, step = BIGINT)}: Creates a list of values between \code{start} and \code{stop} - the stop parameter is exclusive.
+\item \code{range(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}: Creates a list of values between \code{start} and \code{stop} - the stop parameter is exclusive.
+\item \code{range(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}: Creates a list of values between \code{start} and \code{stop} - the stop parameter is exclusive.
 }
 }
 

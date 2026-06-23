@@ -18,10 +18,10 @@ Truncate to specified precision.
 \section{Overloads}{
 
 \itemize{
-\item \code{date_trunc(part = VARCHAR, timestamp = DATE)}
-\item \code{date_trunc(part = VARCHAR, timestamp = INTERVAL)}
-\item \code{date_trunc(part = VARCHAR, timestamp = TIMESTAMP)}
-\item \code{date_trunc(part = VARCHAR, timestamp = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{date_trunc(part = VARCHAR, timestamp = DATE)}: Truncate to specified precision.
+\item \code{date_trunc(part = VARCHAR, timestamp = INTERVAL)}: Truncate to specified precision.
+\item \code{date_trunc(part = VARCHAR, timestamp = TIMESTAMP)}: Truncate to specified precision.
+\item \code{date_trunc(part = VARCHAR, timestamp = `TIMESTAMP WITH TIME ZONE`)}: Truncate to specified precision.
 }
 }
 

@@ -15,10 +15,10 @@ Extract the weekday component from a date or timestamp.
 \section{Overloads}{
 
 \itemize{
-\item \code{weekday(ts = DATE)}
-\item \code{weekday(ts = INTERVAL)}
-\item \code{weekday(ts = TIMESTAMP)}
-\item \code{weekday(ts = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{weekday(ts = DATE)}: Extract the weekday component from a date or timestamp.
+\item \code{weekday(ts = INTERVAL)}: Extract the weekday component from a date or timestamp.
+\item \code{weekday(ts = TIMESTAMP)}: Extract the weekday component from a date or timestamp.
+\item \code{weekday(ts = `TIMESTAMP WITH TIME ZONE`)}: Extract the weekday component from a date or timestamp.
 }
 }
 
