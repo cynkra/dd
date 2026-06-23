@@ -3,20 +3,15 @@
 \name{current_query}
 \alias{current_query}
 \title{DuckDB function current_query}
+\usage{
+current_query()
+}
 \value{
 \code{VARCHAR}
 }
 \description{
 Returns the current query as a string.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{current_query()}
-\item \code{current_query()}
-}
-}
-
 \section{SQL examples}{
 
 
