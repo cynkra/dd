@@ -339,7 +339,7 @@ dd_code <- glue(
   #' @examples
   #' dd[1:3]
   dd <- base::list(
-  {paste0("  ", tibble:::tick_if_needed(funs$function_name[parsed]), " = ", tibble:::tick_if_needed(funs$function_name[parsed]), collapse = ",\n")}
+  {paste0("  ", tibble:::tick_if_needed(sort(funs$function_name[parsed], method = "radix")), " = ", tibble:::tick_if_needed(sort(funs$function_name[parsed], method = "radix")), collapse = ",\n")}
   )
   )"
 )
