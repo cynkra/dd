@@ -2,15 +2,15 @@
 
 Returns the current query as a string.
 
+## Usage
+
+``` r
+current_query()
+```
+
 ## Value
 
 `VARCHAR`
-
-## Overloads
-
-- `current_query()`
-
-- `current_query()`
 
 ## SQL examples
 

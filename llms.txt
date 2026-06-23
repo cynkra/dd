@@ -239,15 +239,15 @@ help(acos, package = "dd")
   : DuckDB function current_catalog
 - [`current_connection_id()`](https://cynkra.github.io/dd/reference/current_connection_id.md)
   : DuckDB function current_connection_id
-- [`current_database`](https://cynkra.github.io/dd/reference/current_database.md)
+- [`current_database()`](https://cynkra.github.io/dd/reference/current_database.md)
   : DuckDB function current_database
-- [`current_query`](https://cynkra.github.io/dd/reference/current_query.md)
+- [`current_query()`](https://cynkra.github.io/dd/reference/current_query.md)
   : DuckDB function current_query
 - [`current_query_id()`](https://cynkra.github.io/dd/reference/current_query_id.md)
   : DuckDB function current_query_id
 - [`current_role()`](https://cynkra.github.io/dd/reference/current_role.md)
   : DuckDB function current_role
-- [`current_schema`](https://cynkra.github.io/dd/reference/current_schema.md)
+- [`current_schema()`](https://cynkra.github.io/dd/reference/current_schema.md)
   : DuckDB function current_schema
 - [`current_schemas`](https://cynkra.github.io/dd/reference/current_schemas.md)
   : DuckDB function current_schemas
@@ -316,7 +316,7 @@ help(acos, package = "dd")
   : DuckDB function disable_print_progress_bar
 - [`disable_profile()`](https://cynkra.github.io/dd/reference/disable_profile.md)
   : DuckDB function disable_profile
-- [`disable_profiling`](https://cynkra.github.io/dd/reference/disable_profiling.md)
+- [`disable_profiling()`](https://cynkra.github.io/dd/reference/disable_profiling.md)
   : DuckDB function disable_profiling
 - [`disable_progress_bar()`](https://cynkra.github.io/dd/reference/disable_progress_bar.md)
   : DuckDB function disable_progress_bar
@@ -1327,8 +1327,8 @@ help(acos, package = "dd")
   : DuckDB function verify_parallelism
 - [`verify_serializer()`](https://cynkra.github.io/dd/reference/verify_serializer.md)
   : DuckDB function verify_serializer
-- [`version`](https://cynkra.github.io/dd/reference/version.md) : DuckDB
-  function version
+- [`version()`](https://cynkra.github.io/dd/reference/version.md) :
+  DuckDB function version
 - [`wavg()`](https://cynkra.github.io/dd/reference/wavg.md) : DuckDB
   function wavg
 - [`week`](https://cynkra.github.io/dd/reference/week.md) : DuckDB

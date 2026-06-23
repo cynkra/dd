@@ -2,15 +2,15 @@
 
 Returns the name of the currently active schema. Default is main.
 
+## Usage
+
+``` r
+current_schema()
+```
+
 ## Value
 
 `VARCHAR`
-
-## Overloads
-
-- `current_schema()`
-
-- `current_schema()`
 
 ## SQL examples
 

@@ -17,5 +17,3 @@ Unspecified.
 - `force_checkpoint()`
 
 - `force_checkpoint(col0 = VARCHAR)`
-
-- `force_checkpoint()`

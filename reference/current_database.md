@@ -2,15 +2,15 @@
 
 Returns the name of the currently active database.
 
+## Usage
+
+``` r
+current_database()
+```
+
 ## Value
 
 `VARCHAR`
-
-## Overloads
-
-- `current_database()`
-
-- `current_database()`
 
 ## SQL examples
 
