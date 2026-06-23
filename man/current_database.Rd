@@ -3,20 +3,15 @@
 \name{current_database}
 \alias{current_database}
 \title{DuckDB function current_database}
+\usage{
+current_database()
+}
 \value{
 \code{VARCHAR}
 }
 \description{
 Returns the name of the currently active database.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{current_database()}
-\item \code{current_database()}
-}
-}
-
 \section{SQL examples}{
 
 

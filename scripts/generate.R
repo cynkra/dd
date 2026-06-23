@@ -67,30 +67,37 @@ usage_and_params <- function(
   macro_definition,
   examples
 ) {
-  if (length(parameters) == 1) {
+  signatures <- map2_chr(
+    parameters,
+    parameter_types,
+    ~ {
+      if (length(.x) == 0) {
+        sig <- "" # No parameters
+      } else {
+        sig <- paste0(
+          tibble:::tick_if_needed(.x),
+          param_type_tick_if_needed(.y),
+          collapse = ", "
+        )
+      }
+      glue("{tibble:::tick_if_needed(function_name)}({sig})")
+    }
+  )
+  # DuckDB registers some functions under several `function_type`s (e.g. both a
+  # table function and a pragma) with identical parameters, yielding duplicate
+  # overloads. Keep each distinct signature once.
+  dedup <- !duplicated(signatures)
+
+  if (sum(dedup) == 1) {
+    idx <- which(dedup)
     usage_doc <- glue(
-      "#' @usage {usage_signature(function_name, parameters[[1]], parameter_types[[1]])}"
+      "#' @usage {usage_signature(function_name, parameters[[idx]], parameter_types[[idx]])}"
     )
   } else if (function_name == "%") {
     # FIXME: roxygen2 generates bad .Rd here
     usage_doc <- "#' @usage NULL\n"
   } else {
-    signatures <- map2_chr(
-      parameters,
-      parameter_types,
-      ~ {
-        if (length(.x) == 0) {
-          sig <- "" # No parameters
-        } else {
-          sig <- paste0(
-            tibble:::tick_if_needed(.x),
-            param_type_tick_if_needed(.y),
-            collapse = ", "
-          )
-        }
-        glue("{tibble:::tick_if_needed(function_name)}({sig})")
-      }
-    )
+    signatures <- signatures[dedup]
     usage_doc <- paste0(
       "#' @usage NULL\n",
       "#' @section Overloads:\n",

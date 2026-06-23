@@ -3,20 +3,15 @@
 \name{current_schema}
 \alias{current_schema}
 \title{DuckDB function current_schema}
+\usage{
+current_schema()
+}
 \value{
 \code{VARCHAR}
 }
 \description{
 Returns the name of the currently active schema. Default is main.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{current_schema()}
-\item \code{current_schema()}
-}
-}
-
 \section{SQL examples}{
 
 

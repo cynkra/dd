@@ -3,20 +3,15 @@
 \name{version}
 \alias{version}
 \title{DuckDB function version}
+\usage{
+version()
+}
 \value{
 \code{VARCHAR}
 }
 \description{
 Returns the currently active version of DuckDB in this format: v0.3.2	.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{version()}
-\item \code{version()}
-}
-}
-
 \section{SQL examples}{
 
 

@@ -2623,12 +2623,7 @@ current_connection_id <- function() {
 #' Returns the name of the currently active database.
 #'
 #' @name current_database
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{current_database()}
-#' \item \code{current_database()}
-#' }
+#' @usage current_database()
 
 #' @return `VARCHAR`
 #' @export
@@ -2646,12 +2641,7 @@ current_database <- function() {
 #' Returns the current query as a string.
 #'
 #' @name current_query
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{current_query()}
-#' \item \code{current_query()}
-#' }
+#' @usage current_query()
 
 #' @return `VARCHAR`
 #' @export
@@ -2701,12 +2691,7 @@ current_role <- function() {
 #' Returns the name of the currently active schema. Default is main.
 #'
 #' @name current_schema
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{current_schema()}
-#' \item \code{current_schema()}
-#' }
+#' @usage current_schema()
 
 #' @return `VARCHAR`
 #' @export
@@ -3414,12 +3399,7 @@ disable_profile <- function() {
 #' DuckDB function `disable_profiling()`.
 #'
 #' @name disable_profiling
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{disable_profiling()}
-#' \item \code{disable_profiling()}
-#' }
+#' @usage disable_profiling()
 
 #' @return Unspecified.
 #' @export
@@ -4647,7 +4627,6 @@ fmod <- function(x, y) {
 #' \itemize{
 #' \item \code{force_checkpoint()}
 #' \item \code{force_checkpoint(col0 = VARCHAR)}
-#' \item \code{force_checkpoint()}
 #' }
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
@@ -13370,12 +13349,7 @@ verify_serializer <- function() {
 #' Returns the currently active version of DuckDB in this format: v0.3.2	.
 #'
 #' @name version
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{version()}
-#' \item \code{version()}
-#' }
+#' @usage version()
 
 #' @return `VARCHAR`
 #' @export

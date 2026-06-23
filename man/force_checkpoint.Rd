@@ -17,7 +17,6 @@ DuckDB function \code{force_checkpoint()}.
 \itemize{
 \item \code{force_checkpoint()}
 \item \code{force_checkpoint(col0 = VARCHAR)}
-\item \code{force_checkpoint()}
 }
 }
 

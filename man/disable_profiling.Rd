@@ -3,17 +3,12 @@
 \name{disable_profiling}
 \alias{disable_profiling}
 \title{DuckDB function disable_profiling}
+\usage{
+disable_profiling()
+}
 \value{
 Unspecified.
 }
 \description{
 DuckDB function \code{disable_profiling()}.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{disable_profiling()}
-\item \code{disable_profiling()}
-}
-}
-
