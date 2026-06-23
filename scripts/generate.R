@@ -147,8 +147,12 @@ recover_param_names <- function(parameters, parameter_types, json_overloads) {
       replacement <- json_overloads[[cand]]$names
       generic <- is_generic_name(nm)
       nm[generic] <- replacement[generic]
-      parameters[[i]] <- make.unique(nm, sep = "")
-      taken[cand] <- TRUE
+      # Only adopt the recovered names if they don't collide with a real name
+      # already in this overload; a collision means the match is unreliable.
+      if (anyDuplicated(nm) == 0) {
+        parameters[[i]] <- nm
+        taken[cand] <- TRUE
+      }
     }
   }
   parameters
@@ -523,10 +527,13 @@ build_json_meta <- function(ref) {
   meta <- meta |> left_join(variant_desc, by = "function_name")
 
   # The (names, types) of each JSON overload, used to recover the real argument
-  # names for overloads the catalog only exposes as `col0`, `col1`, ...
+  # names for overloads the catalog only exposes as `col0`, `col1`, ... Dedupe
+  # on names *and* types so overloads that share names but differ in type stay
+  # available for matching.
   overloads <-
     json_long |>
-    distinct(function_name, parameters, .keep_all = TRUE) |>
+    mutate(.type_key = map_chr(param_types, ~ paste(.x, collapse = ","))) |>
+    distinct(function_name, parameters, .type_key, .keep_all = TRUE) |>
     mutate(
       ovl = map2(param_names, param_types, ~ list(names = .x, types = .y))
     ) |>
