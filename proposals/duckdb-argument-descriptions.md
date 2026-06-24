@@ -11,7 +11,7 @@ drafts the upstream changes needed to add per-argument descriptions, and shows
 concrete `functions.json` extensions for a handful of functions (semantics
 inferred from each function's existing description, examples, and behaviour).
 
-## Required DuckDB changes
+## What we need
 
 Ordered from smallest (already usable by `dd`, which reads `functions.json`
 directly) to full first-class catalog support.
@@ -45,6 +45,36 @@ Related data gaps noticed while drafting (worth fixing in the same pass):
 - Some flat entries are incomplete, e.g. `date_part` lists `"parameters":
   "ts"` although the function takes `(part, ts)` — names and arity should be
   filled in too.
+
+## How can DuckDB benefit
+
+- **Richer official docs.** The DuckDB SQL function reference is generated from
+  these same `functions.json` files, so it could render per-argument help, not
+  just the signature.
+- **Better tooling.** CLIs, IDEs, and UIs that read `duckdb_functions()` can
+  surface argument hints and autocomplete tooltips.
+- **One source of truth.** Descriptions authored once in `functions.json` flow
+  to the engine, the website, and every binding (Python, R, Java, …) and
+  downstream project (such as `dd`) — no per-consumer duplication.
+- **Drives completeness.** Adding the field nudges authors to name every
+  parameter and to fix incomplete entries (the `col0`/`date_part` gaps above),
+  improving metadata quality across the board.
+
+## Implications for DuckDB
+
+- **Backward compatible.** The new `functions.json` field and the new
+  `duckdb_functions()` column are additive; existing queries and consumers keep
+  working, and a missing description degrades to empty.
+- **Authoring burden.** Hundreds of parameters need descriptions; this is the
+  main cost. It can land incrementally, function by function, and a CI check
+  could warn when a new function or overload omits them.
+- **Validation.** The generator should assert that the number of parameter
+  descriptions matches the number of parameter names per overload, to catch
+  drift.
+- **Build and footprint.** Only `generate_functions.py` and the registration
+  path change; the extra strings add a negligible amount to the binary.
+- **Scope.** Functions registered directly in C++ (not via `functions.json`)
+  simply leave the field empty until someone fills it — no migration required.
 
 ## Drafted `functions.json` extensions
 
@@ -147,8 +177,14 @@ The current entry only lists `"parameters": "ts"`. Proposed corrected entry:
 
 ## How `dd` would consume this
 
-Once parameters carry a `description`, `scripts/generate.R` would emit
-`#' @param <name> <description> (\`<TYPE>\`)` instead of just the type, reusing
-the existing overload/argument-name matching. If step 4 also lands, `dd` would
-prefer the `duckdb_functions()` column and fall back to the JSON — mirroring how
-it already recovers argument names.
+Once parameters carry a `description`, `scripts/generate.R` would emit a
+documented `@param` line, for example
+
+```
+#' @param index 1-based position of the element to extract. (`BIGINT`)
+```
+
+instead of showing only the type, reusing the existing overload and
+argument-name matching. If the `duckdb_functions()` column also lands, `dd`
+would prefer it and fall back to the JSON — mirroring how it already recovers
+argument names.
