@@ -8,12 +8,12 @@
 \alias{list_apply}
 \title{DuckDB function list_transform}
 \usage{
-list_transform(list, lambda.x.)
+list_transform(list, lambda)
 }
 \arguments{
 \item{list}{\code{ANY[]}}
 
-\item{lambda.x.}{\code{LAMBDA}}
+\item{lambda}{\code{LAMBDA}}
 }
 \value{
 \code{ANY[]}

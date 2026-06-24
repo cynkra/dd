@@ -5822,9 +5822,9 @@ list_element <- function(list = `T[] | VARCHAR`, index = BIGINT) {
 #' Constructs a list from those elements of the input `list` for which the `lambda` function returns `true`. DuckDB must be able to cast the `lambda` function's return type to `BOOL`. The return type of `list_filter` is the same as the input list's.
 #'
 #' @name list_filter
-#' @usage list_filter(list, lambda.x.)
+#' @usage list_filter(list, lambda)
 #' @param list `ANY[]`
-#' @param lambda.x. `LAMBDA`
+#' @param lambda `LAMBDA`
 #' @return `ANY[]`
 #' @export
 #' @family lambda
@@ -5833,21 +5833,21 @@ list_element <- function(list = `T[] | VARCHAR`, index = BIGINT) {
 #' ```
 #' list_filter([3, 4, 5], lambda x : x > 4)
 #' ```
-list_filter <- function(list = `ANY[]`, lambda.x. = LAMBDA) {
+list_filter <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function list_filter() is not available in R.")
 }
 
 #' @rdname list_filter
 #' @usage NULL
 #' @export
-array_filter <- function(list = `ANY[]`, lambda.x. = LAMBDA) {
+array_filter <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function array_filter() is not available in R.")
 }
 
 #' @rdname list_filter
 #' @usage NULL
 #' @export
-filter <- function(list = `ANY[]`, lambda.x. = LAMBDA) {
+filter <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function filter() is not available in R.")
 }
 
@@ -6265,16 +6265,16 @@ list_product <- function(l) {
 #' Reduces all elements of the input `list` into a single scalar value by executing the `lambda` function on a running result and the next list element. The `lambda` function has an optional `initial_value` argument.
 #'
 #' @name list_reduce
-#' @usage list_reduce(list, lambda.x.y., initial_value)
+#' @usage list_reduce(list, lambda, initial_value)
 #' @param list `ANY[]`
-#' @param lambda.x.y. `LAMBDA`
+#' @param lambda `LAMBDA`
 #' @param initial_value `ANY`
 #' @return `ANY`
 #' @export
 #' @section Overloads:
 #' \itemize{
-#' \item \code{list_reduce(list = `ANY[]`, lambda.x.y. = LAMBDA)}
-#' \item \code{list_reduce(list = `ANY[]`, lambda.x.y. = LAMBDA, initial_value = ANY)}
+#' \item \code{list_reduce(list = `ANY[]`, lambda = LAMBDA)}
+#' \item \code{list_reduce(list = `ANY[]`, lambda = LAMBDA, initial_value = ANY)}
 #' }
 #' @family lambda
 #' @family list
@@ -6282,21 +6282,21 @@ list_product <- function(l) {
 #' ```
 #' list_reduce([1, 2, 3], lambda x, y : x + y)
 #' ```
-list_reduce <- function(list = `ANY[]`, lambda.x.y. = LAMBDA, initial_value = ANY) {
+list_reduce <- function(list = `ANY[]`, lambda = LAMBDA, initial_value = ANY) {
   stop("DuckDB function list_reduce() is not available in R.")
 }
 
 #' @rdname list_reduce
 #' @usage NULL
 #' @export
-array_reduce <- function(list = `ANY[]`, lambda.x.y. = LAMBDA, initial_value = ANY) {
+array_reduce <- function(list = `ANY[]`, lambda = LAMBDA, initial_value = ANY) {
   stop("DuckDB function array_reduce() is not available in R.")
 }
 
 #' @rdname list_reduce
 #' @usage NULL
 #' @export
-reduce <- function(list = `ANY[]`, lambda.x.y. = LAMBDA, initial_value = ANY) {
+reduce <- function(list = `ANY[]`, lambda = LAMBDA, initial_value = ANY) {
   stop("DuckDB function reduce() is not available in R.")
 }
 
@@ -6306,30 +6306,30 @@ reduce <- function(list = `ANY[]`, lambda.x.y. = LAMBDA, initial_value = ANY) {
 #' Resizes the `list` to contain `size` elements. Initializes new elements with `value` or `NULL` if `value` is not set.
 #'
 #' @name list_resize
-#' @usage list_resize(list, size., value.)
+#' @usage list_resize(list, size, value)
 #' @param list `ANY[]`
-#' @param size. `ANY`
-#' @param value. `ANY`
+#' @param size `ANY`
+#' @param value `ANY`
 #' @return `ANY[]`
 #' @export
 #' @section Overloads:
 #' \itemize{
-#' \item \code{list_resize(list = `ANY[]`, size. = ANY)}
-#' \item \code{list_resize(list = `ANY[]`, size. = ANY, value. = ANY)}
+#' \item \code{list_resize(list = `ANY[]`, size = ANY)}
+#' \item \code{list_resize(list = `ANY[]`, size = ANY, value = ANY)}
 #' }
 #' @family list
 #' @section SQL examples:
 #' ```
 #' list_resize([1, 2, 3], 5, 0)
 #' ```
-list_resize <- function(list = `ANY[]`, size. = ANY, value. = ANY) {
+list_resize <- function(list = `ANY[]`, size = ANY, value = ANY) {
   stop("DuckDB function list_resize() is not available in R.")
 }
 
 #' @rdname list_resize
 #' @usage NULL
 #' @export
-array_resize <- function(list = `ANY[]`, size. = ANY, value. = ANY) {
+array_resize <- function(list = `ANY[]`, size = ANY, value = ANY) {
   stop("DuckDB function array_resize() is not available in R.")
 }
 
@@ -6572,9 +6572,9 @@ list_sum <- function(l) {
 #' Returns a list that is the result of applying the `lambda` function to each element of the input `list`. The return type is defined by the return type of the `lambda` function.
 #'
 #' @name list_transform
-#' @usage list_transform(list, lambda.x.)
+#' @usage list_transform(list, lambda)
 #' @param list `ANY[]`
-#' @param lambda.x. `LAMBDA`
+#' @param lambda `LAMBDA`
 #' @return `ANY[]`
 #' @export
 #' @family lambda
@@ -6583,35 +6583,35 @@ list_sum <- function(l) {
 #' ```
 #' list_transform([1, 2, 3], lambda x : x + 1)
 #' ```
-list_transform <- function(list = `ANY[]`, lambda.x. = LAMBDA) {
+list_transform <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function list_transform() is not available in R.")
 }
 
 #' @rdname list_transform
 #' @usage NULL
 #' @export
-apply <- function(list = `ANY[]`, lambda.x. = LAMBDA) {
+apply <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function apply() is not available in R.")
 }
 
 #' @rdname list_transform
 #' @usage NULL
 #' @export
-array_apply <- function(list = `ANY[]`, lambda.x. = LAMBDA) {
+array_apply <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function array_apply() is not available in R.")
 }
 
 #' @rdname list_transform
 #' @usage NULL
 #' @export
-array_transform <- function(list = `ANY[]`, lambda.x. = LAMBDA) {
+array_transform <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function array_transform() is not available in R.")
 }
 
 #' @rdname list_transform
 #' @usage NULL
 #' @export
-list_apply <- function(list = `ANY[]`, lambda.x. = LAMBDA) {
+list_apply <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function list_apply() is not available in R.")
 }
 

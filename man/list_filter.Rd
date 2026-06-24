@@ -6,12 +6,12 @@
 \alias{filter}
 \title{DuckDB function list_filter}
 \usage{
-list_filter(list, lambda.x.)
+list_filter(list, lambda)
 }
 \arguments{
 \item{list}{\code{ANY[]}}
 
-\item{lambda.x.}{\code{LAMBDA}}
+\item{lambda}{\code{LAMBDA}}
 }
 \value{
 \code{ANY[]}

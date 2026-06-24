@@ -188,9 +188,13 @@ usage_and_params <- function(
   }
   # Sanitize names to syntactic, unique-per-overload R names so the stub
   # formals, \usage and @param all agree (and stay valid Rd). Quotes were
-  # stripped above; make.names() handles the rest (e.g. dashes) and
+  # stripped above; drop any bracket/paren fragment first (e.g. `lambda(x)` ->
+  # `lambda`), then make.names() handles the rest (e.g. dashes) and
   # disambiguates a name repeated within one overload (array_cross_product).
-  parameters <- map(parameters, ~ make.names(.x, unique = TRUE))
+  parameters <- map(
+    parameters,
+    ~ make.names(sub("[][()].*$", "", .x), unique = TRUE)
+  )
   param_keys <- map_chr(parameters, ~ paste(.x, collapse = ","))
   signatures <- map2_chr(
     parameters,
