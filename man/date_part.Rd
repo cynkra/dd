@@ -4,6 +4,9 @@
 \alias{date_part}
 \alias{datepart}
 \title{DuckDB function date_part}
+\usage{
+date_part(ts, col1)
+}
 \arguments{
 \item{ts}{\code{VARCHAR[] | VARCHAR}}
 

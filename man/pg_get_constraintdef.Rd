@@ -4,9 +4,7 @@
 \alias{pg_get_constraintdef}
 \title{DuckDB function pg_get_constraintdef}
 \arguments{
-\item{constraint_oid}{Unspecified.}
-
-\item{pretty_bool}{Unspecified.}
+\item{constraint_oid, pretty_bool}{Unspecified.}
 }
 \value{
 Unspecified.

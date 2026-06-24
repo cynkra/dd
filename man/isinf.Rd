@@ -3,6 +3,9 @@
 \name{isinf}
 \alias{isinf}
 \title{DuckDB function isinf}
+\usage{
+isinf(x)
+}
 \arguments{
 \item{x}{\verb{FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

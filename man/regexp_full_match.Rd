@@ -4,11 +4,7 @@
 \alias{regexp_full_match}
 \title{DuckDB function regexp_full_match}
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{regex}{\code{VARCHAR}}
-
-\item{col2}{\code{VARCHAR}}
+\item{string, regex, col2}{\code{VARCHAR}}
 }
 \value{
 \code{BOOLEAN}
@@ -16,6 +12,14 @@
 \description{
 Returns \code{true} if the entire \code{string} matches the \code{regex}. A set of optional regex \code{options} can be set.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{regexp_full_match(string = VARCHAR, regex = VARCHAR)}
+\item \code{regexp_full_match(string = VARCHAR, regex = VARCHAR, col2 = VARCHAR)}
+}
+}
+
 \section{SQL examples}{
 
 

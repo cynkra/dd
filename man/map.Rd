@@ -14,6 +14,14 @@
 \description{
 Creates a map from a set of keys and values.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{map()}
+\item \code{map(keys = `K[]`, values = `V[]`)}
+}
+}
+
 \section{SQL examples}{
 
 

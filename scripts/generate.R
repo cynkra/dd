@@ -146,10 +146,14 @@ recover_param_names <- function(parameters, parameter_types, json_overloads) {
     if (length(cand) == 1) {
       replacement <- json_overloads[[cand]]$names
       generic <- is_generic_name(nm)
-      nm[generic] <- replacement[generic]
-      # Only adopt the recovered names if they don't collide with a real name
-      # already in this overload; a collision means the match is unreliable.
-      if (anyDuplicated(nm) == 0) {
+      recovered <- replacement[generic]
+      nm[generic] <- recovered
+      # Only adopt the recovered names if they are syntactic R names (some JSON
+      # names are messy, e.g. `date-struct` or `lambda(x`) and don't collide
+      # with a real name already in this overload. Non-syntactic names would
+      # mismatch between \usage (backticked) and @param (not), so keep the
+      # generic ones instead.
+      if (all(recovered == make.names(recovered)) && anyDuplicated(nm) == 0) {
         parameters[[i]] <- nm
         taken[cand] <- TRUE
       }
@@ -172,6 +176,9 @@ usage_and_params <- function(
   json_overloads = NULL,
   merge_mode = "off"
 ) {
+  # Some catalog/JSON parameter names are quoted string literals (e.g.
+  # `'entry'`); the quotes aren't part of the name.
+  parameters <- map(parameters, ~ gsub("^['\"](.*)['\"]$", "\\1", .x))
   if (merge_mode != "off") {
     parameters <- recover_param_names(
       parameters,
@@ -179,6 +186,11 @@ usage_and_params <- function(
       json_overloads %||% list()
     )
   }
+  # Whether every argument name (across all overloads) is a syntactic R name.
+  # A `\usage` with a non-syntactic name (e.g. `date-struct`) backticks it,
+  # which then mismatches the @param entry roxygen2 writes, so such functions
+  # fall back to the Overloads section instead of a generated usage.
+  names_syntactic <- all(unlist(parameters) == make.names(unlist(parameters)))
   param_keys <- map_chr(parameters, ~ paste(.x, collapse = ","))
   signatures <- map2_chr(
     parameters,
@@ -211,68 +223,25 @@ usage_and_params <- function(
   # overloads. Keep each distinct signature once.
   dedup <- !duplicated(signatures)
 
-  if (sum(dedup) == 1) {
-    idx <- which(dedup)
-    usage_doc <- glue(
-      "#' @usage {usage_signature(function_name, parameters[[idx]], parameter_types[[idx]])}"
-    )
-  } else if (function_name == "%") {
-    # FIXME: roxygen2 generates bad .Rd here
-    usage_doc <- "#' @usage NULL\n"
-  } else {
-    # Pair each distinct signature with the description that applies to it.
-    overloads <-
-      tibble(sig = signatures, desc = sig_desc) |>
-      summarize(
-        .by = sig,
-        desc = {
-          d <- unique(na.omit(desc))
-          if (length(d) > 0) {
-            paste(gsub("[.]*$", ".", d), collapse = " ")
-          } else {
-            NA_character_
-          }
+  # Each distinct signature paired with the description that applies to it.
+  overloads <-
+    tibble(sig = signatures, desc = sig_desc) |>
+    summarize(
+      .by = sig,
+      desc = {
+        d <- unique(na.omit(desc))
+        if (length(d) > 0) {
+          paste(gsub("[.]*$", ".", d), collapse = " ")
+        } else {
+          NA_character_
         }
-      )
-    distinct_desc <- unique(na.omit(overloads$desc))
+      }
+    )
+  distinct_desc <- unique(na.omit(overloads$desc))
 
-    if (length(distinct_desc) == 1) {
-      # A single description applies to every overload (a description that is
-      # merely missing for some overloads is assumed to be the shared one). The
-      # signatures differ only by type, so don't list them: the description is
-      # shown in @description and the types in @param.
-      usage_doc <- "#' @usage NULL\n"
-    } else if (length(distinct_desc) == 0) {
-      # No descriptions at all: list the bare signatures so the overloads stay
-      # visible.
-      usage_doc <- paste0(
-        "#' @usage NULL\n",
-        "#' @section Overloads:\n",
-        "#' \\itemize{\n",
-        paste0("#' \\item \\code{", overloads$sig, "}\n", collapse = ""),
-        "#' }"
-      )
-    } else {
-      # Several descriptions: group the signatures that share a description so
-      # it is not repeated, and flag overloads whose description is missing.
-      grouped <-
-        overloads |>
-        mutate(desc = if_else(is.na(desc), "(Description missing.)", desc)) |>
-        summarize(
-          .by = desc,
-          sigs = paste0("\\code{", sig, "}", collapse = ", ")
-        )
-      items <- paste0("#' \\item ", grouped$sigs, ": ", grouped$desc, "\n")
-      usage_doc <- paste0(
-        "#' @usage NULL\n",
-        "#' @section Overloads:\n",
-        "#' \\itemize{\n",
-        paste0(items, collapse = ""),
-        "#' }"
-      )
-    }
-  }
-
+  # The distinct arguments across all overloads (a single overload may even
+  # repeat a name, e.g. `array_cross_product(array, array)`); the stub and usage
+  # use this deduplicated set.
   params <-
     tibble(name = unlist(parameters), type = unlist(parameter_types)) |>
     summarize(
@@ -280,14 +249,56 @@ usage_and_params <- function(
       type = paste0(na.omit(unique(type)), collapse = " | ")
     )
 
-  param_doc <-
+  # "Compactable": several overloads that differ only by argument *type* (same
+  # names and arity). Then a single names-only usage plus the @param type unions
+  # say it all, so the Overloads section is left out.
+  name_keys <- map_chr(parameters, ~ paste(.x, collapse = ","))
+  compactable <- length(unique(name_keys)) == 1
+
+  if (sum(dedup) == 1 && names_syntactic) {
+    idx <- which(dedup)
+    usage_doc <- glue(
+      "#' @usage {usage_signature(function_name, parameters[[idx]], parameter_types[[idx]])}"
+    )
+  } else if (function_name == "%") {
+    # FIXME: roxygen2 generates bad .Rd here
+    usage_doc <- "#' @usage NULL\n"
+  } else if (compactable && names_syntactic) {
+    usage_doc <- glue(
+      "#' @usage {usage_signature(function_name, params$name, rep('', nrow(params)))}"
+    )
+  } else {
+    # Keep the Overloads section, listing each distinct signature.
+    usage_doc <- paste0(
+      "#' @usage NULL\n",
+      "#' @section Overloads:\n",
+      "#' \\itemize{\n",
+      paste0("#' \\item \\code{", overloads$sig, "}\n", collapse = ""),
+      "#' }"
+    )
+  }
+
+  # Document the arguments, collapsing to a single `@param a,b` when every
+  # argument shares one type (e.g. for a binary operator). Names are ticked to
+  # match the stub formals and the \usage (some DuckDB names are non-syntactic,
+  # e.g. `'entry'`).
+  param_types_doc <-
     params |>
     mutate(
+      name = tibble:::tick_if_needed(name),
       type = if_else(type == "", "Unspecified.", paste0("`", type, "`"))
-    ) |>
-    mutate(out = glue("#' @param {name} {type}")) |>
-    pull() |>
-    glue_collapse(sep = "\n")
+    )
+  if (nrow(param_types_doc) > 1 && length(unique(param_types_doc$type)) == 1) {
+    param_doc <- glue(
+      "#' @param {paste(param_types_doc$name, collapse = ',')} {param_types_doc$type[[1]]}"
+    )
+  } else {
+    param_doc <-
+      param_types_doc |>
+      mutate(out = glue("#' @param {name} {type}")) |>
+      pull(out) |>
+      glue_collapse(sep = "\n")
+  }
 
   signature <- params |>
     mutate(
@@ -299,25 +310,43 @@ usage_and_params <- function(
     glue_collapse(sep = ", ")
 
   is_macro <- length(macro_definition) == 1 && !is.na(macro_definition)
-  # Fill gaps: add any descriptions/examples present in the JSON but not in the
-  # catalog. The catalog is generated from these same JSON files, so this is
-  # usually a no-op; it recovers per-overload descriptions the catalog drops
-  # (e.g. the list variant of `array_extract`, `contains`, `repeat`).
-  description <- unique(na.omit(description))
-  if (merge_mode != "off") {
-    description <- unique(c(description, na.omit(json_description)))
-  }
-  if (length(description) == 0) {
+  # The description. When the overloads are described differently, list them
+  # here (in addition to the Overloads section), grouping signatures that share
+  # a description and flagging any overload whose description is missing. A
+  # single description (even if missing for some overloads) is shown as plain
+  # text; where the catalog has none, fall back to the JSON description.
+  if (length(distinct_desc) >= 2) {
+    grouped <-
+      overloads |>
+      mutate(desc = if_else(is.na(desc), "(Description missing.)", desc)) |>
+      summarize(
+        .by = desc,
+        sigs = paste0("\\code{", sig, "}", collapse = ", ")
+      ) |>
+      arrange(desc == "(Description missing.)")
+    items <- paste0("#' \\item ", grouped$sigs, ": ", grouped$desc, "\n")
     description <- paste0(
-      "#' DuckDB ",
-      if (is_macro) "macro" else "function",
-      " `",
-      function_name,
-      "()`."
+      "#' \\itemize{\n",
+      paste0(items, collapse = ""),
+      "#' }"
     )
   } else {
-    description <- gsub("[.]*$", ".", description)
-    description <- paste0("#' ", description, collapse = "\n#'\n")
+    description <- distinct_desc
+    if (length(description) == 0 && merge_mode != "off") {
+      description <- unique(na.omit(json_description))
+    }
+    if (length(description) == 0) {
+      description <- paste0(
+        "#' DuckDB ",
+        if (is_macro) "macro" else "function",
+        " `",
+        function_name,
+        "()`."
+      )
+    } else {
+      description <- gsub("[.]*$", ".", description)
+      description <- paste0("#' ", description, collapse = "\n#'\n")
+    }
   }
 
   examples <- na.omit(unique(unlist(examples)))
@@ -460,6 +489,9 @@ parse_json_entry <- function(entry) {
       names <- character(0)
       types <- character(0)
     }
+    # Some JSON names are quoted string literals (e.g. `'entry'`); the quotes
+    # aren't part of the name.
+    names <- gsub("^['\"](.*)['\"]$", "\\1", names)
     param_names <- if (length(names) > 0) {
       paste(names, collapse = ",")
     } else {

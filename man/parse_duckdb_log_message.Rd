@@ -7,9 +7,7 @@
 parse_duckdb_log_message(type = VARCHAR, message = VARCHAR)
 }
 \arguments{
-\item{type}{\code{VARCHAR}}
-
-\item{message}{\code{VARCHAR}}
+\item{type, message}{\code{VARCHAR}}
 }
 \value{
 \code{ANY}

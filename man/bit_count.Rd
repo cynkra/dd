@@ -3,6 +3,9 @@
 \name{bit_count}
 \alias{bit_count}
 \title{DuckDB function bit_count}
+\usage{
+bit_count(x)
+}
 \arguments{
 \item{x}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | BIT}}
 }

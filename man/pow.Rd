@@ -10,9 +10,7 @@
 pow(x = DOUBLE, y = DOUBLE)
 }
 \arguments{
-\item{x}{\code{DOUBLE}}
-
-\item{y}{\code{DOUBLE}}
+\item{x, y}{\code{DOUBLE}}
 }
 \value{
 \code{DOUBLE}

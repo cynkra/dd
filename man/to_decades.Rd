@@ -3,6 +3,9 @@
 \name{to_decades}
 \alias{to_decades}
 \title{DuckDB function to_decades}
+\usage{
+to_decades(integer)
+}
 \arguments{
 \item{integer}{\code{INTEGER | BIGINT}}
 }

@@ -3,6 +3,9 @@
 \name{arg_max_null}
 \alias{arg_max_null}
 \title{DuckDB function arg_max_null}
+\usage{
+arg_max_null(arg, val)
+}
 \arguments{
 \item{arg}{\verb{INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY}}
 

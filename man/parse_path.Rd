@@ -4,9 +4,7 @@
 \alias{parse_path}
 \title{DuckDB function parse_path}
 \arguments{
-\item{path}{\code{VARCHAR}}
-
-\item{separator}{\code{VARCHAR}}
+\item{path, separator}{\code{VARCHAR}}
 }
 \value{
 \code{VARCHAR[]}
@@ -14,6 +12,14 @@
 \description{
 Returns a list of the components (directories and filename) in the \code{path} similarly to Python's \code{pathlib.parts} function. \code{separator} options: \code{system}, \code{both_slash} (default), \code{forward_slash}, \code{backslash}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{parse_path(path = VARCHAR)}
+\item \code{parse_path(path = VARCHAR, separator = VARCHAR)}
+}
+}
+
 \section{SQL examples}{
 
 

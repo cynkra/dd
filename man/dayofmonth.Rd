@@ -3,6 +3,9 @@
 \name{dayofmonth}
 \alias{dayofmonth}
 \title{DuckDB function dayofmonth}
+\usage{
+dayofmonth(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

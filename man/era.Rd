@@ -3,6 +3,9 @@
 \name{era}
 \alias{era}
 \title{DuckDB function era}
+\usage{
+era(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

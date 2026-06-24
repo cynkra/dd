@@ -7,11 +7,7 @@
 ilike_escape(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR)
 }
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{like_specifier}{\code{VARCHAR}}
-
-\item{escape_character}{\code{VARCHAR}}
+\item{string, like_specifier, escape_character}{\code{VARCHAR}}
 }
 \value{
 \code{BOOLEAN}

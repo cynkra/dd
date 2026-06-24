@@ -3,6 +3,9 @@
 \name{monthname}
 \alias{monthname}
 \title{DuckDB function monthname}
+\usage{
+monthname(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

@@ -3,6 +3,9 @@
 \name{microsecond}
 \alias{microsecond}
 \title{DuckDB function microsecond}
+\usage{
+microsecond(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE}}
 }

@@ -3,6 +3,9 @@
 \name{~}
 \alias{~}
 \title{DuckDB function ~}
+\usage{
+`~`(input)
+}
 \arguments{
 \item{input}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT}}
 }

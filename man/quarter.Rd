@@ -3,6 +3,9 @@
 \name{quarter}
 \alias{quarter}
 \title{DuckDB function quarter}
+\usage{
+quarter(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

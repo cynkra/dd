@@ -7,9 +7,7 @@
 enum_range_boundary(start = ANY, end = ANY)
 }
 \arguments{
-\item{start}{\code{ANY}}
-
-\item{end}{\code{ANY}}
+\item{start, end}{\code{ANY}}
 }
 \value{
 \code{VARCHAR[]}

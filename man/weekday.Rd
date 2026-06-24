@@ -3,6 +3,9 @@
 \name{weekday}
 \alias{weekday}
 \title{DuckDB function weekday}
+\usage{
+weekday(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

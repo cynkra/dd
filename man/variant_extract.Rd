@@ -14,15 +14,16 @@
 \code{VARIANT}
 }
 \description{
-Returns the \code{field} from the \code{input_variant} if it's an OBJECT.
-
-Returns the entry at \code{index} from the \code{input_variant} if it's an ARRAY.
+\itemize{
+\item \code{variant_extract(input_variant = VARIANT, field = VARCHAR)}: Returns the \code{field} from the \code{input_variant} if it's an OBJECT.
+\item \code{variant_extract(input_variant = VARIANT, index = UINTEGER)}: Returns the entry at \code{index} from the \code{input_variant} if it's an ARRAY.
+}
 }
 \section{Overloads}{
 
 \itemize{
-\item \code{variant_extract(input_variant = VARIANT, field = VARCHAR)}: Returns the \code{field} from the \code{input_variant} if it's an OBJECT.
-\item \code{variant_extract(input_variant = VARIANT, index = UINTEGER)}: Returns the entry at \code{index} from the \code{input_variant} if it's an ARRAY.
+\item \code{variant_extract(input_variant = VARIANT, field = VARCHAR)}
+\item \code{variant_extract(input_variant = VARIANT, index = UINTEGER)}
 }
 }
 

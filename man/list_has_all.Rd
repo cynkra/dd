@@ -10,9 +10,7 @@
 list_has_all(list1 = `T[]`, list2 = `T[]`)
 }
 \arguments{
-\item{list1}{\code{T[]}}
-
-\item{list2}{\code{T[]}}
+\item{list1, list2}{\code{T[]}}
 }
 \value{
 \code{BOOLEAN}

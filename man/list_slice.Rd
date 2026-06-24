@@ -17,15 +17,16 @@
 \code{ANY}
 }
 \description{
-Extracts a sublist or substring using slice conventions. Negative values are accepted.
-
-list_slice with added step feature.
+\itemize{
+\item \code{list_slice(list = ANY, begin = ANY, end = ANY)}: Extracts a sublist or substring using slice conventions. Negative values are accepted.
+\item \code{list_slice(list = ANY, begin = ANY, end = ANY, step = BIGINT)}: list_slice with added step feature.
+}
 }
 \section{Overloads}{
 
 \itemize{
-\item \code{list_slice(list = ANY, begin = ANY, end = ANY)}: Extracts a sublist or substring using slice conventions. Negative values are accepted.
-\item \code{list_slice(list = ANY, begin = ANY, end = ANY, step = BIGINT)}: list_slice with added step feature.
+\item \code{list_slice(list = ANY, begin = ANY, end = ANY)}
+\item \code{list_slice(list = ANY, begin = ANY, end = ANY, step = BIGINT)}
 }
 }
 

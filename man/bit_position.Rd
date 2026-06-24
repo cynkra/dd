@@ -7,9 +7,7 @@
 bit_position(substring = BIT, bitstring = BIT)
 }
 \arguments{
-\item{substring}{\code{BIT}}
-
-\item{bitstring}{\code{BIT}}
+\item{substring, bitstring}{\code{BIT}}
 }
 \value{
 \code{INTEGER}

@@ -4,11 +4,7 @@
 \alias{regexp_matches}
 \title{DuckDB function regexp_matches}
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{regex}{\code{VARCHAR}}
-
-\item{options}{\code{VARCHAR}}
+\item{string, regex, options}{\code{VARCHAR}}
 }
 \value{
 \code{BOOLEAN}
@@ -16,6 +12,14 @@
 \description{
 Returns \code{true} if \code{string} contains the \code{regex}, \code{false} otherwise. A set of optional regex \code{options} can be set.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{regexp_matches(string = VARCHAR, regex = VARCHAR)}
+\item \code{regexp_matches(string = VARCHAR, regex = VARCHAR, options = VARCHAR)}
+}
+}
+
 \section{SQL examples}{
 
 

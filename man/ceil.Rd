@@ -4,6 +4,9 @@
 \alias{ceil}
 \alias{ceiling}
 \title{DuckDB function ceil}
+\usage{
+ceil(x)
+}
 \arguments{
 \item{x}{\code{FLOAT | DOUBLE | DECIMAL}}
 }

@@ -14,15 +14,16 @@
 \code{TIMESTAMP}
 }
 \description{
-Converts the \code{string} text to timestamp according to the format string. Throws an error on failure. To return \code{NULL} on failure, use try_strptime.
-
-Converts the \code{string} text to timestamp applying the format strings in the list until one succeeds. Throws an error on failure. To return \code{NULL} on failure, use try_strptime.
+\itemize{
+\item \code{strptime(text = VARCHAR, format = VARCHAR)}: Converts the \code{string} text to timestamp according to the format string. Throws an error on failure. To return \code{NULL} on failure, use try_strptime.
+\item \code{strptime(text = VARCHAR, `format-list` = `VARCHAR[]`)}: Converts the \code{string} text to timestamp applying the format strings in the list until one succeeds. Throws an error on failure. To return \code{NULL} on failure, use try_strptime.
+}
 }
 \section{Overloads}{
 
 \itemize{
-\item \code{strptime(text = VARCHAR, format = VARCHAR)}: Converts the \code{string} text to timestamp according to the format string. Throws an error on failure. To return \code{NULL} on failure, use try_strptime.
-\item \code{strptime(text = VARCHAR, `format-list` = `VARCHAR[]`)}: Converts the \code{string} text to timestamp applying the format strings in the list until one succeeds. Throws an error on failure. To return \code{NULL} on failure, use try_strptime.
+\item \code{strptime(text = VARCHAR, format = VARCHAR)}
+\item \code{strptime(text = VARCHAR, `format-list` = `VARCHAR[]`)}
 }
 }
 

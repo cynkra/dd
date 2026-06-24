@@ -7,9 +7,7 @@
 wavg(value, weight)
 }
 \arguments{
-\item{value}{Unspecified.}
-
-\item{weight}{Unspecified.}
+\item{value, weight}{Unspecified.}
 }
 \value{
 Unspecified.

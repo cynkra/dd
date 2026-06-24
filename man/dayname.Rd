@@ -3,6 +3,9 @@
 \name{dayname}
 \alias{dayname}
 \title{DuckDB function dayname}
+\usage{
+dayname(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

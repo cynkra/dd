@@ -4,11 +4,7 @@
 \alias{has_foreign_data_wrapper_privilege}
 \title{DuckDB function has_foreign_data_wrapper_privilege}
 \arguments{
-\item{fdw}{Unspecified.}
-
-\item{privilege}{Unspecified.}
-
-\item{user}{Unspecified.}
+\item{fdw, privilege, user}{Unspecified.}
 }
 \value{
 Unspecified.

@@ -3,6 +3,9 @@
 \name{equi_width_bins}
 \alias{equi_width_bins}
 \title{DuckDB function equi_width_bins}
+\usage{
+equi_width_bins(min, max, bin_count, nice_rounding)
+}
 \arguments{
 \item{min}{\code{BIGINT | DOUBLE | TIMESTAMP | ANY}}
 

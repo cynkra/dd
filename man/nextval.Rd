@@ -4,10 +4,10 @@
 \alias{nextval}
 \title{DuckDB function nextval}
 \usage{
-nextval(`'sequence_name'` = VARCHAR)
+nextval(sequence_name = VARCHAR)
 }
 \arguments{
-\item{'sequence_name'}{\code{VARCHAR}}
+\item{sequence_name}{\code{VARCHAR}}
 }
 \value{
 \code{BIGINT}

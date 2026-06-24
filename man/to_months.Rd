@@ -3,6 +3,9 @@
 \name{to_months}
 \alias{to_months}
 \title{DuckDB function to_months}
+\usage{
+to_months(integer)
+}
 \arguments{
 \item{integer}{\code{INTEGER | BIGINT}}
 }

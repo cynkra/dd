@@ -3,6 +3,9 @@
 \name{isfinite}
 \alias{isfinite}
 \title{DuckDB function isfinite}
+\usage{
+isfinite(x)
+}
 \arguments{
 \item{x}{\verb{FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

@@ -3,6 +3,9 @@
 \name{isnan}
 \alias{isnan}
 \title{DuckDB function isnan}
+\usage{
+isnan(x)
+}
 \arguments{
 \item{x}{\code{FLOAT | DOUBLE}}
 }

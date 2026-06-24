@@ -3,6 +3,9 @@
 \name{mad}
 \alias{mad}
 \title{DuckDB function mad}
+\usage{
+mad(x)
+}
 \arguments{
 \item{x}{\verb{DECIMAL | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE}}
 }

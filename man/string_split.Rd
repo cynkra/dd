@@ -10,9 +10,7 @@
 string_split(string = VARCHAR, separator = VARCHAR)
 }
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{separator}{\code{VARCHAR}}
+\item{string, separator}{\code{VARCHAR}}
 }
 \value{
 \code{VARCHAR[]}

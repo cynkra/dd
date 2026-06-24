@@ -3,6 +3,9 @@
 \name{to_quarters}
 \alias{to_quarters}
 \title{DuckDB function to_quarters}
+\usage{
+to_quarters(integer)
+}
 \arguments{
 \item{integer}{\code{INTEGER | BIGINT}}
 }

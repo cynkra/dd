@@ -4,11 +4,7 @@
 \alias{has_schema_privilege}
 \title{DuckDB function has_schema_privilege}
 \arguments{
-\item{schema}{Unspecified.}
-
-\item{privilege}{Unspecified.}
-
-\item{user}{Unspecified.}
+\item{schema, privilege, user}{Unspecified.}
 }
 \value{
 Unspecified.

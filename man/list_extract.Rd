@@ -4,6 +4,9 @@
 \alias{list_extract}
 \alias{list_element}
 \title{DuckDB function list_extract}
+\usage{
+list_extract(list, index)
+}
 \arguments{
 \item{list}{\code{T[] | VARCHAR}}
 

@@ -3,6 +3,9 @@
 \name{dayofyear}
 \alias{dayofyear}
 \title{DuckDB function dayofyear}
+\usage{
+dayofyear(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

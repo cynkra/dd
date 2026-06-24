@@ -4,10 +4,10 @@
 \alias{currval}
 \title{DuckDB function currval}
 \usage{
-currval(`'sequence_name'` = VARCHAR)
+currval(sequence_name = VARCHAR)
 }
 \arguments{
-\item{'sequence_name'}{\code{VARCHAR}}
+\item{sequence_name}{\code{VARCHAR}}
 }
 \value{
 \code{BIGINT}

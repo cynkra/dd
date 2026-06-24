@@ -3,6 +3,9 @@
 \name{epoch_ms}
 \alias{epoch_ms}
 \title{DuckDB function epoch_ms}
+\usage{
+epoch_ms(temporal)
+}
 \arguments{
 \item{temporal}{\verb{DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | BIGINT}}
 }

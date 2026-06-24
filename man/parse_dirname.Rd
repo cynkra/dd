@@ -4,9 +4,7 @@
 \alias{parse_dirname}
 \title{DuckDB function parse_dirname}
 \arguments{
-\item{path}{\code{VARCHAR}}
-
-\item{separator}{\code{VARCHAR}}
+\item{path, separator}{\code{VARCHAR}}
 }
 \value{
 \code{VARCHAR}
@@ -14,6 +12,14 @@
 \description{
 Returns the top-level directory name from the given \code{path}. \code{separator} options: \code{system}, \code{both_slash} (default), \code{forward_slash}, \code{backslash}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{parse_dirname(path = VARCHAR)}
+\item \code{parse_dirname(path = VARCHAR, separator = VARCHAR)}
+}
+}
+
 \section{SQL examples}{
 
 

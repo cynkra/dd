@@ -3,6 +3,9 @@
 \name{sum}
 \alias{sum}
 \title{DuckDB function sum}
+\usage{
+sum(arg)
+}
 \arguments{
 \item{arg}{\code{DECIMAL | BOOLEAN | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | BIGNUM}}
 }

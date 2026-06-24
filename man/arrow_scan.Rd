@@ -7,11 +7,7 @@
 arrow_scan(col0 = POINTER, col1 = POINTER, col2 = POINTER)
 }
 \arguments{
-\item{col0}{\code{POINTER}}
-
-\item{col1}{\code{POINTER}}
-
-\item{col2}{\code{POINTER}}
+\item{col0, col1, col2}{\code{POINTER}}
 }
 \value{
 Unspecified.

@@ -7,9 +7,6 @@
 \alias{array_transform}
 \alias{list_apply}
 \title{DuckDB function list_transform}
-\usage{
-list_transform(list = `ANY[]`, `lambda(x)` = LAMBDA)
-}
 \arguments{
 \item{list}{\code{ANY[]}}
 
@@ -21,6 +18,13 @@ list_transform(list = `ANY[]`, `lambda(x)` = LAMBDA)
 \description{
 Returns a list that is the result of applying the \code{lambda} function to each element of the input \code{list}. The return type is defined by the return type of the \code{lambda} function.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{list_transform(list = `ANY[]`, `lambda(x)` = LAMBDA)}
+}
+}
+
 \section{SQL examples}{
 
 

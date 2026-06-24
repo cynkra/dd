@@ -3,6 +3,9 @@
 \name{yearweek}
 \alias{yearweek}
 \title{DuckDB function yearweek}
+\usage{
+yearweek(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

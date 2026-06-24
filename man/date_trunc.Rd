@@ -4,6 +4,9 @@
 \alias{date_trunc}
 \alias{datetrunc}
 \title{DuckDB function date_trunc}
+\usage{
+date_trunc(part, timestamp)
+}
 \arguments{
 \item{part}{\code{VARCHAR}}
 

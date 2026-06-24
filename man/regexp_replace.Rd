@@ -4,13 +4,7 @@
 \alias{regexp_replace}
 \title{DuckDB function regexp_replace}
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{regex}{\code{VARCHAR}}
-
-\item{replacement}{\code{VARCHAR}}
-
-\item{options}{\code{VARCHAR}}
+\item{string, regex, replacement, options}{\code{VARCHAR}}
 }
 \value{
 \code{VARCHAR}
@@ -18,6 +12,14 @@
 \description{
 If \code{string} contains the \code{regex}, replaces the matching part with \code{replacement}. A set of optional regex \code{options} can be set.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{regexp_replace(string = VARCHAR, regex = VARCHAR, replacement = VARCHAR)}
+\item \code{regexp_replace(string = VARCHAR, regex = VARCHAR, replacement = VARCHAR, options = VARCHAR)}
+}
+}
+
 \section{SQL examples}{
 
 

@@ -3,6 +3,9 @@
 \name{bit_and}
 \alias{bit_and}
 \title{DuckDB function bit_and}
+\usage{
+bit_and(arg)
+}
 \arguments{
 \item{arg}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT}}
 }

@@ -7,9 +7,7 @@
 fmod(x, y)
 }
 \arguments{
-\item{x}{Unspecified.}
-
-\item{y}{Unspecified.}
+\item{x, y}{Unspecified.}
 }
 \value{
 Unspecified.

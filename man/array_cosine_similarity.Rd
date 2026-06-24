@@ -3,10 +3,11 @@
 \name{array_cosine_similarity}
 \alias{array_cosine_similarity}
 \title{DuckDB function array_cosine_similarity}
+\usage{
+array_cosine_similarity(array1, array2)
+}
 \arguments{
-\item{array1}{\code{FLOAT[ANY] | DOUBLE[ANY]}}
-
-\item{array2}{\code{FLOAT[ANY] | DOUBLE[ANY]}}
+\item{array1, array2}{\code{FLOAT[ANY] | DOUBLE[ANY]}}
 }
 \value{
 \code{FLOAT | DOUBLE}

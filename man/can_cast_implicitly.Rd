@@ -7,9 +7,7 @@
 can_cast_implicitly(source_type = ANY, target_type = ANY)
 }
 \arguments{
-\item{source_type}{\code{ANY}}
-
-\item{target_type}{\code{ANY}}
+\item{source_type, target_type}{\code{ANY}}
 }
 \value{
 \code{BOOLEAN}

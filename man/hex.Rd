@@ -15,18 +15,22 @@
 \code{VARCHAR}
 }
 \description{
-Converts the \code{string} to hexadecimal representation.
-
-Converts the \code{value} to \code{VARCHAR} using hexadecimal representation.
-
-Converts \code{blob} to \code{VARCHAR} using hexadecimal encoding.
-}
-\section{Overloads}{
-
 \itemize{
 \item \code{hex(string = VARCHAR)}: Converts the \code{string} to hexadecimal representation.
 \item \code{hex(value = BIGNUM)}, \code{hex(value = BIGINT)}, \code{hex(value = UBIGINT)}, \code{hex(value = HUGEINT)}, \code{hex(value = UHUGEINT)}: Converts the \code{value} to \code{VARCHAR} using hexadecimal representation.
 \item \code{hex(blob = BLOB)}: Converts \code{blob} to \code{VARCHAR} using hexadecimal encoding.
+}
+}
+\section{Overloads}{
+
+\itemize{
+\item \code{hex(string = VARCHAR)}
+\item \code{hex(value = BIGNUM)}
+\item \code{hex(blob = BLOB)}
+\item \code{hex(value = BIGINT)}
+\item \code{hex(value = UBIGINT)}
+\item \code{hex(value = HUGEINT)}
+\item \code{hex(value = UHUGEINT)}
 }
 }
 

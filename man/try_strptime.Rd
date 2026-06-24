@@ -3,6 +3,9 @@
 \name{try_strptime}
 \alias{try_strptime}
 \title{DuckDB function try_strptime}
+\usage{
+try_strptime(text, format)
+}
 \arguments{
 \item{text}{\code{VARCHAR}}
 

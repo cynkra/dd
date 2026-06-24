@@ -3,6 +3,9 @@
 \name{to_days}
 \alias{to_days}
 \title{DuckDB function to_days}
+\usage{
+to_days(integer)
+}
 \arguments{
 \item{integer}{\code{INTEGER | BIGINT}}
 }

@@ -4,6 +4,9 @@
 \alias{abs}
 \alias{@}
 \title{DuckDB function abs}
+\usage{
+abs(x)
+}
 \arguments{
 \item{x}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT}}
 }

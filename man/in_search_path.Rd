@@ -7,9 +7,7 @@
 in_search_path(database_name = VARCHAR, schema_name = VARCHAR)
 }
 \arguments{
-\item{database_name}{\code{VARCHAR}}
-
-\item{schema_name}{\code{VARCHAR}}
+\item{database_name, schema_name}{\code{VARCHAR}}
 }
 \value{
 \code{BOOLEAN}

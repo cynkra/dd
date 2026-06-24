@@ -3,6 +3,9 @@
 \name{bit_xor}
 \alias{bit_xor}
 \title{DuckDB function bit_xor}
+\usage{
+bit_xor(arg)
+}
 \arguments{
 \item{arg}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT}}
 }

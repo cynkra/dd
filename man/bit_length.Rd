@@ -12,15 +12,16 @@
 \code{BIGINT}
 }
 \description{
-Number of bits in a \code{string}.
-
-Returns the bit-length of the \code{bit} argument.
+\itemize{
+\item \code{bit_length(string = VARCHAR)}: Number of bits in a \code{string}.
+\item \code{bit_length(bit = BIT)}: Returns the bit-length of the \code{bit} argument.
+}
 }
 \section{Overloads}{
 
 \itemize{
-\item \code{bit_length(string = VARCHAR)}: Number of bits in a \code{string}.
-\item \code{bit_length(bit = BIT)}: Returns the bit-length of the \code{bit} argument.
+\item \code{bit_length(string = VARCHAR)}
+\item \code{bit_length(bit = BIT)}
 }
 }
 

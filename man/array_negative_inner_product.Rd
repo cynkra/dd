@@ -4,10 +4,11 @@
 \alias{array_negative_inner_product}
 \alias{array_negative_dot_product}
 \title{DuckDB function array_negative_inner_product}
+\usage{
+array_negative_inner_product(array1, array2)
+}
 \arguments{
-\item{array1}{\code{FLOAT[ANY] | DOUBLE[ANY]}}
-
-\item{array2}{\code{FLOAT[ANY] | DOUBLE[ANY]}}
+\item{array1, array2}{\code{FLOAT[ANY] | DOUBLE[ANY]}}
 }
 \value{
 \code{FLOAT | DOUBLE}

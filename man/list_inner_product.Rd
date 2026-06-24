@@ -4,10 +4,11 @@
 \alias{list_inner_product}
 \alias{list_dot_product}
 \title{DuckDB function list_inner_product}
+\usage{
+list_inner_product(list1, list2)
+}
 \arguments{
-\item{list1}{\code{FLOAT[] | DOUBLE[]}}
-
-\item{list2}{\code{FLOAT[] | DOUBLE[]}}
+\item{list1, list2}{\code{FLOAT[] | DOUBLE[]}}
 }
 \value{
 \code{FLOAT | DOUBLE}

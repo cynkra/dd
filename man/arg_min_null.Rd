@@ -3,6 +3,9 @@
 \name{arg_min_null}
 \alias{arg_min_null}
 \title{DuckDB function arg_min_null}
+\usage{
+arg_min_null(arg, val)
+}
 \arguments{
 \item{arg}{\verb{INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY}}
 

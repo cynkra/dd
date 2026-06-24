@@ -3,6 +3,9 @@
 \name{/}
 \alias{/}
 \title{DuckDB function /}
+\usage{
+`/`(col0, col1)
+}
 \arguments{
 \item{col0}{\code{FLOAT | DOUBLE | INTERVAL}}
 
@@ -14,12 +17,3 @@
 \description{
 DuckDB function \verb{/()}.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{`/`(col0 = FLOAT, col1 = FLOAT)}
-\item \code{`/`(col0 = DOUBLE, col1 = DOUBLE)}
-\item \code{`/`(col0 = INTERVAL, col1 = DOUBLE)}
-}
-}
-

@@ -3,6 +3,9 @@
 \name{bitstring}
 \alias{bitstring}
 \title{DuckDB function bitstring}
+\usage{
+bitstring(bitstring, length)
+}
 \arguments{
 \item{bitstring}{\code{VARCHAR | BIT}}
 

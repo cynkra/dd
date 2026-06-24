@@ -7,11 +7,7 @@
 split_part(string, delimiter, position)
 }
 \arguments{
-\item{string}{Unspecified.}
-
-\item{delimiter}{Unspecified.}
-
-\item{position}{Unspecified.}
+\item{string, delimiter, position}{Unspecified.}
 }
 \value{
 Unspecified.

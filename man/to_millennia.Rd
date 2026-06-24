@@ -3,6 +3,9 @@
 \name{to_millennia}
 \alias{to_millennia}
 \title{DuckDB function to_millennia}
+\usage{
+to_millennia(integer)
+}
 \arguments{
 \item{integer}{\code{INTEGER | BIGINT}}
 }

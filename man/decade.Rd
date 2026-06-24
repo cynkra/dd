@@ -3,6 +3,9 @@
 \name{decade}
 \alias{decade}
 \title{DuckDB function decade}
+\usage{
+decade(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

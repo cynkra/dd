@@ -5,9 +5,6 @@
 \alias{array_filter}
 \alias{filter}
 \title{DuckDB function list_filter}
-\usage{
-list_filter(list = `ANY[]`, `lambda(x)` = LAMBDA)
-}
 \arguments{
 \item{list}{\code{ANY[]}}
 
@@ -19,6 +16,13 @@ list_filter(list = `ANY[]`, `lambda(x)` = LAMBDA)
 \description{
 Constructs a list from those elements of the input \code{list} for which the \code{lambda} function returns \code{true}. DuckDB must be able to cast the \code{lambda} function's return type to \code{BOOL}. The return type of \code{list_filter} is the same as the input list's.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{list_filter(list = `ANY[]`, `lambda(x)` = LAMBDA)}
+}
+}
+
 \section{SQL examples}{
 
 

@@ -3,6 +3,9 @@
 \name{dayofweek}
 \alias{dayofweek}
 \title{DuckDB function dayofweek}
+\usage{
+dayofweek(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

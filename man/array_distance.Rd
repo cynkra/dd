@@ -3,10 +3,11 @@
 \name{array_distance}
 \alias{array_distance}
 \title{DuckDB function array_distance}
+\usage{
+array_distance(array1, array2)
+}
 \arguments{
-\item{array1}{\code{FLOAT[ANY] | DOUBLE[ANY]}}
-
-\item{array2}{\code{FLOAT[ANY] | DOUBLE[ANY]}}
+\item{array1, array2}{\code{FLOAT[ANY] | DOUBLE[ANY]}}
 }
 \value{
 \code{FLOAT | DOUBLE}

@@ -3,6 +3,9 @@
 \name{julian}
 \alias{julian}
 \title{DuckDB function julian}
+\usage{
+julian(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

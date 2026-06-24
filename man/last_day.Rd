@@ -3,6 +3,9 @@
 \name{last_day}
 \alias{last_day}
 \title{DuckDB function last_day}
+\usage{
+last_day(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

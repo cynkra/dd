@@ -4,10 +4,11 @@
 \alias{greatest_common_divisor}
 \alias{gcd}
 \title{DuckDB function greatest_common_divisor}
+\usage{
+greatest_common_divisor(x, y)
+}
 \arguments{
-\item{x}{\code{BIGINT | HUGEINT}}
-
-\item{y}{\code{BIGINT | HUGEINT}}
+\item{x, y}{\code{BIGINT | HUGEINT}}
 }
 \value{
 \code{BIGINT | HUGEINT}

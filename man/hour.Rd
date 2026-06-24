@@ -3,6 +3,9 @@
 \name{hour}
 \alias{hour}
 \title{DuckDB function hour}
+\usage{
+hour(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE}}
 }

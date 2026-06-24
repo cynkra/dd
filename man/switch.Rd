@@ -16,6 +16,16 @@
 \description{
 Creates a switch statement similar to CASE WHEN/THEN.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{switch(key = K, map = `MAP(K, V)`)}
+\item \code{switch(key = K, map = `MAP(K, V)`, value = V)}
+\item \code{switch(key = `MAP(K, V)`, map = V)}
+\item \code{switch(key = `MAP(K, V)`)}
+}
+}
+
 \section{SQL examples}{
 
 

@@ -3,6 +3,9 @@
 \name{floor}
 \alias{floor}
 \title{DuckDB function floor}
+\usage{
+floor(x)
+}
 \arguments{
 \item{x}{\code{FLOAT | DOUBLE | DECIMAL}}
 }

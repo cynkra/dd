@@ -3,10 +3,11 @@
 \name{list_cosine_similarity}
 \alias{list_cosine_similarity}
 \title{DuckDB function list_cosine_similarity}
+\usage{
+list_cosine_similarity(list1, list2)
+}
 \arguments{
-\item{list1}{\code{FLOAT[] | DOUBLE[]}}
-
-\item{list2}{\code{FLOAT[] | DOUBLE[]}}
+\item{list1, list2}{\code{FLOAT[] | DOUBLE[]}}
 }
 \value{
 \code{FLOAT | DOUBLE}

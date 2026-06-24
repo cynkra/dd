@@ -7,13 +7,7 @@
 histogram_values(source, col_name, bin_count, technique)
 }
 \arguments{
-\item{source}{Unspecified.}
-
-\item{col_name}{Unspecified.}
-
-\item{bin_count}{Unspecified.}
-
-\item{technique}{Unspecified.}
+\item{source, col_name, bin_count, technique}{Unspecified.}
 }
 \value{
 Unspecified.

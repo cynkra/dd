@@ -3,6 +3,9 @@
 \name{sign}
 \alias{sign}
 \title{DuckDB function sign}
+\usage{
+sign(x)
+}
 \arguments{
 \item{x}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT}}
 }

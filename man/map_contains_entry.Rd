@@ -7,11 +7,7 @@
 map_contains_entry(map, key, value)
 }
 \arguments{
-\item{map}{Unspecified.}
-
-\item{key}{Unspecified.}
-
-\item{value}{Unspecified.}
+\item{map, key, value}{Unspecified.}
 }
 \value{
 Unspecified.

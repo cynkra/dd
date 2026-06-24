@@ -3,6 +3,9 @@
 \name{isodow}
 \alias{isodow}
 \title{DuckDB function isodow}
+\usage{
+isodow(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

@@ -3,6 +3,9 @@
 \name{array_cross_product}
 \alias{array_cross_product}
 \title{DuckDB function array_cross_product}
+\usage{
+array_cross_product(array)
+}
 \arguments{
 \item{array}{\code{FLOAT[3] | DOUBLE[3]}}
 }

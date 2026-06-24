@@ -3,6 +3,9 @@
 \name{nanosecond}
 \alias{nanosecond}
 \title{DuckDB function nanosecond}
+\usage{
+nanosecond(tsns)
+}
 \arguments{
 \item{tsns}{\verb{DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP_NS | TIMESTAMP WITH TIME ZONE}}
 }

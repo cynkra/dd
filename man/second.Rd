@@ -3,6 +3,9 @@
 \name{second}
 \alias{second}
 \title{DuckDB function second}
+\usage{
+second(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE}}
 }

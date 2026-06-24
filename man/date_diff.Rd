@@ -4,6 +4,9 @@
 \alias{date_diff}
 \alias{datediff}
 \title{DuckDB function date_diff}
+\usage{
+date_diff(part, startdate, enddate)
+}
 \arguments{
 \item{part}{\code{VARCHAR}}
 

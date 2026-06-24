@@ -13,6 +13,14 @@
 \description{
 Creates a LIST containing the argument values.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{list_value()}
+\item \code{list_value(any = T)}
+}
+}
+
 \section{SQL examples}{
 
 

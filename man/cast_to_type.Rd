@@ -7,9 +7,7 @@
 cast_to_type(param = ANY, type = ANY)
 }
 \arguments{
-\item{param}{\code{ANY}}
-
-\item{type}{\code{ANY}}
+\item{param, type}{\code{ANY}}
 }
 \value{
 \code{ANY}

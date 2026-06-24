@@ -3,6 +3,9 @@
 \name{year}
 \alias{year}
 \title{DuckDB function year}
+\usage{
+year(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

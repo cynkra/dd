@@ -4,6 +4,9 @@
 \alias{date_sub}
 \alias{datesub}
 \title{DuckDB function date_sub}
+\usage{
+date_sub(part, startdate, enddate)
+}
 \arguments{
 \item{part}{\code{VARCHAR}}
 

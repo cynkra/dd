@@ -3,6 +3,9 @@
 \name{signbit}
 \alias{signbit}
 \title{DuckDB function signbit}
+\usage{
+signbit(x)
+}
 \arguments{
 \item{x}{\code{FLOAT | DOUBLE}}
 }

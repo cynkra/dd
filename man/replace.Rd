@@ -7,11 +7,7 @@
 replace(string = VARCHAR, source = VARCHAR, target = VARCHAR)
 }
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{source}{\code{VARCHAR}}
-
-\item{target}{\code{VARCHAR}}
+\item{string, source, target}{\code{VARCHAR}}
 }
 \value{
 \code{VARCHAR}

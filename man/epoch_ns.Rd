@@ -3,6 +3,9 @@
 \name{epoch_ns}
 \alias{epoch_ns}
 \title{DuckDB function epoch_ns}
+\usage{
+epoch_ns(temporal)
+}
 \arguments{
 \item{temporal}{\verb{DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | TIMESTAMP_NS}}
 }

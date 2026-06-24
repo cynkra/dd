@@ -4,9 +4,7 @@
 \alias{trim}
 \title{DuckDB function trim}
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{characters}{\code{VARCHAR}}
+\item{string, characters}{\code{VARCHAR}}
 }
 \value{
 \code{VARCHAR}
@@ -14,6 +12,14 @@
 \description{
 Removes any occurrences of any of the \code{characters} from either side of the \code{string}. \code{characters} defaults to \code{space}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{trim(string = VARCHAR)}
+\item \code{trim(string = VARCHAR, characters = VARCHAR)}
+}
+}
+
 \section{SQL examples}{
 
 

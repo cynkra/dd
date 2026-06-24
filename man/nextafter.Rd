@@ -3,10 +3,11 @@
 \name{nextafter}
 \alias{nextafter}
 \title{DuckDB function nextafter}
+\usage{
+nextafter(x, y)
+}
 \arguments{
-\item{x}{\code{DOUBLE | FLOAT}}
-
-\item{y}{\code{DOUBLE | FLOAT}}
+\item{x, y}{\code{DOUBLE | FLOAT}}
 }
 \value{
 \code{DOUBLE | FLOAT}

@@ -5,12 +5,12 @@
 \alias{struct_has}
 \title{DuckDB function struct_contains}
 \usage{
-struct_contains(struct = STRUCT, `'entry'` = ANY)
+struct_contains(struct = STRUCT, entry = ANY)
 }
 \arguments{
 \item{struct}{\code{STRUCT}}
 
-\item{'entry'}{\code{ANY}}
+\item{entry}{\code{ANY}}
 }
 \value{
 \code{BOOLEAN}

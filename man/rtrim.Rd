@@ -4,9 +4,7 @@
 \alias{rtrim}
 \title{DuckDB function rtrim}
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{characters}{\code{VARCHAR}}
+\item{string, characters}{\code{VARCHAR}}
 }
 \value{
 \code{VARCHAR}
@@ -14,6 +12,14 @@
 \description{
 Removes any occurrences of any of the \code{characters} from the right side of the \code{string}. \code{characters} defaults to \code{space}.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{rtrim(string = VARCHAR)}
+\item \code{rtrim(string = VARCHAR, characters = VARCHAR)}
+}
+}
+
 \section{SQL examples}{
 
 

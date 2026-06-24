@@ -3,6 +3,9 @@
 \name{strftime}
 \alias{strftime}
 \title{DuckDB function strftime}
+\usage{
+strftime(data, format)
+}
 \arguments{
 \item{data}{\verb{DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR | TIMESTAMP WITH TIME ZONE}}
 

@@ -7,11 +7,7 @@
 translate(string = VARCHAR, from = VARCHAR, to = VARCHAR)
 }
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{from}{\code{VARCHAR}}
-
-\item{to}{\code{VARCHAR}}
+\item{string, from, to}{\code{VARCHAR}}
 }
 \value{
 \code{VARCHAR}

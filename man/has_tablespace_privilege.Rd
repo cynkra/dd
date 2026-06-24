@@ -4,11 +4,7 @@
 \alias{has_tablespace_privilege}
 \title{DuckDB function has_tablespace_privilege}
 \arguments{
-\item{tablespace}{Unspecified.}
-
-\item{privilege}{Unspecified.}
-
-\item{user}{Unspecified.}
+\item{tablespace, privilege, user}{Unspecified.}
 }
 \value{
 Unspecified.

@@ -7,9 +7,7 @@
 format_pg_type(logical_type, type_name)
 }
 \arguments{
-\item{logical_type}{Unspecified.}
-
-\item{type_name}{Unspecified.}
+\item{logical_type, type_name}{Unspecified.}
 }
 \value{
 Unspecified.

@@ -4,10 +4,11 @@
 \alias{least_common_multiple}
 \alias{lcm}
 \title{DuckDB function least_common_multiple}
+\usage{
+least_common_multiple(x, y)
+}
 \arguments{
-\item{x}{\code{BIGINT | HUGEINT}}
-
-\item{y}{\code{BIGINT | HUGEINT}}
+\item{x, y}{\code{BIGINT | HUGEINT}}
 }
 \value{
 \code{BIGINT | HUGEINT}

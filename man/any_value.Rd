@@ -3,6 +3,9 @@
 \name{any_value}
 \alias{any_value}
 \title{DuckDB function any_value}
+\usage{
+any_value(arg)
+}
 \arguments{
 \item{arg}{\code{DECIMAL | ANY}}
 }

@@ -4,11 +4,7 @@
 \alias{has_sequence_privilege}
 \title{DuckDB function has_sequence_privilege}
 \arguments{
-\item{sequence}{Unspecified.}
-
-\item{privilege}{Unspecified.}
-
-\item{user}{Unspecified.}
+\item{sequence, privilege, user}{Unspecified.}
 }
 \value{
 Unspecified.

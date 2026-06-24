@@ -3,6 +3,9 @@
 \name{day}
 \alias{day}
 \title{DuckDB function day}
+\usage{
+day(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

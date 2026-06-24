@@ -3,6 +3,9 @@
 \name{approx_quantile}
 \alias{approx_quantile}
 \title{DuckDB function approx_quantile}
+\usage{
+approx_quantile(x, pos)
+}
 \arguments{
 \item{x}{\verb{DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | DATE | TIME | TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TINYINT | FLOAT}}
 

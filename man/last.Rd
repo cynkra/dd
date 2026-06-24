@@ -14,6 +14,15 @@
 \description{
 Returns the last value of a column. This function is affected by ordering.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{last(arg = DECIMAL)}
+\item \code{last(arg = ANY)}
+\item \code{last(col0 = T)}
+}
+}
+
 \section{SQL examples}{
 
 

@@ -3,10 +3,13 @@
 \name{struct_extract}
 \alias{struct_extract}
 \title{DuckDB function struct_extract}
+\usage{
+struct_extract(struct, entry)
+}
 \arguments{
 \item{struct}{\code{STRUCT}}
 
-\item{'entry'}{\code{VARCHAR | BIGINT}}
+\item{entry}{\code{VARCHAR | BIGINT}}
 }
 \value{
 \code{ANY}

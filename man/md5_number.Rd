@@ -12,15 +12,16 @@
 \code{UHUGEINT}
 }
 \description{
-Returns the MD5 hash of the \code{string} as a \code{HUGEINT}.
-
-Returns the MD5 hash of the \code{blob} as a \code{HUGEINT}.
+\itemize{
+\item \code{md5_number(string = VARCHAR)}: Returns the MD5 hash of the \code{string} as a \code{HUGEINT}.
+\item \code{md5_number(blob = BLOB)}: Returns the MD5 hash of the \code{blob} as a \code{HUGEINT}.
+}
 }
 \section{Overloads}{
 
 \itemize{
-\item \code{md5_number(string = VARCHAR)}: Returns the MD5 hash of the \code{string} as a \code{HUGEINT}.
-\item \code{md5_number(blob = BLOB)}: Returns the MD5 hash of the \code{blob} as a \code{HUGEINT}.
+\item \code{md5_number(string = VARCHAR)}
+\item \code{md5_number(blob = BLOB)}
 }
 }
 

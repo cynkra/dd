@@ -3,6 +3,9 @@
 \name{isoyear}
 \alias{isoyear}
 \title{DuckDB function isoyear}
+\usage{
+isoyear(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

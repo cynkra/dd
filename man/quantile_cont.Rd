@@ -3,6 +3,9 @@
 \name{quantile_cont}
 \alias{quantile_cont}
 \title{DuckDB function quantile_cont}
+\usage{
+quantile_cont(x, pos)
+}
 \arguments{
 \item{x}{\verb{DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE}}
 

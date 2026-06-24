@@ -4,13 +4,7 @@
 \alias{bar}
 \title{DuckDB function bar}
 \arguments{
-\item{x}{\code{DOUBLE}}
-
-\item{min}{\code{DOUBLE}}
-
-\item{max}{\code{DOUBLE}}
-
-\item{width}{\code{DOUBLE}}
+\item{x, min, max, width}{\code{DOUBLE}}
 }
 \value{
 \code{VARCHAR}
@@ -18,6 +12,14 @@
 \description{
 Draws a band whose width is proportional to (\code{x - min}) and equal to \code{width} characters when \code{x} = \code{max}. \code{width} defaults to 80.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{bar(x = DOUBLE, min = DOUBLE, max = DOUBLE, width = DOUBLE)}
+\item \code{bar(x = DOUBLE, min = DOUBLE, max = DOUBLE)}
+}
+}
+
 \section{SQL examples}{
 
 

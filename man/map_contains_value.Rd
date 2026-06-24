@@ -7,9 +7,7 @@
 map_contains_value(map, value)
 }
 \arguments{
-\item{map}{Unspecified.}
-
-\item{value}{Unspecified.}
+\item{map, value}{Unspecified.}
 }
 \value{
 Unspecified.

@@ -4,9 +4,7 @@
 \alias{log}
 \title{DuckDB function log}
 \arguments{
-\item{b}{\code{DOUBLE}}
-
-\item{x}{\code{DOUBLE}}
+\item{b, x}{\code{DOUBLE}}
 }
 \value{
 \code{DOUBLE}
@@ -14,6 +12,14 @@
 \description{
 Computes the logarithm of x to base b. b may be omitted, in which case the default 10.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{log(b = DOUBLE)}
+\item \code{log(b = DOUBLE, x = DOUBLE)}
+}
+}
+
 \section{SQL examples}{
 
 

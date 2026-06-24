@@ -7,11 +7,7 @@
 replace_type(param = ANY, type1 = ANY, type2 = ANY)
 }
 \arguments{
-\item{param}{\code{ANY}}
-
-\item{type1}{\code{ANY}}
-
-\item{type2}{\code{ANY}}
+\item{param, type1, type2}{\code{ANY}}
 }
 \value{
 \code{ANY}

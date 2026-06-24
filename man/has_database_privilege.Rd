@@ -4,11 +4,7 @@
 \alias{has_database_privilege}
 \title{DuckDB function has_database_privilege}
 \arguments{
-\item{database}{Unspecified.}
-
-\item{privilege}{Unspecified.}
-
-\item{user}{Unspecified.}
+\item{database, privilege, user}{Unspecified.}
 }
 \value{
 Unspecified.

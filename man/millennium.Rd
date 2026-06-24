@@ -3,6 +3,9 @@
 \name{millennium}
 \alias{millennium}
 \title{DuckDB function millennium}
+\usage{
+millennium(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }

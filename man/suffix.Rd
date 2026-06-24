@@ -8,9 +8,7 @@
 suffix(string = VARCHAR, search_string = VARCHAR)
 }
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{search_string}{\code{VARCHAR}}
+\item{string, search_string}{\code{VARCHAR}}
 }
 \value{
 \code{BOOLEAN}

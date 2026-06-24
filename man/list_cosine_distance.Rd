@@ -4,10 +4,11 @@
 \alias{list_cosine_distance}
 \alias{<=>}
 \title{DuckDB function list_cosine_distance}
+\usage{
+list_cosine_distance(list1, list2)
+}
 \arguments{
-\item{list1}{\code{FLOAT[] | DOUBLE[]}}
-
-\item{list2}{\code{FLOAT[] | DOUBLE[]}}
+\item{list1, list2}{\code{FLOAT[] | DOUBLE[]}}
 }
 \value{
 \code{FLOAT | DOUBLE}

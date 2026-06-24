@@ -6,11 +6,7 @@
 \alias{str_split_regex}
 \title{DuckDB function string_split_regex}
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{regex}{\code{VARCHAR}}
-
-\item{options}{\code{VARCHAR}}
+\item{string, regex, options}{\code{VARCHAR}}
 }
 \value{
 \code{VARCHAR[]}
@@ -18,6 +14,14 @@
 \description{
 Splits the \code{string} along the \code{regex}. A set of optional regex \code{options} can be set.
 }
+\section{Overloads}{
+
+\itemize{
+\item \code{string_split_regex(string = VARCHAR, regex = VARCHAR)}
+\item \code{string_split_regex(string = VARCHAR, regex = VARCHAR, options = VARCHAR)}
+}
+}
+
 \section{SQL examples}{
 
 
