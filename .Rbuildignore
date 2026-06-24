@@ -11,4 +11,4 @@
 ^CLAUDE\.md$
 ^\.claude$
 ^\.ccache$
-^duckdb-argument-descriptions\.md$
+^proposals$
