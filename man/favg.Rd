@@ -4,7 +4,7 @@
 \alias{favg}
 \title{DuckDB function favg}
 \usage{
-favg(x = DOUBLE)
+favg(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

@@ -4,6 +4,9 @@
 \alias{list_value}
 \alias{list_pack}
 \title{DuckDB function list_value}
+\usage{
+list_value(any)
+}
 \arguments{
 \item{any}{\code{T}}
 }

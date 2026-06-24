@@ -3,6 +3,9 @@
 \name{regexp_replace}
 \alias{regexp_replace}
 \title{DuckDB function regexp_replace}
+\usage{
+regexp_replace(string, regex, replacement, options)
+}
 \arguments{
 \item{string, regex, replacement, options}{\code{VARCHAR}}
 }

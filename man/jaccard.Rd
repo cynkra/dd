@@ -4,7 +4,7 @@
 \alias{jaccard}
 \title{DuckDB function jaccard}
 \usage{
-jaccard(s1 = VARCHAR, s2 = VARCHAR)
+jaccard(s1, s2)
 }
 \arguments{
 \item{s1, s2}{\code{VARCHAR}}

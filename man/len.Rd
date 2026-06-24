@@ -5,12 +5,11 @@
 \alias{char_length}
 \alias{character_length}
 \title{DuckDB function len}
+\usage{
+len(string)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
-
-\item{bit}{\code{BIT}}
-
-\item{list}{\code{ANY[]}}
 }
 \value{
 \code{BIGINT}

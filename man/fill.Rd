@@ -4,7 +4,7 @@
 \alias{fill}
 \title{DuckDB function fill}
 \usage{
-fill(col0 = T)
+fill(col0)
 }
 \arguments{
 \item{col0}{\code{T}}

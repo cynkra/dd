@@ -3,8 +3,11 @@
 \name{has_server_privilege}
 \alias{has_server_privilege}
 \title{DuckDB function has_server_privilege}
+\usage{
+has_server_privilege(user, server, privilege)
+}
 \arguments{
-\item{server, privilege, user}{Unspecified.}
+\item{user, server, privilege}{Unspecified.}
 }
 \value{
 Unspecified.

@@ -3,6 +3,9 @@
 \name{regexp_matches}
 \alias{regexp_matches}
 \title{DuckDB function regexp_matches}
+\usage{
+regexp_matches(string, regex, options)
+}
 \arguments{
 \item{string, regex, options}{\code{VARCHAR}}
 }

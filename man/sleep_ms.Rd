@@ -4,7 +4,7 @@
 \alias{sleep_ms}
 \title{DuckDB function sleep_ms}
 \usage{
-sleep_ms(milliseconds = BIGINT)
+sleep_ms(milliseconds)
 }
 \arguments{
 \item{milliseconds}{\code{BIGINT}}

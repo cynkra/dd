@@ -5,7 +5,7 @@
 \alias{ucase}
 \title{DuckDB function upper}
 \usage{
-upper(string = VARCHAR)
+upper(string)
 }
 \arguments{
 \item{string}{\code{VARCHAR}}

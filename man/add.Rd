@@ -3,6 +3,9 @@
 \name{add}
 \alias{add}
 \title{DuckDB function add}
+\usage{
+add(col0, col1)
+}
 \arguments{
 \item{col0, col1}{\verb{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM}}
 }

@@ -4,9 +4,10 @@
 \alias{bin}
 \alias{to_binary}
 \title{DuckDB function bin}
+\usage{
+bin(value)
+}
 \arguments{
-\item{string}{\code{VARCHAR}}
-
 \item{value}{\code{BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT}}
 }
 \value{

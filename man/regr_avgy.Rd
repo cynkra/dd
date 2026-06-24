@@ -4,7 +4,7 @@
 \alias{regr_avgy}
 \title{DuckDB function regr_avgy}
 \usage{
-regr_avgy(y = DOUBLE, x = DOUBLE)
+regr_avgy(y, x)
 }
 \arguments{
 \item{y, x}{\code{DOUBLE}}

@@ -4,7 +4,7 @@
 \alias{replace}
 \title{DuckDB function replace}
 \usage{
-replace(string = VARCHAR, source = VARCHAR, target = VARCHAR)
+replace(string, source, target)
 }
 \arguments{
 \item{string, source, target}{\code{VARCHAR}}

@@ -4,7 +4,7 @@
 \alias{from_base64}
 \title{DuckDB function from_base64}
 \usage{
-from_base64(string = VARCHAR)
+from_base64(string)
 }
 \arguments{
 \item{string}{\code{VARCHAR}}

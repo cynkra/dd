@@ -5,7 +5,7 @@
 \alias{array_intersect}
 \title{DuckDB function list_intersect}
 \usage{
-list_intersect(list1 = `T[]`, list2 = `T[]`)
+list_intersect(list1, list2)
 }
 \arguments{
 \item{list1, list2}{\code{T[]}}

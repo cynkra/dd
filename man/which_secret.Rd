@@ -4,7 +4,7 @@
 \alias{which_secret}
 \title{DuckDB function which_secret}
 \usage{
-which_secret(col0 = VARCHAR, col1 = VARCHAR)
+which_secret(col0, col1)
 }
 \arguments{
 \item{col0, col1}{\code{VARCHAR}}

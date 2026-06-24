@@ -4,7 +4,7 @@
 \alias{hash}
 \title{DuckDB function hash}
 \usage{
-hash(value = ANY)
+hash(value)
 }
 \arguments{
 \item{value}{\code{ANY}}

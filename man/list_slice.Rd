@@ -4,6 +4,9 @@
 \alias{list_slice}
 \alias{array_slice}
 \title{DuckDB function list_slice}
+\usage{
+list_slice(list, begin, end, step)
+}
 \arguments{
 \item{list}{\code{ANY}}
 

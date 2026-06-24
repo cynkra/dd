@@ -4,7 +4,7 @@
 \alias{get_bit}
 \title{DuckDB function get_bit}
 \usage{
-get_bit(bitstring = BIT, index = INTEGER)
+get_bit(bitstring, index)
 }
 \arguments{
 \item{bitstring}{\code{BIT}}

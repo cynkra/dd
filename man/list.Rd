@@ -5,7 +5,7 @@
 \alias{array_agg}
 \title{DuckDB function list}
 \usage{
-list(arg = T)
+list(arg)
 }
 \arguments{
 \item{arg}{\code{T}}

@@ -3,10 +3,11 @@
 \name{sha256}
 \alias{sha256}
 \title{DuckDB function sha256}
+\usage{
+sha256(value)
+}
 \arguments{
 \item{value}{\code{VARCHAR}}
-
-\item{blob}{\code{BLOB}}
 }
 \value{
 \code{VARCHAR}

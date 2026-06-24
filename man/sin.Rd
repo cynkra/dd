@@ -4,7 +4,7 @@
 \alias{sin}
 \title{DuckDB function sin}
 \usage{
-sin(x = DOUBLE)
+sin(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

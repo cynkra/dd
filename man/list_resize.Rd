@@ -4,12 +4,15 @@
 \alias{list_resize}
 \alias{array_resize}
 \title{DuckDB function list_resize}
+\usage{
+list_resize(list, size., value.)
+}
 \arguments{
 \item{list}{\code{ANY[]}}
 
-\item{size[}{\code{ANY}}
+\item{size.}{\code{ANY}}
 
-\item{value]}{\code{ANY}}
+\item{value.}{\code{ANY}}
 }
 \value{
 \code{ANY[]}
@@ -20,8 +23,8 @@ Resizes the \code{list} to contain \code{size} elements. Initializes new element
 \section{Overloads}{
 
 \itemize{
-\item \code{list_resize(list = `ANY[]`, `size[` = ANY)}
-\item \code{list_resize(list = `ANY[]`, `size[` = ANY, `value]` = ANY)}
+\item \code{list_resize(list = `ANY[]`, size. = ANY)}
+\item \code{list_resize(list = `ANY[]`, size. = ANY, value. = ANY)}
 }
 }
 

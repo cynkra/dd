@@ -4,7 +4,7 @@
 \alias{query}
 \title{DuckDB function query}
 \usage{
-query(col0 = VARCHAR)
+query(col0)
 }
 \arguments{
 \item{col0}{\code{VARCHAR}}

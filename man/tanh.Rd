@@ -4,7 +4,7 @@
 \alias{tanh}
 \title{DuckDB function tanh}
 \usage{
-tanh(x = DOUBLE)
+tanh(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

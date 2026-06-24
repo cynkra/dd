@@ -4,7 +4,7 @@
 \alias{arrow_scan}
 \title{DuckDB function arrow_scan}
 \usage{
-arrow_scan(col0 = POINTER, col1 = POINTER, col2 = POINTER)
+arrow_scan(col0, col1, col2)
 }
 \arguments{
 \item{col0, col1, col2}{\code{POINTER}}

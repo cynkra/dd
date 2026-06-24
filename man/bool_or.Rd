@@ -4,7 +4,7 @@
 \alias{bool_or}
 \title{DuckDB function bool_or}
 \usage{
-bool_or(arg = BOOLEAN)
+bool_or(arg)
 }
 \arguments{
 \item{arg}{\code{BOOLEAN}}

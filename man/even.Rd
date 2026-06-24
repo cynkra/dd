@@ -4,7 +4,7 @@
 \alias{even}
 \title{DuckDB function even}
 \usage{
-even(x = DOUBLE)
+even(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

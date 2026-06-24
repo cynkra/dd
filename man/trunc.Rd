@@ -3,6 +3,9 @@
 \name{trunc}
 \alias{trunc}
 \title{DuckDB function trunc}
+\usage{
+trunc(x, col1)
+}
 \arguments{
 \item{x}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT}}
 

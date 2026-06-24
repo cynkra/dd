@@ -4,7 +4,7 @@
 \alias{regr_sxx}
 \title{DuckDB function regr_sxx}
 \usage{
-regr_sxx(y = DOUBLE, x = DOUBLE)
+regr_sxx(y, x)
 }
 \arguments{
 \item{y, x}{\code{DOUBLE}}

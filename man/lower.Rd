@@ -5,7 +5,7 @@
 \alias{lcase}
 \title{DuckDB function lower}
 \usage{
-lower(string = VARCHAR)
+lower(string)
 }
 \arguments{
 \item{string}{\code{VARCHAR}}

@@ -5,6 +5,9 @@
 \alias{array_grade_up}
 \alias{grade_up}
 \title{DuckDB function list_grade_up}
+\usage{
+list_grade_up(list, col1, col2)
+}
 \arguments{
 \item{list}{\code{ANY[]}}
 

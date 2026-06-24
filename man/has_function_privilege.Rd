@@ -3,8 +3,11 @@
 \name{has_function_privilege}
 \alias{has_function_privilege}
 \title{DuckDB function has_function_privilege}
+\usage{
+has_function_privilege(user, function., privilege)
+}
 \arguments{
-\item{function}{,privilege,user Unspecified.}
+\item{user, function., privilege}{Unspecified.}
 }
 \value{
 Unspecified.
@@ -15,8 +18,8 @@ DuckDB function \code{has_function_privilege()}.
 \section{Overloads}{
 
 \itemize{
-\item \code{has_function_privilege(`function`, privilege)}
-\item \code{has_function_privilege(user, `function`, privilege)}
+\item \code{has_function_privilege(function., privilege)}
+\item \code{has_function_privilege(user, function., privilege)}
 }
 }
 

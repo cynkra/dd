@@ -4,7 +4,7 @@
 \alias{struct_values}
 \title{DuckDB function struct_values}
 \usage{
-struct_values(struct = STRUCT)
+struct_values(struct)
 }
 \arguments{
 \item{struct}{\code{STRUCT}}

@@ -4,7 +4,7 @@
 \alias{st_geomfromwkb}
 \title{DuckDB function st_geomfromwkb}
 \usage{
-st_geomfromwkb(wkb = BLOB)
+st_geomfromwkb(wkb)
 }
 \arguments{
 \item{wkb}{\code{BLOB}}

@@ -4,7 +4,7 @@
 \alias{entropy}
 \title{DuckDB function entropy}
 \usage{
-entropy(x = ANY)
+entropy(x)
 }
 \arguments{
 \item{x}{\code{ANY}}

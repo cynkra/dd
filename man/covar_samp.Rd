@@ -4,7 +4,7 @@
 \alias{covar_samp}
 \title{DuckDB function covar_samp}
 \usage{
-covar_samp(y = DOUBLE, x = DOUBLE)
+covar_samp(y, x)
 }
 \arguments{
 \item{y, x}{\code{DOUBLE}}

@@ -3,10 +3,11 @@
 \name{md5_number}
 \alias{md5_number}
 \title{DuckDB function md5_number}
+\usage{
+md5_number(string)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
-
-\item{blob}{\code{BLOB}}
 }
 \value{
 \code{UHUGEINT}

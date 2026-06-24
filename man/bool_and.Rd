@@ -4,7 +4,7 @@
 \alias{bool_and}
 \title{DuckDB function bool_and}
 \usage{
-bool_and(arg = BOOLEAN)
+bool_and(arg)
 }
 \arguments{
 \item{arg}{\code{BOOLEAN}}

@@ -3,22 +3,11 @@
 \name{contains}
 \alias{contains}
 \title{DuckDB function contains}
+\usage{
+contains(string, search_string)
+}
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{search_string}{\code{VARCHAR}}
-
-\item{list}{\code{T[]}}
-
-\item{element}{\code{T}}
-
-\item{map}{\code{MAP(K, V)}}
-
-\item{key}{\code{K}}
-
-\item{col0}{\code{STRUCT}}
-
-\item{col1}{\code{ANY}}
+\item{string, search_string}{\code{VARCHAR}}
 }
 \value{
 \code{BOOLEAN}

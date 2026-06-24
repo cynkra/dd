@@ -4,7 +4,7 @@
 \alias{first_value}
 \title{DuckDB function first_value}
 \usage{
-first_value(col0 = T)
+first_value(col0)
 }
 \arguments{
 \item{col0}{\code{T}}

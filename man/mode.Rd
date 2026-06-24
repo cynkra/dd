@@ -4,7 +4,7 @@
 \alias{mode}
 \title{DuckDB function mode}
 \usage{
-mode(x = ANY)
+mode(x)
 }
 \arguments{
 \item{x}{\code{ANY}}

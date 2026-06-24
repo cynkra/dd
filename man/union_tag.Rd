@@ -4,7 +4,7 @@
 \alias{union_tag}
 \title{DuckDB function union_tag}
 \usage{
-union_tag(union = UNION)
+union_tag(union)
 }
 \arguments{
 \item{union}{\code{UNION}}

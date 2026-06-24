@@ -4,12 +4,11 @@
 \alias{hex}
 \alias{to_hex}
 \title{DuckDB function hex}
+\usage{
+hex(value)
+}
 \arguments{
-\item{string}{\code{VARCHAR}}
-
 \item{value}{\code{BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT}}
-
-\item{blob}{\code{BLOB}}
 }
 \value{
 \code{VARCHAR}

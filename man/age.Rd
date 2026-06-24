@@ -3,8 +3,11 @@
 \name{age}
 \alias{age}
 \title{DuckDB function age}
+\usage{
+age(timestamp, timestamp.1)
+}
 \arguments{
-\item{timestamp}{\verb{TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
+\item{timestamp, timestamp.1}{\verb{TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
 \value{
 \code{INTERVAL}
@@ -16,9 +19,9 @@ Subtract arguments, resulting in the time difference between the two timestamps.
 
 \itemize{
 \item \code{age(timestamp = TIMESTAMP)}
-\item \code{age(timestamp = TIMESTAMP, timestamp = TIMESTAMP)}
+\item \code{age(timestamp = TIMESTAMP, timestamp.1 = TIMESTAMP)}
 \item \code{age(timestamp = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{age(timestamp = `TIMESTAMP WITH TIME ZONE`, timestamp = `TIMESTAMP WITH TIME ZONE`)}
+\item \code{age(timestamp = `TIMESTAMP WITH TIME ZONE`, timestamp.1 = `TIMESTAMP WITH TIME ZONE`)}
 }
 }
 

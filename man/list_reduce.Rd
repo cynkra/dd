@@ -5,12 +5,15 @@
 \alias{array_reduce}
 \alias{reduce}
 \title{DuckDB function list_reduce}
+\usage{
+list_reduce(list, lambda.x.y., initial_value)
+}
 \arguments{
 \item{list}{\code{ANY[]}}
 
-\item{initial_value}{\code{ANY}}
+\item{lambda.x.y.}{\code{LAMBDA}}
 
-\item{lambda(x, y)}{\code{LAMBDA}}
+\item{initial_value}{\code{ANY}}
 }
 \value{
 \code{ANY}
@@ -21,8 +24,8 @@ Reduces all elements of the input \code{list} into a single scalar value by exec
 \section{Overloads}{
 
 \itemize{
-\item \code{list_reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA)}
-\item \code{list_reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY)}
+\item \code{list_reduce(list = `ANY[]`, lambda.x.y. = LAMBDA)}
+\item \code{list_reduce(list = `ANY[]`, lambda.x.y. = LAMBDA, initial_value = ANY)}
 }
 }
 

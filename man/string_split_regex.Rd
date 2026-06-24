@@ -5,6 +5,9 @@
 \alias{regexp_split_to_array}
 \alias{str_split_regex}
 \title{DuckDB function string_split_regex}
+\usage{
+string_split_regex(string, regex, options)
+}
 \arguments{
 \item{string, regex, options}{\code{VARCHAR}}
 }

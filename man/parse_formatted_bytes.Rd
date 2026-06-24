@@ -4,7 +4,7 @@
 \alias{parse_formatted_bytes}
 \title{DuckDB function parse_formatted_bytes}
 \usage{
-parse_formatted_bytes(string = VARCHAR)
+parse_formatted_bytes(string)
 }
 \arguments{
 \item{string}{\code{VARCHAR}}

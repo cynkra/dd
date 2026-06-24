@@ -3,6 +3,9 @@
 \name{pragma_metadata_info}
 \alias{pragma_metadata_info}
 \title{DuckDB function pragma_metadata_info}
+\usage{
+pragma_metadata_info(col0)
+}
 \arguments{
 \item{col0}{\code{VARCHAR}}
 }

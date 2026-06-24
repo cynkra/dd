@@ -3,6 +3,9 @@
 \name{time_bucket}
 \alias{time_bucket}
 \title{DuckDB function time_bucket}
+\usage{
+time_bucket(bucket_width, timestamp, origin)
+}
 \arguments{
 \item{bucket_width}{\code{INTERVAL}}
 

@@ -4,7 +4,7 @@
 \alias{copy_database}
 \title{DuckDB function copy_database}
 \usage{
-copy_database(col0 = VARCHAR, col1 = VARCHAR)
+copy_database(col0, col1)
 }
 \arguments{
 \item{col0, col1}{\code{VARCHAR}}

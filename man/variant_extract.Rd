@@ -3,12 +3,13 @@
 \name{variant_extract}
 \alias{variant_extract}
 \title{DuckDB function variant_extract}
+\usage{
+variant_extract(input_variant, field)
+}
 \arguments{
 \item{input_variant}{\code{VARIANT}}
 
 \item{field}{\code{VARCHAR}}
-
-\item{index}{\code{UINTEGER}}
 }
 \value{
 \code{VARIANT}

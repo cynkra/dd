@@ -5,7 +5,7 @@
 \alias{ends_with}
 \title{DuckDB function suffix}
 \usage{
-suffix(string = VARCHAR, search_string = VARCHAR)
+suffix(string, search_string)
 }
 \arguments{
 \item{string, search_string}{\code{VARCHAR}}

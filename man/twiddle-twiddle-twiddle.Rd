@@ -4,7 +4,7 @@
 \alias{~~~}
 \title{DuckDB function ~~~}
 \usage{
-`~~~`(col0 = VARCHAR, col1 = VARCHAR)
+`~~~`(col0, col1)
 }
 \arguments{
 \item{col0, col1}{\code{VARCHAR}}

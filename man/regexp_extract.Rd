@@ -3,6 +3,9 @@
 \name{regexp_extract}
 \alias{regexp_extract}
 \title{DuckDB function regexp_extract}
+\usage{
+regexp_extract(string, regex, group, options)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 
@@ -11,8 +14,6 @@
 \item{group}{\code{INTEGER}}
 
 \item{options}{\code{VARCHAR}}
-
-\item{name_list}{\code{VARCHAR[]}}
 }
 \value{
 \code{VARCHAR}

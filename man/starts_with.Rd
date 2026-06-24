@@ -5,7 +5,7 @@
 \alias{^@}
 \title{DuckDB function starts_with}
 \usage{
-starts_with(string = VARCHAR, search_string = VARCHAR)
+starts_with(string, search_string)
 }
 \arguments{
 \item{string, search_string}{\code{VARCHAR}}

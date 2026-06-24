@@ -3,6 +3,9 @@
 \name{min}
 \alias{min}
 \title{DuckDB function min}
+\usage{
+min(arg, col1)
+}
 \arguments{
 \item{arg}{\code{ANY}}
 

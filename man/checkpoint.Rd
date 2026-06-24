@@ -3,6 +3,9 @@
 \name{checkpoint}
 \alias{checkpoint}
 \title{DuckDB function checkpoint}
+\usage{
+checkpoint(col0)
+}
 \arguments{
 \item{col0}{\code{VARCHAR}}
 }

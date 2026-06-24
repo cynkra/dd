@@ -4,7 +4,7 @@
 \alias{printf}
 \title{DuckDB function printf}
 \usage{
-printf(format = VARCHAR)
+printf(format)
 }
 \arguments{
 \item{format}{\code{VARCHAR}}

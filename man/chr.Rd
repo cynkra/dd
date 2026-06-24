@@ -4,7 +4,7 @@
 \alias{chr}
 \title{DuckDB function chr}
 \usage{
-chr(code_point = INTEGER)
+chr(code_point)
 }
 \arguments{
 \item{code_point}{\code{INTEGER}}

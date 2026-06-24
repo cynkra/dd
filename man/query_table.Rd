@@ -3,10 +3,11 @@
 \name{query_table}
 \alias{query_table}
 \title{DuckDB function query_table}
+\usage{
+query_table(col0)
+}
 \arguments{
 \item{col0}{\code{VARCHAR | VARCHAR[]}}
-
-\item{col1}{\code{BOOLEAN}}
 }
 \value{
 Unspecified.

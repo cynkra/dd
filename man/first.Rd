@@ -4,10 +4,11 @@
 \alias{first}
 \alias{arbitrary}
 \title{DuckDB function first}
+\usage{
+first(arg)
+}
 \arguments{
 \item{arg}{\code{DECIMAL | ANY}}
-
-\item{col0}{\code{T}}
 }
 \value{
 \code{DECIMAL | ANY | T}

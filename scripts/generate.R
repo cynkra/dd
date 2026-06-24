@@ -186,11 +186,11 @@ usage_and_params <- function(
       json_overloads %||% list()
     )
   }
-  # Whether every argument name (across all overloads) is a syntactic R name.
-  # A `\usage` with a non-syntactic name (e.g. `date-struct`) backticks it,
-  # which then mismatches the @param entry roxygen2 writes, so such functions
-  # fall back to the Overloads section instead of a generated usage.
-  names_syntactic <- all(unlist(parameters) == make.names(unlist(parameters)))
+  # Sanitize names to syntactic, unique-per-overload R names so the stub
+  # formals, \usage and @param all agree (and stay valid Rd). Quotes were
+  # stripped above; make.names() handles the rest (e.g. dashes) and
+  # disambiguates a name repeated within one overload (array_cross_product).
+  parameters <- map(parameters, ~ make.names(.x, unique = TRUE))
   param_keys <- map_chr(parameters, ~ paste(.x, collapse = ","))
   signatures <- map2_chr(
     parameters,
@@ -239,9 +239,7 @@ usage_and_params <- function(
     )
   distinct_desc <- unique(na.omit(overloads$desc))
 
-  # The distinct arguments across all overloads (a single overload may even
-  # repeat a name, e.g. `array_cross_product(array, array)`); the stub and usage
-  # use this deduplicated set.
+  # Type of each distinct argument (union across the overloads that use it).
   params <-
     tibble(name = unlist(parameters), type = unlist(parameter_types)) |>
     summarize(
@@ -249,32 +247,36 @@ usage_and_params <- function(
       type = paste0(na.omit(unique(type)), collapse = " | ")
     )
 
-  # "Compactable": several overloads that differ only by argument *type* (same
-  # names and arity). Then a single names-only usage plus the @param type unions
-  # say it all, so the Overloads section is left out.
+  # Representative argument list for the \usage and stub: the most frequent
+  # combination of argument names across overloads (tie-break: more arguments,
+  # then first appearance). Every function gets a usage, for consistent display.
   name_keys <- map_chr(parameters, ~ paste(.x, collapse = ","))
-  compactable <- length(unique(name_keys)) == 1
+  rep_idx <- order(
+    -ave(seq_along(name_keys), name_keys, FUN = length),
+    -lengths(parameters),
+    seq_along(name_keys)
+  )[[1]]
+  rep_names <- parameters[[rep_idx]]
+  rep_params <- tibble(name = rep_names) |> left_join(params, by = "name")
 
-  if (sum(dedup) == 1 && names_syntactic) {
-    idx <- which(dedup)
-    usage_doc <- glue(
-      "#' @usage {usage_signature(function_name, parameters[[idx]], parameter_types[[idx]])}"
-    )
-  } else if (function_name == "%") {
-    # FIXME: roxygen2 generates bad .Rd here
+  if (function_name == "%") {
+    # FIXME: roxygen2 emits invalid Rd for the `%` \usage.
     usage_doc <- "#' @usage NULL\n"
-  } else if (compactable && names_syntactic) {
-    usage_doc <- glue(
-      "#' @usage {usage_signature(function_name, params$name, rep('', nrow(params)))}"
-    )
   } else {
-    # Keep the Overloads section, listing each distinct signature.
-    usage_doc <- paste0(
-      "#' @usage NULL\n",
+    usage_doc <- glue(
+      "#' @usage {usage_signature(function_name, rep_names, rep('', length(rep_names)))}"
+    )
+  }
+
+  # When overloads use different argument-name combinations, list every distinct
+  # signature (the representative usage only shows one of them).
+  overloads_doc <- ""
+  if (length(unique(name_keys)) > 1) {
+    overloads_doc <- paste0(
       "#' @section Overloads:\n",
       "#' \\itemize{\n",
       paste0("#' \\item \\code{", overloads$sig, "}\n", collapse = ""),
-      "#' }"
+      "#' }\n"
     )
   }
 
@@ -283,10 +285,14 @@ usage_and_params <- function(
   # match the stub formals and the \usage (some DuckDB names are non-syntactic,
   # e.g. `'entry'`).
   param_types_doc <-
-    params |>
+    rep_params |>
     mutate(
       name = tibble:::tick_if_needed(name),
-      type = if_else(type == "", "Unspecified.", paste0("`", type, "`"))
+      type = if_else(
+        is.na(type) | type == "",
+        "Unspecified.",
+        paste0("`", type, "`")
+      )
     )
   if (nrow(param_types_doc) > 1 && length(unique(param_types_doc$type)) == 1) {
     param_doc <- glue(
@@ -300,7 +306,7 @@ usage_and_params <- function(
       glue_collapse(sep = "\n")
   }
 
-  signature <- params |>
+  signature <- rep_params |>
     mutate(
       out = glue(
         "{tibble:::tick_if_needed(name)}{param_type_tick_if_needed(type)}"
@@ -381,6 +387,7 @@ usage_and_params <- function(
 
   tibble(
     usage_doc,
+    overloads_doc,
     param_doc,
     signature,
     types = list(params$type),
@@ -694,10 +701,9 @@ funs <-
       json_overloads = first(json_overloads),
       merge_mode = json_merge_mode
     ),
-    categories = list(sort(unique(c(
-      unlist(categories),
-      unlist(first(json_categories))
-    )))),
+    # The categories surfaced as @family / \concept tags (used for the pkgdown
+    # reference index below).
+    categories = list(sort(unique(unlist(first(json_categories))))),
   ) |>
   # https://github.com/duckdb/duckdb/pull/18977
   mutate(
@@ -779,7 +785,7 @@ code <-
     {param_doc}
     #' @return {if_else(return_type == "", "Unspecified.", paste0("`", return_type, "`"))}
     #' @export
-    {family_doc}{examples}{tibble:::tick_if_needed(function_name)} <- function({signature}) {{
+    {overloads_doc}{family_doc}{examples}{tibble:::tick_if_needed(function_name)} <- function({signature}) {{
       stop("DuckDB function {function_name}() is not available in R.")
     }}
 
@@ -863,6 +869,84 @@ globals_code <- paste0(
 invisible(parse(text = globals_code))
 
 writeLines(globals_code, "R/globals.R")
+
+# ---- pkgdown reference index -------------------------------------------------
+# Group the reference index by DuckDB function category (the @family / \concept
+# tags). DuckDB does not ship descriptions for its categories, so they are
+# curated here; categories seen in the data but missing from this table fall
+# back to a generic description.
+category_info <- tibble::tribble(
+  ~category         , ~title                , ~desc                                               ,
+  "string"          , "String"              , "Operate on text (`VARCHAR`) values."               ,
+  "list"            , "List"                , "Operate on `LIST` values."                         ,
+  "array"           , "Array"               , "Operate on fixed-size `ARRAY` values."             ,
+  "struct"          , "Struct"              , "Operate on `STRUCT` values."                       ,
+  "map"             , "Map"                 , "Operate on `MAP` values."                          ,
+  "variant"         , "Variant"             , "Operate on `VARIANT` values."                      ,
+  "numeric"         , "Numeric"             , "Numeric and mathematical functions."               ,
+  "bitstring"       , "Bitstring"           , "Operate on `BIT` (bitstring) values."              ,
+  "blob"            , "Blob"                , "Operate on binary large objects (`BLOB`)."         ,
+  "date"            , "Date"                , "Operate on `DATE` values."                         ,
+  "timestamp"       , "Timestamp"           , "Operate on `TIMESTAMP` values."                    ,
+  "regex"           , "Regular expressions" , "Match and extract with regular expressions."       ,
+  "text_similarity" , "Text similarity"     , "Measure similarity or distance between strings."   ,
+  "lambda"          , "Lambda"              , "Higher-order functions taking lambda expressions." ,
+  "geometry"        , "Geometry"            , "Spatial and geometry functions."                   ,
+  "aggregate"       , "Aggregate"           , "Aggregate functions."                              ,
+)
+
+present_cats <- sort(unique(unlist(funs$categories[funs$is_primary])))
+# Curated order first, then any uncurated categories alphabetically.
+ordered_cats <- c(
+  intersect(category_info$category, present_cats),
+  setdiff(present_cats, category_info$category)
+)
+
+reference_block <- function(cat) {
+  info <- category_info[match(cat, category_info$category), ]
+  title <- if (!is.na(info$title)) info$title else cat
+  desc <- if (!is.na(info$desc)) info$desc else paste0("`", cat, "` functions.")
+  paste0(
+    "- title: ",
+    title,
+    "\n",
+    "  desc: ",
+    desc,
+    "\n",
+    "  contents:\n",
+    '  - has_concept("',
+    cat,
+    '")'
+  )
+}
+
+other_block <- paste0(
+  "- title: Other functions\n",
+  "  desc: Functions that DuckDB does not assign to a category.\n",
+  "  contents:\n",
+  "  - lacks_concepts(c(",
+  paste0('"', ordered_cats, '"', collapse = ", "),
+  "))"
+)
+
+reference_yaml <- c(
+  "reference:",
+  vapply(ordered_cats, reference_block, character(1)),
+  other_block
+)
+
+# Splice into _pkgdown.yml, replacing any previously generated reference section
+# (always appended last) and keeping the curated header above it.
+pkgdown_file <- "_pkgdown.yml"
+pkgdown_yml <- readLines(pkgdown_file)
+ref_start <- grep("^reference:", pkgdown_yml)
+if (length(ref_start) > 0) {
+  pkgdown_yml <- pkgdown_yml[seq_len(ref_start[[1]] - 1)]
+}
+while (length(pkgdown_yml) > 0 && pkgdown_yml[[length(pkgdown_yml)]] == "") {
+  pkgdown_yml <- pkgdown_yml[-length(pkgdown_yml)]
+}
+writeLines(c(pkgdown_yml, "", reference_yaml), pkgdown_file)
 
 callr::r(function() devtools::document())
 

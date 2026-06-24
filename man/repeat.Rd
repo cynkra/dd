@@ -3,18 +3,13 @@
 \name{repeat}
 \alias{repeat}
 \title{DuckDB function repeat}
+\usage{
+`repeat`(col0, col1)
+}
 \arguments{
 \item{col0}{\code{ANY}}
 
 \item{col1}{\code{BIGINT}}
-
-\item{string}{\code{VARCHAR}}
-
-\item{count}{\code{BIGINT}}
-
-\item{blob}{\code{BLOB}}
-
-\item{list}{\code{T[]}}
 }
 \value{
 \code{VARCHAR | BLOB | T[]}

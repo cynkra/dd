@@ -4,7 +4,7 @@
 \alias{constant_or_null}
 \title{DuckDB function constant_or_null}
 \usage{
-constant_or_null(arg1 = ANY, arg2 = ANY)
+constant_or_null(arg1, arg2)
 }
 \arguments{
 \item{arg1, arg2}{\code{ANY}}

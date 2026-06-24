@@ -4,7 +4,7 @@
 \alias{formatReadableDecimalSize}
 \title{DuckDB function formatReadableDecimalSize}
 \usage{
-formatReadableDecimalSize(integer = BIGINT)
+formatReadableDecimalSize(integer)
 }
 \arguments{
 \item{integer}{\code{BIGINT}}

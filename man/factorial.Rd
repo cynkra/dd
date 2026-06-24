@@ -5,7 +5,7 @@
 \alias{!__postfix}
 \title{DuckDB function factorial}
 \usage{
-factorial(x = INTEGER)
+factorial(x)
 }
 \arguments{
 \item{x}{\code{INTEGER}}

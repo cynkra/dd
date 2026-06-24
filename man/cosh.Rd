@@ -4,7 +4,7 @@
 \alias{cosh}
 \title{DuckDB function cosh}
 \usage{
-cosh(x = DOUBLE)
+cosh(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

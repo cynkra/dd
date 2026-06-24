@@ -7,7 +7,7 @@
 \alias{power}
 \title{DuckDB function pow}
 \usage{
-pow(x = DOUBLE, y = DOUBLE)
+pow(x, y)
 }
 \arguments{
 \item{x, y}{\code{DOUBLE}}

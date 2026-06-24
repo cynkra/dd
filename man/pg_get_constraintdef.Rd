@@ -3,6 +3,9 @@
 \name{pg_get_constraintdef}
 \alias{pg_get_constraintdef}
 \title{DuckDB function pg_get_constraintdef}
+\usage{
+pg_get_constraintdef(constraint_oid, pretty_bool)
+}
 \arguments{
 \item{constraint_oid, pretty_bool}{Unspecified.}
 }

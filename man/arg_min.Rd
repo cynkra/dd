@@ -5,12 +5,13 @@
 \alias{argmin}
 \alias{min_by}
 \title{DuckDB function arg_min}
+\usage{
+arg_min(arg, val)
+}
 \arguments{
 \item{arg}{\verb{INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY}}
 
 \item{val}{\verb{INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY}}
-
-\item{col2}{\code{BIGINT}}
 }
 \value{
 \verb{INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]}

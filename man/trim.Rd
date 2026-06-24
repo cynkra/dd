@@ -3,6 +3,9 @@
 \name{trim}
 \alias{trim}
 \title{DuckDB function trim}
+\usage{
+trim(string, characters)
+}
 \arguments{
 \item{string, characters}{\code{VARCHAR}}
 }

@@ -4,7 +4,7 @@
 \alias{duckdb_logs}
 \title{DuckDB function duckdb_logs}
 \usage{
-duckdb_logs(denormalized_table = BOOLEAN)
+duckdb_logs(denormalized_table)
 }
 \arguments{
 \item{denormalized_table}{\code{BOOLEAN}}

@@ -4,7 +4,7 @@
 \alias{variant_typeof}
 \title{DuckDB function variant_typeof}
 \usage{
-variant_typeof(input_variant = VARIANT)
+variant_typeof(input_variant)
 }
 \arguments{
 \item{input_variant}{\code{VARIANT}}

@@ -3,10 +3,11 @@
 \name{octet_length}
 \alias{octet_length}
 \title{DuckDB function octet_length}
+\usage{
+octet_length(blob)
+}
 \arguments{
 \item{blob}{\code{BLOB}}
-
-\item{bitstring}{\code{BIT}}
 }
 \value{
 \code{BIGINT}

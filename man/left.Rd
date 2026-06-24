@@ -4,7 +4,7 @@
 \alias{left}
 \title{DuckDB function left}
 \usage{
-left(string = VARCHAR, count = BIGINT)
+left(string, count)
 }
 \arguments{
 \item{string}{\code{VARCHAR}}

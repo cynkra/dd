@@ -15,3 +15,73 @@ authors:
     html: <img src="https://cynkra.github.io/dm/reference/figures/cynkra-72.png"
       height="16" alt="cynkra GmbH"/>
     href: https://www.cynkra.com
+
+reference:
+- title: String
+  desc: Operate on text (`VARCHAR`) values.
+  contents:
+  - has_concept("string")
+- title: List
+  desc: Operate on `LIST` values.
+  contents:
+  - has_concept("list")
+- title: Array
+  desc: Operate on fixed-size `ARRAY` values.
+  contents:
+  - has_concept("array")
+- title: Struct
+  desc: Operate on `STRUCT` values.
+  contents:
+  - has_concept("struct")
+- title: Map
+  desc: Operate on `MAP` values.
+  contents:
+  - has_concept("map")
+- title: Variant
+  desc: Operate on `VARIANT` values.
+  contents:
+  - has_concept("variant")
+- title: Numeric
+  desc: Numeric and mathematical functions.
+  contents:
+  - has_concept("numeric")
+- title: Bitstring
+  desc: Operate on `BIT` (bitstring) values.
+  contents:
+  - has_concept("bitstring")
+- title: Blob
+  desc: Operate on binary large objects (`BLOB`).
+  contents:
+  - has_concept("blob")
+- title: Date
+  desc: Operate on `DATE` values.
+  contents:
+  - has_concept("date")
+- title: Timestamp
+  desc: Operate on `TIMESTAMP` values.
+  contents:
+  - has_concept("timestamp")
+- title: Regular expressions
+  desc: Match and extract with regular expressions.
+  contents:
+  - has_concept("regex")
+- title: Text similarity
+  desc: Measure similarity or distance between strings.
+  contents:
+  - has_concept("text_similarity")
+- title: Lambda
+  desc: Higher-order functions taking lambda expressions.
+  contents:
+  - has_concept("lambda")
+- title: Geometry
+  desc: Spatial and geometry functions.
+  contents:
+  - has_concept("geometry")
+- title: Aggregate
+  desc: Aggregate functions.
+  contents:
+  - has_concept("aggregate")
+- title: Other functions
+  desc: Functions that DuckDB does not assign to a category.
+  contents:
+  - lacks_concepts(c("string", "list", "array", "struct", "map", "variant", "numeric", "bitstring", "blob", "date", "timestamp", "regex", "text_similarity", "lambda", "geometry", "aggregate"))

@@ -7,7 +7,7 @@
 \alias{string_to_array}
 \title{DuckDB function string_split}
 \usage{
-string_split(string = VARCHAR, separator = VARCHAR)
+string_split(string, separator)
 }
 \arguments{
 \item{string, separator}{\code{VARCHAR}}

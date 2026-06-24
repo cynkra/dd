@@ -6,7 +6,7 @@
 \alias{strpos}
 \title{DuckDB function instr}
 \usage{
-instr(string = VARCHAR, search_string = VARCHAR)
+instr(string, search_string)
 }
 \arguments{
 \item{string, search_string}{\code{VARCHAR}}

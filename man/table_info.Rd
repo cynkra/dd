@@ -4,7 +4,7 @@
 \alias{table_info}
 \title{DuckDB function table_info}
 \usage{
-table_info(col0 = VARCHAR)
+table_info(col0)
 }
 \arguments{
 \item{col0}{\code{VARCHAR}}

@@ -4,7 +4,7 @@
 \alias{corr}
 \title{DuckDB function corr}
 \usage{
-corr(y = DOUBLE, x = DOUBLE)
+corr(y, x)
 }
 \arguments{
 \item{y, x}{\code{DOUBLE}}

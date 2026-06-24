@@ -3,6 +3,9 @@
 \name{map}
 \alias{map}
 \title{DuckDB function map}
+\usage{
+map(keys, values)
+}
 \arguments{
 \item{keys}{\code{K[]}}
 

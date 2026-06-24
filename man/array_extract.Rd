@@ -3,16 +3,13 @@
 \name{array_extract}
 \alias{array_extract}
 \title{DuckDB function array_extract}
+\usage{
+array_extract(list, index)
+}
 \arguments{
 \item{list}{\code{T[]}}
 
 \item{index}{\code{BIGINT}}
-
-\item{string}{\code{VARCHAR}}
-
-\item{struct}{\code{STRUCT}}
-
-\item{entry}{\code{VARCHAR}}
 }
 \value{
 \code{T | VARCHAR | ANY}

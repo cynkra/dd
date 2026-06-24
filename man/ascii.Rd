@@ -4,7 +4,7 @@
 \alias{ascii}
 \title{DuckDB function ascii}
 \usage{
-ascii(string = VARCHAR)
+ascii(string)
 }
 \arguments{
 \item{string}{\code{VARCHAR}}

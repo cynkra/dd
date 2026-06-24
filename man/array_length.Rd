@@ -3,6 +3,9 @@
 \name{array_length}
 \alias{array_length}
 \title{DuckDB function array_length}
+\usage{
+array_length(list, dimension)
+}
 \arguments{
 \item{list}{\code{ANY[]}}
 

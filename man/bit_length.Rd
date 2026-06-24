@@ -3,10 +3,11 @@
 \name{bit_length}
 \alias{bit_length}
 \title{DuckDB function bit_length}
+\usage{
+bit_length(string)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
-
-\item{bit}{\code{BIT}}
 }
 \value{
 \code{BIGINT}

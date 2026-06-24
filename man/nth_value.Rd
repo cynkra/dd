@@ -4,7 +4,7 @@
 \alias{nth_value}
 \title{DuckDB function nth_value}
 \usage{
-nth_value(col0 = T, col1 = BIGINT)
+nth_value(col0, col1)
 }
 \arguments{
 \item{col0}{\code{T}}

@@ -4,6 +4,9 @@
 \alias{list_sort}
 \alias{array_sort}
 \title{DuckDB function list_sort}
+\usage{
+list_sort(list, col1, col2)
+}
 \arguments{
 \item{list}{\code{ANY[]}}
 

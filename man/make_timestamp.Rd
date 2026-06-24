@@ -3,6 +3,9 @@
 \name{make_timestamp}
 \alias{make_timestamp}
 \title{DuckDB function make_timestamp}
+\usage{
+make_timestamp(year, month, day, hour, minute, seconds)
+}
 \arguments{
 \item{year}{\code{BIGINT}}
 

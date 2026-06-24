@@ -3,6 +3,9 @@
 \name{ltrim}
 \alias{ltrim}
 \title{DuckDB function ltrim}
+\usage{
+ltrim(string, characters)
+}
 \arguments{
 \item{string, characters}{\code{VARCHAR}}
 }

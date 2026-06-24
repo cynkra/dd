@@ -4,7 +4,7 @@
 \alias{make_type}
 \title{DuckDB function make_type}
 \usage{
-make_type(name = VARCHAR)
+make_type(name)
 }
 \arguments{
 \item{name}{\code{VARCHAR}}

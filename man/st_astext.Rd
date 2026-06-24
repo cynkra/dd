@@ -5,7 +5,7 @@
 \alias{st_aswkt}
 \title{DuckDB function st_astext}
 \usage{
-st_astext(geom = GEOMETRY)
+st_astext(geom)
 }
 \arguments{
 \item{geom}{\code{GEOMETRY}}

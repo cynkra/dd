@@ -6,7 +6,7 @@
 \alias{sumkahan}
 \title{DuckDB function kahan_sum}
 \usage{
-kahan_sum(arg = DOUBLE)
+kahan_sum(arg)
 }
 \arguments{
 \item{arg}{\code{DOUBLE}}

@@ -4,7 +4,7 @@
 \alias{approx_top_k}
 \title{DuckDB function approx_top_k}
 \usage{
-approx_top_k(val = ANY, k = BIGINT)
+approx_top_k(val, k)
 }
 \arguments{
 \item{val}{\code{ANY}}

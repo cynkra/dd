@@ -3,6 +3,9 @@
 \name{bitstring_agg}
 \alias{bitstring_agg}
 \title{DuckDB function bitstring_agg}
+\usage{
+bitstring_agg(arg, col1, col2)
+}
 \arguments{
 \item{arg, col1, col2}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT}}
 }

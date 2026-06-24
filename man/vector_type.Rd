@@ -4,7 +4,7 @@
 \alias{vector_type}
 \title{DuckDB function vector_type}
 \usage{
-vector_type(col = ANY)
+vector_type(col)
 }
 \arguments{
 \item{col}{\code{ANY}}

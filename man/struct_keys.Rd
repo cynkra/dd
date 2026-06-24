@@ -4,7 +4,7 @@
 \alias{struct_keys}
 \title{DuckDB function struct_keys}
 \usage{
-struct_keys(struct = ANY)
+struct_keys(struct)
 }
 \arguments{
 \item{struct}{\code{ANY}}

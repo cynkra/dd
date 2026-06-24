@@ -3,8 +3,11 @@
 \name{has_tablespace_privilege}
 \alias{has_tablespace_privilege}
 \title{DuckDB function has_tablespace_privilege}
+\usage{
+has_tablespace_privilege(user, tablespace, privilege)
+}
 \arguments{
-\item{tablespace, privilege, user}{Unspecified.}
+\item{user, tablespace, privilege}{Unspecified.}
 }
 \value{
 Unspecified.

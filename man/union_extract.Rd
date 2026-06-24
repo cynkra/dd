@@ -4,7 +4,7 @@
 \alias{union_extract}
 \title{DuckDB function union_extract}
 \usage{
-union_extract(union = UNION, tag = VARCHAR)
+union_extract(union, tag)
 }
 \arguments{
 \item{union}{\code{UNION}}

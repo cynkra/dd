@@ -3,6 +3,9 @@
 \name{bar}
 \alias{bar}
 \title{DuckDB function bar}
+\usage{
+bar(x, min, max, width)
+}
 \arguments{
 \item{x, min, max, width}{\code{DOUBLE}}
 }

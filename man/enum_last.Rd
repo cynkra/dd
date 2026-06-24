@@ -4,7 +4,7 @@
 \alias{enum_last}
 \title{DuckDB function enum_last}
 \usage{
-enum_last(enum = ANY)
+enum_last(enum)
 }
 \arguments{
 \item{enum}{\code{ANY}}

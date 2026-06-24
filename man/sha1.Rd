@@ -3,10 +3,11 @@
 \name{sha1}
 \alias{sha1}
 \title{DuckDB function sha1}
+\usage{
+sha1(value)
+}
 \arguments{
 \item{value}{\code{VARCHAR}}
-
-\item{blob}{\code{BLOB}}
 }
 \value{
 \code{VARCHAR}
