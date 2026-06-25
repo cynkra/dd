@@ -13,27 +13,14 @@ inferred from each function's existing description, examples, and behaviour).
 
 ## What we need
 
-Ordered from smallest (already usable by `dd`, which reads `functions.json`
-directly) to full first-class catalog support.
+`dd` reads `functions.json` directly, so it only needs the descriptions to
+exist there:
 
 1. **`functions.json` schema** — allow an optional `description` on each
    parameter object:
    `{"name": "index", "type": "BIGINT", "description": "1-based position."}`.
-   Purely additive; existing entries stay valid. This alone unblocks `dd`.
-2. **`scripts/generate_functions.py`** — add a parameter-description line
-   paralleling `get_parameter_line` (same `\001` variant / `\002` element
-   encoding) and emit it into the generated `*_functions.hpp`, with a length
-   check against the parameter list.
-3. **`FunctionDescription`** (`src/include/duckdb/function/function.hpp`) — add
-   `vector<string> parameter_descriptions;` parallel to `parameter_names`, and
-   populate it from the generated data (and via the registration macros for
-   functions defined directly in C++, where it defaults to empty).
-4. **`duckdb_functions()`** (`src/function/table/system/duckdb_functions.cpp`) —
-   add a `parameter_descriptions` column `LIST(VARCHAR)`, filled from
-   `FunctionDescription.parameter_descriptions` the same way `parameters` is
-   filled from `parameter_names` (the `ExtractFunctionParameters` path).
-   Additive column → backward compatible.
-5. **Content** — write the descriptions into `functions.json`. This is the bulk
+   Purely additive; existing entries stay valid.
+2. **Content** — write the descriptions into `functions.json`. This is the bulk
    of the work and can land incrementally; everything degrades gracefully when
    the field is absent.
 
@@ -59,6 +46,24 @@ Related data gaps noticed while drafting (worth fixing in the same pass):
 - **Drives completeness.** Adding the field nudges authors to name every
   parameter and to fix incomplete entries (the `col0`/`date_part` gaps above),
   improving metadata quality across the board.
+
+To surface the descriptions engine-wide (so `duckdb_functions()` and every
+binding get them, not just consumers that parse `functions.json`), DuckDB would
+also:
+
+3. **`scripts/generate_functions.py`** — add a parameter-description line
+   paralleling `get_parameter_line` (same `\001` variant / `\002` element
+   encoding) and emit it into the generated `*_functions.hpp`, with a length
+   check against the parameter list.
+4. **`FunctionDescription`** (`src/include/duckdb/function/function.hpp`) — add
+   `vector<string> parameter_descriptions;` parallel to `parameter_names`, and
+   populate it from the generated data (and via the registration macros for
+   functions defined directly in C++, where it defaults to empty).
+5. **`duckdb_functions()`** (`src/function/table/system/duckdb_functions.cpp`) —
+   add a `parameter_descriptions` column `LIST(VARCHAR)`, filled from
+   `FunctionDescription.parameter_descriptions` the same way `parameters` is
+   filled from `parameter_names` (the `ExtractFunctionParameters` path).
+   Additive column → backward compatible.
 
 ## Implications for DuckDB
 
