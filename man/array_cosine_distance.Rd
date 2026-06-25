@@ -3,10 +3,11 @@
 \name{array_cosine_distance}
 \alias{array_cosine_distance}
 \title{DuckDB function array_cosine_distance}
+\usage{
+array_cosine_distance(array1, array2)
+}
 \arguments{
-\item{array1}{\code{FLOAT[ANY] | DOUBLE[ANY]}}
-
-\item{array2}{\code{FLOAT[ANY] | DOUBLE[ANY]}}
+\item{array1, array2}{\code{FLOAT[ANY] | DOUBLE[ANY]}}
 }
 \value{
 \code{FLOAT | DOUBLE}
@@ -14,14 +15,6 @@
 \description{
 Computes the cosine distance between two arrays of the same size. The array elements can not be \code{NULL}. The arrays can have any size as long as the size is the same for both arguments.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{array_cosine_distance(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)}
-\item \code{array_cosine_distance(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)}
-}
-}
-
 \section{SQL examples}{
 
 

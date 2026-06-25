@@ -3,6 +3,9 @@
 \name{dayofyear}
 \alias{dayofyear}
 \title{DuckDB function dayofyear}
+\usage{
+dayofyear(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,16 +15,6 @@
 \description{
 Extract the dayofyear component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{dayofyear(ts = DATE)}
-\item \code{dayofyear(ts = INTERVAL)}
-\item \code{dayofyear(ts = TIMESTAMP)}
-\item \code{dayofyear(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

@@ -4,7 +4,7 @@
 \alias{regexp_escape}
 \title{DuckDB function regexp_escape}
 \usage{
-regexp_escape(string = VARCHAR)
+regexp_escape(string)
 }
 \arguments{
 \item{string}{\code{VARCHAR}}

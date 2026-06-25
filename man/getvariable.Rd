@@ -4,7 +4,7 @@
 \alias{getvariable}
 \title{DuckDB function getvariable}
 \usage{
-getvariable(col0 = VARCHAR)
+getvariable(col0)
 }
 \arguments{
 \item{col0}{\code{VARCHAR}}

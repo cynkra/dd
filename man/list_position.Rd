@@ -7,7 +7,7 @@
 \alias{list_indexof}
 \title{DuckDB function list_position}
 \usage{
-list_position(list = `T[]`, element = T)
+list_position(list, element)
 }
 \arguments{
 \item{list}{\code{T[]}}

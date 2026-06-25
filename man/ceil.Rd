@@ -4,6 +4,9 @@
 \alias{ceil}
 \alias{ceiling}
 \title{DuckDB function ceil}
+\usage{
+ceil(x)
+}
 \arguments{
 \item{x}{\code{FLOAT | DOUBLE | DECIMAL}}
 }
@@ -13,15 +16,6 @@
 \description{
 Rounds the number up.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{ceil(x = FLOAT)}
-\item \code{ceil(x = DOUBLE)}
-\item \code{ceil(x = DECIMAL)}
-}
-}
-
 \section{SQL examples}{
 
 

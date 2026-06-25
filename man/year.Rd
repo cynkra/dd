@@ -3,6 +3,9 @@
 \name{year}
 \alias{year}
 \title{DuckDB function year}
+\usage{
+year(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,16 +15,6 @@
 \description{
 Extract the year component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{year(ts = DATE)}
-\item \code{year(ts = INTERVAL)}
-\item \code{year(ts = TIMESTAMP)}
-\item \code{year(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

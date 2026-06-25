@@ -4,7 +4,7 @@
 \alias{stats}
 \title{DuckDB function stats}
 \usage{
-stats(expression = ANY)
+stats(expression)
 }
 \arguments{
 \item{expression}{\code{ANY}}

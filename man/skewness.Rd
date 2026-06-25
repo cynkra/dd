@@ -4,7 +4,7 @@
 \alias{skewness}
 \title{DuckDB function skewness}
 \usage{
-skewness(x = DOUBLE)
+skewness(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

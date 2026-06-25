@@ -4,7 +4,7 @@
 \alias{unnest}
 \title{DuckDB function unnest}
 \usage{
-unnest(col0 = ANY)
+unnest(col0)
 }
 \arguments{
 \item{col0}{\code{ANY}}

@@ -3,6 +3,9 @@
 \name{isnan}
 \alias{isnan}
 \title{DuckDB function isnan}
+\usage{
+isnan(x)
+}
 \arguments{
 \item{x}{\code{FLOAT | DOUBLE}}
 }
@@ -12,14 +15,6 @@
 \description{
 Returns true if the floating point value is not a number, false otherwise.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{isnan(x = FLOAT)}
-\item \code{isnan(x = DOUBLE)}
-}
-}
-
 \section{SQL examples}{
 
 

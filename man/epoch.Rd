@@ -3,6 +3,9 @@
 \name{epoch}
 \alias{epoch}
 \title{DuckDB function epoch}
+\usage{
+epoch(temporal)
+}
 \arguments{
 \item{temporal}{\verb{DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,19 +15,6 @@
 \description{
 Extract the epoch component from a temporal type.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{epoch(temporal = DATE)}
-\item \code{epoch(temporal = INTERVAL)}
-\item \code{epoch(temporal = TIME)}
-\item \code{epoch(temporal = TIMESTAMP)}
-\item \code{epoch(temporal = `TIME WITH TIME ZONE`)}
-\item \code{epoch(temporal = TIME_NS)}
-\item \code{epoch(temporal = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

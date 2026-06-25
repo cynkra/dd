@@ -7,12 +7,10 @@
 \alias{array_has_all}
 \title{DuckDB function list_has_all}
 \usage{
-list_has_all(list1 = `T[]`, list2 = `T[]`)
+list_has_all(list1, list2)
 }
 \arguments{
-\item{list1}{\code{T[]}}
-
-\item{list2}{\code{T[]}}
+\item{list1, list2}{\code{T[]}}
 }
 \value{
 \code{BOOLEAN}

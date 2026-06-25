@@ -3,6 +3,9 @@
 \name{sum}
 \alias{sum}
 \title{DuckDB function sum}
+\usage{
+sum(arg)
+}
 \arguments{
 \item{arg}{\code{DECIMAL | BOOLEAN | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | BIGNUM}}
 }
@@ -12,20 +15,6 @@
 \description{
 Calculates the sum value for all tuples in arg.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{sum(arg = DECIMAL)}
-\item \code{sum(arg = BOOLEAN)}
-\item \code{sum(arg = SMALLINT)}
-\item \code{sum(arg = INTEGER)}
-\item \code{sum(arg = BIGINT)}
-\item \code{sum(arg = HUGEINT)}
-\item \code{sum(arg = DOUBLE)}
-\item \code{sum(arg = BIGNUM)}
-}
-}
-
 \section{SQL examples}{
 
 

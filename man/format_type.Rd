@@ -7,9 +7,7 @@
 format_type(type_oid, typemod)
 }
 \arguments{
-\item{type_oid}{Unspecified.}
-
-\item{typemod}{Unspecified.}
+\item{type_oid, typemod}{Unspecified.}
 }
 \value{
 Unspecified.

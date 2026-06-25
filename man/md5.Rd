@@ -3,18 +3,20 @@
 \name{md5}
 \alias{md5}
 \title{DuckDB function md5}
+\usage{
+md5(string)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
-
-\item{blob}{\code{BLOB}}
 }
 \value{
 \code{VARCHAR}
 }
 \description{
-Returns the MD5 hash of the \code{string} as a \code{VARCHAR}.
-
-Returns the MD5 hash of the \code{blob} as a \code{VARCHAR}.
+\itemize{
+\item \code{md5(string = VARCHAR)}: Returns the MD5 hash of the \code{string} as a \code{VARCHAR}.
+\item \code{md5(blob = BLOB)}: Returns the MD5 hash of the \code{blob} as a \code{VARCHAR}.
+}
 }
 \section{Overloads}{
 

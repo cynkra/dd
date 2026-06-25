@@ -3,12 +3,13 @@
 \name{switch}
 \alias{switch}
 \title{DuckDB function switch}
+\usage{
+switch(key, map)
+}
 \arguments{
 \item{key}{\code{K | MAP(K, V)}}
 
 \item{map}{\code{MAP(K, V) | V}}
-
-\item{value}{\code{V}}
 }
 \value{
 \code{V}

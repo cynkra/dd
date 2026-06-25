@@ -3,6 +3,9 @@
 \name{signbit}
 \alias{signbit}
 \title{DuckDB function signbit}
+\usage{
+signbit(x)
+}
 \arguments{
 \item{x}{\code{FLOAT | DOUBLE}}
 }
@@ -12,14 +15,6 @@
 \description{
 Returns whether the signbit is set or not.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{signbit(x = FLOAT)}
-\item \code{signbit(x = DOUBLE)}
-}
-}
-
 \section{SQL examples}{
 
 

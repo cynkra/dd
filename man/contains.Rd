@@ -3,31 +3,29 @@
 \name{contains}
 \alias{contains}
 \title{DuckDB function contains}
+\usage{
+contains(string, search_string)
+}
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{search_string}{\code{VARCHAR}}
-
-\item{col0}{\code{T[] | MAP(K, V) | STRUCT}}
-
-\item{col1}{\code{T | K | ANY}}
+\item{string, search_string}{\code{VARCHAR}}
 }
 \value{
 \code{BOOLEAN}
 }
 \description{
-Returns \code{true} if \code{search_string} is found within \code{string}.
-
-Returns \code{true} if the \code{list} contains the \code{element}.
-
-Checks if a \code{map} contains a given \code{key}.
+\itemize{
+\item \code{contains(string = VARCHAR, search_string = VARCHAR)}: Returns \code{true} if \code{search_string} is found within \code{string}.
+\item \code{contains(list = `T[]`, element = T)}: Returns \code{true} if the \code{list} contains the \code{element}.
+\item \code{contains(map = `MAP(K, V)`, key = K)}: Checks if a \code{map} contains a given \code{key}.
+\item \code{contains(col0 = STRUCT, col1 = ANY)}: (Description missing.)
+}
 }
 \section{Overloads}{
 
 \itemize{
 \item \code{contains(string = VARCHAR, search_string = VARCHAR)}
-\item \code{contains(col0 = `T[]`, col1 = T)}
-\item \code{contains(col0 = `MAP(K, V)`, col1 = K)}
+\item \code{contains(list = `T[]`, element = T)}
+\item \code{contains(map = `MAP(K, V)`, key = K)}
 \item \code{contains(col0 = STRUCT, col1 = ANY)}
 }
 }

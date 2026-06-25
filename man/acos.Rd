@@ -4,7 +4,7 @@
 \alias{acos}
 \title{DuckDB function acos}
 \usage{
-acos(x = DOUBLE)
+acos(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

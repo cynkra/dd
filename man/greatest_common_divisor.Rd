@@ -4,10 +4,11 @@
 \alias{greatest_common_divisor}
 \alias{gcd}
 \title{DuckDB function greatest_common_divisor}
+\usage{
+greatest_common_divisor(x, y)
+}
 \arguments{
-\item{x}{\code{BIGINT | HUGEINT}}
-
-\item{y}{\code{BIGINT | HUGEINT}}
+\item{x, y}{\code{BIGINT | HUGEINT}}
 }
 \value{
 \code{BIGINT | HUGEINT}
@@ -15,14 +16,6 @@
 \description{
 Computes the greatest common divisor of x and y.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{greatest_common_divisor(x = BIGINT, y = BIGINT)}
-\item \code{greatest_common_divisor(x = HUGEINT, y = HUGEINT)}
-}
-}
-
 \section{SQL examples}{
 
 

@@ -5,7 +5,7 @@
 \alias{element_at}
 \title{DuckDB function map_extract}
 \usage{
-map_extract(map = `MAP(K, V)`, key = K)
+map_extract(map, key)
 }
 \arguments{
 \item{map}{\code{MAP(K, V)}}

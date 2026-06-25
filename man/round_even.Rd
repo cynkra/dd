@@ -7,9 +7,7 @@
 round_even(x, n)
 }
 \arguments{
-\item{x}{Unspecified.}
-
-\item{n}{Unspecified.}
+\item{x, n}{Unspecified.}
 }
 \value{
 Unspecified.

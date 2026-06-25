@@ -4,7 +4,7 @@
 \alias{tan}
 \title{DuckDB function tan}
 \usage{
-tan(x = DOUBLE)
+tan(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

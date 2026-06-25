@@ -3,8 +3,8 @@
 \name{force_checkpoint}
 \alias{force_checkpoint}
 \title{DuckDB function force_checkpoint}
-\arguments{
-\item{col0}{\code{VARCHAR}}
+\usage{
+force_checkpoint()
 }
 \value{
 Unspecified.

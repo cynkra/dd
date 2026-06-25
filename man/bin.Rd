@@ -4,18 +4,20 @@
 \alias{bin}
 \alias{to_binary}
 \title{DuckDB function bin}
+\usage{
+bin(value)
+}
 \arguments{
-\item{string}{\code{VARCHAR}}
-
 \item{value}{\code{BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT}}
 }
 \value{
 \code{VARCHAR}
 }
 \description{
-Converts the \code{string} to binary representation.
-
-Converts the \code{value} to binary representation.
+\itemize{
+\item \code{bin(string = VARCHAR)}: Converts the \code{string} to binary representation.
+\item \code{bin(value = BIGNUM)}, \code{bin(value = UBIGINT)}, \code{bin(value = BIGINT)}, \code{bin(value = HUGEINT)}, \code{bin(value = UHUGEINT)}: Converts the \code{value} to binary representation.
+}
 }
 \section{Overloads}{
 

@@ -3,13 +3,10 @@
 \name{range}
 \alias{range}
 \title{DuckDB function range}
+\usage{
+range(start, stop, step)
+}
 \arguments{
-\item{col0}{\code{BIGINT | TIMESTAMP}}
-
-\item{col1}{\code{BIGINT | TIMESTAMP}}
-
-\item{col2}{\code{BIGINT | INTERVAL}}
-
 \item{start}{\verb{BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 
 \item{stop}{\verb{BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}

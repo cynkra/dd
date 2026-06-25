@@ -4,12 +4,10 @@
 \alias{can_cast_implicitly}
 \title{DuckDB function can_cast_implicitly}
 \usage{
-can_cast_implicitly(source_type = ANY, target_type = ANY)
+can_cast_implicitly(source_type, target_type)
 }
 \arguments{
-\item{source_type}{\code{ANY}}
-
-\item{target_type}{\code{ANY}}
+\item{source_type, target_type}{\code{ANY}}
 }
 \value{
 \code{BOOLEAN}

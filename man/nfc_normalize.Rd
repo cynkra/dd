@@ -4,7 +4,7 @@
 \alias{nfc_normalize}
 \title{DuckDB function nfc_normalize}
 \usage{
-nfc_normalize(string = VARCHAR)
+nfc_normalize(string)
 }
 \arguments{
 \item{string}{\code{VARCHAR}}

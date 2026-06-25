@@ -3,6 +3,9 @@
 \name{quantile_cont}
 \alias{quantile_cont}
 \title{DuckDB function quantile_cont}
+\usage{
+quantile_cont(x, pos)
+}
 \arguments{
 \item{x}{\verb{DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE}}
 
@@ -14,38 +17,6 @@
 \description{
 Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{quantile_cont(x = DECIMAL, pos = DOUBLE)}
-\item \code{quantile_cont(x = DECIMAL, pos = `DOUBLE[]`)}
-\item \code{quantile_cont(x = TINYINT, pos = DOUBLE)}
-\item \code{quantile_cont(x = TINYINT, pos = `DOUBLE[]`)}
-\item \code{quantile_cont(x = SMALLINT, pos = DOUBLE)}
-\item \code{quantile_cont(x = SMALLINT, pos = `DOUBLE[]`)}
-\item \code{quantile_cont(x = INTEGER, pos = DOUBLE)}
-\item \code{quantile_cont(x = INTEGER, pos = `DOUBLE[]`)}
-\item \code{quantile_cont(x = BIGINT, pos = DOUBLE)}
-\item \code{quantile_cont(x = BIGINT, pos = `DOUBLE[]`)}
-\item \code{quantile_cont(x = HUGEINT, pos = DOUBLE)}
-\item \code{quantile_cont(x = HUGEINT, pos = `DOUBLE[]`)}
-\item \code{quantile_cont(x = FLOAT, pos = DOUBLE)}
-\item \code{quantile_cont(x = FLOAT, pos = `DOUBLE[]`)}
-\item \code{quantile_cont(x = DOUBLE, pos = DOUBLE)}
-\item \code{quantile_cont(x = DOUBLE, pos = `DOUBLE[]`)}
-\item \code{quantile_cont(x = DATE, pos = DOUBLE)}
-\item \code{quantile_cont(x = DATE, pos = `DOUBLE[]`)}
-\item \code{quantile_cont(x = TIMESTAMP, pos = DOUBLE)}
-\item \code{quantile_cont(x = TIMESTAMP, pos = `DOUBLE[]`)}
-\item \code{quantile_cont(x = TIME, pos = DOUBLE)}
-\item \code{quantile_cont(x = TIME, pos = `DOUBLE[]`)}
-\item \code{quantile_cont(x = `TIMESTAMP WITH TIME ZONE`, pos = DOUBLE)}
-\item \code{quantile_cont(x = `TIMESTAMP WITH TIME ZONE`, pos = `DOUBLE[]`)}
-\item \code{quantile_cont(x = `TIME WITH TIME ZONE`, pos = DOUBLE)}
-\item \code{quantile_cont(x = `TIME WITH TIME ZONE`, pos = `DOUBLE[]`)}
-}
-}
-
 \section{SQL examples}{
 
 

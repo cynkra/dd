@@ -3,6 +3,9 @@
 \name{to_centuries}
 \alias{to_centuries}
 \title{DuckDB function to_centuries}
+\usage{
+to_centuries(integer)
+}
 \arguments{
 \item{integer}{\code{INTEGER | BIGINT}}
 }
@@ -12,14 +15,6 @@
 \description{
 Construct a century interval.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{to_centuries(integer = INTEGER)}
-\item \code{to_centuries(integer = BIGINT)}
-}
-}
-
 \section{SQL examples}{
 
 

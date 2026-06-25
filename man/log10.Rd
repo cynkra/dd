@@ -4,7 +4,7 @@
 \alias{log10}
 \title{DuckDB function log10}
 \usage{
-log10(x = DOUBLE)
+log10(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

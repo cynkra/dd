@@ -3,13 +3,10 @@
 \name{generate_series}
 \alias{generate_series}
 \title{DuckDB function generate_series}
+\usage{
+generate_series(start, stop, step)
+}
 \arguments{
-\item{col0}{\code{BIGINT | TIMESTAMP}}
-
-\item{col1}{\code{BIGINT | TIMESTAMP}}
-
-\item{col2}{\code{BIGINT | INTERVAL}}
-
 \item{start}{\verb{BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 
 \item{stop}{\verb{BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}

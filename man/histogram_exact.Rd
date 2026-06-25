@@ -4,7 +4,7 @@
 \alias{histogram_exact}
 \title{DuckDB function histogram_exact}
 \usage{
-histogram_exact(arg = ANY, bins = `ANY[]`)
+histogram_exact(arg, bins)
 }
 \arguments{
 \item{arg}{\code{ANY}}

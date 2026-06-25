@@ -4,12 +4,10 @@
 \alias{add_parquet_key}
 \title{DuckDB function add_parquet_key}
 \usage{
-add_parquet_key(col0 = VARCHAR, col1 = VARCHAR)
+add_parquet_key(col0, col1)
 }
 \arguments{
-\item{col0}{\code{VARCHAR}}
-
-\item{col1}{\code{VARCHAR}}
+\item{col0, col1}{\code{VARCHAR}}
 }
 \value{
 Unspecified.

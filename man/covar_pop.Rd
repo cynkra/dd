@@ -4,12 +4,10 @@
 \alias{covar_pop}
 \title{DuckDB function covar_pop}
 \usage{
-covar_pop(y = DOUBLE, x = DOUBLE)
+covar_pop(y, x)
 }
 \arguments{
-\item{y}{\code{DOUBLE}}
-
-\item{x}{\code{DOUBLE}}
+\item{y, x}{\code{DOUBLE}}
 }
 \value{
 \code{DOUBLE}

@@ -4,7 +4,7 @@
 \alias{pragma_table_info}
 \title{DuckDB function pragma_table_info}
 \usage{
-pragma_table_info(col0 = VARCHAR)
+pragma_table_info(col0)
 }
 \arguments{
 \item{col0}{\code{VARCHAR}}

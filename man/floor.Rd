@@ -3,6 +3,9 @@
 \name{floor}
 \alias{floor}
 \title{DuckDB function floor}
+\usage{
+floor(x)
+}
 \arguments{
 \item{x}{\code{FLOAT | DOUBLE | DECIMAL}}
 }
@@ -12,15 +15,6 @@
 \description{
 Rounds the number down.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{floor(x = FLOAT)}
-\item \code{floor(x = DOUBLE)}
-\item \code{floor(x = DECIMAL)}
-}
-}
-
 \section{SQL examples}{
 
 

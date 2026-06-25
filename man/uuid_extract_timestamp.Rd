@@ -4,7 +4,7 @@
 \alias{uuid_extract_timestamp}
 \title{DuckDB function uuid_extract_timestamp}
 \usage{
-uuid_extract_timestamp(uuid = UUID)
+uuid_extract_timestamp(uuid)
 }
 \arguments{
 \item{uuid}{\code{UUID}}

@@ -3,6 +3,9 @@
 \name{reservoir_quantile}
 \alias{reservoir_quantile}
 \title{DuckDB function reservoir_quantile}
+\usage{
+reservoir_quantile(x, quantile, sample_size)
+}
 \arguments{
 \item{x}{\code{DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE}}
 

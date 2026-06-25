@@ -4,7 +4,7 @@
 \alias{map_from_entries}
 \title{DuckDB function map_from_entries}
 \usage{
-map_from_entries(map = `STRUCT(K, V)[]`)
+map_from_entries(map)
 }
 \arguments{
 \item{map}{\code{STRUCT(K, V)[]}}

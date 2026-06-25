@@ -4,10 +4,11 @@
 \alias{or-}
 \alias{|}
 \title{DuckDB function |}
+\usage{
+`|`(left, right)
+}
 \arguments{
-\item{left}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT}}
-
-\item{right}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT}}
+\item{left, right}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT}}
 }
 \value{
 \code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT}
@@ -15,23 +16,6 @@
 \description{
 Bitwise OR.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{`|`(left = TINYINT, right = TINYINT)}
-\item \code{`|`(left = SMALLINT, right = SMALLINT)}
-\item \code{`|`(left = INTEGER, right = INTEGER)}
-\item \code{`|`(left = BIGINT, right = BIGINT)}
-\item \code{`|`(left = HUGEINT, right = HUGEINT)}
-\item \code{`|`(left = UTINYINT, right = UTINYINT)}
-\item \code{`|`(left = USMALLINT, right = USMALLINT)}
-\item \code{`|`(left = UINTEGER, right = UINTEGER)}
-\item \code{`|`(left = UBIGINT, right = UBIGINT)}
-\item \code{`|`(left = UHUGEINT, right = UHUGEINT)}
-\item \code{`|`(left = BIT, right = BIT)}
-}
-}
-
 \section{SQL examples}{
 
 

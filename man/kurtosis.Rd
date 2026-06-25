@@ -4,7 +4,7 @@
 \alias{kurtosis}
 \title{DuckDB function kurtosis}
 \usage{
-kurtosis(x = DOUBLE)
+kurtosis(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

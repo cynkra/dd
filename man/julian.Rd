@@ -3,6 +3,9 @@
 \name{julian}
 \alias{julian}
 \title{DuckDB function julian}
+\usage{
+julian(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,15 +15,6 @@
 \description{
 Extract the Julian Day number from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{julian(ts = DATE)}
-\item \code{julian(ts = TIMESTAMP)}
-\item \code{julian(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

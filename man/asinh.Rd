@@ -4,7 +4,7 @@
 \alias{asinh}
 \title{DuckDB function asinh}
 \usage{
-asinh(x = DOUBLE)
+asinh(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

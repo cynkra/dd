@@ -4,7 +4,7 @@
 \alias{repeat_row}
 \title{DuckDB function repeat_row}
 \usage{
-repeat_row(num_rows = BIGINT)
+repeat_row(num_rows)
 }
 \arguments{
 \item{num_rows}{\code{BIGINT}}

@@ -3,6 +3,9 @@
 \name{bit_and}
 \alias{bit_and}
 \title{DuckDB function bit_and}
+\usage{
+bit_and(arg)
+}
 \arguments{
 \item{arg}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT}}
 }
@@ -12,23 +15,6 @@
 \description{
 Returns the bitwise AND of all bits in a given expression.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{bit_and(arg = TINYINT)}
-\item \code{bit_and(arg = SMALLINT)}
-\item \code{bit_and(arg = INTEGER)}
-\item \code{bit_and(arg = BIGINT)}
-\item \code{bit_and(arg = HUGEINT)}
-\item \code{bit_and(arg = UTINYINT)}
-\item \code{bit_and(arg = USMALLINT)}
-\item \code{bit_and(arg = UINTEGER)}
-\item \code{bit_and(arg = UBIGINT)}
-\item \code{bit_and(arg = UHUGEINT)}
-\item \code{bit_and(arg = BIT)}
-}
-}
-
 \section{SQL examples}{
 
 

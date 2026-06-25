@@ -3,6 +3,9 @@
 \name{jaro_similarity}
 \alias{jaro_similarity}
 \title{DuckDB function jaro_similarity}
+\usage{
+jaro_similarity(s1, s2, score_cutoff)
+}
 \arguments{
 \item{s1}{\code{VARCHAR}}
 

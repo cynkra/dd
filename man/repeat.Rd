@@ -3,26 +3,24 @@
 \name{repeat}
 \alias{repeat}
 \title{DuckDB function repeat}
+\usage{
+`repeat`(col0, col1)
+}
 \arguments{
-\item{col0}{\code{ANY | T[]}}
+\item{col0}{\code{ANY}}
 
 \item{col1}{\code{BIGINT}}
-
-\item{string}{\code{VARCHAR}}
-
-\item{count}{\code{BIGINT}}
-
-\item{blob}{\code{BLOB}}
 }
 \value{
 \code{VARCHAR | BLOB | T[]}
 }
 \description{
-Repeats the \code{string} \code{count} number of times.
-
-Repeats the \code{blob} \code{count} number of times.
-
-Repeats the \code{list} \code{count} number of times.
+\itemize{
+\item \code{`repeat`(string = VARCHAR, count = BIGINT)}: Repeats the \code{string} \code{count} number of times.
+\item \code{`repeat`(blob = BLOB, count = BIGINT)}: Repeats the \code{blob} \code{count} number of times.
+\item \code{`repeat`(list = `T[]`, count = BIGINT)}: Repeats the \code{list} \code{count} number of times.
+\item \code{`repeat`(col0 = ANY, col1 = BIGINT)}: (Description missing.)
+}
 }
 \section{Overloads}{
 
@@ -30,7 +28,7 @@ Repeats the \code{list} \code{count} number of times.
 \item \code{`repeat`(col0 = ANY, col1 = BIGINT)}
 \item \code{`repeat`(string = VARCHAR, count = BIGINT)}
 \item \code{`repeat`(blob = BLOB, count = BIGINT)}
-\item \code{`repeat`(col0 = `T[]`, col1 = BIGINT)}
+\item \code{`repeat`(list = `T[]`, count = BIGINT)}
 }
 }
 

@@ -3,6 +3,9 @@
 \name{max}
 \alias{max}
 \title{DuckDB function max}
+\usage{
+max(arg, col1)
+}
 \arguments{
 \item{arg}{\code{ANY}}
 

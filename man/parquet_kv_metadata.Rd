@@ -3,6 +3,9 @@
 \name{parquet_kv_metadata}
 \alias{parquet_kv_metadata}
 \title{DuckDB function parquet_kv_metadata}
+\usage{
+parquet_kv_metadata(col0)
+}
 \arguments{
 \item{col0}{\code{VARCHAR | VARCHAR[]}}
 }
@@ -12,11 +15,3 @@ Unspecified.
 \description{
 DuckDB function \code{parquet_kv_metadata()}.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{parquet_kv_metadata(col0 = VARCHAR)}
-\item \code{parquet_kv_metadata(col0 = `VARCHAR[]`)}
-}
-}
-

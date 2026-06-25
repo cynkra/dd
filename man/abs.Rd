@@ -4,6 +4,9 @@
 \alias{abs}
 \alias{@}
 \title{DuckDB function abs}
+\usage{
+abs(x)
+}
 \arguments{
 \item{x}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT}}
 }
@@ -13,25 +16,6 @@
 \description{
 Absolute value.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{abs(x = TINYINT)}
-\item \code{abs(x = SMALLINT)}
-\item \code{abs(x = INTEGER)}
-\item \code{abs(x = BIGINT)}
-\item \code{abs(x = HUGEINT)}
-\item \code{abs(x = FLOAT)}
-\item \code{abs(x = DOUBLE)}
-\item \code{abs(x = DECIMAL)}
-\item \code{abs(x = UTINYINT)}
-\item \code{abs(x = USMALLINT)}
-\item \code{abs(x = UINTEGER)}
-\item \code{abs(x = UBIGINT)}
-\item \code{abs(x = UHUGEINT)}
-}
-}
-
 \section{SQL examples}{
 
 

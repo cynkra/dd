@@ -4,7 +4,7 @@
 \alias{duckdb_table_sample}
 \title{DuckDB function duckdb_table_sample}
 \usage{
-duckdb_table_sample(col0 = VARCHAR)
+duckdb_table_sample(col0)
 }
 \arguments{
 \item{col0}{\code{VARCHAR}}

@@ -4,14 +4,10 @@
 \alias{replace_type}
 \title{DuckDB function replace_type}
 \usage{
-replace_type(param = ANY, type1 = ANY, type2 = ANY)
+replace_type(param, type1, type2)
 }
 \arguments{
-\item{param}{\code{ANY}}
-
-\item{type1}{\code{ANY}}
-
-\item{type2}{\code{ANY}}
+\item{param, type1, type2}{\code{ANY}}
 }
 \value{
 \code{ANY}

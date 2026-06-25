@@ -3,12 +3,11 @@
 \name{pg_has_role}
 \alias{pg_has_role}
 \title{DuckDB function pg_has_role}
+\usage{
+pg_has_role(user, role, privilege)
+}
 \arguments{
-\item{user}{Unspecified.}
-
-\item{role}{Unspecified.}
-
-\item{privilege}{Unspecified.}
+\item{user, role, privilege}{Unspecified.}
 }
 \value{
 Unspecified.

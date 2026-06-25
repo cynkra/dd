@@ -76,6 +76,92 @@ usage_signature <- function(function_name, parameters, parameter_types) {
   )
 }
 
+is_generic_name <- function(x) grepl("^col[0-9]+$", x)
+
+# Are two parameter-type lists compatible position-by-position? Used to line up
+# a catalog overload with a JSON overload. DuckDB spells type variables
+# differently on each side (catalog `T[]`/`BIGINT` vs JSON `ANY[]`/`ANY`), so we
+# compare list-ness exactly and treat `ANY`, empty, and single-letter type
+# variables (`T`, `K`, ...) as wildcards. An unknown (NA) JSON type matches
+# anything (flat JSON entries carry names but no types).
+type_compatible <- function(catalog_types, json_types) {
+  if (length(catalog_types) != length(json_types)) {
+    return(FALSE)
+  }
+  is_list <- function(t) grepl("\\[\\]$", t)
+  base <- function(t) sub("\\(.*", "", toupper(trimws(gsub("\\[\\]$", "", t))))
+  is_wild <- function(b) b == "ANY" | b == "" | grepl("^[A-Z]$", b)
+  for (i in seq_along(catalog_types)) {
+    jt <- json_types[[i]]
+    if (is.na(jt)) {
+      next
+    }
+    ct <- catalog_types[[i]]
+    if (is_list(ct) != is_list(jt)) {
+      return(FALSE)
+    }
+    bc <- base(ct)
+    bj <- base(jt)
+    if (!(bc == bj || is_wild(bc) || is_wild(bj))) {
+      return(FALSE)
+    }
+  }
+  TRUE
+}
+
+# Replace the generic argument names (`col0`, `col1`, ...) that DuckDB's
+# `duckdb_functions()` catalog reports for some overloads with the real names
+# recorded in the source JSON. Each generic overload is matched to a JSON
+# overload by arity and type compatibility; a name is only substituted on an
+# unambiguous (single-candidate) match. JSON overloads already represented by a
+# properly named catalog overload are not borrowed again.
+#
+# NOTE (upstream): for ~85 functions the JSON carries no argument names either
+# (no `variants`, or the C++ registration named nothing), so `col0`/`col1`
+# survive here. The real fix belongs upstream in duckdb/duckdb: name those
+# parameters in the function definitions / functions.json so `duckdb_functions()`
+# exposes them. Until then there is nothing to extract.
+recover_param_names <- function(parameters, parameter_types, json_overloads) {
+  if (length(json_overloads) == 0) {
+    return(parameters)
+  }
+  json_keys <- map_chr(json_overloads, ~ paste(.x$names, collapse = ","))
+  named_keys <- parameters |>
+    keep(~ !any(is_generic_name(.x))) |>
+    map_chr(~ paste(.x, collapse = ","))
+  taken <- json_keys %in% named_keys
+  for (i in seq_along(parameters)) {
+    nm <- parameters[[i]]
+    if (!any(is_generic_name(nm))) {
+      next
+    }
+    cand <- which(
+      !taken &
+        map_lgl(json_overloads, ~ length(.x$names) == length(nm)) &
+        map_lgl(
+          json_overloads,
+          ~ type_compatible(parameter_types[[i]], .x$types)
+        )
+    )
+    if (length(cand) == 1) {
+      replacement <- json_overloads[[cand]]$names
+      generic <- is_generic_name(nm)
+      recovered <- replacement[generic]
+      nm[generic] <- recovered
+      # Only adopt the recovered names if they are syntactic R names (some JSON
+      # names are messy, e.g. `date-struct` or `lambda(x`) and don't collide
+      # with a real name already in this overload. Non-syntactic names would
+      # mismatch between \usage (backticked) and @param (not), so keep the
+      # generic ones instead.
+      if (all(recovered == make.names(recovered)) && anyDuplicated(nm) == 0) {
+        parameters[[i]] <- nm
+        taken[cand] <- TRUE
+      }
+    }
+  }
+  parameters
+}
+
 usage_and_params <- function(
   function_name,
   parameters,
@@ -86,8 +172,30 @@ usage_and_params <- function(
   json_description = NULL,
   json_examples = NULL,
   json_categories = NULL,
+  json_variant_desc = NULL,
+  json_overloads = NULL,
   merge_mode = "off"
 ) {
+  # Some catalog/JSON parameter names are quoted string literals (e.g.
+  # `'entry'`); the quotes aren't part of the name.
+  parameters <- map(parameters, ~ gsub("^['\"](.*)['\"]$", "\\1", .x))
+  if (merge_mode != "off") {
+    parameters <- recover_param_names(
+      parameters,
+      parameter_types,
+      json_overloads %||% list()
+    )
+  }
+  # Sanitize names to syntactic, unique-per-overload R names so the stub
+  # formals, \usage and @param all agree (and stay valid Rd). Quotes were
+  # stripped above; drop any bracket/paren fragment first (e.g. `lambda(x)` ->
+  # `lambda`), then make.names() handles the rest (e.g. dashes) and
+  # disambiguates a name repeated within one overload (array_cross_product).
+  parameters <- map(
+    parameters,
+    ~ make.names(sub("[][()].*$", "", .x), unique = TRUE)
+  )
+  param_keys <- map_chr(parameters, ~ paste(.x, collapse = ","))
   signatures <- map2_chr(
     parameters,
     parameter_types,
@@ -104,30 +212,38 @@ usage_and_params <- function(
       glue("{tibble:::tick_if_needed(function_name)}({sig})")
     }
   )
+
+  # Match each overload's description to its signature. The catalog pairs them
+  # row by row; where its description is missing, fall back to the JSON variant
+  # with the same parameter names.
+  sig_desc <- description
+  if (merge_mode != "off" && length(json_variant_desc) > 0) {
+    gap <- is.na(sig_desc) & param_keys %in% names(json_variant_desc)
+    sig_desc[gap] <- unname(json_variant_desc[param_keys[gap]])
+  }
+
   # DuckDB registers some functions under several `function_type`s (e.g. both a
   # table function and a pragma) with identical parameters, yielding duplicate
   # overloads. Keep each distinct signature once.
   dedup <- !duplicated(signatures)
 
-  if (sum(dedup) == 1) {
-    idx <- which(dedup)
-    usage_doc <- glue(
-      "#' @usage {usage_signature(function_name, parameters[[idx]], parameter_types[[idx]])}"
+  # Each distinct signature paired with the description that applies to it.
+  overloads <-
+    tibble(sig = signatures, desc = sig_desc) |>
+    summarize(
+      .by = sig,
+      desc = {
+        d <- unique(na.omit(desc))
+        if (length(d) > 0) {
+          paste(gsub("[.]*$", ".", d), collapse = " ")
+        } else {
+          NA_character_
+        }
+      }
     )
-  } else if (function_name == "%") {
-    # FIXME: roxygen2 generates bad .Rd here
-    usage_doc <- "#' @usage NULL\n"
-  } else {
-    signatures <- signatures[dedup]
-    usage_doc <- paste0(
-      "#' @usage NULL\n",
-      "#' @section Overloads:\n",
-      "#' \\itemize{\n",
-      paste0("#' \\item \\code{", signatures, "}\n", collapse = ""),
-      "#' }"
-    )
-  }
+  distinct_desc <- unique(na.omit(overloads$desc))
 
+  # Type of each distinct argument (union across the overloads that use it).
   params <-
     tibble(name = unlist(parameters), type = unlist(parameter_types)) |>
     summarize(
@@ -135,16 +251,66 @@ usage_and_params <- function(
       type = paste0(na.omit(unique(type)), collapse = " | ")
     )
 
-  param_doc <-
-    params |>
-    mutate(
-      type = if_else(type == "", "Unspecified.", paste0("`", type, "`"))
-    ) |>
-    mutate(out = glue("#' @param {name} {type}")) |>
-    pull() |>
-    glue_collapse(sep = "\n")
+  # Representative argument list for the \usage and stub: the most frequent
+  # combination of argument names across overloads (tie-break: more arguments,
+  # then first appearance). Every function gets a usage, for consistent display.
+  name_keys <- map_chr(parameters, ~ paste(.x, collapse = ","))
+  rep_idx <- order(
+    -ave(seq_along(name_keys), name_keys, FUN = length),
+    -lengths(parameters),
+    seq_along(name_keys)
+  )[[1]]
+  rep_names <- parameters[[rep_idx]]
+  rep_params <- tibble(name = rep_names) |> left_join(params, by = "name")
 
-  signature <- params |>
+  if (function_name == "%") {
+    # FIXME: roxygen2 emits invalid Rd for the `%` \usage.
+    usage_doc <- "#' @usage NULL\n"
+  } else {
+    usage_doc <- glue(
+      "#' @usage {usage_signature(function_name, rep_names, rep('', length(rep_names)))}"
+    )
+  }
+
+  # When overloads use different argument-name combinations, list every distinct
+  # signature (the representative usage only shows one of them).
+  overloads_doc <- ""
+  if (length(unique(name_keys)) > 1) {
+    overloads_doc <- paste0(
+      "#' @section Overloads:\n",
+      "#' \\itemize{\n",
+      paste0("#' \\item \\code{", overloads$sig, "}\n", collapse = ""),
+      "#' }\n"
+    )
+  }
+
+  # Document the arguments, collapsing to a single `@param a,b` when every
+  # argument shares one type (e.g. for a binary operator). Names are ticked to
+  # match the stub formals and the \usage (some DuckDB names are non-syntactic,
+  # e.g. `'entry'`).
+  param_types_doc <-
+    rep_params |>
+    mutate(
+      name = tibble:::tick_if_needed(name),
+      type = if_else(
+        is.na(type) | type == "",
+        "Unspecified.",
+        paste0("`", type, "`")
+      )
+    )
+  if (nrow(param_types_doc) > 1 && length(unique(param_types_doc$type)) == 1) {
+    param_doc <- glue(
+      "#' @param {paste(param_types_doc$name, collapse = ',')} {param_types_doc$type[[1]]}"
+    )
+  } else {
+    param_doc <-
+      param_types_doc |>
+      mutate(out = glue("#' @param {name} {type}")) |>
+      pull(out) |>
+      glue_collapse(sep = "\n")
+  }
+
+  signature <- rep_params |>
     mutate(
       out = glue(
         "{tibble:::tick_if_needed(name)}{param_type_tick_if_needed(type)}"
@@ -154,25 +320,43 @@ usage_and_params <- function(
     glue_collapse(sep = ", ")
 
   is_macro <- length(macro_definition) == 1 && !is.na(macro_definition)
-  # Fill gaps: add any descriptions/examples present in the JSON but not in the
-  # catalog. The catalog is generated from these same JSON files, so this is
-  # usually a no-op; it recovers per-overload descriptions the catalog drops
-  # (e.g. the list variant of `array_extract`, `contains`, `repeat`).
-  description <- unique(na.omit(description))
-  if (merge_mode != "off") {
-    description <- unique(c(description, na.omit(json_description)))
-  }
-  if (length(description) == 0) {
+  # The description. When the overloads are described differently, list them
+  # here (in addition to the Overloads section), grouping signatures that share
+  # a description and flagging any overload whose description is missing. A
+  # single description (even if missing for some overloads) is shown as plain
+  # text; where the catalog has none, fall back to the JSON description.
+  if (length(distinct_desc) >= 2) {
+    grouped <-
+      overloads |>
+      mutate(desc = if_else(is.na(desc), "(Description missing.)", desc)) |>
+      summarize(
+        .by = desc,
+        sigs = paste0("\\code{", sig, "}", collapse = ", ")
+      ) |>
+      arrange(desc == "(Description missing.)")
+    items <- paste0("#' \\item ", grouped$sigs, ": ", grouped$desc, "\n")
     description <- paste0(
-      "#' DuckDB ",
-      if (is_macro) "macro" else "function",
-      " `",
-      function_name,
-      "()`."
+      "#' \\itemize{\n",
+      paste0(items, collapse = ""),
+      "#' }"
     )
   } else {
-    description <- gsub("[.]*$", ".", description)
-    description <- paste0("#' ", description, collapse = "\n#'\n")
+    description <- distinct_desc
+    if (length(description) == 0 && merge_mode != "off") {
+      description <- unique(na.omit(json_description))
+    }
+    if (length(description) == 0) {
+      description <- paste0(
+        "#' DuckDB ",
+        if (is_macro) "macro" else "function",
+        " `",
+        function_name,
+        "()`."
+      )
+    } else {
+      description <- gsub("[.]*$", ".", description)
+      description <- paste0("#' ", description, collapse = "\n#'\n")
+    }
   }
 
   examples <- na.omit(unique(unlist(examples)))
@@ -207,6 +391,7 @@ usage_and_params <- function(
 
   tibble(
     usage_doc,
+    overloads_doc,
     param_doc,
     signature,
     types = list(params$type),
@@ -300,10 +485,26 @@ parse_json_entry <- function(entry) {
   }
   one_variant <- function(v) {
     params <- v$parameters
-    param_names <- if (is.character(params)) {
-      blank_to_na(params)
+    if (is.character(params)) {
+      # Flat entry: a comma-separated name string, no types.
+      names <- if (identical(params, "") || length(params) == 0) {
+        character(0)
+      } else {
+        trimws(strsplit(params, ",")[[1]])
+      }
+      types <- rep(NA_character_, length(names))
     } else if (length(params) > 0) {
-      paste(map_chr(params, ~ .x$name %||% ""), collapse = ",")
+      names <- map_chr(params, ~ .x$name %||% "")
+      types <- map_chr(params, ~ .x$type %||% NA_character_)
+    } else {
+      names <- character(0)
+      types <- character(0)
+    }
+    # Some JSON names are quoted string literals (e.g. `'entry'`); the quotes
+    # aren't part of the name.
+    names <- gsub("^['\"](.*)['\"]$", "\\1", names)
+    param_names <- if (length(names) > 0) {
+      paste(names, collapse = ",")
     } else {
       NA_character_
     }
@@ -318,6 +519,8 @@ parse_json_entry <- function(entry) {
     tibble(
       function_name = entry$name,
       parameters = param_names,
+      param_names = list(names),
+      param_types = list(types),
       description = blank_to_na(v$description),
       examples = list(examples),
       categories = list(
@@ -354,6 +557,32 @@ build_json_meta <- function(ref) {
       json_aliases = list(sort(unique(unlist(aliases)))),
     )
 
+  # Per-variant description keyed by parameter names ("a,b"), so a signature
+  # whose catalog description is missing can recover it (see usage_and_params).
+  variant_desc <-
+    json_long |>
+    filter(!is.na(parameters), !is.na(description)) |>
+    distinct(function_name, parameters, description) |>
+    summarize(
+      .by = function_name,
+      json_variant_desc = list(setNames(description, parameters))
+    )
+  meta <- meta |> left_join(variant_desc, by = "function_name")
+
+  # The (names, types) of each JSON overload, used to recover the real argument
+  # names for overloads the catalog only exposes as `col0`, `col1`, ... Dedupe
+  # on names *and* types so overloads that share names but differ in type stay
+  # available for matching.
+  overloads <-
+    json_long |>
+    mutate(.type_key = map_chr(param_types, ~ paste(.x, collapse = ","))) |>
+    distinct(function_name, parameters, .type_key, .keep_all = TRUE) |>
+    mutate(
+      ovl = map2(param_names, param_types, ~ list(names = .x, types = .y))
+    ) |>
+    summarize(.by = function_name, json_overloads = list(ovl))
+  meta <- meta |> left_join(overloads, by = "function_name")
+
   edges <-
     meta |>
     select(to = function_name, json_aliases) |>
@@ -383,6 +612,8 @@ if (json_merge_mode == "off") {
     json_examples = list(),
     json_categories = list(),
     json_aliases = list(),
+    json_variant_desc = list(),
+    json_overloads = list(),
   )
   json_alias_edges <- tibble(from = character(), to = character())
 } else {
@@ -470,12 +701,13 @@ funs <-
       json_description = first(json_description),
       json_examples = first(json_examples),
       json_categories = first(json_categories),
+      json_variant_desc = first(json_variant_desc),
+      json_overloads = first(json_overloads),
       merge_mode = json_merge_mode
     ),
-    categories = list(sort(unique(c(
-      unlist(categories),
-      unlist(first(json_categories))
-    )))),
+    # The categories surfaced as @family / \concept tags (used for the pkgdown
+    # reference index below).
+    categories = list(sort(unique(unlist(first(json_categories))))),
   ) |>
   # https://github.com/duckdb/duckdb/pull/18977
   mutate(
@@ -557,7 +789,7 @@ code <-
     {param_doc}
     #' @return {if_else(return_type == "", "Unspecified.", paste0("`", return_type, "`"))}
     #' @export
-    {family_doc}{examples}{tibble:::tick_if_needed(function_name)} <- function({signature}) {{
+    {overloads_doc}{family_doc}{examples}{tibble:::tick_if_needed(function_name)} <- function({signature}) {{
       stop("DuckDB function {function_name}() is not available in R.")
     }}
 
@@ -641,6 +873,84 @@ globals_code <- paste0(
 invisible(parse(text = globals_code))
 
 writeLines(globals_code, "R/globals.R")
+
+# ---- pkgdown reference index -------------------------------------------------
+# Group the reference index by DuckDB function category (the @family / \concept
+# tags). DuckDB does not ship descriptions for its categories, so they are
+# curated here; categories seen in the data but missing from this table fall
+# back to a generic description.
+category_info <- tibble::tribble(
+  ~category         , ~title                , ~desc                                               ,
+  "string"          , "String"              , "Operate on text (`VARCHAR`) values."               ,
+  "list"            , "List"                , "Operate on `LIST` values."                         ,
+  "array"           , "Array"               , "Operate on fixed-size `ARRAY` values."             ,
+  "struct"          , "Struct"              , "Operate on `STRUCT` values."                       ,
+  "map"             , "Map"                 , "Operate on `MAP` values."                          ,
+  "variant"         , "Variant"             , "Operate on `VARIANT` values."                      ,
+  "numeric"         , "Numeric"             , "Numeric and mathematical functions."               ,
+  "bitstring"       , "Bitstring"           , "Operate on `BIT` (bitstring) values."              ,
+  "blob"            , "Blob"                , "Operate on binary large objects (`BLOB`)."         ,
+  "date"            , "Date"                , "Operate on `DATE` values."                         ,
+  "timestamp"       , "Timestamp"           , "Operate on `TIMESTAMP` values."                    ,
+  "regex"           , "Regular expressions" , "Match and extract with regular expressions."       ,
+  "text_similarity" , "Text similarity"     , "Measure similarity or distance between strings."   ,
+  "lambda"          , "Lambda"              , "Higher-order functions taking lambda expressions." ,
+  "geometry"        , "Geometry"            , "Spatial and geometry functions."                   ,
+  "aggregate"       , "Aggregate"           , "Aggregate functions."                              ,
+)
+
+present_cats <- sort(unique(unlist(funs$categories[funs$is_primary])))
+# Curated order first, then any uncurated categories alphabetically.
+ordered_cats <- c(
+  intersect(category_info$category, present_cats),
+  setdiff(present_cats, category_info$category)
+)
+
+reference_block <- function(cat) {
+  info <- category_info[match(cat, category_info$category), ]
+  title <- if (!is.na(info$title)) info$title else cat
+  desc <- if (!is.na(info$desc)) info$desc else paste0("`", cat, "` functions.")
+  paste0(
+    "- title: ",
+    title,
+    "\n",
+    "  desc: ",
+    desc,
+    "\n",
+    "  contents:\n",
+    '  - has_concept("',
+    cat,
+    '")'
+  )
+}
+
+other_block <- paste0(
+  "- title: Other functions\n",
+  "  desc: Functions that DuckDB does not assign to a category.\n",
+  "  contents:\n",
+  "  - lacks_concepts(c(",
+  paste0('"', ordered_cats, '"', collapse = ", "),
+  "))"
+)
+
+reference_yaml <- c(
+  "reference:",
+  vapply(ordered_cats, reference_block, character(1)),
+  other_block
+)
+
+# Splice into _pkgdown.yml, replacing any previously generated reference section
+# (always appended last) and keeping the curated header above it.
+pkgdown_file <- "_pkgdown.yml"
+pkgdown_yml <- readLines(pkgdown_file)
+ref_start <- grep("^reference:", pkgdown_yml)
+if (length(ref_start) > 0) {
+  pkgdown_yml <- pkgdown_yml[seq_len(ref_start[[1]] - 1)]
+}
+while (length(pkgdown_yml) > 0 && pkgdown_yml[[length(pkgdown_yml)]] == "") {
+  pkgdown_yml <- pkgdown_yml[-length(pkgdown_yml)]
+}
+writeLines(c(pkgdown_yml, "", reference_yaml), pkgdown_file)
 
 callr::r(function() devtools::document())
 

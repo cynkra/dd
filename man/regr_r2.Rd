@@ -4,12 +4,10 @@
 \alias{regr_r2}
 \title{DuckDB function regr_r2}
 \usage{
-regr_r2(y = DOUBLE, x = DOUBLE)
+regr_r2(y, x)
 }
 \arguments{
-\item{y}{\code{DOUBLE}}
-
-\item{x}{\code{DOUBLE}}
+\item{y, x}{\code{DOUBLE}}
 }
 \value{
 \code{DOUBLE}

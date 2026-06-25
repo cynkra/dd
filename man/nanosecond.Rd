@@ -3,6 +3,9 @@
 \name{nanosecond}
 \alias{nanosecond}
 \title{DuckDB function nanosecond}
+\usage{
+nanosecond(tsns)
+}
 \arguments{
 \item{tsns}{\verb{DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP_NS | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,20 +15,6 @@
 \description{
 Extract the nanosecond component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{nanosecond(tsns = DATE)}
-\item \code{nanosecond(tsns = TIMESTAMP)}
-\item \code{nanosecond(tsns = INTERVAL)}
-\item \code{nanosecond(tsns = TIME)}
-\item \code{nanosecond(tsns = TIME_NS)}
-\item \code{nanosecond(tsns = `TIME WITH TIME ZONE`)}
-\item \code{nanosecond(tsns = TIMESTAMP_NS)}
-\item \code{nanosecond(tsns = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

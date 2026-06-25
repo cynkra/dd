@@ -3,6 +3,9 @@
 \name{strftime}
 \alias{strftime}
 \title{DuckDB function strftime}
+\usage{
+strftime(data, format)
+}
 \arguments{
 \item{data}{\verb{DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR | TIMESTAMP WITH TIME ZONE}}
 
@@ -14,20 +17,6 @@
 \description{
 Converts a \code{date} to a string according to the format string.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{strftime(data = DATE, format = VARCHAR)}
-\item \code{strftime(data = TIMESTAMP, format = VARCHAR)}
-\item \code{strftime(data = TIMESTAMP_NS, format = VARCHAR)}
-\item \code{strftime(data = VARCHAR, format = DATE)}
-\item \code{strftime(data = VARCHAR, format = TIMESTAMP)}
-\item \code{strftime(data = VARCHAR, format = TIMESTAMP_NS)}
-\item \code{strftime(data = `TIMESTAMP WITH TIME ZONE`, format = VARCHAR)}
-\item \code{strftime(data = VARCHAR, format = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

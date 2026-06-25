@@ -3,6 +3,9 @@
 \name{enable_profiling}
 \alias{enable_profiling}
 \title{DuckDB function enable_profiling}
+\usage{
+enable_profiling(mode, metrics, save_location, coverage, format)
+}
 \arguments{
 \item{mode}{\code{VARCHAR}}
 

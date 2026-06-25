@@ -7,9 +7,7 @@
 list_append(l, e)
 }
 \arguments{
-\item{l}{Unspecified.}
-
-\item{e}{Unspecified.}
+\item{l, e}{Unspecified.}
 }
 \value{
 Unspecified.

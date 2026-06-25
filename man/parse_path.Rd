@@ -3,10 +3,11 @@
 \name{parse_path}
 \alias{parse_path}
 \title{DuckDB function parse_path}
+\usage{
+parse_path(path, separator)
+}
 \arguments{
-\item{path}{\code{VARCHAR}}
-
-\item{separator}{\code{VARCHAR}}
+\item{path, separator}{\code{VARCHAR}}
 }
 \value{
 \code{VARCHAR[]}

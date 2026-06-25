@@ -4,10 +4,11 @@
 \alias{list_negative_inner_product}
 \alias{list_negative_dot_product}
 \title{DuckDB function list_negative_inner_product}
+\usage{
+list_negative_inner_product(list1, list2)
+}
 \arguments{
-\item{list1}{\code{FLOAT[] | DOUBLE[]}}
-
-\item{list2}{\code{FLOAT[] | DOUBLE[]}}
+\item{list1, list2}{\code{FLOAT[] | DOUBLE[]}}
 }
 \value{
 \code{FLOAT | DOUBLE}
@@ -15,14 +16,6 @@
 \description{
 Computes the negative inner product between two same-sized lists.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{list_negative_inner_product(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}
-\item \code{list_negative_inner_product(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}
-}
-}
-
 \section{SQL examples}{
 
 

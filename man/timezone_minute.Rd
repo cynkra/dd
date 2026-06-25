@@ -3,6 +3,9 @@
 \name{timezone_minute}
 \alias{timezone_minute}
 \title{DuckDB function timezone_minute}
+\usage{
+timezone_minute(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,16 +15,6 @@
 \description{
 Extract the timezone_minute component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{timezone_minute(ts = DATE)}
-\item \code{timezone_minute(ts = INTERVAL)}
-\item \code{timezone_minute(ts = TIMESTAMP)}
-\item \code{timezone_minute(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

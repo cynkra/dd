@@ -5,7 +5,7 @@
 \alias{array_unique}
 \title{DuckDB function list_unique}
 \usage{
-list_unique(list = `ANY[]`)
+list_unique(list)
 }
 \arguments{
 \item{list}{\code{ANY[]}}

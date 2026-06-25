@@ -5,7 +5,7 @@
 \alias{variance}
 \title{DuckDB function var_samp}
 \usage{
-var_samp(x = DOUBLE)
+var_samp(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

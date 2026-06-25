@@ -3,6 +3,9 @@
 \name{weekday}
 \alias{weekday}
 \title{DuckDB function weekday}
+\usage{
+weekday(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,16 +15,6 @@
 \description{
 Extract the weekday component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{weekday(ts = DATE)}
-\item \code{weekday(ts = INTERVAL)}
-\item \code{weekday(ts = TIMESTAMP)}
-\item \code{weekday(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

@@ -4,7 +4,7 @@
 \alias{gamma}
 \title{DuckDB function gamma}
 \usage{
-gamma(x = DOUBLE)
+gamma(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

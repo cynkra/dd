@@ -5,7 +5,7 @@
 \alias{formatReadableSize}
 \title{DuckDB function format_bytes}
 \usage{
-format_bytes(integer = BIGINT)
+format_bytes(integer)
 }
 \arguments{
 \item{integer}{\code{BIGINT}}

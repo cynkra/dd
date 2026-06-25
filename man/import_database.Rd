@@ -4,7 +4,7 @@
 \alias{import_database}
 \title{DuckDB function import_database}
 \usage{
-import_database(col0 = VARCHAR)
+import_database(col0)
 }
 \arguments{
 \item{col0}{\code{VARCHAR}}

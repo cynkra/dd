@@ -3,18 +3,20 @@
 \name{bit_length}
 \alias{bit_length}
 \title{DuckDB function bit_length}
+\usage{
+bit_length(string)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
-
-\item{bit}{\code{BIT}}
 }
 \value{
 \code{BIGINT}
 }
 \description{
-Number of bits in a \code{string}.
-
-Returns the bit-length of the \code{bit} argument.
+\itemize{
+\item \code{bit_length(string = VARCHAR)}: Number of bits in a \code{string}.
+\item \code{bit_length(bit = BIT)}: Returns the bit-length of the \code{bit} argument.
+}
 }
 \section{Overloads}{
 

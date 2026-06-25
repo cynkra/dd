@@ -3,6 +3,9 @@
 \name{isoyear}
 \alias{isoyear}
 \title{DuckDB function isoyear}
+\usage{
+isoyear(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,16 +15,6 @@
 \description{
 Extract the isoyear component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{isoyear(ts = DATE)}
-\item \code{isoyear(ts = INTERVAL)}
-\item \code{isoyear(ts = TIMESTAMP)}
-\item \code{isoyear(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

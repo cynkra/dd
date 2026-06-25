@@ -4,12 +4,10 @@
 \alias{atan2}
 \title{DuckDB function atan2}
 \usage{
-atan2(y = DOUBLE, x = DOUBLE)
+atan2(y, x)
 }
 \arguments{
-\item{y}{\code{DOUBLE}}
-
-\item{x}{\code{DOUBLE}}
+\item{y, x}{\code{DOUBLE}}
 }
 \value{
 \code{DOUBLE}

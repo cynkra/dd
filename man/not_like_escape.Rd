@@ -4,14 +4,10 @@
 \alias{not_like_escape}
 \title{DuckDB function not_like_escape}
 \usage{
-not_like_escape(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR)
+not_like_escape(string, like_specifier, escape_character)
 }
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{like_specifier}{\code{VARCHAR}}
-
-\item{escape_character}{\code{VARCHAR}}
+\item{string, like_specifier, escape_character}{\code{VARCHAR}}
 }
 \value{
 \code{BOOLEAN}

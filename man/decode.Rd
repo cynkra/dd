@@ -3,6 +3,9 @@
 \name{decode}
 \alias{decode}
 \title{DuckDB function decode}
+\usage{
+decode(blob, varchar)
+}
 \arguments{
 \item{blob}{\code{BLOB}}
 

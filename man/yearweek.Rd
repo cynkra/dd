@@ -3,6 +3,9 @@
 \name{yearweek}
 \alias{yearweek}
 \title{DuckDB function yearweek}
+\usage{
+yearweek(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,16 +15,6 @@
 \description{
 Extract the yearweek component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{yearweek(ts = DATE)}
-\item \code{yearweek(ts = INTERVAL)}
-\item \code{yearweek(ts = TIMESTAMP)}
-\item \code{yearweek(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

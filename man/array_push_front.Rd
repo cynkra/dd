@@ -7,9 +7,7 @@
 array_push_front(arr, e)
 }
 \arguments{
-\item{arr}{Unspecified.}
-
-\item{e}{Unspecified.}
+\item{arr, e}{Unspecified.}
 }
 \value{
 Unspecified.

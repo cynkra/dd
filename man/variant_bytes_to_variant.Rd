@@ -4,7 +4,7 @@
 \alias{variant_bytes_to_variant}
 \title{DuckDB function variant_bytes_to_variant}
 \usage{
-variant_bytes_to_variant(col0 = BLOB)
+variant_bytes_to_variant(col0)
 }
 \arguments{
 \item{col0}{\code{BLOB}}

@@ -4,6 +4,9 @@
 \alias{list_extract}
 \alias{list_element}
 \title{DuckDB function list_extract}
+\usage{
+list_extract(list, index)
+}
 \arguments{
 \item{list}{\code{T[] | VARCHAR}}
 
@@ -15,14 +18,6 @@
 \description{
 Extract the \code{index}th (1-based) value from the list.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{list_extract(list = `T[]`, index = BIGINT)}
-\item \code{list_extract(list = VARCHAR, index = BIGINT)}
-}
-}
-
 \section{SQL examples}{
 
 

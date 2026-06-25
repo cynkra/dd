@@ -5,7 +5,7 @@
 \alias{from_binary}
 \title{DuckDB function unbin}
 \usage{
-unbin(value = VARCHAR)
+unbin(value)
 }
 \arguments{
 \item{value}{\code{VARCHAR}}

@@ -3,6 +3,9 @@
 \name{subtract}
 \alias{subtract}
 \title{DuckDB function subtract}
+\usage{
+subtract(col0, col1)
+}
 \arguments{
 \item{col0}{\verb{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL | TIME | TIME WITH TIME ZONE}}
 

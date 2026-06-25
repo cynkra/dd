@@ -3,6 +3,9 @@
 \name{to_days}
 \alias{to_days}
 \title{DuckDB function to_days}
+\usage{
+to_days(integer)
+}
 \arguments{
 \item{integer}{\code{INTEGER | BIGINT}}
 }
@@ -12,14 +15,6 @@
 \description{
 Construct a day interval.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{to_days(integer = INTEGER)}
-\item \code{to_days(integer = BIGINT)}
-}
-}
-
 \section{SQL examples}{
 
 

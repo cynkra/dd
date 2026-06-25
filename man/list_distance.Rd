@@ -3,10 +3,11 @@
 \name{list_distance}
 \alias{list_distance}
 \title{DuckDB function list_distance}
+\usage{
+list_distance(list1, list2)
+}
 \arguments{
-\item{list1}{\code{FLOAT[] | DOUBLE[]}}
-
-\item{list2}{\code{FLOAT[] | DOUBLE[]}}
+\item{list1, list2}{\code{FLOAT[] | DOUBLE[]}}
 }
 \value{
 \code{FLOAT | DOUBLE}
@@ -14,14 +15,6 @@
 \description{
 Calculates the Euclidean distance between two points with coordinates given in two inputs lists of equal length.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{list_distance(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}
-\item \code{list_distance(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}
-}
-}
-
 \section{SQL examples}{
 
 

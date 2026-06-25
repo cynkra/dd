@@ -4,7 +4,7 @@
 \alias{ln}
 \title{DuckDB function ln}
 \usage{
-ln(x = DOUBLE)
+ln(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

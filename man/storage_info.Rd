@@ -4,7 +4,7 @@
 \alias{storage_info}
 \title{DuckDB function storage_info}
 \usage{
-storage_info(col0 = VARCHAR)
+storage_info(col0)
 }
 \arguments{
 \item{col0}{\code{VARCHAR}}

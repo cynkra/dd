@@ -3,6 +3,9 @@
 \name{millennium}
 \alias{millennium}
 \title{DuckDB function millennium}
+\usage{
+millennium(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,16 +15,6 @@
 \description{
 Extract the millennium component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{millennium(ts = DATE)}
-\item \code{millennium(ts = INTERVAL)}
-\item \code{millennium(ts = TIMESTAMP)}
-\item \code{millennium(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

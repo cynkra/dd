@@ -4,7 +4,7 @@
 \alias{show}
 \title{DuckDB function show}
 \usage{
-show(col0 = VARCHAR)
+show(col0)
 }
 \arguments{
 \item{col0}{\code{VARCHAR}}

@@ -3,6 +3,9 @@
 \name{era}
 \alias{era}
 \title{DuckDB function era}
+\usage{
+era(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,16 +15,6 @@
 \description{
 Extract the era component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{era(ts = DATE)}
-\item \code{era(ts = INTERVAL)}
-\item \code{era(ts = TIMESTAMP)}
-\item \code{era(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

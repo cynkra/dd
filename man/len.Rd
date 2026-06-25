@@ -5,22 +5,21 @@
 \alias{char_length}
 \alias{character_length}
 \title{DuckDB function len}
+\usage{
+len(string)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
-
-\item{bit}{\code{BIT}}
-
-\item{list}{\code{ANY[]}}
 }
 \value{
 \code{BIGINT}
 }
 \description{
-Number of characters in \code{string}.
-
-Returns the bit-length of the \code{bit} argument.
-
-Returns the length of the \code{list}.
+\itemize{
+\item \code{len(string = VARCHAR)}: Number of characters in \code{string}.
+\item \code{len(bit = BIT)}: Returns the bit-length of the \code{bit} argument.
+\item \code{len(list = `ANY[]`)}: Returns the length of the \code{list}.
+}
 }
 \section{Overloads}{
 

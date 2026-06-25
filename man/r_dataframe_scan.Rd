@@ -4,12 +4,7 @@
 \alias{r_dataframe_scan}
 \title{DuckDB function r_dataframe_scan}
 \usage{
-r_dataframe_scan(
-  col0 = POINTER,
-  map_list_of = BOOLEAN,
-  experimental = BOOLEAN,
-  integer64 = BOOLEAN
-)
+r_dataframe_scan(col0, map_list_of, experimental, integer64)
 }
 \arguments{
 \item{col0}{\code{POINTER}}

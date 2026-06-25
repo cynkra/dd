@@ -4,7 +4,7 @@
 \alias{normalized_interval}
 \title{DuckDB function normalized_interval}
 \usage{
-normalized_interval(interval = INTERVAL)
+normalized_interval(interval)
 }
 \arguments{
 \item{interval}{\code{INTERVAL}}

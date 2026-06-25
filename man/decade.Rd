@@ -3,6 +3,9 @@
 \name{decade}
 \alias{decade}
 \title{DuckDB function decade}
+\usage{
+decade(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,16 +15,6 @@
 \description{
 Extract the decade component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{decade(ts = DATE)}
-\item \code{decade(ts = INTERVAL)}
-\item \code{decade(ts = TIMESTAMP)}
-\item \code{decade(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

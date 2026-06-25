@@ -3,12 +3,11 @@
 \name{has_any_column_privilege}
 \alias{has_any_column_privilege}
 \title{DuckDB function has_any_column_privilege}
+\usage{
+has_any_column_privilege(user, table, privilege)
+}
 \arguments{
-\item{table}{Unspecified.}
-
-\item{privilege}{Unspecified.}
-
-\item{user}{Unspecified.}
+\item{user, table, privilege}{Unspecified.}
 }
 \value{
 Unspecified.

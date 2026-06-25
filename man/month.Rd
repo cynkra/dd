@@ -3,6 +3,9 @@
 \name{month}
 \alias{month}
 \title{DuckDB function month}
+\usage{
+month(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,16 +15,6 @@
 \description{
 Extract the month component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{month(ts = DATE)}
-\item \code{month(ts = INTERVAL)}
-\item \code{month(ts = TIMESTAMP)}
-\item \code{month(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

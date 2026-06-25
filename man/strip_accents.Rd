@@ -4,7 +4,7 @@
 \alias{strip_accents}
 \title{DuckDB function strip_accents}
 \usage{
-strip_accents(string = VARCHAR)
+strip_accents(string)
 }
 \arguments{
 \item{string}{\code{VARCHAR}}

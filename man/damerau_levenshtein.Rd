@@ -4,12 +4,10 @@
 \alias{damerau_levenshtein}
 \title{DuckDB function damerau_levenshtein}
 \usage{
-damerau_levenshtein(s1 = VARCHAR, s2 = VARCHAR)
+damerau_levenshtein(s1, s2)
 }
 \arguments{
-\item{s1}{\code{VARCHAR}}
-
-\item{s2}{\code{VARCHAR}}
+\item{s1, s2}{\code{VARCHAR}}
 }
 \value{
 \code{BIGINT}

@@ -3,6 +3,9 @@
 \name{bit_count}
 \alias{bit_count}
 \title{DuckDB function bit_count}
+\usage{
+bit_count(x)
+}
 \arguments{
 \item{x}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | BIT}}
 }
@@ -12,18 +15,6 @@
 \description{
 Returns the number of bits that are set.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{bit_count(x = TINYINT)}
-\item \code{bit_count(x = SMALLINT)}
-\item \code{bit_count(x = INTEGER)}
-\item \code{bit_count(x = BIGINT)}
-\item \code{bit_count(x = HUGEINT)}
-\item \code{bit_count(x = BIT)}
-}
-}
-
 \section{SQL examples}{
 
 

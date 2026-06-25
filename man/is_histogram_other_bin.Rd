@@ -4,7 +4,7 @@
 \alias{is_histogram_other_bin}
 \title{DuckDB function is_histogram_other_bin}
 \usage{
-is_histogram_other_bin(val = ANY)
+is_histogram_other_bin(val)
 }
 \arguments{
 \item{val}{\code{ANY}}

@@ -4,7 +4,7 @@
 \alias{asin}
 \title{DuckDB function asin}
 \usage{
-asin(x = DOUBLE)
+asin(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

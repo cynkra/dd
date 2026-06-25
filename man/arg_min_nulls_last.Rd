@@ -3,12 +3,13 @@
 \name{arg_min_nulls_last}
 \alias{arg_min_nulls_last}
 \title{DuckDB function arg_min_nulls_last}
+\usage{
+arg_min_nulls_last(arg, val)
+}
 \arguments{
 \item{arg}{\verb{INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY}}
 
 \item{val}{\verb{INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY}}
-
-\item{N}{\code{BIGINT}}
 }
 \value{
 \verb{INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]}

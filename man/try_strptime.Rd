@@ -3,6 +3,9 @@
 \name{try_strptime}
 \alias{try_strptime}
 \title{DuckDB function try_strptime}
+\usage{
+try_strptime(text, format)
+}
 \arguments{
 \item{text}{\code{VARCHAR}}
 
@@ -14,14 +17,6 @@
 \description{
 Converts the \code{string} text to timestamp according to the format string. Returns \code{NULL} on failure.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{try_strptime(text = VARCHAR, format = VARCHAR)}
-\item \code{try_strptime(text = VARCHAR, format = `VARCHAR[]`)}
-}
-}
-
 \section{SQL examples}{
 
 

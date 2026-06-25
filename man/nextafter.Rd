@@ -3,10 +3,11 @@
 \name{nextafter}
 \alias{nextafter}
 \title{DuckDB function nextafter}
+\usage{
+nextafter(x, y)
+}
 \arguments{
-\item{x}{\code{DOUBLE | FLOAT}}
-
-\item{y}{\code{DOUBLE | FLOAT}}
+\item{x, y}{\code{DOUBLE | FLOAT}}
 }
 \value{
 \code{DOUBLE | FLOAT}
@@ -14,14 +15,6 @@
 \description{
 Returns the next floating point value after x in the direction of y.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{nextafter(x = DOUBLE, y = DOUBLE)}
-\item \code{nextafter(x = FLOAT, y = FLOAT)}
-}
-}
-
 \section{SQL examples}{
 
 

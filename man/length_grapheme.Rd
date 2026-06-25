@@ -4,7 +4,7 @@
 \alias{length_grapheme}
 \title{DuckDB function length_grapheme}
 \usage{
-length_grapheme(string = VARCHAR)
+length_grapheme(string)
 }
 \arguments{
 \item{string}{\code{VARCHAR}}

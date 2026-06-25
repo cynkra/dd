@@ -4,7 +4,7 @@
 \alias{create_sort_key}
 \title{DuckDB function create_sort_key}
 \usage{
-create_sort_key(parameters... = ANY)
+create_sort_key(parameters...)
 }
 \arguments{
 \item{parameters...}{\code{ANY}}

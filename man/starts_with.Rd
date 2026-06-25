@@ -5,12 +5,10 @@
 \alias{^@}
 \title{DuckDB function starts_with}
 \usage{
-starts_with(string = VARCHAR, search_string = VARCHAR)
+starts_with(string, search_string)
 }
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{search_string}{\code{VARCHAR}}
+\item{string, search_string}{\code{VARCHAR}}
 }
 \value{
 \code{BOOLEAN}

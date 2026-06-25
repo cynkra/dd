@@ -4,12 +4,10 @@
 \alias{parse_duckdb_log_message}
 \title{DuckDB function parse_duckdb_log_message}
 \usage{
-parse_duckdb_log_message(type = VARCHAR, message = VARCHAR)
+parse_duckdb_log_message(type, message)
 }
 \arguments{
-\item{type}{\code{VARCHAR}}
-
-\item{message}{\code{VARCHAR}}
+\item{type, message}{\code{VARCHAR}}
 }
 \value{
 \code{ANY}

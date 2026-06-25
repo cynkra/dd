@@ -3,12 +3,11 @@
 \name{has_language_privilege}
 \alias{has_language_privilege}
 \title{DuckDB function has_language_privilege}
+\usage{
+has_language_privilege(user, language, privilege)
+}
 \arguments{
-\item{language}{Unspecified.}
-
-\item{privilege}{Unspecified.}
-
-\item{user}{Unspecified.}
+\item{user, language, privilege}{Unspecified.}
 }
 \value{
 Unspecified.

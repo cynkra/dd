@@ -4,7 +4,7 @@
 \alias{test_vector_types}
 \title{DuckDB function test_vector_types}
 \usage{
-test_vector_types(col0 = ANY, all_flat = BOOLEAN)
+test_vector_types(col0, all_flat)
 }
 \arguments{
 \item{col0}{\code{ANY}}

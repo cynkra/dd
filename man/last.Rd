@@ -3,10 +3,11 @@
 \name{last}
 \alias{last}
 \title{DuckDB function last}
+\usage{
+last(arg)
+}
 \arguments{
 \item{arg}{\code{DECIMAL | ANY}}
-
-\item{col0}{\code{T}}
 }
 \value{
 \code{DECIMAL | ANY | T}

@@ -4,7 +4,7 @@
 \alias{sem}
 \title{DuckDB function sem}
 \usage{
-sem(x = DOUBLE)
+sem(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

@@ -4,12 +4,10 @@
 \alias{cast_to_type}
 \title{DuckDB function cast_to_type}
 \usage{
-cast_to_type(param = ANY, type = ANY)
+cast_to_type(param, type)
 }
 \arguments{
-\item{param}{\code{ANY}}
-
-\item{type}{\code{ANY}}
+\item{param, type}{\code{ANY}}
 }
 \value{
 \code{ANY}
