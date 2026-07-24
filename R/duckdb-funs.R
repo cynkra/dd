@@ -192,6 +192,12 @@ add <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT 
   stop("DuckDB function add() is not available in R.")
 }
 
+#' @rdname add
+#' @usage NULL
+`+` <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`) {
+  stop("DuckDB function +() is not available in R.")
+}
+
 #' DuckDB function add_parquet_key
 #'
 #' @description
@@ -867,6 +873,32 @@ arg_min_null <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIM
 #' ```
 arg_min_nulls_last <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`) {
   stop("DuckDB function arg_min_nulls_last() is not available in R.")
+}
+
+#' DuckDB function array_agg
+#'
+#' @description
+#' Returns a LIST containing all the values of a column.
+#'
+#' @name array_agg
+#' @usage array_agg(arg)
+#' @param arg `T`
+#' @return `T[]`
+#' @export
+#' @section SQL examples:
+#' ```
+#' array_agg(A)
+#' list(A)
+#' ```
+array_agg <- function(arg = T) {
+  stop("DuckDB function array_agg() is not available in R.")
+}
+
+#' @rdname array_agg
+#' @usage NULL
+#' @export
+list <- function(arg = T) {
+  stop("DuckDB function list() is not available in R.")
 }
 
 #' DuckDB function array_append
@@ -3343,6 +3375,32 @@ enable_checkpoint_on_shutdown <- function() {
   stop("DuckDB function enable_checkpoint_on_shutdown() is not available in R.")
 }
 
+#' DuckDB function enable_logging
+#'
+#' @description
+#' DuckDB function `enable_logging()`.
+#'
+#' @name enable_logging
+#' @usage enable_logging(
+#'   storage_buffer_size,
+#'   storage_normalize,
+#'   storage_path,
+#'   storage_config,
+#'   storage,
+#'   level
+#' )
+#' @param storage_buffer_size `UBIGINT`
+#' @param storage_normalize `BOOLEAN`
+#' @param storage_path `VARCHAR`
+#' @param storage_config `ANY`
+#' @param storage `VARCHAR`
+#' @param level `VARCHAR`
+#' @return Unspecified.
+#' @export
+enable_logging <- function(storage_buffer_size = UBIGINT, storage_normalize = BOOLEAN, storage_path = VARCHAR, storage_config = ANY, storage = VARCHAR, level = VARCHAR) {
+  stop("DuckDB function enable_logging() is not available in R.")
+}
+
 #' DuckDB function enable_object_cache
 #'
 #' @description
@@ -3950,6 +4008,24 @@ fmod <- function(x, y) {
 #' }
 force_checkpoint <- function() {
   stop("DuckDB function force_checkpoint() is not available in R.")
+}
+
+#' DuckDB function format
+#'
+#' @description
+#' Formats a string using the fmt syntax.
+#'
+#' @name format
+#' @usage format(format)
+#' @param format `VARCHAR`
+#' @return `VARCHAR`
+#' @family string
+#' @section SQL examples:
+#' ```
+#' format('Benchmark "{}" took {} seconds', 'CSV', 42)
+#' ```
+format <- function(format = VARCHAR) {
+  stop("DuckDB function format() is not available in R.")
 }
 
 #' DuckDB function formatReadableDecimalSize
@@ -5309,6 +5385,12 @@ character_length <- function(string = VARCHAR) {
   stop("DuckDB function character_length() is not available in R.")
 }
 
+#' @rdname len
+#' @usage NULL
+length <- function(string = VARCHAR) {
+  stop("DuckDB function length() is not available in R.")
+}
+
 #' DuckDB function length_grapheme
 #'
 #' @description
@@ -5389,31 +5471,6 @@ lgamma <- function(x = DOUBLE) {
 #' ```
 like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
   stop("DuckDB function like_escape() is not available in R.")
-}
-
-#' DuckDB function list
-#'
-#' @description
-#' Returns a LIST containing all the values of a column.
-#'
-#' @name list
-#' @usage list(arg)
-#' @param arg `T`
-#' @return `T[]`
-#' @export
-#' @section SQL examples:
-#' ```
-#' list(A)
-#' ```
-list <- function(arg = T) {
-  stop("DuckDB function list() is not available in R.")
-}
-
-#' @rdname list
-#' @usage NULL
-#' @export
-array_agg <- function(arg = T) {
-  stop("DuckDB function array_agg() is not available in R.")
 }
 
 #' DuckDB function list_aggregate
@@ -9614,6 +9671,24 @@ regr_syy <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function regr_syy() is not available in R.")
 }
 
+#' DuckDB function remap_struct
+#'
+#' @description
+#' Map a struct to another struct type, potentially re-ordering, renaming and casting members and filling in defaults for missing values.
+#'
+#' @name remap_struct
+#' @usage remap_struct(input, target_type, mapping, defaults)
+#' @param input,target_type,mapping,defaults `ANY`
+#' @return `ANY`
+#' @export
+#' @section SQL examples:
+#' ```
+#' remap_struct({'i': 1, 'j': 2}, NULL::ROW(v1 INT, v2 INT, v3 INT), {'v1': 'j', 'v3': 'i'}, {'v2': NULL::INTEGER})
+#' ```
+remap_struct <- function(input = ANY, target_type = ANY, mapping = ANY, defaults = ANY) {
+  stop("DuckDB function remap_struct() is not available in R.")
+}
+
 #' DuckDB function repeat
 #'
 #' @description
@@ -10293,6 +10368,114 @@ sleep_ms <- function(milliseconds = BIGINT) {
   stop("DuckDB function sleep_ms() is not available in R.")
 }
 
+#' DuckDB function sniff_csv
+#'
+#' @description
+#' DuckDB function `sniff_csv()`.
+#'
+#' @name sniff_csv
+#' @usage sniff_csv(
+#'   col0,
+#'   force_match,
+#'   hive_types,
+#'   union_by_name,
+#'   hive_partitioning,
+#'   filename,
+#'   thousands,
+#'   strict_mode,
+#'   hive_types_autocast,
+#'   encoding,
+#'   dtypes,
+#'   column_types,
+#'   auto_detect,
+#'   sample_size,
+#'   files_to_sniff,
+#'   dateformat,
+#'   columns,
+#'   all_varchar,
+#'   new_line,
+#'   header,
+#'   types,
+#'   skip,
+#'   compression,
+#'   comment,
+#'   quote,
+#'   max_line_size,
+#'   store_rejects,
+#'   delim,
+#'   sep,
+#'   column_names,
+#'   buffer_size,
+#'   timestampformat,
+#'   normalize_names,
+#'   ignore_errors,
+#'   names,
+#'   allow_quoted_nulls,
+#'   maximum_line_size,
+#'   rejects_table,
+#'   force_not_null,
+#'   parallel,
+#'   auto_type_candidates,
+#'   rejects_scan,
+#'   rejects_limit,
+#'   nullstr,
+#'   escape,
+#'   decimal_separator,
+#'   null_padding
+#' )
+#' @param col0 `VARCHAR`
+#' @param force_match `BOOLEAN`
+#' @param hive_types `ANY`
+#' @param union_by_name `BOOLEAN`
+#' @param hive_partitioning `BOOLEAN`
+#' @param filename `ANY`
+#' @param thousands `VARCHAR`
+#' @param strict_mode `BOOLEAN`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param encoding `VARCHAR`
+#' @param dtypes `ANY`
+#' @param column_types `ANY`
+#' @param auto_detect `BOOLEAN`
+#' @param sample_size `BIGINT`
+#' @param files_to_sniff `BIGINT`
+#' @param dateformat `VARCHAR`
+#' @param columns `ANY`
+#' @param all_varchar `BOOLEAN`
+#' @param new_line `VARCHAR`
+#' @param header `BOOLEAN`
+#' @param types `ANY`
+#' @param skip `BIGINT`
+#' @param compression `VARCHAR`
+#' @param comment `VARCHAR`
+#' @param quote `VARCHAR`
+#' @param max_line_size `VARCHAR`
+#' @param store_rejects `BOOLEAN`
+#' @param delim `VARCHAR`
+#' @param sep `VARCHAR`
+#' @param column_names `VARCHAR[]`
+#' @param buffer_size `UBIGINT`
+#' @param timestampformat `VARCHAR`
+#' @param normalize_names `BOOLEAN`
+#' @param ignore_errors `BOOLEAN`
+#' @param names `VARCHAR[]`
+#' @param allow_quoted_nulls `BOOLEAN`
+#' @param maximum_line_size `VARCHAR`
+#' @param rejects_table `VARCHAR`
+#' @param force_not_null `VARCHAR[]`
+#' @param parallel `BOOLEAN`
+#' @param auto_type_candidates `ANY`
+#' @param rejects_scan `VARCHAR`
+#' @param rejects_limit `BIGINT`
+#' @param nullstr `ANY`
+#' @param escape `VARCHAR`
+#' @param decimal_separator `VARCHAR`
+#' @param null_padding `BOOLEAN`
+#' @return Unspecified.
+#' @export
+sniff_csv <- function(col0 = VARCHAR, force_match = BOOLEAN, hive_types = ANY, union_by_name = BOOLEAN, hive_partitioning = BOOLEAN, filename = ANY, thousands = VARCHAR, strict_mode = BOOLEAN, hive_types_autocast = BOOLEAN, encoding = VARCHAR, dtypes = ANY, column_types = ANY, auto_detect = BOOLEAN, sample_size = BIGINT, files_to_sniff = BIGINT, dateformat = VARCHAR, columns = ANY, all_varchar = BOOLEAN, new_line = VARCHAR, header = BOOLEAN, types = ANY, skip = BIGINT, compression = VARCHAR, comment = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, store_rejects = BOOLEAN, delim = VARCHAR, sep = VARCHAR, column_names = `VARCHAR[]`, buffer_size = UBIGINT, timestampformat = VARCHAR, normalize_names = BOOLEAN, ignore_errors = BOOLEAN, names = `VARCHAR[]`, allow_quoted_nulls = BOOLEAN, maximum_line_size = VARCHAR, rejects_table = VARCHAR, force_not_null = `VARCHAR[]`, parallel = BOOLEAN, auto_type_candidates = ANY, rejects_scan = VARCHAR, rejects_limit = BIGINT, nullstr = ANY, escape = VARCHAR, decimal_separator = VARCHAR, null_padding = BOOLEAN) {
+  stop("DuckDB function sniff_csv() is not available in R.")
+}
+
 #' DuckDB function split_part
 #'
 #' @description
@@ -10790,6 +10973,25 @@ struct_extract <- function(struct = STRUCT, entry = `VARCHAR | BIGINT`) {
   stop("DuckDB function struct_extract() is not available in R.")
 }
 
+#' DuckDB function struct_extract_at
+#'
+#' @description
+#' Extract the entry from the STRUCT by position (starts at 1!).
+#'
+#' @name struct_extract_at
+#' @usage struct_extract_at(struct, entry)
+#' @param struct `STRUCT`
+#' @param entry `BIGINT`
+#' @return `ANY`
+#' @export
+#' @section SQL examples:
+#' ```
+#' struct_extract_at({'i': 3, 'v2': 3, 'v3': 0}, 2)
+#' ```
+struct_extract_at <- function(struct = STRUCT, entry = BIGINT) {
+  stop("DuckDB function struct_extract_at() is not available in R.")
+}
+
 #' DuckDB function struct_insert
 #'
 #' @description
@@ -11020,6 +11222,12 @@ substring_grapheme <- function(string = VARCHAR, start = BIGINT, length = BIGINT
 #' }
 subtract <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL | TIME | TIME WITH TIME ZONE`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL`) {
   stop("DuckDB function subtract() is not available in R.")
+}
+
+#' @rdname subtract
+#' @usage NULL
+`-` <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL | TIME | TIME WITH TIME ZONE`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL`) {
+  stop("DuckDB function -() is not available in R.")
 }
 
 #' DuckDB function suffix

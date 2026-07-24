@@ -45,6 +45,7 @@ Other string:
 \code{\link[=concat]{concat()}},
 \code{\link[=concat_ws]{concat_ws()}},
 \code{\link[=contains]{contains()}},
+\code{\link[=format]{format()}},
 \code{\link[=formatReadableDecimalSize]{formatReadableDecimalSize()}},
 \code{\link[=from_base64]{from_base64()}},
 \code{\link[=greatest]{greatest()}},
