@@ -41,7 +41,7 @@ Other list:
 \code{\link[=contains]{contains()}},
 \code{\link[=flatten]{flatten()}},
 \code{\link[=generate_series]{generate_series()}},
-\code{\link[=len]{len()}},
+\code{\link[=length]{length()}},
 \code{\link[=list_aggregate]{list_aggregate()}},
 \code{\link[=list_concat]{list_concat()}},
 \code{\link[=list_contains]{list_contains()}},

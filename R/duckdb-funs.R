@@ -5288,25 +5288,25 @@ left_grapheme <- function(string = VARCHAR, count = BIGINT) {
   stop("DuckDB function left_grapheme() is not available in R.")
 }
 
-#' DuckDB function len
+#' DuckDB function length
 #'
 #' @description
 #' \itemize{
-#' \item \code{len(string = VARCHAR)}: Number of characters in `string`.
-#' \item \code{len(bit = BIT)}: Returns the bit-length of the `bit` argument.
-#' \item \code{len(list = `ANY[]`)}: Returns the length of the `list`.
+#' \item \code{length(string = VARCHAR)}: Number of characters in `string`.
+#' \item \code{length(bit = BIT)}: Returns the bit-length of the `bit` argument.
+#' \item \code{length(list = `ANY[]`)}: Returns the length of the `list`.
 #' }
 #'
-#' @name len
-#' @usage len(string)
+#' @name length
+#' @usage length(string)
 #' @param string `VARCHAR`
 #' @return `BIGINT`
 #' @export
 #' @section Overloads:
 #' \itemize{
-#' \item \code{len(string = VARCHAR)}
-#' \item \code{len(bit = BIT)}
-#' \item \code{len(list = `ANY[]`)}
+#' \item \code{length(string = VARCHAR)}
+#' \item \code{length(bit = BIT)}
+#' \item \code{length(list = `ANY[]`)}
 #' }
 #' @family list
 #' @family numeric
@@ -5317,22 +5317,29 @@ left_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #' length(42::TINYINT::BIT)
 #' length([1,2,3])
 #' ```
-len <- function(string = VARCHAR) {
-  stop("DuckDB function len() is not available in R.")
+length <- function(string = VARCHAR) {
+  stop("DuckDB function length() is not available in R.")
 }
 
-#' @rdname len
+#' @rdname length
 #' @usage NULL
 #' @export
 char_length <- function(string = VARCHAR) {
   stop("DuckDB function char_length() is not available in R.")
 }
 
-#' @rdname len
+#' @rdname length
 #' @usage NULL
 #' @export
 character_length <- function(string = VARCHAR) {
   stop("DuckDB function character_length() is not available in R.")
+}
+
+#' @rdname length
+#' @usage NULL
+#' @export
+len <- function(string = VARCHAR) {
+  stop("DuckDB function len() is not available in R.")
 }
 
 #' DuckDB function length_grapheme

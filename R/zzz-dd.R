@@ -344,6 +344,7 @@ dd <- base::list(
   left = left,
   left_grapheme = left_grapheme,
   len = len,
+  length = length,
   length_grapheme = length_grapheme,
   levenshtein = levenshtein,
   lgamma = lgamma,

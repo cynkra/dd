@@ -717,8 +717,6 @@ funs <-
       examples
     )
   ) |>
-  # FIXME: Breaks devtools::document()
-  filter_print(!(function_name %in% c("length"))) |>
   # FIXME: Breaks R CMD check
   filter_print(!(function_name %in% c("<->", "+", "format"))) |>
   # FIXME: No documentation generated yet
