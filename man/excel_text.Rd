@@ -17,3 +17,8 @@ excel_text(col0, col1)
 \description{
 DuckDB function \code{excel_text()}.
 }
+\section{Provided by}{
+
+The \code{excel} extension (\code{LOAD excel;}).
+}
+

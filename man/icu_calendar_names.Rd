@@ -12,3 +12,8 @@ Unspecified.
 \description{
 DuckDB function \code{icu_calendar_names()}.
 }
+\section{Provided by}{
+
+The \code{icu} extension (\code{LOAD icu;}).
+}
+

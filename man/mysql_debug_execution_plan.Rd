@@ -12,3 +12,8 @@ Unspecified.
 \description{
 DuckDB function \code{mysql_debug_execution_plan()}.
 }
+\section{Provided by}{
+
+The \code{mysql_scanner} extension (\code{LOAD mysql_scanner;}).
+}
+

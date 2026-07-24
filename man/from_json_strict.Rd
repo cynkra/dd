@@ -17,3 +17,8 @@ from_json_strict(col0, col1)
 \description{
 DuckDB function \code{from_json_strict()}.
 }
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

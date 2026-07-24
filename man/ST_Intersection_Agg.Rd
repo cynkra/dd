@@ -15,3 +15,8 @@ ST_Intersection_Agg(col0)
 \description{
 Computes the intersection of a set of geometries.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

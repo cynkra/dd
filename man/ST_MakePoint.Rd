@@ -32,6 +32,11 @@ Note that ST_Point is equivalent. ST_MakePoint is provided for PostGIS compatibi
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

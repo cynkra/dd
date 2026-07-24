@@ -15,3 +15,8 @@ ST_VoronoiDiagram(geom)
 \description{
 Returns the Voronoi diagram of the supplied MultiPoint geometry.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

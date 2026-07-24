@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB macro \code{copy_dir()}.
 }
+\section{Provided by}{
+
+The \code{delta} extension (\code{LOAD delta;}).
+}
+

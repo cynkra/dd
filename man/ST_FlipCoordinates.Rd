@@ -26,3 +26,8 @@ Returns a new geometry with the coordinates of the input geometry "flipped" so t
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

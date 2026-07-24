@@ -17,3 +17,8 @@ ST_LineInterpolatePoint(line, fraction)
 \description{
 Returns a point interpolated along a line at a fraction of total 2D length.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

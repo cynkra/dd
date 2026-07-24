@@ -15,3 +15,8 @@ ST_IsSimple(geom)
 \description{
 Returns true if the geometry is simple.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

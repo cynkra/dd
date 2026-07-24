@@ -22,6 +22,11 @@ The \code{ST_ReadOSM()} function also provides a "replacement scan" to enable re
 ```.
 }\if{html}{\out{</div>}}
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

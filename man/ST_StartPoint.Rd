@@ -23,3 +23,8 @@ Returns the start point of a LINESTRING.
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

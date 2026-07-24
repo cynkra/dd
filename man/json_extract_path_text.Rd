@@ -17,3 +17,8 @@ json_extract_path_text(col0, col1)
 \description{
 DuckDB function \code{json_extract_path_text()}.
 }
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

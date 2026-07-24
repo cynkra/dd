@@ -40,3 +40,8 @@ DuckDB function \code{ducklake_merge_adjacent_files()}.
 }
 }
 
+\section{Provided by}{
+
+The \code{ducklake} extension (\code{LOAD ducklake;}).
+}
+

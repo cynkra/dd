@@ -15,3 +15,8 @@ ST_Covers(geom1, geom2)
 \description{
 Returns true if the geom1 "covers" geom2.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

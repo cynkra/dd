@@ -15,3 +15,8 @@ ST_Touches(geom1, geom2)
 \description{
 Returns true if the geometries touch.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

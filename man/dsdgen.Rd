@@ -25,3 +25,8 @@ Unspecified.
 \description{
 DuckDB function \code{dsdgen()}.
 }
+\section{Provided by}{
+
+The \code{tpcds} extension (\code{LOAD tpcds;}).
+}
+

@@ -15,6 +15,11 @@ ST_MMax(geom)
 \description{
 Returns the maximum M coordinate of a geometry.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

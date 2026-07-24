@@ -23,3 +23,8 @@ Returns the end point of a LINESTRING.
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

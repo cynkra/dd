@@ -12,3 +12,8 @@ Unspecified.
 \description{
 DuckDB function \code{disable_peg_parser()}.
 }
+\section{Provided by}{
+
+The \code{autocomplete} extension (\code{LOAD autocomplete;}).
+}
+

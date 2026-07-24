@@ -17,6 +17,11 @@ Alias for \href{#st_extent_agg}{ST_Extent_Agg}.
 
 Computes the minimal-bounding-box polygon containing the set of input geometries.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

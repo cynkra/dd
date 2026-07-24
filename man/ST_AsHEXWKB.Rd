@@ -15,6 +15,11 @@ ST_AsHEXWKB(geom)
 \description{
 Returns the geometry as a HEXWKB string.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

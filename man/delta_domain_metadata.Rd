@@ -17,3 +17,8 @@ Unspecified.
 \description{
 DuckDB function \code{delta_domain_metadata()}.
 }
+\section{Provided by}{
+
+The \code{delta} extension (\code{LOAD delta;}).
+}
+

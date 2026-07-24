@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB macro \code{json_group_object()}.
 }
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

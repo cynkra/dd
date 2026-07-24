@@ -23,3 +23,8 @@ Returns the length of the input line geometry.
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

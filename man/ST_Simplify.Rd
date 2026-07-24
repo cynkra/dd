@@ -17,3 +17,8 @@ ST_Simplify(geom, tolerance)
 \description{
 Returns a simplified version of the geometry.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

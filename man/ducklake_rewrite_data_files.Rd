@@ -29,3 +29,8 @@ DuckDB function \code{ducklake_rewrite_data_files()}.
 }
 }
 
+\section{Provided by}{
+
+The \code{ducklake} extension (\code{LOAD ducklake;}).
+}
+

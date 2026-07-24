@@ -15,3 +15,8 @@ ST_LineString2DFromWKB(blob)
 \description{
 Deserialize a LINESTRING_2D from a WKB encoded blob.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

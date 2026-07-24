@@ -25,6 +25,11 @@ Returns the N-th interior ring (hole) of a POLYGON as a LINESTRING. Indexing is 
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

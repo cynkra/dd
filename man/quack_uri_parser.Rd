@@ -17,3 +17,8 @@ quack_uri_parser(col0, col1)
 \description{
 DuckDB function \code{quack_uri_parser()}.
 }
+\section{Provided by}{
+
+The \code{quack} extension (\code{LOAD quack;}).
+}
+

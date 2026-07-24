@@ -36,3 +36,8 @@ DuckDB function \code{make_timestamptz()}.
 }
 }
 
+\section{Provided by}{
+
+The \code{icu} extension (\code{LOAD icu;}).
+}
+

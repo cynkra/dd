@@ -35,3 +35,8 @@ Unspecified.
 \description{
 DuckDB function \code{iceberg_partition_stats()}.
 }
+\section{Provided by}{
+
+The \code{iceberg} extension (\code{LOAD iceberg;}).
+}
+

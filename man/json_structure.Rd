@@ -15,3 +15,8 @@ json_structure(col0)
 \description{
 DuckDB function \code{json_structure()}.
 }
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

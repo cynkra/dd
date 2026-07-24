@@ -12,3 +12,8 @@ Unspecified.
 \description{
 DuckDB macro \code{whoami()}.
 }
+\section{Provided by}{
+
+The \code{quack} extension (\code{LOAD quack;}).
+}
+

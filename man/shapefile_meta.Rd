@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB function \code{shapefile_meta()}.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

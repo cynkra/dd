@@ -15,3 +15,8 @@ ST_ClosestPoint(geom1, geom2)
 \description{
 Returns the closest point on the first geometry to the second geometry.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

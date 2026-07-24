@@ -17,3 +17,8 @@ Unspecified.
 \description{
 DuckDB function \code{set_iceberg_table_properties()}.
 }
+\section{Provided by}{
+
+The \code{iceberg} extension (\code{LOAD iceberg;}).
+}
+

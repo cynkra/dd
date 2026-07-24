@@ -17,6 +17,11 @@ Turns a single geometry into a multi geometry.
 
 If the geometry is already a multi geometry, it is returned as is.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

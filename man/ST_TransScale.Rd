@@ -15,6 +15,11 @@ Unspecified.
 \description{
 Translates and then scales a geometry in X and Y direction. This is a shorthand macro for calling ST_Affine.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

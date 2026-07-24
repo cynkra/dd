@@ -44,3 +44,8 @@ Unspecified.
 \description{
 DuckDB function \code{lance_vector_search()}.
 }
+\section{Provided by}{
+
+The \code{lance} extension (\code{LOAD lance;}).
+}
+

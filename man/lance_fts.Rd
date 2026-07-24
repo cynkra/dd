@@ -25,3 +25,8 @@ Unspecified.
 \description{
 DuckDB function \code{lance_fts()}.
 }
+\section{Provided by}{
+
+The \code{lance} extension (\code{LOAD lance;}).
+}
+

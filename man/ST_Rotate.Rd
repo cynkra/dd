@@ -15,3 +15,8 @@ Unspecified.
 \description{
 Alias of ST_RotateZ.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

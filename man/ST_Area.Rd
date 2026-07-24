@@ -33,6 +33,11 @@ The \code{POINT_2D} and \code{LINESTRING_2D} overloads of this function always r
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

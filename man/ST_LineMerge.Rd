@@ -25,3 +25,8 @@ ST_LineMerge(geom, preserve_direction)
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

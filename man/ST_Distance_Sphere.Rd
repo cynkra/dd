@@ -28,3 +28,8 @@ Returns the haversine (great circle) distance between two geometries.
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

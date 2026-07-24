@@ -15,3 +15,8 @@ ST_IsValid(geom)
 \description{
 Returns true if the geometry is valid.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

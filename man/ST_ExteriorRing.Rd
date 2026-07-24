@@ -23,3 +23,8 @@ Returns the exterior ring (shell) of a polygon geometry.
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

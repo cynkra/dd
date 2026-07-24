@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB function \code{drop_fts_index()}.
 }
+\section{Provided by}{
+
+The \code{fts} extension (\code{LOAD fts;}).
+}
+

@@ -23,3 +23,8 @@ Unspecified.
 \description{
 DuckDB function \code{ducklake_set_option()}.
 }
+\section{Provided by}{
+
+The \code{ducklake} extension (\code{LOAD ducklake;}).
+}
+

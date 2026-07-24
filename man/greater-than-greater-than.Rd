@@ -26,6 +26,11 @@ DuckDB function \verb{->>()}.
 
 Bitwise shift right.
 }
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+
 \section{SQL examples}{
 
 

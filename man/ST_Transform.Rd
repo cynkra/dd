@@ -41,6 +41,11 @@ DuckDB spatial vendors its own static copy of the PROJ database of coordinate sy
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

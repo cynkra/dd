@@ -17,3 +17,8 @@ ST_SimplifyPreserveTopology(geom, tolerance)
 \description{
 Returns a simplified version of the geometry that preserves topology.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

@@ -17,3 +17,8 @@ Deserialize a GEOMETRY from a HEX(E)WKB encoded string
 
 DuckDB spatial doesn't currently differentiate between \code{WKB} and \code{EWKB}, so \code{ST_GeomFromHEXWKB} and \code{ST_GeomFromHEXEWKB} are just aliases of each other.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

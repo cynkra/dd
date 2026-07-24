@@ -17,3 +17,8 @@ Returns true if the first geometry \"properly\" is contained by the second geome
 
 This function functions the same as \code{ST_ContainsProperly}, but the arguments are swapped.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

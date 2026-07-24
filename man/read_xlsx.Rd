@@ -41,3 +41,8 @@ Unspecified.
 \description{
 DuckDB function \code{read_xlsx()}.
 }
+\section{Provided by}{
+
+The \code{excel} extension (\code{LOAD excel;}).
+}
+

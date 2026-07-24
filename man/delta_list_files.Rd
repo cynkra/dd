@@ -21,3 +21,8 @@ Unspecified.
 \description{
 DuckDB function \code{delta_list_files()}.
 }
+\section{Provided by}{
+
+The \code{delta} extension (\code{LOAD delta;}).
+}
+

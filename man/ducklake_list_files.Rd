@@ -23,3 +23,8 @@ Unspecified.
 \description{
 DuckDB function \code{ducklake_list_files()}.
 }
+\section{Provided by}{
+
+The \code{ducklake} extension (\code{LOAD ducklake;}).
+}
+

@@ -15,3 +15,8 @@ ST_Disjoint(geom1, geom2)
 \description{
 Returns true if the geometries are disjoint.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

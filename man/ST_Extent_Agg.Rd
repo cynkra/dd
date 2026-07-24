@@ -15,6 +15,11 @@ ST_Extent_Agg(col0)
 \description{
 Computes the minimal-bounding-box polygon containing the set of input geometries.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

@@ -35,3 +35,8 @@ See "ST_AsMVT" for more details.
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

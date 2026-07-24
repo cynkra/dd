@@ -12,3 +12,8 @@ get_delta_test_expression()
 \description{
 DuckDB function \code{get_delta_test_expression()}.
 }
+\section{Provided by}{
+
+The \code{delta} extension (\code{LOAD delta;}).
+}
+

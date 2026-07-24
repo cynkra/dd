@@ -15,3 +15,8 @@ ST_IsClosed(geom)
 \description{
 Check if a geometry is 'closed'.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

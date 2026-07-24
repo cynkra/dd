@@ -32,6 +32,11 @@ the bottom right is \verb{[x=3, y=3]}.
 [x=3, y=3]: R:x=3,\%20y=3
 }\if{html}{\out{</div>}}
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

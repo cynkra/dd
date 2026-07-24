@@ -29,3 +29,8 @@ By default, the boundary of the coverage is also simplified, but this can be con
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

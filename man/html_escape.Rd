@@ -25,3 +25,8 @@ DuckDB function \code{html_escape()}.
 }
 }
 
+\section{Provided by}{
+
+The \code{inet} extension (\code{LOAD inet;}).
+}
+

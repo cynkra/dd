@@ -23,3 +23,8 @@ Returns true if the geometries intersect.
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

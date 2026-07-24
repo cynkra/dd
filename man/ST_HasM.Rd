@@ -15,6 +15,11 @@ ST_HasM(geom)
 \description{
 Check if the input geometry has M values.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

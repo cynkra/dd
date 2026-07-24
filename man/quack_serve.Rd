@@ -29,3 +29,8 @@ DuckDB function \code{quack_serve()}.
 }
 }
 
+\section{Provided by}{
+
+The \code{quack} extension (\code{LOAD quack;}).
+}
+

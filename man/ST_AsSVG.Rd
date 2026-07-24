@@ -25,6 +25,11 @@ The third argument specifies the maximum number of digits to use for the coordin
 
 Points are formatted as cx/cy using absolute coordinates or x/y using relative coordinates.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

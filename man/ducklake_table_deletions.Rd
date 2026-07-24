@@ -23,3 +23,8 @@ Unspecified.
 \description{
 DuckDB function \code{ducklake_table_deletions()}.
 }
+\section{Provided by}{
+
+The \code{ducklake} extension (\code{LOAD ducklake;}).
+}
+

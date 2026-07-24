@@ -15,3 +15,8 @@ stem(col0, col1)
 \description{
 DuckDB function \code{stem()}.
 }
+\section{Provided by}{
+
+The \code{fts} extension (\code{LOAD fts;}).
+}
+

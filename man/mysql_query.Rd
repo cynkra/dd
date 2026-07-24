@@ -21,3 +21,8 @@ Unspecified.
 \description{
 DuckDB function \code{mysql_query()}.
 }
+\section{Provided by}{
+
+The \code{mysql_scanner} extension (\code{LOAD mysql_scanner;}).
+}
+

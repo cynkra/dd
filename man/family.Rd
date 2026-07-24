@@ -15,3 +15,8 @@ family(col0)
 \description{
 DuckDB function \code{family()}.
 }
+\section{Provided by}{
+
+The \code{inet} extension (\code{LOAD inet;}).
+}
+

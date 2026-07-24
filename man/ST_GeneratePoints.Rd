@@ -29,6 +29,11 @@ Takes a bounding box (min_x, min_y, max_x, max_y), a count of points to generate
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

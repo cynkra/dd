@@ -15,3 +15,8 @@ html_unescape(col0)
 \description{
 DuckDB function \code{html_unescape()}.
 }
+\section{Provided by}{
+
+The \code{inet} extension (\code{LOAD inet;}).
+}
+

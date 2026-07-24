@@ -23,3 +23,8 @@ DuckDB function \code{ST_Translate()}.
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

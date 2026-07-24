@@ -12,3 +12,8 @@ to_json()
 \description{
 DuckDB function \code{to_json()}.
 }
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

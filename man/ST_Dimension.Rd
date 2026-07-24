@@ -21,6 +21,11 @@ Returns the "topological dimension" of a geometry.
 \item For GEOMETRYCOLLECTION, returns the maximum dimension of the contained geometries, or 0 if the collection is empty.
 }
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

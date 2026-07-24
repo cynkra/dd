@@ -29,3 +29,8 @@ For the BOX_2D and BOX_2DF variants, the center of the box is used as the point 
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

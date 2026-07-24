@@ -42,6 +42,11 @@ If the input geometry is not a GeometryCollection, the function will return the 
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

@@ -15,6 +15,11 @@ ST_Polygonize(geometries)
 \description{
 Returns a polygonized representation of the input geometries.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

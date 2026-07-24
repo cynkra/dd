@@ -12,3 +12,8 @@ json_quote()
 \description{
 DuckDB function \code{json_quote()}.
 }
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

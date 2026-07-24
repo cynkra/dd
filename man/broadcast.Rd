@@ -15,3 +15,8 @@ broadcast(col0)
 \description{
 DuckDB function \code{broadcast()}.
 }
+\section{Provided by}{
+
+The \code{inet} extension (\code{LOAD inet;}).
+}
+

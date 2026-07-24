@@ -15,3 +15,8 @@ icu_sort_key(col0, col1)
 \description{
 DuckDB function \code{icu_sort_key()}.
 }
+\section{Provided by}{
+
+The \code{icu} extension (\code{LOAD icu;}).
+}
+

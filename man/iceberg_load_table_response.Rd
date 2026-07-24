@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB function \code{iceberg_load_table_response()}.
 }
+\section{Provided by}{
+
+The \code{iceberg} extension (\code{LOAD iceberg;}).
+}
+

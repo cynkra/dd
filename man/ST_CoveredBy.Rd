@@ -15,3 +15,8 @@ ST_CoveredBy(geom1, geom2)
 \description{
 Returns true if geom1 is "covered by" geom2.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

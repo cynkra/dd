@@ -15,3 +15,8 @@ ST_Union_Agg(col0)
 \description{
 Computes the union of a set of input geometries.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

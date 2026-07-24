@@ -83,3 +83,8 @@ Unspecified.
 \description{
 DuckDB function \code{read_ndjson_auto()}.
 }
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

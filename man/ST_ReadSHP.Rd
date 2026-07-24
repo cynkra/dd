@@ -15,3 +15,8 @@ Unspecified.
 \description{
 Read a Shapefile without relying on the GDAL library.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

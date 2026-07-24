@@ -18,3 +18,8 @@ Returns true if the first geometry \"properly\" contains the second geometry
 In contrast to \code{ST_Contains}, this function does not return true if \code{geom2} is contained strictly on the boundary of \code{geom1}.
 A geometry always \code{ST_Contains} itself, but does not \code{ST_ContainsProperly} itself.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

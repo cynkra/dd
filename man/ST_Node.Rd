@@ -15,6 +15,11 @@ ST_Node(geom)
 \description{
 Returns a "noded" MultiLinestring, produced by combining a collection of input linestrings and adding additional vertices where they intersect.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

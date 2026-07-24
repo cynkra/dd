@@ -15,3 +15,8 @@ ST_PointOnSurface(geom)
 \description{
 Returns a point guaranteed to lie on the surface of the geometry.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

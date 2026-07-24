@@ -18,6 +18,11 @@ Read the metadata from a variety of geospatial file formats using the GDAL libra
 The \code{ST_Read_Meta} table function accompanies the \code{ST_Read} table function, but instead of reading the contents of a file, this function scans the metadata instead.
 Since the data model of the underlying GDAL library is quite flexible, most of the interesting metadata is within the returned \code{layers} column, which is a somewhat complex nested structure of DuckDB \code{STRUCT} and \code{LIST} types.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

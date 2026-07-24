@@ -12,3 +12,8 @@ get_current_time()
 \description{
 DuckDB function \code{get_current_time()}.
 }
+\section{Provided by}{
+
+The \code{icu} extension (\code{LOAD icu;}).
+}
+

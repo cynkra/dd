@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB function \code{ducklake_last_committed_snapshot()}.
 }
+\section{Provided by}{
+
+The \code{ducklake} extension (\code{LOAD ducklake;}).
+}
+

@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB function \code{rtree_index_dump()}.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

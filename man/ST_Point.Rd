@@ -15,3 +15,8 @@ ST_Point(x, y)
 \description{
 Creates a GEOMETRY point.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

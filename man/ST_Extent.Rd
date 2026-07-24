@@ -15,3 +15,8 @@ ST_Extent(geom)
 \description{
 Returns the minimal bounding box enclosing the input geometry.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

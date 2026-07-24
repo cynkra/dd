@@ -25,6 +25,11 @@ Returns a 'GEOMETRY_TYPE' enum identifying the input geometry type. Possible enu
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

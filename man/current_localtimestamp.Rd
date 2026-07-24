@@ -12,3 +12,8 @@ current_localtimestamp()
 \description{
 DuckDB function \code{current_localtimestamp()}.
 }
+\section{Provided by}{
+
+The \code{icu} extension (\code{LOAD icu;}).
+}
+

@@ -18,3 +18,8 @@ Computes the closest point on a LINESTRING to a given POINT and returns the inte
 First argument must be a linestring and must have a M dimension. The second argument must be a point.
 Neither argument can be empty.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

@@ -27,6 +27,11 @@ Returns the minimum Y coordinate of a geometry.
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

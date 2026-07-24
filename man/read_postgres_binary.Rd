@@ -19,3 +19,8 @@ Unspecified.
 \description{
 DuckDB function \code{read_postgres_binary()}.
 }
+\section{Provided by}{
+
+The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
+}
+

@@ -48,3 +48,8 @@ This is a planar operation and will not take into account the curvature of the e
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

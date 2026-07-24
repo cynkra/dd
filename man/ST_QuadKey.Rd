@@ -34,6 +34,11 @@ The geometry overload throws an error if the input geometry is not a \code{POINT
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

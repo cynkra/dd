@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB function \code{ducklake_settings()}.
 }
+\section{Provided by}{
+
+The \code{ducklake} extension (\code{LOAD ducklake;}).
+}
+

@@ -27,3 +27,8 @@ DuckDB function \code{load_aws_credentials()}.
 }
 }
 
+\section{Provided by}{
+
+The \code{aws} extension (\code{LOAD aws;}).
+}
+

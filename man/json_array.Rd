@@ -12,3 +12,8 @@ json_array()
 \description{
 DuckDB function \code{json_array()}.
 }
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

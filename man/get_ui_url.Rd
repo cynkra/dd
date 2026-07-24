@@ -12,3 +12,8 @@ Unspecified.
 \description{
 DuckDB function \code{get_ui_url()}.
 }
+\section{Provided by}{
+
+The \code{ui} extension (\code{LOAD ui;}).
+}
+

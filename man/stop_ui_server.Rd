@@ -12,3 +12,8 @@ Unspecified.
 \description{
 DuckDB function \code{stop_ui_server()}.
 }
+\section{Provided by}{
+
+The \code{ui} extension (\code{LOAD ui;}).
+}
+

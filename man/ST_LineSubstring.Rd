@@ -19,3 +19,8 @@ ST_LineSubstring(line, start_fraction, end_fraction)
 \description{
 Returns a substring of a line between two fractions of total 2D length.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

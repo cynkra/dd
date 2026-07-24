@@ -17,3 +17,8 @@ ST_ReducePrecision(geom, precision)
 \description{
 Returns the geometry with all vertices reduced to the given precision.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

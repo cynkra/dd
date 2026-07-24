@@ -15,3 +15,8 @@ ST_Point3D(x, y, z)
 \description{
 Creates a POINT_3D.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

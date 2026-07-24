@@ -25,3 +25,8 @@ Deserialize a GEOMETRY from a WKT encoded string.
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

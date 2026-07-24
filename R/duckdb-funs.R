@@ -29,6 +29,8 @@
 #' @param col1 `BIGINT | VARCHAR | VARCHAR[]`
 #' @return `VARCHAR | VARCHAR[]`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 `->>` <- function(col0 = `VARCHAR | JSON`, col1 = `BIGINT | VARCHAR | VARCHAR[]`) {
   stop("DuckDB function ->>() is not available in R.")
 }
@@ -77,6 +79,8 @@
 #' @param col0,col1 `INET`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{inet} extension (\code{LOAD inet;}).
 `<<=` <- function(col0 = INET, col1 = INET) {
   stop("DuckDB function <<=() is not available in R.")
 }
@@ -110,6 +114,8 @@
 #' @param col0,col1 `INET`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{inet} extension (\code{LOAD inet;}).
 `>>=` <- function(col0 = INET, col1 = INET) {
   stop("DuckDB function >>=() is not available in R.")
 }
@@ -124,6 +130,8 @@
 
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT duckdb_proj_compiled_version();
@@ -148,6 +156,8 @@ DuckDB_PROJ_Compiled_Version <- function() {
 
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT duckdb_proj_version();
@@ -206,6 +216,8 @@ DuckDB_Proj_Version <- function() {
 #' \item \code{ST_Affine(geom = GEOMETRY, a = DOUBLE, b = DOUBLE, c = DOUBLE, d = DOUBLE, e = DOUBLE, f = DOUBLE, g = DOUBLE, h = DOUBLE, i = DOUBLE, xoff = DOUBLE, yoff = DOUBLE, zoff = DOUBLE)}
 #' \item \code{ST_Affine(geom = GEOMETRY, a = DOUBLE, b = DOUBLE, d = DOUBLE, e = DOUBLE, xoff = DOUBLE, yoff = DOUBLE)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' -- Translate a point by (2, 3)
@@ -243,6 +255,8 @@ ST_Affine <- function(geom = GEOMETRY, a = DOUBLE, b = DOUBLE, c = DOUBLE, d = D
 #' \item \code{ST_Area(point = POINT_2D)}
 #' \item \code{ST_Area(box = BOX_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_Area('POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))'::GEOMETRY);
@@ -271,6 +285,8 @@ ST_Area <- function(geom = GEOMETRY) {
 #' \item \code{ST_Area_Spheroid(geom = GEOMETRY)}
 #' \item \code{ST_Area_Spheroid(poly = POLYGON_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Area_Spheroid <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_Area_Spheroid() is not available in R.")
 }
@@ -289,6 +305,8 @@ ST_Area_Spheroid <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `JSON`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_AsGeoJSON('POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))'::GEOMETRY);
@@ -307,6 +325,8 @@ ST_AsGeoJSON <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_AsHexWKB('POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))'::GEOMETRY);
@@ -378,6 +398,8 @@ ST_AsHEXWKB <- function(geom = GEOMETRY) {
 #' \item \code{ST_AsMVT(col0 = ANY, col1 = VARCHAR, col2 = INTEGER, col3 = VARCHAR)}
 #' \item \code{ST_AsMVT(col0 = ANY, col1 = VARCHAR, col2 = INTEGER, col3 = VARCHAR, col4 = VARCHAR)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_AsMVT <- function(col0 = ANY, col1 = VARCHAR, col2 = INTEGER, col3 = VARCHAR, col4 = VARCHAR) {
   stop("DuckDB function ST_AsMVT() is not available in R.")
 }
@@ -405,6 +427,8 @@ ST_AsMVT <- function(col0 = ANY, col1 = VARCHAR, col2 = INTEGER, col3 = VARCHAR,
 #' \item \code{ST_AsMVTGeom(geom = GEOMETRY, bounds = BOX_2D, extent = BIGINT)}
 #' \item \code{ST_AsMVTGeom(geom = GEOMETRY, bounds = BOX_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_AsMVTGeom <- function(geom = GEOMETRY, bounds = BOX_2D, extent = BIGINT, buffer = BIGINT, clip_geom = BOOLEAN) {
   stop("DuckDB function ST_AsMVTGeom() is not available in R.")
 }
@@ -427,6 +451,8 @@ ST_AsMVTGeom <- function(geom = GEOMETRY, bounds = BOX_2D, extent = BIGINT, buff
 #' @param precision `INTEGER`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_AsSVG('POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))'::GEOMETRY, false, 15);
@@ -445,6 +471,8 @@ ST_AsSVG <- function(geom = GEOMETRY, relative = BOOLEAN, precision = INTEGER) {
 #' @param origin,target `GEOMETRY | POINT_2D`
 #' @return `DOUBLE`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT degrees(ST_Azimuth(ST_Point(0, 0), ST_Point(0, 1)));
@@ -463,6 +491,8 @@ ST_Azimuth <- function(origin = `GEOMETRY | POINT_2D`, target = `GEOMETRY | POIN
 #' @param geom `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Boundary <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_Boundary() is not available in R.")
 }
@@ -502,6 +532,8 @@ ST_Boundary <- function(geom = GEOMETRY) {
 #' \item \code{ST_Buffer(geom = GEOMETRY, distance = DOUBLE, num_triangles = INTEGER)}
 #' \item \code{ST_Buffer(geom = GEOMETRY, distance = DOUBLE, num_triangles = INTEGER, cap_style = VARCHAR, join_style = VARCHAR, mitre_limit = DOUBLE)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Buffer <- function(geom = GEOMETRY, distance = DOUBLE, num_triangles = INTEGER, cap_style = VARCHAR, join_style = VARCHAR, mitre_limit = DOUBLE) {
   stop("DuckDB function ST_Buffer() is not available in R.")
 }
@@ -518,6 +550,8 @@ ST_Buffer <- function(geom = GEOMETRY, distance = DOUBLE, num_triangles = INTEGE
 #' @param geom `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_BuildArea <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_BuildArea() is not available in R.")
 }
@@ -541,6 +575,8 @@ ST_BuildArea <- function(geom = GEOMETRY) {
 #' \item \code{ST_Centroid(box = BOX_2D)}
 #' \item \code{ST_Centroid(box = BOX_2DF)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Centroid <- function(box = `BOX_2D | BOX_2DF`) {
   stop("DuckDB function ST_Centroid() is not available in R.")
 }
@@ -555,6 +591,8 @@ ST_Centroid <- function(box = `BOX_2D | BOX_2DF`) {
 #' @param geom1,geom2 `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_ClosestPoint <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
   stop("DuckDB function ST_ClosestPoint() is not available in R.")
 }
@@ -575,6 +613,8 @@ ST_ClosestPoint <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' @param geoms `GEOMETRY[]`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' -- With all POINT's, a MULTIPOINT is returned
@@ -615,6 +655,8 @@ ST_Collect <- function(geoms = `GEOMETRY[]`) {
 #' \item \code{ST_CollectionExtract(geom = GEOMETRY, type = INTEGER)}
 #' \item \code{ST_CollectionExtract(geom = GEOMETRY)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_CollectionExtract('MULTIPOINT(1 2, 3 4)'::GEOMETRY, 1);
@@ -636,6 +678,8 @@ ST_CollectionExtract <- function(geom = GEOMETRY, type = INTEGER) {
 #' @param allowHoles `BOOLEAN`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_ConcaveHull <- function(geom = GEOMETRY, ratio = DOUBLE, allowHoles = BOOLEAN) {
   stop("DuckDB function ST_ConcaveHull() is not available in R.")
 }
@@ -654,6 +698,8 @@ ST_ConcaveHull <- function(geom = GEOMETRY, ratio = DOUBLE, allowHoles = BOOLEAN
 #' @param geom2 `POINT_2D | GEOMETRY`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Contains <- function(geom1 = `POLYGON_2D | GEOMETRY`, geom2 = `POINT_2D | GEOMETRY`) {
   stop("DuckDB function ST_Contains() is not available in R.")
 }
@@ -671,6 +717,8 @@ ST_Contains <- function(geom1 = `POLYGON_2D | GEOMETRY`, geom2 = `POINT_2D | GEO
 #' @param geom1,geom2 `GEOMETRY`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_ContainsProperly <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
   stop("DuckDB function ST_ContainsProperly() is not available in R.")
 }
@@ -685,6 +733,8 @@ ST_ContainsProperly <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_ConvexHull <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_ConvexHull() is not available in R.")
 }
@@ -709,6 +759,8 @@ ST_ConvexHull <- function(geom = GEOMETRY) {
 #' \item \code{ST_CoverageClean(geoms = `GEOMETRY[]`, snapping_distance = DOUBLE)}
 #' \item \code{ST_CoverageClean(geoms = `GEOMETRY[]`)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_CoverageClean <- function(geoms = `GEOMETRY[]`, snapping_distance = DOUBLE, gap_maximum_width = DOUBLE) {
   stop("DuckDB function ST_CoverageClean() is not available in R.")
 }
@@ -731,6 +783,8 @@ ST_CoverageClean <- function(geoms = `GEOMETRY[]`, snapping_distance = DOUBLE, g
 #' \item \code{ST_CoverageInvalidEdges(geoms = `GEOMETRY[]`, tolerance = DOUBLE)}
 #' \item \code{ST_CoverageInvalidEdges(geoms = `GEOMETRY[]`)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_CoverageInvalidEdges <- function(geoms = `GEOMETRY[]`, tolerance = DOUBLE) {
   stop("DuckDB function ST_CoverageInvalidEdges() is not available in R.")
 }
@@ -751,6 +805,8 @@ ST_CoverageInvalidEdges <- function(geoms = `GEOMETRY[]`, tolerance = DOUBLE) {
 #' \item \code{ST_CoverageInvalidEdges_Agg(col0 = GEOMETRY)}
 #' \item \code{ST_CoverageInvalidEdges_Agg(col0 = GEOMETRY, col1 = DOUBLE)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_CoverageInvalidEdges_Agg <- function(col0 = GEOMETRY, col1 = DOUBLE) {
   stop("DuckDB function ST_CoverageInvalidEdges_Agg() is not available in R.")
 }
@@ -774,6 +830,8 @@ ST_CoverageInvalidEdges_Agg <- function(col0 = GEOMETRY, col1 = DOUBLE) {
 #' \item \code{ST_CoverageSimplify(geoms = `GEOMETRY[]`, tolerance = DOUBLE, simplify_boundary = BOOLEAN)}
 #' \item \code{ST_CoverageSimplify(geoms = `GEOMETRY[]`, tolerance = DOUBLE)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_CoverageSimplify <- function(geoms = `GEOMETRY[]`, tolerance = DOUBLE, simplify_boundary = BOOLEAN) {
   stop("DuckDB function ST_CoverageSimplify() is not available in R.")
 }
@@ -795,6 +853,8 @@ ST_CoverageSimplify <- function(geoms = `GEOMETRY[]`, tolerance = DOUBLE, simpli
 #' \item \code{ST_CoverageSimplify_Agg(col0 = GEOMETRY, col1 = DOUBLE)}
 #' \item \code{ST_CoverageSimplify_Agg(col0 = GEOMETRY, col1 = DOUBLE, col2 = BOOLEAN)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_CoverageSimplify_Agg <- function(col0 = GEOMETRY, col1 = DOUBLE, col2 = BOOLEAN) {
   stop("DuckDB function ST_CoverageSimplify_Agg() is not available in R.")
 }
@@ -810,6 +870,8 @@ ST_CoverageSimplify_Agg <- function(col0 = GEOMETRY, col1 = DOUBLE, col2 = BOOLE
 #' @param geoms `GEOMETRY[]`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_CoverageUnion <- function(geoms = `GEOMETRY[]`) {
   stop("DuckDB function ST_CoverageUnion() is not available in R.")
 }
@@ -824,6 +886,8 @@ ST_CoverageUnion <- function(geoms = `GEOMETRY[]`) {
 #' @param col0 `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_CoverageUnion_Agg <- function(col0 = GEOMETRY) {
   stop("DuckDB function ST_CoverageUnion_Agg() is not available in R.")
 }
@@ -838,6 +902,8 @@ ST_CoverageUnion_Agg <- function(col0 = GEOMETRY) {
 #' @param geom1,geom2 `GEOMETRY`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_CoveredBy <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
   stop("DuckDB function ST_CoveredBy() is not available in R.")
 }
@@ -852,6 +918,8 @@ ST_CoveredBy <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' @param geom1,geom2 `GEOMETRY`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Covers <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
   stop("DuckDB function ST_Covers() is not available in R.")
 }
@@ -866,6 +934,8 @@ ST_Covers <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' @param geom1,geom2 `GEOMETRY`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Crosses <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
   stop("DuckDB function ST_Crosses() is not available in R.")
 }
@@ -882,6 +952,8 @@ ST_Crosses <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' @param distance `DOUBLE`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_DWithin <- function(geom1 = GEOMETRY, geom2 = GEOMETRY, distance = DOUBLE) {
   stop("DuckDB function ST_DWithin() is not available in R.")
 }
@@ -898,6 +970,8 @@ ST_DWithin <- function(geom1 = GEOMETRY, geom2 = GEOMETRY, distance = DOUBLE) {
 #' @param distance `DOUBLE`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_DWithin_GEOS <- function(geom1 = GEOMETRY, geom2 = GEOMETRY, distance = DOUBLE) {
   stop("DuckDB function ST_DWithin_GEOS() is not available in R.")
 }
@@ -916,6 +990,8 @@ ST_DWithin_GEOS <- function(geom1 = GEOMETRY, geom2 = GEOMETRY, distance = DOUBL
 #' @param distance `DOUBLE`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_DWithin_Spheroid <- function(p1 = POINT_2D, p2 = POINT_2D, distance = DOUBLE) {
   stop("DuckDB function ST_DWithin_Spheroid() is not available in R.")
 }
@@ -930,6 +1006,8 @@ ST_DWithin_Spheroid <- function(p1 = POINT_2D, p2 = POINT_2D, distance = DOUBLE)
 #' @param geom1,geom2 `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Difference <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
   stop("DuckDB function ST_Difference() is not available in R.")
 }
@@ -949,6 +1027,8 @@ ST_Difference <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `INTEGER`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_Dimension('POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))'::GEOMETRY);
@@ -967,6 +1047,8 @@ ST_Dimension <- function(geom = GEOMETRY) {
 #' @param geom1,geom2 `GEOMETRY`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Disjoint <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
   stop("DuckDB function ST_Disjoint() is not available in R.")
 }
@@ -988,6 +1070,8 @@ ST_Disjoint <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' \item \code{ST_Distance(linestring = LINESTRING_2D, point = POINT_2D)}
 #' \item \code{ST_Distance(geom1 = GEOMETRY, geom2 = GEOMETRY)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_Distance('POINT (0 0)'::GEOMETRY, 'POINT (3 4)'::GEOMETRY);
@@ -1006,6 +1090,8 @@ ST_Distance <- function(point1 = POINT_2D, point2 = POINT_2D) {
 #' @param geom1,geom2 `GEOMETRY`
 #' @return `DOUBLE`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Distance_GEOS <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
   stop("DuckDB function ST_Distance_GEOS() is not available in R.")
 }
@@ -1029,6 +1115,8 @@ ST_Distance_GEOS <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' \item \code{ST_Distance_Sphere(geom1 = GEOMETRY, geom2 = GEOMETRY)}
 #' \item \code{ST_Distance_Sphere(point1 = POINT_2D, point2 = POINT_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Distance_Sphere <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
   stop("DuckDB function ST_Distance_Sphere() is not available in R.")
 }
@@ -1045,6 +1133,8 @@ ST_Distance_Sphere <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' @param p1,p2 `POINT_2D`
 #' @return `DOUBLE`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' -- Note: the coordinates are in WGS84 and [latitude, longitude] axis order
@@ -1072,6 +1162,8 @@ ST_Distance_Spheroid <- function(p1 = POINT_2D, p2 = POINT_2D) {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT * FROM ST_Drivers();
@@ -1092,6 +1184,8 @@ ST_Drivers <- function() {
 #' @param geom `GEOMETRY`
 #' @return `STRUCT(geom GEOMETRY, path INTEGER[])[]`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_Dump('MULTIPOINT(1 2, 3 4)'::GEOMETRY);
@@ -1115,6 +1209,8 @@ ST_Dump <- function(geom = GEOMETRY) {
 #' \item \code{ST_EndPoint(geom = GEOMETRY)}
 #' \item \code{ST_EndPoint(line = LINESTRING_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_EndPoint <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_EndPoint() is not available in R.")
 }
@@ -1129,6 +1225,8 @@ ST_EndPoint <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Envelope <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_Envelope() is not available in R.")
 }
@@ -1145,6 +1243,8 @@ ST_Envelope <- function(geom = GEOMETRY) {
 #' @param col0 `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_Extent_Agg(geom) FROM UNNEST([ST_Point(1,1), ST_Point(5,5)]) AS _(geom);
@@ -1164,6 +1264,8 @@ ST_Envelope_Agg <- function(col0 = GEOMETRY) {
 #' @param geom1,geom2 `GEOMETRY`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Equals <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
   stop("DuckDB function ST_Equals() is not available in R.")
 }
@@ -1185,6 +1287,8 @@ ST_Equals <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' @param distance `DOUBLE`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_AsText(ST_Expand(ST_GeomFromText('POINT(20 30)'), 0.1));
@@ -1203,6 +1307,8 @@ ST_Expand <- function(geom = GEOMETRY, distance = DOUBLE) {
 #' @param geom `GEOMETRY`
 #' @return `BOX_2D`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Extent <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_Extent() is not available in R.")
 }
@@ -1217,6 +1323,8 @@ ST_Extent <- function(geom = GEOMETRY) {
 #' @param col0 `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_Extent_Agg(geom) FROM UNNEST([ST_Point(1,1), ST_Point(5,5)]) AS _(geom);
@@ -1239,6 +1347,8 @@ ST_Extent_Agg <- function(col0 = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `BOX_2DF`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Extent_Approx <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_Extent_Approx() is not available in R.")
 }
@@ -1258,6 +1368,8 @@ ST_Extent_Approx <- function(geom = GEOMETRY) {
 #' \item \code{ST_ExteriorRing(geom = GEOMETRY)}
 #' \item \code{ST_ExteriorRing(polygon = POLYGON_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_ExteriorRing <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_ExteriorRing() is not available in R.")
 }
@@ -1280,6 +1392,8 @@ ST_ExteriorRing <- function(geom = GEOMETRY) {
 #' \item \code{ST_FlipCoordinates(polygon = POLYGON_2D)}
 #' \item \code{ST_FlipCoordinates(box = BOX_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_FlipCoordinates <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_FlipCoordinates() is not available in R.")
 }
@@ -1296,6 +1410,8 @@ ST_FlipCoordinates <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Force2D <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_Force2D() is not available in R.")
 }
@@ -1317,6 +1433,8 @@ ST_Force2D <- function(geom = GEOMETRY) {
 #' @param m `DOUBLE`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Force3DM <- function(geom = GEOMETRY, m = DOUBLE) {
   stop("DuckDB function ST_Force3DM() is not available in R.")
 }
@@ -1338,6 +1456,8 @@ ST_Force3DM <- function(geom = GEOMETRY, m = DOUBLE) {
 #' @param z `DOUBLE`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Force3DZ <- function(geom = GEOMETRY, z = DOUBLE) {
   stop("DuckDB function ST_Force3DZ() is not available in R.")
 }
@@ -1360,6 +1480,8 @@ ST_Force3DZ <- function(geom = GEOMETRY, z = DOUBLE) {
 #' @param m `DOUBLE`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Force4D <- function(geom = GEOMETRY, z = DOUBLE, m = DOUBLE) {
   stop("DuckDB function ST_Force4D() is not available in R.")
 }
@@ -1383,6 +1505,8 @@ ST_Force4D <- function(geom = GEOMETRY, z = DOUBLE, m = DOUBLE) {
 #' \item \code{ST_GeneratePoints(col0 = BOX_2D, col1 = BIGINT)}
 #' \item \code{ST_GeneratePoints(col0 = BOX_2D, col1 = BIGINT, col2 = BIGINT)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT * FROM ST_GeneratePoints({min_x: 0, min_y:0, max_x:10, max_y:10}::BOX_2D, 5, 42);
@@ -1401,6 +1525,8 @@ ST_GeneratePoints <- function(col0 = BOX_2D, col1 = BIGINT, col2 = BIGINT) {
 #' @param geojson `JSON | VARCHAR`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_GeomFromGeoJSON('{"type": "Point", "coordinates": [1.0, 2.0]}');
@@ -1421,6 +1547,8 @@ ST_GeomFromGeoJSON <- function(geojson = `JSON | VARCHAR`) {
 #' @param hexwkb `VARCHAR`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_GeomFromHEXEWKB <- function(hexwkb = VARCHAR) {
   stop("DuckDB function ST_GeomFromHEXEWKB() is not available in R.")
 }
@@ -1437,6 +1565,8 @@ ST_GeomFromHEXEWKB <- function(hexwkb = VARCHAR) {
 #' @param hexwkb `VARCHAR`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_GeomFromHEXWKB <- function(hexwkb = VARCHAR) {
   stop("DuckDB function ST_GeomFromHEXWKB() is not available in R.")
 }
@@ -1457,6 +1587,8 @@ ST_GeomFromHEXWKB <- function(hexwkb = VARCHAR) {
 #' \item \code{ST_GeomFromText(wkt = VARCHAR)}
 #' \item \code{ST_GeomFromText(wkt = VARCHAR, ignore_invalid = BOOLEAN)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_GeomFromText <- function(wkt = VARCHAR, ignore_invalid = BOOLEAN) {
   stop("DuckDB function ST_GeomFromText() is not available in R.")
 }
@@ -1478,6 +1610,8 @@ ST_GeomFromText <- function(wkt = VARCHAR, ignore_invalid = BOOLEAN) {
 #' \item \code{ST_GeometryType(linestring = LINESTRING_2D)}
 #' \item \code{ST_GeometryType(polygon = POLYGON_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT DISTINCT ST_GeometryType(ST_GeomFromText('POINT(1 1)'));
@@ -1496,6 +1630,8 @@ ST_GeometryType <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' -- HasM for a 2D geometry
@@ -1515,6 +1651,8 @@ ST_HasM <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' -- HasZ for a 2D geometry
@@ -1545,6 +1683,8 @@ ST_HasZ <- function(geom = GEOMETRY) {
 #' \item \code{ST_Hilbert(box = BOX_2D, bounds = BOX_2D)}
 #' \item \code{ST_Hilbert(box = BOX_2DF, bounds = BOX_2DF)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Hilbert <- function(box = `BOX_2D | BOX_2DF`, bounds = `BOX_2D | BOX_2DF`) {
   stop("DuckDB function ST_Hilbert() is not available in R.")
 }
@@ -1565,6 +1705,8 @@ ST_Hilbert <- function(box = `BOX_2D | BOX_2DF`, bounds = `BOX_2D | BOX_2DF`) {
 #' \item \code{ST_InteriorRingN(geom = GEOMETRY, n = BIGINT)}
 #' \item \code{ST_InteriorRingN(polygon = POLYGON_2D, n = BIGINT)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_AsText(ST_InteriorRingN(ST_GeomFromText('POLYGON((0 0,10 0,10 10,0 10,0 0),(2 2,4 2,4 4,2 4,2 2))'), 1));
@@ -1586,6 +1728,8 @@ ST_InteriorRingN <- function(geom = GEOMETRY, n = BIGINT) {
 #' @param line,point `GEOMETRY`
 #' @return `DOUBLE`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_InterpolatePoint <- function(line = GEOMETRY, point = GEOMETRY) {
   stop("DuckDB function ST_InterpolatePoint() is not available in R.")
 }
@@ -1600,6 +1744,8 @@ ST_InterpolatePoint <- function(line = GEOMETRY, point = GEOMETRY) {
 #' @param geom1,geom2 `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Intersection <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
   stop("DuckDB function ST_Intersection() is not available in R.")
 }
@@ -1614,6 +1760,8 @@ ST_Intersection <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' @param col0 `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Intersection_Agg <- function(col0 = GEOMETRY) {
   stop("DuckDB function ST_Intersection_Agg() is not available in R.")
 }
@@ -1633,6 +1781,8 @@ ST_Intersection_Agg <- function(col0 = GEOMETRY) {
 #' \item \code{ST_Intersects(box1 = BOX_2D, box2 = BOX_2D)}
 #' \item \code{ST_Intersects(geom1 = GEOMETRY, geom2 = GEOMETRY)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Intersects <- function(box1 = BOX_2D, box2 = BOX_2D) {
   stop("DuckDB function ST_Intersects() is not available in R.")
 }
@@ -1647,6 +1797,8 @@ ST_Intersects <- function(box1 = BOX_2D, box2 = BOX_2D) {
 #' @param geom `GEOMETRY`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_IsClosed <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_IsClosed() is not available in R.")
 }
@@ -1667,6 +1819,8 @@ ST_IsClosed <- function(geom = GEOMETRY) {
 #' \item \code{ST_IsEmpty(linestring = LINESTRING_2D)}
 #' \item \code{ST_IsEmpty(polygon = POLYGON_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_IsEmpty <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_IsEmpty() is not available in R.")
 }
@@ -1681,6 +1835,8 @@ ST_IsEmpty <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_IsRing <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_IsRing() is not available in R.")
 }
@@ -1695,6 +1851,8 @@ ST_IsRing <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_IsSimple <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_IsSimple() is not available in R.")
 }
@@ -1709,6 +1867,8 @@ ST_IsSimple <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_IsValid <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_IsValid() is not available in R.")
 }
@@ -1728,6 +1888,8 @@ ST_IsValid <- function(geom = GEOMETRY) {
 #' \item \code{ST_Length(geom = GEOMETRY)}
 #' \item \code{ST_Length(linestring = LINESTRING_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Length <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_Length() is not available in R.")
 }
@@ -1751,6 +1913,8 @@ ST_Length <- function(geom = GEOMETRY) {
 #' \item \code{ST_Length_Spheroid(geom = GEOMETRY)}
 #' \item \code{ST_Length_Spheroid(line = LINESTRING_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Length_Spheroid <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_Length_Spheroid() is not available in R.")
 }
@@ -1766,6 +1930,8 @@ ST_Length_Spheroid <- function(geom = GEOMETRY) {
 #' @param fraction `DOUBLE`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_LineInterpolatePoint <- function(line = GEOMETRY, fraction = DOUBLE) {
   stop("DuckDB function ST_LineInterpolatePoint() is not available in R.")
 }
@@ -1785,6 +1951,8 @@ ST_LineInterpolatePoint <- function(line = GEOMETRY, fraction = DOUBLE) {
 #' @param repeat. `BOOLEAN`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_LineInterpolatePoints <- function(line = GEOMETRY, fraction = DOUBLE, repeat. = BOOLEAN) {
   stop("DuckDB function ST_LineInterpolatePoints() is not available in R.")
 }
@@ -1799,6 +1967,8 @@ ST_LineInterpolatePoints <- function(line = GEOMETRY, fraction = DOUBLE, repeat.
 #' @param line,point `GEOMETRY`
 #' @return `DOUBLE`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_LineLocatePoint <- function(line = GEOMETRY, point = GEOMETRY) {
   stop("DuckDB function ST_LineLocatePoint() is not available in R.")
 }
@@ -1819,6 +1989,8 @@ ST_LineLocatePoint <- function(line = GEOMETRY, point = GEOMETRY) {
 #' \item \code{ST_LineMerge(geom = GEOMETRY)}
 #' \item \code{ST_LineMerge(geom = GEOMETRY, preserve_direction = BOOLEAN)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_LineMerge <- function(geom = GEOMETRY, preserve_direction = BOOLEAN) {
   stop("DuckDB function ST_LineMerge() is not available in R.")
 }
@@ -1833,6 +2005,8 @@ ST_LineMerge <- function(geom = GEOMETRY, preserve_direction = BOOLEAN) {
 #' @param blob `BLOB`
 #' @return `LINESTRING_2D`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_LineString2DFromWKB <- function(blob = BLOB) {
   stop("DuckDB function ST_LineString2DFromWKB() is not available in R.")
 }
@@ -1849,6 +2023,8 @@ ST_LineString2DFromWKB <- function(blob = BLOB) {
 #' @param end_fraction `DOUBLE`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_LineSubstring <- function(line = GEOMETRY, start_fraction = DOUBLE, end_fraction = DOUBLE) {
   stop("DuckDB function ST_LineSubstring() is not available in R.")
 }
@@ -1876,6 +2052,8 @@ ST_LineSubstring <- function(line = GEOMETRY, start_fraction = DOUBLE, end_fract
 #' \item \code{ST_LocateAlong(line = GEOMETRY, measure = DOUBLE, offset = DOUBLE)}
 #' \item \code{ST_LocateAlong(line = GEOMETRY, measure = DOUBLE)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_LocateAlong <- function(line = GEOMETRY, measure = DOUBLE, offset = DOUBLE) {
   stop("DuckDB function ST_LocateAlong() is not available in R.")
 }
@@ -1906,6 +2084,8 @@ ST_LocateAlong <- function(line = GEOMETRY, measure = DOUBLE, offset = DOUBLE) {
 #' \item \code{ST_LocateBetween(line = GEOMETRY, start_measure = DOUBLE, end_measure = DOUBLE, offset = DOUBLE)}
 #' \item \code{ST_LocateBetween(line = GEOMETRY, start_measure = DOUBLE, end_measure = DOUBLE)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_LocateBetween <- function(line = GEOMETRY, start_measure = DOUBLE, end_measure = DOUBLE, offset = DOUBLE) {
   stop("DuckDB function ST_LocateBetween() is not available in R.")
 }
@@ -1920,6 +2100,8 @@ ST_LocateBetween <- function(line = GEOMETRY, start_measure = DOUBLE, end_measur
 #' @param geom `GEOMETRY`
 #' @return `DOUBLE`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_M(ST_Point(1, 2, 3, 4))
@@ -1938,6 +2120,8 @@ ST_M <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `DOUBLE`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_MMax(ST_Point(1, 2, 3, 4))
@@ -1956,6 +2140,8 @@ ST_MMax <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `DOUBLE`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_MMin(ST_Point(1, 2, 3, 4))
@@ -1974,6 +2160,8 @@ ST_MMin <- function(geom = GEOMETRY) {
 #' @param point1,point2 `GEOMETRY`
 #' @return `BOX_2D`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_MakeBox2D(ST_Point(0, 0), ST_Point(1, 1));
@@ -1992,6 +2180,8 @@ ST_MakeBox2D <- function(point1 = GEOMETRY, point2 = GEOMETRY) {
 #' @param min_x,min_y,max_x,max_y `DOUBLE`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_MakeEnvelope <- function(min_x = DOUBLE, min_y = DOUBLE, max_x = DOUBLE, max_y = DOUBLE) {
   stop("DuckDB function ST_MakeEnvelope() is not available in R.")
 }
@@ -2014,6 +2204,8 @@ ST_MakeEnvelope <- function(min_x = DOUBLE, min_y = DOUBLE, max_x = DOUBLE, max_
 #' \item \code{ST_MakeLine(geoms = `GEOMETRY[]`)}
 #' \item \code{ST_MakeLine(start = GEOMETRY, end = GEOMETRY)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_MakeLine([ST_Point(0, 0), ST_Point(1, 1)]);
@@ -2047,6 +2239,8 @@ ST_MakeLine <- function(start = GEOMETRY, end = GEOMETRY) {
 #' \item \code{ST_MakePoint(x = DOUBLE, y = DOUBLE, z = DOUBLE)}
 #' \item \code{ST_MakePoint(x = DOUBLE, y = DOUBLE, z = DOUBLE, m = DOUBLE)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_AsText(ST_MakePoint(143.3, -24.2));
@@ -2074,6 +2268,8 @@ ST_MakePoint <- function(x = DOUBLE, y = DOUBLE, z = DOUBLE, m = DOUBLE) {
 #' \item \code{ST_MakePolygon(shell = GEOMETRY)}
 #' \item \code{ST_MakePolygon(shell = GEOMETRY, holes = `GEOMETRY[]`)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_MakePolygon(ST_LineString([ST_Point(0, 0), ST_Point(1, 0), ST_Point(1, 1), ST_Point(0, 0)]));
@@ -2093,6 +2289,8 @@ ST_MakePolygon <- function(shell = GEOMETRY, holes = `GEOMETRY[]`) {
 #' @param geom `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_MakeValid <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_MakeValid() is not available in R.")
 }
@@ -2116,6 +2314,8 @@ ST_MakeValid <- function(geom = GEOMETRY) {
 #' \item \code{ST_MaximumInscribedCircle(geom = GEOMETRY)}
 #' \item \code{ST_MaximumInscribedCircle(geom = GEOMETRY, tolerance = DOUBLE)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' -- Find the maximum inscribed circle of a square
@@ -2138,6 +2338,8 @@ ST_MaximumInscribedCircle <- function(geom = GEOMETRY, tolerance = DOUBLE) {
 #' @param col0 `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_MemUnion_Agg <- function(col0 = GEOMETRY) {
   stop("DuckDB function ST_MemUnion_Agg() is not available in R.")
 }
@@ -2152,6 +2354,8 @@ ST_MemUnion_Agg <- function(col0 = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_MinimumRotatedRectangle <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_MinimumRotatedRectangle() is not available in R.")
 }
@@ -2168,6 +2372,8 @@ ST_MinimumRotatedRectangle <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_Multi(ST_GeomFromText('POINT(1 2)'));
@@ -2187,6 +2393,8 @@ ST_Multi <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `INTEGER`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_NGeometries <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_NGeometries() is not available in R.")
 }
@@ -2206,6 +2414,8 @@ ST_NGeometries <- function(geom = GEOMETRY) {
 #' \item \code{ST_NInteriorRings(geom = GEOMETRY)}
 #' \item \code{ST_NInteriorRings(polygon = POLYGON_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_NInteriorRings <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_NInteriorRings() is not available in R.")
 }
@@ -2228,6 +2438,8 @@ ST_NInteriorRings <- function(geom = GEOMETRY) {
 #' \item \code{ST_NPoints(polygon = POLYGON_2D)}
 #' \item \code{ST_NPoints(box = BOX_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_NPoints <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_NPoints() is not available in R.")
 }
@@ -2242,6 +2454,8 @@ ST_NPoints <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' -- Create a noded multilinestring from two intersecting lines
@@ -2263,6 +2477,8 @@ ST_Node <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Normalize <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_Normalize() is not available in R.")
 }
@@ -2278,6 +2494,8 @@ ST_Normalize <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `INTEGER`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_NumGeometries <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_NumGeometries() is not available in R.")
 }
@@ -2297,6 +2515,8 @@ ST_NumGeometries <- function(geom = GEOMETRY) {
 #' \item \code{ST_NumInteriorRings(geom = GEOMETRY)}
 #' \item \code{ST_NumInteriorRings(polygon = POLYGON_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_NumInteriorRings <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_NumInteriorRings() is not available in R.")
 }
@@ -2319,6 +2539,8 @@ ST_NumInteriorRings <- function(geom = GEOMETRY) {
 #' \item \code{ST_NumPoints(polygon = POLYGON_2D)}
 #' \item \code{ST_NumPoints(box = BOX_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_NumPoints <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_NumPoints() is not available in R.")
 }
@@ -2333,6 +2555,8 @@ ST_NumPoints <- function(geom = GEOMETRY) {
 #' @param geom1,geom2 `GEOMETRY`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Overlaps <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
   stop("DuckDB function ST_Overlaps() is not available in R.")
 }
@@ -2353,6 +2577,8 @@ ST_Overlaps <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' \item \code{ST_Perimeter(polygon = POLYGON_2D)}
 #' \item \code{ST_Perimeter(box = BOX_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Perimeter <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_Perimeter() is not available in R.")
 }
@@ -2376,6 +2602,8 @@ ST_Perimeter <- function(geom = GEOMETRY) {
 #' \item \code{ST_Perimeter_Spheroid(geom = GEOMETRY)}
 #' \item \code{ST_Perimeter_Spheroid(poly = POLYGON_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Perimeter_Spheroid <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_Perimeter_Spheroid() is not available in R.")
 }
@@ -2390,6 +2618,8 @@ ST_Perimeter_Spheroid <- function(geom = GEOMETRY) {
 #' @param x,y `DOUBLE`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Point <- function(x = DOUBLE, y = DOUBLE) {
   stop("DuckDB function ST_Point() is not available in R.")
 }
@@ -2404,6 +2634,8 @@ ST_Point <- function(x = DOUBLE, y = DOUBLE) {
 #' @param x,y `DOUBLE`
 #' @return `POINT_2D`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Point2D <- function(x = DOUBLE, y = DOUBLE) {
   stop("DuckDB function ST_Point2D() is not available in R.")
 }
@@ -2418,6 +2650,8 @@ ST_Point2D <- function(x = DOUBLE, y = DOUBLE) {
 #' @param blob `BLOB`
 #' @return `POINT_2D`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Point2DFromWKB <- function(blob = BLOB) {
   stop("DuckDB function ST_Point2DFromWKB() is not available in R.")
 }
@@ -2432,6 +2666,8 @@ ST_Point2DFromWKB <- function(blob = BLOB) {
 #' @param x,y,z `DOUBLE`
 #' @return `POINT_3D`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Point3D <- function(x = DOUBLE, y = DOUBLE, z = DOUBLE) {
   stop("DuckDB function ST_Point3D() is not available in R.")
 }
@@ -2446,6 +2682,8 @@ ST_Point3D <- function(x = DOUBLE, y = DOUBLE, z = DOUBLE) {
 #' @param x,y,z,m `DOUBLE`
 #' @return `POINT_4D`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Point4D <- function(x = DOUBLE, y = DOUBLE, z = DOUBLE, m = DOUBLE) {
   stop("DuckDB function ST_Point4D() is not available in R.")
 }
@@ -2466,6 +2704,8 @@ ST_Point4D <- function(x = DOUBLE, y = DOUBLE, z = DOUBLE, m = DOUBLE) {
 #' \item \code{ST_PointN(geom = GEOMETRY, index = INTEGER)}
 #' \item \code{ST_PointN(linestring = LINESTRING_2D, index = INTEGER)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_PointN <- function(geom = GEOMETRY, index = INTEGER) {
   stop("DuckDB function ST_PointN() is not available in R.")
 }
@@ -2480,6 +2720,8 @@ ST_PointN <- function(geom = GEOMETRY, index = INTEGER) {
 #' @param geom `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_PointOnSurface <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_PointOnSurface() is not available in R.")
 }
@@ -2494,6 +2736,8 @@ ST_PointOnSurface <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_Points('LINESTRING(1 1, 2 2)'::GEOMETRY);
@@ -2512,6 +2756,8 @@ ST_Points <- function(geom = GEOMETRY) {
 #' @param blob `BLOB`
 #' @return `POLYGON_2D`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Polygon2DFromWKB <- function(blob = BLOB) {
   stop("DuckDB function ST_Polygon2DFromWKB() is not available in R.")
 }
@@ -2526,6 +2772,8 @@ ST_Polygon2DFromWKB <- function(blob = BLOB) {
 #' @param geometries `GEOMETRY[]`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' -- Create a polygon from a closed linestring ring
@@ -2563,6 +2811,8 @@ ST_Polygonize <- function(geometries = `GEOMETRY[]`) {
 #' \item \code{ST_QuadKey(longitude = DOUBLE, latitude = DOUBLE, level = INTEGER)}
 #' \item \code{ST_QuadKey(point = GEOMETRY, level = INTEGER)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_QuadKey(ST_Point(11.08, 49.45), 10);
@@ -2631,6 +2881,8 @@ ST_QuadKey <- function(longitude = DOUBLE, latitude = DOUBLE, level = INTEGER) {
 #' @param open_options `VARCHAR[]`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' -- Read a Shapefile
@@ -2660,6 +2912,8 @@ ST_Read <- function(col0 = VARCHAR, keep_wkb = BOOLEAN, max_batch_size = INTEGER
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT *
@@ -2681,6 +2935,8 @@ ST_ReadOSM <- function(col0 = VARCHAR) {
 #' @param col0,encoding `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_ReadSHP <- function(col0 = VARCHAR, encoding = VARCHAR) {
   stop("DuckDB function ST_ReadSHP() is not available in R.")
 }
@@ -2698,6 +2954,8 @@ ST_ReadSHP <- function(col0 = VARCHAR, encoding = VARCHAR) {
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' -- Find the coordinate reference system authority name and code for the first layers first geometry column in the file
@@ -2721,6 +2979,8 @@ ST_Read_Meta <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' @param precision `DOUBLE`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_ReducePrecision <- function(geom = GEOMETRY, precision = DOUBLE) {
   stop("DuckDB function ST_ReducePrecision() is not available in R.")
 }
@@ -2746,6 +3006,8 @@ ST_ReducePrecision <- function(geom = GEOMETRY, precision = DOUBLE) {
 #' \item \code{ST_RemoveRepeatedPoints(geom = GEOMETRY)}
 #' \item \code{ST_RemoveRepeatedPoints(geom = GEOMETRY, tolerance = DOUBLE)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_RemoveRepeatedPoints <- function(line = LINESTRING_2D, tolerance = DOUBLE) {
   stop("DuckDB function ST_RemoveRepeatedPoints() is not available in R.")
 }
@@ -2760,6 +3022,8 @@ ST_RemoveRepeatedPoints <- function(line = LINESTRING_2D, tolerance = DOUBLE) {
 #' @param geom `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Reverse <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_Reverse() is not available in R.")
 }
@@ -2774,6 +3038,8 @@ ST_Reverse <- function(geom = GEOMETRY) {
 #' @param geom,radians Unspecified.
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Rotate <- function(geom, radians) {
   stop("DuckDB function ST_Rotate() is not available in R.")
 }
@@ -2788,6 +3054,8 @@ ST_Rotate <- function(geom, radians) {
 #' @param geom,radians Unspecified.
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' -- Rotate a 3D point 90 degrees (π/2 radians) around the X-axis
@@ -2807,6 +3075,8 @@ ST_RotateX <- function(geom, radians) {
 #' @param geom,radians Unspecified.
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' -- Rotate a 3D point 90 degrees (π/2 radians) around the Y-axis
@@ -2826,6 +3096,8 @@ ST_RotateY <- function(geom, radians) {
 #' @param geom,radians Unspecified.
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' -- Rotate a point 90 degrees (π/2 radians) around the Z-axis
@@ -2850,6 +3122,8 @@ ST_RotateZ <- function(geom, radians) {
 #' \item \code{ST_Scale(geom, xs, ys, zs)}
 #' \item \code{ST_Scale(geom, xs, ys)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Scale <- function(geom, xs, ys, zs) {
   stop("DuckDB function ST_Scale() is not available in R.")
 }
@@ -2864,6 +3138,8 @@ ST_Scale <- function(geom, xs, ys, zs) {
 #' @param geom1,geom2 `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_ShortestLine <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
   stop("DuckDB function ST_ShortestLine() is not available in R.")
 }
@@ -2879,6 +3155,8 @@ ST_ShortestLine <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' @param tolerance `DOUBLE`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Simplify <- function(geom = GEOMETRY, tolerance = DOUBLE) {
   stop("DuckDB function ST_Simplify() is not available in R.")
 }
@@ -2894,6 +3172,8 @@ ST_Simplify <- function(geom = GEOMETRY, tolerance = DOUBLE) {
 #' @param tolerance `DOUBLE`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_SimplifyPreserveTopology <- function(geom = GEOMETRY, tolerance = DOUBLE) {
   stop("DuckDB function ST_SimplifyPreserveTopology() is not available in R.")
 }
@@ -2910,6 +3190,8 @@ ST_SimplifyPreserveTopology <- function(geom = GEOMETRY, tolerance = DOUBLE) {
 #' @param tolerance `DOUBLE`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Snap <- function(geom = GEOMETRY, snap_to = GEOMETRY, tolerance = DOUBLE) {
   stop("DuckDB function ST_Snap() is not available in R.")
 }
@@ -2929,6 +3211,8 @@ ST_Snap <- function(geom = GEOMETRY, snap_to = GEOMETRY, tolerance = DOUBLE) {
 #' \item \code{ST_StartPoint(geom = GEOMETRY)}
 #' \item \code{ST_StartPoint(line = LINESTRING_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_StartPoint <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_StartPoint() is not available in R.")
 }
@@ -2943,6 +3227,8 @@ ST_StartPoint <- function(geom = GEOMETRY) {
 #' @param geom1,geom2 `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_SymDifference <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
   stop("DuckDB function ST_SymDifference() is not available in R.")
 }
@@ -2968,6 +3254,8 @@ ST_SymDifference <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' @param tile_zoom,tile_x,tile_y `INTEGER`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_TileEnvelope(2, 3, 1);
@@ -2992,6 +3280,8 @@ ST_TileEnvelope <- function(tile_zoom = INTEGER, tile_x = INTEGER, tile_y = INTE
 #' @param geom1,geom2 `GEOMETRY`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Touches <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
   stop("DuckDB function ST_Touches() is not available in R.")
 }
@@ -3006,6 +3296,8 @@ ST_Touches <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' @param geom,dx,dy,xs,ys Unspecified.
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' -- Translate by (1, 2) then scale by (2, 3)
@@ -3045,6 +3337,8 @@ ST_TransScale <- function(geom, dx, dy, xs, ys) {
 #' \item \code{ST_Transform(geom = GEOMETRY, target_crs = VARCHAR)}
 #' \item \code{ST_Transform(geom = GEOMETRY, target_crs = VARCHAR, always_xy = BOOLEAN)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' -- Transform a geometry from EPSG:4326 to EPSG:3857 (WGS84 to WebMercator)
@@ -3079,6 +3373,8 @@ ST_Transform <- function(box = BOX_2D, source_crs = VARCHAR, target_crs = VARCHA
 #' \item \code{ST_Translate(geom, dx, dy, dz)}
 #' \item \code{ST_Translate(geom, dx, dy)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Translate <- function(geom, dx, dy, dz) {
   stop("DuckDB function ST_Translate() is not available in R.")
 }
@@ -3093,6 +3389,8 @@ ST_Translate <- function(geom, dx, dy, dz) {
 #' @param geom1,geom2 `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Union <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
   stop("DuckDB function ST_Union() is not available in R.")
 }
@@ -3107,6 +3405,8 @@ ST_Union <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' @param col0 `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Union_Agg <- function(col0 = GEOMETRY) {
   stop("DuckDB function ST_Union_Agg() is not available in R.")
 }
@@ -3121,6 +3421,8 @@ ST_Union_Agg <- function(col0 = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `GEOMETRY`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_VoronoiDiagram <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_VoronoiDiagram() is not available in R.")
 }
@@ -3136,6 +3438,8 @@ ST_VoronoiDiagram <- function(geom = GEOMETRY) {
 #' @param geom2 `POLYGON_2D | GEOMETRY`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_Within <- function(geom1 = `POINT_2D | GEOMETRY`, geom2 = `POLYGON_2D | GEOMETRY`) {
   stop("DuckDB function ST_Within() is not available in R.")
 }
@@ -3152,6 +3456,8 @@ ST_Within <- function(geom1 = `POINT_2D | GEOMETRY`, geom2 = `POLYGON_2D | GEOME
 #' @param geom1,geom2 `GEOMETRY`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 ST_WithinProperly <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
   stop("DuckDB function ST_WithinProperly() is not available in R.")
 }
@@ -3171,6 +3477,8 @@ ST_WithinProperly <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' \item \code{ST_X(geom = GEOMETRY)}
 #' \item \code{ST_X(point = POINT_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_X(ST_Point(1, 2))
@@ -3198,6 +3506,8 @@ ST_X <- function(geom = GEOMETRY) {
 #' \item \code{ST_XMax(box = BOX_2D)}
 #' \item \code{ST_XMax(box = BOX_2DF)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_XMax(ST_Point(1, 2))
@@ -3225,6 +3535,8 @@ ST_XMax <- function(box = `BOX_2D | BOX_2DF`) {
 #' \item \code{ST_XMin(box = BOX_2D)}
 #' \item \code{ST_XMin(box = BOX_2DF)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_XMin(ST_Point(1, 2))
@@ -3248,6 +3560,8 @@ ST_XMin <- function(box = `BOX_2D | BOX_2DF`) {
 #' \item \code{ST_Y(geom = GEOMETRY)}
 #' \item \code{ST_Y(point = POINT_2D)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_Y(ST_Point(1, 2))
@@ -3275,6 +3589,8 @@ ST_Y <- function(geom = GEOMETRY) {
 #' \item \code{ST_YMax(box = BOX_2D)}
 #' \item \code{ST_YMax(box = BOX_2DF)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_YMax(ST_Point(1, 2))
@@ -3302,6 +3618,8 @@ ST_YMax <- function(box = `BOX_2D | BOX_2DF`) {
 #' \item \code{ST_YMin(box = BOX_2D)}
 #' \item \code{ST_YMin(box = BOX_2DF)}
 #' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_YMin(ST_Point(1, 2))
@@ -3320,6 +3638,8 @@ ST_YMin <- function(box = `BOX_2D | BOX_2DF`) {
 #' @param geom `GEOMETRY`
 #' @return `DOUBLE`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_Z(ST_Point(1, 2, 3))
@@ -3342,6 +3662,8 @@ ST_Z <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `UTINYINT`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' -- ZMFlag for a 2D geometry
@@ -3361,6 +3683,8 @@ ST_ZMFlag <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `DOUBLE`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_ZMax(ST_Point(1, 2, 3))
@@ -3379,6 +3703,8 @@ ST_ZMax <- function(geom = GEOMETRY) {
 #' @param geom `GEOMETRY`
 #' @return `DOUBLE`
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 #' @section SQL examples:
 #' ```
 #' SELECT ST_ZMin(ST_Point(1, 2, 3))
@@ -4486,6 +4812,8 @@ array_reverse <- function(l) {
 
 #' @return `JSON`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 array_to_json <- function() {
   stop("DuckDB function array_to_json() is not available in R.")
 }
@@ -4988,6 +5316,8 @@ bool_or <- function(arg = BOOLEAN) {
 #' @param col0 `INET`
 #' @return `INET`
 #' @export
+#' @section Provided by:
+#' The \code{inet} extension (\code{LOAD inet;}).
 broadcast <- function(col0 = INET) {
   stop("DuckDB function broadcast() is not available in R.")
 }
@@ -5117,6 +5447,8 @@ century <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{autocomplete} extension (\code{LOAD autocomplete;}).
 check_peg_parser <- function(col0 = VARCHAR) {
   stop("DuckDB function check_peg_parser() is not available in R.")
 }
@@ -5320,6 +5652,8 @@ copy_database <- function(col0 = VARCHAR, col1 = VARCHAR) {
 #' @param src_dir,dst_dir Unspecified.
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
 copy_dir <- function(src_dir, dst_dir) {
   stop("DuckDB function copy_dir() is not available in R.")
 }
@@ -5511,6 +5845,8 @@ covar_samp <- function(y = DOUBLE, x = DOUBLE) {
 #' @param stemmer `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{fts} extension (\code{LOAD fts;}).
 create_fts_index <- function(col0 = VARCHAR, col1 = VARCHAR, overwrite = BOOLEAN, lower = BOOLEAN, ignore = VARCHAR, stopwords = VARCHAR, strip_accents = BOOLEAN, stemmer = VARCHAR) {
   stop("DuckDB function create_fts_index() is not available in R.")
 }
@@ -5607,6 +5943,8 @@ current_database <- function() {
 
 #' @return `DATE`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 current_date <- function() {
   stop("DuckDB function current_date() is not available in R.")
 }
@@ -5621,6 +5959,8 @@ current_date <- function() {
 
 #' @return `TIME`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 current_localtime <- function() {
   stop("DuckDB function current_localtime() is not available in R.")
 }
@@ -5635,6 +5975,8 @@ current_localtime <- function() {
 
 #' @return `TIMESTAMP`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 current_localtimestamp <- function() {
   stop("DuckDB function current_localtimestamp() is not available in R.")
 }
@@ -6080,6 +6422,8 @@ days_in_month <- function(date) {
 #' @param sf `DOUBLE`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{tpch} extension (\code{LOAD tpch;}).
 dbgen <- function(step = UINTEGER, suffix = VARCHAR, schema = VARCHAR, catalog = VARCHAR, overwrite = BOOLEAN, children = UINTEGER, sf = DOUBLE) {
   stop("DuckDB function dbgen() is not available in R.")
 }
@@ -6158,6 +6502,8 @@ degrees <- function(x = DOUBLE) {
 #' @param version `UBIGINT`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
 delta_domain_metadata <- function(col0 = VARCHAR, version = UBIGINT) {
   stop("DuckDB function delta_domain_metadata() is not available in R.")
 }
@@ -6172,6 +6518,8 @@ delta_domain_metadata <- function(col0 = VARCHAR, version = UBIGINT) {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
 delta_filter_pushdown_log <- function() {
   stop("DuckDB function delta_filter_pushdown_log() is not available in R.")
 }
@@ -6186,6 +6534,8 @@ delta_filter_pushdown_log <- function() {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
 delta_filter_pushdown_log_tpcds <- function() {
   stop("DuckDB function delta_filter_pushdown_log_tpcds() is not available in R.")
 }
@@ -6200,6 +6550,8 @@ delta_filter_pushdown_log_tpcds <- function() {
 #' @param col0,col1 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
 delta_get_transaction_version <- function(col0 = VARCHAR, col1 = VARCHAR) {
   stop("DuckDB function delta_get_transaction_version() is not available in R.")
 }
@@ -6217,6 +6569,8 @@ delta_get_transaction_version <- function(col0 = VARCHAR, col1 = VARCHAR) {
 #' @param transform_expression `BOOLEAN`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
 delta_list_files <- function(col0 = VARCHAR, version = UBIGINT, delete_count = BOOLEAN, transform_expression = BOOLEAN) {
   stop("DuckDB function delta_list_files() is not available in R.")
 }
@@ -6267,6 +6621,8 @@ delta_list_files <- function(col0 = VARCHAR, version = UBIGINT, delete_count = B
 #' @param hive_types `ANY`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
 delta_scan <- function(col0 = `VARCHAR | VARCHAR[]`, version = UBIGINT, log_tail = `STRUCT(file_name VARCHAR, "timestamp" BIGINT, file_size UBIGINT)[]`, pushdown_partition_info = BOOLEAN, can_have_nan = BOOLEAN, filename = ANY, pushdown_filters = VARCHAR, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY) {
   stop("DuckDB function delta_scan() is not available in R.")
 }
@@ -6284,6 +6640,8 @@ delta_scan <- function(col0 = `VARCHAR | VARCHAR[]`, version = UBIGINT, log_tail
 #' @param col3 `UBIGINT`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
 delta_set_transaction_version <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = UBIGINT, col3 = UBIGINT) {
   stop("DuckDB function delta_set_transaction_version() is not available in R.")
 }
@@ -6368,6 +6726,8 @@ disable_optimizer <- function() {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{autocomplete} extension (\code{LOAD autocomplete;}).
 disable_peg_parser <- function() {
   stop("DuckDB function disable_peg_parser() is not available in R.")
 }
@@ -6529,6 +6889,8 @@ divide <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLO
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{fts} extension (\code{LOAD fts;}).
 drop_fts_index <- function(col0 = VARCHAR) {
   stop("DuckDB function drop_fts_index() is not available in R.")
 }
@@ -6548,6 +6910,8 @@ drop_fts_index <- function(col0 = VARCHAR) {
 #' @param sf `DOUBLE`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{tpcds} extension (\code{LOAD tpcds;}).
 dsdgen <- function(suffix = VARCHAR, schema = VARCHAR, catalog = VARCHAR, keys = BOOLEAN, overwrite = BOOLEAN, sf = DOUBLE) {
   stop("DuckDB function dsdgen() is not available in R.")
 }
@@ -6996,6 +7360,8 @@ duckdb_views <- function() {
 #' @param allow_missing `BOOLEAN`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_add_data_files <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = `VARCHAR | VARCHAR[]`, schema = VARCHAR, hive_partitioning = BOOLEAN, ignore_extra_columns = BOOLEAN, allow_missing = BOOLEAN) {
   stop("DuckDB function ducklake_add_data_files() is not available in R.")
 }
@@ -7013,6 +7379,8 @@ ducklake_add_data_files <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = `VARC
 #' @param older_than `TIMESTAMP WITH TIME ZONE`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_cleanup_old_files <- function(col0 = VARCHAR, dry_run = BOOLEAN, cleanup_all = BOOLEAN, older_than = `TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function ducklake_cleanup_old_files() is not available in R.")
 }
@@ -7031,6 +7399,8 @@ ducklake_cleanup_old_files <- function(col0 = VARCHAR, dry_run = BOOLEAN, cleanu
 #' @param max_retry_count `BIGINT`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_commit <- function(col0 = VARCHAR, col1 = BIGINT, retry_backoff = DOUBLE, retry_wait_ms = BIGINT, max_retry_count = BIGINT) {
   stop("DuckDB function ducklake_commit() is not available in R.")
 }
@@ -7045,6 +7415,8 @@ ducklake_commit <- function(col0 = VARCHAR, col1 = BIGINT, retry_backoff = DOUBL
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_current_snapshot <- function(col0 = VARCHAR) {
   stop("DuckDB function ducklake_current_snapshot() is not available in R.")
 }
@@ -7062,6 +7434,8 @@ ducklake_current_snapshot <- function(col0 = VARCHAR) {
 #' @param older_than `TIMESTAMP WITH TIME ZONE`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_delete_orphaned_files <- function(col0 = VARCHAR, dry_run = BOOLEAN, cleanup_all = BOOLEAN, older_than = `TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function ducklake_delete_orphaned_files() is not available in R.")
 }
@@ -7079,6 +7453,8 @@ ducklake_delete_orphaned_files <- function(col0 = VARCHAR, dry_run = BOOLEAN, cl
 #' @param older_than `TIMESTAMP WITH TIME ZONE`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_expire_snapshots <- function(col0 = VARCHAR, dry_run = BOOLEAN, versions = `UBIGINT[]`, older_than = `TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function ducklake_expire_snapshots() is not available in R.")
 }
@@ -7093,6 +7469,8 @@ ducklake_expire_snapshots <- function(col0 = VARCHAR, dry_run = BOOLEAN, version
 #' @param col0,table_name,schema_name `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_flush_inlined_data <- function(col0 = VARCHAR, table_name = VARCHAR, schema_name = VARCHAR) {
   stop("DuckDB function ducklake_flush_inlined_data() is not available in R.")
 }
@@ -7107,6 +7485,8 @@ ducklake_flush_inlined_data <- function(col0 = VARCHAR, table_name = VARCHAR, sc
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_last_committed_snapshot <- function(col0 = VARCHAR) {
   stop("DuckDB function ducklake_last_committed_snapshot() is not available in R.")
 }
@@ -7125,6 +7505,8 @@ ducklake_last_committed_snapshot <- function(col0 = VARCHAR) {
 #' @param schema `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_list_files <- function(col0 = VARCHAR, col1 = VARCHAR, snapshot_time = `TIMESTAMP WITH TIME ZONE`, snapshot_version = BIGINT, schema = VARCHAR) {
   stop("DuckDB function ducklake_list_files() is not available in R.")
 }
@@ -7156,6 +7538,8 @@ ducklake_list_files <- function(col0 = VARCHAR, col1 = VARCHAR, snapshot_time = 
 #' \item \code{ducklake_merge_adjacent_files(col0 = VARCHAR, col1 = VARCHAR, schema = VARCHAR, max_compacted_files = UBIGINT, max_file_size = UBIGINT, min_file_size = UBIGINT)}
 #' \item \code{ducklake_merge_adjacent_files(col0 = VARCHAR, max_compacted_files = UBIGINT, max_file_size = UBIGINT, min_file_size = UBIGINT)}
 #' }
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_merge_adjacent_files <- function(col0 = VARCHAR, col1 = VARCHAR, schema = VARCHAR, max_compacted_files = UBIGINT, max_file_size = UBIGINT, min_file_size = UBIGINT) {
   stop("DuckDB function ducklake_merge_adjacent_files() is not available in R.")
 }
@@ -7170,6 +7554,8 @@ ducklake_merge_adjacent_files <- function(col0 = VARCHAR, col1 = VARCHAR, schema
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_options <- function(col0 = VARCHAR) {
   stop("DuckDB function ducklake_options() is not available in R.")
 }
@@ -7192,6 +7578,8 @@ ducklake_options <- function(col0 = VARCHAR) {
 #' \item \code{ducklake_rewrite_data_files(col0 = VARCHAR, col1 = VARCHAR, schema = VARCHAR, delete_threshold = DOUBLE)}
 #' \item \code{ducklake_rewrite_data_files(col0 = VARCHAR, delete_threshold = DOUBLE)}
 #' }
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_rewrite_data_files <- function(col0 = VARCHAR, col1 = VARCHAR, schema = VARCHAR, delete_threshold = DOUBLE) {
   stop("DuckDB function ducklake_rewrite_data_files() is not available in R.")
 }
@@ -7236,6 +7624,8 @@ ducklake_rewrite_data_files <- function(col0 = VARCHAR, col1 = VARCHAR, schema =
 #' @param schema `ANY`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_scan <- function(col0 = VARCHAR, can_have_nan = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY, schema = ANY) {
   stop("DuckDB function ducklake_scan() is not available in R.")
 }
@@ -7250,6 +7640,8 @@ ducklake_scan <- function(col0 = VARCHAR, can_have_nan = BOOLEAN, filename = ANY
 #' @param col0,col1,col2,extra_info `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_set_commit_message <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = VARCHAR, extra_info = VARCHAR) {
   stop("DuckDB function ducklake_set_commit_message() is not available in R.")
 }
@@ -7268,6 +7660,8 @@ ducklake_set_commit_message <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = V
 #' @param table_name `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_set_option <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = ANY, schema = VARCHAR, table_name = VARCHAR) {
   stop("DuckDB function ducklake_set_option() is not available in R.")
 }
@@ -7282,6 +7676,8 @@ ducklake_set_option <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = ANY, sche
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_settings <- function(col0 = VARCHAR) {
   stop("DuckDB function ducklake_settings() is not available in R.")
 }
@@ -7296,6 +7692,8 @@ ducklake_settings <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_snapshots <- function(col0 = VARCHAR) {
   stop("DuckDB function ducklake_snapshots() is not available in R.")
 }
@@ -7310,6 +7708,8 @@ ducklake_snapshots <- function(col0 = VARCHAR) {
 #' @param catalog,schema_name,table_name,start_snapshot,end_snapshot Unspecified.
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_table_changes <- function(catalog, schema_name, table_name, start_snapshot, end_snapshot) {
   stop("DuckDB function ducklake_table_changes() is not available in R.")
 }
@@ -7328,6 +7728,8 @@ ducklake_table_changes <- function(catalog, schema_name, table_name, start_snaps
 #' @param col4 `BIGINT | TIMESTAMP WITH TIME ZONE`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_table_deletions <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = VARCHAR, col3 = `BIGINT | TIMESTAMP WITH TIME ZONE`, col4 = `BIGINT | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function ducklake_table_deletions() is not available in R.")
 }
@@ -7342,6 +7744,8 @@ ducklake_table_deletions <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = VARC
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_table_info <- function(col0 = VARCHAR) {
   stop("DuckDB function ducklake_table_info() is not available in R.")
 }
@@ -7360,6 +7764,8 @@ ducklake_table_info <- function(col0 = VARCHAR) {
 #' @param col4 `BIGINT | TIMESTAMP WITH TIME ZONE`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 ducklake_table_insertions <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = VARCHAR, col3 = `BIGINT | TIMESTAMP WITH TIME ZONE`, col4 = `BIGINT | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function ducklake_table_insertions() is not available in R.")
 }
@@ -7416,6 +7822,8 @@ enable_optimizer <- function() {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{autocomplete} extension (\code{LOAD autocomplete;}).
 enable_peg_parser <- function() {
   stop("DuckDB function enable_peg_parser() is not available in R.")
 }
@@ -7780,6 +8188,8 @@ even <- function(x = DOUBLE) {
 #' @param col1 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{excel} extension (\code{LOAD excel;}).
 excel_text <- function(col0 = DOUBLE, col1 = VARCHAR) {
   stop("DuckDB function excel_text() is not available in R.")
 }
@@ -7851,6 +8261,8 @@ factorial <- function(x = INTEGER) {
 #' @param col0 `INET`
 #' @return `UTINYINT`
 #' @export
+#' @section Provided by:
+#' The \code{inet} extension (\code{LOAD inet;}).
 family <- function(col0 = INET) {
   stop("DuckDB function family() is not available in R.")
 }
@@ -8136,6 +8548,8 @@ from_base64 <- function(string = VARCHAR) {
 #' @param col1 `VARCHAR`
 #' @return `ANY`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 from_json <- function(col0 = `VARCHAR | JSON`, col1 = VARCHAR) {
   stop("DuckDB function from_json() is not available in R.")
 }
@@ -8151,6 +8565,8 @@ from_json <- function(col0 = `VARCHAR | JSON`, col1 = VARCHAR) {
 #' @param col1 `VARCHAR`
 #' @return `ANY`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 from_json_strict <- function(col0 = `VARCHAR | JSON`, col1 = VARCHAR) {
   stop("DuckDB function from_json_strict() is not available in R.")
 }
@@ -8211,6 +8627,19 @@ gamma <- function(x = DOUBLE) {
 #' \item \code{generate_series(start = BIGINT, stop = BIGINT, step = BIGINT)}
 #' \item \code{generate_series(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}
 #' \item \code{generate_series(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}
+#' }
+#' @section Provided by:
+#' \itemize{
+#' \item \code{generate_series(col0 = BIGINT)}: built in
+#' \item \code{generate_series(col0 = BIGINT, col1 = BIGINT)}: built in
+#' \item \code{generate_series(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT)}: built in
+#' \item \code{generate_series(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)}: built in
+#' \item \code{generate_series(col0 = `TIMESTAMP WITH TIME ZONE`, col1 = `TIMESTAMP WITH TIME ZONE`, col2 = INTERVAL)}: \code{icu}
+#' \item \code{generate_series(start = BIGINT)}: built in
+#' \item \code{generate_series(start = BIGINT, stop = BIGINT)}: built in
+#' \item \code{generate_series(start = BIGINT, stop = BIGINT, step = BIGINT)}: built in
+#' \item \code{generate_series(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}: built in
+#' \item \code{generate_series(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}: built in
 #' }
 #' @family list
 #' @section SQL examples:
@@ -8306,6 +8735,8 @@ get_block_size <- function(db_name) {
 
 #' @return `TIME WITH TIME ZONE`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 get_current_time <- function() {
   stop("DuckDB function get_current_time() is not available in R.")
 }
@@ -8352,6 +8783,8 @@ transaction_timestamp <- function() {
 
 #' @return `VARCHAR[]`
 #' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
 get_delta_test_expression <- function() {
   stop("DuckDB function get_delta_test_expression() is not available in R.")
 }
@@ -8384,6 +8817,8 @@ get_type <- function(expression = ANY) {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ui} extension (\code{LOAD ui;}).
 get_ui_url <- function() {
   stop("DuckDB function get_ui_url() is not available in R.")
 }
@@ -8830,6 +9265,8 @@ histogram_values <- function(source, col_name, bin_count, technique) {
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{vss} extension (\code{LOAD vss;}).
 hnsw_compact_index <- function(col0 = VARCHAR) {
   stop("DuckDB function hnsw_compact_index() is not available in R.")
 }
@@ -8844,6 +9281,8 @@ hnsw_compact_index <- function(col0 = VARCHAR) {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{vss} extension (\code{LOAD vss;}).
 hnsw_index_scan <- function() {
   stop("DuckDB function hnsw_index_scan() is not available in R.")
 }
@@ -8858,6 +9297,8 @@ hnsw_index_scan <- function() {
 #' @param col0 `INET`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{inet} extension (\code{LOAD inet;}).
 host <- function(col0 = INET) {
   stop("DuckDB function host() is not available in R.")
 }
@@ -8896,6 +9337,8 @@ hour <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE 
 #' \item \code{html_escape(col0 = VARCHAR)}
 #' \item \code{html_escape(col0 = VARCHAR, col1 = BOOLEAN)}
 #' }
+#' @section Provided by:
+#' The \code{inet} extension (\code{LOAD inet;}).
 html_escape <- function(col0 = VARCHAR, col1 = BOOLEAN) {
   stop("DuckDB function html_escape() is not available in R.")
 }
@@ -8910,6 +9353,8 @@ html_escape <- function(col0 = VARCHAR, col1 = BOOLEAN) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{inet} extension (\code{LOAD inet;}).
 html_unescape <- function(col0 = VARCHAR) {
   stop("DuckDB function html_unescape() is not available in R.")
 }
@@ -8925,6 +9370,8 @@ html_unescape <- function(col0 = VARCHAR) {
 #' @param col1 `INTEGER | BIGINT | VARCHAR | BLOB | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIMESTAMP_NS | TIME | UUID | DECIMAL`
 #' @return `INTEGER`
 #' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
 iceberg_bucket <- function(col0 = INTEGER, col1 = `INTEGER | BIGINT | VARCHAR | BLOB | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIMESTAMP_NS | TIME | UUID | DECIMAL`) {
   stop("DuckDB function iceberg_bucket() is not available in R.")
 }
@@ -8953,6 +9400,8 @@ iceberg_bucket <- function(col0 = INTEGER, col1 = `INTEGER | BIGINT | VARCHAR | 
 #' @param allow_moved_paths `BOOLEAN`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
 iceberg_column_stats <- function(col0 = VARCHAR, snapshot_from_timestamp = TIMESTAMP, snapshot_from_id = UBIGINT, version_name_format = VARCHAR, version = VARCHAR, metadata_compression_codec = VARCHAR, allow_moved_paths = BOOLEAN) {
   stop("DuckDB function iceberg_column_stats() is not available in R.")
 }
@@ -8967,6 +9416,8 @@ iceberg_column_stats <- function(col0 = VARCHAR, snapshot_from_timestamp = TIMES
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
 iceberg_load_table_response <- function(col0 = VARCHAR) {
   stop("DuckDB function iceberg_load_table_response() is not available in R.")
 }
@@ -8995,6 +9446,8 @@ iceberg_load_table_response <- function(col0 = VARCHAR) {
 #' @param allow_moved_paths `BOOLEAN`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
 iceberg_metadata <- function(col0 = VARCHAR, snapshot_from_timestamp = TIMESTAMP, snapshot_from_id = UBIGINT, version_name_format = VARCHAR, version = VARCHAR, metadata_compression_codec = VARCHAR, allow_moved_paths = BOOLEAN) {
   stop("DuckDB function iceberg_metadata() is not available in R.")
 }
@@ -9023,6 +9476,8 @@ iceberg_metadata <- function(col0 = VARCHAR, snapshot_from_timestamp = TIMESTAMP
 #' @param allow_moved_paths `BOOLEAN`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
 iceberg_partition_stats <- function(col0 = VARCHAR, snapshot_from_timestamp = TIMESTAMP, snapshot_from_id = UBIGINT, version_name_format = VARCHAR, version = VARCHAR, metadata_compression_codec = VARCHAR, allow_moved_paths = BOOLEAN) {
   stop("DuckDB function iceberg_partition_stats() is not available in R.")
 }
@@ -9079,6 +9534,8 @@ iceberg_partition_stats <- function(col0 = VARCHAR, snapshot_from_timestamp = TI
 #' @param hive_types `ANY`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
 iceberg_scan <- function(col0 = `VARCHAR | VARCHAR[]`, snapshot_from_timestamp = TIMESTAMP, version = VARCHAR, metadata_compression_codec = VARCHAR, mode = VARCHAR, can_have_nan = BOOLEAN, allow_moved_paths = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, snapshot_from_id = UBIGINT, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, version_name_format = VARCHAR, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY) {
   stop("DuckDB function iceberg_scan() is not available in R.")
 }
@@ -9093,6 +9550,8 @@ iceberg_scan <- function(col0 = `VARCHAR | VARCHAR[]`, snapshot_from_timestamp =
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
 iceberg_schema_properties <- function(col0 = VARCHAR) {
   stop("DuckDB function iceberg_schema_properties() is not available in R.")
 }
@@ -9107,6 +9566,8 @@ iceberg_schema_properties <- function(col0 = VARCHAR) {
 #' @param col0,version_name_format,version,metadata_compression_codec `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
 iceberg_snapshots <- function(col0 = VARCHAR, version_name_format = VARCHAR, version = VARCHAR, metadata_compression_codec = VARCHAR) {
   stop("DuckDB function iceberg_snapshots() is not available in R.")
 }
@@ -9121,6 +9582,8 @@ iceberg_snapshots <- function(col0 = VARCHAR, version_name_format = VARCHAR, ver
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
 iceberg_table_properties <- function(col0 = VARCHAR) {
   stop("DuckDB function iceberg_table_properties() is not available in R.")
 }
@@ -9137,6 +9600,8 @@ iceberg_table_properties <- function(col0 = VARCHAR) {
 #' @param skip_tables `VARCHAR[]`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
 iceberg_to_ducklake <- function(col0 = VARCHAR, col1 = VARCHAR, skip_tables = `VARCHAR[]`) {
   stop("DuckDB function iceberg_to_ducklake() is not available in R.")
 }
@@ -9152,6 +9617,8 @@ iceberg_to_ducklake <- function(col0 = VARCHAR, col1 = VARCHAR, skip_tables = `V
 #' @param col1 `INTEGER | BIGINT | VARCHAR | BLOB | DECIMAL`
 #' @return `INTEGER | BIGINT | VARCHAR | BLOB | DECIMAL`
 #' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
 iceberg_truncate <- function(col0 = INTEGER, col1 = `INTEGER | BIGINT | VARCHAR | BLOB | DECIMAL`) {
   stop("DuckDB function iceberg_truncate() is not available in R.")
 }
@@ -9166,6 +9633,8 @@ iceberg_truncate <- function(col0 = INTEGER, col1 = `INTEGER | BIGINT | VARCHAR 
 
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
 iceberg_verify_equality_deletes <- function() {
   stop("DuckDB function iceberg_verify_equality_deletes() is not available in R.")
 }
@@ -9180,6 +9649,8 @@ iceberg_verify_equality_deletes <- function() {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_calendar_names <- function() {
   stop("DuckDB function icu_calendar_names() is not available in R.")
 }
@@ -9194,6 +9665,8 @@ icu_calendar_names <- function() {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_af <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_af() is not available in R.")
 }
@@ -9208,6 +9681,8 @@ icu_collate_af <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_am <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_am() is not available in R.")
 }
@@ -9222,6 +9697,8 @@ icu_collate_am <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ar <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ar() is not available in R.")
 }
@@ -9236,6 +9713,8 @@ icu_collate_ar <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ar_sa <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ar_sa() is not available in R.")
 }
@@ -9250,6 +9729,8 @@ icu_collate_ar_sa <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_as <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_as() is not available in R.")
 }
@@ -9264,6 +9745,8 @@ icu_collate_as <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_az <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_az() is not available in R.")
 }
@@ -9278,6 +9761,8 @@ icu_collate_az <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_be <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_be() is not available in R.")
 }
@@ -9292,6 +9777,8 @@ icu_collate_be <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_bg <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_bg() is not available in R.")
 }
@@ -9306,6 +9793,8 @@ icu_collate_bg <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_bn <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_bn() is not available in R.")
 }
@@ -9320,6 +9809,8 @@ icu_collate_bn <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_bo <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_bo() is not available in R.")
 }
@@ -9334,6 +9825,8 @@ icu_collate_bo <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_br <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_br() is not available in R.")
 }
@@ -9348,6 +9841,8 @@ icu_collate_br <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_bs <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_bs() is not available in R.")
 }
@@ -9362,6 +9857,8 @@ icu_collate_bs <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ca <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ca() is not available in R.")
 }
@@ -9376,6 +9873,8 @@ icu_collate_ca <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ceb <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ceb() is not available in R.")
 }
@@ -9390,6 +9889,8 @@ icu_collate_ceb <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_chr <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_chr() is not available in R.")
 }
@@ -9404,6 +9905,8 @@ icu_collate_chr <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_cs <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_cs() is not available in R.")
 }
@@ -9418,6 +9921,8 @@ icu_collate_cs <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_cy <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_cy() is not available in R.")
 }
@@ -9432,6 +9937,8 @@ icu_collate_cy <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_da <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_da() is not available in R.")
 }
@@ -9446,6 +9953,8 @@ icu_collate_da <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_de <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_de() is not available in R.")
 }
@@ -9460,6 +9969,8 @@ icu_collate_de <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_de_at <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_de_at() is not available in R.")
 }
@@ -9474,6 +9985,8 @@ icu_collate_de_at <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_dsb <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_dsb() is not available in R.")
 }
@@ -9488,6 +10001,8 @@ icu_collate_dsb <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_dz <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_dz() is not available in R.")
 }
@@ -9502,6 +10017,8 @@ icu_collate_dz <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ee <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ee() is not available in R.")
 }
@@ -9516,6 +10033,8 @@ icu_collate_ee <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_el <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_el() is not available in R.")
 }
@@ -9530,6 +10049,8 @@ icu_collate_el <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_en <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_en() is not available in R.")
 }
@@ -9544,6 +10065,8 @@ icu_collate_en <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_en_us <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_en_us() is not available in R.")
 }
@@ -9558,6 +10081,8 @@ icu_collate_en_us <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_eo <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_eo() is not available in R.")
 }
@@ -9572,6 +10097,8 @@ icu_collate_eo <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_es <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_es() is not available in R.")
 }
@@ -9586,6 +10113,8 @@ icu_collate_es <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_et <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_et() is not available in R.")
 }
@@ -9600,6 +10129,8 @@ icu_collate_et <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_fa <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_fa() is not available in R.")
 }
@@ -9614,6 +10145,8 @@ icu_collate_fa <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_fa_af <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_fa_af() is not available in R.")
 }
@@ -9628,6 +10161,8 @@ icu_collate_fa_af <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ff <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ff() is not available in R.")
 }
@@ -9642,6 +10177,8 @@ icu_collate_ff <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_fi <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_fi() is not available in R.")
 }
@@ -9656,6 +10193,8 @@ icu_collate_fi <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_fil <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_fil() is not available in R.")
 }
@@ -9670,6 +10209,8 @@ icu_collate_fil <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_fo <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_fo() is not available in R.")
 }
@@ -9684,6 +10225,8 @@ icu_collate_fo <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_fr <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_fr() is not available in R.")
 }
@@ -9698,6 +10241,8 @@ icu_collate_fr <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_fr_ca <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_fr_ca() is not available in R.")
 }
@@ -9712,6 +10257,8 @@ icu_collate_fr_ca <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_fy <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_fy() is not available in R.")
 }
@@ -9726,6 +10273,8 @@ icu_collate_fy <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ga <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ga() is not available in R.")
 }
@@ -9740,6 +10289,8 @@ icu_collate_ga <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_gl <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_gl() is not available in R.")
 }
@@ -9754,6 +10305,8 @@ icu_collate_gl <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_gu <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_gu() is not available in R.")
 }
@@ -9768,6 +10321,8 @@ icu_collate_gu <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ha <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ha() is not available in R.")
 }
@@ -9782,6 +10337,8 @@ icu_collate_ha <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_haw <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_haw() is not available in R.")
 }
@@ -9796,6 +10353,8 @@ icu_collate_haw <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_he <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_he() is not available in R.")
 }
@@ -9810,6 +10369,8 @@ icu_collate_he <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_he_il <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_he_il() is not available in R.")
 }
@@ -9824,6 +10385,8 @@ icu_collate_he_il <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_hi <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_hi() is not available in R.")
 }
@@ -9838,6 +10401,8 @@ icu_collate_hi <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_hr <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_hr() is not available in R.")
 }
@@ -9852,6 +10417,8 @@ icu_collate_hr <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_hsb <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_hsb() is not available in R.")
 }
@@ -9866,6 +10433,8 @@ icu_collate_hsb <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_hu <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_hu() is not available in R.")
 }
@@ -9880,6 +10449,8 @@ icu_collate_hu <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_hy <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_hy() is not available in R.")
 }
@@ -9894,6 +10465,8 @@ icu_collate_hy <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_id <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_id() is not available in R.")
 }
@@ -9908,6 +10481,8 @@ icu_collate_id <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_id_id <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_id_id() is not available in R.")
 }
@@ -9922,6 +10497,8 @@ icu_collate_id_id <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ig <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ig() is not available in R.")
 }
@@ -9936,6 +10513,8 @@ icu_collate_ig <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_is <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_is() is not available in R.")
 }
@@ -9950,6 +10529,8 @@ icu_collate_is <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_it <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_it() is not available in R.")
 }
@@ -9964,6 +10545,8 @@ icu_collate_it <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ja <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ja() is not available in R.")
 }
@@ -9978,6 +10561,8 @@ icu_collate_ja <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ka <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ka() is not available in R.")
 }
@@ -9992,6 +10577,8 @@ icu_collate_ka <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_kk <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_kk() is not available in R.")
 }
@@ -10006,6 +10593,8 @@ icu_collate_kk <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_kl <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_kl() is not available in R.")
 }
@@ -10020,6 +10609,8 @@ icu_collate_kl <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_km <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_km() is not available in R.")
 }
@@ -10034,6 +10625,8 @@ icu_collate_km <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_kn <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_kn() is not available in R.")
 }
@@ -10048,6 +10641,8 @@ icu_collate_kn <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ko <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ko() is not available in R.")
 }
@@ -10062,6 +10657,8 @@ icu_collate_ko <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_kok <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_kok() is not available in R.")
 }
@@ -10076,6 +10673,8 @@ icu_collate_kok <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ku <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ku() is not available in R.")
 }
@@ -10090,6 +10689,8 @@ icu_collate_ku <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ky <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ky() is not available in R.")
 }
@@ -10104,6 +10705,8 @@ icu_collate_ky <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_lb <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_lb() is not available in R.")
 }
@@ -10118,6 +10721,8 @@ icu_collate_lb <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_lij <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_lij() is not available in R.")
 }
@@ -10132,6 +10737,8 @@ icu_collate_lij <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_lkt <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_lkt() is not available in R.")
 }
@@ -10146,6 +10753,8 @@ icu_collate_lkt <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ln <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ln() is not available in R.")
 }
@@ -10160,6 +10769,8 @@ icu_collate_ln <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_lo <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_lo() is not available in R.")
 }
@@ -10174,6 +10785,8 @@ icu_collate_lo <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_lt <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_lt() is not available in R.")
 }
@@ -10188,6 +10801,8 @@ icu_collate_lt <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_lv <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_lv() is not available in R.")
 }
@@ -10202,6 +10817,8 @@ icu_collate_lv <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_mk <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_mk() is not available in R.")
 }
@@ -10216,6 +10833,8 @@ icu_collate_mk <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ml <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ml() is not available in R.")
 }
@@ -10230,6 +10849,8 @@ icu_collate_ml <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_mn <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_mn() is not available in R.")
 }
@@ -10244,6 +10865,8 @@ icu_collate_mn <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_mr <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_mr() is not available in R.")
 }
@@ -10258,6 +10881,8 @@ icu_collate_mr <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ms <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ms() is not available in R.")
 }
@@ -10272,6 +10897,8 @@ icu_collate_ms <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_mt <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_mt() is not available in R.")
 }
@@ -10286,6 +10913,8 @@ icu_collate_mt <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_my <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_my() is not available in R.")
 }
@@ -10300,6 +10929,8 @@ icu_collate_my <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_nb <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_nb() is not available in R.")
 }
@@ -10314,6 +10945,8 @@ icu_collate_nb <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_nb_no <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_nb_no() is not available in R.")
 }
@@ -10328,6 +10961,8 @@ icu_collate_nb_no <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ne <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ne() is not available in R.")
 }
@@ -10342,6 +10977,8 @@ icu_collate_ne <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_nl <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_nl() is not available in R.")
 }
@@ -10356,6 +10993,8 @@ icu_collate_nl <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_nn <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_nn() is not available in R.")
 }
@@ -10370,6 +11009,8 @@ icu_collate_nn <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_noaccent <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_noaccent() is not available in R.")
 }
@@ -10384,6 +11025,8 @@ icu_collate_noaccent <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_nso <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_nso() is not available in R.")
 }
@@ -10398,6 +11041,8 @@ icu_collate_nso <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_om <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_om() is not available in R.")
 }
@@ -10412,6 +11057,8 @@ icu_collate_om <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_or <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_or() is not available in R.")
 }
@@ -10426,6 +11073,8 @@ icu_collate_or <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_pa <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_pa() is not available in R.")
 }
@@ -10440,6 +11089,8 @@ icu_collate_pa <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_pa_in <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_pa_in() is not available in R.")
 }
@@ -10454,6 +11105,8 @@ icu_collate_pa_in <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_pl <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_pl() is not available in R.")
 }
@@ -10468,6 +11121,8 @@ icu_collate_pl <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ps <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ps() is not available in R.")
 }
@@ -10482,6 +11137,8 @@ icu_collate_ps <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_pt <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_pt() is not available in R.")
 }
@@ -10496,6 +11153,8 @@ icu_collate_pt <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ro <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ro() is not available in R.")
 }
@@ -10510,6 +11169,8 @@ icu_collate_ro <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ru <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ru() is not available in R.")
 }
@@ -10524,6 +11185,8 @@ icu_collate_ru <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_sa <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_sa() is not available in R.")
 }
@@ -10538,6 +11201,8 @@ icu_collate_sa <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_se <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_se() is not available in R.")
 }
@@ -10552,6 +11217,8 @@ icu_collate_se <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_si <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_si() is not available in R.")
 }
@@ -10566,6 +11233,8 @@ icu_collate_si <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_sk <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_sk() is not available in R.")
 }
@@ -10580,6 +11249,8 @@ icu_collate_sk <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_sl <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_sl() is not available in R.")
 }
@@ -10594,6 +11265,8 @@ icu_collate_sl <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_smn <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_smn() is not available in R.")
 }
@@ -10608,6 +11281,8 @@ icu_collate_smn <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_sq <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_sq() is not available in R.")
 }
@@ -10622,6 +11297,8 @@ icu_collate_sq <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_sr <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_sr() is not available in R.")
 }
@@ -10636,6 +11313,8 @@ icu_collate_sr <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_sr_ba <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_sr_ba() is not available in R.")
 }
@@ -10650,6 +11329,8 @@ icu_collate_sr_ba <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_sr_me <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_sr_me() is not available in R.")
 }
@@ -10664,6 +11345,8 @@ icu_collate_sr_me <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_sr_rs <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_sr_rs() is not available in R.")
 }
@@ -10678,6 +11361,8 @@ icu_collate_sr_rs <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_st <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_st() is not available in R.")
 }
@@ -10692,6 +11377,8 @@ icu_collate_st <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_sv <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_sv() is not available in R.")
 }
@@ -10706,6 +11393,8 @@ icu_collate_sv <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_sw <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_sw() is not available in R.")
 }
@@ -10720,6 +11409,8 @@ icu_collate_sw <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ta <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ta() is not available in R.")
 }
@@ -10734,6 +11425,8 @@ icu_collate_ta <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_te <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_te() is not available in R.")
 }
@@ -10748,6 +11441,8 @@ icu_collate_te <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_th <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_th() is not available in R.")
 }
@@ -10762,6 +11457,8 @@ icu_collate_th <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_tk <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_tk() is not available in R.")
 }
@@ -10776,6 +11473,8 @@ icu_collate_tk <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_tn <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_tn() is not available in R.")
 }
@@ -10790,6 +11489,8 @@ icu_collate_tn <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_to <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_to() is not available in R.")
 }
@@ -10804,6 +11505,8 @@ icu_collate_to <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_tr <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_tr() is not available in R.")
 }
@@ -10818,6 +11521,8 @@ icu_collate_tr <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ug <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ug() is not available in R.")
 }
@@ -10832,6 +11537,8 @@ icu_collate_ug <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_uk <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_uk() is not available in R.")
 }
@@ -10846,6 +11553,8 @@ icu_collate_uk <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_ur <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_ur() is not available in R.")
 }
@@ -10860,6 +11569,8 @@ icu_collate_ur <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_uz <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_uz() is not available in R.")
 }
@@ -10874,6 +11585,8 @@ icu_collate_uz <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_vi <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_vi() is not available in R.")
 }
@@ -10888,6 +11601,8 @@ icu_collate_vi <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_wae <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_wae() is not available in R.")
 }
@@ -10902,6 +11617,8 @@ icu_collate_wae <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_wo <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_wo() is not available in R.")
 }
@@ -10916,6 +11633,8 @@ icu_collate_wo <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_xh <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_xh() is not available in R.")
 }
@@ -10930,6 +11649,8 @@ icu_collate_xh <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_yi <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_yi() is not available in R.")
 }
@@ -10944,6 +11665,8 @@ icu_collate_yi <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_yo <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_yo() is not available in R.")
 }
@@ -10958,6 +11681,8 @@ icu_collate_yo <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_yue <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_yue() is not available in R.")
 }
@@ -10972,6 +11697,8 @@ icu_collate_yue <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_yue_cn <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_yue_cn() is not available in R.")
 }
@@ -10986,6 +11713,8 @@ icu_collate_yue_cn <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_zh <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_zh() is not available in R.")
 }
@@ -11000,6 +11729,8 @@ icu_collate_zh <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_zh_cn <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_zh_cn() is not available in R.")
 }
@@ -11014,6 +11745,8 @@ icu_collate_zh_cn <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_zh_hk <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_zh_hk() is not available in R.")
 }
@@ -11028,6 +11761,8 @@ icu_collate_zh_hk <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_zh_mo <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_zh_mo() is not available in R.")
 }
@@ -11042,6 +11777,8 @@ icu_collate_zh_mo <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_zh_sg <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_zh_sg() is not available in R.")
 }
@@ -11056,6 +11793,8 @@ icu_collate_zh_sg <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_zh_tw <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_zh_tw() is not available in R.")
 }
@@ -11070,6 +11809,8 @@ icu_collate_zh_tw <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_collate_zu <- function(col0 = VARCHAR) {
   stop("DuckDB function icu_collate_zu() is not available in R.")
 }
@@ -11084,6 +11825,8 @@ icu_collate_zu <- function(col0 = VARCHAR) {
 #' @param col0,col1 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 icu_sort_key <- function(col0 = VARCHAR, col1 = VARCHAR) {
   stop("DuckDB function icu_sort_key() is not available in R.")
 }
@@ -11418,6 +12161,8 @@ jaro_winkler_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = D
 #' @param x Unspecified.
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json <- function(x) {
   stop("DuckDB function json() is not available in R.")
 }
@@ -11432,6 +12177,8 @@ json <- function(x) {
 
 #' @return `JSON`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_array <- function() {
   stop("DuckDB function json_array() is not available in R.")
 }
@@ -11456,6 +12203,8 @@ json_array <- function() {
 #' \item \code{json_array_length(col0 = JSON, col1 = VARCHAR)}
 #' \item \code{json_array_length(col0 = JSON, col1 = `VARCHAR[]`)}
 #' }
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_array_length <- function(col0 = `VARCHAR | JSON`, col1 = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function json_array_length() is not available in R.")
 }
@@ -11470,6 +12219,8 @@ json_array_length <- function(col0 = `VARCHAR | JSON`, col1 = `VARCHAR | VARCHAR
 #' @param col0,col1 `VARCHAR | JSON`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_contains <- function(col0 = `VARCHAR | JSON`, col1 = `VARCHAR | JSON`) {
   stop("DuckDB function json_contains() is not available in R.")
 }
@@ -11484,6 +12235,8 @@ json_contains <- function(col0 = `VARCHAR | JSON`, col1 = `VARCHAR | JSON`) {
 #' @param col0 `JSON`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_deserialize_sql <- function(col0 = JSON) {
   stop("DuckDB function json_deserialize_sql() is not available in R.")
 }
@@ -11506,6 +12259,8 @@ json_deserialize_sql <- function(col0 = JSON) {
 #' \item \code{json_each(col0 = JSON)}
 #' \item \code{json_each(col0 = JSON, col1 = VARCHAR)}
 #' }
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_each <- function(col0 = `VARCHAR | JSON`, col1 = VARCHAR) {
   stop("DuckDB function json_each() is not available in R.")
 }
@@ -11520,6 +12275,8 @@ json_each <- function(col0 = `VARCHAR | JSON`, col1 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_execute_serialized_sql <- function(col0 = VARCHAR) {
   stop("DuckDB function json_execute_serialized_sql() is not available in R.")
 }
@@ -11535,6 +12292,8 @@ json_execute_serialized_sql <- function(col0 = VARCHAR) {
 #' @param col1 `VARCHAR | VARCHAR[]`
 #' @return `BOOLEAN | BOOLEAN[]`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_exists <- function(col0 = `VARCHAR | JSON`, col1 = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function json_exists() is not available in R.")
 }
@@ -11550,6 +12309,8 @@ json_exists <- function(col0 = `VARCHAR | JSON`, col1 = `VARCHAR | VARCHAR[]`) {
 #' @param col1 `BIGINT | VARCHAR | VARCHAR[]`
 #' @return `JSON | JSON[]`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_extract <- function(col0 = `VARCHAR | JSON`, col1 = `BIGINT | VARCHAR | VARCHAR[]`) {
   stop("DuckDB function json_extract() is not available in R.")
 }
@@ -11565,6 +12326,8 @@ json_extract <- function(col0 = `VARCHAR | JSON`, col1 = `BIGINT | VARCHAR | VAR
 #' @param col1 `BIGINT | VARCHAR | VARCHAR[]`
 #' @return `JSON | JSON[]`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_extract_path <- function(col0 = `VARCHAR | JSON`, col1 = `BIGINT | VARCHAR | VARCHAR[]`) {
   stop("DuckDB function json_extract_path() is not available in R.")
 }
@@ -11580,6 +12343,8 @@ json_extract_path <- function(col0 = `VARCHAR | JSON`, col1 = `BIGINT | VARCHAR 
 #' @param col1 `BIGINT | VARCHAR | VARCHAR[]`
 #' @return `VARCHAR | VARCHAR[]`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_extract_path_text <- function(col0 = `VARCHAR | JSON`, col1 = `BIGINT | VARCHAR | VARCHAR[]`) {
   stop("DuckDB function json_extract_path_text() is not available in R.")
 }
@@ -11595,6 +12360,8 @@ json_extract_path_text <- function(col0 = `VARCHAR | JSON`, col1 = `BIGINT | VAR
 #' @param col1 `BIGINT | VARCHAR | VARCHAR[]`
 #' @return `VARCHAR | VARCHAR[]`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_extract_string <- function(col0 = `VARCHAR | JSON`, col1 = `BIGINT | VARCHAR | VARCHAR[]`) {
   stop("DuckDB function json_extract_string() is not available in R.")
 }
@@ -11609,6 +12376,8 @@ json_extract_string <- function(col0 = `VARCHAR | JSON`, col1 = `BIGINT | VARCHA
 #' @param x Unspecified.
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_group_array <- function(x) {
   stop("DuckDB function json_group_array() is not available in R.")
 }
@@ -11623,6 +12392,8 @@ json_group_array <- function(x) {
 #' @param n,v Unspecified.
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_group_object <- function(n, v) {
   stop("DuckDB function json_group_object() is not available in R.")
 }
@@ -11637,6 +12408,8 @@ json_group_object <- function(n, v) {
 #' @param x Unspecified.
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_group_structure <- function(x) {
   stop("DuckDB function json_group_structure() is not available in R.")
 }
@@ -11661,6 +12434,8 @@ json_group_structure <- function(x) {
 #' \item \code{json_keys(col0 = JSON, col1 = VARCHAR)}
 #' \item \code{json_keys(col0 = JSON, col1 = `VARCHAR[]`)}
 #' }
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_keys <- function(col0 = `VARCHAR | JSON`, col1 = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function json_keys() is not available in R.")
 }
@@ -11675,6 +12450,8 @@ json_keys <- function(col0 = `VARCHAR | JSON`, col1 = `VARCHAR | VARCHAR[]`) {
 #' @param col0,col1 `JSON`
 #' @return `JSON`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_merge_patch <- function(col0 = JSON, col1 = JSON) {
   stop("DuckDB function json_merge_patch() is not available in R.")
 }
@@ -11689,6 +12466,8 @@ json_merge_patch <- function(col0 = JSON, col1 = JSON) {
 
 #' @return `JSON`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_object <- function() {
   stop("DuckDB function json_object() is not available in R.")
 }
@@ -11703,6 +12482,8 @@ json_object <- function() {
 #' @param col0 `JSON`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_pretty <- function(col0 = JSON) {
   stop("DuckDB function json_pretty() is not available in R.")
 }
@@ -11717,6 +12498,8 @@ json_pretty <- function(col0 = JSON) {
 
 #' @return `JSON`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_quote <- function() {
   stop("DuckDB function json_quote() is not available in R.")
 }
@@ -11743,6 +12526,8 @@ json_quote <- function() {
 #' \item \code{json_serialize_plan(col0 = VARCHAR, col1 = BOOLEAN, col2 = BOOLEAN, col3 = BOOLEAN)}
 #' \item \code{json_serialize_plan(col0 = VARCHAR, col1 = BOOLEAN, col2 = BOOLEAN, col3 = BOOLEAN, col4 = BOOLEAN)}
 #' }
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_serialize_plan <- function(col0 = VARCHAR, col1 = BOOLEAN, col2 = BOOLEAN, col3 = BOOLEAN, col4 = BOOLEAN) {
   stop("DuckDB function json_serialize_plan() is not available in R.")
 }
@@ -11769,6 +12554,8 @@ json_serialize_plan <- function(col0 = VARCHAR, col1 = BOOLEAN, col2 = BOOLEAN, 
 #' \item \code{json_serialize_sql(col0 = VARCHAR, col1 = BOOLEAN, col2 = BOOLEAN, col3 = BOOLEAN)}
 #' \item \code{json_serialize_sql(col0 = VARCHAR, col1 = BOOLEAN, col2 = BOOLEAN, col3 = BOOLEAN, col4 = BOOLEAN)}
 #' }
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_serialize_sql <- function(col0 = VARCHAR, col1 = BOOLEAN, col2 = BOOLEAN, col3 = BOOLEAN, col4 = BOOLEAN) {
   stop("DuckDB function json_serialize_sql() is not available in R.")
 }
@@ -11783,6 +12570,8 @@ json_serialize_sql <- function(col0 = VARCHAR, col1 = BOOLEAN, col2 = BOOLEAN, c
 #' @param col0 `VARCHAR | JSON`
 #' @return `JSON`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_structure <- function(col0 = `VARCHAR | JSON`) {
   stop("DuckDB function json_structure() is not available in R.")
 }
@@ -11798,6 +12587,8 @@ json_structure <- function(col0 = `VARCHAR | JSON`) {
 #' @param col1 `VARCHAR`
 #' @return `ANY`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_transform <- function(col0 = `VARCHAR | JSON`, col1 = VARCHAR) {
   stop("DuckDB function json_transform() is not available in R.")
 }
@@ -11813,6 +12604,8 @@ json_transform <- function(col0 = `VARCHAR | JSON`, col1 = VARCHAR) {
 #' @param col1 `VARCHAR`
 #' @return `ANY`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_transform_strict <- function(col0 = `VARCHAR | JSON`, col1 = VARCHAR) {
   stop("DuckDB function json_transform_strict() is not available in R.")
 }
@@ -11835,6 +12628,8 @@ json_transform_strict <- function(col0 = `VARCHAR | JSON`, col1 = VARCHAR) {
 #' \item \code{json_tree(col0 = JSON)}
 #' \item \code{json_tree(col0 = JSON, col1 = VARCHAR)}
 #' }
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_tree <- function(col0 = `VARCHAR | JSON`, col1 = VARCHAR) {
   stop("DuckDB function json_tree() is not available in R.")
 }
@@ -11859,6 +12654,8 @@ json_tree <- function(col0 = `VARCHAR | JSON`, col1 = VARCHAR) {
 #' \item \code{json_type(col0 = JSON, col1 = VARCHAR)}
 #' \item \code{json_type(col0 = JSON, col1 = `VARCHAR[]`)}
 #' }
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_type <- function(col0 = `VARCHAR | JSON`, col1 = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function json_type() is not available in R.")
 }
@@ -11873,6 +12670,8 @@ json_type <- function(col0 = `VARCHAR | JSON`, col1 = `VARCHAR | VARCHAR[]`) {
 #' @param col0 `VARCHAR | JSON`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_valid <- function(col0 = `VARCHAR | JSON`) {
   stop("DuckDB function json_valid() is not available in R.")
 }
@@ -11888,6 +12687,8 @@ json_valid <- function(col0 = `VARCHAR | JSON`) {
 #' @param col1 `BIGINT | VARCHAR | VARCHAR[]`
 #' @return `VARCHAR | VARCHAR[]`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 json_value <- function(col0 = `VARCHAR | JSON`, col1 = `BIGINT | VARCHAR | VARCHAR[]`) {
   stop("DuckDB function json_value() is not available in R.")
 }
@@ -12001,6 +12802,8 @@ lag <- function(col0 = T, col1 = BIGINT, col2 = T) {
 #' @param k `BIGINT`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{lance} extension (\code{LOAD lance;}).
 lance_fts <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = VARCHAR, filter = VARCHAR, prefilter = BOOLEAN, k = BIGINT) {
   stop("DuckDB function lance_fts() is not available in R.")
 }
@@ -12039,6 +12842,8 @@ lance_fts <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = VARCHAR, filter = V
 #' @param k `BIGINT`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{lance} extension (\code{LOAD lance;}).
 lance_hybrid_search <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = `FLOAT[] | DOUBLE[]`, col3 = VARCHAR, col4 = VARCHAR, alpha = FLOAT, use_index = BOOLEAN, prefilter = BOOLEAN, refine_factor = BIGINT, nprobs = BIGINT, oversample_factor = INTEGER, k = BIGINT) {
   stop("DuckDB function lance_hybrid_search() is not available in R.")
 }
@@ -12073,6 +12878,8 @@ lance_hybrid_search <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = `FLOAT[] 
 #' @param k `BIGINT`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{lance} extension (\code{LOAD lance;}).
 lance_vector_search <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = `FLOAT[] | DOUBLE[]`, filter = VARCHAR, explain_verbose = BOOLEAN, use_index = BOOLEAN, prefilter = BOOLEAN, refine_factor = BIGINT, nprobs = BIGINT, k = BIGINT) {
   stop("DuckDB function lance_vector_search() is not available in R.")
 }
@@ -13766,6 +14573,8 @@ ln <- function(x = DOUBLE) {
 #' \item \code{load_aws_credentials(redact_secret = BOOLEAN, set_region = BOOLEAN)}
 #' \item \code{load_aws_credentials(col0 = VARCHAR, redact_secret = BOOLEAN, set_region = BOOLEAN)}
 #' }
+#' @section Provided by:
+#' The \code{aws} extension (\code{LOAD aws;}).
 load_aws_credentials <- function(col0 = VARCHAR, redact_secret = BOOLEAN, set_region = BOOLEAN) {
   stop("DuckDB function load_aws_credentials() is not available in R.")
 }
@@ -14054,6 +14863,8 @@ make_timestamp_ns <- function(nanos = BIGINT) {
 #' \item \code{make_timestamptz(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT, col3 = BIGINT, col4 = BIGINT, col5 = DOUBLE, col6 = VARCHAR)}
 #' \item \code{make_timestamptz(col0 = BIGINT)}
 #' }
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 make_timestamptz <- function(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT, col3 = BIGINT, col4 = BIGINT, col5 = DOUBLE, col6 = VARCHAR) {
   stop("DuckDB function make_timestamptz() is not available in R.")
 }
@@ -14636,6 +15447,8 @@ multiply <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | F
 #' @param col0 `ANY`
 #' @return `INTEGER`
 #' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
 murmur3_32 <- function(col0 = ANY) {
   stop("DuckDB function murmur3_32() is not available in R.")
 }
@@ -14650,6 +15463,8 @@ murmur3_32 <- function(col0 = ANY) {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{mysql_scanner} extension (\code{LOAD mysql_scanner;}).
 mysql_clear_cache <- function() {
   stop("DuckDB function mysql_clear_cache() is not available in R.")
 }
@@ -14664,6 +15479,8 @@ mysql_clear_cache <- function() {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{mysql_scanner} extension (\code{LOAD mysql_scanner;}).
 mysql_debug_execution_plan <- function() {
   stop("DuckDB function mysql_debug_execution_plan() is not available in R.")
 }
@@ -14680,6 +15497,8 @@ mysql_debug_execution_plan <- function() {
 #' @param params `ANY`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{mysql_scanner} extension (\code{LOAD mysql_scanner;}).
 mysql_execute <- function(col0 = VARCHAR, col1 = VARCHAR, params = ANY) {
   stop("DuckDB function mysql_execute() is not available in R.")
 }
@@ -14694,6 +15513,8 @@ mysql_execute <- function(col0 = VARCHAR, col1 = VARCHAR, params = ANY) {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{mysql_scanner} extension (\code{LOAD mysql_scanner;}).
 mysql_explain_federated <- function() {
   stop("DuckDB function mysql_explain_federated() is not available in R.")
 }
@@ -14711,6 +15532,8 @@ mysql_explain_federated <- function() {
 #' @param params `ANY`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{mysql_scanner} extension (\code{LOAD mysql_scanner;}).
 mysql_query <- function(col0 = VARCHAR, col1 = VARCHAR, stream_results = BOOLEAN, params = ANY) {
   stop("DuckDB function mysql_query() is not available in R.")
 }
@@ -14743,6 +15566,8 @@ nanosecond <- function(tsns = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TI
 #' @param col0 `INET`
 #' @return `INET`
 #' @export
+#' @section Provided by:
+#' The \code{inet} extension (\code{LOAD inet;}).
 netmask <- function(col0 = INET) {
   stop("DuckDB function netmask() is not available in R.")
 }
@@ -14757,6 +15582,8 @@ netmask <- function(col0 = INET) {
 #' @param col0 `INET`
 #' @return `INET`
 #' @export
+#' @section Provided by:
+#' The \code{inet} extension (\code{LOAD inet;}).
 network <- function(col0 = INET) {
   stop("DuckDB function network() is not available in R.")
 }
@@ -15167,6 +15994,8 @@ parquet_schema <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' @param x Unspecified.
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
 parse_delta_filter_logline <- function(x) {
   stop("DuckDB function parse_delta_filter_logline() is not available in R.")
 }
@@ -15332,6 +16161,8 @@ percent_rank <- function() {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
 pg_clear_cache <- function() {
   stop("DuckDB function pg_clear_cache() is not available in R.")
 }
@@ -15594,6 +16425,8 @@ pg_table_is_visible <- function(table_oid) {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 pg_timezone_names <- function() {
   stop("DuckDB function pg_timezone_names() is not available in R.")
 }
@@ -15729,6 +16562,8 @@ platform <- function() {
 #' @param overwrite `BOOLEAN`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
 postgres_attach <- function(col0 = VARCHAR, suffix = VARCHAR, sink_schema = VARCHAR, filter_pushdown = BOOLEAN, source_schema = VARCHAR, overwrite = BOOLEAN) {
   stop("DuckDB function postgres_attach() is not available in R.")
 }
@@ -15761,6 +16596,8 @@ postgres_attach <- function(col0 = VARCHAR, suffix = VARCHAR, sink_schema = VARC
 #' @param catalog_name `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
 postgres_configure_pool <- function(health_check_query = VARCHAR, max_lifetime_millis = UBIGINT, enable_reaper_thread = BOOLEAN, enable_thread_local_cache = BOOLEAN, wait_timeout_millis = UBIGINT, max_connections = UBIGINT, idle_timeout_millis = UBIGINT, acquire_mode = VARCHAR, catalog_name = VARCHAR) {
   stop("DuckDB function postgres_configure_pool() is not available in R.")
 }
@@ -15777,6 +16614,8 @@ postgres_configure_pool <- function(health_check_query = VARCHAR, max_lifetime_m
 #' @param use_transaction `BOOLEAN`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
 postgres_execute <- function(col0 = VARCHAR, col1 = VARCHAR, use_transaction = BOOLEAN) {
   stop("DuckDB function postgres_execute() is not available in R.")
 }
@@ -15791,6 +16630,8 @@ postgres_execute <- function(col0 = VARCHAR, col1 = VARCHAR, use_transaction = B
 #' @param col0,col1 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
 postgres_hstore_get <- function(col0 = VARCHAR, col1 = VARCHAR) {
   stop("DuckDB function postgres_hstore_get() is not available in R.")
 }
@@ -15805,6 +16646,8 @@ postgres_hstore_get <- function(col0 = VARCHAR, col1 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return `JSON`
 #' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
 postgres_hstore_to_json <- function(col0 = VARCHAR) {
   stop("DuckDB function postgres_hstore_to_json() is not available in R.")
 }
@@ -15822,6 +16665,8 @@ postgres_hstore_to_json <- function(col0 = VARCHAR) {
 #' @param use_transaction `BOOLEAN`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
 postgres_query <- function(col0 = VARCHAR, col1 = VARCHAR, params = ANY, use_transaction = BOOLEAN) {
   stop("DuckDB function postgres_query() is not available in R.")
 }
@@ -15836,6 +16681,8 @@ postgres_query <- function(col0 = VARCHAR, col1 = VARCHAR, params = ANY, use_tra
 #' @param col0,col1,col2 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
 postgres_scan <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = VARCHAR) {
   stop("DuckDB function postgres_scan() is not available in R.")
 }
@@ -15850,6 +16697,8 @@ postgres_scan <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = VARCHAR) {
 #' @param col0,col1,col2 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
 postgres_scan_pushdown <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = VARCHAR) {
   stop("DuckDB function postgres_scan_pushdown() is not available in R.")
 }
@@ -15934,6 +16783,8 @@ pragma_database_size <- function() {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{vss} extension (\code{LOAD vss;}).
 pragma_hnsw_index_info <- function() {
   stop("DuckDB function pragma_hnsw_index_info() is not available in R.")
 }
@@ -15981,6 +16832,8 @@ pragma_platform <- function() {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 pragma_rtree_index_info <- function() {
   stop("DuckDB function pragma_rtree_index_info() is not available in R.")
 }
@@ -16121,6 +16974,8 @@ product <- function(arg = DOUBLE) {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
 quack_active_connections <- function() {
   stop("DuckDB function quack_active_connections() is not available in R.")
 }
@@ -16135,6 +16990,8 @@ quack_active_connections <- function() {
 #' @param col0,col1,col2 `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
 quack_check_token <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = VARCHAR) {
   stop("DuckDB function quack_check_token() is not available in R.")
 }
@@ -16149,6 +17006,8 @@ quack_check_token <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = VARCHAR) {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
 quack_clear_cache <- function() {
   stop("DuckDB function quack_clear_cache() is not available in R.")
 }
@@ -16163,6 +17022,8 @@ quack_clear_cache <- function() {
 #' @param meta,region,hostname,provider,name `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
 quack_identify <- function(meta = VARCHAR, region = VARCHAR, hostname = VARCHAR, provider = VARCHAR, name = VARCHAR) {
   stop("DuckDB function quack_identify() is not available in R.")
 }
@@ -16177,6 +17038,8 @@ quack_identify <- function(meta = VARCHAR, region = VARCHAR, hostname = VARCHAR,
 #' @param col0,col1 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
 quack_nop_authorization <- function(col0 = VARCHAR, col1 = VARCHAR) {
   stop("DuckDB function quack_nop_authorization() is not available in R.")
 }
@@ -16194,6 +17057,8 @@ quack_nop_authorization <- function(col0 = VARCHAR, col1 = VARCHAR) {
 #' @param disable_ssl `BOOLEAN`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
 quack_query <- function(col0 = VARCHAR, col1 = VARCHAR, token = VARCHAR, disable_ssl = BOOLEAN) {
   stop("DuckDB function quack_query() is not available in R.")
 }
@@ -16208,6 +17073,8 @@ quack_query <- function(col0 = VARCHAR, col1 = VARCHAR, token = VARCHAR, disable
 #' @param col0,col1 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
 quack_query_by_name <- function(col0 = VARCHAR, col1 = VARCHAR) {
   stop("DuckDB function quack_query_by_name() is not available in R.")
 }
@@ -16230,6 +17097,8 @@ quack_query_by_name <- function(col0 = VARCHAR, col1 = VARCHAR) {
 #' \item \code{quack_serve(col0 = VARCHAR, token = VARCHAR, allow_other_hostname = BOOLEAN, disable_ssl = BOOLEAN)}
 #' \item \code{quack_serve(token = VARCHAR, allow_other_hostname = BOOLEAN, disable_ssl = BOOLEAN)}
 #' }
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
 quack_serve <- function(col0 = VARCHAR, token = VARCHAR, allow_other_hostname = BOOLEAN, disable_ssl = BOOLEAN) {
   stop("DuckDB function quack_serve() is not available in R.")
 }
@@ -16244,6 +17113,8 @@ quack_serve <- function(col0 = VARCHAR, token = VARCHAR, allow_other_hostname = 
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
 quack_server_list <- function() {
   stop("DuckDB function quack_server_list() is not available in R.")
 }
@@ -16258,6 +17129,8 @@ quack_server_list <- function() {
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
 quack_stop <- function(col0 = VARCHAR) {
   stop("DuckDB function quack_stop() is not available in R.")
 }
@@ -16273,6 +17146,8 @@ quack_stop <- function(col0 = VARCHAR) {
 #' @param col1 `BOOLEAN`
 #' @return `STRUCT(host VARCHAR, port USMALLINT, ipv6 BOOLEAN, ssl BOOLEAN, url VARCHAR)`
 #' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
 quack_uri_parser <- function(col0 = VARCHAR, col1 = BOOLEAN) {
   stop("DuckDB function quack_uri_parser() is not available in R.")
 }
@@ -16458,6 +17333,19 @@ random <- function() {
 #' \item \code{range(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}
 #' \item \code{range(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}
 #' }
+#' @section Provided by:
+#' \itemize{
+#' \item \code{range(col0 = BIGINT)}: built in
+#' \item \code{range(col0 = BIGINT, col1 = BIGINT)}: built in
+#' \item \code{range(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT)}: built in
+#' \item \code{range(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)}: built in
+#' \item \code{range(col0 = `TIMESTAMP WITH TIME ZONE`, col1 = `TIMESTAMP WITH TIME ZONE`, col2 = INTERVAL)}: \code{icu}
+#' \item \code{range(start = BIGINT)}: built in
+#' \item \code{range(start = BIGINT, stop = BIGINT)}: built in
+#' \item \code{range(start = BIGINT, stop = BIGINT, step = BIGINT)}: built in
+#' \item \code{range(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}: built in
+#' \item \code{range(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}: built in
+#' }
 #' @family list
 #' @section SQL examples:
 #' ```
@@ -16517,6 +17405,8 @@ rank_dense <- function() {
 #' @param filename `ANY`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{avro} extension (\code{LOAD avro;}).
 read_avro <- function(col0 = `VARCHAR | VARCHAR[]`, hive_types_autocast = BOOLEAN, hive_types = ANY, hive_partitioning = BOOLEAN, union_by_name = BOOLEAN, filename = ANY) {
   stop("DuckDB function read_avro() is not available in R.")
 }
@@ -16833,6 +17723,8 @@ read_duckdb <- function(col0 = `VARCHAR | VARCHAR[]`, table_name = VARCHAR, sche
 #' @param dateformat `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 read_json <- function(col0 = `VARCHAR | VARCHAR[]`, convert_strings_to_integers = BOOLEAN, maximum_sample_files = BIGINT, timestamp_format = VARCHAR, field_appearance_threshold = DOUBLE, timestampformat = VARCHAR, map_inference_threshold = BIGINT, date_format = VARCHAR, filename = ANY, union_by_name = BOOLEAN, compression = VARCHAR, maximum_depth = BIGINT, columns = ANY, sample_size = BIGINT, hive_types = ANY, hive_types_autocast = BOOLEAN, maximum_object_size = UINTEGER, format = VARCHAR, ignore_errors = BOOLEAN, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, records = VARCHAR, dateformat = VARCHAR) {
   stop("DuckDB function read_json() is not available in R.")
 }
@@ -16893,6 +17785,8 @@ read_json <- function(col0 = `VARCHAR | VARCHAR[]`, convert_strings_to_integers 
 #' @param dateformat `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 read_json_auto <- function(col0 = `VARCHAR | VARCHAR[]`, convert_strings_to_integers = BOOLEAN, maximum_sample_files = BIGINT, timestamp_format = VARCHAR, field_appearance_threshold = DOUBLE, timestampformat = VARCHAR, map_inference_threshold = BIGINT, date_format = VARCHAR, filename = ANY, union_by_name = BOOLEAN, compression = VARCHAR, maximum_depth = BIGINT, columns = ANY, sample_size = BIGINT, hive_types = ANY, hive_types_autocast = BOOLEAN, maximum_object_size = UINTEGER, format = VARCHAR, ignore_errors = BOOLEAN, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, records = VARCHAR, dateformat = VARCHAR) {
   stop("DuckDB function read_json_auto() is not available in R.")
 }
@@ -16927,6 +17821,8 @@ read_json_auto <- function(col0 = `VARCHAR | VARCHAR[]`, convert_strings_to_inte
 #' @param filename `ANY`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 read_json_objects <- function(col0 = `VARCHAR | VARCHAR[]`, ignore_errors = BOOLEAN, format = VARCHAR, maximum_object_size = UINTEGER, hive_types_autocast = BOOLEAN, hive_types = ANY, hive_partitioning = BOOLEAN, compression = VARCHAR, union_by_name = BOOLEAN, filename = ANY) {
   stop("DuckDB function read_json_objects() is not available in R.")
 }
@@ -16961,6 +17857,8 @@ read_json_objects <- function(col0 = `VARCHAR | VARCHAR[]`, ignore_errors = BOOL
 #' @param filename `ANY`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 read_json_objects_auto <- function(col0 = `VARCHAR | VARCHAR[]`, ignore_errors = BOOLEAN, format = VARCHAR, maximum_object_size = UINTEGER, hive_types_autocast = BOOLEAN, hive_types = ANY, hive_partitioning = BOOLEAN, compression = VARCHAR, union_by_name = BOOLEAN, filename = ANY) {
   stop("DuckDB function read_json_objects_auto() is not available in R.")
 }
@@ -17021,6 +17919,8 @@ read_json_objects_auto <- function(col0 = `VARCHAR | VARCHAR[]`, ignore_errors =
 #' @param dateformat `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 read_ndjson <- function(col0 = `VARCHAR | VARCHAR[]`, convert_strings_to_integers = BOOLEAN, maximum_sample_files = BIGINT, timestamp_format = VARCHAR, field_appearance_threshold = DOUBLE, timestampformat = VARCHAR, map_inference_threshold = BIGINT, date_format = VARCHAR, filename = ANY, union_by_name = BOOLEAN, compression = VARCHAR, maximum_depth = BIGINT, columns = ANY, sample_size = BIGINT, hive_types = ANY, hive_types_autocast = BOOLEAN, maximum_object_size = UINTEGER, format = VARCHAR, ignore_errors = BOOLEAN, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, records = VARCHAR, dateformat = VARCHAR) {
   stop("DuckDB function read_ndjson() is not available in R.")
 }
@@ -17081,6 +17981,8 @@ read_ndjson <- function(col0 = `VARCHAR | VARCHAR[]`, convert_strings_to_integer
 #' @param dateformat `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 read_ndjson_auto <- function(col0 = `VARCHAR | VARCHAR[]`, convert_strings_to_integers = BOOLEAN, maximum_sample_files = BIGINT, timestamp_format = VARCHAR, field_appearance_threshold = DOUBLE, timestampformat = VARCHAR, map_inference_threshold = BIGINT, date_format = VARCHAR, filename = ANY, union_by_name = BOOLEAN, compression = VARCHAR, maximum_depth = BIGINT, columns = ANY, sample_size = BIGINT, hive_types = ANY, hive_types_autocast = BOOLEAN, maximum_object_size = UINTEGER, format = VARCHAR, ignore_errors = BOOLEAN, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, records = VARCHAR, dateformat = VARCHAR) {
   stop("DuckDB function read_ndjson_auto() is not available in R.")
 }
@@ -17115,6 +18017,8 @@ read_ndjson_auto <- function(col0 = `VARCHAR | VARCHAR[]`, convert_strings_to_in
 #' @param filename `ANY`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 read_ndjson_objects <- function(col0 = `VARCHAR | VARCHAR[]`, ignore_errors = BOOLEAN, format = VARCHAR, maximum_object_size = UINTEGER, hive_types_autocast = BOOLEAN, hive_types = ANY, hive_partitioning = BOOLEAN, compression = VARCHAR, union_by_name = BOOLEAN, filename = ANY) {
   stop("DuckDB function read_ndjson_objects() is not available in R.")
 }
@@ -17175,6 +18079,8 @@ read_parquet <- function(col0 = `VARCHAR | VARCHAR[]`, can_have_nan = BOOLEAN, f
 #' @param columns `ANY`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
 read_postgres_binary <- function(col0 = VARCHAR, buffer_size = UBIGINT, columns = ANY) {
   stop("DuckDB function read_postgres_binary() is not available in R.")
 }
@@ -17203,6 +18109,8 @@ read_text <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{vortex} extension (\code{LOAD vortex;}).
 read_vortex <- function(col0 = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function read_vortex() is not available in R.")
 }
@@ -17235,6 +18143,8 @@ read_vortex <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' @param header `BOOLEAN`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{excel} extension (\code{LOAD excel;}).
 read_xlsx <- function(col0 = VARCHAR, normalize_names = BOOLEAN, empty_as_varchar = BOOLEAN, stop_at_empty = BOOLEAN, sheet = VARCHAR, range = VARCHAR, ignore_errors = BOOLEAN, all_varchar = BOOLEAN, header = BOOLEAN) {
   stop("DuckDB function read_xlsx() is not available in R.")
 }
@@ -17572,6 +18482,8 @@ regr_syy <- function(y = DOUBLE, x = DOUBLE) {
 #' @param col1 `VARCHAR[]`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
 remove_iceberg_schema_properties <- function(col0 = VARCHAR, col1 = `VARCHAR[]`) {
   stop("DuckDB function remove_iceberg_schema_properties() is not available in R.")
 }
@@ -17587,6 +18499,8 @@ remove_iceberg_schema_properties <- function(col0 = VARCHAR, col1 = `VARCHAR[]`)
 #' @param col1 `VARCHAR[]`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
 remove_iceberg_table_properties <- function(col0 = VARCHAR, col1 = `VARCHAR[]`) {
   stop("DuckDB function remove_iceberg_table_properties() is not available in R.")
 }
@@ -17900,6 +18814,8 @@ row_number <- function() {
 
 #' @return `JSON`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 row_to_json <- function() {
   stop("DuckDB function row_to_json() is not available in R.")
 }
@@ -17935,6 +18851,8 @@ rpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 rtree_index_dump <- function(col0 = VARCHAR) {
   stop("DuckDB function rtree_index_dump() is not available in R.")
 }
@@ -17949,6 +18867,8 @@ rtree_index_dump <- function(col0 = VARCHAR) {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 rtree_index_scan <- function() {
   stop("DuckDB function rtree_index_scan() is not available in R.")
 }
@@ -18069,6 +18989,8 @@ set_bit <- function(bitstring = BIT, index = INTEGER, new_value = INTEGER) {
 #' @param col1 `ANY`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
 set_iceberg_schema_properties <- function(col0 = VARCHAR, col1 = ANY) {
   stop("DuckDB function set_iceberg_schema_properties() is not available in R.")
 }
@@ -18084,6 +19006,8 @@ set_iceberg_schema_properties <- function(col0 = VARCHAR, col1 = ANY) {
 #' @param col1 `ANY`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
 set_iceberg_table_properties <- function(col0 = VARCHAR, col1 = ANY) {
   stop("DuckDB function set_iceberg_table_properties() is not available in R.")
 }
@@ -18174,6 +19098,8 @@ sha256 <- function(value = VARCHAR) {
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
 shapefile_meta <- function(col0 = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function shapefile_meta() is not available in R.")
 }
@@ -18388,6 +19314,8 @@ split_part <- function(string, delimiter, position) {
 #' @param max_suggestion_count `UBIGINT`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{autocomplete} extension (\code{LOAD autocomplete;}).
 sql_auto_complete <- function(col0 = VARCHAR, max_exact_suggestion_count = UBIGINT, max_file_suggestion_count = UBIGINT, max_suggestion_count = UBIGINT) {
   stop("DuckDB function sql_auto_complete() is not available in R.")
 }
@@ -18403,6 +19331,8 @@ sql_auto_complete <- function(col0 = VARCHAR, max_exact_suggestion_count = UBIGI
 #' @param overwrite `BOOLEAN`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{sqlite_scanner} extension (\code{LOAD sqlite_scanner;}).
 sqlite_attach <- function(col0 = VARCHAR, overwrite = BOOLEAN) {
   stop("DuckDB function sqlite_attach() is not available in R.")
 }
@@ -18419,6 +19349,8 @@ sqlite_attach <- function(col0 = VARCHAR, overwrite = BOOLEAN) {
 #' @param params `ANY`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{sqlite_scanner} extension (\code{LOAD sqlite_scanner;}).
 sqlite_query <- function(col0 = VARCHAR, col1 = VARCHAR, params = ANY) {
   stop("DuckDB function sqlite_query() is not available in R.")
 }
@@ -18433,6 +19365,8 @@ sqlite_query <- function(col0 = VARCHAR, col1 = VARCHAR, params = ANY) {
 #' @param col0,col1 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{sqlite_scanner} extension (\code{LOAD sqlite_scanner;}).
 sqlite_scan <- function(col0 = VARCHAR, col1 = VARCHAR) {
   stop("DuckDB function sqlite_scan() is not available in R.")
 }
@@ -18475,6 +19409,14 @@ sqrt <- function(x = DOUBLE) {
 #' \item \code{st_astext(linestring = LINESTRING_2D)}
 #' \item \code{st_astext(polygon = POLYGON_2D)}
 #' \item \code{st_astext(box = BOX_2D)}
+#' }
+#' @section Provided by:
+#' \itemize{
+#' \item \code{st_astext(geom = GEOMETRY)}: built in
+#' \item \code{st_astext(point = POINT_2D)}: \code{spatial}
+#' \item \code{st_astext(linestring = LINESTRING_2D)}: \code{spatial}
+#' \item \code{st_astext(polygon = POLYGON_2D)}: \code{spatial}
+#' \item \code{st_astext(box = BOX_2D)}: \code{spatial}
 #' }
 #' @family geometry
 #' @section SQL examples:
@@ -18578,6 +19520,8 @@ st_setcrs <- function(geom = GEOMETRY, crs = VARCHAR) {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ui} extension (\code{LOAD ui;}).
 start_ui <- function() {
   stop("DuckDB function start_ui() is not available in R.")
 }
@@ -18592,6 +19536,8 @@ start_ui <- function() {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ui} extension (\code{LOAD ui;}).
 start_ui_server <- function() {
   stop("DuckDB function start_ui_server() is not available in R.")
 }
@@ -18693,6 +19639,8 @@ stddev <- function(x = DOUBLE) {
 #' @param col0,col1 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{fts} extension (\code{LOAD fts;}).
 stem <- function(col0 = VARCHAR, col1 = VARCHAR) {
   stop("DuckDB function stem() is not available in R.")
 }
@@ -18707,6 +19655,8 @@ stem <- function(col0 = VARCHAR, col1 = VARCHAR) {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ui} extension (\code{LOAD ui;}).
 stop_ui_server <- function() {
   stop("DuckDB function stop_ui_server() is not available in R.")
 }
@@ -19412,6 +20362,8 @@ test_vector_types <- function(col0 = ANY, all_flat = BOOLEAN) {
 #' @param col1 `VARCHAR`
 #' @return `VARCHAR`
 #' @export
+#' @section Provided by:
+#' The \code{excel} extension (\code{LOAD excel;}).
 text <- function(col0 = DOUBLE, col1 = VARCHAR) {
   stop("DuckDB function text() is not available in R.")
 }
@@ -19669,6 +20621,8 @@ to_hours <- function(integer = BIGINT) {
 
 #' @return `JSON`
 #' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
 to_json <- function() {
   stop("DuckDB function to_json() is not available in R.")
 }
@@ -19863,6 +20817,8 @@ to_years <- function(integer = `INTEGER | BIGINT`) {
 
 #' @return `DATE`
 #' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
 today <- function() {
   stop("DuckDB function today() is not available in R.")
 }
@@ -19877,6 +20833,8 @@ today <- function() {
 #' @param col0 `BIGINT`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{tpcds} extension (\code{LOAD tpcds;}).
 tpcds <- function(col0 = BIGINT) {
   stop("DuckDB function tpcds() is not available in R.")
 }
@@ -19891,6 +20849,8 @@ tpcds <- function(col0 = BIGINT) {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{tpcds} extension (\code{LOAD tpcds;}).
 tpcds_answers <- function() {
   stop("DuckDB function tpcds_answers() is not available in R.")
 }
@@ -19905,6 +20865,8 @@ tpcds_answers <- function() {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{tpcds} extension (\code{LOAD tpcds;}).
 tpcds_queries <- function() {
   stop("DuckDB function tpcds_queries() is not available in R.")
 }
@@ -19919,6 +20881,8 @@ tpcds_queries <- function() {
 #' @param col0 `BIGINT`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{tpch} extension (\code{LOAD tpch;}).
 tpch <- function(col0 = BIGINT) {
   stop("DuckDB function tpch() is not available in R.")
 }
@@ -19933,6 +20897,8 @@ tpch <- function(col0 = BIGINT) {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{tpch} extension (\code{LOAD tpch;}).
 tpch_answers <- function() {
   stop("DuckDB function tpch_answers() is not available in R.")
 }
@@ -19947,6 +20913,8 @@ tpch_answers <- function() {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{tpch} extension (\code{LOAD tpch;}).
 tpch_queries <- function() {
   stop("DuckDB function tpch_queries() is not available in R.")
 }
@@ -20122,6 +21090,8 @@ typeof <- function(expression = ANY) {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{ui} extension (\code{LOAD ui;}).
 ui_is_started <- function() {
   stop("DuckDB function ui_is_started() is not available in R.")
 }
@@ -20271,6 +21241,8 @@ union_value <- function() {
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{unity_catalog} extension (\code{LOAD unity_catalog;}).
 unity_catalog_checkpoint_table <- function(col0 = VARCHAR) {
   stop("DuckDB function unity_catalog_checkpoint_table() is not available in R.")
 }
@@ -20285,6 +21257,8 @@ unity_catalog_checkpoint_table <- function(col0 = VARCHAR) {
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{unity_catalog} extension (\code{LOAD unity_catalog;}).
 unity_catalog_force_checkpoint_table <- function(col0 = VARCHAR) {
   stop("DuckDB function unity_catalog_force_checkpoint_table() is not available in R.")
 }
@@ -20747,6 +21721,8 @@ version <- function() {
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{vortex} extension (\code{LOAD vortex;}).
 vortex_scan <- function(col0 = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function vortex_scan() is not available in R.")
 }
@@ -20761,6 +21737,8 @@ vortex_scan <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' @param left_table,right_table,left_col,right_col,k,metric Unspecified.
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{vss} extension (\code{LOAD vss;}).
 vss_join <- function(left_table, right_table, left_col, right_col, k, metric) {
   stop("DuckDB function vss_join() is not available in R.")
 }
@@ -20775,6 +21753,8 @@ vss_join <- function(left_table, right_table, left_col, right_col, k, metric) {
 #' @param right_table,left_col,right_col,k,metric Unspecified.
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{vss} extension (\code{LOAD vss;}).
 vss_match <- function(right_table, left_col, right_col, k, metric) {
   stop("DuckDB function vss_match() is not available in R.")
 }
@@ -20885,6 +21865,8 @@ which_secret <- function(col0 = VARCHAR, col1 = VARCHAR) {
 
 #' @return Unspecified.
 #' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
 whoami <- function() {
   stop("DuckDB function whoami() is not available in R.")
 }
@@ -20900,6 +21882,8 @@ whoami <- function() {
 #' @param col1 `BLOB`
 #' @return `BOOLEAN`
 #' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
 write_blob <- function(col0 = VARCHAR, col1 = BLOB) {
   stop("DuckDB function write_blob() is not available in R.")
 }

@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB macro \code{json()}.
 }
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

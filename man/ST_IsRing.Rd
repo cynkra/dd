@@ -15,3 +15,8 @@ ST_IsRing(geom)
 \description{
 Returns true if the geometry is a ring (both ST_IsClosed and ST_IsSimple).
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

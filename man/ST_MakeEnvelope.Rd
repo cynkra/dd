@@ -15,3 +15,8 @@ ST_MakeEnvelope(min_x, min_y, max_x, max_y)
 \description{
 Create a rectangular polygon from min/max coordinates.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

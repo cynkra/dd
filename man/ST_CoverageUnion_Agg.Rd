@@ -15,3 +15,8 @@ ST_CoverageUnion_Agg(col0)
 \description{
 Unions a set of geometries while maintaining coverage.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

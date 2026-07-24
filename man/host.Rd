@@ -15,3 +15,8 @@ host(col0)
 \description{
 DuckDB function \code{host()}.
 }
+\section{Provided by}{
+
+The \code{inet} extension (\code{LOAD inet;}).
+}
+

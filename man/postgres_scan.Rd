@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB function \code{postgres_scan()}.
 }
+\section{Provided by}{
+
+The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
+}
+

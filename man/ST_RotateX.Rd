@@ -15,6 +15,11 @@ Unspecified.
 \description{
 Rotates a geometry around the X axis. This is a shorthand macro for calling ST_Affine.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

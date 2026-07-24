@@ -25,3 +25,8 @@ Returns the n'th vertex from the input geometry as a point geometry.
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

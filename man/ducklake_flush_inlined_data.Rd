@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB function \code{ducklake_flush_inlined_data()}.
 }
+\section{Provided by}{
+
+The \code{ducklake} extension (\code{LOAD ducklake;}).
+}
+

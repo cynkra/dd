@@ -21,3 +21,8 @@ Unspecified.
 \description{
 DuckDB function \code{ducklake_expire_snapshots()}.
 }
+\section{Provided by}{
+
+The \code{ducklake} extension (\code{LOAD ducklake;}).
+}
+

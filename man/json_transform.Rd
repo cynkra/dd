@@ -17,3 +17,8 @@ json_transform(col0, col1)
 \description{
 DuckDB function \code{json_transform()}.
 }
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

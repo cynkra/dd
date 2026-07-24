@@ -37,3 +37,8 @@ If offset is provided, the resulting vertices are offset by the given amount per
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

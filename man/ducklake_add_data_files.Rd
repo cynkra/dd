@@ -35,3 +35,8 @@ Unspecified.
 \description{
 DuckDB function \code{ducklake_add_data_files()}.
 }
+\section{Provided by}{
+
+The \code{ducklake} extension (\code{LOAD ducklake;}).
+}
+

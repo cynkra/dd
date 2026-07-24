@@ -15,3 +15,8 @@ network(col0)
 \description{
 DuckDB function \code{network()}.
 }
+\section{Provided by}{
+
+The \code{inet} extension (\code{LOAD inet;}).
+}
+

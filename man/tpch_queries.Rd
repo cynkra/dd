@@ -12,3 +12,8 @@ Unspecified.
 \description{
 DuckDB function \code{tpch_queries()}.
 }
+\section{Provided by}{
+
+The \code{tpch} extension (\code{LOAD tpch;}).
+}
+

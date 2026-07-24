@@ -25,6 +25,11 @@ Returns the planar distance between two geometries.
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

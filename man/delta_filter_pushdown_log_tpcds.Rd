@@ -12,3 +12,8 @@ Unspecified.
 \description{
 DuckDB macro \code{delta_filter_pushdown_log_tpcds()}.
 }
+\section{Provided by}{
+
+The \code{delta} extension (\code{LOAD delta;}).
+}
+

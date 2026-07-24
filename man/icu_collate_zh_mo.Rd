@@ -15,3 +15,8 @@ icu_collate_zh_mo(col0)
 \description{
 DuckDB function \code{icu_collate_zh_mo()}.
 }
+\section{Provided by}{
+
+The \code{icu} extension (\code{LOAD icu;}).
+}
+

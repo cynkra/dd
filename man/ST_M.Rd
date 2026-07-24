@@ -15,6 +15,11 @@ ST_M(geom)
 \description{
 Returns the M coordinate of a point geometry.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

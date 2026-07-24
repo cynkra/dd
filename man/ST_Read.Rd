@@ -67,6 +67,11 @@ The following formats are currently recognized by their file extension:\tabular{
    FlatGeoBuf \tab .fgb \cr
 }
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

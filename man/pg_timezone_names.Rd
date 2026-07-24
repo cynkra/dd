@@ -12,3 +12,8 @@ Unspecified.
 \description{
 DuckDB function \code{pg_timezone_names()}.
 }
+\section{Provided by}{
+
+The \code{icu} extension (\code{LOAD icu;}).
+}
+

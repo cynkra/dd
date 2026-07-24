@@ -19,3 +19,8 @@ ST_Snap(geom, snap_to, tolerance)
 \description{
 Snaps the vertices and segments of a geometry to another geometry's vertices within the given tolerance.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

@@ -23,6 +23,11 @@ Expand the input geometry by the specified distance, returning a polygon.
 
 This is a planar operation and will not take into account the curvature of the earth.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

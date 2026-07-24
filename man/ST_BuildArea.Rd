@@ -17,3 +17,8 @@ Creates a polygonal geometry by attempting to "fill in" the input geometry.
 
 Unlike ST_Polygonize, this function does not fill in holes.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

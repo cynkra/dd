@@ -19,6 +19,11 @@ Returns a flag indicating the presence of Z and M values in the input geometry.
 2 = Z values only
 3 = Z and M values.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

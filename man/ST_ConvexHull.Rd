@@ -15,3 +15,8 @@ ST_ConvexHull(geom)
 \description{
 Returns the convex hull enclosing the geometry.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

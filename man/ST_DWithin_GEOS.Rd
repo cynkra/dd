@@ -19,3 +19,8 @@ ST_DWithin_GEOS(geom1, geom2, distance)
 \description{
 Returns true if two geometries are within a target distance of each-other.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

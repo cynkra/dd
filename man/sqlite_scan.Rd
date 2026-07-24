@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB function \code{sqlite_scan()}.
 }
+\section{Provided by}{
+
+The \code{sqlite_scanner} extension (\code{LOAD sqlite_scanner;}).
+}
+

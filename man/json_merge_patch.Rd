@@ -15,3 +15,8 @@ json_merge_patch(col0, col1)
 \description{
 DuckDB function \code{json_merge_patch()}.
 }
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

@@ -27,3 +27,8 @@ Unspecified.
 \description{
 DuckDB function \code{dbgen()}.
 }
+\section{Provided by}{
+
+The \code{tpch} extension (\code{LOAD tpch;}).
+}
+

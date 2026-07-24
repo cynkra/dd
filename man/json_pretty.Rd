@@ -15,3 +15,8 @@ json_pretty(col0)
 \description{
 DuckDB function \code{json_pretty()}.
 }
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

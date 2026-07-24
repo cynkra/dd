@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB macro \code{parse_delta_filter_logline()}.
 }
+\section{Provided by}{
+
+The \code{delta} extension (\code{LOAD delta;}).
+}
+

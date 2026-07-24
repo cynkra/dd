@@ -15,3 +15,8 @@ ST_Intersection(geom1, geom2)
 \description{
 Returns the intersection of two geometries.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

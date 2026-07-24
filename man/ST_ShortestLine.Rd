@@ -15,3 +15,8 @@ ST_ShortestLine(geom1, geom2)
 \description{
 Returns the shortest line between two geometries.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

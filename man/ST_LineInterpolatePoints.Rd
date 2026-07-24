@@ -22,3 +22,8 @@ Returns a multi-point interpolated along a line at a fraction of total 2D length
 if repeat is false, the result is a single point, (and equivalent to ST_LineInterpolatePoint),
 otherwise, the result is a multi-point with points repeated at the fraction interval.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

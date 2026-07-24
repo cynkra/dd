@@ -17,3 +17,8 @@ iceberg_truncate(col0, col1)
 \description{
 DuckDB function \code{iceberg_truncate()}.
 }
+\section{Provided by}{
+
+The \code{iceberg} extension (\code{LOAD iceberg;}).
+}
+

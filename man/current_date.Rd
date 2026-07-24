@@ -12,3 +12,8 @@ current_date()
 \description{
 DuckDB function \code{current_date()}.
 }
+\section{Provided by}{
+
+The \code{icu} extension (\code{LOAD icu;}).
+}
+

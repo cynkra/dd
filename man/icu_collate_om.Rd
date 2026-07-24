@@ -15,3 +15,8 @@ icu_collate_om(col0)
 \description{
 DuckDB function \code{icu_collate_om()}.
 }
+\section{Provided by}{
+
+The \code{icu} extension (\code{LOAD icu;}).
+}
+

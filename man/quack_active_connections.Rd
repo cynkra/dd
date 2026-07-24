@@ -12,3 +12,8 @@ Unspecified.
 \description{
 DuckDB function \code{quack_active_connections()}.
 }
+\section{Provided by}{
+
+The \code{quack} extension (\code{LOAD quack;}).
+}
+

@@ -44,3 +44,8 @@ Unspecified.
 \description{
 DuckDB function \code{read_json_objects_auto()}.
 }
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

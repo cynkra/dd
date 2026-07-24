@@ -15,3 +15,8 @@ ST_Reverse(geom)
 \description{
 Returns the geometry with the order of its vertices reversed.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

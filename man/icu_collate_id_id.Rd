@@ -15,3 +15,8 @@ icu_collate_id_id(col0)
 \description{
 DuckDB function \code{icu_collate_id_id()}.
 }
+\section{Provided by}{
+
+The \code{icu} extension (\code{LOAD icu;}).
+}
+

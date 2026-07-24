@@ -34,3 +34,8 @@ DuckDB function \code{json_serialize_sql()}.
 }
 }
 
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

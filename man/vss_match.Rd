@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB macro \code{vss_match()}.
 }
+\section{Provided by}{
+
+The \code{vss} extension (\code{LOAD vss;}).
+}
+

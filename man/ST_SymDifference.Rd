@@ -15,3 +15,8 @@ ST_SymDifference(geom1, geom2)
 \description{
 Returns the symmetric difference of two geometries.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

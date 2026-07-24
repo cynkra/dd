@@ -17,3 +17,8 @@ write_blob(col0, col1)
 \description{
 DuckDB function \code{write_blob()}.
 }
+\section{Provided by}{
+
+The \code{delta} extension (\code{LOAD delta;}).
+}
+

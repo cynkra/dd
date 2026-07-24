@@ -28,6 +28,11 @@ The return value is a struct with the center of the circle, the nearest point to
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

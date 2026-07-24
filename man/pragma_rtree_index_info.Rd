@@ -12,3 +12,8 @@ Unspecified.
 \description{
 DuckDB function \code{pragma_rtree_index_info()}.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

@@ -15,3 +15,8 @@ ST_Point2D(x, y)
 \description{
 Creates a POINT_2D.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

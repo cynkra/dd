@@ -19,3 +19,8 @@ Unspecified.
 \description{
 DuckDB function \code{iceberg_to_ducklake()}.
 }
+\section{Provided by}{
+
+The \code{iceberg} extension (\code{LOAD iceberg;}).
+}
+

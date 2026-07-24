@@ -68,3 +68,8 @@ Unspecified.
 \description{
 DuckDB function \code{delta_scan()}.
 }
+\section{Provided by}{
+
+The \code{delta} extension (\code{LOAD delta;}).
+}
+

@@ -12,6 +12,11 @@ DuckDB_Proj_Version()
 \description{
 Returns a text description of the PROJ library version that is being used by this instance of DuckDB.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

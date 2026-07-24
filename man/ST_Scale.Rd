@@ -23,3 +23,8 @@ DuckDB function \code{ST_Scale()}.
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

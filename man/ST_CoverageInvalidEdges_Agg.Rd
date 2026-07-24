@@ -25,3 +25,8 @@ Returns the invalid edges of a coverage geometry.
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

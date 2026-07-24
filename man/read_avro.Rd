@@ -32,3 +32,8 @@ Unspecified.
 \description{
 DuckDB function \code{read_avro()}.
 }
+\section{Provided by}{
+
+The \code{avro} extension (\code{LOAD avro;}).
+}
+

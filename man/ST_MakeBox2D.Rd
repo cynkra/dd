@@ -15,6 +15,11 @@ ST_MakeBox2D(point1, point2)
 \description{
 Create a BOX2D from two POINT geometries.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

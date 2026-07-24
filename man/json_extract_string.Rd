@@ -17,3 +17,8 @@ json_extract_string(col0, col1)
 \description{
 DuckDB function \code{json_extract_string()}.
 }
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

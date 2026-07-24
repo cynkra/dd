@@ -15,3 +15,8 @@ ST_Polygon2DFromWKB(blob)
 \description{
 Deserialize a POLYGON_2D from a WKB encoded blob.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

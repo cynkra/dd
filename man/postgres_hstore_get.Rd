@@ -15,3 +15,8 @@ postgres_hstore_get(col0, col1)
 \description{
 DuckDB function \code{postgres_hstore_get()}.
 }
+\section{Provided by}{
+
+The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
+}
+

@@ -29,3 +29,8 @@ DuckDB function \code{json_type()}.
 }
 }
 
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

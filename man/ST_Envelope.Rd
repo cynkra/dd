@@ -15,3 +15,8 @@ ST_Envelope(geom)
 \description{
 Returns the minimum bounding rectangle of a geometry as a polygon geometry.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

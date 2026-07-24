@@ -15,3 +15,8 @@ netmask(col0)
 \description{
 DuckDB function \code{netmask()}.
 }
+\section{Provided by}{
+
+The \code{inet} extension (\code{LOAD inet;}).
+}
+

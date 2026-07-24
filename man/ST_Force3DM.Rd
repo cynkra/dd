@@ -25,3 +25,8 @@ The following cases apply:
 \item Otherwise, if the input geometry has neither a Z or M component, the new M value will be added to the vertices of the input geometry.
 }
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

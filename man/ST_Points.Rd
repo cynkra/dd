@@ -15,6 +15,11 @@ ST_Points(geom)
 \description{
 Collects all the vertices in the geometry into a MULTIPOINT.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB function \code{delta_get_transaction_version()}.
 }
+\section{Provided by}{
+
+The \code{delta} extension (\code{LOAD delta;}).
+}
+

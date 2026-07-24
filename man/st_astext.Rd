@@ -30,6 +30,17 @@ st_astext(geom)
 }
 }
 
+\section{Provided by}{
+
+\itemize{
+\item \code{st_astext(geom = GEOMETRY)}: built in
+\item \code{st_astext(point = POINT_2D)}: \code{spatial}
+\item \code{st_astext(linestring = LINESTRING_2D)}: \code{spatial}
+\item \code{st_astext(polygon = POLYGON_2D)}: \code{spatial}
+\item \code{st_astext(box = BOX_2D)}: \code{spatial}
+}
+}
+
 \section{SQL examples}{
 
 

@@ -15,3 +15,8 @@ ST_LineLocatePoint(line, point)
 \description{
 Returns the location on a line closest to a point as a fraction of the total 2D length of the line.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

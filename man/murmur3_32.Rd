@@ -15,3 +15,8 @@ murmur3_32(col0)
 \description{
 DuckDB function \code{murmur3_32()}.
 }
+\section{Provided by}{
+
+The \code{ducklake} extension (\code{LOAD ducklake;}).
+}
+

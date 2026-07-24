@@ -15,6 +15,11 @@ ST_Azimuth(origin, target)
 \description{
 Returns the azimuth (a clockwise angle measured from north) of two points in radian.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB function \code{hnsw_compact_index()}.
 }
+\section{Provided by}{
+
+The \code{vss} extension (\code{LOAD vss;}).
+}
+

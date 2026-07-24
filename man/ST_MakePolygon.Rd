@@ -28,6 +28,11 @@ ST_MakePolygon(shell, holes)
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

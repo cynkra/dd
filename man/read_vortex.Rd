@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB function \code{read_vortex()}.
 }
+\section{Provided by}{
+
+The \code{vortex} extension (\code{LOAD vortex;}).
+}
+

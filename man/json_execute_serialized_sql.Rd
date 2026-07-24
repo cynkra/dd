@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB function \code{json_execute_serialized_sql()}.
 }
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

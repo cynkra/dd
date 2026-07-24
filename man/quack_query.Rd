@@ -21,3 +21,8 @@ Unspecified.
 \description{
 DuckDB function \code{quack_query()}.
 }
+\section{Provided by}{
+
+The \code{quack} extension (\code{LOAD quack;}).
+}
+

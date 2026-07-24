@@ -17,3 +17,8 @@ iceberg_bucket(col0, col1)
 \description{
 DuckDB function \code{iceberg_bucket()}.
 }
+\section{Provided by}{
+
+The \code{iceberg} extension (\code{LOAD iceberg;}).
+}
+

@@ -15,6 +15,11 @@ ST_ZMax(geom)
 \description{
 Returns the maximum Z coordinate of a geometry.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

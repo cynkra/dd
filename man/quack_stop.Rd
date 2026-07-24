@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB function \code{quack_stop()}.
 }
+\section{Provided by}{
+
+The \code{quack} extension (\code{LOAD quack;}).
+}
+

@@ -41,3 +41,8 @@ Unspecified.
 \description{
 DuckDB function \code{postgres_configure_pool()}.
 }
+\section{Provided by}{
+
+The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
+}
+

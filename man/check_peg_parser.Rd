@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB function \code{check_peg_parser()}.
 }
+\section{Provided by}{
+
+The \code{autocomplete} extension (\code{LOAD autocomplete;}).
+}
+

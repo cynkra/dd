@@ -26,3 +26,8 @@ Unspecified.
 \description{
 DuckDB function \code{sql_auto_complete()}.
 }
+\section{Provided by}{
+
+The \code{autocomplete} extension (\code{LOAD autocomplete;}).
+}
+

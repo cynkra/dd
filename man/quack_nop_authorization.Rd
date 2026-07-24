@@ -15,3 +15,8 @@ quack_nop_authorization(col0, col1)
 \description{
 DuckDB function \code{quack_nop_authorization()}.
 }
+\section{Provided by}{
+
+The \code{quack} extension (\code{LOAD quack;}).
+}
+

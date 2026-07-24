@@ -33,3 +33,8 @@ If offset is provided, the resulting point(s) is offset by the given amount perp
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

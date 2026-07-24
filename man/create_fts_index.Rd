@@ -29,3 +29,8 @@ Unspecified.
 \description{
 DuckDB function \code{create_fts_index()}.
 }
+\section{Provided by}{
+
+The \code{fts} extension (\code{LOAD fts;}).
+}
+

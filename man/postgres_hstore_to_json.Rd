@@ -15,3 +15,8 @@ postgres_hstore_to_json(col0)
 \description{
 DuckDB function \code{postgres_hstore_to_json()}.
 }
+\section{Provided by}{
+
+The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
+}
+

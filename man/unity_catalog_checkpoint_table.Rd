@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB function \code{unity_catalog_checkpoint_table()}.
 }
+\section{Provided by}{
+
+The \code{unity_catalog} extension (\code{LOAD unity_catalog;}).
+}
+

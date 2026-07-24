@@ -21,3 +21,8 @@ Returns if two POINT_2D's are within a target distance in meters, using an ellip
 
 The input geometry is assumed to be in the \href{https://en.wikipedia.org/wiki/World_Geodetic_System}{EPSG:4326} coordinate system (WGS84), with [latitude, longitude] axis order and the distance is returned in meters. This function uses the \href{https://geographiclib.sourceforge.io/}{GeographicLib} library to solve the \href{https://en.wikipedia.org/wiki/Geodesics_on_an_ellipsoid#Solution_of_the_direct_and_inverse_problems}{inverse geodesic problem}, calculating the distance between two points using an ellipsoidal model of the earth. This is a highly accurate method for calculating the distance between two arbitrary points taking the curvature of the earths surface into account, but is also the slowest.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

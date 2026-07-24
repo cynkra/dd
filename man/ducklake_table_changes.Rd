@@ -15,3 +15,8 @@ Unspecified.
 \description{
 DuckDB macro \code{ducklake_table_changes()}.
 }
+\section{Provided by}{
+
+The \code{ducklake} extension (\code{LOAD ducklake;}).
+}
+

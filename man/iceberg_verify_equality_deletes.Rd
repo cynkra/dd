@@ -12,3 +12,8 @@ iceberg_verify_equality_deletes()
 \description{
 DuckDB function \code{iceberg_verify_equality_deletes()}.
 }
+\section{Provided by}{
+
+The \code{iceberg} extension (\code{LOAD iceberg;}).
+}
+

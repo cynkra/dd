@@ -23,3 +23,8 @@ Returns the number of interior rings of a polygon.
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

@@ -15,3 +15,8 @@ ST_MakeValid(geom)
 \description{
 Returns a valid representation of the geometry.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

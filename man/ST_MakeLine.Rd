@@ -26,6 +26,11 @@ ST_MakeLine(start, end)
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

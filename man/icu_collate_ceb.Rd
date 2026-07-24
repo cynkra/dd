@@ -15,3 +15,8 @@ icu_collate_ceb(col0)
 \description{
 DuckDB function \code{icu_collate_ceb()}.
 }
+\section{Provided by}{
+
+The \code{icu} extension (\code{LOAD icu;}).
+}
+

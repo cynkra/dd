@@ -23,6 +23,11 @@ Collects a list of geometries into a collection geometry.
 
 Empty and \code{NULL} geometries are ignored. If all geometries are empty or \code{NULL}, a \verb{GEOMETRYCOLLECTION EMPTY} is returned.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

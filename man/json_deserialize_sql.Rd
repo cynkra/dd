@@ -15,3 +15,8 @@ json_deserialize_sql(col0)
 \description{
 DuckDB function \code{json_deserialize_sql()}.
 }
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

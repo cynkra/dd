@@ -15,3 +15,8 @@ ST_Boundary(geom)
 \description{
 Returns the "boundary" of a geometry.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

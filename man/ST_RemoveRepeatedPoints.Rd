@@ -30,3 +30,8 @@ ST_RemoveRepeatedPoints(line, tolerance)
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

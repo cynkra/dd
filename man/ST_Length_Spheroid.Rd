@@ -27,3 +27,8 @@ Returns \code{0.0} for any geometry that is not a \code{LINESTRING}, \code{MULTI
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

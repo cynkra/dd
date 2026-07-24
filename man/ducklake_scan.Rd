@@ -59,3 +59,8 @@ Unspecified.
 \description{
 DuckDB function \code{ducklake_scan()}.
 }
+\section{Provided by}{
+
+The \code{ducklake} extension (\code{LOAD ducklake;}).
+}
+

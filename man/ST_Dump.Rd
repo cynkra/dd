@@ -17,6 +17,11 @@ Dumps a geometry into a list of sub-geometries and their "path" in the original 
 
 You can use the \code{unnest(res, recursive := true)} function to explode the resulting list of structs into multiple rows.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

@@ -15,3 +15,8 @@ ST_Point4D(x, y, z, m)
 \description{
 Creates a POINT_4D.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

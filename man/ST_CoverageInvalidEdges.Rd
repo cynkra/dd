@@ -27,3 +27,8 @@ Tolerance is 0 by default.
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

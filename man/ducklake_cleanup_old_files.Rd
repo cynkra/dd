@@ -21,3 +21,8 @@ Unspecified.
 \description{
 DuckDB function \code{ducklake_cleanup_old_files()}.
 }
+\section{Provided by}{
+
+The \code{ducklake} extension (\code{LOAD ducklake;}).
+}
+

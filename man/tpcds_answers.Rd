@@ -12,3 +12,8 @@ Unspecified.
 \description{
 DuckDB function \code{tpcds_answers()}.
 }
+\section{Provided by}{
+
+The \code{tpcds} extension (\code{LOAD tpcds;}).
+}
+

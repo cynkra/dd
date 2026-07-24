@@ -15,3 +15,8 @@ ST_Distance_GEOS(geom1, geom2)
 \description{
 Returns the planar distance between two geometries.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

@@ -15,6 +15,11 @@ ST_GeomFromGeoJSON(geojson)
 \description{
 Deserializes a GEOMETRY from a GeoJSON fragment.
 }
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+
 \section{SQL examples}{
 
 

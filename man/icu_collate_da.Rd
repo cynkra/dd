@@ -15,3 +15,8 @@ icu_collate_da(col0)
 \description{
 DuckDB function \code{icu_collate_da()}.
 }
+\section{Provided by}{
+
+The \code{icu} extension (\code{LOAD icu;}).
+}
+

@@ -12,3 +12,8 @@ Unspecified.
 \description{
 DuckDB function \code{hnsw_index_scan()}.
 }
+\section{Provided by}{
+
+The \code{vss} extension (\code{LOAD vss;}).
+}
+

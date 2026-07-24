@@ -26,3 +26,8 @@ Returns the number of vertices within a geometry.
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

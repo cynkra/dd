@@ -77,3 +77,8 @@ Unspecified.
 \description{
 DuckDB function \code{iceberg_scan()}.
 }
+\section{Provided by}{
+
+The \code{iceberg} extension (\code{LOAD iceberg;}).
+}
+

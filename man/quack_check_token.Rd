@@ -15,3 +15,8 @@ quack_check_token(col0, col1, col2)
 \description{
 DuckDB function \code{quack_check_token()}.
 }
+\section{Provided by}{
+
+The \code{quack} extension (\code{LOAD quack;}).
+}
+

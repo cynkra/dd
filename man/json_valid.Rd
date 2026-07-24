@@ -15,3 +15,8 @@ json_valid(col0)
 \description{
 DuckDB function \code{json_valid()}.
 }
+\section{Provided by}{
+
+The \code{json} extension (\code{LOAD json;}).
+}
+

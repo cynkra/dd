@@ -30,3 +30,8 @@ Returns a collection of fixed polygons with the same size and order as the input
 }
 }
 
+\section{Provided by}{
+
+The \code{spatial} extension (\code{LOAD spatial;}).
+}
+

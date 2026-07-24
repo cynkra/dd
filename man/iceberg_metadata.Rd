@@ -35,3 +35,8 @@ Unspecified.
 \description{
 DuckDB function \code{iceberg_metadata()}.
 }
+\section{Provided by}{
+
+The \code{iceberg} extension (\code{LOAD iceberg;}).
+}
+
