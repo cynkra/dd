@@ -23,6 +23,16 @@ json_merge_mode <- "full"
 
 con <- DBI::dbConnect(duckdb::duckdb())
 
+# The DuckDB engine version these docs are generated from. `PRAGMA version`
+# reports the git tag as `library_version` (e.g. "v1.5.5"); drop the leading
+# "v" for display. Baked into the generated `?dd` page below, so the help page
+# states the version even where roxygen cannot evaluate inline R code.
+duckdb_version <- sub(
+  "^v",
+  "",
+  DBI::dbGetQuery(con, "PRAGMA version")$library_version
+)
+
 filter_print <- function(.data, expr) {
   quo <- rlang::enquo(expr)
   out <-
@@ -843,8 +853,7 @@ dd_code <- glue(
   r"(
   #' DuckDB functions
   #'
-  #' A list of known DuckDB functions, as provided by DuckDB
-  #' `r sub("^v", "", duckdb::sql_query("PRAGMA version")$library_version)`.
+  #' A list of known DuckDB functions, as provided by DuckDB {duckdb_version}.
   #'
   #' @export
   #' @examples
@@ -956,9 +965,9 @@ writeLines(c(pkgdown_yml, "", reference_yaml), pkgdown_file)
 callr::r(function() {
   devtools::document()
   # `devtools::document()` regenerates the Rd files (so `?dd` picks up the
-  # DuckDB version via its inline `r duckdb::sql_query(...)` stamp) but does not
-  # touch README.md. Re-render the README in the same step so its badge and
-  # homepage line stay in sync with the version the docs were generated from.
+  # DuckDB version baked into `R/zzz-dd.R` above) but does not touch README.md,
+  # whose badge and homepage line read the version inline. Re-render it in the
+  # same step so both stay in sync with the version the docs came from.
   devtools::build_readme()
 })
 
