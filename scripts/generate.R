@@ -786,16 +786,18 @@ funs <-
   # from the canonical (alphanumeric) member rather than an operator alias.
   arrange(rd_name, desc(is_primary), function_name)
 
-# A handful of DuckDB functions share a name with a base R function that R's own
-# machinery calls while the package is attached (e.g. R CMD check's example
-# runner evaluates `proc.time() - ...` and `format(x, digits = 7)`). Exporting a
-# stub for those names shadows the base function on the search path and makes
-# that machinery dispatch to the stub, which errors -- breaking R CMD check.
+# A handful of DuckDB functions share a name with a base R function that tooling
+# calls while the package is attached: R CMD check's example runner evaluates
+# `proc.time() - ...` and `format(x, digits = 7)`, and pkgdown's site build
+# reaches `length()` through `purrr::pluck()` when rendering the navbar (both
+# reproduced in CI). Exporting a stub for those names shadows the base function
+# on the search path and makes that tooling dispatch to the stub, which errors --
+# breaking R CMD check and the pkgdown build.
 # Document them (so they still get a help page and appear in `dd`) but do not
 # `@export` them, so the base functions keep working when `library(dd)` is
 # attached. This is only needed for names base R itself relies on; the many
 # other base-shadowing stubs (`abs()`, `sqrt()`, ...) stay exported as before.
-no_export <- c("format", "+", "-")
+no_export <- c("format", "+", "-", "length")
 
 code <-
   funs |>

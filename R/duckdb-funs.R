@@ -5387,7 +5387,6 @@ character_length <- function(string = VARCHAR) {
 
 #' @rdname len
 #' @usage NULL
-#' @export
 length <- function(string = VARCHAR) {
   stop("DuckDB function length() is not available in R.")
 }
