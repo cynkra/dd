@@ -227,7 +227,7 @@ Proposed corrected entry:
 
 - Is YAML better suited for storing longer documentation strings?
 
-- Should the completeness of examples and function descriptions
+- Should the completeness of return types, examples and function descriptions
   (see [`?duckdb_functions`](https://cynkra.github.io/dd/reference/duckdb_functions.html)
  )
   also be audited and improved in the same pass?
