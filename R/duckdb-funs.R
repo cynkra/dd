@@ -18,6 +18,23 @@
   stop("DuckDB function &() is not available in R.")
 }
 
+#' DuckDB function ->>
+#'
+#' @description
+#' DuckDB function `->>()`.
+#'
+#' @name ->>
+#' @usage `->>`(col0, col1)
+#' @param col0 `VARCHAR | JSON`
+#' @param col1 `BIGINT | VARCHAR | VARCHAR[]`
+#' @return `VARCHAR | VARCHAR[]`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+`->>` <- function(col0 = `VARCHAR | JSON`, col1 = `BIGINT | VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function ->>() is not available in R.")
+}
+
 #' DuckDB function /
 #'
 #' @description
@@ -52,6 +69,22 @@
   stop("DuckDB function <<() is not available in R.")
 }
 
+#' DuckDB function <<=
+#'
+#' @description
+#' DuckDB function `<<=()`.
+#'
+#' @name <<=
+#' @usage `<<=`(col0, col1)
+#' @param col0,col1 `INET`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{inet} extension (\code{LOAD inet;}).
+`<<=` <- function(col0 = INET, col1 = INET) {
+  stop("DuckDB function <<=() is not available in R.")
+}
+
 #' DuckDB function >>
 #'
 #' @description
@@ -69,6 +102,3615 @@
 #' ```
 `>>` <- function(input = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
   stop("DuckDB function >>() is not available in R.")
+}
+
+#' DuckDB function >>=
+#'
+#' @description
+#' DuckDB function `>>=()`.
+#'
+#' @name >>=
+#' @usage `>>=`(col0, col1)
+#' @param col0,col1 `INET`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{inet} extension (\code{LOAD inet;}).
+`>>=` <- function(col0 = INET, col1 = INET) {
+  stop("DuckDB function >>=() is not available in R.")
+}
+
+#' DuckDB function DuckDB_PROJ_Compiled_Version
+#'
+#' @description
+#' Returns a text description of the PROJ library version that this instance of DuckDB was compiled against.
+#'
+#' @name DuckDB_PROJ_Compiled_Version
+#' @usage DuckDB_PROJ_Compiled_Version()
+
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT duckdb_proj_compiled_version();
+#' ┌────────────────────────────────┐
+#' │ duckdb_proj_compiled_version() │
+#' │            varchar             │
+#' ├────────────────────────────────┤
+#' │ Rel. 9.1.1, December 1st, 2022 │
+#' └────────────────────────────────┘
+#' ```
+DuckDB_PROJ_Compiled_Version <- function() {
+  stop("DuckDB function DuckDB_PROJ_Compiled_Version() is not available in R.")
+}
+
+#' DuckDB function DuckDB_Proj_Version
+#'
+#' @description
+#' Returns a text description of the PROJ library version that is being used by this instance of DuckDB.
+#'
+#' @name DuckDB_Proj_Version
+#' @usage DuckDB_Proj_Version()
+
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT duckdb_proj_version();
+#' ┌───────────────────────┐
+#' │ duckdb_proj_version() │
+#' │        varchar        │
+#' ├───────────────────────┤
+#' │ 9.1.1                 │geometry_always_xy
+#' └───────────────────────┘
+#' ```
+DuckDB_Proj_Version <- function() {
+  stop("DuckDB function DuckDB_Proj_Version() is not available in R.")
+}
+
+#' DuckDB function ST_Affine
+#'
+#' @description
+#' Applies an affine transformation to a geometry.
+#' 
+#' For the 2D variant, the transformation matrix is defined as follows:
+#' ```
+#' | a b xoff |
+#' | d e yoff |
+#' | 0 0 1    |
+#' ```
+#' 
+#' For the 3D variant, the transformation matrix is defined as follows:
+#' ```
+#' | a b c xoff |
+#' | d e f yoff |
+#' | g h i zoff |
+#' | 0 0 0 1    |
+#' ```
+#' 
+#' The transformation is applied to all vertices of the geometry.
+#'
+#' @name ST_Affine
+#' @usage ST_Affine(geom, a, b, c, d, e, f, g, h, i, xoff, yoff, zoff)
+#' @param geom `GEOMETRY`
+#' @param a `DOUBLE`
+#' @param b `DOUBLE`
+#' @param c `DOUBLE`
+#' @param d `DOUBLE`
+#' @param e `DOUBLE`
+#' @param f `DOUBLE`
+#' @param g `DOUBLE`
+#' @param h `DOUBLE`
+#' @param i `DOUBLE`
+#' @param xoff `DOUBLE`
+#' @param yoff `DOUBLE`
+#' @param zoff `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_Affine(geom = GEOMETRY, a = DOUBLE, b = DOUBLE, c = DOUBLE, d = DOUBLE, e = DOUBLE, f = DOUBLE, g = DOUBLE, h = DOUBLE, i = DOUBLE, xoff = DOUBLE, yoff = DOUBLE, zoff = DOUBLE)}
+#' \item \code{ST_Affine(geom = GEOMETRY, a = DOUBLE, b = DOUBLE, d = DOUBLE, e = DOUBLE, xoff = DOUBLE, yoff = DOUBLE)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' -- Translate a point by (2, 3)
+#' SELECT ST_Affine(ST_Point(1, 1),
+#'                  1, 0,   -- a, b
+#'                  0, 1,   -- d, e
+#'                  2, 3);  -- xoff, yoff
+#' ```
+ST_Affine <- function(geom = GEOMETRY, a = DOUBLE, b = DOUBLE, c = DOUBLE, d = DOUBLE, e = DOUBLE, f = DOUBLE, g = DOUBLE, h = DOUBLE, i = DOUBLE, xoff = DOUBLE, yoff = DOUBLE, zoff = DOUBLE) {
+  stop("DuckDB function ST_Affine() is not available in R.")
+}
+
+#' DuckDB function ST_Area
+#'
+#' @description
+#' Compute the area of a geometry.
+#' 
+#' Returns `0.0` for any geometry that is not a `POLYGON`, `MULTIPOLYGON` or `GEOMETRYCOLLECTION` containing polygon
+#' geometries.
+#' 
+#' The area is in the same units as the spatial reference system of the geometry.
+#' 
+#' The `POINT_2D` and `LINESTRING_2D` overloads of this function always return `0.0` but are included for completeness.
+#'
+#' @name ST_Area
+#' @usage ST_Area(geom)
+#' @param geom `GEOMETRY`
+#' @return `DOUBLE`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_Area(geom = GEOMETRY)}
+#' \item \code{ST_Area(polygon = POLYGON_2D)}
+#' \item \code{ST_Area(linestring = LINESTRING_2D)}
+#' \item \code{ST_Area(point = POINT_2D)}
+#' \item \code{ST_Area(box = BOX_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_Area('POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))'::GEOMETRY);
+#' -- 1.0
+#' ```
+ST_Area <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Area() is not available in R.")
+}
+
+#' DuckDB function ST_Area_Spheroid
+#'
+#' @description
+#' Returns the area of a geometry in meters, using an ellipsoidal model of the earth
+#' 
+#' The input geometry is assumed to be in the [EPSG:4326](https://en.wikipedia.org/wiki/World_Geodetic_System) coordinate system (WGS84), with \[latitude, longitude\] axis order and the area is returned in square meters. This function uses the [GeographicLib](https://geographiclib.sourceforge.io/) library, calculating the area using an ellipsoidal model of the earth. This is a highly accurate method for calculating the area of a polygon taking the curvature of the earth into account, but is also the slowest.
+#' 
+#' Returns `0.0` for any geometry that is not a `POLYGON`, `MULTIPOLYGON` or `GEOMETRYCOLLECTION` containing polygon geometries.
+#'
+#' @name ST_Area_Spheroid
+#' @usage ST_Area_Spheroid(geom)
+#' @param geom `GEOMETRY`
+#' @return `DOUBLE`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_Area_Spheroid(geom = GEOMETRY)}
+#' \item \code{ST_Area_Spheroid(poly = POLYGON_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Area_Spheroid <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Area_Spheroid() is not available in R.")
+}
+
+#' DuckDB function ST_AsGeoJSON
+#'
+#' @description
+#' Returns the geometry as a GeoJSON fragment
+#' 
+#' This does not return a complete GeoJSON document, only the geometry fragment.
+#' To construct a complete GeoJSON document or feature, look into using the DuckDB JSON extension in conjunction with this function.
+#' This function supports geometries with Z values, but not M values. M values are ignored.
+#'
+#' @name ST_AsGeoJSON
+#' @usage ST_AsGeoJSON(geom)
+#' @param geom `GEOMETRY`
+#' @return `JSON`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_AsGeoJSON('POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))'::GEOMETRY);
+#' ```
+ST_AsGeoJSON <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_AsGeoJSON() is not available in R.")
+}
+
+#' DuckDB function ST_AsHEXWKB
+#'
+#' @description
+#' Returns the geometry as a HEXWKB string.
+#'
+#' @name ST_AsHEXWKB
+#' @usage ST_AsHEXWKB(geom)
+#' @param geom `GEOMETRY`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_AsHexWKB('POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))'::GEOMETRY);
+#' ```
+ST_AsHEXWKB <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_AsHEXWKB() is not available in R.")
+}
+
+#' DuckDB function ST_AsMVT
+#'
+#' @description
+#' Make a Mapbox Vector Tile from a set of geometries and properties
+#' The function takes as input a row type (STRUCT) containing a geometry column and any number of property columns.
+#' It returns a single binary BLOB containing the Mapbox Vector Tile.
+#' 
+#' The function has the following signature:
+#' 
+#' `ST_AsMVT(row STRUCT, layer_name VARCHAR DEFAULT 'layer', extent INTEGER DEFAULT 4096, geom_column_name VARCHAR DEFAULT NULL, feature_id_column_name VARCHAR DEFAULT NULL) -> BLOB`
+#' 
+#' - The first argument is a struct containing the geometry and properties.
+#' - The second argument is the name of the layer in the vector tile. This argument is optional and defaults to 'layer'.
+#' - The third argument is the extent of the tile. This argument is optional and defaults to 4096.
+#' - The fourth argument is the name of the geometry column in the input row. This argument is optional. If not provided, the first geometry column in the input row will be used. If multiple geometry columns are present, an error will be raised.
+#' - The fifth argument is the name of the feature id column in the input row. This argument is optional. If provided, the values in this column will be used as feature ids in the vector tile. The column must be of type INTEGER or BIGINT. If set to negative or NULL, a feature id will not be assigned to the corresponding feature.
+#' 
+#' The input struct must contain exactly one geometry column of type GEOMETRY. It can contain any number of property columns of types VARCHAR, FLOAT, DOUBLE, INTEGER, BIGINT, or BOOLEAN.
+#' 
+#' Example:
+#' ```sql
+#' SELECT ST_AsMVT({'geom': geom, 'id': id, 'name': name}, 'cities', 4096, 'geom', 'id') AS tile
+#' FROM cities;
+#'  ```
+#' 
+#' This example creates a vector tile named 'cities' with an extent of 4096 from the 'cities' table, using 'geom' as the geometry column and 'id' as the feature id column.
+#' 
+#' However, you probably want to use the ST_AsMVTGeom function to first transform and clip your geometries to the tile extent.
+#' The following example assumes the geometry is in WebMercator ("EPSG:3857") coordinates.
+#' Replace `{z}`, `{x}`, and `{y}` with the appropriate tile coordinates, `{your table}` with your table name, and `{tile_path}` with the path to write the tile to.
+#' 
+#' ```sql
+#' COPY (
+#'     SELECT ST_AsMVT({{
+#'         "geometry": ST_AsMVTGeom(
+#'             geometry,
+#'             ST_Extent(ST_TileEnvelope({z}, {x}, {y})),
+#'             4096,
+#'             256,
+#'             false
+#'         )
+#'     }})
+#'     FROM {your table} WHERE ST_Intersects(geometry, ST_TileEnvelope({z}, {x}, {y}))
+#' ) to {tile_path} (FORMAT 'BLOB');
+#' ```.
+#'
+#' @name ST_AsMVT
+#' @usage ST_AsMVT(col0, col1, col2, col3, col4)
+#' @param col0 `ANY`
+#' @param col1 `VARCHAR`
+#' @param col2 `INTEGER`
+#' @param col3 `VARCHAR`
+#' @param col4 `VARCHAR`
+#' @return `BLOB`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_AsMVT(col0 = ANY)}
+#' \item \code{ST_AsMVT(col0 = ANY, col1 = VARCHAR)}
+#' \item \code{ST_AsMVT(col0 = ANY, col1 = VARCHAR, col2 = INTEGER)}
+#' \item \code{ST_AsMVT(col0 = ANY, col1 = VARCHAR, col2 = INTEGER, col3 = VARCHAR)}
+#' \item \code{ST_AsMVT(col0 = ANY, col1 = VARCHAR, col2 = INTEGER, col3 = VARCHAR, col4 = VARCHAR)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_AsMVT <- function(col0 = ANY, col1 = VARCHAR, col2 = INTEGER, col3 = VARCHAR, col4 = VARCHAR) {
+  stop("DuckDB function ST_AsMVT() is not available in R.")
+}
+
+#' DuckDB function ST_AsMVTGeom
+#'
+#' @description
+#' Transform and clip geometry to a tile boundary
+#' 
+#' See "ST_AsMVT" for more details.
+#'
+#' @name ST_AsMVTGeom
+#' @usage ST_AsMVTGeom(geom, bounds, extent, buffer, clip_geom)
+#' @param geom `GEOMETRY`
+#' @param bounds `BOX_2D`
+#' @param extent `BIGINT`
+#' @param buffer `BIGINT`
+#' @param clip_geom `BOOLEAN`
+#' @return `GEOMETRY`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_AsMVTGeom(geom = GEOMETRY, bounds = BOX_2D, extent = BIGINT, buffer = BIGINT, clip_geom = BOOLEAN)}
+#' \item \code{ST_AsMVTGeom(geom = GEOMETRY, bounds = BOX_2D, extent = BIGINT, buffer = BIGINT)}
+#' \item \code{ST_AsMVTGeom(geom = GEOMETRY, bounds = BOX_2D, extent = BIGINT)}
+#' \item \code{ST_AsMVTGeom(geom = GEOMETRY, bounds = BOX_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_AsMVTGeom <- function(geom = GEOMETRY, bounds = BOX_2D, extent = BIGINT, buffer = BIGINT, clip_geom = BOOLEAN) {
+  stop("DuckDB function ST_AsMVTGeom() is not available in R.")
+}
+
+#' DuckDB function ST_AsSVG
+#'
+#' @description
+#' Convert the geometry into a SVG fragment or path
+#' 
+#' The SVG fragment is returned as a string. The fragment is a path element that can be used in an SVG document.
+#' The second boolean argument specifies whether the path should be relative or absolute.
+#' The third argument specifies the maximum number of digits to use for the coordinates.
+#' 
+#' Points are formatted as cx/cy using absolute coordinates or x/y using relative coordinates.
+#'
+#' @name ST_AsSVG
+#' @usage ST_AsSVG(geom, relative, precision)
+#' @param geom `GEOMETRY`
+#' @param relative `BOOLEAN`
+#' @param precision `INTEGER`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_AsSVG('POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))'::GEOMETRY, false, 15);
+#' ```
+ST_AsSVG <- function(geom = GEOMETRY, relative = BOOLEAN, precision = INTEGER) {
+  stop("DuckDB function ST_AsSVG() is not available in R.")
+}
+
+#' DuckDB function ST_Azimuth
+#'
+#' @description
+#' Returns the azimuth (a clockwise angle measured from north) of two points in radian.
+#'
+#' @name ST_Azimuth
+#' @usage ST_Azimuth(origin, target)
+#' @param origin,target `GEOMETRY | POINT_2D`
+#' @return `DOUBLE`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT degrees(ST_Azimuth(ST_Point(0, 0), ST_Point(0, 1)));
+#' ```
+ST_Azimuth <- function(origin = `GEOMETRY | POINT_2D`, target = `GEOMETRY | POINT_2D`) {
+  stop("DuckDB function ST_Azimuth() is not available in R.")
+}
+
+#' DuckDB function ST_Boundary
+#'
+#' @description
+#' Returns the "boundary" of a geometry.
+#'
+#' @name ST_Boundary
+#' @usage ST_Boundary(geom)
+#' @param geom `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Boundary <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Boundary() is not available in R.")
+}
+
+#' DuckDB function ST_Buffer
+#'
+#' @description
+#' Returns a buffer around the input geometry at the target distance
+#' 
+#' `geom` is the input geometry.
+#' 
+#' `distance` is the target distance for the buffer, using the same units as the input geometry.
+#' 
+#' `num_triangles` represents how many triangles that will be produced to approximate a quarter circle. The larger the number, the smoother the resulting geometry. The default value is 8.
+#' 
+#' `cap_style` must be one of "CAP_ROUND", "CAP_FLAT", "CAP_SQUARE". This parameter is case-insensitive.
+#' 
+#' `join_style` must be one of "JOIN_ROUND", "JOIN_MITRE", "JOIN_BEVEL". This parameter is case-insensitive.
+#' 
+#' `mitre_limit` only applies when `join_style` is "JOIN_MITRE". It is the ratio of the distance from the corner to the mitre point to the corner radius. The default value is 1.0.
+#' 
+#' This is a planar operation and will not take into account the curvature of the earth.
+#'
+#' @name ST_Buffer
+#' @usage ST_Buffer(geom, distance, num_triangles, cap_style, join_style, mitre_limit)
+#' @param geom `GEOMETRY`
+#' @param distance `DOUBLE`
+#' @param num_triangles `INTEGER`
+#' @param cap_style `VARCHAR`
+#' @param join_style `VARCHAR`
+#' @param mitre_limit `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_Buffer(geom = GEOMETRY, distance = DOUBLE)}
+#' \item \code{ST_Buffer(geom = GEOMETRY, distance = DOUBLE, num_triangles = INTEGER)}
+#' \item \code{ST_Buffer(geom = GEOMETRY, distance = DOUBLE, num_triangles = INTEGER, cap_style = VARCHAR, join_style = VARCHAR, mitre_limit = DOUBLE)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Buffer <- function(geom = GEOMETRY, distance = DOUBLE, num_triangles = INTEGER, cap_style = VARCHAR, join_style = VARCHAR, mitre_limit = DOUBLE) {
+  stop("DuckDB function ST_Buffer() is not available in R.")
+}
+
+#' DuckDB function ST_BuildArea
+#'
+#' @description
+#' Creates a polygonal geometry by attempting to "fill in" the input geometry.
+#' 
+#' Unlike ST_Polygonize, this function does not fill in holes.
+#'
+#' @name ST_BuildArea
+#' @usage ST_BuildArea(geom)
+#' @param geom `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_BuildArea <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_BuildArea() is not available in R.")
+}
+
+#' DuckDB function ST_Centroid
+#'
+#' @description
+#' Returns the centroid of a geometry.
+#'
+#' @name ST_Centroid
+#' @usage ST_Centroid(box)
+#' @param box `BOX_2D | BOX_2DF`
+#' @return `GEOMETRY | POINT_2D`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_Centroid(geom = GEOMETRY)}
+#' \item \code{ST_Centroid(point = POINT_2D)}
+#' \item \code{ST_Centroid(linestring = LINESTRING_2D)}
+#' \item \code{ST_Centroid(polygon = POLYGON_2D)}
+#' \item \code{ST_Centroid(box = BOX_2D)}
+#' \item \code{ST_Centroid(box = BOX_2DF)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Centroid <- function(box = `BOX_2D | BOX_2DF`) {
+  stop("DuckDB function ST_Centroid() is not available in R.")
+}
+
+#' DuckDB function ST_ClosestPoint
+#'
+#' @description
+#' Returns the closest point on the first geometry to the second geometry.
+#'
+#' @name ST_ClosestPoint
+#' @usage ST_ClosestPoint(geom1, geom2)
+#' @param geom1,geom2 `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_ClosestPoint <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function ST_ClosestPoint() is not available in R.")
+}
+
+#' DuckDB function ST_Collect
+#'
+#' @description
+#' Collects a list of geometries into a collection geometry.
+#' - If all geometries are `POINT`'s, a `MULTIPOINT` is returned.
+#' - If all geometries are `LINESTRING`'s, a `MULTILINESTRING` is returned.
+#' - If all geometries are `POLYGON`'s, a `MULTIPOLYGON` is returned.
+#' - Otherwise if the input collection contains a mix of geometry types, a `GEOMETRYCOLLECTION` is returned.
+#' 
+#' Empty and `NULL` geometries are ignored. If all geometries are empty or `NULL`, a `GEOMETRYCOLLECTION EMPTY` is returned.
+#'
+#' @name ST_Collect
+#' @usage ST_Collect(geoms)
+#' @param geoms `GEOMETRY[]`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' -- With all POINT's, a MULTIPOINT is returned
+#' SELECT ST_Collect([ST_Point(1, 2), ST_Point(3, 4)]);
+#' ```
+ST_Collect <- function(geoms = `GEOMETRY[]`) {
+  stop("DuckDB function ST_Collect() is not available in R.")
+}
+
+#' DuckDB function ST_CollectionExtract
+#'
+#' @description
+#' Extracts geometries from a GeometryCollection into a typed multi geometry.
+#' 
+#' If the input geometry is a GeometryCollection, the function will return a multi geometry, determined by the `type` parameter.
+#' - if `type` = 1, returns a MultiPoint containing all the Points in the collection
+#' - if `type` = 2, returns a MultiLineString containing all the LineStrings in the collection
+#' - if `type` = 3, returns a MultiPolygon containing all the Polygons in the collection
+#' 
+#' If no `type` parameters is provided, the function will return a multi geometry matching the highest "surface dimension"
+#' of the contained geometries. E.g. if the collection contains only Points, a MultiPoint will be returned. But if the
+#' collection contains both Points and LineStrings, a MultiLineString will be returned. Similarly, if the collection
+#' contains Polygons, a MultiPolygon will be returned. Contained geometries of a lower surface dimension will be ignored.
+#' 
+#' If the input geometry contains nested GeometryCollections, their geometries will be extracted recursively and included
+#' into the final multi geometry as well.
+#' 
+#' If the input geometry is not a GeometryCollection, the function will return the input geometry as is.
+#'
+#' @name ST_CollectionExtract
+#' @usage ST_CollectionExtract(geom, type)
+#' @param geom `GEOMETRY`
+#' @param type `INTEGER`
+#' @return `GEOMETRY`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_CollectionExtract(geom = GEOMETRY, type = INTEGER)}
+#' \item \code{ST_CollectionExtract(geom = GEOMETRY)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_CollectionExtract('MULTIPOINT(1 2, 3 4)'::GEOMETRY, 1);
+#' -- MULTIPOINT (1 2, 3 4)
+#' ```
+ST_CollectionExtract <- function(geom = GEOMETRY, type = INTEGER) {
+  stop("DuckDB function ST_CollectionExtract() is not available in R.")
+}
+
+#' DuckDB function ST_ConcaveHull
+#'
+#' @description
+#' Returns the 'concave' hull of the input geometry, containing all of the source input's points, and which can be used to create polygons from points. The ratio parameter dictates the level of concavity; 1.0 returns the convex hull; and 0 indicates to return the most concave hull possible. Set allowHoles to a non-zero value to allow output containing holes.
+#'
+#' @name ST_ConcaveHull
+#' @usage ST_ConcaveHull(geom, ratio, allowHoles)
+#' @param geom `GEOMETRY`
+#' @param ratio `DOUBLE`
+#' @param allowHoles `BOOLEAN`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_ConcaveHull <- function(geom = GEOMETRY, ratio = DOUBLE, allowHoles = BOOLEAN) {
+  stop("DuckDB function ST_ConcaveHull() is not available in R.")
+}
+
+#' DuckDB function ST_Contains
+#'
+#' @description
+#' Returns true if the first geometry contains the second geometry
+#' 
+#' In contrast to `ST_ContainsProperly`, this function will also return true if `geom2` is contained strictly on the boundary of `geom1`.
+#' A geometry always `ST_Contains` itself, but does not `ST_ContainsProperly` itself.
+#'
+#' @name ST_Contains
+#' @usage ST_Contains(geom1, geom2)
+#' @param geom1 `POLYGON_2D | GEOMETRY`
+#' @param geom2 `POINT_2D | GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Contains <- function(geom1 = `POLYGON_2D | GEOMETRY`, geom2 = `POINT_2D | GEOMETRY`) {
+  stop("DuckDB function ST_Contains() is not available in R.")
+}
+
+#' DuckDB function ST_ContainsProperly
+#'
+#' @description
+#' Returns true if the first geometry \"properly\" contains the second geometry
+#' 
+#' In contrast to `ST_Contains`, this function does not return true if `geom2` is contained strictly on the boundary of `geom1`.
+#' A geometry always `ST_Contains` itself, but does not `ST_ContainsProperly` itself.
+#'
+#' @name ST_ContainsProperly
+#' @usage ST_ContainsProperly(geom1, geom2)
+#' @param geom1,geom2 `GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_ContainsProperly <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function ST_ContainsProperly() is not available in R.")
+}
+
+#' DuckDB function ST_ConvexHull
+#'
+#' @description
+#' Returns the convex hull enclosing the geometry.
+#'
+#' @name ST_ConvexHull
+#' @usage ST_ConvexHull(geom)
+#' @param geom `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_ConvexHull <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_ConvexHull() is not available in R.")
+}
+
+#' DuckDB function ST_CoverageClean
+#'
+#' @description
+#' Aligns the edges of a list of polygons whose edges are meant to align but are in fact exact matches.
+#' 
+#' Returns a collection of fixed polygons with the same size and order as the input polygons. EMPTY will be used in place of collapsed polygons.
+#'
+#' @name ST_CoverageClean
+#' @usage ST_CoverageClean(geoms, snapping_distance, gap_maximum_width)
+#' @param geoms `GEOMETRY[]`
+#' @param snapping_distance `DOUBLE`
+#' @param gap_maximum_width `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_CoverageClean(geoms = `GEOMETRY[]`, snapping_distance = DOUBLE, gap_maximum_width = DOUBLE)}
+#' \item \code{ST_CoverageClean(geoms = `GEOMETRY[]`, snapping_distance = DOUBLE)}
+#' \item \code{ST_CoverageClean(geoms = `GEOMETRY[]`)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_CoverageClean <- function(geoms = `GEOMETRY[]`, snapping_distance = DOUBLE, gap_maximum_width = DOUBLE) {
+  stop("DuckDB function ST_CoverageClean() is not available in R.")
+}
+
+#' DuckDB function ST_CoverageInvalidEdges
+#'
+#' @description
+#' Returns the invalid edges in a polygonal coverage, which are edges that are not shared by two polygons.
+#' Returns NULL if the input is not a polygonal coverage, or if the input is valid.
+#' Tolerance is 0 by default.
+#'
+#' @name ST_CoverageInvalidEdges
+#' @usage ST_CoverageInvalidEdges(geoms, tolerance)
+#' @param geoms `GEOMETRY[]`
+#' @param tolerance `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_CoverageInvalidEdges(geoms = `GEOMETRY[]`, tolerance = DOUBLE)}
+#' \item \code{ST_CoverageInvalidEdges(geoms = `GEOMETRY[]`)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_CoverageInvalidEdges <- function(geoms = `GEOMETRY[]`, tolerance = DOUBLE) {
+  stop("DuckDB function ST_CoverageInvalidEdges() is not available in R.")
+}
+
+#' DuckDB function ST_CoverageInvalidEdges_Agg
+#'
+#' @description
+#' Returns the invalid edges of a coverage geometry.
+#'
+#' @name ST_CoverageInvalidEdges_Agg
+#' @usage ST_CoverageInvalidEdges_Agg(col0, col1)
+#' @param col0 `GEOMETRY`
+#' @param col1 `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_CoverageInvalidEdges_Agg(col0 = GEOMETRY)}
+#' \item \code{ST_CoverageInvalidEdges_Agg(col0 = GEOMETRY, col1 = DOUBLE)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_CoverageInvalidEdges_Agg <- function(col0 = GEOMETRY, col1 = DOUBLE) {
+  stop("DuckDB function ST_CoverageInvalidEdges_Agg() is not available in R.")
+}
+
+#' DuckDB function ST_CoverageSimplify
+#'
+#' @description
+#' Simplify the edges in a polygonal coverage, preserving the coverange by ensuring that the there are no seams between the resulting simplified polygons.
+#' 
+#' By default, the boundary of the coverage is also simplified, but this can be controlled with the optional third 'simplify_boundary' parameter.
+#'
+#' @name ST_CoverageSimplify
+#' @usage ST_CoverageSimplify(geoms, tolerance, simplify_boundary)
+#' @param geoms `GEOMETRY[]`
+#' @param tolerance `DOUBLE`
+#' @param simplify_boundary `BOOLEAN`
+#' @return `GEOMETRY`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_CoverageSimplify(geoms = `GEOMETRY[]`, tolerance = DOUBLE, simplify_boundary = BOOLEAN)}
+#' \item \code{ST_CoverageSimplify(geoms = `GEOMETRY[]`, tolerance = DOUBLE)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_CoverageSimplify <- function(geoms = `GEOMETRY[]`, tolerance = DOUBLE, simplify_boundary = BOOLEAN) {
+  stop("DuckDB function ST_CoverageSimplify() is not available in R.")
+}
+
+#' DuckDB function ST_CoverageSimplify_Agg
+#'
+#' @description
+#' Simplifies a set of geometries while maintaining coverage.
+#'
+#' @name ST_CoverageSimplify_Agg
+#' @usage ST_CoverageSimplify_Agg(col0, col1, col2)
+#' @param col0 `GEOMETRY`
+#' @param col1 `DOUBLE`
+#' @param col2 `BOOLEAN`
+#' @return `GEOMETRY`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_CoverageSimplify_Agg(col0 = GEOMETRY, col1 = DOUBLE)}
+#' \item \code{ST_CoverageSimplify_Agg(col0 = GEOMETRY, col1 = DOUBLE, col2 = BOOLEAN)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_CoverageSimplify_Agg <- function(col0 = GEOMETRY, col1 = DOUBLE, col2 = BOOLEAN) {
+  stop("DuckDB function ST_CoverageSimplify_Agg() is not available in R.")
+}
+
+#' DuckDB function ST_CoverageUnion
+#'
+#' @description
+#' Union all geometries in a polygonal coverage into a single geometry.
+#' This may be faster than using `ST_Union`, but may use more memory.
+#'
+#' @name ST_CoverageUnion
+#' @usage ST_CoverageUnion(geoms)
+#' @param geoms `GEOMETRY[]`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_CoverageUnion <- function(geoms = `GEOMETRY[]`) {
+  stop("DuckDB function ST_CoverageUnion() is not available in R.")
+}
+
+#' DuckDB function ST_CoverageUnion_Agg
+#'
+#' @description
+#' Unions a set of geometries while maintaining coverage.
+#'
+#' @name ST_CoverageUnion_Agg
+#' @usage ST_CoverageUnion_Agg(col0)
+#' @param col0 `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_CoverageUnion_Agg <- function(col0 = GEOMETRY) {
+  stop("DuckDB function ST_CoverageUnion_Agg() is not available in R.")
+}
+
+#' DuckDB function ST_CoveredBy
+#'
+#' @description
+#' Returns true if geom1 is "covered by" geom2.
+#'
+#' @name ST_CoveredBy
+#' @usage ST_CoveredBy(geom1, geom2)
+#' @param geom1,geom2 `GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_CoveredBy <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function ST_CoveredBy() is not available in R.")
+}
+
+#' DuckDB function ST_Covers
+#'
+#' @description
+#' Returns true if the geom1 "covers" geom2.
+#'
+#' @name ST_Covers
+#' @usage ST_Covers(geom1, geom2)
+#' @param geom1,geom2 `GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Covers <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function ST_Covers() is not available in R.")
+}
+
+#' DuckDB function ST_Crosses
+#'
+#' @description
+#' Returns true if geom1 "crosses" geom2.
+#'
+#' @name ST_Crosses
+#' @usage ST_Crosses(geom1, geom2)
+#' @param geom1,geom2 `GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Crosses <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function ST_Crosses() is not available in R.")
+}
+
+#' DuckDB function ST_DWithin
+#'
+#' @description
+#' Returns if two geometries are within a target distance of each-other.
+#'
+#' @name ST_DWithin
+#' @usage ST_DWithin(geom1, geom2, distance)
+#' @param geom1 `GEOMETRY`
+#' @param geom2 `GEOMETRY`
+#' @param distance `DOUBLE`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_DWithin <- function(geom1 = GEOMETRY, geom2 = GEOMETRY, distance = DOUBLE) {
+  stop("DuckDB function ST_DWithin() is not available in R.")
+}
+
+#' DuckDB function ST_DWithin_GEOS
+#'
+#' @description
+#' Returns true if two geometries are within a target distance of each-other.
+#'
+#' @name ST_DWithin_GEOS
+#' @usage ST_DWithin_GEOS(geom1, geom2, distance)
+#' @param geom1 `GEOMETRY`
+#' @param geom2 `GEOMETRY`
+#' @param distance `DOUBLE`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_DWithin_GEOS <- function(geom1 = GEOMETRY, geom2 = GEOMETRY, distance = DOUBLE) {
+  stop("DuckDB function ST_DWithin_GEOS() is not available in R.")
+}
+
+#' DuckDB function ST_DWithin_Spheroid
+#'
+#' @description
+#' Returns if two POINT_2D's are within a target distance in meters, using an ellipsoidal model of the earths surface
+#' 
+#' The input geometry is assumed to be in the [EPSG:4326](https://en.wikipedia.org/wiki/World_Geodetic_System) coordinate system (WGS84), with \[latitude, longitude\] axis order and the distance is returned in meters. This function uses the [GeographicLib](https://geographiclib.sourceforge.io/) library to solve the [inverse geodesic problem](https://en.wikipedia.org/wiki/Geodesics_on_an_ellipsoid#Solution_of_the_direct_and_inverse_problems), calculating the distance between two points using an ellipsoidal model of the earth. This is a highly accurate method for calculating the distance between two arbitrary points taking the curvature of the earths surface into account, but is also the slowest.
+#'
+#' @name ST_DWithin_Spheroid
+#' @usage ST_DWithin_Spheroid(p1, p2, distance)
+#' @param p1 `POINT_2D`
+#' @param p2 `POINT_2D`
+#' @param distance `DOUBLE`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_DWithin_Spheroid <- function(p1 = POINT_2D, p2 = POINT_2D, distance = DOUBLE) {
+  stop("DuckDB function ST_DWithin_Spheroid() is not available in R.")
+}
+
+#' DuckDB function ST_Difference
+#'
+#' @description
+#' Returns the "difference" between two geometries.
+#'
+#' @name ST_Difference
+#' @usage ST_Difference(geom1, geom2)
+#' @param geom1,geom2 `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Difference <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function ST_Difference() is not available in R.")
+}
+
+#' DuckDB function ST_Dimension
+#'
+#' @description
+#' Returns the "topological dimension" of a geometry.
+#' 
+#' - For POINT and MULTIPOINT geometries, returns `0`
+#' - For LINESTRING and MULTILINESTRING, returns `1`
+#' - For POLYGON and MULTIPOLYGON, returns `2`
+#' - For GEOMETRYCOLLECTION, returns the maximum dimension of the contained geometries, or 0 if the collection is empty.
+#'
+#' @name ST_Dimension
+#' @usage ST_Dimension(geom)
+#' @param geom `GEOMETRY`
+#' @return `INTEGER`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_Dimension('POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))'::GEOMETRY);
+#' ```
+ST_Dimension <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Dimension() is not available in R.")
+}
+
+#' DuckDB function ST_Disjoint
+#'
+#' @description
+#' Returns true if the geometries are disjoint.
+#'
+#' @name ST_Disjoint
+#' @usage ST_Disjoint(geom1, geom2)
+#' @param geom1,geom2 `GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Disjoint <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function ST_Disjoint() is not available in R.")
+}
+
+#' DuckDB function ST_Distance
+#'
+#' @description
+#' Returns the planar distance between two geometries.
+#'
+#' @name ST_Distance
+#' @usage ST_Distance(point1, point2)
+#' @param point1,point2 `POINT_2D`
+#' @return `DOUBLE`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_Distance(point1 = POINT_2D, point2 = POINT_2D)}
+#' \item \code{ST_Distance(point = POINT_2D, linestring = LINESTRING_2D)}
+#' \item \code{ST_Distance(linestring = LINESTRING_2D, point = POINT_2D)}
+#' \item \code{ST_Distance(geom1 = GEOMETRY, geom2 = GEOMETRY)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_Distance('POINT (0 0)'::GEOMETRY, 'POINT (3 4)'::GEOMETRY);
+#' ```
+ST_Distance <- function(point1 = POINT_2D, point2 = POINT_2D) {
+  stop("DuckDB function ST_Distance() is not available in R.")
+}
+
+#' DuckDB function ST_Distance_GEOS
+#'
+#' @description
+#' Returns the planar distance between two geometries.
+#'
+#' @name ST_Distance_GEOS
+#' @usage ST_Distance_GEOS(geom1, geom2)
+#' @param geom1,geom2 `GEOMETRY`
+#' @return `DOUBLE`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Distance_GEOS <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function ST_Distance_GEOS() is not available in R.")
+}
+
+#' DuckDB function ST_Distance_Sphere
+#'
+#' @description
+#' Returns the haversine (great circle) distance between two geometries.
+#' 
+#' - Only supports POINT geometries.
+#' - Returns the distance in meters.
+#' - The input is expected to be in WGS84 (EPSG:4326) coordinates, using a \[latitude, longitude\] axis order.
+#'
+#' @name ST_Distance_Sphere
+#' @usage ST_Distance_Sphere(geom1, geom2)
+#' @param geom1,geom2 `GEOMETRY`
+#' @return `DOUBLE`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_Distance_Sphere(geom1 = GEOMETRY, geom2 = GEOMETRY)}
+#' \item \code{ST_Distance_Sphere(point1 = POINT_2D, point2 = POINT_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Distance_Sphere <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function ST_Distance_Sphere() is not available in R.")
+}
+
+#' DuckDB function ST_Distance_Spheroid
+#'
+#' @description
+#' Returns the distance between two geometries in meters using an ellipsoidal model of the earths surface
+#' 
+#' The input geometry is assumed to be in the [EPSG:4326](https://en.wikipedia.org/wiki/World_Geodetic_System) coordinate system (WGS84), with \[latitude, longitude\] axis order and the distance limit is expected to be in meters. This function uses the [GeographicLib](https://geographiclib.sourceforge.io/) library to solve the [inverse geodesic problem](https://en.wikipedia.org/wiki/Geodesics_on_an_ellipsoid#Solution_of_the_direct_and_inverse_problems), calculating the distance between two points using an ellipsoidal model of the earth. This is a highly accurate method for calculating the distance between two arbitrary points taking the curvature of the earths surface into account, but is also the slowest.
+#'
+#' @name ST_Distance_Spheroid
+#' @usage ST_Distance_Spheroid(p1, p2)
+#' @param p1,p2 `POINT_2D`
+#' @return `DOUBLE`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' -- Note: the coordinates are in WGS84 and [latitude, longitude] axis order
+#' -- Whats the distance between New York and Amsterdam (JFK and AMS airport)?
+#' SELECT st_distance_spheroid(
+#' st_point(40.6446, -73.7797),
+#' st_point(52.3130, 4.7725)
+#' );
+#' ```
+ST_Distance_Spheroid <- function(p1 = POINT_2D, p2 = POINT_2D) {
+  stop("DuckDB function ST_Distance_Spheroid() is not available in R.")
+}
+
+#' DuckDB function ST_Drivers
+#'
+#' @description
+#' Returns the list of supported GDAL drivers and file formats
+#' 
+#' Note that far from all of these drivers have been tested properly.
+#' Some may require additional options to be passed to work as expected.
+#' If you run into any issues please first consult the [consult the GDAL docs](https://gdal.org/drivers/vector/index.html).
+#'
+#' @name ST_Drivers
+#' @usage ST_Drivers()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT * FROM ST_Drivers();
+#' ```
+ST_Drivers <- function() {
+  stop("DuckDB function ST_Drivers() is not available in R.")
+}
+
+#' DuckDB function ST_Dump
+#'
+#' @description
+#' Dumps a geometry into a list of sub-geometries and their "path" in the original geometry.
+#' 
+#' You can use the `unnest(res, recursive := true)` function to explode the resulting list of structs into multiple rows.
+#'
+#' @name ST_Dump
+#' @usage ST_Dump(geom)
+#' @param geom `GEOMETRY`
+#' @return `STRUCT(geom GEOMETRY, path INTEGER[])[]`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_Dump('MULTIPOINT(1 2, 3 4)'::GEOMETRY);
+#' ```
+ST_Dump <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Dump() is not available in R.")
+}
+
+#' DuckDB function ST_EndPoint
+#'
+#' @description
+#' Returns the end point of a LINESTRING.
+#'
+#' @name ST_EndPoint
+#' @usage ST_EndPoint(geom)
+#' @param geom `GEOMETRY`
+#' @return `GEOMETRY | POINT_2D`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_EndPoint(geom = GEOMETRY)}
+#' \item \code{ST_EndPoint(line = LINESTRING_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_EndPoint <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_EndPoint() is not available in R.")
+}
+
+#' DuckDB function ST_Envelope
+#'
+#' @description
+#' Returns the minimum bounding rectangle of a geometry as a polygon geometry.
+#'
+#' @name ST_Envelope
+#' @usage ST_Envelope(geom)
+#' @param geom `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Envelope <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Envelope() is not available in R.")
+}
+
+#' DuckDB function ST_Envelope_Agg
+#'
+#' @description
+#' Alias for [ST_Extent_Agg](#st_extent_agg).
+#' 
+#' Computes the minimal-bounding-box polygon containing the set of input geometries.
+#'
+#' @name ST_Envelope_Agg
+#' @usage ST_Envelope_Agg(col0)
+#' @param col0 `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_Extent_Agg(geom) FROM UNNEST([ST_Point(1,1), ST_Point(5,5)]) AS _(geom);
+#' -- POLYGON ((1 1, 1 5, 5 5, 5 1, 1 1))
+#' ```
+ST_Envelope_Agg <- function(col0 = GEOMETRY) {
+  stop("DuckDB function ST_Envelope_Agg() is not available in R.")
+}
+
+#' DuckDB function ST_Equals
+#'
+#' @description
+#' Returns true if the geometries are "equal".
+#'
+#' @name ST_Equals
+#' @usage ST_Equals(geom1, geom2)
+#' @param geom1,geom2 `GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Equals <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function ST_Equals() is not available in R.")
+}
+
+#' DuckDB function ST_Expand
+#'
+#' @description
+#' Expand the input geometry by the specified distance, returning a polygon.
+#' 
+#' `geom` is the input geometry.
+#' 
+#' `distance` is the target distance for the expansion, using the same units as the input geometry.
+#' 
+#' This is a planar operation and will not take into account the curvature of the earth.
+#'
+#' @name ST_Expand
+#' @usage ST_Expand(geom, distance)
+#' @param geom `GEOMETRY`
+#' @param distance `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_AsText(ST_Expand(ST_GeomFromText('POINT(20 30)'), 0.1));
+#' ```
+ST_Expand <- function(geom = GEOMETRY, distance = DOUBLE) {
+  stop("DuckDB function ST_Expand() is not available in R.")
+}
+
+#' DuckDB function ST_Extent
+#'
+#' @description
+#' Returns the minimal bounding box enclosing the input geometry.
+#'
+#' @name ST_Extent
+#' @usage ST_Extent(geom)
+#' @param geom `GEOMETRY`
+#' @return `BOX_2D`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Extent <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Extent() is not available in R.")
+}
+
+#' DuckDB function ST_Extent_Agg
+#'
+#' @description
+#' Computes the minimal-bounding-box polygon containing the set of input geometries.
+#'
+#' @name ST_Extent_Agg
+#' @usage ST_Extent_Agg(col0)
+#' @param col0 `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_Extent_Agg(geom) FROM UNNEST([ST_Point(1,1), ST_Point(5,5)]) AS _(geom);
+#' -- POLYGON ((1 1, 1 5, 5 5, 5 1, 1 1))
+#' ```
+ST_Extent_Agg <- function(col0 = GEOMETRY) {
+  stop("DuckDB function ST_Extent_Agg() is not available in R.")
+}
+
+#' DuckDB function ST_Extent_Approx
+#'
+#' @description
+#' Returns the approximate bounding box of a geometry, if available.
+#' 
+#' This function is only really used internally, and returns the cached bounding box of the geometry if it exists.
+#' This function may be removed or renamed in the future.
+#'
+#' @name ST_Extent_Approx
+#' @usage ST_Extent_Approx(geom)
+#' @param geom `GEOMETRY`
+#' @return `BOX_2DF`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Extent_Approx <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Extent_Approx() is not available in R.")
+}
+
+#' DuckDB function ST_ExteriorRing
+#'
+#' @description
+#' Returns the exterior ring (shell) of a polygon geometry.
+#'
+#' @name ST_ExteriorRing
+#' @usage ST_ExteriorRing(geom)
+#' @param geom `GEOMETRY`
+#' @return `GEOMETRY | LINESTRING_2D`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_ExteriorRing(geom = GEOMETRY)}
+#' \item \code{ST_ExteriorRing(polygon = POLYGON_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_ExteriorRing <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_ExteriorRing() is not available in R.")
+}
+
+#' DuckDB function ST_FlipCoordinates
+#'
+#' @description
+#' Returns a new geometry with the coordinates of the input geometry "flipped" so that x = y and y = x.
+#'
+#' @name ST_FlipCoordinates
+#' @usage ST_FlipCoordinates(geom)
+#' @param geom `GEOMETRY`
+#' @return `GEOMETRY | POINT_2D | LINESTRING_2D | POLYGON_2D | BOX_2D`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_FlipCoordinates(geom = GEOMETRY)}
+#' \item \code{ST_FlipCoordinates(point = POINT_2D)}
+#' \item \code{ST_FlipCoordinates(linestring = LINESTRING_2D)}
+#' \item \code{ST_FlipCoordinates(polygon = POLYGON_2D)}
+#' \item \code{ST_FlipCoordinates(box = BOX_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_FlipCoordinates <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_FlipCoordinates() is not available in R.")
+}
+
+#' DuckDB function ST_Force2D
+#'
+#' @description
+#' Forces the vertices of a geometry to have X and Y components
+#' 
+#' This function will drop any Z and M values from the input geometry, if present. If the input geometry is already 2D, it will be returned as is.
+#'
+#' @name ST_Force2D
+#' @usage ST_Force2D(geom)
+#' @param geom `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Force2D <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Force2D() is not available in R.")
+}
+
+#' DuckDB function ST_Force3DM
+#'
+#' @description
+#' Forces the vertices of a geometry to have X, Y and M components
+#' 
+#' The following cases apply:
+#' - If the input geometry has a Z component but no M component, the Z component will be replaced with the new M value.
+#' - If the input geometry has a M component but no Z component, it will be returned as is.
+#' - If the input geometry has both a Z component and a M component, the Z component will be removed.
+#' - Otherwise, if the input geometry has neither a Z or M component, the new M value will be added to the vertices of the input geometry.
+#'
+#' @name ST_Force3DM
+#' @usage ST_Force3DM(geom, m)
+#' @param geom `GEOMETRY`
+#' @param m `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Force3DM <- function(geom = GEOMETRY, m = DOUBLE) {
+  stop("DuckDB function ST_Force3DM() is not available in R.")
+}
+
+#' DuckDB function ST_Force3DZ
+#'
+#' @description
+#' Forces the vertices of a geometry to have X, Y and Z components
+#' 
+#' The following cases apply:
+#' - If the input geometry has a M component but no Z component, the M component will be replaced with the new Z value.
+#' - If the input geometry has a Z component but no M component, it will be returned as is.
+#' - If the input geometry has both a Z component and a M component, the M component will be removed.
+#' - Otherwise, if the input geometry has neither a Z or M component, the new Z value will be added to the vertices of the input geometry.
+#'
+#' @name ST_Force3DZ
+#' @usage ST_Force3DZ(geom, z)
+#' @param geom `GEOMETRY`
+#' @param z `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Force3DZ <- function(geom = GEOMETRY, z = DOUBLE) {
+  stop("DuckDB function ST_Force3DZ() is not available in R.")
+}
+
+#' DuckDB function ST_Force4D
+#'
+#' @description
+#' Forces the vertices of a geometry to have X, Y, Z and M components
+#' 
+#' The following cases apply:
+#' - If the input geometry has a Z component but no M component, the new M value will be added to the vertices of the input geometry.
+#' - If the input geometry has a M component but no Z component, the new Z value will be added to the vertices of the input geometry.
+#' - If the input geometry has both a Z component and a M component, the geometry will be returned as is.
+#' - Otherwise, if the input geometry has neither a Z or M component, the new Z and M values will be added to the vertices of the input geometry.
+#'
+#' @name ST_Force4D
+#' @usage ST_Force4D(geom, z, m)
+#' @param geom `GEOMETRY`
+#' @param z `DOUBLE`
+#' @param m `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Force4D <- function(geom = GEOMETRY, z = DOUBLE, m = DOUBLE) {
+  stop("DuckDB function ST_Force4D() is not available in R.")
+}
+
+#' DuckDB function ST_GeneratePoints
+#'
+#' @description
+#' Generates a set of random points within the specified bounding box.
+#' 
+#' Takes a bounding box (min_x, min_y, max_x, max_y), a count of points to generate, and optionally a seed for the random number generator.
+#'
+#' @name ST_GeneratePoints
+#' @usage ST_GeneratePoints(col0, col1, col2)
+#' @param col0 `BOX_2D`
+#' @param col1 `BIGINT`
+#' @param col2 `BIGINT`
+#' @return Unspecified.
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_GeneratePoints(col0 = BOX_2D, col1 = BIGINT)}
+#' \item \code{ST_GeneratePoints(col0 = BOX_2D, col1 = BIGINT, col2 = BIGINT)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT * FROM ST_GeneratePoints({min_x: 0, min_y:0, max_x:10, max_y:10}::BOX_2D, 5, 42);
+#' ```
+ST_GeneratePoints <- function(col0 = BOX_2D, col1 = BIGINT, col2 = BIGINT) {
+  stop("DuckDB function ST_GeneratePoints() is not available in R.")
+}
+
+#' DuckDB function ST_GeomFromGeoJSON
+#'
+#' @description
+#' Deserializes a GEOMETRY from a GeoJSON fragment.
+#'
+#' @name ST_GeomFromGeoJSON
+#' @usage ST_GeomFromGeoJSON(geojson)
+#' @param geojson `JSON | VARCHAR`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_GeomFromGeoJSON('{"type": "Point", "coordinates": [1.0, 2.0]}');
+#' ```
+ST_GeomFromGeoJSON <- function(geojson = `JSON | VARCHAR`) {
+  stop("DuckDB function ST_GeomFromGeoJSON() is not available in R.")
+}
+
+#' DuckDB function ST_GeomFromHEXEWKB
+#'
+#' @description
+#' Deserialize a GEOMETRY from a HEX(E)WKB encoded string
+#' 
+#' DuckDB spatial doesn't currently differentiate between `WKB` and `EWKB`, so `ST_GeomFromHEXWKB` and `ST_GeomFromHEXEWKB` are just aliases of each other.
+#'
+#' @name ST_GeomFromHEXEWKB
+#' @usage ST_GeomFromHEXEWKB(hexwkb)
+#' @param hexwkb `VARCHAR`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_GeomFromHEXEWKB <- function(hexwkb = VARCHAR) {
+  stop("DuckDB function ST_GeomFromHEXEWKB() is not available in R.")
+}
+
+#' DuckDB function ST_GeomFromHEXWKB
+#'
+#' @description
+#' Deserialize a GEOMETRY from a HEX(E)WKB encoded string
+#' 
+#' DuckDB spatial doesn't currently differentiate between `WKB` and `EWKB`, so `ST_GeomFromHEXWKB` and `ST_GeomFromHEXEWKB` are just aliases of each other.
+#'
+#' @name ST_GeomFromHEXWKB
+#' @usage ST_GeomFromHEXWKB(hexwkb)
+#' @param hexwkb `VARCHAR`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_GeomFromHEXWKB <- function(hexwkb = VARCHAR) {
+  stop("DuckDB function ST_GeomFromHEXWKB() is not available in R.")
+}
+
+#' DuckDB function ST_GeomFromText
+#'
+#' @description
+#' Deserialize a GEOMETRY from a WKT encoded string.
+#'
+#' @name ST_GeomFromText
+#' @usage ST_GeomFromText(wkt, ignore_invalid)
+#' @param wkt `VARCHAR`
+#' @param ignore_invalid `BOOLEAN`
+#' @return `GEOMETRY`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_GeomFromText(wkt = VARCHAR)}
+#' \item \code{ST_GeomFromText(wkt = VARCHAR, ignore_invalid = BOOLEAN)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_GeomFromText <- function(wkt = VARCHAR, ignore_invalid = BOOLEAN) {
+  stop("DuckDB function ST_GeomFromText() is not available in R.")
+}
+
+#' DuckDB function ST_GeometryType
+#'
+#' @description
+#' Returns a 'GEOMETRY_TYPE' enum identifying the input geometry type. Possible enum return types are: `POINT`, `LINESTRING`, `POLYGON`, `MULTIPOINT`, `MULTILINESTRING`, `MULTIPOLYGON`, and `GEOMETRYCOLLECTION`.
+#'
+#' @name ST_GeometryType
+#' @usage ST_GeometryType(geom)
+#' @param geom `GEOMETRY`
+#' @return `ANY`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_GeometryType(geom = GEOMETRY)}
+#' \item \code{ST_GeometryType(point = POINT_2D)}
+#' \item \code{ST_GeometryType(linestring = LINESTRING_2D)}
+#' \item \code{ST_GeometryType(polygon = POLYGON_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT DISTINCT ST_GeometryType(ST_GeomFromText('POINT(1 1)'));
+#' ```
+ST_GeometryType <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_GeometryType() is not available in R.")
+}
+
+#' DuckDB function ST_HasM
+#'
+#' @description
+#' Check if the input geometry has M values.
+#'
+#' @name ST_HasM
+#' @usage ST_HasM(geom)
+#' @param geom `GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' -- HasM for a 2D geometry
+#' SELECT ST_HasM(ST_GeomFromText('POINT(1 1)'));
+#' ```
+ST_HasM <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_HasM() is not available in R.")
+}
+
+#' DuckDB function ST_HasZ
+#'
+#' @description
+#' Check if the input geometry has Z values.
+#'
+#' @name ST_HasZ
+#' @usage ST_HasZ(geom)
+#' @param geom `GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' -- HasZ for a 2D geometry
+#' SELECT ST_HasZ(ST_GeomFromText('POINT(1 1)'));
+#' ```
+ST_HasZ <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_HasZ() is not available in R.")
+}
+
+#' DuckDB function ST_Hilbert
+#'
+#' @description
+#' Encodes the X and Y values as the hilbert curve index for a curve covering the given bounding box.
+#' If a geometry is provided, the center of the approximate bounding box is used as the point to encode.
+#' If no bounding box is provided, the hilbert curve index is mapped to the full range of a single-precision float.
+#' For the BOX_2D and BOX_2DF variants, the center of the box is used as the point to encode.
+#'
+#' @name ST_Hilbert
+#' @usage ST_Hilbert(box, bounds)
+#' @param box,bounds `BOX_2D | BOX_2DF`
+#' @return `UINTEGER`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_Hilbert(x = DOUBLE, y = DOUBLE, bounds = BOX_2D)}
+#' \item \code{ST_Hilbert(geom = GEOMETRY, bounds = BOX_2D)}
+#' \item \code{ST_Hilbert(geom = GEOMETRY)}
+#' \item \code{ST_Hilbert(box = BOX_2D, bounds = BOX_2D)}
+#' \item \code{ST_Hilbert(box = BOX_2DF, bounds = BOX_2DF)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Hilbert <- function(box = `BOX_2D | BOX_2DF`, bounds = `BOX_2D | BOX_2DF`) {
+  stop("DuckDB function ST_Hilbert() is not available in R.")
+}
+
+#' DuckDB function ST_InteriorRingN
+#'
+#' @description
+#' Returns the N-th interior ring (hole) of a POLYGON as a LINESTRING. Indexing is 1-based  (n = 1 returns the first interior ring). Returns NULL if the polygon is empty or has fewer than N interior rings.
+#'
+#' @name ST_InteriorRingN
+#' @usage ST_InteriorRingN(geom, n)
+#' @param geom `GEOMETRY`
+#' @param n `BIGINT`
+#' @return `GEOMETRY | LINESTRING_2D`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_InteriorRingN(geom = GEOMETRY, n = BIGINT)}
+#' \item \code{ST_InteriorRingN(polygon = POLYGON_2D, n = BIGINT)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_AsText(ST_InteriorRingN(ST_GeomFromText('POLYGON((0 0,10 0,10 10,0 10,0 0),(2 2,4 2,4 4,2 4,2 2))'), 1));
+#' ```
+ST_InteriorRingN <- function(geom = GEOMETRY, n = BIGINT) {
+  stop("DuckDB function ST_InteriorRingN() is not available in R.")
+}
+
+#' DuckDB function ST_InterpolatePoint
+#'
+#' @description
+#' Computes the closest point on a LINESTRING to a given POINT and returns the interpolated M value of that point.
+#' 
+#' First argument must be a linestring and must have a M dimension. The second argument must be a point. 
+#' Neither argument can be empty.
+#'
+#' @name ST_InterpolatePoint
+#' @usage ST_InterpolatePoint(line, point)
+#' @param line,point `GEOMETRY`
+#' @return `DOUBLE`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_InterpolatePoint <- function(line = GEOMETRY, point = GEOMETRY) {
+  stop("DuckDB function ST_InterpolatePoint() is not available in R.")
+}
+
+#' DuckDB function ST_Intersection
+#'
+#' @description
+#' Returns the intersection of two geometries.
+#'
+#' @name ST_Intersection
+#' @usage ST_Intersection(geom1, geom2)
+#' @param geom1,geom2 `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Intersection <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function ST_Intersection() is not available in R.")
+}
+
+#' DuckDB function ST_Intersection_Agg
+#'
+#' @description
+#' Computes the intersection of a set of geometries.
+#'
+#' @name ST_Intersection_Agg
+#' @usage ST_Intersection_Agg(col0)
+#' @param col0 `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Intersection_Agg <- function(col0 = GEOMETRY) {
+  stop("DuckDB function ST_Intersection_Agg() is not available in R.")
+}
+
+#' DuckDB function ST_Intersects
+#'
+#' @description
+#' Returns true if the geometries intersect.
+#'
+#' @name ST_Intersects
+#' @usage ST_Intersects(box1, box2)
+#' @param box1,box2 `BOX_2D`
+#' @return `BOOLEAN`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_Intersects(box1 = BOX_2D, box2 = BOX_2D)}
+#' \item \code{ST_Intersects(geom1 = GEOMETRY, geom2 = GEOMETRY)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Intersects <- function(box1 = BOX_2D, box2 = BOX_2D) {
+  stop("DuckDB function ST_Intersects() is not available in R.")
+}
+
+#' DuckDB function ST_IsClosed
+#'
+#' @description
+#' Check if a geometry is 'closed'.
+#'
+#' @name ST_IsClosed
+#' @usage ST_IsClosed(geom)
+#' @param geom `GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_IsClosed <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_IsClosed() is not available in R.")
+}
+
+#' DuckDB function ST_IsEmpty
+#'
+#' @description
+#' Returns true if the geometry is "empty".
+#'
+#' @name ST_IsEmpty
+#' @usage ST_IsEmpty(geom)
+#' @param geom `GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_IsEmpty(geom = GEOMETRY)}
+#' \item \code{ST_IsEmpty(linestring = LINESTRING_2D)}
+#' \item \code{ST_IsEmpty(polygon = POLYGON_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_IsEmpty <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_IsEmpty() is not available in R.")
+}
+
+#' DuckDB function ST_IsRing
+#'
+#' @description
+#' Returns true if the geometry is a ring (both ST_IsClosed and ST_IsSimple).
+#'
+#' @name ST_IsRing
+#' @usage ST_IsRing(geom)
+#' @param geom `GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_IsRing <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_IsRing() is not available in R.")
+}
+
+#' DuckDB function ST_IsSimple
+#'
+#' @description
+#' Returns true if the geometry is simple.
+#'
+#' @name ST_IsSimple
+#' @usage ST_IsSimple(geom)
+#' @param geom `GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_IsSimple <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_IsSimple() is not available in R.")
+}
+
+#' DuckDB function ST_IsValid
+#'
+#' @description
+#' Returns true if the geometry is valid.
+#'
+#' @name ST_IsValid
+#' @usage ST_IsValid(geom)
+#' @param geom `GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_IsValid <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_IsValid() is not available in R.")
+}
+
+#' DuckDB function ST_Length
+#'
+#' @description
+#' Returns the length of the input line geometry.
+#'
+#' @name ST_Length
+#' @usage ST_Length(geom)
+#' @param geom `GEOMETRY`
+#' @return `DOUBLE`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_Length(geom = GEOMETRY)}
+#' \item \code{ST_Length(linestring = LINESTRING_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Length <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Length() is not available in R.")
+}
+
+#' DuckDB function ST_Length_Spheroid
+#'
+#' @description
+#' Returns the length of the input geometry in meters, using an ellipsoidal model of the earth
+#' 
+#' The input geometry is assumed to be in the [EPSG:4326](https://en.wikipedia.org/wiki/World_Geodetic_System) coordinate system (WGS84), with \[latitude, longitude\] axis order and the length is returned in meters. This function uses the [GeographicLib](https://geographiclib.sourceforge.io/) library, calculating the length using an ellipsoidal model of the earth. This is a highly accurate method for calculating the length of a line geometry taking the curvature of the earth into account, but is also the slowest.
+#' 
+#' Returns `0.0` for any geometry that is not a `LINESTRING`, `MULTILINESTRING` or `GEOMETRYCOLLECTION` containing line geometries.
+#'
+#' @name ST_Length_Spheroid
+#' @usage ST_Length_Spheroid(geom)
+#' @param geom `GEOMETRY`
+#' @return `DOUBLE`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_Length_Spheroid(geom = GEOMETRY)}
+#' \item \code{ST_Length_Spheroid(line = LINESTRING_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Length_Spheroid <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Length_Spheroid() is not available in R.")
+}
+
+#' DuckDB function ST_LineInterpolatePoint
+#'
+#' @description
+#' Returns a point interpolated along a line at a fraction of total 2D length.
+#'
+#' @name ST_LineInterpolatePoint
+#' @usage ST_LineInterpolatePoint(line, fraction)
+#' @param line `GEOMETRY`
+#' @param fraction `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_LineInterpolatePoint <- function(line = GEOMETRY, fraction = DOUBLE) {
+  stop("DuckDB function ST_LineInterpolatePoint() is not available in R.")
+}
+
+#' DuckDB function ST_LineInterpolatePoints
+#'
+#' @description
+#' Returns a multi-point interpolated along a line at a fraction of total 2D length.
+#' 
+#' if repeat is false, the result is a single point, (and equivalent to ST_LineInterpolatePoint),
+#' otherwise, the result is a multi-point with points repeated at the fraction interval.
+#'
+#' @name ST_LineInterpolatePoints
+#' @usage ST_LineInterpolatePoints(line, fraction, repeat.)
+#' @param line `GEOMETRY`
+#' @param fraction `DOUBLE`
+#' @param repeat. `BOOLEAN`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_LineInterpolatePoints <- function(line = GEOMETRY, fraction = DOUBLE, repeat. = BOOLEAN) {
+  stop("DuckDB function ST_LineInterpolatePoints() is not available in R.")
+}
+
+#' DuckDB function ST_LineLocatePoint
+#'
+#' @description
+#' Returns the location on a line closest to a point as a fraction of the total 2D length of the line.
+#'
+#' @name ST_LineLocatePoint
+#' @usage ST_LineLocatePoint(line, point)
+#' @param line,point `GEOMETRY`
+#' @return `DOUBLE`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_LineLocatePoint <- function(line = GEOMETRY, point = GEOMETRY) {
+  stop("DuckDB function ST_LineLocatePoint() is not available in R.")
+}
+
+#' DuckDB function ST_LineMerge
+#'
+#' @description
+#' "Merges" the input line geometry, optionally taking direction into account.
+#'
+#' @name ST_LineMerge
+#' @usage ST_LineMerge(geom, preserve_direction)
+#' @param geom `GEOMETRY`
+#' @param preserve_direction `BOOLEAN`
+#' @return `GEOMETRY`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_LineMerge(geom = GEOMETRY)}
+#' \item \code{ST_LineMerge(geom = GEOMETRY, preserve_direction = BOOLEAN)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_LineMerge <- function(geom = GEOMETRY, preserve_direction = BOOLEAN) {
+  stop("DuckDB function ST_LineMerge() is not available in R.")
+}
+
+#' DuckDB function ST_LineString2DFromWKB
+#'
+#' @description
+#' Deserialize a LINESTRING_2D from a WKB encoded blob.
+#'
+#' @name ST_LineString2DFromWKB
+#' @usage ST_LineString2DFromWKB(blob)
+#' @param blob `BLOB`
+#' @return `LINESTRING_2D`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_LineString2DFromWKB <- function(blob = BLOB) {
+  stop("DuckDB function ST_LineString2DFromWKB() is not available in R.")
+}
+
+#' DuckDB function ST_LineSubstring
+#'
+#' @description
+#' Returns a substring of a line between two fractions of total 2D length.
+#'
+#' @name ST_LineSubstring
+#' @usage ST_LineSubstring(line, start_fraction, end_fraction)
+#' @param line `GEOMETRY`
+#' @param start_fraction `DOUBLE`
+#' @param end_fraction `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_LineSubstring <- function(line = GEOMETRY, start_fraction = DOUBLE, end_fraction = DOUBLE) {
+  stop("DuckDB function ST_LineSubstring() is not available in R.")
+}
+
+#' DuckDB function ST_LocateAlong
+#'
+#' @description
+#' Returns a point or multi-point, containing the point(s) at the geometry with the given measure
+#' 
+#' For a LINESTRING, or MULTILINESTRING, the location is determined by interpolating between M values
+#' For a POINT and MULTIPOINT, the point is returned if the measure matches the M value of the vertex, otherwise an empty geometry is returned
+#' For a POLYGON, only the exterior ring is considered, and treated as a LINESTRING
+#' 
+#' If offset is provided, the resulting point(s) is offset by the given amount perpendicular to the line direction.
+#'
+#' @name ST_LocateAlong
+#' @usage ST_LocateAlong(line, measure, offset)
+#' @param line `GEOMETRY`
+#' @param measure `DOUBLE`
+#' @param offset `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_LocateAlong(line = GEOMETRY, measure = DOUBLE, offset = DOUBLE)}
+#' \item \code{ST_LocateAlong(line = GEOMETRY, measure = DOUBLE)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_LocateAlong <- function(line = GEOMETRY, measure = DOUBLE, offset = DOUBLE) {
+  stop("DuckDB function ST_LocateAlong() is not available in R.")
+}
+
+#' DuckDB function ST_LocateBetween
+#'
+#' @description
+#' Returns a geometry or geometry collection created by filtering and interpolating vertices within a range of "M" values
+#' 
+#' Creates a geometry or geometry collection, containing the parts formed by vertices that have an "M" value within the "start_measure" and "end_measure" range
+#' 
+#' For LINESTRING or MULTILINESTRING, if a line segment would cross either the upper or lower bound, a vertex is added by interpolating the coordinates at the "intersection"
+#' For a POINT and MULTIPOINT, the point is added to the collection if its vertex has an "M" value within the range, otherwise it is skipped
+#' For a POLYGON, only the exterior ring is considered, and treated like a LINESTRING
+#' 
+#' If offset is provided, the resulting vertices are offset by the given amount perpendicular to the line direction.
+#'
+#' @name ST_LocateBetween
+#' @usage ST_LocateBetween(line, start_measure, end_measure, offset)
+#' @param line `GEOMETRY`
+#' @param start_measure `DOUBLE`
+#' @param end_measure `DOUBLE`
+#' @param offset `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_LocateBetween(line = GEOMETRY, start_measure = DOUBLE, end_measure = DOUBLE, offset = DOUBLE)}
+#' \item \code{ST_LocateBetween(line = GEOMETRY, start_measure = DOUBLE, end_measure = DOUBLE)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_LocateBetween <- function(line = GEOMETRY, start_measure = DOUBLE, end_measure = DOUBLE, offset = DOUBLE) {
+  stop("DuckDB function ST_LocateBetween() is not available in R.")
+}
+
+#' DuckDB function ST_M
+#'
+#' @description
+#' Returns the M coordinate of a point geometry.
+#'
+#' @name ST_M
+#' @usage ST_M(geom)
+#' @param geom `GEOMETRY`
+#' @return `DOUBLE`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_M(ST_Point(1, 2, 3, 4))
+#' ```
+ST_M <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_M() is not available in R.")
+}
+
+#' DuckDB function ST_MMax
+#'
+#' @description
+#' Returns the maximum M coordinate of a geometry.
+#'
+#' @name ST_MMax
+#' @usage ST_MMax(geom)
+#' @param geom `GEOMETRY`
+#' @return `DOUBLE`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_MMax(ST_Point(1, 2, 3, 4))
+#' ```
+ST_MMax <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_MMax() is not available in R.")
+}
+
+#' DuckDB function ST_MMin
+#'
+#' @description
+#' Returns the minimum M coordinate of a geometry.
+#'
+#' @name ST_MMin
+#' @usage ST_MMin(geom)
+#' @param geom `GEOMETRY`
+#' @return `DOUBLE`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_MMin(ST_Point(1, 2, 3, 4))
+#' ```
+ST_MMin <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_MMin() is not available in R.")
+}
+
+#' DuckDB function ST_MakeBox2D
+#'
+#' @description
+#' Create a BOX2D from two POINT geometries.
+#'
+#' @name ST_MakeBox2D
+#' @usage ST_MakeBox2D(point1, point2)
+#' @param point1,point2 `GEOMETRY`
+#' @return `BOX_2D`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_MakeBox2D(ST_Point(0, 0), ST_Point(1, 1));
+#' ```
+ST_MakeBox2D <- function(point1 = GEOMETRY, point2 = GEOMETRY) {
+  stop("DuckDB function ST_MakeBox2D() is not available in R.")
+}
+
+#' DuckDB function ST_MakeEnvelope
+#'
+#' @description
+#' Create a rectangular polygon from min/max coordinates.
+#'
+#' @name ST_MakeEnvelope
+#' @usage ST_MakeEnvelope(min_x, min_y, max_x, max_y)
+#' @param min_x,min_y,max_x,max_y `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_MakeEnvelope <- function(min_x = DOUBLE, min_y = DOUBLE, max_x = DOUBLE, max_y = DOUBLE) {
+  stop("DuckDB function ST_MakeEnvelope() is not available in R.")
+}
+
+#' DuckDB function ST_MakeLine
+#'
+#' @description
+#' \itemize{
+#' \item \code{ST_MakeLine(geoms = `GEOMETRY[]`)}: Create a LINESTRING from a list of POINT geometries.
+#' \item \code{ST_MakeLine(start = GEOMETRY, end = GEOMETRY)}: Create a LINESTRING from two POINT geometries.
+#' }
+#'
+#' @name ST_MakeLine
+#' @usage ST_MakeLine(start, end)
+#' @param start,end `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_MakeLine(geoms = `GEOMETRY[]`)}
+#' \item \code{ST_MakeLine(start = GEOMETRY, end = GEOMETRY)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_MakeLine([ST_Point(0, 0), ST_Point(1, 1)]);
+#' SELECT ST_MakeLine(ST_Point(0, 0), ST_Point(1, 1));
+#' ```
+ST_MakeLine <- function(start = GEOMETRY, end = GEOMETRY) {
+  stop("DuckDB function ST_MakeLine() is not available in R.")
+}
+
+#' DuckDB function ST_MakePoint
+#'
+#' @description
+#' \itemize{
+#' \item \code{ST_MakePoint(x = DOUBLE, y = DOUBLE)}: Creates a GEOMETRY point from an pair of floating point numbers.
+#' 
+#' For geodetic coordinate systems, x is typically the longitude value and y is the latitude value.
+#' 
+#' Note that ST_Point is equivalent. ST_MakePoint is provided for PostGIS compatibility.
+#' \item \code{ST_MakePoint(x = DOUBLE, y = DOUBLE, z = DOUBLE)}: Creates a POINT_3D.
+#' \item \code{ST_MakePoint(x = DOUBLE, y = DOUBLE, z = DOUBLE, m = DOUBLE)}: Creates a POINT_4D.
+#' }
+#'
+#' @name ST_MakePoint
+#' @usage ST_MakePoint(x, y, z, m)
+#' @param x,y,z,m `DOUBLE`
+#' @return `POINT_2D | POINT_3D | POINT_4D`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_MakePoint(x = DOUBLE, y = DOUBLE)}
+#' \item \code{ST_MakePoint(x = DOUBLE, y = DOUBLE, z = DOUBLE)}
+#' \item \code{ST_MakePoint(x = DOUBLE, y = DOUBLE, z = DOUBLE, m = DOUBLE)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_AsText(ST_MakePoint(143.3, -24.2));
+#' ```
+ST_MakePoint <- function(x = DOUBLE, y = DOUBLE, z = DOUBLE, m = DOUBLE) {
+  stop("DuckDB function ST_MakePoint() is not available in R.")
+}
+
+#' DuckDB function ST_MakePolygon
+#'
+#' @description
+#' \itemize{
+#' \item \code{ST_MakePolygon(shell = GEOMETRY)}: Create a POLYGON from a LINESTRING shell.
+#' \item \code{ST_MakePolygon(shell = GEOMETRY, holes = `GEOMETRY[]`)}: Create a POLYGON from a LINESTRING shell and a list of LINESTRING holes.
+#' }
+#'
+#' @name ST_MakePolygon
+#' @usage ST_MakePolygon(shell, holes)
+#' @param shell `GEOMETRY`
+#' @param holes `GEOMETRY[]`
+#' @return `GEOMETRY`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_MakePolygon(shell = GEOMETRY)}
+#' \item \code{ST_MakePolygon(shell = GEOMETRY, holes = `GEOMETRY[]`)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_MakePolygon(ST_LineString([ST_Point(0, 0), ST_Point(1, 0), ST_Point(1, 1), ST_Point(0, 0)]));
+#' SELECT ST_MakePolygon(ST_LineString([ST_Point(0, 0), ST_Point(1, 0), ST_Point(1, 1), ST_Point(0, 0)]), [ST_LineString([ST_Point(0.25, 0.25), ST_Point(0.75, 0.25), ST_Point(0.75, 0.75), ST_Point(0.25, 0.25)])]);
+#' ```
+ST_MakePolygon <- function(shell = GEOMETRY, holes = `GEOMETRY[]`) {
+  stop("DuckDB function ST_MakePolygon() is not available in R.")
+}
+
+#' DuckDB function ST_MakeValid
+#'
+#' @description
+#' Returns a valid representation of the geometry.
+#'
+#' @name ST_MakeValid
+#' @usage ST_MakeValid(geom)
+#' @param geom `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_MakeValid <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_MakeValid() is not available in R.")
+}
+
+#' DuckDB function ST_MaximumInscribedCircle
+#'
+#' @description
+#' Returns the maximum inscribed circle of the input geometry, optionally with a tolerance.
+#' 
+#' By default, the tolerance is computed as `max(width, height) / 1000`.
+#' The return value is a struct with the center of the circle, the nearest point to the center on the boundary of the geometry, and the radius of the circle.
+#'
+#' @name ST_MaximumInscribedCircle
+#' @usage ST_MaximumInscribedCircle(geom, tolerance)
+#' @param geom `GEOMETRY`
+#' @param tolerance `DOUBLE`
+#' @return `STRUCT(center GEOMETRY, nearest GEOMETRY, radius DOUBLE)`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_MaximumInscribedCircle(geom = GEOMETRY)}
+#' \item \code{ST_MaximumInscribedCircle(geom = GEOMETRY, tolerance = DOUBLE)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' -- Find the maximum inscribed circle of a square
+#' SELECT ST_MaximumInscribedCircle(
+#'     ST_GeomFromText('POLYGON((0 0, 10 0, 10 10, 0 10, 0 0))')
+#' );
+#' ```
+ST_MaximumInscribedCircle <- function(geom = GEOMETRY, tolerance = DOUBLE) {
+  stop("DuckDB function ST_MaximumInscribedCircle() is not available in R.")
+}
+
+#' DuckDB function ST_MemUnion_Agg
+#'
+#' @description
+#' Computes the union of a set of input geometries.
+#'                 "Slower, but might be more memory efficient than ST_UnionAgg as each geometry is merged into the union individually rather than all at once.
+#'
+#' @name ST_MemUnion_Agg
+#' @usage ST_MemUnion_Agg(col0)
+#' @param col0 `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_MemUnion_Agg <- function(col0 = GEOMETRY) {
+  stop("DuckDB function ST_MemUnion_Agg() is not available in R.")
+}
+
+#' DuckDB function ST_MinimumRotatedRectangle
+#'
+#' @description
+#' Returns the minimum rotated rectangle that bounds the input geometry, finding the surrounding box that has the lowest area by using a rotated rectangle, rather than taking the lowest and highest coordinate values as per ST_Envelope().
+#'
+#' @name ST_MinimumRotatedRectangle
+#' @usage ST_MinimumRotatedRectangle(geom)
+#' @param geom `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_MinimumRotatedRectangle <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_MinimumRotatedRectangle() is not available in R.")
+}
+
+#' DuckDB function ST_Multi
+#'
+#' @description
+#' Turns a single geometry into a multi geometry.
+#' 
+#' If the geometry is already a multi geometry, it is returned as is.
+#'
+#' @name ST_Multi
+#' @usage ST_Multi(geom)
+#' @param geom `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_Multi(ST_GeomFromText('POINT(1 2)'));
+#' ```
+ST_Multi <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Multi() is not available in R.")
+}
+
+#' DuckDB function ST_NGeometries
+#'
+#' @description
+#' Returns the number of component geometries in a collection geometry.
+#' If the input geometry is not a collection, this function returns 0 or 1 depending on if the geometry is empty or not.
+#'
+#' @name ST_NGeometries
+#' @usage ST_NGeometries(geom)
+#' @param geom `GEOMETRY`
+#' @return `INTEGER`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_NGeometries <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_NGeometries() is not available in R.")
+}
+
+#' DuckDB function ST_NInteriorRings
+#'
+#' @description
+#' Returns the number of interior rings of a polygon.
+#'
+#' @name ST_NInteriorRings
+#' @usage ST_NInteriorRings(geom)
+#' @param geom `GEOMETRY`
+#' @return `INTEGER`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_NInteriorRings(geom = GEOMETRY)}
+#' \item \code{ST_NInteriorRings(polygon = POLYGON_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_NInteriorRings <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_NInteriorRings() is not available in R.")
+}
+
+#' DuckDB function ST_NPoints
+#'
+#' @description
+#' Returns the number of vertices within a geometry.
+#'
+#' @name ST_NPoints
+#' @usage ST_NPoints(geom)
+#' @param geom `GEOMETRY`
+#' @return `UINTEGER | UBIGINT`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_NPoints(geom = GEOMETRY)}
+#' \item \code{ST_NPoints(point = POINT_2D)}
+#' \item \code{ST_NPoints(linestring = LINESTRING_2D)}
+#' \item \code{ST_NPoints(polygon = POLYGON_2D)}
+#' \item \code{ST_NPoints(box = BOX_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_NPoints <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_NPoints() is not available in R.")
+}
+
+#' DuckDB function ST_Node
+#'
+#' @description
+#' Returns a "noded" MultiLinestring, produced by combining a collection of input linestrings and adding additional vertices where they intersect.
+#'
+#' @name ST_Node
+#' @usage ST_Node(geom)
+#' @param geom `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' -- Create a noded multilinestring from two intersecting lines
+#' SELECT ST_Node(
+#'     ST_GeomFromText('MULTILINESTRING((0 0, 2 2), (0 2, 2 0))')
+#' );
+#' ```
+ST_Node <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Node() is not available in R.")
+}
+
+#' DuckDB function ST_Normalize
+#'
+#' @description
+#' Returns the "normalized" representation of the geometry.
+#'
+#' @name ST_Normalize
+#' @usage ST_Normalize(geom)
+#' @param geom `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Normalize <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Normalize() is not available in R.")
+}
+
+#' DuckDB function ST_NumGeometries
+#'
+#' @description
+#' Returns the number of component geometries in a collection geometry.
+#' If the input geometry is not a collection, this function returns 0 or 1 depending on if the geometry is empty or not.
+#'
+#' @name ST_NumGeometries
+#' @usage ST_NumGeometries(geom)
+#' @param geom `GEOMETRY`
+#' @return `INTEGER`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_NumGeometries <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_NumGeometries() is not available in R.")
+}
+
+#' DuckDB function ST_NumInteriorRings
+#'
+#' @description
+#' Returns the number of interior rings of a polygon.
+#'
+#' @name ST_NumInteriorRings
+#' @usage ST_NumInteriorRings(geom)
+#' @param geom `GEOMETRY`
+#' @return `INTEGER`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_NumInteriorRings(geom = GEOMETRY)}
+#' \item \code{ST_NumInteriorRings(polygon = POLYGON_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_NumInteriorRings <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_NumInteriorRings() is not available in R.")
+}
+
+#' DuckDB function ST_NumPoints
+#'
+#' @description
+#' Returns the number of vertices within a geometry.
+#'
+#' @name ST_NumPoints
+#' @usage ST_NumPoints(geom)
+#' @param geom `GEOMETRY`
+#' @return `UINTEGER | UBIGINT`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_NumPoints(geom = GEOMETRY)}
+#' \item \code{ST_NumPoints(point = POINT_2D)}
+#' \item \code{ST_NumPoints(linestring = LINESTRING_2D)}
+#' \item \code{ST_NumPoints(polygon = POLYGON_2D)}
+#' \item \code{ST_NumPoints(box = BOX_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_NumPoints <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_NumPoints() is not available in R.")
+}
+
+#' DuckDB function ST_Overlaps
+#'
+#' @description
+#' Returns true if the geometries overlap.
+#'
+#' @name ST_Overlaps
+#' @usage ST_Overlaps(geom1, geom2)
+#' @param geom1,geom2 `GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Overlaps <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function ST_Overlaps() is not available in R.")
+}
+
+#' DuckDB function ST_Perimeter
+#'
+#' @description
+#' Returns the length of the perimeter of the geometry.
+#'
+#' @name ST_Perimeter
+#' @usage ST_Perimeter(geom)
+#' @param geom `GEOMETRY`
+#' @return `DOUBLE`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_Perimeter(geom = GEOMETRY)}
+#' \item \code{ST_Perimeter(polygon = POLYGON_2D)}
+#' \item \code{ST_Perimeter(box = BOX_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Perimeter <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Perimeter() is not available in R.")
+}
+
+#' DuckDB function ST_Perimeter_Spheroid
+#'
+#' @description
+#' Returns the length of the perimeter in meters using an ellipsoidal model of the earths surface
+#' 
+#' The input geometry is assumed to be in the [EPSG:4326](https://en.wikipedia.org/wiki/World_Geodetic_System) coordinate system (WGS84), with \[latitude, longitude\] axis order and the length is returned in meters. This function uses the [GeographicLib](https://geographiclib.sourceforge.io/) library, calculating the perimeter using an ellipsoidal model of the earth. This is a highly accurate method for calculating the perimeter of a polygon taking the curvature of the earth into account, but is also the slowest.
+#' 
+#' Returns `0.0` for any geometry that is not a `POLYGON`, `MULTIPOLYGON` or `GEOMETRYCOLLECTION` containing polygon geometries.
+#'
+#' @name ST_Perimeter_Spheroid
+#' @usage ST_Perimeter_Spheroid(geom)
+#' @param geom `GEOMETRY`
+#' @return `DOUBLE`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_Perimeter_Spheroid(geom = GEOMETRY)}
+#' \item \code{ST_Perimeter_Spheroid(poly = POLYGON_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Perimeter_Spheroid <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Perimeter_Spheroid() is not available in R.")
+}
+
+#' DuckDB function ST_Point
+#'
+#' @description
+#' Creates a GEOMETRY point.
+#'
+#' @name ST_Point
+#' @usage ST_Point(x, y)
+#' @param x,y `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Point <- function(x = DOUBLE, y = DOUBLE) {
+  stop("DuckDB function ST_Point() is not available in R.")
+}
+
+#' DuckDB function ST_Point2D
+#'
+#' @description
+#' Creates a POINT_2D.
+#'
+#' @name ST_Point2D
+#' @usage ST_Point2D(x, y)
+#' @param x,y `DOUBLE`
+#' @return `POINT_2D`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Point2D <- function(x = DOUBLE, y = DOUBLE) {
+  stop("DuckDB function ST_Point2D() is not available in R.")
+}
+
+#' DuckDB function ST_Point2DFromWKB
+#'
+#' @description
+#' Deserialize a POINT_2D from a WKB encoded blob.
+#'
+#' @name ST_Point2DFromWKB
+#' @usage ST_Point2DFromWKB(blob)
+#' @param blob `BLOB`
+#' @return `POINT_2D`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Point2DFromWKB <- function(blob = BLOB) {
+  stop("DuckDB function ST_Point2DFromWKB() is not available in R.")
+}
+
+#' DuckDB function ST_Point3D
+#'
+#' @description
+#' Creates a POINT_3D.
+#'
+#' @name ST_Point3D
+#' @usage ST_Point3D(x, y, z)
+#' @param x,y,z `DOUBLE`
+#' @return `POINT_3D`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Point3D <- function(x = DOUBLE, y = DOUBLE, z = DOUBLE) {
+  stop("DuckDB function ST_Point3D() is not available in R.")
+}
+
+#' DuckDB function ST_Point4D
+#'
+#' @description
+#' Creates a POINT_4D.
+#'
+#' @name ST_Point4D
+#' @usage ST_Point4D(x, y, z, m)
+#' @param x,y,z,m `DOUBLE`
+#' @return `POINT_4D`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Point4D <- function(x = DOUBLE, y = DOUBLE, z = DOUBLE, m = DOUBLE) {
+  stop("DuckDB function ST_Point4D() is not available in R.")
+}
+
+#' DuckDB function ST_PointN
+#'
+#' @description
+#' Returns the n'th vertex from the input geometry as a point geometry.
+#'
+#' @name ST_PointN
+#' @usage ST_PointN(geom, index)
+#' @param geom `GEOMETRY`
+#' @param index `INTEGER`
+#' @return `GEOMETRY | POINT_2D`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_PointN(geom = GEOMETRY, index = INTEGER)}
+#' \item \code{ST_PointN(linestring = LINESTRING_2D, index = INTEGER)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_PointN <- function(geom = GEOMETRY, index = INTEGER) {
+  stop("DuckDB function ST_PointN() is not available in R.")
+}
+
+#' DuckDB function ST_PointOnSurface
+#'
+#' @description
+#' Returns a point guaranteed to lie on the surface of the geometry.
+#'
+#' @name ST_PointOnSurface
+#' @usage ST_PointOnSurface(geom)
+#' @param geom `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_PointOnSurface <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_PointOnSurface() is not available in R.")
+}
+
+#' DuckDB function ST_Points
+#'
+#' @description
+#' Collects all the vertices in the geometry into a MULTIPOINT.
+#'
+#' @name ST_Points
+#' @usage ST_Points(geom)
+#' @param geom `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_Points('LINESTRING(1 1, 2 2)'::GEOMETRY);
+#' ```
+ST_Points <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Points() is not available in R.")
+}
+
+#' DuckDB function ST_Polygon2DFromWKB
+#'
+#' @description
+#' Deserialize a POLYGON_2D from a WKB encoded blob.
+#'
+#' @name ST_Polygon2DFromWKB
+#' @usage ST_Polygon2DFromWKB(blob)
+#' @param blob `BLOB`
+#' @return `POLYGON_2D`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Polygon2DFromWKB <- function(blob = BLOB) {
+  stop("DuckDB function ST_Polygon2DFromWKB() is not available in R.")
+}
+
+#' DuckDB function ST_Polygonize
+#'
+#' @description
+#' Returns a polygonized representation of the input geometries.
+#'
+#' @name ST_Polygonize
+#' @usage ST_Polygonize(geometries)
+#' @param geometries `GEOMETRY[]`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' -- Create a polygon from a closed linestring ring
+#' SELECT ST_Polygonize([
+#'     ST_GeomFromText('LINESTRING(0 0, 0 10, 10 10, 10 0, 0 0)')
+#' ]);
+#' ---
+#' GEOMETRYCOLLECTION (POLYGON ((0 0, 0 10, 10 10, 10 0, 0 0)))
+#' ```
+ST_Polygonize <- function(geometries = `GEOMETRY[]`) {
+  stop("DuckDB function ST_Polygonize() is not available in R.")
+}
+
+#' DuckDB function ST_QuadKey
+#'
+#' @description
+#' Compute the [quadkey](https://learn.microsoft.com/en-us/bingmaps/articles/bing-maps-tile-system) for a given lon/lat point at a given level.
+#' Note that the parameter order is __longitude__, __latitude__.
+#' 
+#' `level` has to be between 1 and 23, inclusive.
+#' 
+#' The input coordinates will be clamped to the lon/lat bounds of the earth (longitude between -180 and 180, latitude between -85.05112878 and 85.05112878).
+#' 
+#' The geometry overload throws an error if the input geometry is not a `POINT`.
+#'
+#' @name ST_QuadKey
+#' @usage ST_QuadKey(longitude, latitude, level)
+#' @param longitude `DOUBLE`
+#' @param latitude `DOUBLE`
+#' @param level `INTEGER`
+#' @return `VARCHAR`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_QuadKey(longitude = DOUBLE, latitude = DOUBLE, level = INTEGER)}
+#' \item \code{ST_QuadKey(point = GEOMETRY, level = INTEGER)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_QuadKey(ST_Point(11.08, 49.45), 10);
+#' ```
+ST_QuadKey <- function(longitude = DOUBLE, latitude = DOUBLE, level = INTEGER) {
+  stop("DuckDB function ST_QuadKey() is not available in R.")
+}
+
+#' DuckDB function ST_Read
+#'
+#' @description
+#' Read and import a variety of geospatial file formats using the GDAL library.
+#' 
+#' The `ST_Read` table function is based on the [GDAL](https://gdal.org/index.html) translator library and enables reading spatial data from a variety of geospatial vector file formats as if they were DuckDB tables.
+#' 
+#' > See [ST_Drivers](#st_drivers) for a list of supported file formats and drivers.
+#' 
+#' Except for the `path` parameter, all parameters are optional.
+#' 
+#' | Parameter | Type | Description |
+#' | --------- | -----| ----------- |
+#' | `path` | VARCHAR | The path to the file to read. Mandatory |
+#' | `sequential_layer_scan` | BOOLEAN | If set to true, the table function will scan through all layers sequentially and return the first layer that matches the given layer name. This is required for some drivers to work properly, e.g., the OSM driver. |
+#' | `spatial_filter` | WKB_BLOB | If set to a WKB blob, the table function will only return rows that intersect with the given WKB geometry. Some drivers may support efficient spatial filtering natively, in which case it will be pushed down. Otherwise the filtering is done by GDAL which may be much slower. |
+#' | `open_options` | VARCHAR\[\] | A list of key-value pairs that are passed to the GDAL driver to control the opening of the file. E.g., the GeoJSON driver supports a FLATTEN_NESTED_ATTRIBUTES=YES option to flatten nested attributes. |
+#' | `layer` | VARCHAR | The name of the layer to read from the file. If NULL, the first layer is returned. Can also be a layer index (starting at 0). |
+#' | `allowed_drivers` | VARCHAR\[\] | A list of GDAL driver names that are allowed to be used to open the file. If empty, all drivers are allowed. |
+#' | `sibling_files` | VARCHAR\[\] | A list of sibling files that are required to open the file. E.g., the ESRI Shapefile driver requires a .shx file to be present. Although most of the time these can be discovered automatically. |
+#' | `spatial_filter_box` | BOX_2D | If set to a BOX_2D, the table function will only return rows that intersect with the given bounding box. Similar to spatial_filter. |
+#' | `keep_wkb` | BOOLEAN | If set, the table function will return geometries in a wkb_geometry column with the type WKB_BLOB (which can be cast to BLOB) instead of GEOMETRY. This is useful if you want to use DuckDB with more exotic geometry subtypes that DuckDB spatial doesn't support representing in the GEOMETRY type yet. |
+#' 
+#' Note that GDAL is single-threaded, so this table function will not be able to make full use of parallelism.
+#' 
+#' By using `ST_Read`, the spatial extension also provides “replacement scans” for common geospatial file formats, allowing you to query files of these formats as if they were tables directly.
+#' 
+#' ```sql
+#' SELECT * FROM './path/to/some/shapefile/dataset.shp';
+#' ```
+#' 
+#' In practice this is just syntax-sugar for calling ST_Read, so there is no difference in performance. If you want to pass additional options, you should use the ST_Read table function directly.
+#' 
+#' The following formats are currently recognized by their file extension:
+#' 
+#' | Format | Extension |
+#' | ------ | --------- |
+#' | ESRI ShapeFile | .shp |
+#' | GeoPackage | .gpkg |
+#' | FlatGeoBuf | .fgb |.
+#'
+#' @name ST_Read
+#' @usage ST_Read(
+#'   col0,
+#'   keep_wkb,
+#'   max_batch_size,
+#'   layer,
+#'   sibling_files,
+#'   allowed_drivers,
+#'   open_options
+#' )
+#' @param col0 `VARCHAR`
+#' @param keep_wkb `BOOLEAN`
+#' @param max_batch_size `INTEGER`
+#' @param layer `VARCHAR`
+#' @param sibling_files `VARCHAR[]`
+#' @param allowed_drivers `VARCHAR[]`
+#' @param open_options `VARCHAR[]`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' -- Read a Shapefile
+#' SELECT * FROM ST_Read('some/file/path/filename.shp');
+#' 
+#' -- Read a GeoJSON file
+#' CREATE TABLE my_geojson_table AS SELECT * FROM ST_Read('some/file/path/filename.json');
+#' ```
+ST_Read <- function(col0 = VARCHAR, keep_wkb = BOOLEAN, max_batch_size = INTEGER, layer = VARCHAR, sibling_files = `VARCHAR[]`, allowed_drivers = `VARCHAR[]`, open_options = `VARCHAR[]`) {
+  stop("DuckDB function ST_Read() is not available in R.")
+}
+
+#' DuckDB function ST_ReadOSM
+#'
+#' @description
+#' The `ST_ReadOsm()` table function enables reading compressed OpenStreetMap data directly from a `.osm.pbf` file.
+#' 
+#' This function uses multithreading and zero-copy protobuf parsing which makes it a lot faster than using the `ST_Read()` OSM driver, however it only outputs the raw OSM data (Nodes, Ways, Relations), without constructing any geometries. For simple node entities (like PoI's) you can trivially construct POINT geometries, but it is also possible to construct LINESTRING and POLYGON geometries by manually joining refs and nodes together in SQL, although with available memory usually being a limiting factor.
+#' The `ST_ReadOSM()` function also provides a "replacement scan" to enable reading from a file directly as if it were a table. This is just syntax sugar for calling `ST_ReadOSM()` though. Example:
+#' 
+#' ```sql
+#' SELECT * FROM 'tmp/data/germany.osm.pbf' LIMIT 5;
+#' ```.
+#'
+#' @name ST_ReadOSM
+#' @usage ST_ReadOSM(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT *
+#' FROM ST_ReadOSM('tmp/data/germany.osm.pbf')
+#' WHERE tags['highway'] != []
+#' LIMIT 5;
+#' ```
+ST_ReadOSM <- function(col0 = VARCHAR) {
+  stop("DuckDB function ST_ReadOSM() is not available in R.")
+}
+
+#' DuckDB function ST_ReadSHP
+#'
+#' @description
+#' Read a Shapefile without relying on the GDAL library.
+#'
+#' @name ST_ReadSHP
+#' @usage ST_ReadSHP(col0, encoding)
+#' @param col0,encoding `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_ReadSHP <- function(col0 = VARCHAR, encoding = VARCHAR) {
+  stop("DuckDB function ST_ReadSHP() is not available in R.")
+}
+
+#' DuckDB function ST_Read_Meta
+#'
+#' @description
+#' Read the metadata from a variety of geospatial file formats using the GDAL library.
+#' 
+#' The `ST_Read_Meta` table function accompanies the `ST_Read` table function, but instead of reading the contents of a file, this function scans the metadata instead.
+#' Since the data model of the underlying GDAL library is quite flexible, most of the interesting metadata is within the returned `layers` column, which is a somewhat complex nested structure of DuckDB `STRUCT` and `LIST` types.
+#'
+#' @name ST_Read_Meta
+#' @usage ST_Read_Meta(col0)
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' -- Find the coordinate reference system authority name and code for the first layers first geometry column in the file
+#' SELECT
+#'     layers[1].geometry_fields[1].crs.auth_name as name,
+#'     layers[1].geometry_fields[1].crs.auth_code as code
+#' FROM st_read_meta('../../tmp/data/amsterdam_roads.fgb');
+#' ```
+ST_Read_Meta <- function(col0 = `VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function ST_Read_Meta() is not available in R.")
+}
+
+#' DuckDB function ST_ReducePrecision
+#'
+#' @description
+#' Returns the geometry with all vertices reduced to the given precision.
+#'
+#' @name ST_ReducePrecision
+#' @usage ST_ReducePrecision(geom, precision)
+#' @param geom `GEOMETRY`
+#' @param precision `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_ReducePrecision <- function(geom = GEOMETRY, precision = DOUBLE) {
+  stop("DuckDB function ST_ReducePrecision() is not available in R.")
+}
+
+#' DuckDB function ST_RemoveRepeatedPoints
+#'
+#' @description
+#' \itemize{
+#' \item \code{ST_RemoveRepeatedPoints(line = LINESTRING_2D)}, \code{ST_RemoveRepeatedPoints(line = LINESTRING_2D, tolerance = DOUBLE)}: Remove repeated points from a LINESTRING.
+#' \item \code{ST_RemoveRepeatedPoints(geom = GEOMETRY)}, \code{ST_RemoveRepeatedPoints(geom = GEOMETRY, tolerance = DOUBLE)}: Returns the geometry with repeated points removed.
+#' }
+#'
+#' @name ST_RemoveRepeatedPoints
+#' @usage ST_RemoveRepeatedPoints(line, tolerance)
+#' @param line `LINESTRING_2D`
+#' @param tolerance `DOUBLE`
+#' @return `LINESTRING_2D | GEOMETRY`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_RemoveRepeatedPoints(line = LINESTRING_2D)}
+#' \item \code{ST_RemoveRepeatedPoints(line = LINESTRING_2D, tolerance = DOUBLE)}
+#' \item \code{ST_RemoveRepeatedPoints(geom = GEOMETRY)}
+#' \item \code{ST_RemoveRepeatedPoints(geom = GEOMETRY, tolerance = DOUBLE)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_RemoveRepeatedPoints <- function(line = LINESTRING_2D, tolerance = DOUBLE) {
+  stop("DuckDB function ST_RemoveRepeatedPoints() is not available in R.")
+}
+
+#' DuckDB function ST_Reverse
+#'
+#' @description
+#' Returns the geometry with the order of its vertices reversed.
+#'
+#' @name ST_Reverse
+#' @usage ST_Reverse(geom)
+#' @param geom `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Reverse <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Reverse() is not available in R.")
+}
+
+#' DuckDB function ST_Rotate
+#'
+#' @description
+#' Alias of ST_RotateZ.
+#'
+#' @name ST_Rotate
+#' @usage ST_Rotate(geom, radians)
+#' @param geom,radians Unspecified.
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Rotate <- function(geom, radians) {
+  stop("DuckDB function ST_Rotate() is not available in R.")
+}
+
+#' DuckDB function ST_RotateX
+#'
+#' @description
+#' Rotates a geometry around the X axis. This is a shorthand macro for calling ST_Affine.
+#'
+#' @name ST_RotateX
+#' @usage ST_RotateX(geom, radians)
+#' @param geom,radians Unspecified.
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' -- Rotate a 3D point 90 degrees (π/2 radians) around the X-axis
+#' SELECT ST_RotateX(ST_GeomFromText('POINT Z(0 1 0)'), pi()/2);
+#' ```
+ST_RotateX <- function(geom, radians) {
+  stop("DuckDB function ST_RotateX() is not available in R.")
+}
+
+#' DuckDB function ST_RotateY
+#'
+#' @description
+#' Rotates a geometry around the Y axis. This is a shorthand macro for calling ST_Affine.
+#'
+#' @name ST_RotateY
+#' @usage ST_RotateY(geom, radians)
+#' @param geom,radians Unspecified.
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' -- Rotate a 3D point 90 degrees (π/2 radians) around the Y-axis
+#' SELECT ST_RotateY(ST_GeomFromText('POINT Z(1 0 0)'), pi()/2);
+#' ```
+ST_RotateY <- function(geom, radians) {
+  stop("DuckDB function ST_RotateY() is not available in R.")
+}
+
+#' DuckDB function ST_RotateZ
+#'
+#' @description
+#' Rotates a geometry around the Z axis. This is a shorthand macro for calling ST_Affine.
+#'
+#' @name ST_RotateZ
+#' @usage ST_RotateZ(geom, radians)
+#' @param geom,radians Unspecified.
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' -- Rotate a point 90 degrees (π/2 radians) around the Z-axis
+#' SELECT ST_RotateZ(ST_Point(1, 0), pi()/2);
+#' ```
+ST_RotateZ <- function(geom, radians) {
+  stop("DuckDB function ST_RotateZ() is not available in R.")
+}
+
+#' DuckDB function ST_Scale
+#'
+#' @description
+#' DuckDB function `ST_Scale()`.
+#'
+#' @name ST_Scale
+#' @usage ST_Scale(geom, xs, ys, zs)
+#' @param geom,xs,ys,zs Unspecified.
+#' @return Unspecified.
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_Scale(geom, xs, ys, zs)}
+#' \item \code{ST_Scale(geom, xs, ys)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Scale <- function(geom, xs, ys, zs) {
+  stop("DuckDB function ST_Scale() is not available in R.")
+}
+
+#' DuckDB function ST_ShortestLine
+#'
+#' @description
+#' Returns the shortest line between two geometries.
+#'
+#' @name ST_ShortestLine
+#' @usage ST_ShortestLine(geom1, geom2)
+#' @param geom1,geom2 `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_ShortestLine <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function ST_ShortestLine() is not available in R.")
+}
+
+#' DuckDB function ST_Simplify
+#'
+#' @description
+#' Returns a simplified version of the geometry.
+#'
+#' @name ST_Simplify
+#' @usage ST_Simplify(geom, tolerance)
+#' @param geom `GEOMETRY`
+#' @param tolerance `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Simplify <- function(geom = GEOMETRY, tolerance = DOUBLE) {
+  stop("DuckDB function ST_Simplify() is not available in R.")
+}
+
+#' DuckDB function ST_SimplifyPreserveTopology
+#'
+#' @description
+#' Returns a simplified version of the geometry that preserves topology.
+#'
+#' @name ST_SimplifyPreserveTopology
+#' @usage ST_SimplifyPreserveTopology(geom, tolerance)
+#' @param geom `GEOMETRY`
+#' @param tolerance `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_SimplifyPreserveTopology <- function(geom = GEOMETRY, tolerance = DOUBLE) {
+  stop("DuckDB function ST_SimplifyPreserveTopology() is not available in R.")
+}
+
+#' DuckDB function ST_Snap
+#'
+#' @description
+#' Snaps the vertices and segments of a geometry to another geometry's vertices within the given tolerance.
+#'
+#' @name ST_Snap
+#' @usage ST_Snap(geom, snap_to, tolerance)
+#' @param geom `GEOMETRY`
+#' @param snap_to `GEOMETRY`
+#' @param tolerance `DOUBLE`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Snap <- function(geom = GEOMETRY, snap_to = GEOMETRY, tolerance = DOUBLE) {
+  stop("DuckDB function ST_Snap() is not available in R.")
+}
+
+#' DuckDB function ST_StartPoint
+#'
+#' @description
+#' Returns the start point of a LINESTRING.
+#'
+#' @name ST_StartPoint
+#' @usage ST_StartPoint(geom)
+#' @param geom `GEOMETRY`
+#' @return `GEOMETRY | POINT_2D`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_StartPoint(geom = GEOMETRY)}
+#' \item \code{ST_StartPoint(line = LINESTRING_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_StartPoint <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_StartPoint() is not available in R.")
+}
+
+#' DuckDB function ST_SymDifference
+#'
+#' @description
+#' Returns the symmetric difference of two geometries.
+#'
+#' @name ST_SymDifference
+#' @usage ST_SymDifference(geom1, geom2)
+#' @param geom1,geom2 `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_SymDifference <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function ST_SymDifference() is not available in R.")
+}
+
+#' DuckDB function ST_TileEnvelope
+#'
+#' @description
+#' The `ST_TileEnvelope` scalar function generates tile envelope rectangular polygons from specified zoom level and tile indices.
+#' 
+#' This is used in MVT generation to select the features corresponding to the tile extent. The envelope is in the Web Mercator
+#' coordinate reference system (EPSG:3857). The tile pyramid starts at zoom level 0, corresponding to a single tile for the
+#' world. Each zoom level doubles the number of tiles in each direction, such that zoom level 1 is 2 tiles wide by 2 tiles high,
+#' zoom level 2 is 4 tiles wide by 4 tiles high, and so on. Tile indices start at `[x=0, y=0]` at the top left, and increase
+#' down and right. For example, at zoom level 2, the top right tile is `[x=3, y=0]`, the bottom left tile is `[x=0, y=3]`, and
+#' the bottom right is `[x=3, y=3]`.
+#' 
+#' ```sql
+#' SELECT ST_TileEnvelope(2, 3, 1);
+#' ```.
+#'
+#' @name ST_TileEnvelope
+#' @usage ST_TileEnvelope(tile_zoom, tile_x, tile_y)
+#' @param tile_zoom,tile_x,tile_y `INTEGER`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_TileEnvelope(2, 3, 1);
+#' ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+#' │                                         st_tileenvelope(2, 3, 1)                                          │
+#' │                                                 geometry                                                  │
+#' ├───────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+#' │ POLYGON ((1.00188E+07 0, 1.00188E+07 1.00188E+07, 2.00375E+07 1.00188E+07, 2.00375E+07 0, 1.00188E+07 0)) │
+#' └───────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+#' ```
+ST_TileEnvelope <- function(tile_zoom = INTEGER, tile_x = INTEGER, tile_y = INTEGER) {
+  stop("DuckDB function ST_TileEnvelope() is not available in R.")
+}
+
+#' DuckDB function ST_Touches
+#'
+#' @description
+#' Returns true if the geometries touch.
+#'
+#' @name ST_Touches
+#' @usage ST_Touches(geom1, geom2)
+#' @param geom1,geom2 `GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Touches <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function ST_Touches() is not available in R.")
+}
+
+#' DuckDB function ST_TransScale
+#'
+#' @description
+#' Translates and then scales a geometry in X and Y direction. This is a shorthand macro for calling ST_Affine.
+#'
+#' @name ST_TransScale
+#' @usage ST_TransScale(geom, dx, dy, xs, ys)
+#' @param geom,dx,dy,xs,ys Unspecified.
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' -- Translate by (1, 2) then scale by (2, 3)
+#' SELECT ST_TransScale(ST_Point(1, 1), 1, 2, 2, 3);
+#' ```
+ST_TransScale <- function(geom, dx, dy, xs, ys) {
+  stop("DuckDB function ST_TransScale() is not available in R.")
+}
+
+#' DuckDB function ST_Transform
+#'
+#' @description
+#' Transforms a geometry between two coordinate systems
+#' 
+#' The source and target coordinate systems can be specified using any format that the [PROJ library](https://proj.org) supports.
+#' 
+#' The third optional `always_xy` parameter can be used to force the input and output geometries to be interpreted as having a \[easting, northing\] coordinate axis order regardless of what the source and target coordinate system definition says. This is particularly useful when transforming to/from the [WGS84/EPSG:4326](https://en.wikipedia.org/wiki/World_Geodetic_System) coordinate system (what most people think of when they hear "longitude"/"latitude" or "GPS coordinates"), which is defined as having a \[latitude, longitude\] axis order even though \[longitude, latitude\] is commonly used in practice (e.g. in [GeoJSON](https://tools.ietf.org/html/rfc7946)). More details available in the [PROJ documentation](https://proj.org/en/9.3/faq.html#why-is-the-axis-ordering-in-proj-not-consistent).
+#' 
+#' DuckDB spatial vendors its own static copy of the PROJ database of coordinate systems, so if you have your own installation of PROJ on your system the available coordinate systems may differ to what's available in other GIS software.
+#'
+#' @name ST_Transform
+#' @usage ST_Transform(box, source_crs, target_crs, always_xy)
+#' @param box `BOX_2D`
+#' @param source_crs `VARCHAR`
+#' @param target_crs `VARCHAR`
+#' @param always_xy `BOOLEAN`
+#' @return `BOX_2D | POINT_2D | GEOMETRY`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_Transform(box = BOX_2D, source_crs = VARCHAR, target_crs = VARCHAR)}
+#' \item \code{ST_Transform(box = BOX_2D, source_crs = VARCHAR, target_crs = VARCHAR, always_xy = BOOLEAN)}
+#' \item \code{ST_Transform(point = POINT_2D, source_crs = VARCHAR, target_crs = VARCHAR)}
+#' \item \code{ST_Transform(point = POINT_2D, source_crs = VARCHAR, target_crs = VARCHAR, always_xy = BOOLEAN)}
+#' \item \code{ST_Transform(geom = GEOMETRY, source_crs = VARCHAR, target_crs = VARCHAR)}
+#' \item \code{ST_Transform(geom = GEOMETRY, source_crs = VARCHAR, target_crs = VARCHAR, always_xy = BOOLEAN)}
+#' \item \code{ST_Transform(geom = GEOMETRY, target_crs = VARCHAR)}
+#' \item \code{ST_Transform(geom = GEOMETRY, target_crs = VARCHAR, always_xy = BOOLEAN)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' -- Transform a geometry from EPSG:4326 to EPSG:3857 (WGS84 to WebMercator)
+#' -- Note that since WGS84 is defined as having a [latitude, longitude] axis order
+#' -- we follow the standard and provide the input geometry using that axis order,
+#' -- but the output will be [easting, northing] because that is what's defined by
+#' -- WebMercator.
+#' 
+#' SELECT
+#'     ST_Transform(
+#'         st_point(52.373123, 4.892360),
+#'         'EPSG:4326',
+#'         'EPSG:3857'
+#'     );
+#' ```
+ST_Transform <- function(box = BOX_2D, source_crs = VARCHAR, target_crs = VARCHAR, always_xy = BOOLEAN) {
+  stop("DuckDB function ST_Transform() is not available in R.")
+}
+
+#' DuckDB function ST_Translate
+#'
+#' @description
+#' DuckDB function `ST_Translate()`.
+#'
+#' @name ST_Translate
+#' @usage ST_Translate(geom, dx, dy, dz)
+#' @param geom,dx,dy,dz Unspecified.
+#' @return Unspecified.
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_Translate(geom, dx, dy, dz)}
+#' \item \code{ST_Translate(geom, dx, dy)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Translate <- function(geom, dx, dy, dz) {
+  stop("DuckDB function ST_Translate() is not available in R.")
+}
+
+#' DuckDB function ST_Union
+#'
+#' @description
+#' Returns the union of two geometries.
+#'
+#' @name ST_Union
+#' @usage ST_Union(geom1, geom2)
+#' @param geom1,geom2 `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Union <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function ST_Union() is not available in R.")
+}
+
+#' DuckDB function ST_Union_Agg
+#'
+#' @description
+#' Computes the union of a set of input geometries.
+#'
+#' @name ST_Union_Agg
+#' @usage ST_Union_Agg(col0)
+#' @param col0 `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Union_Agg <- function(col0 = GEOMETRY) {
+  stop("DuckDB function ST_Union_Agg() is not available in R.")
+}
+
+#' DuckDB function ST_VoronoiDiagram
+#'
+#' @description
+#' Returns the Voronoi diagram of the supplied MultiPoint geometry.
+#'
+#' @name ST_VoronoiDiagram
+#' @usage ST_VoronoiDiagram(geom)
+#' @param geom `GEOMETRY`
+#' @return `GEOMETRY`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_VoronoiDiagram <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_VoronoiDiagram() is not available in R.")
+}
+
+#' DuckDB function ST_Within
+#'
+#' @description
+#' Returns true if the first geometry is within the second.
+#'
+#' @name ST_Within
+#' @usage ST_Within(geom1, geom2)
+#' @param geom1 `POINT_2D | GEOMETRY`
+#' @param geom2 `POLYGON_2D | GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_Within <- function(geom1 = `POINT_2D | GEOMETRY`, geom2 = `POLYGON_2D | GEOMETRY`) {
+  stop("DuckDB function ST_Within() is not available in R.")
+}
+
+#' DuckDB function ST_WithinProperly
+#'
+#' @description
+#' Returns true if the first geometry \"properly\" is contained by the second geometry
+#' 
+#' This function functions the same as `ST_ContainsProperly`, but the arguments are swapped.
+#'
+#' @name ST_WithinProperly
+#' @usage ST_WithinProperly(geom1, geom2)
+#' @param geom1,geom2 `GEOMETRY`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+ST_WithinProperly <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
+  stop("DuckDB function ST_WithinProperly() is not available in R.")
+}
+
+#' DuckDB function ST_X
+#'
+#' @description
+#' Returns the X coordinate of a point geometry.
+#'
+#' @name ST_X
+#' @usage ST_X(geom)
+#' @param geom `GEOMETRY`
+#' @return `DOUBLE`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_X(geom = GEOMETRY)}
+#' \item \code{ST_X(point = POINT_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_X(ST_Point(1, 2))
+#' ```
+ST_X <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_X() is not available in R.")
+}
+
+#' DuckDB function ST_XMax
+#'
+#' @description
+#' Returns the maximum X coordinate of a geometry.
+#'
+#' @name ST_XMax
+#' @usage ST_XMax(box)
+#' @param box `BOX_2D | BOX_2DF`
+#' @return `DOUBLE | FLOAT`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_XMax(geom = GEOMETRY)}
+#' \item \code{ST_XMax(point = POINT_2D)}
+#' \item \code{ST_XMax(line = LINESTRING_2D)}
+#' \item \code{ST_XMax(polygon = POLYGON_2D)}
+#' \item \code{ST_XMax(box = BOX_2D)}
+#' \item \code{ST_XMax(box = BOX_2DF)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_XMax(ST_Point(1, 2))
+#' ```
+ST_XMax <- function(box = `BOX_2D | BOX_2DF`) {
+  stop("DuckDB function ST_XMax() is not available in R.")
+}
+
+#' DuckDB function ST_XMin
+#'
+#' @description
+#' Returns the minimum X coordinate of a geometry.
+#'
+#' @name ST_XMin
+#' @usage ST_XMin(box)
+#' @param box `BOX_2D | BOX_2DF`
+#' @return `DOUBLE | FLOAT`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_XMin(geom = GEOMETRY)}
+#' \item \code{ST_XMin(point = POINT_2D)}
+#' \item \code{ST_XMin(line = LINESTRING_2D)}
+#' \item \code{ST_XMin(polygon = POLYGON_2D)}
+#' \item \code{ST_XMin(box = BOX_2D)}
+#' \item \code{ST_XMin(box = BOX_2DF)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_XMin(ST_Point(1, 2))
+#' ```
+ST_XMin <- function(box = `BOX_2D | BOX_2DF`) {
+  stop("DuckDB function ST_XMin() is not available in R.")
+}
+
+#' DuckDB function ST_Y
+#'
+#' @description
+#' Returns the Y coordinate of a point geometry.
+#'
+#' @name ST_Y
+#' @usage ST_Y(geom)
+#' @param geom `GEOMETRY`
+#' @return `DOUBLE`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_Y(geom = GEOMETRY)}
+#' \item \code{ST_Y(point = POINT_2D)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_Y(ST_Point(1, 2))
+#' ```
+ST_Y <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Y() is not available in R.")
+}
+
+#' DuckDB function ST_YMax
+#'
+#' @description
+#' Returns the maximum Y coordinate of a geometry.
+#'
+#' @name ST_YMax
+#' @usage ST_YMax(box)
+#' @param box `BOX_2D | BOX_2DF`
+#' @return `DOUBLE | FLOAT`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_YMax(geom = GEOMETRY)}
+#' \item \code{ST_YMax(point = POINT_2D)}
+#' \item \code{ST_YMax(line = LINESTRING_2D)}
+#' \item \code{ST_YMax(polygon = POLYGON_2D)}
+#' \item \code{ST_YMax(box = BOX_2D)}
+#' \item \code{ST_YMax(box = BOX_2DF)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_YMax(ST_Point(1, 2))
+#' ```
+ST_YMax <- function(box = `BOX_2D | BOX_2DF`) {
+  stop("DuckDB function ST_YMax() is not available in R.")
+}
+
+#' DuckDB function ST_YMin
+#'
+#' @description
+#' Returns the minimum Y coordinate of a geometry.
+#'
+#' @name ST_YMin
+#' @usage ST_YMin(box)
+#' @param box `BOX_2D | BOX_2DF`
+#' @return `DOUBLE | FLOAT`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ST_YMin(geom = GEOMETRY)}
+#' \item \code{ST_YMin(point = POINT_2D)}
+#' \item \code{ST_YMin(line = LINESTRING_2D)}
+#' \item \code{ST_YMin(polygon = POLYGON_2D)}
+#' \item \code{ST_YMin(box = BOX_2D)}
+#' \item \code{ST_YMin(box = BOX_2DF)}
+#' }
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_YMin(ST_Point(1, 2))
+#' ```
+ST_YMin <- function(box = `BOX_2D | BOX_2DF`) {
+  stop("DuckDB function ST_YMin() is not available in R.")
+}
+
+#' DuckDB function ST_Z
+#'
+#' @description
+#' Returns the Z coordinate of a point geometry.
+#'
+#' @name ST_Z
+#' @usage ST_Z(geom)
+#' @param geom `GEOMETRY`
+#' @return `DOUBLE`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_Z(ST_Point(1, 2, 3))
+#' ```
+ST_Z <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_Z() is not available in R.")
+}
+
+#' DuckDB function ST_ZMFlag
+#'
+#' @description
+#' Returns a flag indicating the presence of Z and M values in the input geometry.
+#' 0 = No Z or M values
+#' 1 = M values only
+#' 2 = Z values only
+#' 3 = Z and M values.
+#'
+#' @name ST_ZMFlag
+#' @usage ST_ZMFlag(geom)
+#' @param geom `GEOMETRY`
+#' @return `UTINYINT`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' -- ZMFlag for a 2D geometry
+#' SELECT ST_ZMFlag(ST_GeomFromText('POINT(1 1)'));
+#' ```
+ST_ZMFlag <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_ZMFlag() is not available in R.")
+}
+
+#' DuckDB function ST_ZMax
+#'
+#' @description
+#' Returns the maximum Z coordinate of a geometry.
+#'
+#' @name ST_ZMax
+#' @usage ST_ZMax(geom)
+#' @param geom `GEOMETRY`
+#' @return `DOUBLE`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_ZMax(ST_Point(1, 2, 3))
+#' ```
+ST_ZMax <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_ZMax() is not available in R.")
+}
+
+#' DuckDB function ST_ZMin
+#'
+#' @description
+#' Returns the minimum Z coordinate of a geometry.
+#'
+#' @name ST_ZMin
+#' @usage ST_ZMin(geom)
+#' @param geom `GEOMETRY`
+#' @return `DOUBLE`
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+#' @section SQL examples:
+#' ```
+#' SELECT ST_ZMin(ST_Point(1, 2, 3))
+#' ```
+ST_ZMin <- function(geom = GEOMETRY) {
+  stop("DuckDB function ST_ZMin() is not available in R.")
 }
 
 #' DuckDB function abs
@@ -1160,6 +4802,22 @@ array_reverse <- function(l) {
   stop("DuckDB function array_reverse() is not available in R.")
 }
 
+#' DuckDB function array_to_json
+#'
+#' @description
+#' DuckDB function `array_to_json()`.
+#'
+#' @name array_to_json
+#' @usage array_to_json()
+
+#' @return `JSON`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+array_to_json <- function() {
+  stop("DuckDB function array_to_json() is not available in R.")
+}
+
 #' DuckDB function array_to_string
 #'
 #' @description
@@ -1648,6 +5306,22 @@ bool_or <- function(arg = BOOLEAN) {
   stop("DuckDB function bool_or() is not available in R.")
 }
 
+#' DuckDB function broadcast
+#'
+#' @description
+#' DuckDB function `broadcast()`.
+#'
+#' @name broadcast
+#' @usage broadcast(col0)
+#' @param col0 `INET`
+#' @return `INET`
+#' @export
+#' @section Provided by:
+#' The \code{inet} extension (\code{LOAD inet;}).
+broadcast <- function(col0 = INET) {
+  stop("DuckDB function broadcast() is not available in R.")
+}
+
 #' DuckDB function can_cast_implicitly
 #'
 #' @description
@@ -1761,6 +5435,22 @@ ceiling <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
 #' ```
 century <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function century() is not available in R.")
+}
+
+#' DuckDB function check_peg_parser
+#'
+#' @description
+#' DuckDB function `check_peg_parser()`.
+#'
+#' @name check_peg_parser
+#' @usage check_peg_parser(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{autocomplete} extension (\code{LOAD autocomplete;}).
+check_peg_parser <- function(col0 = VARCHAR) {
+  stop("DuckDB function check_peg_parser() is not available in R.")
 }
 
 #' DuckDB function checkpoint
@@ -1952,6 +5642,22 @@ copy_database <- function(col0 = VARCHAR, col1 = VARCHAR) {
   stop("DuckDB function copy_database() is not available in R.")
 }
 
+#' DuckDB function copy_dir
+#'
+#' @description
+#' DuckDB macro `copy_dir()`.
+#'
+#' @name copy_dir
+#' @usage copy_dir(src_dir, dst_dir)
+#' @param src_dir,dst_dir Unspecified.
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
+copy_dir <- function(src_dir, dst_dir) {
+  stop("DuckDB function copy_dir() is not available in R.")
+}
+
 #' DuckDB function corr
 #'
 #' @description
@@ -2122,6 +5828,29 @@ covar_samp <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function covar_samp() is not available in R.")
 }
 
+#' DuckDB function create_fts_index
+#'
+#' @description
+#' DuckDB function `create_fts_index()`.
+#'
+#' @name create_fts_index
+#' @usage create_fts_index(col0, col1, overwrite, lower, ignore, stopwords, strip_accents, stemmer)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param overwrite `BOOLEAN`
+#' @param lower `BOOLEAN`
+#' @param ignore `VARCHAR`
+#' @param stopwords `VARCHAR`
+#' @param strip_accents `BOOLEAN`
+#' @param stemmer `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{fts} extension (\code{LOAD fts;}).
+create_fts_index <- function(col0 = VARCHAR, col1 = VARCHAR, overwrite = BOOLEAN, lower = BOOLEAN, ignore = VARCHAR, stopwords = VARCHAR, strip_accents = BOOLEAN, stemmer = VARCHAR) {
+  stop("DuckDB function create_fts_index() is not available in R.")
+}
+
 #' DuckDB function create_sort_key
 #'
 #' @description
@@ -2202,6 +5931,54 @@ current_connection_id <- function() {
 #' ```
 current_database <- function() {
   stop("DuckDB function current_database() is not available in R.")
+}
+
+#' DuckDB function current_date
+#'
+#' @description
+#' DuckDB function `current_date()`.
+#'
+#' @name current_date
+#' @usage current_date()
+
+#' @return `DATE`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+current_date <- function() {
+  stop("DuckDB function current_date() is not available in R.")
+}
+
+#' DuckDB function current_localtime
+#'
+#' @description
+#' DuckDB function `current_localtime()`.
+#'
+#' @name current_localtime
+#' @usage current_localtime()
+
+#' @return `TIME`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+current_localtime <- function() {
+  stop("DuckDB function current_localtime() is not available in R.")
+}
+
+#' DuckDB function current_localtimestamp
+#'
+#' @description
+#' DuckDB function `current_localtimestamp()`.
+#'
+#' @name current_localtimestamp
+#' @usage current_localtimestamp()
+
+#' @return `TIMESTAMP`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+current_localtimestamp <- function() {
+  stop("DuckDB function current_localtimestamp() is not available in R.")
 }
 
 #' DuckDB function current_query
@@ -2629,6 +6406,28 @@ days_in_month <- function(date) {
   stop("DuckDB function days_in_month() is not available in R.")
 }
 
+#' DuckDB function dbgen
+#'
+#' @description
+#' DuckDB function `dbgen()`.
+#'
+#' @name dbgen
+#' @usage dbgen(step, suffix, schema, catalog, overwrite, children, sf)
+#' @param step `UINTEGER`
+#' @param suffix `VARCHAR`
+#' @param schema `VARCHAR`
+#' @param catalog `VARCHAR`
+#' @param overwrite `BOOLEAN`
+#' @param children `UINTEGER`
+#' @param sf `DOUBLE`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{tpch} extension (\code{LOAD tpch;}).
+dbgen <- function(step = UINTEGER, suffix = VARCHAR, schema = VARCHAR, catalog = VARCHAR, overwrite = BOOLEAN, children = UINTEGER, sf = DOUBLE) {
+  stop("DuckDB function dbgen() is not available in R.")
+}
+
 #' DuckDB function decade
 #'
 #' @description
@@ -2690,6 +6489,161 @@ decode <- function(blob = BLOB, varchar = VARCHAR) {
 #' ```
 degrees <- function(x = DOUBLE) {
   stop("DuckDB function degrees() is not available in R.")
+}
+
+#' DuckDB function delta_domain_metadata
+#'
+#' @description
+#' DuckDB function `delta_domain_metadata()`.
+#'
+#' @name delta_domain_metadata
+#' @usage delta_domain_metadata(col0, version)
+#' @param col0 `VARCHAR`
+#' @param version `UBIGINT`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
+delta_domain_metadata <- function(col0 = VARCHAR, version = UBIGINT) {
+  stop("DuckDB function delta_domain_metadata() is not available in R.")
+}
+
+#' DuckDB function delta_filter_pushdown_log
+#'
+#' @description
+#' DuckDB macro `delta_filter_pushdown_log()`.
+#'
+#' @name delta_filter_pushdown_log
+#' @usage delta_filter_pushdown_log()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
+delta_filter_pushdown_log <- function() {
+  stop("DuckDB function delta_filter_pushdown_log() is not available in R.")
+}
+
+#' DuckDB function delta_filter_pushdown_log_tpcds
+#'
+#' @description
+#' DuckDB macro `delta_filter_pushdown_log_tpcds()`.
+#'
+#' @name delta_filter_pushdown_log_tpcds
+#' @usage delta_filter_pushdown_log_tpcds()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
+delta_filter_pushdown_log_tpcds <- function() {
+  stop("DuckDB function delta_filter_pushdown_log_tpcds() is not available in R.")
+}
+
+#' DuckDB function delta_get_transaction_version
+#'
+#' @description
+#' DuckDB function `delta_get_transaction_version()`.
+#'
+#' @name delta_get_transaction_version
+#' @usage delta_get_transaction_version(col0, col1)
+#' @param col0,col1 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
+delta_get_transaction_version <- function(col0 = VARCHAR, col1 = VARCHAR) {
+  stop("DuckDB function delta_get_transaction_version() is not available in R.")
+}
+
+#' DuckDB function delta_list_files
+#'
+#' @description
+#' DuckDB function `delta_list_files()`.
+#'
+#' @name delta_list_files
+#' @usage delta_list_files(col0, version, delete_count, transform_expression)
+#' @param col0 `VARCHAR`
+#' @param version `UBIGINT`
+#' @param delete_count `BOOLEAN`
+#' @param transform_expression `BOOLEAN`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
+delta_list_files <- function(col0 = VARCHAR, version = UBIGINT, delete_count = BOOLEAN, transform_expression = BOOLEAN) {
+  stop("DuckDB function delta_list_files() is not available in R.")
+}
+
+#' DuckDB function delta_scan
+#'
+#' @description
+#' DuckDB function `delta_scan()`.
+#'
+#' @name delta_scan
+#' @usage delta_scan(
+#'   col0,
+#'   version,
+#'   log_tail,
+#'   pushdown_partition_info,
+#'   can_have_nan,
+#'   filename,
+#'   pushdown_filters,
+#'   union_by_name,
+#'   debug_use_openssl,
+#'   hive_partitioning,
+#'   parquet_version,
+#'   encryption_config,
+#'   hive_types_autocast,
+#'   binary_as_string,
+#'   explicit_cardinality,
+#'   compression,
+#'   file_row_number,
+#'   hive_types
+#' )
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param version `UBIGINT`
+#' @param log_tail `STRUCT(file_name VARCHAR, "timestamp" BIGINT, file_size UBIGINT)[]`
+#' @param pushdown_partition_info `BOOLEAN`
+#' @param can_have_nan `BOOLEAN`
+#' @param filename `ANY`
+#' @param pushdown_filters `VARCHAR`
+#' @param union_by_name `BOOLEAN`
+#' @param debug_use_openssl `BOOLEAN`
+#' @param hive_partitioning `BOOLEAN`
+#' @param parquet_version `VARCHAR`
+#' @param encryption_config `ANY`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param binary_as_string `BOOLEAN`
+#' @param explicit_cardinality `UBIGINT`
+#' @param compression `VARCHAR`
+#' @param file_row_number `BOOLEAN`
+#' @param hive_types `ANY`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
+delta_scan <- function(col0 = `VARCHAR | VARCHAR[]`, version = UBIGINT, log_tail = `STRUCT(file_name VARCHAR, "timestamp" BIGINT, file_size UBIGINT)[]`, pushdown_partition_info = BOOLEAN, can_have_nan = BOOLEAN, filename = ANY, pushdown_filters = VARCHAR, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY) {
+  stop("DuckDB function delta_scan() is not available in R.")
+}
+
+#' DuckDB function delta_set_transaction_version
+#'
+#' @description
+#' DuckDB function `delta_set_transaction_version()`.
+#'
+#' @name delta_set_transaction_version
+#' @usage delta_set_transaction_version(col0, col1, col2, col3)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param col2 `UBIGINT`
+#' @param col3 `UBIGINT`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
+delta_set_transaction_version <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = UBIGINT, col3 = UBIGINT) {
+  stop("DuckDB function delta_set_transaction_version() is not available in R.")
 }
 
 #' DuckDB function dense_rank
@@ -2760,6 +6714,22 @@ disable_object_cache <- function() {
 #' @export
 disable_optimizer <- function() {
   stop("DuckDB function disable_optimizer() is not available in R.")
+}
+
+#' DuckDB function disable_peg_parser
+#'
+#' @description
+#' DuckDB function `disable_peg_parser()`.
+#'
+#' @name disable_peg_parser
+#' @usage disable_peg_parser()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{autocomplete} extension (\code{LOAD autocomplete;}).
+disable_peg_parser <- function() {
+  stop("DuckDB function disable_peg_parser() is not available in R.")
 }
 
 #' DuckDB function disable_print_progress_bar
@@ -2907,6 +6877,43 @@ divide <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLO
 #' @export
 `//` <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
   stop("DuckDB function //() is not available in R.")
+}
+
+#' DuckDB function drop_fts_index
+#'
+#' @description
+#' DuckDB function `drop_fts_index()`.
+#'
+#' @name drop_fts_index
+#' @usage drop_fts_index(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{fts} extension (\code{LOAD fts;}).
+drop_fts_index <- function(col0 = VARCHAR) {
+  stop("DuckDB function drop_fts_index() is not available in R.")
+}
+
+#' DuckDB function dsdgen
+#'
+#' @description
+#' DuckDB function `dsdgen()`.
+#'
+#' @name dsdgen
+#' @usage dsdgen(suffix, schema, catalog, keys, overwrite, sf)
+#' @param suffix `VARCHAR`
+#' @param schema `VARCHAR`
+#' @param catalog `VARCHAR`
+#' @param keys `BOOLEAN`
+#' @param overwrite `BOOLEAN`
+#' @param sf `DOUBLE`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{tpcds} extension (\code{LOAD tpcds;}).
+dsdgen <- function(suffix = VARCHAR, schema = VARCHAR, catalog = VARCHAR, keys = BOOLEAN, overwrite = BOOLEAN, sf = DOUBLE) {
+  stop("DuckDB function dsdgen() is not available in R.")
 }
 
 #' DuckDB function duckdb_approx_database_count
@@ -3329,6 +7336,440 @@ duckdb_views <- function() {
   stop("DuckDB function duckdb_views() is not available in R.")
 }
 
+#' DuckDB function ducklake_add_data_files
+#'
+#' @description
+#' DuckDB function `ducklake_add_data_files()`.
+#'
+#' @name ducklake_add_data_files
+#' @usage ducklake_add_data_files(
+#'   col0,
+#'   col1,
+#'   col2,
+#'   schema,
+#'   hive_partitioning,
+#'   ignore_extra_columns,
+#'   allow_missing
+#' )
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param col2 `VARCHAR | VARCHAR[]`
+#' @param schema `VARCHAR`
+#' @param hive_partitioning `BOOLEAN`
+#' @param ignore_extra_columns `BOOLEAN`
+#' @param allow_missing `BOOLEAN`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_add_data_files <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = `VARCHAR | VARCHAR[]`, schema = VARCHAR, hive_partitioning = BOOLEAN, ignore_extra_columns = BOOLEAN, allow_missing = BOOLEAN) {
+  stop("DuckDB function ducklake_add_data_files() is not available in R.")
+}
+
+#' DuckDB function ducklake_cleanup_old_files
+#'
+#' @description
+#' DuckDB function `ducklake_cleanup_old_files()`.
+#'
+#' @name ducklake_cleanup_old_files
+#' @usage ducklake_cleanup_old_files(col0, dry_run, cleanup_all, older_than)
+#' @param col0 `VARCHAR`
+#' @param dry_run `BOOLEAN`
+#' @param cleanup_all `BOOLEAN`
+#' @param older_than `TIMESTAMP WITH TIME ZONE`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_cleanup_old_files <- function(col0 = VARCHAR, dry_run = BOOLEAN, cleanup_all = BOOLEAN, older_than = `TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function ducklake_cleanup_old_files() is not available in R.")
+}
+
+#' DuckDB function ducklake_commit
+#'
+#' @description
+#' DuckDB function `ducklake_commit()`.
+#'
+#' @name ducklake_commit
+#' @usage ducklake_commit(col0, col1, retry_backoff, retry_wait_ms, max_retry_count)
+#' @param col0 `VARCHAR`
+#' @param col1 `BIGINT`
+#' @param retry_backoff `DOUBLE`
+#' @param retry_wait_ms `BIGINT`
+#' @param max_retry_count `BIGINT`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_commit <- function(col0 = VARCHAR, col1 = BIGINT, retry_backoff = DOUBLE, retry_wait_ms = BIGINT, max_retry_count = BIGINT) {
+  stop("DuckDB function ducklake_commit() is not available in R.")
+}
+
+#' DuckDB function ducklake_current_snapshot
+#'
+#' @description
+#' DuckDB function `ducklake_current_snapshot()`.
+#'
+#' @name ducklake_current_snapshot
+#' @usage ducklake_current_snapshot(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_current_snapshot <- function(col0 = VARCHAR) {
+  stop("DuckDB function ducklake_current_snapshot() is not available in R.")
+}
+
+#' DuckDB function ducklake_delete_orphaned_files
+#'
+#' @description
+#' DuckDB function `ducklake_delete_orphaned_files()`.
+#'
+#' @name ducklake_delete_orphaned_files
+#' @usage ducklake_delete_orphaned_files(col0, dry_run, cleanup_all, older_than)
+#' @param col0 `VARCHAR`
+#' @param dry_run `BOOLEAN`
+#' @param cleanup_all `BOOLEAN`
+#' @param older_than `TIMESTAMP WITH TIME ZONE`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_delete_orphaned_files <- function(col0 = VARCHAR, dry_run = BOOLEAN, cleanup_all = BOOLEAN, older_than = `TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function ducklake_delete_orphaned_files() is not available in R.")
+}
+
+#' DuckDB function ducklake_expire_snapshots
+#'
+#' @description
+#' DuckDB function `ducklake_expire_snapshots()`.
+#'
+#' @name ducklake_expire_snapshots
+#' @usage ducklake_expire_snapshots(col0, dry_run, versions, older_than)
+#' @param col0 `VARCHAR`
+#' @param dry_run `BOOLEAN`
+#' @param versions `UBIGINT[]`
+#' @param older_than `TIMESTAMP WITH TIME ZONE`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_expire_snapshots <- function(col0 = VARCHAR, dry_run = BOOLEAN, versions = `UBIGINT[]`, older_than = `TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function ducklake_expire_snapshots() is not available in R.")
+}
+
+#' DuckDB function ducklake_flush_inlined_data
+#'
+#' @description
+#' DuckDB function `ducklake_flush_inlined_data()`.
+#'
+#' @name ducklake_flush_inlined_data
+#' @usage ducklake_flush_inlined_data(col0, table_name, schema_name)
+#' @param col0,table_name,schema_name `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_flush_inlined_data <- function(col0 = VARCHAR, table_name = VARCHAR, schema_name = VARCHAR) {
+  stop("DuckDB function ducklake_flush_inlined_data() is not available in R.")
+}
+
+#' DuckDB function ducklake_last_committed_snapshot
+#'
+#' @description
+#' DuckDB function `ducklake_last_committed_snapshot()`.
+#'
+#' @name ducklake_last_committed_snapshot
+#' @usage ducklake_last_committed_snapshot(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_last_committed_snapshot <- function(col0 = VARCHAR) {
+  stop("DuckDB function ducklake_last_committed_snapshot() is not available in R.")
+}
+
+#' DuckDB function ducklake_list_files
+#'
+#' @description
+#' DuckDB function `ducklake_list_files()`.
+#'
+#' @name ducklake_list_files
+#' @usage ducklake_list_files(col0, col1, snapshot_time, snapshot_version, schema)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param snapshot_time `TIMESTAMP WITH TIME ZONE`
+#' @param snapshot_version `BIGINT`
+#' @param schema `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_list_files <- function(col0 = VARCHAR, col1 = VARCHAR, snapshot_time = `TIMESTAMP WITH TIME ZONE`, snapshot_version = BIGINT, schema = VARCHAR) {
+  stop("DuckDB function ducklake_list_files() is not available in R.")
+}
+
+#' DuckDB function ducklake_merge_adjacent_files
+#'
+#' @description
+#' DuckDB function `ducklake_merge_adjacent_files()`.
+#'
+#' @name ducklake_merge_adjacent_files
+#' @usage ducklake_merge_adjacent_files(
+#'   col0,
+#'   col1,
+#'   schema,
+#'   max_compacted_files,
+#'   max_file_size,
+#'   min_file_size
+#' )
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param schema `VARCHAR`
+#' @param max_compacted_files `UBIGINT`
+#' @param max_file_size `UBIGINT`
+#' @param min_file_size `UBIGINT`
+#' @return Unspecified.
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ducklake_merge_adjacent_files(col0 = VARCHAR, col1 = VARCHAR, schema = VARCHAR, max_compacted_files = UBIGINT, max_file_size = UBIGINT, min_file_size = UBIGINT)}
+#' \item \code{ducklake_merge_adjacent_files(col0 = VARCHAR, max_compacted_files = UBIGINT, max_file_size = UBIGINT, min_file_size = UBIGINT)}
+#' }
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_merge_adjacent_files <- function(col0 = VARCHAR, col1 = VARCHAR, schema = VARCHAR, max_compacted_files = UBIGINT, max_file_size = UBIGINT, min_file_size = UBIGINT) {
+  stop("DuckDB function ducklake_merge_adjacent_files() is not available in R.")
+}
+
+#' DuckDB function ducklake_options
+#'
+#' @description
+#' DuckDB function `ducklake_options()`.
+#'
+#' @name ducklake_options
+#' @usage ducklake_options(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_options <- function(col0 = VARCHAR) {
+  stop("DuckDB function ducklake_options() is not available in R.")
+}
+
+#' DuckDB function ducklake_rewrite_data_files
+#'
+#' @description
+#' DuckDB function `ducklake_rewrite_data_files()`.
+#'
+#' @name ducklake_rewrite_data_files
+#' @usage ducklake_rewrite_data_files(col0, col1, schema, delete_threshold)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param schema `VARCHAR`
+#' @param delete_threshold `DOUBLE`
+#' @return Unspecified.
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{ducklake_rewrite_data_files(col0 = VARCHAR, col1 = VARCHAR, schema = VARCHAR, delete_threshold = DOUBLE)}
+#' \item \code{ducklake_rewrite_data_files(col0 = VARCHAR, delete_threshold = DOUBLE)}
+#' }
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_rewrite_data_files <- function(col0 = VARCHAR, col1 = VARCHAR, schema = VARCHAR, delete_threshold = DOUBLE) {
+  stop("DuckDB function ducklake_rewrite_data_files() is not available in R.")
+}
+
+#' DuckDB function ducklake_scan
+#'
+#' @description
+#' DuckDB function `ducklake_scan()`.
+#'
+#' @name ducklake_scan
+#' @usage ducklake_scan(
+#'   col0,
+#'   can_have_nan,
+#'   filename,
+#'   union_by_name,
+#'   debug_use_openssl,
+#'   hive_partitioning,
+#'   parquet_version,
+#'   encryption_config,
+#'   hive_types_autocast,
+#'   binary_as_string,
+#'   explicit_cardinality,
+#'   compression,
+#'   file_row_number,
+#'   hive_types,
+#'   schema
+#' )
+#' @param col0 `VARCHAR`
+#' @param can_have_nan `BOOLEAN`
+#' @param filename `ANY`
+#' @param union_by_name `BOOLEAN`
+#' @param debug_use_openssl `BOOLEAN`
+#' @param hive_partitioning `BOOLEAN`
+#' @param parquet_version `VARCHAR`
+#' @param encryption_config `ANY`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param binary_as_string `BOOLEAN`
+#' @param explicit_cardinality `UBIGINT`
+#' @param compression `VARCHAR`
+#' @param file_row_number `BOOLEAN`
+#' @param hive_types `ANY`
+#' @param schema `ANY`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_scan <- function(col0 = VARCHAR, can_have_nan = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY, schema = ANY) {
+  stop("DuckDB function ducklake_scan() is not available in R.")
+}
+
+#' DuckDB function ducklake_set_commit_message
+#'
+#' @description
+#' DuckDB function `ducklake_set_commit_message()`.
+#'
+#' @name ducklake_set_commit_message
+#' @usage ducklake_set_commit_message(col0, col1, col2, extra_info)
+#' @param col0,col1,col2,extra_info `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_set_commit_message <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = VARCHAR, extra_info = VARCHAR) {
+  stop("DuckDB function ducklake_set_commit_message() is not available in R.")
+}
+
+#' DuckDB function ducklake_set_option
+#'
+#' @description
+#' DuckDB function `ducklake_set_option()`.
+#'
+#' @name ducklake_set_option
+#' @usage ducklake_set_option(col0, col1, col2, schema, table_name)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param col2 `ANY`
+#' @param schema `VARCHAR`
+#' @param table_name `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_set_option <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = ANY, schema = VARCHAR, table_name = VARCHAR) {
+  stop("DuckDB function ducklake_set_option() is not available in R.")
+}
+
+#' DuckDB function ducklake_settings
+#'
+#' @description
+#' DuckDB function `ducklake_settings()`.
+#'
+#' @name ducklake_settings
+#' @usage ducklake_settings(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_settings <- function(col0 = VARCHAR) {
+  stop("DuckDB function ducklake_settings() is not available in R.")
+}
+
+#' DuckDB function ducklake_snapshots
+#'
+#' @description
+#' DuckDB function `ducklake_snapshots()`.
+#'
+#' @name ducklake_snapshots
+#' @usage ducklake_snapshots(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_snapshots <- function(col0 = VARCHAR) {
+  stop("DuckDB function ducklake_snapshots() is not available in R.")
+}
+
+#' DuckDB function ducklake_table_changes
+#'
+#' @description
+#' DuckDB macro `ducklake_table_changes()`.
+#'
+#' @name ducklake_table_changes
+#' @usage ducklake_table_changes(catalog, schema_name, table_name, start_snapshot, end_snapshot)
+#' @param catalog,schema_name,table_name,start_snapshot,end_snapshot Unspecified.
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_table_changes <- function(catalog, schema_name, table_name, start_snapshot, end_snapshot) {
+  stop("DuckDB function ducklake_table_changes() is not available in R.")
+}
+
+#' DuckDB function ducklake_table_deletions
+#'
+#' @description
+#' DuckDB function `ducklake_table_deletions()`.
+#'
+#' @name ducklake_table_deletions
+#' @usage ducklake_table_deletions(col0, col1, col2, col3, col4)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param col2 `VARCHAR`
+#' @param col3 `BIGINT | TIMESTAMP WITH TIME ZONE`
+#' @param col4 `BIGINT | TIMESTAMP WITH TIME ZONE`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_table_deletions <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = VARCHAR, col3 = `BIGINT | TIMESTAMP WITH TIME ZONE`, col4 = `BIGINT | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function ducklake_table_deletions() is not available in R.")
+}
+
+#' DuckDB function ducklake_table_info
+#'
+#' @description
+#' DuckDB function `ducklake_table_info()`.
+#'
+#' @name ducklake_table_info
+#' @usage ducklake_table_info(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_table_info <- function(col0 = VARCHAR) {
+  stop("DuckDB function ducklake_table_info() is not available in R.")
+}
+
+#' DuckDB function ducklake_table_insertions
+#'
+#' @description
+#' DuckDB function `ducklake_table_insertions()`.
+#'
+#' @name ducklake_table_insertions
+#' @usage ducklake_table_insertions(col0, col1, col2, col3, col4)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param col2 `VARCHAR`
+#' @param col3 `BIGINT | TIMESTAMP WITH TIME ZONE`
+#' @param col4 `BIGINT | TIMESTAMP WITH TIME ZONE`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+ducklake_table_insertions <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = VARCHAR, col3 = `BIGINT | TIMESTAMP WITH TIME ZONE`, col4 = `BIGINT | TIMESTAMP WITH TIME ZONE`) {
+  stop("DuckDB function ducklake_table_insertions() is not available in R.")
+}
+
 #' DuckDB function enable_checkpoint_on_shutdown
 #'
 #' @description
@@ -3369,6 +7810,22 @@ enable_object_cache <- function() {
 #' @export
 enable_optimizer <- function() {
   stop("DuckDB function enable_optimizer() is not available in R.")
+}
+
+#' DuckDB function enable_peg_parser
+#'
+#' @description
+#' DuckDB function `enable_peg_parser()`.
+#'
+#' @name enable_peg_parser
+#' @usage enable_peg_parser()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{autocomplete} extension (\code{LOAD autocomplete;}).
+enable_peg_parser <- function() {
+  stop("DuckDB function enable_peg_parser() is not available in R.")
 }
 
 #' DuckDB function enable_print_progress_bar
@@ -3720,6 +8177,23 @@ even <- function(x = DOUBLE) {
   stop("DuckDB function even() is not available in R.")
 }
 
+#' DuckDB function excel_text
+#'
+#' @description
+#' DuckDB function `excel_text()`.
+#'
+#' @name excel_text
+#' @usage excel_text(col0, col1)
+#' @param col0 `DOUBLE`
+#' @param col1 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{excel} extension (\code{LOAD excel;}).
+excel_text <- function(col0 = DOUBLE, col1 = VARCHAR) {
+  stop("DuckDB function excel_text() is not available in R.")
+}
+
 #' DuckDB function exp
 #'
 #' @description
@@ -3775,6 +8249,22 @@ factorial <- function(x = INTEGER) {
 #' @export
 `!__postfix` <- function(x = INTEGER) {
   stop("DuckDB function !__postfix() is not available in R.")
+}
+
+#' DuckDB function family
+#'
+#' @description
+#' DuckDB function `family()`.
+#'
+#' @name family
+#' @usage family(col0)
+#' @param col0 `INET`
+#' @return `UTINYINT`
+#' @export
+#' @section Provided by:
+#' The \code{inet} extension (\code{LOAD inet;}).
+family <- function(col0 = INET) {
+  stop("DuckDB function family() is not available in R.")
 }
 
 #' DuckDB function favg
@@ -4047,6 +8537,40 @@ from_base64 <- function(string = VARCHAR) {
   stop("DuckDB function from_base64() is not available in R.")
 }
 
+#' DuckDB function from_json
+#'
+#' @description
+#' DuckDB function `from_json()`.
+#'
+#' @name from_json
+#' @usage from_json(col0, col1)
+#' @param col0 `VARCHAR | JSON`
+#' @param col1 `VARCHAR`
+#' @return `ANY`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+from_json <- function(col0 = `VARCHAR | JSON`, col1 = VARCHAR) {
+  stop("DuckDB function from_json() is not available in R.")
+}
+
+#' DuckDB function from_json_strict
+#'
+#' @description
+#' DuckDB function `from_json_strict()`.
+#'
+#' @name from_json_strict
+#' @usage from_json_strict(col0, col1)
+#' @param col0 `VARCHAR | JSON`
+#' @param col1 `VARCHAR`
+#' @return `ANY`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+from_json_strict <- function(col0 = `VARCHAR | JSON`, col1 = VARCHAR) {
+  stop("DuckDB function from_json_strict() is not available in R.")
+}
+
 #' DuckDB function functions
 #'
 #' @description
@@ -4085,10 +8609,10 @@ gamma <- function(x = DOUBLE) {
 #' Creates a list of values between `start` and `stop` - the stop parameter is inclusive.
 #'
 #' @name generate_series
-#' @usage generate_series(start, stop, step)
-#' @param start `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @param stop `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @param step `BIGINT | INTERVAL`
+#' @usage generate_series(col0, col1, col2)
+#' @param col0 `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @param col1 `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @param col2 `BIGINT | INTERVAL`
 #' @return `BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
 #' @export
 #' @section Overloads:
@@ -4097,18 +8621,32 @@ gamma <- function(x = DOUBLE) {
 #' \item \code{generate_series(col0 = BIGINT, col1 = BIGINT)}
 #' \item \code{generate_series(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT)}
 #' \item \code{generate_series(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)}
+#' \item \code{generate_series(col0 = `TIMESTAMP WITH TIME ZONE`, col1 = `TIMESTAMP WITH TIME ZONE`, col2 = INTERVAL)}
 #' \item \code{generate_series(start = BIGINT)}
 #' \item \code{generate_series(start = BIGINT, stop = BIGINT)}
 #' \item \code{generate_series(start = BIGINT, stop = BIGINT, step = BIGINT)}
 #' \item \code{generate_series(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}
 #' \item \code{generate_series(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}
 #' }
+#' @section Provided by:
+#' \itemize{
+#' \item \code{generate_series(col0 = BIGINT)}: built in
+#' \item \code{generate_series(col0 = BIGINT, col1 = BIGINT)}: built in
+#' \item \code{generate_series(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT)}: built in
+#' \item \code{generate_series(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)}: built in
+#' \item \code{generate_series(col0 = `TIMESTAMP WITH TIME ZONE`, col1 = `TIMESTAMP WITH TIME ZONE`, col2 = INTERVAL)}: \code{icu}
+#' \item \code{generate_series(start = BIGINT)}: built in
+#' \item \code{generate_series(start = BIGINT, stop = BIGINT)}: built in
+#' \item \code{generate_series(start = BIGINT, stop = BIGINT, step = BIGINT)}: built in
+#' \item \code{generate_series(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}: built in
+#' \item \code{generate_series(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}: built in
+#' }
 #' @family list
 #' @section SQL examples:
 #' ```
 #' generate_series(2, 5, 3)
 #' ```
-generate_series <- function(start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, stop = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, step = `BIGINT | INTERVAL`) {
+generate_series <- function(col0 = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, col1 = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, col2 = `BIGINT | INTERVAL`) {
   stop("DuckDB function generate_series() is not available in R.")
 }
 
@@ -4187,6 +8725,22 @@ get_block_size <- function(db_name) {
   stop("DuckDB function get_block_size() is not available in R.")
 }
 
+#' DuckDB function get_current_time
+#'
+#' @description
+#' DuckDB function `get_current_time()`.
+#'
+#' @name get_current_time
+#' @usage get_current_time()
+
+#' @return `TIME WITH TIME ZONE`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+get_current_time <- function() {
+  stop("DuckDB function get_current_time() is not available in R.")
+}
+
 #' DuckDB function get_current_timestamp
 #'
 #' @description
@@ -4219,6 +8773,22 @@ transaction_timestamp <- function() {
   stop("DuckDB function transaction_timestamp() is not available in R.")
 }
 
+#' DuckDB function get_delta_test_expression
+#'
+#' @description
+#' DuckDB function `get_delta_test_expression()`.
+#'
+#' @name get_delta_test_expression
+#' @usage get_delta_test_expression()
+
+#' @return `VARCHAR[]`
+#' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
+get_delta_test_expression <- function() {
+  stop("DuckDB function get_delta_test_expression() is not available in R.")
+}
+
 #' DuckDB function get_type
 #'
 #' @description
@@ -4235,6 +8805,22 @@ transaction_timestamp <- function() {
 #' ```
 get_type <- function(expression = ANY) {
   stop("DuckDB function get_type() is not available in R.")
+}
+
+#' DuckDB function get_ui_url
+#'
+#' @description
+#' DuckDB function `get_ui_url()`.
+#'
+#' @name get_ui_url
+#' @usage get_ui_url()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ui} extension (\code{LOAD ui;}).
+get_ui_url <- function() {
+  stop("DuckDB function get_ui_url() is not available in R.")
 }
 
 #' DuckDB function getvariable
@@ -4669,6 +9255,54 @@ histogram_values <- function(source, col_name, bin_count, technique) {
   stop("DuckDB function histogram_values() is not available in R.")
 }
 
+#' DuckDB function hnsw_compact_index
+#'
+#' @description
+#' DuckDB function `hnsw_compact_index()`.
+#'
+#' @name hnsw_compact_index
+#' @usage hnsw_compact_index(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{vss} extension (\code{LOAD vss;}).
+hnsw_compact_index <- function(col0 = VARCHAR) {
+  stop("DuckDB function hnsw_compact_index() is not available in R.")
+}
+
+#' DuckDB function hnsw_index_scan
+#'
+#' @description
+#' DuckDB function `hnsw_index_scan()`.
+#'
+#' @name hnsw_index_scan
+#' @usage hnsw_index_scan()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{vss} extension (\code{LOAD vss;}).
+hnsw_index_scan <- function() {
+  stop("DuckDB function hnsw_index_scan() is not available in R.")
+}
+
+#' DuckDB function host
+#'
+#' @description
+#' DuckDB function `host()`.
+#'
+#' @name host
+#' @usage host(col0)
+#' @param col0 `INET`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{inet} extension (\code{LOAD inet;}).
+host <- function(col0 = INET) {
+  stop("DuckDB function host() is not available in R.")
+}
+
 #' DuckDB function hour
 #'
 #' @description
@@ -4685,6 +9319,2516 @@ histogram_values <- function(source, col_name, bin_count, technique) {
 #' ```
 hour <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function hour() is not available in R.")
+}
+
+#' DuckDB function html_escape
+#'
+#' @description
+#' DuckDB function `html_escape()`.
+#'
+#' @name html_escape
+#' @usage html_escape(col0, col1)
+#' @param col0 `VARCHAR`
+#' @param col1 `BOOLEAN`
+#' @return `VARCHAR`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{html_escape(col0 = VARCHAR)}
+#' \item \code{html_escape(col0 = VARCHAR, col1 = BOOLEAN)}
+#' }
+#' @section Provided by:
+#' The \code{inet} extension (\code{LOAD inet;}).
+html_escape <- function(col0 = VARCHAR, col1 = BOOLEAN) {
+  stop("DuckDB function html_escape() is not available in R.")
+}
+
+#' DuckDB function html_unescape
+#'
+#' @description
+#' DuckDB function `html_unescape()`.
+#'
+#' @name html_unescape
+#' @usage html_unescape(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{inet} extension (\code{LOAD inet;}).
+html_unescape <- function(col0 = VARCHAR) {
+  stop("DuckDB function html_unescape() is not available in R.")
+}
+
+#' DuckDB function iceberg_bucket
+#'
+#' @description
+#' DuckDB function `iceberg_bucket()`.
+#'
+#' @name iceberg_bucket
+#' @usage iceberg_bucket(col0, col1)
+#' @param col0 `INTEGER`
+#' @param col1 `INTEGER | BIGINT | VARCHAR | BLOB | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIMESTAMP_NS | TIME | UUID | DECIMAL`
+#' @return `INTEGER`
+#' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
+iceberg_bucket <- function(col0 = INTEGER, col1 = `INTEGER | BIGINT | VARCHAR | BLOB | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIMESTAMP_NS | TIME | UUID | DECIMAL`) {
+  stop("DuckDB function iceberg_bucket() is not available in R.")
+}
+
+#' DuckDB function iceberg_column_stats
+#'
+#' @description
+#' DuckDB function `iceberg_column_stats()`.
+#'
+#' @name iceberg_column_stats
+#' @usage iceberg_column_stats(
+#'   col0,
+#'   snapshot_from_timestamp,
+#'   snapshot_from_id,
+#'   version_name_format,
+#'   version,
+#'   metadata_compression_codec,
+#'   allow_moved_paths
+#' )
+#' @param col0 `VARCHAR`
+#' @param snapshot_from_timestamp `TIMESTAMP`
+#' @param snapshot_from_id `UBIGINT`
+#' @param version_name_format `VARCHAR`
+#' @param version `VARCHAR`
+#' @param metadata_compression_codec `VARCHAR`
+#' @param allow_moved_paths `BOOLEAN`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
+iceberg_column_stats <- function(col0 = VARCHAR, snapshot_from_timestamp = TIMESTAMP, snapshot_from_id = UBIGINT, version_name_format = VARCHAR, version = VARCHAR, metadata_compression_codec = VARCHAR, allow_moved_paths = BOOLEAN) {
+  stop("DuckDB function iceberg_column_stats() is not available in R.")
+}
+
+#' DuckDB function iceberg_load_table_response
+#'
+#' @description
+#' DuckDB function `iceberg_load_table_response()`.
+#'
+#' @name iceberg_load_table_response
+#' @usage iceberg_load_table_response(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
+iceberg_load_table_response <- function(col0 = VARCHAR) {
+  stop("DuckDB function iceberg_load_table_response() is not available in R.")
+}
+
+#' DuckDB function iceberg_metadata
+#'
+#' @description
+#' DuckDB function `iceberg_metadata()`.
+#'
+#' @name iceberg_metadata
+#' @usage iceberg_metadata(
+#'   col0,
+#'   snapshot_from_timestamp,
+#'   snapshot_from_id,
+#'   version_name_format,
+#'   version,
+#'   metadata_compression_codec,
+#'   allow_moved_paths
+#' )
+#' @param col0 `VARCHAR`
+#' @param snapshot_from_timestamp `TIMESTAMP`
+#' @param snapshot_from_id `UBIGINT`
+#' @param version_name_format `VARCHAR`
+#' @param version `VARCHAR`
+#' @param metadata_compression_codec `VARCHAR`
+#' @param allow_moved_paths `BOOLEAN`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
+iceberg_metadata <- function(col0 = VARCHAR, snapshot_from_timestamp = TIMESTAMP, snapshot_from_id = UBIGINT, version_name_format = VARCHAR, version = VARCHAR, metadata_compression_codec = VARCHAR, allow_moved_paths = BOOLEAN) {
+  stop("DuckDB function iceberg_metadata() is not available in R.")
+}
+
+#' DuckDB function iceberg_partition_stats
+#'
+#' @description
+#' DuckDB function `iceberg_partition_stats()`.
+#'
+#' @name iceberg_partition_stats
+#' @usage iceberg_partition_stats(
+#'   col0,
+#'   snapshot_from_timestamp,
+#'   snapshot_from_id,
+#'   version_name_format,
+#'   version,
+#'   metadata_compression_codec,
+#'   allow_moved_paths
+#' )
+#' @param col0 `VARCHAR`
+#' @param snapshot_from_timestamp `TIMESTAMP`
+#' @param snapshot_from_id `UBIGINT`
+#' @param version_name_format `VARCHAR`
+#' @param version `VARCHAR`
+#' @param metadata_compression_codec `VARCHAR`
+#' @param allow_moved_paths `BOOLEAN`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
+iceberg_partition_stats <- function(col0 = VARCHAR, snapshot_from_timestamp = TIMESTAMP, snapshot_from_id = UBIGINT, version_name_format = VARCHAR, version = VARCHAR, metadata_compression_codec = VARCHAR, allow_moved_paths = BOOLEAN) {
+  stop("DuckDB function iceberg_partition_stats() is not available in R.")
+}
+
+#' DuckDB function iceberg_scan
+#'
+#' @description
+#' DuckDB function `iceberg_scan()`.
+#'
+#' @name iceberg_scan
+#' @usage iceberg_scan(
+#'   col0,
+#'   snapshot_from_timestamp,
+#'   version,
+#'   metadata_compression_codec,
+#'   mode,
+#'   can_have_nan,
+#'   allow_moved_paths,
+#'   filename,
+#'   union_by_name,
+#'   snapshot_from_id,
+#'   debug_use_openssl,
+#'   hive_partitioning,
+#'   parquet_version,
+#'   encryption_config,
+#'   version_name_format,
+#'   hive_types_autocast,
+#'   binary_as_string,
+#'   explicit_cardinality,
+#'   compression,
+#'   file_row_number,
+#'   hive_types
+#' )
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param snapshot_from_timestamp `TIMESTAMP`
+#' @param version `VARCHAR`
+#' @param metadata_compression_codec `VARCHAR`
+#' @param mode `VARCHAR`
+#' @param can_have_nan `BOOLEAN`
+#' @param allow_moved_paths `BOOLEAN`
+#' @param filename `ANY`
+#' @param union_by_name `BOOLEAN`
+#' @param snapshot_from_id `UBIGINT`
+#' @param debug_use_openssl `BOOLEAN`
+#' @param hive_partitioning `BOOLEAN`
+#' @param parquet_version `VARCHAR`
+#' @param encryption_config `ANY`
+#' @param version_name_format `VARCHAR`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param binary_as_string `BOOLEAN`
+#' @param explicit_cardinality `UBIGINT`
+#' @param compression `VARCHAR`
+#' @param file_row_number `BOOLEAN`
+#' @param hive_types `ANY`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
+iceberg_scan <- function(col0 = `VARCHAR | VARCHAR[]`, snapshot_from_timestamp = TIMESTAMP, version = VARCHAR, metadata_compression_codec = VARCHAR, mode = VARCHAR, can_have_nan = BOOLEAN, allow_moved_paths = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, snapshot_from_id = UBIGINT, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, version_name_format = VARCHAR, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY) {
+  stop("DuckDB function iceberg_scan() is not available in R.")
+}
+
+#' DuckDB function iceberg_schema_properties
+#'
+#' @description
+#' DuckDB function `iceberg_schema_properties()`.
+#'
+#' @name iceberg_schema_properties
+#' @usage iceberg_schema_properties(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
+iceberg_schema_properties <- function(col0 = VARCHAR) {
+  stop("DuckDB function iceberg_schema_properties() is not available in R.")
+}
+
+#' DuckDB function iceberg_snapshots
+#'
+#' @description
+#' DuckDB function `iceberg_snapshots()`.
+#'
+#' @name iceberg_snapshots
+#' @usage iceberg_snapshots(col0, version_name_format, version, metadata_compression_codec)
+#' @param col0,version_name_format,version,metadata_compression_codec `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
+iceberg_snapshots <- function(col0 = VARCHAR, version_name_format = VARCHAR, version = VARCHAR, metadata_compression_codec = VARCHAR) {
+  stop("DuckDB function iceberg_snapshots() is not available in R.")
+}
+
+#' DuckDB function iceberg_table_properties
+#'
+#' @description
+#' DuckDB function `iceberg_table_properties()`.
+#'
+#' @name iceberg_table_properties
+#' @usage iceberg_table_properties(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
+iceberg_table_properties <- function(col0 = VARCHAR) {
+  stop("DuckDB function iceberg_table_properties() is not available in R.")
+}
+
+#' DuckDB function iceberg_to_ducklake
+#'
+#' @description
+#' DuckDB function `iceberg_to_ducklake()`.
+#'
+#' @name iceberg_to_ducklake
+#' @usage iceberg_to_ducklake(col0, col1, skip_tables)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param skip_tables `VARCHAR[]`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
+iceberg_to_ducklake <- function(col0 = VARCHAR, col1 = VARCHAR, skip_tables = `VARCHAR[]`) {
+  stop("DuckDB function iceberg_to_ducklake() is not available in R.")
+}
+
+#' DuckDB function iceberg_truncate
+#'
+#' @description
+#' DuckDB function `iceberg_truncate()`.
+#'
+#' @name iceberg_truncate
+#' @usage iceberg_truncate(col0, col1)
+#' @param col0 `INTEGER`
+#' @param col1 `INTEGER | BIGINT | VARCHAR | BLOB | DECIMAL`
+#' @return `INTEGER | BIGINT | VARCHAR | BLOB | DECIMAL`
+#' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
+iceberg_truncate <- function(col0 = INTEGER, col1 = `INTEGER | BIGINT | VARCHAR | BLOB | DECIMAL`) {
+  stop("DuckDB function iceberg_truncate() is not available in R.")
+}
+
+#' DuckDB function iceberg_verify_equality_deletes
+#'
+#' @description
+#' DuckDB function `iceberg_verify_equality_deletes()`.
+#'
+#' @name iceberg_verify_equality_deletes
+#' @usage iceberg_verify_equality_deletes()
+
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
+iceberg_verify_equality_deletes <- function() {
+  stop("DuckDB function iceberg_verify_equality_deletes() is not available in R.")
+}
+
+#' DuckDB function icu_calendar_names
+#'
+#' @description
+#' DuckDB function `icu_calendar_names()`.
+#'
+#' @name icu_calendar_names
+#' @usage icu_calendar_names()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_calendar_names <- function() {
+  stop("DuckDB function icu_calendar_names() is not available in R.")
+}
+
+#' DuckDB function icu_collate_af
+#'
+#' @description
+#' DuckDB function `icu_collate_af()`.
+#'
+#' @name icu_collate_af
+#' @usage icu_collate_af(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_af <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_af() is not available in R.")
+}
+
+#' DuckDB function icu_collate_am
+#'
+#' @description
+#' DuckDB function `icu_collate_am()`.
+#'
+#' @name icu_collate_am
+#' @usage icu_collate_am(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_am <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_am() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ar
+#'
+#' @description
+#' DuckDB function `icu_collate_ar()`.
+#'
+#' @name icu_collate_ar
+#' @usage icu_collate_ar(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ar <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ar() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ar_sa
+#'
+#' @description
+#' DuckDB function `icu_collate_ar_sa()`.
+#'
+#' @name icu_collate_ar_sa
+#' @usage icu_collate_ar_sa(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ar_sa <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ar_sa() is not available in R.")
+}
+
+#' DuckDB function icu_collate_as
+#'
+#' @description
+#' DuckDB function `icu_collate_as()`.
+#'
+#' @name icu_collate_as
+#' @usage icu_collate_as(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_as <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_as() is not available in R.")
+}
+
+#' DuckDB function icu_collate_az
+#'
+#' @description
+#' DuckDB function `icu_collate_az()`.
+#'
+#' @name icu_collate_az
+#' @usage icu_collate_az(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_az <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_az() is not available in R.")
+}
+
+#' DuckDB function icu_collate_be
+#'
+#' @description
+#' DuckDB function `icu_collate_be()`.
+#'
+#' @name icu_collate_be
+#' @usage icu_collate_be(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_be <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_be() is not available in R.")
+}
+
+#' DuckDB function icu_collate_bg
+#'
+#' @description
+#' DuckDB function `icu_collate_bg()`.
+#'
+#' @name icu_collate_bg
+#' @usage icu_collate_bg(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_bg <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_bg() is not available in R.")
+}
+
+#' DuckDB function icu_collate_bn
+#'
+#' @description
+#' DuckDB function `icu_collate_bn()`.
+#'
+#' @name icu_collate_bn
+#' @usage icu_collate_bn(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_bn <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_bn() is not available in R.")
+}
+
+#' DuckDB function icu_collate_bo
+#'
+#' @description
+#' DuckDB function `icu_collate_bo()`.
+#'
+#' @name icu_collate_bo
+#' @usage icu_collate_bo(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_bo <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_bo() is not available in R.")
+}
+
+#' DuckDB function icu_collate_br
+#'
+#' @description
+#' DuckDB function `icu_collate_br()`.
+#'
+#' @name icu_collate_br
+#' @usage icu_collate_br(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_br <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_br() is not available in R.")
+}
+
+#' DuckDB function icu_collate_bs
+#'
+#' @description
+#' DuckDB function `icu_collate_bs()`.
+#'
+#' @name icu_collate_bs
+#' @usage icu_collate_bs(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_bs <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_bs() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ca
+#'
+#' @description
+#' DuckDB function `icu_collate_ca()`.
+#'
+#' @name icu_collate_ca
+#' @usage icu_collate_ca(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ca <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ca() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ceb
+#'
+#' @description
+#' DuckDB function `icu_collate_ceb()`.
+#'
+#' @name icu_collate_ceb
+#' @usage icu_collate_ceb(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ceb <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ceb() is not available in R.")
+}
+
+#' DuckDB function icu_collate_chr
+#'
+#' @description
+#' DuckDB function `icu_collate_chr()`.
+#'
+#' @name icu_collate_chr
+#' @usage icu_collate_chr(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_chr <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_chr() is not available in R.")
+}
+
+#' DuckDB function icu_collate_cs
+#'
+#' @description
+#' DuckDB function `icu_collate_cs()`.
+#'
+#' @name icu_collate_cs
+#' @usage icu_collate_cs(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_cs <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_cs() is not available in R.")
+}
+
+#' DuckDB function icu_collate_cy
+#'
+#' @description
+#' DuckDB function `icu_collate_cy()`.
+#'
+#' @name icu_collate_cy
+#' @usage icu_collate_cy(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_cy <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_cy() is not available in R.")
+}
+
+#' DuckDB function icu_collate_da
+#'
+#' @description
+#' DuckDB function `icu_collate_da()`.
+#'
+#' @name icu_collate_da
+#' @usage icu_collate_da(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_da <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_da() is not available in R.")
+}
+
+#' DuckDB function icu_collate_de
+#'
+#' @description
+#' DuckDB function `icu_collate_de()`.
+#'
+#' @name icu_collate_de
+#' @usage icu_collate_de(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_de <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_de() is not available in R.")
+}
+
+#' DuckDB function icu_collate_de_at
+#'
+#' @description
+#' DuckDB function `icu_collate_de_at()`.
+#'
+#' @name icu_collate_de_at
+#' @usage icu_collate_de_at(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_de_at <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_de_at() is not available in R.")
+}
+
+#' DuckDB function icu_collate_dsb
+#'
+#' @description
+#' DuckDB function `icu_collate_dsb()`.
+#'
+#' @name icu_collate_dsb
+#' @usage icu_collate_dsb(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_dsb <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_dsb() is not available in R.")
+}
+
+#' DuckDB function icu_collate_dz
+#'
+#' @description
+#' DuckDB function `icu_collate_dz()`.
+#'
+#' @name icu_collate_dz
+#' @usage icu_collate_dz(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_dz <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_dz() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ee
+#'
+#' @description
+#' DuckDB function `icu_collate_ee()`.
+#'
+#' @name icu_collate_ee
+#' @usage icu_collate_ee(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ee <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ee() is not available in R.")
+}
+
+#' DuckDB function icu_collate_el
+#'
+#' @description
+#' DuckDB function `icu_collate_el()`.
+#'
+#' @name icu_collate_el
+#' @usage icu_collate_el(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_el <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_el() is not available in R.")
+}
+
+#' DuckDB function icu_collate_en
+#'
+#' @description
+#' DuckDB function `icu_collate_en()`.
+#'
+#' @name icu_collate_en
+#' @usage icu_collate_en(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_en <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_en() is not available in R.")
+}
+
+#' DuckDB function icu_collate_en_us
+#'
+#' @description
+#' DuckDB function `icu_collate_en_us()`.
+#'
+#' @name icu_collate_en_us
+#' @usage icu_collate_en_us(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_en_us <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_en_us() is not available in R.")
+}
+
+#' DuckDB function icu_collate_eo
+#'
+#' @description
+#' DuckDB function `icu_collate_eo()`.
+#'
+#' @name icu_collate_eo
+#' @usage icu_collate_eo(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_eo <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_eo() is not available in R.")
+}
+
+#' DuckDB function icu_collate_es
+#'
+#' @description
+#' DuckDB function `icu_collate_es()`.
+#'
+#' @name icu_collate_es
+#' @usage icu_collate_es(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_es <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_es() is not available in R.")
+}
+
+#' DuckDB function icu_collate_et
+#'
+#' @description
+#' DuckDB function `icu_collate_et()`.
+#'
+#' @name icu_collate_et
+#' @usage icu_collate_et(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_et <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_et() is not available in R.")
+}
+
+#' DuckDB function icu_collate_fa
+#'
+#' @description
+#' DuckDB function `icu_collate_fa()`.
+#'
+#' @name icu_collate_fa
+#' @usage icu_collate_fa(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_fa <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_fa() is not available in R.")
+}
+
+#' DuckDB function icu_collate_fa_af
+#'
+#' @description
+#' DuckDB function `icu_collate_fa_af()`.
+#'
+#' @name icu_collate_fa_af
+#' @usage icu_collate_fa_af(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_fa_af <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_fa_af() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ff
+#'
+#' @description
+#' DuckDB function `icu_collate_ff()`.
+#'
+#' @name icu_collate_ff
+#' @usage icu_collate_ff(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ff <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ff() is not available in R.")
+}
+
+#' DuckDB function icu_collate_fi
+#'
+#' @description
+#' DuckDB function `icu_collate_fi()`.
+#'
+#' @name icu_collate_fi
+#' @usage icu_collate_fi(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_fi <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_fi() is not available in R.")
+}
+
+#' DuckDB function icu_collate_fil
+#'
+#' @description
+#' DuckDB function `icu_collate_fil()`.
+#'
+#' @name icu_collate_fil
+#' @usage icu_collate_fil(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_fil <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_fil() is not available in R.")
+}
+
+#' DuckDB function icu_collate_fo
+#'
+#' @description
+#' DuckDB function `icu_collate_fo()`.
+#'
+#' @name icu_collate_fo
+#' @usage icu_collate_fo(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_fo <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_fo() is not available in R.")
+}
+
+#' DuckDB function icu_collate_fr
+#'
+#' @description
+#' DuckDB function `icu_collate_fr()`.
+#'
+#' @name icu_collate_fr
+#' @usage icu_collate_fr(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_fr <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_fr() is not available in R.")
+}
+
+#' DuckDB function icu_collate_fr_ca
+#'
+#' @description
+#' DuckDB function `icu_collate_fr_ca()`.
+#'
+#' @name icu_collate_fr_ca
+#' @usage icu_collate_fr_ca(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_fr_ca <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_fr_ca() is not available in R.")
+}
+
+#' DuckDB function icu_collate_fy
+#'
+#' @description
+#' DuckDB function `icu_collate_fy()`.
+#'
+#' @name icu_collate_fy
+#' @usage icu_collate_fy(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_fy <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_fy() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ga
+#'
+#' @description
+#' DuckDB function `icu_collate_ga()`.
+#'
+#' @name icu_collate_ga
+#' @usage icu_collate_ga(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ga <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ga() is not available in R.")
+}
+
+#' DuckDB function icu_collate_gl
+#'
+#' @description
+#' DuckDB function `icu_collate_gl()`.
+#'
+#' @name icu_collate_gl
+#' @usage icu_collate_gl(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_gl <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_gl() is not available in R.")
+}
+
+#' DuckDB function icu_collate_gu
+#'
+#' @description
+#' DuckDB function `icu_collate_gu()`.
+#'
+#' @name icu_collate_gu
+#' @usage icu_collate_gu(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_gu <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_gu() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ha
+#'
+#' @description
+#' DuckDB function `icu_collate_ha()`.
+#'
+#' @name icu_collate_ha
+#' @usage icu_collate_ha(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ha <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ha() is not available in R.")
+}
+
+#' DuckDB function icu_collate_haw
+#'
+#' @description
+#' DuckDB function `icu_collate_haw()`.
+#'
+#' @name icu_collate_haw
+#' @usage icu_collate_haw(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_haw <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_haw() is not available in R.")
+}
+
+#' DuckDB function icu_collate_he
+#'
+#' @description
+#' DuckDB function `icu_collate_he()`.
+#'
+#' @name icu_collate_he
+#' @usage icu_collate_he(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_he <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_he() is not available in R.")
+}
+
+#' DuckDB function icu_collate_he_il
+#'
+#' @description
+#' DuckDB function `icu_collate_he_il()`.
+#'
+#' @name icu_collate_he_il
+#' @usage icu_collate_he_il(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_he_il <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_he_il() is not available in R.")
+}
+
+#' DuckDB function icu_collate_hi
+#'
+#' @description
+#' DuckDB function `icu_collate_hi()`.
+#'
+#' @name icu_collate_hi
+#' @usage icu_collate_hi(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_hi <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_hi() is not available in R.")
+}
+
+#' DuckDB function icu_collate_hr
+#'
+#' @description
+#' DuckDB function `icu_collate_hr()`.
+#'
+#' @name icu_collate_hr
+#' @usage icu_collate_hr(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_hr <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_hr() is not available in R.")
+}
+
+#' DuckDB function icu_collate_hsb
+#'
+#' @description
+#' DuckDB function `icu_collate_hsb()`.
+#'
+#' @name icu_collate_hsb
+#' @usage icu_collate_hsb(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_hsb <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_hsb() is not available in R.")
+}
+
+#' DuckDB function icu_collate_hu
+#'
+#' @description
+#' DuckDB function `icu_collate_hu()`.
+#'
+#' @name icu_collate_hu
+#' @usage icu_collate_hu(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_hu <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_hu() is not available in R.")
+}
+
+#' DuckDB function icu_collate_hy
+#'
+#' @description
+#' DuckDB function `icu_collate_hy()`.
+#'
+#' @name icu_collate_hy
+#' @usage icu_collate_hy(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_hy <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_hy() is not available in R.")
+}
+
+#' DuckDB function icu_collate_id
+#'
+#' @description
+#' DuckDB function `icu_collate_id()`.
+#'
+#' @name icu_collate_id
+#' @usage icu_collate_id(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_id <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_id() is not available in R.")
+}
+
+#' DuckDB function icu_collate_id_id
+#'
+#' @description
+#' DuckDB function `icu_collate_id_id()`.
+#'
+#' @name icu_collate_id_id
+#' @usage icu_collate_id_id(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_id_id <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_id_id() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ig
+#'
+#' @description
+#' DuckDB function `icu_collate_ig()`.
+#'
+#' @name icu_collate_ig
+#' @usage icu_collate_ig(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ig <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ig() is not available in R.")
+}
+
+#' DuckDB function icu_collate_is
+#'
+#' @description
+#' DuckDB function `icu_collate_is()`.
+#'
+#' @name icu_collate_is
+#' @usage icu_collate_is(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_is <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_is() is not available in R.")
+}
+
+#' DuckDB function icu_collate_it
+#'
+#' @description
+#' DuckDB function `icu_collate_it()`.
+#'
+#' @name icu_collate_it
+#' @usage icu_collate_it(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_it <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_it() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ja
+#'
+#' @description
+#' DuckDB function `icu_collate_ja()`.
+#'
+#' @name icu_collate_ja
+#' @usage icu_collate_ja(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ja <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ja() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ka
+#'
+#' @description
+#' DuckDB function `icu_collate_ka()`.
+#'
+#' @name icu_collate_ka
+#' @usage icu_collate_ka(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ka <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ka() is not available in R.")
+}
+
+#' DuckDB function icu_collate_kk
+#'
+#' @description
+#' DuckDB function `icu_collate_kk()`.
+#'
+#' @name icu_collate_kk
+#' @usage icu_collate_kk(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_kk <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_kk() is not available in R.")
+}
+
+#' DuckDB function icu_collate_kl
+#'
+#' @description
+#' DuckDB function `icu_collate_kl()`.
+#'
+#' @name icu_collate_kl
+#' @usage icu_collate_kl(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_kl <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_kl() is not available in R.")
+}
+
+#' DuckDB function icu_collate_km
+#'
+#' @description
+#' DuckDB function `icu_collate_km()`.
+#'
+#' @name icu_collate_km
+#' @usage icu_collate_km(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_km <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_km() is not available in R.")
+}
+
+#' DuckDB function icu_collate_kn
+#'
+#' @description
+#' DuckDB function `icu_collate_kn()`.
+#'
+#' @name icu_collate_kn
+#' @usage icu_collate_kn(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_kn <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_kn() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ko
+#'
+#' @description
+#' DuckDB function `icu_collate_ko()`.
+#'
+#' @name icu_collate_ko
+#' @usage icu_collate_ko(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ko <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ko() is not available in R.")
+}
+
+#' DuckDB function icu_collate_kok
+#'
+#' @description
+#' DuckDB function `icu_collate_kok()`.
+#'
+#' @name icu_collate_kok
+#' @usage icu_collate_kok(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_kok <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_kok() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ku
+#'
+#' @description
+#' DuckDB function `icu_collate_ku()`.
+#'
+#' @name icu_collate_ku
+#' @usage icu_collate_ku(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ku <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ku() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ky
+#'
+#' @description
+#' DuckDB function `icu_collate_ky()`.
+#'
+#' @name icu_collate_ky
+#' @usage icu_collate_ky(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ky <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ky() is not available in R.")
+}
+
+#' DuckDB function icu_collate_lb
+#'
+#' @description
+#' DuckDB function `icu_collate_lb()`.
+#'
+#' @name icu_collate_lb
+#' @usage icu_collate_lb(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_lb <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_lb() is not available in R.")
+}
+
+#' DuckDB function icu_collate_lij
+#'
+#' @description
+#' DuckDB function `icu_collate_lij()`.
+#'
+#' @name icu_collate_lij
+#' @usage icu_collate_lij(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_lij <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_lij() is not available in R.")
+}
+
+#' DuckDB function icu_collate_lkt
+#'
+#' @description
+#' DuckDB function `icu_collate_lkt()`.
+#'
+#' @name icu_collate_lkt
+#' @usage icu_collate_lkt(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_lkt <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_lkt() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ln
+#'
+#' @description
+#' DuckDB function `icu_collate_ln()`.
+#'
+#' @name icu_collate_ln
+#' @usage icu_collate_ln(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ln <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ln() is not available in R.")
+}
+
+#' DuckDB function icu_collate_lo
+#'
+#' @description
+#' DuckDB function `icu_collate_lo()`.
+#'
+#' @name icu_collate_lo
+#' @usage icu_collate_lo(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_lo <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_lo() is not available in R.")
+}
+
+#' DuckDB function icu_collate_lt
+#'
+#' @description
+#' DuckDB function `icu_collate_lt()`.
+#'
+#' @name icu_collate_lt
+#' @usage icu_collate_lt(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_lt <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_lt() is not available in R.")
+}
+
+#' DuckDB function icu_collate_lv
+#'
+#' @description
+#' DuckDB function `icu_collate_lv()`.
+#'
+#' @name icu_collate_lv
+#' @usage icu_collate_lv(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_lv <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_lv() is not available in R.")
+}
+
+#' DuckDB function icu_collate_mk
+#'
+#' @description
+#' DuckDB function `icu_collate_mk()`.
+#'
+#' @name icu_collate_mk
+#' @usage icu_collate_mk(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_mk <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_mk() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ml
+#'
+#' @description
+#' DuckDB function `icu_collate_ml()`.
+#'
+#' @name icu_collate_ml
+#' @usage icu_collate_ml(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ml <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ml() is not available in R.")
+}
+
+#' DuckDB function icu_collate_mn
+#'
+#' @description
+#' DuckDB function `icu_collate_mn()`.
+#'
+#' @name icu_collate_mn
+#' @usage icu_collate_mn(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_mn <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_mn() is not available in R.")
+}
+
+#' DuckDB function icu_collate_mr
+#'
+#' @description
+#' DuckDB function `icu_collate_mr()`.
+#'
+#' @name icu_collate_mr
+#' @usage icu_collate_mr(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_mr <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_mr() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ms
+#'
+#' @description
+#' DuckDB function `icu_collate_ms()`.
+#'
+#' @name icu_collate_ms
+#' @usage icu_collate_ms(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ms <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ms() is not available in R.")
+}
+
+#' DuckDB function icu_collate_mt
+#'
+#' @description
+#' DuckDB function `icu_collate_mt()`.
+#'
+#' @name icu_collate_mt
+#' @usage icu_collate_mt(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_mt <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_mt() is not available in R.")
+}
+
+#' DuckDB function icu_collate_my
+#'
+#' @description
+#' DuckDB function `icu_collate_my()`.
+#'
+#' @name icu_collate_my
+#' @usage icu_collate_my(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_my <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_my() is not available in R.")
+}
+
+#' DuckDB function icu_collate_nb
+#'
+#' @description
+#' DuckDB function `icu_collate_nb()`.
+#'
+#' @name icu_collate_nb
+#' @usage icu_collate_nb(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_nb <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_nb() is not available in R.")
+}
+
+#' DuckDB function icu_collate_nb_no
+#'
+#' @description
+#' DuckDB function `icu_collate_nb_no()`.
+#'
+#' @name icu_collate_nb_no
+#' @usage icu_collate_nb_no(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_nb_no <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_nb_no() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ne
+#'
+#' @description
+#' DuckDB function `icu_collate_ne()`.
+#'
+#' @name icu_collate_ne
+#' @usage icu_collate_ne(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ne <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ne() is not available in R.")
+}
+
+#' DuckDB function icu_collate_nl
+#'
+#' @description
+#' DuckDB function `icu_collate_nl()`.
+#'
+#' @name icu_collate_nl
+#' @usage icu_collate_nl(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_nl <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_nl() is not available in R.")
+}
+
+#' DuckDB function icu_collate_nn
+#'
+#' @description
+#' DuckDB function `icu_collate_nn()`.
+#'
+#' @name icu_collate_nn
+#' @usage icu_collate_nn(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_nn <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_nn() is not available in R.")
+}
+
+#' DuckDB function icu_collate_noaccent
+#'
+#' @description
+#' DuckDB function `icu_collate_noaccent()`.
+#'
+#' @name icu_collate_noaccent
+#' @usage icu_collate_noaccent(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_noaccent <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_noaccent() is not available in R.")
+}
+
+#' DuckDB function icu_collate_nso
+#'
+#' @description
+#' DuckDB function `icu_collate_nso()`.
+#'
+#' @name icu_collate_nso
+#' @usage icu_collate_nso(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_nso <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_nso() is not available in R.")
+}
+
+#' DuckDB function icu_collate_om
+#'
+#' @description
+#' DuckDB function `icu_collate_om()`.
+#'
+#' @name icu_collate_om
+#' @usage icu_collate_om(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_om <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_om() is not available in R.")
+}
+
+#' DuckDB function icu_collate_or
+#'
+#' @description
+#' DuckDB function `icu_collate_or()`.
+#'
+#' @name icu_collate_or
+#' @usage icu_collate_or(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_or <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_or() is not available in R.")
+}
+
+#' DuckDB function icu_collate_pa
+#'
+#' @description
+#' DuckDB function `icu_collate_pa()`.
+#'
+#' @name icu_collate_pa
+#' @usage icu_collate_pa(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_pa <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_pa() is not available in R.")
+}
+
+#' DuckDB function icu_collate_pa_in
+#'
+#' @description
+#' DuckDB function `icu_collate_pa_in()`.
+#'
+#' @name icu_collate_pa_in
+#' @usage icu_collate_pa_in(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_pa_in <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_pa_in() is not available in R.")
+}
+
+#' DuckDB function icu_collate_pl
+#'
+#' @description
+#' DuckDB function `icu_collate_pl()`.
+#'
+#' @name icu_collate_pl
+#' @usage icu_collate_pl(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_pl <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_pl() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ps
+#'
+#' @description
+#' DuckDB function `icu_collate_ps()`.
+#'
+#' @name icu_collate_ps
+#' @usage icu_collate_ps(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ps <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ps() is not available in R.")
+}
+
+#' DuckDB function icu_collate_pt
+#'
+#' @description
+#' DuckDB function `icu_collate_pt()`.
+#'
+#' @name icu_collate_pt
+#' @usage icu_collate_pt(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_pt <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_pt() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ro
+#'
+#' @description
+#' DuckDB function `icu_collate_ro()`.
+#'
+#' @name icu_collate_ro
+#' @usage icu_collate_ro(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ro <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ro() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ru
+#'
+#' @description
+#' DuckDB function `icu_collate_ru()`.
+#'
+#' @name icu_collate_ru
+#' @usage icu_collate_ru(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ru <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ru() is not available in R.")
+}
+
+#' DuckDB function icu_collate_sa
+#'
+#' @description
+#' DuckDB function `icu_collate_sa()`.
+#'
+#' @name icu_collate_sa
+#' @usage icu_collate_sa(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_sa <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_sa() is not available in R.")
+}
+
+#' DuckDB function icu_collate_se
+#'
+#' @description
+#' DuckDB function `icu_collate_se()`.
+#'
+#' @name icu_collate_se
+#' @usage icu_collate_se(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_se <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_se() is not available in R.")
+}
+
+#' DuckDB function icu_collate_si
+#'
+#' @description
+#' DuckDB function `icu_collate_si()`.
+#'
+#' @name icu_collate_si
+#' @usage icu_collate_si(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_si <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_si() is not available in R.")
+}
+
+#' DuckDB function icu_collate_sk
+#'
+#' @description
+#' DuckDB function `icu_collate_sk()`.
+#'
+#' @name icu_collate_sk
+#' @usage icu_collate_sk(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_sk <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_sk() is not available in R.")
+}
+
+#' DuckDB function icu_collate_sl
+#'
+#' @description
+#' DuckDB function `icu_collate_sl()`.
+#'
+#' @name icu_collate_sl
+#' @usage icu_collate_sl(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_sl <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_sl() is not available in R.")
+}
+
+#' DuckDB function icu_collate_smn
+#'
+#' @description
+#' DuckDB function `icu_collate_smn()`.
+#'
+#' @name icu_collate_smn
+#' @usage icu_collate_smn(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_smn <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_smn() is not available in R.")
+}
+
+#' DuckDB function icu_collate_sq
+#'
+#' @description
+#' DuckDB function `icu_collate_sq()`.
+#'
+#' @name icu_collate_sq
+#' @usage icu_collate_sq(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_sq <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_sq() is not available in R.")
+}
+
+#' DuckDB function icu_collate_sr
+#'
+#' @description
+#' DuckDB function `icu_collate_sr()`.
+#'
+#' @name icu_collate_sr
+#' @usage icu_collate_sr(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_sr <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_sr() is not available in R.")
+}
+
+#' DuckDB function icu_collate_sr_ba
+#'
+#' @description
+#' DuckDB function `icu_collate_sr_ba()`.
+#'
+#' @name icu_collate_sr_ba
+#' @usage icu_collate_sr_ba(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_sr_ba <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_sr_ba() is not available in R.")
+}
+
+#' DuckDB function icu_collate_sr_me
+#'
+#' @description
+#' DuckDB function `icu_collate_sr_me()`.
+#'
+#' @name icu_collate_sr_me
+#' @usage icu_collate_sr_me(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_sr_me <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_sr_me() is not available in R.")
+}
+
+#' DuckDB function icu_collate_sr_rs
+#'
+#' @description
+#' DuckDB function `icu_collate_sr_rs()`.
+#'
+#' @name icu_collate_sr_rs
+#' @usage icu_collate_sr_rs(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_sr_rs <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_sr_rs() is not available in R.")
+}
+
+#' DuckDB function icu_collate_st
+#'
+#' @description
+#' DuckDB function `icu_collate_st()`.
+#'
+#' @name icu_collate_st
+#' @usage icu_collate_st(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_st <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_st() is not available in R.")
+}
+
+#' DuckDB function icu_collate_sv
+#'
+#' @description
+#' DuckDB function `icu_collate_sv()`.
+#'
+#' @name icu_collate_sv
+#' @usage icu_collate_sv(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_sv <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_sv() is not available in R.")
+}
+
+#' DuckDB function icu_collate_sw
+#'
+#' @description
+#' DuckDB function `icu_collate_sw()`.
+#'
+#' @name icu_collate_sw
+#' @usage icu_collate_sw(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_sw <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_sw() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ta
+#'
+#' @description
+#' DuckDB function `icu_collate_ta()`.
+#'
+#' @name icu_collate_ta
+#' @usage icu_collate_ta(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ta <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ta() is not available in R.")
+}
+
+#' DuckDB function icu_collate_te
+#'
+#' @description
+#' DuckDB function `icu_collate_te()`.
+#'
+#' @name icu_collate_te
+#' @usage icu_collate_te(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_te <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_te() is not available in R.")
+}
+
+#' DuckDB function icu_collate_th
+#'
+#' @description
+#' DuckDB function `icu_collate_th()`.
+#'
+#' @name icu_collate_th
+#' @usage icu_collate_th(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_th <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_th() is not available in R.")
+}
+
+#' DuckDB function icu_collate_tk
+#'
+#' @description
+#' DuckDB function `icu_collate_tk()`.
+#'
+#' @name icu_collate_tk
+#' @usage icu_collate_tk(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_tk <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_tk() is not available in R.")
+}
+
+#' DuckDB function icu_collate_tn
+#'
+#' @description
+#' DuckDB function `icu_collate_tn()`.
+#'
+#' @name icu_collate_tn
+#' @usage icu_collate_tn(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_tn <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_tn() is not available in R.")
+}
+
+#' DuckDB function icu_collate_to
+#'
+#' @description
+#' DuckDB function `icu_collate_to()`.
+#'
+#' @name icu_collate_to
+#' @usage icu_collate_to(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_to <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_to() is not available in R.")
+}
+
+#' DuckDB function icu_collate_tr
+#'
+#' @description
+#' DuckDB function `icu_collate_tr()`.
+#'
+#' @name icu_collate_tr
+#' @usage icu_collate_tr(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_tr <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_tr() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ug
+#'
+#' @description
+#' DuckDB function `icu_collate_ug()`.
+#'
+#' @name icu_collate_ug
+#' @usage icu_collate_ug(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ug <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ug() is not available in R.")
+}
+
+#' DuckDB function icu_collate_uk
+#'
+#' @description
+#' DuckDB function `icu_collate_uk()`.
+#'
+#' @name icu_collate_uk
+#' @usage icu_collate_uk(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_uk <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_uk() is not available in R.")
+}
+
+#' DuckDB function icu_collate_ur
+#'
+#' @description
+#' DuckDB function `icu_collate_ur()`.
+#'
+#' @name icu_collate_ur
+#' @usage icu_collate_ur(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_ur <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_ur() is not available in R.")
+}
+
+#' DuckDB function icu_collate_uz
+#'
+#' @description
+#' DuckDB function `icu_collate_uz()`.
+#'
+#' @name icu_collate_uz
+#' @usage icu_collate_uz(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_uz <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_uz() is not available in R.")
+}
+
+#' DuckDB function icu_collate_vi
+#'
+#' @description
+#' DuckDB function `icu_collate_vi()`.
+#'
+#' @name icu_collate_vi
+#' @usage icu_collate_vi(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_vi <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_vi() is not available in R.")
+}
+
+#' DuckDB function icu_collate_wae
+#'
+#' @description
+#' DuckDB function `icu_collate_wae()`.
+#'
+#' @name icu_collate_wae
+#' @usage icu_collate_wae(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_wae <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_wae() is not available in R.")
+}
+
+#' DuckDB function icu_collate_wo
+#'
+#' @description
+#' DuckDB function `icu_collate_wo()`.
+#'
+#' @name icu_collate_wo
+#' @usage icu_collate_wo(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_wo <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_wo() is not available in R.")
+}
+
+#' DuckDB function icu_collate_xh
+#'
+#' @description
+#' DuckDB function `icu_collate_xh()`.
+#'
+#' @name icu_collate_xh
+#' @usage icu_collate_xh(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_xh <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_xh() is not available in R.")
+}
+
+#' DuckDB function icu_collate_yi
+#'
+#' @description
+#' DuckDB function `icu_collate_yi()`.
+#'
+#' @name icu_collate_yi
+#' @usage icu_collate_yi(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_yi <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_yi() is not available in R.")
+}
+
+#' DuckDB function icu_collate_yo
+#'
+#' @description
+#' DuckDB function `icu_collate_yo()`.
+#'
+#' @name icu_collate_yo
+#' @usage icu_collate_yo(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_yo <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_yo() is not available in R.")
+}
+
+#' DuckDB function icu_collate_yue
+#'
+#' @description
+#' DuckDB function `icu_collate_yue()`.
+#'
+#' @name icu_collate_yue
+#' @usage icu_collate_yue(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_yue <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_yue() is not available in R.")
+}
+
+#' DuckDB function icu_collate_yue_cn
+#'
+#' @description
+#' DuckDB function `icu_collate_yue_cn()`.
+#'
+#' @name icu_collate_yue_cn
+#' @usage icu_collate_yue_cn(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_yue_cn <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_yue_cn() is not available in R.")
+}
+
+#' DuckDB function icu_collate_zh
+#'
+#' @description
+#' DuckDB function `icu_collate_zh()`.
+#'
+#' @name icu_collate_zh
+#' @usage icu_collate_zh(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_zh <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_zh() is not available in R.")
+}
+
+#' DuckDB function icu_collate_zh_cn
+#'
+#' @description
+#' DuckDB function `icu_collate_zh_cn()`.
+#'
+#' @name icu_collate_zh_cn
+#' @usage icu_collate_zh_cn(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_zh_cn <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_zh_cn() is not available in R.")
+}
+
+#' DuckDB function icu_collate_zh_hk
+#'
+#' @description
+#' DuckDB function `icu_collate_zh_hk()`.
+#'
+#' @name icu_collate_zh_hk
+#' @usage icu_collate_zh_hk(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_zh_hk <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_zh_hk() is not available in R.")
+}
+
+#' DuckDB function icu_collate_zh_mo
+#'
+#' @description
+#' DuckDB function `icu_collate_zh_mo()`.
+#'
+#' @name icu_collate_zh_mo
+#' @usage icu_collate_zh_mo(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_zh_mo <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_zh_mo() is not available in R.")
+}
+
+#' DuckDB function icu_collate_zh_sg
+#'
+#' @description
+#' DuckDB function `icu_collate_zh_sg()`.
+#'
+#' @name icu_collate_zh_sg
+#' @usage icu_collate_zh_sg(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_zh_sg <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_zh_sg() is not available in R.")
+}
+
+#' DuckDB function icu_collate_zh_tw
+#'
+#' @description
+#' DuckDB function `icu_collate_zh_tw()`.
+#'
+#' @name icu_collate_zh_tw
+#' @usage icu_collate_zh_tw(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_zh_tw <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_zh_tw() is not available in R.")
+}
+
+#' DuckDB function icu_collate_zu
+#'
+#' @description
+#' DuckDB function `icu_collate_zu()`.
+#'
+#' @name icu_collate_zu
+#' @usage icu_collate_zu(col0)
+#' @param col0 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_collate_zu <- function(col0 = VARCHAR) {
+  stop("DuckDB function icu_collate_zu() is not available in R.")
+}
+
+#' DuckDB function icu_sort_key
+#'
+#' @description
+#' DuckDB function `icu_sort_key()`.
+#'
+#' @name icu_sort_key
+#' @usage icu_sort_key(col0, col1)
+#' @param col0,col1 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+icu_sort_key <- function(col0 = VARCHAR, col1 = VARCHAR) {
+  stop("DuckDB function icu_sort_key() is not available in R.")
 }
 
 #' DuckDB function ilike_escape
@@ -5007,6 +12151,548 @@ jaro_winkler_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = D
   stop("DuckDB function jaro_winkler_similarity() is not available in R.")
 }
 
+#' DuckDB function json
+#'
+#' @description
+#' DuckDB macro `json()`.
+#'
+#' @name json
+#' @usage json(x)
+#' @param x Unspecified.
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json <- function(x) {
+  stop("DuckDB function json() is not available in R.")
+}
+
+#' DuckDB function json_array
+#'
+#' @description
+#' DuckDB function `json_array()`.
+#'
+#' @name json_array
+#' @usage json_array()
+
+#' @return `JSON`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_array <- function() {
+  stop("DuckDB function json_array() is not available in R.")
+}
+
+#' DuckDB function json_array_length
+#'
+#' @description
+#' DuckDB function `json_array_length()`.
+#'
+#' @name json_array_length
+#' @usage json_array_length(col0, col1)
+#' @param col0 `VARCHAR | JSON`
+#' @param col1 `VARCHAR | VARCHAR[]`
+#' @return `UBIGINT | UBIGINT[]`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{json_array_length(col0 = VARCHAR)}
+#' \item \code{json_array_length(col0 = VARCHAR, col1 = VARCHAR)}
+#' \item \code{json_array_length(col0 = VARCHAR, col1 = `VARCHAR[]`)}
+#' \item \code{json_array_length(col0 = JSON)}
+#' \item \code{json_array_length(col0 = JSON, col1 = VARCHAR)}
+#' \item \code{json_array_length(col0 = JSON, col1 = `VARCHAR[]`)}
+#' }
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_array_length <- function(col0 = `VARCHAR | JSON`, col1 = `VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function json_array_length() is not available in R.")
+}
+
+#' DuckDB function json_contains
+#'
+#' @description
+#' DuckDB function `json_contains()`.
+#'
+#' @name json_contains
+#' @usage json_contains(col0, col1)
+#' @param col0,col1 `VARCHAR | JSON`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_contains <- function(col0 = `VARCHAR | JSON`, col1 = `VARCHAR | JSON`) {
+  stop("DuckDB function json_contains() is not available in R.")
+}
+
+#' DuckDB function json_deserialize_sql
+#'
+#' @description
+#' DuckDB function `json_deserialize_sql()`.
+#'
+#' @name json_deserialize_sql
+#' @usage json_deserialize_sql(col0)
+#' @param col0 `JSON`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_deserialize_sql <- function(col0 = JSON) {
+  stop("DuckDB function json_deserialize_sql() is not available in R.")
+}
+
+#' DuckDB function json_each
+#'
+#' @description
+#' DuckDB function `json_each()`.
+#'
+#' @name json_each
+#' @usage json_each(col0, col1)
+#' @param col0 `VARCHAR | JSON`
+#' @param col1 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{json_each(col0 = VARCHAR)}
+#' \item \code{json_each(col0 = VARCHAR, col1 = VARCHAR)}
+#' \item \code{json_each(col0 = JSON)}
+#' \item \code{json_each(col0 = JSON, col1 = VARCHAR)}
+#' }
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_each <- function(col0 = `VARCHAR | JSON`, col1 = VARCHAR) {
+  stop("DuckDB function json_each() is not available in R.")
+}
+
+#' DuckDB function json_execute_serialized_sql
+#'
+#' @description
+#' DuckDB function `json_execute_serialized_sql()`.
+#'
+#' @name json_execute_serialized_sql
+#' @usage json_execute_serialized_sql(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_execute_serialized_sql <- function(col0 = VARCHAR) {
+  stop("DuckDB function json_execute_serialized_sql() is not available in R.")
+}
+
+#' DuckDB function json_exists
+#'
+#' @description
+#' DuckDB function `json_exists()`.
+#'
+#' @name json_exists
+#' @usage json_exists(col0, col1)
+#' @param col0 `VARCHAR | JSON`
+#' @param col1 `VARCHAR | VARCHAR[]`
+#' @return `BOOLEAN | BOOLEAN[]`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_exists <- function(col0 = `VARCHAR | JSON`, col1 = `VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function json_exists() is not available in R.")
+}
+
+#' DuckDB function json_extract
+#'
+#' @description
+#' DuckDB function `json_extract()`.
+#'
+#' @name json_extract
+#' @usage json_extract(col0, col1)
+#' @param col0 `VARCHAR | JSON`
+#' @param col1 `BIGINT | VARCHAR | VARCHAR[]`
+#' @return `JSON | JSON[]`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_extract <- function(col0 = `VARCHAR | JSON`, col1 = `BIGINT | VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function json_extract() is not available in R.")
+}
+
+#' DuckDB function json_extract_path
+#'
+#' @description
+#' DuckDB function `json_extract_path()`.
+#'
+#' @name json_extract_path
+#' @usage json_extract_path(col0, col1)
+#' @param col0 `VARCHAR | JSON`
+#' @param col1 `BIGINT | VARCHAR | VARCHAR[]`
+#' @return `JSON | JSON[]`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_extract_path <- function(col0 = `VARCHAR | JSON`, col1 = `BIGINT | VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function json_extract_path() is not available in R.")
+}
+
+#' DuckDB function json_extract_path_text
+#'
+#' @description
+#' DuckDB function `json_extract_path_text()`.
+#'
+#' @name json_extract_path_text
+#' @usage json_extract_path_text(col0, col1)
+#' @param col0 `VARCHAR | JSON`
+#' @param col1 `BIGINT | VARCHAR | VARCHAR[]`
+#' @return `VARCHAR | VARCHAR[]`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_extract_path_text <- function(col0 = `VARCHAR | JSON`, col1 = `BIGINT | VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function json_extract_path_text() is not available in R.")
+}
+
+#' DuckDB function json_extract_string
+#'
+#' @description
+#' DuckDB function `json_extract_string()`.
+#'
+#' @name json_extract_string
+#' @usage json_extract_string(col0, col1)
+#' @param col0 `VARCHAR | JSON`
+#' @param col1 `BIGINT | VARCHAR | VARCHAR[]`
+#' @return `VARCHAR | VARCHAR[]`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_extract_string <- function(col0 = `VARCHAR | JSON`, col1 = `BIGINT | VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function json_extract_string() is not available in R.")
+}
+
+#' DuckDB function json_group_array
+#'
+#' @description
+#' DuckDB macro `json_group_array()`.
+#'
+#' @name json_group_array
+#' @usage json_group_array(x)
+#' @param x Unspecified.
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_group_array <- function(x) {
+  stop("DuckDB function json_group_array() is not available in R.")
+}
+
+#' DuckDB function json_group_object
+#'
+#' @description
+#' DuckDB macro `json_group_object()`.
+#'
+#' @name json_group_object
+#' @usage json_group_object(n, v)
+#' @param n,v Unspecified.
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_group_object <- function(n, v) {
+  stop("DuckDB function json_group_object() is not available in R.")
+}
+
+#' DuckDB function json_group_structure
+#'
+#' @description
+#' DuckDB macro `json_group_structure()`.
+#'
+#' @name json_group_structure
+#' @usage json_group_structure(x)
+#' @param x Unspecified.
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_group_structure <- function(x) {
+  stop("DuckDB function json_group_structure() is not available in R.")
+}
+
+#' DuckDB function json_keys
+#'
+#' @description
+#' DuckDB function `json_keys()`.
+#'
+#' @name json_keys
+#' @usage json_keys(col0, col1)
+#' @param col0 `VARCHAR | JSON`
+#' @param col1 `VARCHAR | VARCHAR[]`
+#' @return `VARCHAR[] | VARCHAR[][]`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{json_keys(col0 = VARCHAR)}
+#' \item \code{json_keys(col0 = VARCHAR, col1 = VARCHAR)}
+#' \item \code{json_keys(col0 = VARCHAR, col1 = `VARCHAR[]`)}
+#' \item \code{json_keys(col0 = JSON)}
+#' \item \code{json_keys(col0 = JSON, col1 = VARCHAR)}
+#' \item \code{json_keys(col0 = JSON, col1 = `VARCHAR[]`)}
+#' }
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_keys <- function(col0 = `VARCHAR | JSON`, col1 = `VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function json_keys() is not available in R.")
+}
+
+#' DuckDB function json_merge_patch
+#'
+#' @description
+#' DuckDB function `json_merge_patch()`.
+#'
+#' @name json_merge_patch
+#' @usage json_merge_patch(col0, col1)
+#' @param col0,col1 `JSON`
+#' @return `JSON`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_merge_patch <- function(col0 = JSON, col1 = JSON) {
+  stop("DuckDB function json_merge_patch() is not available in R.")
+}
+
+#' DuckDB function json_object
+#'
+#' @description
+#' DuckDB function `json_object()`.
+#'
+#' @name json_object
+#' @usage json_object()
+
+#' @return `JSON`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_object <- function() {
+  stop("DuckDB function json_object() is not available in R.")
+}
+
+#' DuckDB function json_pretty
+#'
+#' @description
+#' DuckDB function `json_pretty()`.
+#'
+#' @name json_pretty
+#' @usage json_pretty(col0)
+#' @param col0 `JSON`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_pretty <- function(col0 = JSON) {
+  stop("DuckDB function json_pretty() is not available in R.")
+}
+
+#' DuckDB function json_quote
+#'
+#' @description
+#' DuckDB function `json_quote()`.
+#'
+#' @name json_quote
+#' @usage json_quote()
+
+#' @return `JSON`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_quote <- function() {
+  stop("DuckDB function json_quote() is not available in R.")
+}
+
+#' DuckDB function json_serialize_plan
+#'
+#' @description
+#' DuckDB function `json_serialize_plan()`.
+#'
+#' @name json_serialize_plan
+#' @usage json_serialize_plan(col0, col1, col2, col3, col4)
+#' @param col0 `VARCHAR`
+#' @param col1 `BOOLEAN`
+#' @param col2 `BOOLEAN`
+#' @param col3 `BOOLEAN`
+#' @param col4 `BOOLEAN`
+#' @return `JSON`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{json_serialize_plan(col0 = VARCHAR)}
+#' \item \code{json_serialize_plan(col0 = VARCHAR, col1 = BOOLEAN)}
+#' \item \code{json_serialize_plan(col0 = VARCHAR, col1 = BOOLEAN, col2 = BOOLEAN)}
+#' \item \code{json_serialize_plan(col0 = VARCHAR, col1 = BOOLEAN, col2 = BOOLEAN, col3 = BOOLEAN)}
+#' \item \code{json_serialize_plan(col0 = VARCHAR, col1 = BOOLEAN, col2 = BOOLEAN, col3 = BOOLEAN, col4 = BOOLEAN)}
+#' }
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_serialize_plan <- function(col0 = VARCHAR, col1 = BOOLEAN, col2 = BOOLEAN, col3 = BOOLEAN, col4 = BOOLEAN) {
+  stop("DuckDB function json_serialize_plan() is not available in R.")
+}
+
+#' DuckDB function json_serialize_sql
+#'
+#' @description
+#' DuckDB function `json_serialize_sql()`.
+#'
+#' @name json_serialize_sql
+#' @usage json_serialize_sql(col0, col1, col2, col3, col4)
+#' @param col0 `VARCHAR`
+#' @param col1 `BOOLEAN`
+#' @param col2 `BOOLEAN`
+#' @param col3 `BOOLEAN`
+#' @param col4 `BOOLEAN`
+#' @return `JSON`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{json_serialize_sql(col0 = VARCHAR)}
+#' \item \code{json_serialize_sql(col0 = VARCHAR, col1 = BOOLEAN)}
+#' \item \code{json_serialize_sql(col0 = VARCHAR, col1 = BOOLEAN, col2 = BOOLEAN)}
+#' \item \code{json_serialize_sql(col0 = VARCHAR, col1 = BOOLEAN, col2 = BOOLEAN, col3 = BOOLEAN)}
+#' \item \code{json_serialize_sql(col0 = VARCHAR, col1 = BOOLEAN, col2 = BOOLEAN, col3 = BOOLEAN, col4 = BOOLEAN)}
+#' }
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_serialize_sql <- function(col0 = VARCHAR, col1 = BOOLEAN, col2 = BOOLEAN, col3 = BOOLEAN, col4 = BOOLEAN) {
+  stop("DuckDB function json_serialize_sql() is not available in R.")
+}
+
+#' DuckDB function json_structure
+#'
+#' @description
+#' DuckDB function `json_structure()`.
+#'
+#' @name json_structure
+#' @usage json_structure(col0)
+#' @param col0 `VARCHAR | JSON`
+#' @return `JSON`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_structure <- function(col0 = `VARCHAR | JSON`) {
+  stop("DuckDB function json_structure() is not available in R.")
+}
+
+#' DuckDB function json_transform
+#'
+#' @description
+#' DuckDB function `json_transform()`.
+#'
+#' @name json_transform
+#' @usage json_transform(col0, col1)
+#' @param col0 `VARCHAR | JSON`
+#' @param col1 `VARCHAR`
+#' @return `ANY`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_transform <- function(col0 = `VARCHAR | JSON`, col1 = VARCHAR) {
+  stop("DuckDB function json_transform() is not available in R.")
+}
+
+#' DuckDB function json_transform_strict
+#'
+#' @description
+#' DuckDB function `json_transform_strict()`.
+#'
+#' @name json_transform_strict
+#' @usage json_transform_strict(col0, col1)
+#' @param col0 `VARCHAR | JSON`
+#' @param col1 `VARCHAR`
+#' @return `ANY`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_transform_strict <- function(col0 = `VARCHAR | JSON`, col1 = VARCHAR) {
+  stop("DuckDB function json_transform_strict() is not available in R.")
+}
+
+#' DuckDB function json_tree
+#'
+#' @description
+#' DuckDB function `json_tree()`.
+#'
+#' @name json_tree
+#' @usage json_tree(col0, col1)
+#' @param col0 `VARCHAR | JSON`
+#' @param col1 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{json_tree(col0 = VARCHAR)}
+#' \item \code{json_tree(col0 = VARCHAR, col1 = VARCHAR)}
+#' \item \code{json_tree(col0 = JSON)}
+#' \item \code{json_tree(col0 = JSON, col1 = VARCHAR)}
+#' }
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_tree <- function(col0 = `VARCHAR | JSON`, col1 = VARCHAR) {
+  stop("DuckDB function json_tree() is not available in R.")
+}
+
+#' DuckDB function json_type
+#'
+#' @description
+#' DuckDB function `json_type()`.
+#'
+#' @name json_type
+#' @usage json_type(col0, col1)
+#' @param col0 `VARCHAR | JSON`
+#' @param col1 `VARCHAR | VARCHAR[]`
+#' @return `VARCHAR | VARCHAR[]`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{json_type(col0 = VARCHAR)}
+#' \item \code{json_type(col0 = VARCHAR, col1 = VARCHAR)}
+#' \item \code{json_type(col0 = VARCHAR, col1 = `VARCHAR[]`)}
+#' \item \code{json_type(col0 = JSON)}
+#' \item \code{json_type(col0 = JSON, col1 = VARCHAR)}
+#' \item \code{json_type(col0 = JSON, col1 = `VARCHAR[]`)}
+#' }
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_type <- function(col0 = `VARCHAR | JSON`, col1 = `VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function json_type() is not available in R.")
+}
+
+#' DuckDB function json_valid
+#'
+#' @description
+#' DuckDB function `json_valid()`.
+#'
+#' @name json_valid
+#' @usage json_valid(col0)
+#' @param col0 `VARCHAR | JSON`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_valid <- function(col0 = `VARCHAR | JSON`) {
+  stop("DuckDB function json_valid() is not available in R.")
+}
+
+#' DuckDB function json_value
+#'
+#' @description
+#' DuckDB function `json_value()`.
+#'
+#' @name json_value
+#' @usage json_value(col0, col1)
+#' @param col0 `VARCHAR | JSON`
+#' @param col1 `BIGINT | VARCHAR | VARCHAR[]`
+#' @return `VARCHAR | VARCHAR[]`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+json_value <- function(col0 = `VARCHAR | JSON`, col1 = `BIGINT | VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function json_value() is not available in R.")
+}
+
 #' DuckDB function julian
 #'
 #' @description
@@ -5099,6 +12785,103 @@ kurtosis_pop <- function(x = DOUBLE) {
 #' @export
 lag <- function(col0 = T, col1 = BIGINT, col2 = T) {
   stop("DuckDB function lag() is not available in R.")
+}
+
+#' DuckDB function lance_fts
+#'
+#' @description
+#' DuckDB function `lance_fts()`.
+#'
+#' @name lance_fts
+#' @usage lance_fts(col0, col1, col2, filter, prefilter, k)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param col2 `VARCHAR`
+#' @param filter `VARCHAR`
+#' @param prefilter `BOOLEAN`
+#' @param k `BIGINT`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{lance} extension (\code{LOAD lance;}).
+lance_fts <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = VARCHAR, filter = VARCHAR, prefilter = BOOLEAN, k = BIGINT) {
+  stop("DuckDB function lance_fts() is not available in R.")
+}
+
+#' DuckDB function lance_hybrid_search
+#'
+#' @description
+#' DuckDB function `lance_hybrid_search()`.
+#'
+#' @name lance_hybrid_search
+#' @usage lance_hybrid_search(
+#'   col0,
+#'   col1,
+#'   col2,
+#'   col3,
+#'   col4,
+#'   alpha,
+#'   use_index,
+#'   prefilter,
+#'   refine_factor,
+#'   nprobs,
+#'   oversample_factor,
+#'   k
+#' )
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param col2 `FLOAT[] | DOUBLE[]`
+#' @param col3 `VARCHAR`
+#' @param col4 `VARCHAR`
+#' @param alpha `FLOAT`
+#' @param use_index `BOOLEAN`
+#' @param prefilter `BOOLEAN`
+#' @param refine_factor `BIGINT`
+#' @param nprobs `BIGINT`
+#' @param oversample_factor `INTEGER`
+#' @param k `BIGINT`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{lance} extension (\code{LOAD lance;}).
+lance_hybrid_search <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = `FLOAT[] | DOUBLE[]`, col3 = VARCHAR, col4 = VARCHAR, alpha = FLOAT, use_index = BOOLEAN, prefilter = BOOLEAN, refine_factor = BIGINT, nprobs = BIGINT, oversample_factor = INTEGER, k = BIGINT) {
+  stop("DuckDB function lance_hybrid_search() is not available in R.")
+}
+
+#' DuckDB function lance_vector_search
+#'
+#' @description
+#' DuckDB function `lance_vector_search()`.
+#'
+#' @name lance_vector_search
+#' @usage lance_vector_search(
+#'   col0,
+#'   col1,
+#'   col2,
+#'   filter,
+#'   explain_verbose,
+#'   use_index,
+#'   prefilter,
+#'   refine_factor,
+#'   nprobs,
+#'   k
+#' )
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param col2 `FLOAT[] | DOUBLE[]`
+#' @param filter `VARCHAR`
+#' @param explain_verbose `BOOLEAN`
+#' @param use_index `BOOLEAN`
+#' @param prefilter `BOOLEAN`
+#' @param refine_factor `BIGINT`
+#' @param nprobs `BIGINT`
+#' @param k `BIGINT`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{lance} extension (\code{LOAD lance;}).
+lance_vector_search <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = `FLOAT[] | DOUBLE[]`, filter = VARCHAR, explain_verbose = BOOLEAN, use_index = BOOLEAN, prefilter = BOOLEAN, refine_factor = BIGINT, nprobs = BIGINT, k = BIGINT) {
+  stop("DuckDB function lance_vector_search() is not available in R.")
 }
 
 #' DuckDB function last
@@ -6773,6 +14556,29 @@ ln <- function(x = DOUBLE) {
   stop("DuckDB function ln() is not available in R.")
 }
 
+#' DuckDB function load_aws_credentials
+#'
+#' @description
+#' DuckDB function `load_aws_credentials()`.
+#'
+#' @name load_aws_credentials
+#' @usage load_aws_credentials(col0, redact_secret, set_region)
+#' @param col0 `VARCHAR`
+#' @param redact_secret `BOOLEAN`
+#' @param set_region `BOOLEAN`
+#' @return Unspecified.
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{load_aws_credentials(redact_secret = BOOLEAN, set_region = BOOLEAN)}
+#' \item \code{load_aws_credentials(col0 = VARCHAR, redact_secret = BOOLEAN, set_region = BOOLEAN)}
+#' }
+#' @section Provided by:
+#' The \code{aws} extension (\code{LOAD aws;}).
+load_aws_credentials <- function(col0 = VARCHAR, redact_secret = BOOLEAN, set_region = BOOLEAN) {
+  stop("DuckDB function load_aws_credentials() is not available in R.")
+}
+
 #' DuckDB function log
 #'
 #' @description
@@ -7033,6 +14839,34 @@ make_timestamp_ms <- function(nanos = BIGINT) {
 #' ```
 make_timestamp_ns <- function(nanos = BIGINT) {
   stop("DuckDB function make_timestamp_ns() is not available in R.")
+}
+
+#' DuckDB function make_timestamptz
+#'
+#' @description
+#' DuckDB function `make_timestamptz()`.
+#'
+#' @name make_timestamptz
+#' @usage make_timestamptz(col0, col1, col2, col3, col4, col5, col6)
+#' @param col0 `BIGINT`
+#' @param col1 `BIGINT`
+#' @param col2 `BIGINT`
+#' @param col3 `BIGINT`
+#' @param col4 `BIGINT`
+#' @param col5 `DOUBLE`
+#' @param col6 `VARCHAR`
+#' @return `TIMESTAMP WITH TIME ZONE`
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{make_timestamptz(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT, col3 = BIGINT, col4 = BIGINT, col5 = DOUBLE)}
+#' \item \code{make_timestamptz(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT, col3 = BIGINT, col4 = BIGINT, col5 = DOUBLE, col6 = VARCHAR)}
+#' \item \code{make_timestamptz(col0 = BIGINT)}
+#' }
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+make_timestamptz <- function(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT, col3 = BIGINT, col4 = BIGINT, col5 = DOUBLE, col6 = VARCHAR) {
+  stop("DuckDB function make_timestamptz() is not available in R.")
 }
 
 #' DuckDB function make_type
@@ -7603,6 +15437,107 @@ multiply <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | F
   stop("DuckDB function *() is not available in R.")
 }
 
+#' DuckDB function murmur3_32
+#'
+#' @description
+#' DuckDB function `murmur3_32()`.
+#'
+#' @name murmur3_32
+#' @usage murmur3_32(col0)
+#' @param col0 `ANY`
+#' @return `INTEGER`
+#' @export
+#' @section Provided by:
+#' The \code{ducklake} extension (\code{LOAD ducklake;}).
+murmur3_32 <- function(col0 = ANY) {
+  stop("DuckDB function murmur3_32() is not available in R.")
+}
+
+#' DuckDB function mysql_clear_cache
+#'
+#' @description
+#' DuckDB function `mysql_clear_cache()`.
+#'
+#' @name mysql_clear_cache
+#' @usage mysql_clear_cache()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{mysql_scanner} extension (\code{LOAD mysql_scanner;}).
+mysql_clear_cache <- function() {
+  stop("DuckDB function mysql_clear_cache() is not available in R.")
+}
+
+#' DuckDB function mysql_debug_execution_plan
+#'
+#' @description
+#' DuckDB function `mysql_debug_execution_plan()`.
+#'
+#' @name mysql_debug_execution_plan
+#' @usage mysql_debug_execution_plan()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{mysql_scanner} extension (\code{LOAD mysql_scanner;}).
+mysql_debug_execution_plan <- function() {
+  stop("DuckDB function mysql_debug_execution_plan() is not available in R.")
+}
+
+#' DuckDB function mysql_execute
+#'
+#' @description
+#' DuckDB function `mysql_execute()`.
+#'
+#' @name mysql_execute
+#' @usage mysql_execute(col0, col1, params)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param params `ANY`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{mysql_scanner} extension (\code{LOAD mysql_scanner;}).
+mysql_execute <- function(col0 = VARCHAR, col1 = VARCHAR, params = ANY) {
+  stop("DuckDB function mysql_execute() is not available in R.")
+}
+
+#' DuckDB function mysql_explain_federated
+#'
+#' @description
+#' DuckDB function `mysql_explain_federated()`.
+#'
+#' @name mysql_explain_federated
+#' @usage mysql_explain_federated()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{mysql_scanner} extension (\code{LOAD mysql_scanner;}).
+mysql_explain_federated <- function() {
+  stop("DuckDB function mysql_explain_federated() is not available in R.")
+}
+
+#' DuckDB function mysql_query
+#'
+#' @description
+#' DuckDB function `mysql_query()`.
+#'
+#' @name mysql_query
+#' @usage mysql_query(col0, col1, stream_results, params)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param stream_results `BOOLEAN`
+#' @param params `ANY`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{mysql_scanner} extension (\code{LOAD mysql_scanner;}).
+mysql_query <- function(col0 = VARCHAR, col1 = VARCHAR, stream_results = BOOLEAN, params = ANY) {
+  stop("DuckDB function mysql_query() is not available in R.")
+}
+
 #' DuckDB function nanosecond
 #'
 #' @description
@@ -7619,6 +15554,38 @@ multiply <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | F
 #' ```
 nanosecond <- function(tsns = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP_NS | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function nanosecond() is not available in R.")
+}
+
+#' DuckDB function netmask
+#'
+#' @description
+#' DuckDB function `netmask()`.
+#'
+#' @name netmask
+#' @usage netmask(col0)
+#' @param col0 `INET`
+#' @return `INET`
+#' @export
+#' @section Provided by:
+#' The \code{inet} extension (\code{LOAD inet;}).
+netmask <- function(col0 = INET) {
+  stop("DuckDB function netmask() is not available in R.")
+}
+
+#' DuckDB function network
+#'
+#' @description
+#' DuckDB function `network()`.
+#'
+#' @name network
+#' @usage network(col0)
+#' @param col0 `INET`
+#' @return `INET`
+#' @export
+#' @section Provided by:
+#' The \code{inet} extension (\code{LOAD inet;}).
+network <- function(col0 = INET) {
+  stop("DuckDB function network() is not available in R.")
 }
 
 #' DuckDB function nextafter
@@ -8017,6 +15984,22 @@ parquet_schema <- function(col0 = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function parquet_schema() is not available in R.")
 }
 
+#' DuckDB function parse_delta_filter_logline
+#'
+#' @description
+#' DuckDB macro `parse_delta_filter_logline()`.
+#'
+#' @name parse_delta_filter_logline
+#' @usage parse_delta_filter_logline(x)
+#' @param x Unspecified.
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
+parse_delta_filter_logline <- function(x) {
+  stop("DuckDB function parse_delta_filter_logline() is not available in R.")
+}
+
 #' DuckDB function parse_dirname
 #'
 #' @description
@@ -8166,6 +16149,22 @@ parse_path <- function(path = VARCHAR, separator = VARCHAR) {
 #' @export
 percent_rank <- function() {
   stop("DuckDB function percent_rank() is not available in R.")
+}
+
+#' DuckDB function pg_clear_cache
+#'
+#' @description
+#' DuckDB function `pg_clear_cache()`.
+#'
+#' @name pg_clear_cache
+#' @usage pg_clear_cache()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
+pg_clear_cache <- function() {
+  stop("DuckDB function pg_clear_cache() is not available in R.")
 }
 
 #' DuckDB function pg_collation_is_visible
@@ -8416,6 +16415,22 @@ pg_table_is_visible <- function(table_oid) {
   stop("DuckDB function pg_table_is_visible() is not available in R.")
 }
 
+#' DuckDB function pg_timezone_names
+#'
+#' @description
+#' DuckDB function `pg_timezone_names()`.
+#'
+#' @name pg_timezone_names
+#' @usage pg_timezone_names()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+pg_timezone_names <- function() {
+  stop("DuckDB function pg_timezone_names() is not available in R.")
+}
+
 #' DuckDB function pg_ts_config_is_visible
 #'
 #' @description
@@ -8532,6 +16547,162 @@ platform <- function() {
   stop("DuckDB function platform() is not available in R.")
 }
 
+#' DuckDB function postgres_attach
+#'
+#' @description
+#' DuckDB function `postgres_attach()`.
+#'
+#' @name postgres_attach
+#' @usage postgres_attach(col0, suffix, sink_schema, filter_pushdown, source_schema, overwrite)
+#' @param col0 `VARCHAR`
+#' @param suffix `VARCHAR`
+#' @param sink_schema `VARCHAR`
+#' @param filter_pushdown `BOOLEAN`
+#' @param source_schema `VARCHAR`
+#' @param overwrite `BOOLEAN`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
+postgres_attach <- function(col0 = VARCHAR, suffix = VARCHAR, sink_schema = VARCHAR, filter_pushdown = BOOLEAN, source_schema = VARCHAR, overwrite = BOOLEAN) {
+  stop("DuckDB function postgres_attach() is not available in R.")
+}
+
+#' DuckDB function postgres_configure_pool
+#'
+#' @description
+#' DuckDB function `postgres_configure_pool()`.
+#'
+#' @name postgres_configure_pool
+#' @usage postgres_configure_pool(
+#'   health_check_query,
+#'   max_lifetime_millis,
+#'   enable_reaper_thread,
+#'   enable_thread_local_cache,
+#'   wait_timeout_millis,
+#'   max_connections,
+#'   idle_timeout_millis,
+#'   acquire_mode,
+#'   catalog_name
+#' )
+#' @param health_check_query `VARCHAR`
+#' @param max_lifetime_millis `UBIGINT`
+#' @param enable_reaper_thread `BOOLEAN`
+#' @param enable_thread_local_cache `BOOLEAN`
+#' @param wait_timeout_millis `UBIGINT`
+#' @param max_connections `UBIGINT`
+#' @param idle_timeout_millis `UBIGINT`
+#' @param acquire_mode `VARCHAR`
+#' @param catalog_name `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
+postgres_configure_pool <- function(health_check_query = VARCHAR, max_lifetime_millis = UBIGINT, enable_reaper_thread = BOOLEAN, enable_thread_local_cache = BOOLEAN, wait_timeout_millis = UBIGINT, max_connections = UBIGINT, idle_timeout_millis = UBIGINT, acquire_mode = VARCHAR, catalog_name = VARCHAR) {
+  stop("DuckDB function postgres_configure_pool() is not available in R.")
+}
+
+#' DuckDB function postgres_execute
+#'
+#' @description
+#' DuckDB function `postgres_execute()`.
+#'
+#' @name postgres_execute
+#' @usage postgres_execute(col0, col1, use_transaction)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param use_transaction `BOOLEAN`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
+postgres_execute <- function(col0 = VARCHAR, col1 = VARCHAR, use_transaction = BOOLEAN) {
+  stop("DuckDB function postgres_execute() is not available in R.")
+}
+
+#' DuckDB function postgres_hstore_get
+#'
+#' @description
+#' DuckDB function `postgres_hstore_get()`.
+#'
+#' @name postgres_hstore_get
+#' @usage postgres_hstore_get(col0, col1)
+#' @param col0,col1 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
+postgres_hstore_get <- function(col0 = VARCHAR, col1 = VARCHAR) {
+  stop("DuckDB function postgres_hstore_get() is not available in R.")
+}
+
+#' DuckDB function postgres_hstore_to_json
+#'
+#' @description
+#' DuckDB function `postgres_hstore_to_json()`.
+#'
+#' @name postgres_hstore_to_json
+#' @usage postgres_hstore_to_json(col0)
+#' @param col0 `VARCHAR`
+#' @return `JSON`
+#' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
+postgres_hstore_to_json <- function(col0 = VARCHAR) {
+  stop("DuckDB function postgres_hstore_to_json() is not available in R.")
+}
+
+#' DuckDB function postgres_query
+#'
+#' @description
+#' DuckDB function `postgres_query()`.
+#'
+#' @name postgres_query
+#' @usage postgres_query(col0, col1, params, use_transaction)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param params `ANY`
+#' @param use_transaction `BOOLEAN`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
+postgres_query <- function(col0 = VARCHAR, col1 = VARCHAR, params = ANY, use_transaction = BOOLEAN) {
+  stop("DuckDB function postgres_query() is not available in R.")
+}
+
+#' DuckDB function postgres_scan
+#'
+#' @description
+#' DuckDB function `postgres_scan()`.
+#'
+#' @name postgres_scan
+#' @usage postgres_scan(col0, col1, col2)
+#' @param col0,col1,col2 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
+postgres_scan <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = VARCHAR) {
+  stop("DuckDB function postgres_scan() is not available in R.")
+}
+
+#' DuckDB function postgres_scan_pushdown
+#'
+#' @description
+#' DuckDB function `postgres_scan_pushdown()`.
+#'
+#' @name postgres_scan_pushdown
+#' @usage postgres_scan_pushdown(col0, col1, col2)
+#' @param col0,col1,col2 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
+postgres_scan_pushdown <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = VARCHAR) {
+  stop("DuckDB function postgres_scan_pushdown() is not available in R.")
+}
+
 #' DuckDB function pow
 #'
 #' @description
@@ -8602,6 +16773,22 @@ pragma_database_size <- function() {
   stop("DuckDB function pragma_database_size() is not available in R.")
 }
 
+#' DuckDB function pragma_hnsw_index_info
+#'
+#' @description
+#' DuckDB function `pragma_hnsw_index_info()`.
+#'
+#' @name pragma_hnsw_index_info
+#' @usage pragma_hnsw_index_info()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{vss} extension (\code{LOAD vss;}).
+pragma_hnsw_index_info <- function() {
+  stop("DuckDB function pragma_hnsw_index_info() is not available in R.")
+}
+
 #' DuckDB function pragma_metadata_info
 #'
 #' @description
@@ -8633,6 +16820,22 @@ pragma_metadata_info <- function(col0 = VARCHAR) {
 #' @export
 pragma_platform <- function() {
   stop("DuckDB function pragma_platform() is not available in R.")
+}
+
+#' DuckDB function pragma_rtree_index_info
+#'
+#' @description
+#' DuckDB function `pragma_rtree_index_info()`.
+#'
+#' @name pragma_rtree_index_info
+#' @usage pragma_rtree_index_info()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+pragma_rtree_index_info <- function() {
+  stop("DuckDB function pragma_rtree_index_info() is not available in R.")
 }
 
 #' DuckDB function pragma_show
@@ -8759,6 +16962,194 @@ printf <- function(format = VARCHAR) {
 #' ```
 product <- function(arg = DOUBLE) {
   stop("DuckDB function product() is not available in R.")
+}
+
+#' DuckDB function quack_active_connections
+#'
+#' @description
+#' DuckDB function `quack_active_connections()`.
+#'
+#' @name quack_active_connections
+#' @usage quack_active_connections()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
+quack_active_connections <- function() {
+  stop("DuckDB function quack_active_connections() is not available in R.")
+}
+
+#' DuckDB function quack_check_token
+#'
+#' @description
+#' DuckDB function `quack_check_token()`.
+#'
+#' @name quack_check_token
+#' @usage quack_check_token(col0, col1, col2)
+#' @param col0,col1,col2 `VARCHAR`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
+quack_check_token <- function(col0 = VARCHAR, col1 = VARCHAR, col2 = VARCHAR) {
+  stop("DuckDB function quack_check_token() is not available in R.")
+}
+
+#' DuckDB function quack_clear_cache
+#'
+#' @description
+#' DuckDB function `quack_clear_cache()`.
+#'
+#' @name quack_clear_cache
+#' @usage quack_clear_cache()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
+quack_clear_cache <- function() {
+  stop("DuckDB function quack_clear_cache() is not available in R.")
+}
+
+#' DuckDB function quack_identify
+#'
+#' @description
+#' DuckDB function `quack_identify()`.
+#'
+#' @name quack_identify
+#' @usage quack_identify(meta, region, hostname, provider, name)
+#' @param meta,region,hostname,provider,name `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
+quack_identify <- function(meta = VARCHAR, region = VARCHAR, hostname = VARCHAR, provider = VARCHAR, name = VARCHAR) {
+  stop("DuckDB function quack_identify() is not available in R.")
+}
+
+#' DuckDB function quack_nop_authorization
+#'
+#' @description
+#' DuckDB function `quack_nop_authorization()`.
+#'
+#' @name quack_nop_authorization
+#' @usage quack_nop_authorization(col0, col1)
+#' @param col0,col1 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
+quack_nop_authorization <- function(col0 = VARCHAR, col1 = VARCHAR) {
+  stop("DuckDB function quack_nop_authorization() is not available in R.")
+}
+
+#' DuckDB function quack_query
+#'
+#' @description
+#' DuckDB function `quack_query()`.
+#'
+#' @name quack_query
+#' @usage quack_query(col0, col1, token, disable_ssl)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param token `VARCHAR`
+#' @param disable_ssl `BOOLEAN`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
+quack_query <- function(col0 = VARCHAR, col1 = VARCHAR, token = VARCHAR, disable_ssl = BOOLEAN) {
+  stop("DuckDB function quack_query() is not available in R.")
+}
+
+#' DuckDB function quack_query_by_name
+#'
+#' @description
+#' DuckDB function `quack_query_by_name()`.
+#'
+#' @name quack_query_by_name
+#' @usage quack_query_by_name(col0, col1)
+#' @param col0,col1 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
+quack_query_by_name <- function(col0 = VARCHAR, col1 = VARCHAR) {
+  stop("DuckDB function quack_query_by_name() is not available in R.")
+}
+
+#' DuckDB function quack_serve
+#'
+#' @description
+#' DuckDB function `quack_serve()`.
+#'
+#' @name quack_serve
+#' @usage quack_serve(col0, token, allow_other_hostname, disable_ssl)
+#' @param col0 `VARCHAR`
+#' @param token `VARCHAR`
+#' @param allow_other_hostname `BOOLEAN`
+#' @param disable_ssl `BOOLEAN`
+#' @return Unspecified.
+#' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{quack_serve(col0 = VARCHAR, token = VARCHAR, allow_other_hostname = BOOLEAN, disable_ssl = BOOLEAN)}
+#' \item \code{quack_serve(token = VARCHAR, allow_other_hostname = BOOLEAN, disable_ssl = BOOLEAN)}
+#' }
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
+quack_serve <- function(col0 = VARCHAR, token = VARCHAR, allow_other_hostname = BOOLEAN, disable_ssl = BOOLEAN) {
+  stop("DuckDB function quack_serve() is not available in R.")
+}
+
+#' DuckDB function quack_server_list
+#'
+#' @description
+#' DuckDB function `quack_server_list()`.
+#'
+#' @name quack_server_list
+#' @usage quack_server_list()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
+quack_server_list <- function() {
+  stop("DuckDB function quack_server_list() is not available in R.")
+}
+
+#' DuckDB function quack_stop
+#'
+#' @description
+#' DuckDB function `quack_stop()`.
+#'
+#' @name quack_stop
+#' @usage quack_stop(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
+quack_stop <- function(col0 = VARCHAR) {
+  stop("DuckDB function quack_stop() is not available in R.")
+}
+
+#' DuckDB function quack_uri_parser
+#'
+#' @description
+#' DuckDB function `quack_uri_parser()`.
+#'
+#' @name quack_uri_parser
+#' @usage quack_uri_parser(col0, col1)
+#' @param col0 `VARCHAR`
+#' @param col1 `BOOLEAN`
+#' @return `STRUCT(host VARCHAR, port USMALLINT, ipv6 BOOLEAN, ssl BOOLEAN, url VARCHAR)`
+#' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
+quack_uri_parser <- function(col0 = VARCHAR, col1 = BOOLEAN) {
+  stop("DuckDB function quack_uri_parser() is not available in R.")
 }
 
 #' DuckDB function quantile_cont
@@ -8923,10 +17314,10 @@ random <- function() {
 #' Creates a list of values between `start` and `stop` - the stop parameter is exclusive.
 #'
 #' @name range
-#' @usage range(start, stop, step)
-#' @param start `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @param stop `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @param step `BIGINT | INTERVAL`
+#' @usage range(col0, col1, col2)
+#' @param col0 `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @param col1 `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @param col2 `BIGINT | INTERVAL`
 #' @return `BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
 #' @export
 #' @section Overloads:
@@ -8935,18 +17326,32 @@ random <- function() {
 #' \item \code{range(col0 = BIGINT, col1 = BIGINT)}
 #' \item \code{range(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT)}
 #' \item \code{range(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)}
+#' \item \code{range(col0 = `TIMESTAMP WITH TIME ZONE`, col1 = `TIMESTAMP WITH TIME ZONE`, col2 = INTERVAL)}
 #' \item \code{range(start = BIGINT)}
 #' \item \code{range(start = BIGINT, stop = BIGINT)}
 #' \item \code{range(start = BIGINT, stop = BIGINT, step = BIGINT)}
 #' \item \code{range(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}
 #' \item \code{range(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}
 #' }
+#' @section Provided by:
+#' \itemize{
+#' \item \code{range(col0 = BIGINT)}: built in
+#' \item \code{range(col0 = BIGINT, col1 = BIGINT)}: built in
+#' \item \code{range(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT)}: built in
+#' \item \code{range(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)}: built in
+#' \item \code{range(col0 = `TIMESTAMP WITH TIME ZONE`, col1 = `TIMESTAMP WITH TIME ZONE`, col2 = INTERVAL)}: \code{icu}
+#' \item \code{range(start = BIGINT)}: built in
+#' \item \code{range(start = BIGINT, stop = BIGINT)}: built in
+#' \item \code{range(start = BIGINT, stop = BIGINT, step = BIGINT)}: built in
+#' \item \code{range(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}: built in
+#' \item \code{range(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}: built in
+#' }
 #' @family list
 #' @section SQL examples:
 #' ```
 #' range(2, 5, 3)
 #' ```
-range <- function(start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, stop = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, step = `BIGINT | INTERVAL`) {
+range <- function(col0 = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, col1 = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, col2 = `BIGINT | INTERVAL`) {
   stop("DuckDB function range() is not available in R.")
 }
 
@@ -8976,6 +17381,34 @@ rank <- function() {
 #' @export
 rank_dense <- function() {
   stop("DuckDB function rank_dense() is not available in R.")
+}
+
+#' DuckDB function read_avro
+#'
+#' @description
+#' DuckDB function `read_avro()`.
+#'
+#' @name read_avro
+#' @usage read_avro(
+#'   col0,
+#'   hive_types_autocast,
+#'   hive_types,
+#'   hive_partitioning,
+#'   union_by_name,
+#'   filename
+#' )
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param hive_types `ANY`
+#' @param hive_partitioning `BOOLEAN`
+#' @param union_by_name `BOOLEAN`
+#' @param filename `ANY`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{avro} extension (\code{LOAD avro;}).
+read_avro <- function(col0 = `VARCHAR | VARCHAR[]`, hive_types_autocast = BOOLEAN, hive_types = ANY, hive_partitioning = BOOLEAN, union_by_name = BOOLEAN, filename = ANY) {
+  stop("DuckDB function read_avro() is not available in R.")
 }
 
 #' DuckDB function read_blob
@@ -9234,6 +17667,362 @@ read_duckdb <- function(col0 = `VARCHAR | VARCHAR[]`, table_name = VARCHAR, sche
   stop("DuckDB function read_duckdb() is not available in R.")
 }
 
+#' DuckDB function read_json
+#'
+#' @description
+#' DuckDB function `read_json()`.
+#'
+#' @name read_json
+#' @usage read_json(
+#'   col0,
+#'   convert_strings_to_integers,
+#'   maximum_sample_files,
+#'   timestamp_format,
+#'   field_appearance_threshold,
+#'   timestampformat,
+#'   map_inference_threshold,
+#'   date_format,
+#'   filename,
+#'   union_by_name,
+#'   compression,
+#'   maximum_depth,
+#'   columns,
+#'   sample_size,
+#'   hive_types,
+#'   hive_types_autocast,
+#'   maximum_object_size,
+#'   format,
+#'   ignore_errors,
+#'   hive_partitioning,
+#'   auto_detect,
+#'   records,
+#'   dateformat
+#' )
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param convert_strings_to_integers `BOOLEAN`
+#' @param maximum_sample_files `BIGINT`
+#' @param timestamp_format `VARCHAR`
+#' @param field_appearance_threshold `DOUBLE`
+#' @param timestampformat `VARCHAR`
+#' @param map_inference_threshold `BIGINT`
+#' @param date_format `VARCHAR`
+#' @param filename `ANY`
+#' @param union_by_name `BOOLEAN`
+#' @param compression `VARCHAR`
+#' @param maximum_depth `BIGINT`
+#' @param columns `ANY`
+#' @param sample_size `BIGINT`
+#' @param hive_types `ANY`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param maximum_object_size `UINTEGER`
+#' @param format `VARCHAR`
+#' @param ignore_errors `BOOLEAN`
+#' @param hive_partitioning `BOOLEAN`
+#' @param auto_detect `BOOLEAN`
+#' @param records `VARCHAR`
+#' @param dateformat `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+read_json <- function(col0 = `VARCHAR | VARCHAR[]`, convert_strings_to_integers = BOOLEAN, maximum_sample_files = BIGINT, timestamp_format = VARCHAR, field_appearance_threshold = DOUBLE, timestampformat = VARCHAR, map_inference_threshold = BIGINT, date_format = VARCHAR, filename = ANY, union_by_name = BOOLEAN, compression = VARCHAR, maximum_depth = BIGINT, columns = ANY, sample_size = BIGINT, hive_types = ANY, hive_types_autocast = BOOLEAN, maximum_object_size = UINTEGER, format = VARCHAR, ignore_errors = BOOLEAN, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, records = VARCHAR, dateformat = VARCHAR) {
+  stop("DuckDB function read_json() is not available in R.")
+}
+
+#' DuckDB function read_json_auto
+#'
+#' @description
+#' DuckDB function `read_json_auto()`.
+#'
+#' @name read_json_auto
+#' @usage read_json_auto(
+#'   col0,
+#'   convert_strings_to_integers,
+#'   maximum_sample_files,
+#'   timestamp_format,
+#'   field_appearance_threshold,
+#'   timestampformat,
+#'   map_inference_threshold,
+#'   date_format,
+#'   filename,
+#'   union_by_name,
+#'   compression,
+#'   maximum_depth,
+#'   columns,
+#'   sample_size,
+#'   hive_types,
+#'   hive_types_autocast,
+#'   maximum_object_size,
+#'   format,
+#'   ignore_errors,
+#'   hive_partitioning,
+#'   auto_detect,
+#'   records,
+#'   dateformat
+#' )
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param convert_strings_to_integers `BOOLEAN`
+#' @param maximum_sample_files `BIGINT`
+#' @param timestamp_format `VARCHAR`
+#' @param field_appearance_threshold `DOUBLE`
+#' @param timestampformat `VARCHAR`
+#' @param map_inference_threshold `BIGINT`
+#' @param date_format `VARCHAR`
+#' @param filename `ANY`
+#' @param union_by_name `BOOLEAN`
+#' @param compression `VARCHAR`
+#' @param maximum_depth `BIGINT`
+#' @param columns `ANY`
+#' @param sample_size `BIGINT`
+#' @param hive_types `ANY`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param maximum_object_size `UINTEGER`
+#' @param format `VARCHAR`
+#' @param ignore_errors `BOOLEAN`
+#' @param hive_partitioning `BOOLEAN`
+#' @param auto_detect `BOOLEAN`
+#' @param records `VARCHAR`
+#' @param dateformat `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+read_json_auto <- function(col0 = `VARCHAR | VARCHAR[]`, convert_strings_to_integers = BOOLEAN, maximum_sample_files = BIGINT, timestamp_format = VARCHAR, field_appearance_threshold = DOUBLE, timestampformat = VARCHAR, map_inference_threshold = BIGINT, date_format = VARCHAR, filename = ANY, union_by_name = BOOLEAN, compression = VARCHAR, maximum_depth = BIGINT, columns = ANY, sample_size = BIGINT, hive_types = ANY, hive_types_autocast = BOOLEAN, maximum_object_size = UINTEGER, format = VARCHAR, ignore_errors = BOOLEAN, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, records = VARCHAR, dateformat = VARCHAR) {
+  stop("DuckDB function read_json_auto() is not available in R.")
+}
+
+#' DuckDB function read_json_objects
+#'
+#' @description
+#' DuckDB function `read_json_objects()`.
+#'
+#' @name read_json_objects
+#' @usage read_json_objects(
+#'   col0,
+#'   ignore_errors,
+#'   format,
+#'   maximum_object_size,
+#'   hive_types_autocast,
+#'   hive_types,
+#'   hive_partitioning,
+#'   compression,
+#'   union_by_name,
+#'   filename
+#' )
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param ignore_errors `BOOLEAN`
+#' @param format `VARCHAR`
+#' @param maximum_object_size `UINTEGER`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param hive_types `ANY`
+#' @param hive_partitioning `BOOLEAN`
+#' @param compression `VARCHAR`
+#' @param union_by_name `BOOLEAN`
+#' @param filename `ANY`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+read_json_objects <- function(col0 = `VARCHAR | VARCHAR[]`, ignore_errors = BOOLEAN, format = VARCHAR, maximum_object_size = UINTEGER, hive_types_autocast = BOOLEAN, hive_types = ANY, hive_partitioning = BOOLEAN, compression = VARCHAR, union_by_name = BOOLEAN, filename = ANY) {
+  stop("DuckDB function read_json_objects() is not available in R.")
+}
+
+#' DuckDB function read_json_objects_auto
+#'
+#' @description
+#' DuckDB function `read_json_objects_auto()`.
+#'
+#' @name read_json_objects_auto
+#' @usage read_json_objects_auto(
+#'   col0,
+#'   ignore_errors,
+#'   format,
+#'   maximum_object_size,
+#'   hive_types_autocast,
+#'   hive_types,
+#'   hive_partitioning,
+#'   compression,
+#'   union_by_name,
+#'   filename
+#' )
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param ignore_errors `BOOLEAN`
+#' @param format `VARCHAR`
+#' @param maximum_object_size `UINTEGER`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param hive_types `ANY`
+#' @param hive_partitioning `BOOLEAN`
+#' @param compression `VARCHAR`
+#' @param union_by_name `BOOLEAN`
+#' @param filename `ANY`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+read_json_objects_auto <- function(col0 = `VARCHAR | VARCHAR[]`, ignore_errors = BOOLEAN, format = VARCHAR, maximum_object_size = UINTEGER, hive_types_autocast = BOOLEAN, hive_types = ANY, hive_partitioning = BOOLEAN, compression = VARCHAR, union_by_name = BOOLEAN, filename = ANY) {
+  stop("DuckDB function read_json_objects_auto() is not available in R.")
+}
+
+#' DuckDB function read_ndjson
+#'
+#' @description
+#' DuckDB function `read_ndjson()`.
+#'
+#' @name read_ndjson
+#' @usage read_ndjson(
+#'   col0,
+#'   convert_strings_to_integers,
+#'   maximum_sample_files,
+#'   timestamp_format,
+#'   field_appearance_threshold,
+#'   timestampformat,
+#'   map_inference_threshold,
+#'   date_format,
+#'   filename,
+#'   union_by_name,
+#'   compression,
+#'   maximum_depth,
+#'   columns,
+#'   sample_size,
+#'   hive_types,
+#'   hive_types_autocast,
+#'   maximum_object_size,
+#'   format,
+#'   ignore_errors,
+#'   hive_partitioning,
+#'   auto_detect,
+#'   records,
+#'   dateformat
+#' )
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param convert_strings_to_integers `BOOLEAN`
+#' @param maximum_sample_files `BIGINT`
+#' @param timestamp_format `VARCHAR`
+#' @param field_appearance_threshold `DOUBLE`
+#' @param timestampformat `VARCHAR`
+#' @param map_inference_threshold `BIGINT`
+#' @param date_format `VARCHAR`
+#' @param filename `ANY`
+#' @param union_by_name `BOOLEAN`
+#' @param compression `VARCHAR`
+#' @param maximum_depth `BIGINT`
+#' @param columns `ANY`
+#' @param sample_size `BIGINT`
+#' @param hive_types `ANY`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param maximum_object_size `UINTEGER`
+#' @param format `VARCHAR`
+#' @param ignore_errors `BOOLEAN`
+#' @param hive_partitioning `BOOLEAN`
+#' @param auto_detect `BOOLEAN`
+#' @param records `VARCHAR`
+#' @param dateformat `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+read_ndjson <- function(col0 = `VARCHAR | VARCHAR[]`, convert_strings_to_integers = BOOLEAN, maximum_sample_files = BIGINT, timestamp_format = VARCHAR, field_appearance_threshold = DOUBLE, timestampformat = VARCHAR, map_inference_threshold = BIGINT, date_format = VARCHAR, filename = ANY, union_by_name = BOOLEAN, compression = VARCHAR, maximum_depth = BIGINT, columns = ANY, sample_size = BIGINT, hive_types = ANY, hive_types_autocast = BOOLEAN, maximum_object_size = UINTEGER, format = VARCHAR, ignore_errors = BOOLEAN, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, records = VARCHAR, dateformat = VARCHAR) {
+  stop("DuckDB function read_ndjson() is not available in R.")
+}
+
+#' DuckDB function read_ndjson_auto
+#'
+#' @description
+#' DuckDB function `read_ndjson_auto()`.
+#'
+#' @name read_ndjson_auto
+#' @usage read_ndjson_auto(
+#'   col0,
+#'   convert_strings_to_integers,
+#'   maximum_sample_files,
+#'   timestamp_format,
+#'   field_appearance_threshold,
+#'   timestampformat,
+#'   map_inference_threshold,
+#'   date_format,
+#'   filename,
+#'   union_by_name,
+#'   compression,
+#'   maximum_depth,
+#'   columns,
+#'   sample_size,
+#'   hive_types,
+#'   hive_types_autocast,
+#'   maximum_object_size,
+#'   format,
+#'   ignore_errors,
+#'   hive_partitioning,
+#'   auto_detect,
+#'   records,
+#'   dateformat
+#' )
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param convert_strings_to_integers `BOOLEAN`
+#' @param maximum_sample_files `BIGINT`
+#' @param timestamp_format `VARCHAR`
+#' @param field_appearance_threshold `DOUBLE`
+#' @param timestampformat `VARCHAR`
+#' @param map_inference_threshold `BIGINT`
+#' @param date_format `VARCHAR`
+#' @param filename `ANY`
+#' @param union_by_name `BOOLEAN`
+#' @param compression `VARCHAR`
+#' @param maximum_depth `BIGINT`
+#' @param columns `ANY`
+#' @param sample_size `BIGINT`
+#' @param hive_types `ANY`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param maximum_object_size `UINTEGER`
+#' @param format `VARCHAR`
+#' @param ignore_errors `BOOLEAN`
+#' @param hive_partitioning `BOOLEAN`
+#' @param auto_detect `BOOLEAN`
+#' @param records `VARCHAR`
+#' @param dateformat `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+read_ndjson_auto <- function(col0 = `VARCHAR | VARCHAR[]`, convert_strings_to_integers = BOOLEAN, maximum_sample_files = BIGINT, timestamp_format = VARCHAR, field_appearance_threshold = DOUBLE, timestampformat = VARCHAR, map_inference_threshold = BIGINT, date_format = VARCHAR, filename = ANY, union_by_name = BOOLEAN, compression = VARCHAR, maximum_depth = BIGINT, columns = ANY, sample_size = BIGINT, hive_types = ANY, hive_types_autocast = BOOLEAN, maximum_object_size = UINTEGER, format = VARCHAR, ignore_errors = BOOLEAN, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, records = VARCHAR, dateformat = VARCHAR) {
+  stop("DuckDB function read_ndjson_auto() is not available in R.")
+}
+
+#' DuckDB function read_ndjson_objects
+#'
+#' @description
+#' DuckDB function `read_ndjson_objects()`.
+#'
+#' @name read_ndjson_objects
+#' @usage read_ndjson_objects(
+#'   col0,
+#'   ignore_errors,
+#'   format,
+#'   maximum_object_size,
+#'   hive_types_autocast,
+#'   hive_types,
+#'   hive_partitioning,
+#'   compression,
+#'   union_by_name,
+#'   filename
+#' )
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @param ignore_errors `BOOLEAN`
+#' @param format `VARCHAR`
+#' @param maximum_object_size `UINTEGER`
+#' @param hive_types_autocast `BOOLEAN`
+#' @param hive_types `ANY`
+#' @param hive_partitioning `BOOLEAN`
+#' @param compression `VARCHAR`
+#' @param union_by_name `BOOLEAN`
+#' @param filename `ANY`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+read_ndjson_objects <- function(col0 = `VARCHAR | VARCHAR[]`, ignore_errors = BOOLEAN, format = VARCHAR, maximum_object_size = UINTEGER, hive_types_autocast = BOOLEAN, hive_types = ANY, hive_partitioning = BOOLEAN, compression = VARCHAR, union_by_name = BOOLEAN, filename = ANY) {
+  stop("DuckDB function read_ndjson_objects() is not available in R.")
+}
+
 #' DuckDB function read_parquet
 #'
 #' @description
@@ -9278,6 +18067,24 @@ read_parquet <- function(col0 = `VARCHAR | VARCHAR[]`, can_have_nan = BOOLEAN, f
   stop("DuckDB function read_parquet() is not available in R.")
 }
 
+#' DuckDB function read_postgres_binary
+#'
+#' @description
+#' DuckDB function `read_postgres_binary()`.
+#'
+#' @name read_postgres_binary
+#' @usage read_postgres_binary(col0, buffer_size, columns)
+#' @param col0 `VARCHAR`
+#' @param buffer_size `UBIGINT`
+#' @param columns `ANY`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{postgres_scanner} extension (\code{LOAD postgres_scanner;}).
+read_postgres_binary <- function(col0 = VARCHAR, buffer_size = UBIGINT, columns = ANY) {
+  stop("DuckDB function read_postgres_binary() is not available in R.")
+}
+
 #' DuckDB function read_text
 #'
 #' @description
@@ -9290,6 +18097,56 @@ read_parquet <- function(col0 = `VARCHAR | VARCHAR[]`, can_have_nan = BOOLEAN, f
 #' @export
 read_text <- function(col0 = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function read_text() is not available in R.")
+}
+
+#' DuckDB function read_vortex
+#'
+#' @description
+#' DuckDB function `read_vortex()`.
+#'
+#' @name read_vortex
+#' @usage read_vortex(col0)
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{vortex} extension (\code{LOAD vortex;}).
+read_vortex <- function(col0 = `VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function read_vortex() is not available in R.")
+}
+
+#' DuckDB function read_xlsx
+#'
+#' @description
+#' DuckDB function `read_xlsx()`.
+#'
+#' @name read_xlsx
+#' @usage read_xlsx(
+#'   col0,
+#'   normalize_names,
+#'   empty_as_varchar,
+#'   stop_at_empty,
+#'   sheet,
+#'   range,
+#'   ignore_errors,
+#'   all_varchar,
+#'   header
+#' )
+#' @param col0 `VARCHAR`
+#' @param normalize_names `BOOLEAN`
+#' @param empty_as_varchar `BOOLEAN`
+#' @param stop_at_empty `BOOLEAN`
+#' @param sheet `VARCHAR`
+#' @param range `VARCHAR`
+#' @param ignore_errors `BOOLEAN`
+#' @param all_varchar `BOOLEAN`
+#' @param header `BOOLEAN`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{excel} extension (\code{LOAD excel;}).
+read_xlsx <- function(col0 = VARCHAR, normalize_names = BOOLEAN, empty_as_varchar = BOOLEAN, stop_at_empty = BOOLEAN, sheet = VARCHAR, range = VARCHAR, ignore_errors = BOOLEAN, all_varchar = BOOLEAN, header = BOOLEAN) {
+  stop("DuckDB function read_xlsx() is not available in R.")
 }
 
 #' DuckDB function regexp_escape
@@ -9614,6 +18471,40 @@ regr_syy <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function regr_syy() is not available in R.")
 }
 
+#' DuckDB function remove_iceberg_schema_properties
+#'
+#' @description
+#' DuckDB function `remove_iceberg_schema_properties()`.
+#'
+#' @name remove_iceberg_schema_properties
+#' @usage remove_iceberg_schema_properties(col0, col1)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR[]`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
+remove_iceberg_schema_properties <- function(col0 = VARCHAR, col1 = `VARCHAR[]`) {
+  stop("DuckDB function remove_iceberg_schema_properties() is not available in R.")
+}
+
+#' DuckDB function remove_iceberg_table_properties
+#'
+#' @description
+#' DuckDB function `remove_iceberg_table_properties()`.
+#'
+#' @name remove_iceberg_table_properties
+#' @usage remove_iceberg_table_properties(col0, col1)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR[]`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
+remove_iceberg_table_properties <- function(col0 = VARCHAR, col1 = `VARCHAR[]`) {
+  stop("DuckDB function remove_iceberg_table_properties() is not available in R.")
+}
+
 #' DuckDB function repeat
 #'
 #' @description
@@ -9913,6 +18804,22 @@ row_number <- function() {
   stop("DuckDB function row_number() is not available in R.")
 }
 
+#' DuckDB function row_to_json
+#'
+#' @description
+#' DuckDB function `row_to_json()`.
+#'
+#' @name row_to_json
+#' @usage row_to_json()
+
+#' @return `JSON`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+row_to_json <- function() {
+  stop("DuckDB function row_to_json() is not available in R.")
+}
+
 #' DuckDB function rpad
 #'
 #' @description
@@ -9932,6 +18839,38 @@ row_number <- function() {
 #' ```
 rpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
   stop("DuckDB function rpad() is not available in R.")
+}
+
+#' DuckDB function rtree_index_dump
+#'
+#' @description
+#' DuckDB function `rtree_index_dump()`.
+#'
+#' @name rtree_index_dump
+#' @usage rtree_index_dump(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+rtree_index_dump <- function(col0 = VARCHAR) {
+  stop("DuckDB function rtree_index_dump() is not available in R.")
+}
+
+#' DuckDB function rtree_index_scan
+#'
+#' @description
+#' DuckDB function `rtree_index_scan()`.
+#'
+#' @name rtree_index_scan
+#' @usage rtree_index_scan()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+rtree_index_scan <- function() {
+  stop("DuckDB function rtree_index_scan() is not available in R.")
 }
 
 #' DuckDB function rtrim
@@ -10039,6 +18978,40 @@ set_bit <- function(bitstring = BIT, index = INTEGER, new_value = INTEGER) {
   stop("DuckDB function set_bit() is not available in R.")
 }
 
+#' DuckDB function set_iceberg_schema_properties
+#'
+#' @description
+#' DuckDB function `set_iceberg_schema_properties()`.
+#'
+#' @name set_iceberg_schema_properties
+#' @usage set_iceberg_schema_properties(col0, col1)
+#' @param col0 `VARCHAR`
+#' @param col1 `ANY`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
+set_iceberg_schema_properties <- function(col0 = VARCHAR, col1 = ANY) {
+  stop("DuckDB function set_iceberg_schema_properties() is not available in R.")
+}
+
+#' DuckDB function set_iceberg_table_properties
+#'
+#' @description
+#' DuckDB function `set_iceberg_table_properties()`.
+#'
+#' @name set_iceberg_table_properties
+#' @usage set_iceberg_table_properties(col0, col1)
+#' @param col0 `VARCHAR`
+#' @param col1 `ANY`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{iceberg} extension (\code{LOAD iceberg;}).
+set_iceberg_table_properties <- function(col0 = VARCHAR, col1 = ANY) {
+  stop("DuckDB function set_iceberg_table_properties() is not available in R.")
+}
+
 #' DuckDB function setseed
 #'
 #' @description
@@ -10113,6 +19086,22 @@ sha1 <- function(value = VARCHAR) {
 #' ```
 sha256 <- function(value = VARCHAR) {
   stop("DuckDB function sha256() is not available in R.")
+}
+
+#' DuckDB function shapefile_meta
+#'
+#' @description
+#' DuckDB function `shapefile_meta()`.
+#'
+#' @name shapefile_meta
+#' @usage shapefile_meta(col0)
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{spatial} extension (\code{LOAD spatial;}).
+shapefile_meta <- function(col0 = `VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function shapefile_meta() is not available in R.")
 }
 
 #' DuckDB function shobj_description
@@ -10307,6 +19296,81 @@ split_part <- function(string, delimiter, position) {
   stop("DuckDB function split_part() is not available in R.")
 }
 
+#' DuckDB function sql_auto_complete
+#'
+#' @description
+#' DuckDB function `sql_auto_complete()`.
+#'
+#' @name sql_auto_complete
+#' @usage sql_auto_complete(
+#'   col0,
+#'   max_exact_suggestion_count,
+#'   max_file_suggestion_count,
+#'   max_suggestion_count
+#' )
+#' @param col0 `VARCHAR`
+#' @param max_exact_suggestion_count `UBIGINT`
+#' @param max_file_suggestion_count `UBIGINT`
+#' @param max_suggestion_count `UBIGINT`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{autocomplete} extension (\code{LOAD autocomplete;}).
+sql_auto_complete <- function(col0 = VARCHAR, max_exact_suggestion_count = UBIGINT, max_file_suggestion_count = UBIGINT, max_suggestion_count = UBIGINT) {
+  stop("DuckDB function sql_auto_complete() is not available in R.")
+}
+
+#' DuckDB function sqlite_attach
+#'
+#' @description
+#' DuckDB function `sqlite_attach()`.
+#'
+#' @name sqlite_attach
+#' @usage sqlite_attach(col0, overwrite)
+#' @param col0 `VARCHAR`
+#' @param overwrite `BOOLEAN`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{sqlite_scanner} extension (\code{LOAD sqlite_scanner;}).
+sqlite_attach <- function(col0 = VARCHAR, overwrite = BOOLEAN) {
+  stop("DuckDB function sqlite_attach() is not available in R.")
+}
+
+#' DuckDB function sqlite_query
+#'
+#' @description
+#' DuckDB function `sqlite_query()`.
+#'
+#' @name sqlite_query
+#' @usage sqlite_query(col0, col1, params)
+#' @param col0 `VARCHAR`
+#' @param col1 `VARCHAR`
+#' @param params `ANY`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{sqlite_scanner} extension (\code{LOAD sqlite_scanner;}).
+sqlite_query <- function(col0 = VARCHAR, col1 = VARCHAR, params = ANY) {
+  stop("DuckDB function sqlite_query() is not available in R.")
+}
+
+#' DuckDB function sqlite_scan
+#'
+#' @description
+#' DuckDB function `sqlite_scan()`.
+#'
+#' @name sqlite_scan
+#' @usage sqlite_scan(col0, col1)
+#' @param col0,col1 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{sqlite_scanner} extension (\code{LOAD sqlite_scanner;}).
+sqlite_scan <- function(col0 = VARCHAR, col1 = VARCHAR) {
+  stop("DuckDB function sqlite_scan() is not available in R.")
+}
+
 #' DuckDB function sqrt
 #'
 #' @description
@@ -10328,17 +19392,37 @@ sqrt <- function(x = DOUBLE) {
 #' DuckDB function st_astext
 #'
 #' @description
-#' Returns the Well-Known Text (WKT) representation of the geometry.
+#' \itemize{
+#' \item \code{st_astext(geom = GEOMETRY)}: Returns the Well-Known Text (WKT) representation of the geometry.
+#' \item \code{st_astext(point = POINT_2D)}, \code{st_astext(linestring = LINESTRING_2D)}, \code{st_astext(polygon = POLYGON_2D)}, \code{st_astext(box = BOX_2D)}: Returns the geometry as a WKT string.
+#' }
 #'
 #' @name st_astext
 #' @usage st_astext(geom)
 #' @param geom `GEOMETRY`
 #' @return `VARCHAR`
 #' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{st_astext(geom = GEOMETRY)}
+#' \item \code{st_astext(point = POINT_2D)}
+#' \item \code{st_astext(linestring = LINESTRING_2D)}
+#' \item \code{st_astext(polygon = POLYGON_2D)}
+#' \item \code{st_astext(box = BOX_2D)}
+#' }
+#' @section Provided by:
+#' \itemize{
+#' \item \code{st_astext(geom = GEOMETRY)}: built in
+#' \item \code{st_astext(point = POINT_2D)}: \code{spatial}
+#' \item \code{st_astext(linestring = LINESTRING_2D)}: \code{spatial}
+#' \item \code{st_astext(polygon = POLYGON_2D)}: \code{spatial}
+#' \item \code{st_astext(box = BOX_2D)}: \code{spatial}
+#' }
 #' @family geometry
 #' @section SQL examples:
 #' ```
 #' ST_AsText(ST_GeomFromWKB(X'01010000000000000000000000000000000000000000000000'))
+#' SELECT ST_MakeEnvelope(0, 0, 1, 1);
 #' ```
 st_astext <- function(geom = GEOMETRY) {
   stop("DuckDB function st_astext() is not available in R.")
@@ -10426,6 +19510,38 @@ st_setcrs <- function(geom = GEOMETRY, crs = VARCHAR) {
   stop("DuckDB function st_setcrs() is not available in R.")
 }
 
+#' DuckDB function start_ui
+#'
+#' @description
+#' DuckDB function `start_ui()`.
+#'
+#' @name start_ui
+#' @usage start_ui()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ui} extension (\code{LOAD ui;}).
+start_ui <- function() {
+  stop("DuckDB function start_ui() is not available in R.")
+}
+
+#' DuckDB function start_ui_server
+#'
+#' @description
+#' DuckDB function `start_ui_server()`.
+#'
+#' @name start_ui_server
+#' @usage start_ui_server()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ui} extension (\code{LOAD ui;}).
+start_ui_server <- function() {
+  stop("DuckDB function start_ui_server() is not available in R.")
+}
+
 #' DuckDB function starts_with
 #'
 #' @description
@@ -10511,6 +19627,38 @@ stddev_samp <- function(x = DOUBLE) {
 #' @export
 stddev <- function(x = DOUBLE) {
   stop("DuckDB function stddev() is not available in R.")
+}
+
+#' DuckDB function stem
+#'
+#' @description
+#' DuckDB function `stem()`.
+#'
+#' @name stem
+#' @usage stem(col0, col1)
+#' @param col0,col1 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{fts} extension (\code{LOAD fts;}).
+stem <- function(col0 = VARCHAR, col1 = VARCHAR) {
+  stop("DuckDB function stem() is not available in R.")
+}
+
+#' DuckDB function stop_ui_server
+#'
+#' @description
+#' DuckDB function `stop_ui_server()`.
+#'
+#' @name stop_ui_server
+#' @usage stop_ui_server()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ui} extension (\code{LOAD ui;}).
+stop_ui_server <- function() {
+  stop("DuckDB function stop_ui_server() is not available in R.")
 }
 
 #' DuckDB function storage_info
@@ -11203,6 +20351,23 @@ test_vector_types <- function(col0 = ANY, all_flat = BOOLEAN) {
   stop("DuckDB function test_vector_types() is not available in R.")
 }
 
+#' DuckDB function text
+#'
+#' @description
+#' DuckDB function `text()`.
+#'
+#' @name text
+#' @usage text(col0, col1)
+#' @param col0 `DOUBLE`
+#' @param col1 `VARCHAR`
+#' @return `VARCHAR`
+#' @export
+#' @section Provided by:
+#' The \code{excel} extension (\code{LOAD excel;}).
+text <- function(col0 = DOUBLE, col1 = VARCHAR) {
+  stop("DuckDB function text() is not available in R.")
+}
+
 #' DuckDB function time_bucket
 #'
 #' @description
@@ -11446,6 +20611,22 @@ to_hours <- function(integer = BIGINT) {
   stop("DuckDB function to_hours() is not available in R.")
 }
 
+#' DuckDB function to_json
+#'
+#' @description
+#' DuckDB function `to_json()`.
+#'
+#' @name to_json
+#' @usage to_json()
+
+#' @return `JSON`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+to_json <- function() {
+  stop("DuckDB function to_json() is not available in R.")
+}
+
 #' DuckDB function to_microseconds
 #'
 #' @description
@@ -11626,6 +20807,118 @@ to_years <- function(integer = `INTEGER | BIGINT`) {
   stop("DuckDB function to_years() is not available in R.")
 }
 
+#' DuckDB function today
+#'
+#' @description
+#' DuckDB function `today()`.
+#'
+#' @name today
+#' @usage today()
+
+#' @return `DATE`
+#' @export
+#' @section Provided by:
+#' The \code{icu} extension (\code{LOAD icu;}).
+today <- function() {
+  stop("DuckDB function today() is not available in R.")
+}
+
+#' DuckDB function tpcds
+#'
+#' @description
+#' DuckDB function `tpcds()`.
+#'
+#' @name tpcds
+#' @usage tpcds(col0)
+#' @param col0 `BIGINT`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{tpcds} extension (\code{LOAD tpcds;}).
+tpcds <- function(col0 = BIGINT) {
+  stop("DuckDB function tpcds() is not available in R.")
+}
+
+#' DuckDB function tpcds_answers
+#'
+#' @description
+#' DuckDB function `tpcds_answers()`.
+#'
+#' @name tpcds_answers
+#' @usage tpcds_answers()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{tpcds} extension (\code{LOAD tpcds;}).
+tpcds_answers <- function() {
+  stop("DuckDB function tpcds_answers() is not available in R.")
+}
+
+#' DuckDB function tpcds_queries
+#'
+#' @description
+#' DuckDB function `tpcds_queries()`.
+#'
+#' @name tpcds_queries
+#' @usage tpcds_queries()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{tpcds} extension (\code{LOAD tpcds;}).
+tpcds_queries <- function() {
+  stop("DuckDB function tpcds_queries() is not available in R.")
+}
+
+#' DuckDB function tpch
+#'
+#' @description
+#' DuckDB function `tpch()`.
+#'
+#' @name tpch
+#' @usage tpch(col0)
+#' @param col0 `BIGINT`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{tpch} extension (\code{LOAD tpch;}).
+tpch <- function(col0 = BIGINT) {
+  stop("DuckDB function tpch() is not available in R.")
+}
+
+#' DuckDB function tpch_answers
+#'
+#' @description
+#' DuckDB function `tpch_answers()`.
+#'
+#' @name tpch_answers
+#' @usage tpch_answers()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{tpch} extension (\code{LOAD tpch;}).
+tpch_answers <- function() {
+  stop("DuckDB function tpch_answers() is not available in R.")
+}
+
+#' DuckDB function tpch_queries
+#'
+#' @description
+#' DuckDB function `tpch_queries()`.
+#'
+#' @name tpch_queries
+#' @usage tpch_queries()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{tpch} extension (\code{LOAD tpch;}).
+tpch_queries <- function() {
+  stop("DuckDB function tpch_queries() is not available in R.")
+}
+
 #' DuckDB function translate
 #'
 #' @description
@@ -11787,6 +21080,22 @@ typeof <- function(expression = ANY) {
   stop("DuckDB function typeof() is not available in R.")
 }
 
+#' DuckDB function ui_is_started
+#'
+#' @description
+#' DuckDB function `ui_is_started()`.
+#'
+#' @name ui_is_started
+#' @usage ui_is_started()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{ui} extension (\code{LOAD ui;}).
+ui_is_started <- function() {
+  stop("DuckDB function ui_is_started() is not available in R.")
+}
+
 #' DuckDB function unbin
 #'
 #' @description
@@ -11920,6 +21229,38 @@ union_tag <- function(union = UNION) {
 #' ```
 union_value <- function() {
   stop("DuckDB function union_value() is not available in R.")
+}
+
+#' DuckDB function unity_catalog_checkpoint_table
+#'
+#' @description
+#' DuckDB function `unity_catalog_checkpoint_table()`.
+#'
+#' @name unity_catalog_checkpoint_table
+#' @usage unity_catalog_checkpoint_table(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{unity_catalog} extension (\code{LOAD unity_catalog;}).
+unity_catalog_checkpoint_table <- function(col0 = VARCHAR) {
+  stop("DuckDB function unity_catalog_checkpoint_table() is not available in R.")
+}
+
+#' DuckDB function unity_catalog_force_checkpoint_table
+#'
+#' @description
+#' DuckDB function `unity_catalog_force_checkpoint_table()`.
+#'
+#' @name unity_catalog_force_checkpoint_table
+#' @usage unity_catalog_force_checkpoint_table(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{unity_catalog} extension (\code{LOAD unity_catalog;}).
+unity_catalog_force_checkpoint_table <- function(col0 = VARCHAR) {
+  stop("DuckDB function unity_catalog_force_checkpoint_table() is not available in R.")
 }
 
 #' DuckDB function unnest
@@ -12370,6 +21711,54 @@ version <- function() {
   stop("DuckDB function version() is not available in R.")
 }
 
+#' DuckDB function vortex_scan
+#'
+#' @description
+#' DuckDB function `vortex_scan()`.
+#'
+#' @name vortex_scan
+#' @usage vortex_scan(col0)
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{vortex} extension (\code{LOAD vortex;}).
+vortex_scan <- function(col0 = `VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function vortex_scan() is not available in R.")
+}
+
+#' DuckDB function vss_join
+#'
+#' @description
+#' DuckDB macro `vss_join()`.
+#'
+#' @name vss_join
+#' @usage vss_join(left_table, right_table, left_col, right_col, k, metric)
+#' @param left_table,right_table,left_col,right_col,k,metric Unspecified.
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{vss} extension (\code{LOAD vss;}).
+vss_join <- function(left_table, right_table, left_col, right_col, k, metric) {
+  stop("DuckDB function vss_join() is not available in R.")
+}
+
+#' DuckDB function vss_match
+#'
+#' @description
+#' DuckDB macro `vss_match()`.
+#'
+#' @name vss_match
+#' @usage vss_match(right_table, left_col, right_col, k, metric)
+#' @param right_table,left_col,right_col,k,metric Unspecified.
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{vss} extension (\code{LOAD vss;}).
+vss_match <- function(right_table, left_col, right_col, k, metric) {
+  stop("DuckDB function vss_match() is not available in R.")
+}
+
 #' DuckDB function wavg
 #'
 #' @description
@@ -12464,6 +21853,39 @@ weighted_avg <- function(value, weight) {
 #' @export
 which_secret <- function(col0 = VARCHAR, col1 = VARCHAR) {
   stop("DuckDB function which_secret() is not available in R.")
+}
+
+#' DuckDB function whoami
+#'
+#' @description
+#' DuckDB macro `whoami()`.
+#'
+#' @name whoami
+#' @usage whoami()
+
+#' @return Unspecified.
+#' @export
+#' @section Provided by:
+#' The \code{quack} extension (\code{LOAD quack;}).
+whoami <- function() {
+  stop("DuckDB function whoami() is not available in R.")
+}
+
+#' DuckDB function write_blob
+#'
+#' @description
+#' DuckDB function `write_blob()`.
+#'
+#' @name write_blob
+#' @usage write_blob(col0, col1)
+#' @param col0 `VARCHAR`
+#' @param col1 `BLOB`
+#' @return `BOOLEAN`
+#' @export
+#' @section Provided by:
+#' The \code{delta} extension (\code{LOAD delta;}).
+write_blob <- function(col0 = VARCHAR, col1 = BLOB) {
+  stop("DuckDB function write_blob() is not available in R.")
 }
 
 #' DuckDB function write_log

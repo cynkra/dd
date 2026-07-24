@@ -14,12 +14,38 @@ st_astext(geom)
 \code{VARCHAR}
 }
 \description{
-Returns the Well-Known Text (WKT) representation of the geometry.
+\itemize{
+\item \code{st_astext(geom = GEOMETRY)}: Returns the Well-Known Text (WKT) representation of the geometry.
+\item \code{st_astext(point = POINT_2D)}, \code{st_astext(linestring = LINESTRING_2D)}, \code{st_astext(polygon = POLYGON_2D)}, \code{st_astext(box = BOX_2D)}: Returns the geometry as a WKT string.
 }
+}
+\section{Overloads}{
+
+\itemize{
+\item \code{st_astext(geom = GEOMETRY)}
+\item \code{st_astext(point = POINT_2D)}
+\item \code{st_astext(linestring = LINESTRING_2D)}
+\item \code{st_astext(polygon = POLYGON_2D)}
+\item \code{st_astext(box = BOX_2D)}
+}
+}
+
+\section{Provided by}{
+
+\itemize{
+\item \code{st_astext(geom = GEOMETRY)}: built in
+\item \code{st_astext(point = POINT_2D)}: \code{spatial}
+\item \code{st_astext(linestring = LINESTRING_2D)}: \code{spatial}
+\item \code{st_astext(polygon = POLYGON_2D)}: \code{spatial}
+\item \code{st_astext(box = BOX_2D)}: \code{spatial}
+}
+}
+
 \section{SQL examples}{
 
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{ST_AsText(ST_GeomFromWKB(X'01010000000000000000000000000000000000000000000000'))
+SELECT ST_MakeEnvelope(0, 0, 1, 1);
 }\if{html}{\out{</div>}}
 }
 
