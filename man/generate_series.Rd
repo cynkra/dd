@@ -4,14 +4,14 @@
 \alias{generate_series}
 \title{DuckDB function generate_series}
 \usage{
-generate_series(start, stop, step)
+generate_series(col0, col1, col2)
 }
 \arguments{
-\item{start}{\verb{BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
+\item{col0}{\verb{BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 
-\item{stop}{\verb{BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
+\item{col1}{\verb{BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 
-\item{step}{\code{BIGINT | INTERVAL}}
+\item{col2}{\code{BIGINT | INTERVAL}}
 }
 \value{
 \verb{BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]}
@@ -26,6 +26,7 @@ Creates a list of values between \code{start} and \code{stop} - the stop paramet
 \item \code{generate_series(col0 = BIGINT, col1 = BIGINT)}
 \item \code{generate_series(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT)}
 \item \code{generate_series(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)}
+\item \code{generate_series(col0 = `TIMESTAMP WITH TIME ZONE`, col1 = `TIMESTAMP WITH TIME ZONE`, col2 = INTERVAL)}
 \item \code{generate_series(start = BIGINT)}
 \item \code{generate_series(start = BIGINT, stop = BIGINT)}
 \item \code{generate_series(start = BIGINT, stop = BIGINT, step = BIGINT)}

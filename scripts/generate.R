@@ -23,6 +23,44 @@ json_merge_mode <- "full"
 
 con <- DBI::dbConnect(duckdb::duckdb())
 
+# Load DuckDB's core extensions so their functions are documented alongside the
+# built-in ones. `duckdb_functions()` only lists an extension's functions once
+# that extension is loaded, and a bare connection has just the statically
+# linked ones (`core_functions`, `parquet`). DuckDB's *core* extensions are
+# those served from its default ("core") repository at extensions.duckdb.org;
+# we install and load every one `duckdb_extensions()` knows about, pinning the
+# source to `core` so community extensions are never pulled in. Extensions that
+# cannot register offline (they need an external service or driver, e.g.
+# `motherduck`, `odbc_scanner`) fail the LOAD and are skipped.
+load_core_extensions <- function(con) {
+  ext <- DBI::dbGetQuery(con, "FROM duckdb_extensions()")
+  # Statically linked extensions are already available; the rest we fetch.
+  todo <- sort(ext$extension_name[ext$install_mode != "STATICALLY_LINKED"])
+  loaded <- character()
+  for (e in todo) {
+    ok <- tryCatch(
+      {
+        DBI::dbExecute(con, sprintf("INSTALL %s FROM core", e))
+        DBI::dbExecute(con, sprintf("LOAD %s", e))
+        TRUE
+      },
+      error = function(err) FALSE
+    )
+    if (ok) {
+      loaded <- c(loaded, e)
+    }
+  }
+  cli::cli_inform(c(
+    "Loaded {length(loaded)} core extension{?s}.",
+    i = "Loaded: {loaded}",
+    i = if (length(setdiff(todo, loaded)) > 0) {
+      "Skipped (could not load offline): {setdiff(todo, loaded)}"
+    }
+  ))
+  invisible(loaded)
+}
+load_core_extensions(con)
+
 filter_print <- function(.data, expr) {
   quo <- rlang::enquo(expr)
   out <-
@@ -160,6 +198,33 @@ recover_param_names <- function(parameters, parameter_types, json_overloads) {
     }
   }
   parameters
+}
+
+# roxygen2 markdown turns bare bracketed prose such as `[latitude, longitude]`
+# into a `\link{}` cross-reference to a non-existent topic (an R CMD check
+# WARNING). Escape brackets in prose that are not part of a real inline link
+# (`[text](url)` is left untouched). Bracketed text inside an inline code span
+# (backticks) — e.g. an array type like `T[]` — is left untouched too, since
+# Markdown does not create links there and escaping would corrupt it. Applied
+# only to description prose, never to the generated `\code{}` signatures.
+escape_bare_brackets <- function(x) {
+  escape_outside_code <- function(s) {
+    if (is.na(s)) {
+      return(s)
+    }
+    # Split into inline code spans (`...`) and the runs between them; only the
+    # non-code runs are eligible for escaping.
+    parts <- regmatches(s, gregexpr("`[^`]*`|[^`]+|`", s))[[1]]
+    in_code <- startsWith(parts, "`") & endsWith(parts, "`") & nchar(parts) >= 2L
+    parts[!in_code] <- gsub(
+      "\\[([^][]*)\\](?!\\()",
+      "\\\\[\\1\\\\]",
+      parts[!in_code],
+      perl = TRUE
+    )
+    paste0(parts, collapse = "")
+  }
+  vapply(x, escape_outside_code, character(1), USE.NAMES = FALSE)
 }
 
 usage_and_params <- function(
@@ -334,7 +399,13 @@ usage_and_params <- function(
         sigs = paste0("\\code{", sig, "}", collapse = ", ")
       ) |>
       arrange(desc == "(Description missing.)")
-    items <- paste0("#' \\item ", grouped$sigs, ": ", grouped$desc, "\n")
+    items <- paste0(
+      "#' \\item ",
+      grouped$sigs,
+      ": ",
+      escape_bare_brackets(grouped$desc),
+      "\n"
+    )
     description <- paste0(
       "#' \\itemize{\n",
       paste0(items, collapse = ""),
@@ -355,9 +426,16 @@ usage_and_params <- function(
       )
     } else {
       description <- gsub("[.]*$", ".", description)
+      description <- escape_bare_brackets(description)
       description <- paste0("#' ", description, collapse = "\n#'\n")
     }
   }
+
+  # A DuckDB description may span several lines (markdown paragraphs, fenced
+  # code blocks, matrix diagrams — e.g. `ST_Affine`). Prefix every continuation
+  # line with `#' ` so it stays inside the roxygen comment; otherwise it escapes
+  # as top-level code and the stub fails to parse or load.
+  description <- gsub("\n(?!#')", "\n#' ", description, perl = TRUE)
 
   examples <- na.omit(unique(unlist(examples)))
   examples <- examples[examples != ""]
@@ -365,11 +443,29 @@ usage_and_params <- function(
     json_ex <- na.omit(unique(unlist(json_examples)))
     examples <- unique(c(examples, json_ex[json_ex != ""]))
   }
+  # Many examples (especially from extensions like `spatial`) are multi-line:
+  # a SQL query, then a `----` separator, then the expected result — often a
+  # Unicode result table. Keep only the query part; dropping the result avoids
+  # non-ASCII result tables in the Rd.
+  strip_example <- function(ex) {
+    lines <- strsplit(ex, "\n", fixed = TRUE)[[1]]
+    cut <- which(grepl("^-{4,}$", trimws(lines)))
+    if (length(cut) > 0) {
+      lines <- lines[seq_len(cut[[1]] - 1)]
+    }
+    paste(trimws(lines, which = "right"), collapse = "\n")
+  }
+  examples <- trimws(vapply(examples, strip_example, character(1)))
+  examples <- unique(examples[examples != ""])
   if (length(examples) > 0) {
+    # Prefix *every* line with `#' `; otherwise the continuation lines of a
+    # multi-line example escape the roxygen comment and become top-level code
+    # (e.g. a bare `POINT` that fails to load).
+    body <- gsub("\n", "\n#' ", examples)
     examples <- paste0(
       "#' @section SQL examples:\n",
       "#' ```\n",
-      paste0("#' ", examples, "\n", collapse = ""),
+      paste0("#' ", body, "\n", collapse = ""),
       "#' ```\n"
     )
   } else {
@@ -728,9 +824,12 @@ funs <-
   # FIXME: Breaks R CMD check
   filter_print(!(function_name %in% c("<->", "+", "format"))) |>
   # FIXME: No documentation generated yet
+  # Drop double-underscore internal helpers (DuckDB's own `__internal*` and
+  # extension internals such as the `__lance_*` table functions); these are not
+  # user-facing and roxygen leaves them undocumented.
   filter_print(
     !(function_name %in% c("-")) &
-      !stringr::str_detect(function_name, "^__internal")
+      !stringr::str_detect(function_name, "^__")
   ) |>
   arrange(function_name)
 
