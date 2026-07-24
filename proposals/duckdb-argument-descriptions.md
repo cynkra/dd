@@ -1,19 +1,20 @@
 # Proposal: per-argument descriptions for DuckDB functions
 
 This file is a working note for an upstream DuckDB improvement.
-It is not part of the R package (it is listed in `.Rbuildignore`).
 
 ## Motivation
 
 The `dd` package turns every DuckDB function into an R help page.
-The user needs to install `dd` from r-universe or GitHub, and load it with `library(dd)`.
+The user installs `dd` from r-universe or GitHub, and loads it with `library(dd)`.
 Then, [`?acos`](https://cynkra.github.io/dd/reference/acos.html)
 or [`?array_extract`](https://cynkra.github.io/dd/reference/array_extract.html)
 resolve straight from the R console,
 and autocompletion works (when used with `duckplyr`).
-This package is documentation-only and completely optional.
+The `dd` package is documentation-only and completely optional.
 
-Those pages are generated from `duckdb_functions()` and the source `functions.json` files,
+Those pages are generated from
+[`duckdb_functions()`](https://cynkra.github.io/dd/reference/duckdb_functions.html)
+and the source `functions.json` files,
 which supply argument *names* and *types* and a function-level *description*,
 but nothing about what each argument means.
 The `@param` entries can therefore only repeat the type:
@@ -36,7 +37,8 @@ That prose is the baseline an R user expects from `?`.
 The exact semantics of `array_extract`'s `index` argument are not obvious from its type alone, and not documented anywhere today.
 
 This note drafts that extension, proposed as a per-argument `description` in `functions.json`.
-It also sketches entries for a handful of functions, and how `dd` would consume it.
+It also sketches entries for a handful of functions.
+An appendix describes how `dd` would consume it.
 
 ## What `dd` needs
 
@@ -51,8 +53,7 @@ so it only needs the descriptions to exist there:
 
 - Content:
 
-  Write the descriptions.
-  This is the bulk of the work.
+  Write the parameter descriptions.
 
 Two related data gaps are worth fixing in the same pass:
 
@@ -73,6 +74,7 @@ To expose in `duckdb_functions()`, the engine must carry the descriptions throug
   (same `\001` variant / `\002` element encoding),
   emit it into the generated `*_functions.hpp`,
   and assert its length matches the parameter list.
+
 2. `FunctionDescription` (`src/include/duckdb/function/function.hpp`):
 
   Add `vector<string> parameter_descriptions;` alongside `parameter_names`,
@@ -222,7 +224,10 @@ Proposed corrected entry:
 
 - Is YAML better suited for storing longer documentation strings?
 
-- Should we also look into documentation of examples?
+- Should the completeness of examples and function descriptions
+  (see [`?duckdb_functions`](https://cynkra.github.io/dd/reference/duckdb_functions.html)
+ )
+  also be audited and improved in the same pass?
 
 ## Appendix: How `dd` would consume this
 
