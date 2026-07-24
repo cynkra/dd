@@ -568,6 +568,7 @@ dd <- base::list(
   regr_sxx = regr_sxx,
   regr_sxy = regr_sxy,
   regr_syy = regr_syy,
+  remap_struct = remap_struct,
   `repeat` = `repeat`,
   repeat_row = repeat_row,
   replace = replace,

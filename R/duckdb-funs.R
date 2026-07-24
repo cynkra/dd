@@ -9614,6 +9614,24 @@ regr_syy <- function(y = DOUBLE, x = DOUBLE) {
   stop("DuckDB function regr_syy() is not available in R.")
 }
 
+#' DuckDB function remap_struct
+#'
+#' @description
+#' Map a struct to another struct type, potentially re-ordering, renaming and casting members and filling in defaults for missing values.
+#'
+#' @name remap_struct
+#' @usage remap_struct(input, target_type, mapping, defaults)
+#' @param input,target_type,mapping,defaults `ANY`
+#' @return `ANY`
+#' @export
+#' @section SQL examples:
+#' ```
+#' remap_struct({'i': 1, 'j': 2}, NULL::ROW(v1 INT, v2 INT, v3 INT), {'v1': 'j', 'v3': 'i'}, {'v2': NULL::INTEGER})
+#' ```
+remap_struct <- function(input = ANY, target_type = ANY, mapping = ANY, defaults = ANY) {
+  stop("DuckDB function remap_struct() is not available in R.")
+}
+
 #' DuckDB function repeat
 #'
 #' @description
