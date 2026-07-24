@@ -953,7 +953,14 @@ while (length(pkgdown_yml) > 0 && pkgdown_yml[[length(pkgdown_yml)]] == "") {
 }
 writeLines(c(pkgdown_yml, "", reference_yaml), pkgdown_file)
 
-callr::r(function() devtools::document())
+callr::r(function() {
+  devtools::document()
+  # `devtools::document()` regenerates the Rd files (so `?dd` picks up the
+  # DuckDB version via its inline `r duckdb::sql_query(...)` stamp) but does not
+  # touch README.md. Re-render the README in the same step so its badge and
+  # homepage line stay in sync with the version the docs were generated from.
+  devtools::build_readme()
+})
 
 Sys.setenv(http_proxy = "0.0.0.0")
 Sys.setenv(https_proxy = "0.0.0.0")
