@@ -56,10 +56,13 @@ help <- function(...) {
 # dd
 
 <!-- badges: start -->
+`r sprintf("[![DuckDB](https://img.shields.io/badge/DuckDB-%s-FFF000?logo=duckdb&logoColor=black)](https://duckdb.org)", sub("^v", "", duckdb::sql_query("PRAGMA version")$library_version))`
 <!-- badges: end -->
 
 The goal of dd is to provide documentation for DuckDB's functions, and later also an easy way to test them.
 It is meant to be used in conjunction with [duckplyr](https://duckplyr.tidyverse.org/) and [duckdb](https://duckdb.org/docs/stable/clients/r).
+
+`r sprintf("These pages document the functions of **DuckDB %s**.", sub("^v", "", duckdb::sql_query("PRAGMA version")$library_version))`
 
 
 ## Installation

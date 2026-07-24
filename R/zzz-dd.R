@@ -1,6 +1,6 @@
 #' DuckDB functions
 #'
-#' A list of known DuckDB functions.
+#' A list of known DuckDB functions, as provided by DuckDB 1.5.5.
 #'
 #' @export
 #' @examples
