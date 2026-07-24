@@ -10790,6 +10790,25 @@ struct_extract <- function(struct = STRUCT, entry = `VARCHAR | BIGINT`) {
   stop("DuckDB function struct_extract() is not available in R.")
 }
 
+#' DuckDB function struct_extract_at
+#'
+#' @description
+#' Extract the entry from the STRUCT by position (starts at 1!).
+#'
+#' @name struct_extract_at
+#' @usage struct_extract_at(struct, entry)
+#' @param struct `STRUCT`
+#' @param entry `BIGINT`
+#' @return `ANY`
+#' @export
+#' @section SQL examples:
+#' ```
+#' struct_extract_at({'i': 3, 'v2': 3, 'v3': 0}, 2)
+#' ```
+struct_extract_at <- function(struct = STRUCT, entry = BIGINT) {
+  stop("DuckDB function struct_extract_at() is not available in R.")
+}
+
 #' DuckDB function struct_insert
 #'
 #' @description

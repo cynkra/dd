@@ -633,6 +633,7 @@ dd <- base::list(
   struct_concat = struct_concat,
   struct_contains = struct_contains,
   struct_extract = struct_extract,
+  struct_extract_at = struct_extract_at,
   struct_has = struct_has,
   struct_indexof = struct_indexof,
   struct_insert = struct_insert,

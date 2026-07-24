@@ -717,8 +717,6 @@ funs <-
       examples
     )
   ) |>
-  # FIXME: Irregular
-  filter_print(!(function_name %in% c("struct_extract_at"))) |>
   # FIXME: Example too long
   filter_print(!(function_name %in% c("remap_struct"))) |>
   # FIXME: Usage too long
