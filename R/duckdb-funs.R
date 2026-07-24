@@ -3343,6 +3343,32 @@ enable_checkpoint_on_shutdown <- function() {
   stop("DuckDB function enable_checkpoint_on_shutdown() is not available in R.")
 }
 
+#' DuckDB function enable_logging
+#'
+#' @description
+#' DuckDB function `enable_logging()`.
+#'
+#' @name enable_logging
+#' @usage enable_logging(
+#'   storage_buffer_size,
+#'   storage_normalize,
+#'   storage_path,
+#'   storage_config,
+#'   storage,
+#'   level
+#' )
+#' @param storage_buffer_size `UBIGINT`
+#' @param storage_normalize `BOOLEAN`
+#' @param storage_path `VARCHAR`
+#' @param storage_config `ANY`
+#' @param storage `VARCHAR`
+#' @param level `VARCHAR`
+#' @return Unspecified.
+#' @export
+enable_logging <- function(storage_buffer_size = UBIGINT, storage_normalize = BOOLEAN, storage_path = VARCHAR, storage_config = ANY, storage = VARCHAR, level = VARCHAR) {
+  stop("DuckDB function enable_logging() is not available in R.")
+}
+
 #' DuckDB function enable_object_cache
 #'
 #' @description

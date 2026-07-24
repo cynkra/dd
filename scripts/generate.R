@@ -717,8 +717,6 @@ funs <-
       examples
     )
   ) |>
-  # FIXME: Usage too long
-  filter_print(!(function_name %in% c("enable_logging"))) |>
   # FIXME: Breaks devtools::document()
   filter_print(!(function_name %in% c("length"))) |>
   # FIXME: Breaks R CMD check

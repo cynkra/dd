@@ -228,6 +228,7 @@ dd <- base::list(
   editdist3 = editdist3,
   element_at = element_at,
   enable_checkpoint_on_shutdown = enable_checkpoint_on_shutdown,
+  enable_logging = enable_logging,
   enable_object_cache = enable_object_cache,
   enable_optimizer = enable_optimizer,
   enable_print_progress_bar = enable_print_progress_bar,
