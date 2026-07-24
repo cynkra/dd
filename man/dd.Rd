@@ -8,7 +8,7 @@ dd
 }
 \description{
 A list of known DuckDB functions, as provided by DuckDB
-1.5.5.
+\verb{r sub("^v", "", duckdb::sql_query("PRAGMA version")$library_version)}.
 }
 \examples{
 dd[1:3]
