@@ -70,26 +70,26 @@ To expose in `duckdb_functions()`, the engine must carry the descriptions throug
 
 1. `scripts/generate_functions.py`:
 
-  Add a parameter-description line paralleling `get_parameter_line`
-  (same `\001` variant / `\002` element encoding),
-  emit it into the generated `*_functions.hpp`,
-  and assert its length matches the parameter list.
+    Add a parameter-description line paralleling `get_parameter_line`
+    (same `\001` variant / `\002` element encoding),
+    emit it into the generated `*_functions.hpp`,
+    and assert its length matches the parameter list.
 
 2. `FunctionDescription` (`src/include/duckdb/function/function.hpp`):
 
-  Add `vector<string> parameter_descriptions;` alongside `parameter_names`,
-  filled from the generated data.
-  (To be checked: Functions defined directly in C++ leave it empty or document it there.)
+    Add `vector<string> parameter_descriptions;` alongside `parameter_names`,
+    filled from the generated data.
+    (To be checked: Functions defined directly in C++ leave it empty or document it there.)
 
 3. `duckdb_functions()` (`src/function/table/system/duckdb_functions.cpp`):
 
-  Add a `parameter_descriptions` column of `LIST(VARCHAR)`,
-  filled the same way `parameters` is filled from `parameter_names`.
-  Existing queries keep working unless they join with a table that already has the new column.
+    Add a `parameter_descriptions` column of `LIST(VARCHAR)`,
+    filled the same way `parameters` is filled from `parameter_names`.
+    Existing queries keep working unless they join with a table that already has the new column.
 
 4. Adapt the static site generator:
 
-  Git-based diffs allow a before-after comparison of the documentation with and without the new descriptions.
+    Git-based diffs allow a before-after comparison of the documentation with and without the new descriptions.
 
 ## Effect on DuckDB
 
