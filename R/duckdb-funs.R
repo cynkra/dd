@@ -875,6 +875,32 @@ arg_min_nulls_last <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE
   stop("DuckDB function arg_min_nulls_last() is not available in R.")
 }
 
+#' DuckDB function array_agg
+#'
+#' @description
+#' Returns a LIST containing all the values of a column.
+#'
+#' @name array_agg
+#' @usage array_agg(arg)
+#' @param arg `T`
+#' @return `T[]`
+#' @export
+#' @section SQL examples:
+#' ```
+#' array_agg(A)
+#' list(A)
+#' ```
+array_agg <- function(arg = T) {
+  stop("DuckDB function array_agg() is not available in R.")
+}
+
+#' @rdname array_agg
+#' @usage NULL
+#' @export
+list <- function(arg = T) {
+  stop("DuckDB function list() is not available in R.")
+}
+
 #' DuckDB function array_append
 #'
 #' @description
@@ -5312,25 +5338,25 @@ left_grapheme <- function(string = VARCHAR, count = BIGINT) {
   stop("DuckDB function left_grapheme() is not available in R.")
 }
 
-#' DuckDB function length
+#' DuckDB function len
 #'
 #' @description
 #' \itemize{
-#' \item \code{length(string = VARCHAR)}: Number of characters in `string`.
-#' \item \code{length(bit = BIT)}: Returns the bit-length of the `bit` argument.
-#' \item \code{length(list = `ANY[]`)}: Returns the length of the `list`.
+#' \item \code{len(string = VARCHAR)}: Number of characters in `string`.
+#' \item \code{len(bit = BIT)}: Returns the bit-length of the `bit` argument.
+#' \item \code{len(list = `ANY[]`)}: Returns the length of the `list`.
 #' }
 #'
-#' @name length
-#' @usage length(string)
+#' @name len
+#' @usage len(string)
 #' @param string `VARCHAR`
 #' @return `BIGINT`
 #' @export
 #' @section Overloads:
 #' \itemize{
-#' \item \code{length(string = VARCHAR)}
-#' \item \code{length(bit = BIT)}
-#' \item \code{length(list = `ANY[]`)}
+#' \item \code{len(string = VARCHAR)}
+#' \item \code{len(bit = BIT)}
+#' \item \code{len(list = `ANY[]`)}
 #' }
 #' @family list
 #' @family numeric
@@ -5341,29 +5367,29 @@ left_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #' length(42::TINYINT::BIT)
 #' length([1,2,3])
 #' ```
-length <- function(string = VARCHAR) {
-  stop("DuckDB function length() is not available in R.")
+len <- function(string = VARCHAR) {
+  stop("DuckDB function len() is not available in R.")
 }
 
-#' @rdname length
+#' @rdname len
 #' @usage NULL
 #' @export
 char_length <- function(string = VARCHAR) {
   stop("DuckDB function char_length() is not available in R.")
 }
 
-#' @rdname length
+#' @rdname len
 #' @usage NULL
 #' @export
 character_length <- function(string = VARCHAR) {
   stop("DuckDB function character_length() is not available in R.")
 }
 
-#' @rdname length
+#' @rdname len
 #' @usage NULL
 #' @export
-len <- function(string = VARCHAR) {
-  stop("DuckDB function len() is not available in R.")
+length <- function(string = VARCHAR) {
+  stop("DuckDB function length() is not available in R.")
 }
 
 #' DuckDB function length_grapheme
@@ -5446,31 +5472,6 @@ lgamma <- function(x = DOUBLE) {
 #' ```
 like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
   stop("DuckDB function like_escape() is not available in R.")
-}
-
-#' DuckDB function list
-#'
-#' @description
-#' Returns a LIST containing all the values of a column.
-#'
-#' @name list
-#' @usage list(arg)
-#' @param arg `T`
-#' @return `T[]`
-#' @export
-#' @section SQL examples:
-#' ```
-#' list(A)
-#' ```
-list <- function(arg = T) {
-  stop("DuckDB function list() is not available in R.")
-}
-
-#' @rdname list
-#' @usage NULL
-#' @export
-array_agg <- function(arg = T) {
-  stop("DuckDB function array_agg() is not available in R.")
 }
 
 #' DuckDB function list_aggregate

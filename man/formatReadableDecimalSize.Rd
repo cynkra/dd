@@ -30,7 +30,7 @@ Other numeric:
 \code{\link[=greatest]{greatest()}},
 \code{\link[=hex]{hex()}},
 \code{\link[=least]{least()}},
-\code{\link[=length]{length()}},
+\code{\link[=len]{len()}},
 \code{\link[=parse_formatted_bytes]{parse_formatted_bytes()}},
 \code{\link[=to_base]{to_base()}}
 
@@ -55,7 +55,7 @@ Other string:
 \code{\link[=least]{least()}},
 \code{\link[=left]{left()}},
 \code{\link[=left_grapheme]{left_grapheme()}},
-\code{\link[=length]{length()}},
+\code{\link[=len]{len()}},
 \code{\link[=length_grapheme]{length_grapheme()}},
 \code{\link[=like_escape]{like_escape()}},
 \code{\link[=list_slice]{list_slice()}},
