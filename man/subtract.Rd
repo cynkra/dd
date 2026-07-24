@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{subtract}
 \alias{subtract}
+\alias{-}
 \title{DuckDB function subtract}
 \usage{
 subtract(col0, col1)
