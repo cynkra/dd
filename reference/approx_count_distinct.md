@@ -5,7 +5,7 @@ Computes the approximate count of distinct elements using HyperLogLog.
 ## Usage
 
 ``` r
-approx_count_distinct(any = ANY)
+approx_count_distinct(any)
 ```
 
 ## Arguments

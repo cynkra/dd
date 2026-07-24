@@ -1,18 +1,26 @@
 # DuckDB function variant_extract
 
-Returns the `field` from the `input_variant` if it's an OBJECT.
+- `variant_extract(input_variant = VARIANT, field = VARCHAR)`: Returns
+  the `field` from the `input_variant` if it's an OBJECT.
 
-Returns the entry at `index` from the `input_variant` if it's an ARRAY.
+- `variant_extract(input_variant = VARIANT, index = UINTEGER)`: Returns
+  the entry at `index` from the `input_variant` if it's an ARRAY.
+
+## Usage
+
+``` r
+variant_extract(input_variant, field)
+```
 
 ## Arguments
 
-- col0:
+- input_variant:
 
   `VARIANT`
 
-- col1:
+- field:
 
-  `VARCHAR | UINTEGER`
+  `VARCHAR`
 
 ## Value
 
@@ -20,9 +28,9 @@ Returns the entry at `index` from the `input_variant` if it's an ARRAY.
 
 ## Overloads
 
-- `variant_extract(col0 = VARIANT, col1 = VARCHAR)`
+- `variant_extract(input_variant = VARIANT, field = VARCHAR)`
 
-- `variant_extract(col0 = VARIANT, col1 = UINTEGER)`
+- `variant_extract(input_variant = VARIANT, index = UINTEGER)`
 
 ## SQL examples
 

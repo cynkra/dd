@@ -6,7 +6,7 @@ If the `element` is not found, it returns `NULL`.
 ## Usage
 
 ``` r
-list_position(list = `T[]`, element = T)
+list_position(list, element)
 ```
 
 ## Arguments

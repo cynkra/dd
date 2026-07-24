@@ -2,6 +2,12 @@
 
 DuckDB function `read_text()`.
 
+## Usage
+
+``` r
+read_text(col0)
+```
+
 ## Arguments
 
 - col0:
@@ -11,9 +17,3 @@ DuckDB function `read_text()`.
 ## Value
 
 Unspecified.
-
-## Overloads
-
-- `read_text(col0 = VARCHAR)`
-
-- `` read_text(col0 = `VARCHAR[]`) ``

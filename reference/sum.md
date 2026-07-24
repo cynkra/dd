@@ -2,6 +2,12 @@
 
 Calculates the sum value for all tuples in arg.
 
+## Usage
+
+``` r
+sum(arg)
+```
+
 ## Arguments
 
 - arg:
@@ -11,24 +17,6 @@ Calculates the sum value for all tuples in arg.
 ## Value
 
 `DECIMAL | HUGEINT | DOUBLE | BIGNUM`
-
-## Overloads
-
-- `sum(arg = DECIMAL)`
-
-- `sum(arg = BOOLEAN)`
-
-- `sum(arg = SMALLINT)`
-
-- `sum(arg = INTEGER)`
-
-- `sum(arg = BIGINT)`
-
-- `sum(arg = HUGEINT)`
-
-- `sum(arg = DOUBLE)`
-
-- `sum(arg = BIGNUM)`
 
 ## SQL examples
 

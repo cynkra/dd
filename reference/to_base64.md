@@ -5,7 +5,7 @@ Converts a `blob` to a base64 encoded string.
 ## Usage
 
 ``` r
-to_base64(blob = BLOB)
+to_base64(blob)
 ```
 
 ## Arguments

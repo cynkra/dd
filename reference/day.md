@@ -2,6 +2,12 @@
 
 Extract the day component from a date or timestamp.
 
+## Usage
+
+``` r
+day(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,16 +17,6 @@ Extract the day component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `day(ts = DATE)`
-
-- `day(ts = INTERVAL)`
-
-- `day(ts = TIMESTAMP)`
-
-- `` day(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

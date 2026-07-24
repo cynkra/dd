@@ -5,7 +5,7 @@ Returns the numeric value backing the given enum value.
 ## Usage
 
 ``` r
-enum_code(enum = ANY)
+enum_code(enum)
 ```
 
 ## Arguments

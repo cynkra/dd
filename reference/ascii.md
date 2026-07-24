@@ -6,7 +6,7 @@ character of the `string`.
 ## Usage
 
 ``` r
-ascii(string = VARCHAR)
+ascii(string)
 ```
 
 ## Arguments

@@ -1,9 +1,16 @@
 # DuckDB function list_slice
 
-Extracts a sublist or substring using slice conventions. Negative values
-are accepted.
+- `list_slice(list = ANY, begin = ANY, end = ANY)`: Extracts a sublist
+  or substring using slice conventions. Negative values are accepted.
 
-list_slice with added step feature.
+- `list_slice(list = ANY, begin = ANY, end = ANY, step = BIGINT)`:
+  list_slice with added step feature.
+
+## Usage
+
+``` r
+list_slice(list, begin, end, step)
+```
 
 ## Arguments
 

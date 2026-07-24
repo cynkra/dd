@@ -5,7 +5,7 @@ DuckDB function `first_value()`.
 ## Usage
 
 ``` r
-first_value(col0 = T)
+first_value(col0)
 ```
 
 ## Arguments

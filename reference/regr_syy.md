@@ -5,16 +5,12 @@ DuckDB function `regr_syy()`.
 ## Usage
 
 ``` r
-regr_syy(y = DOUBLE, x = DOUBLE)
+regr_syy(y, x)
 ```
 
 ## Arguments
 
-- y:
-
-  `DOUBLE`
-
-- x:
+- y, x:
 
   `DOUBLE`
 

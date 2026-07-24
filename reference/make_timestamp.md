@@ -2,6 +2,12 @@
 
 The timestamp for the given parts.
 
+## Usage
+
+``` r
+make_timestamp(year, month, day, hour, minute, seconds)
+```
+
 ## Arguments
 
 - year:

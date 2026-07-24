@@ -2,6 +2,12 @@
 
 Extract the era component from a date or timestamp.
 
+## Usage
+
+``` r
+era(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,16 +17,6 @@ Extract the era component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `era(ts = DATE)`
-
-- `era(ts = INTERVAL)`
-
-- `era(ts = TIMESTAMP)`
-
-- `` era(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

@@ -8,7 +8,7 @@ Constructs a list from those elements of the input `list` for which the
 ## Usage
 
 ``` r
-list_filter(list = `ANY[]`, `lambda(x)` = LAMBDA)
+list_filter(list, lambda)
 ```
 
 ## Arguments
@@ -17,7 +17,7 @@ list_filter(list = `ANY[]`, `lambda(x)` = LAMBDA)
 
   `ANY[]`
 
-- lambda(x):
+- lambda:
 
   `LAMBDA`
 

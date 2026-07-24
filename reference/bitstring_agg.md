@@ -2,17 +2,15 @@
 
 Returns a bitstring with bits set for each distinct value.
 
+## Usage
+
+``` r
+bitstring_agg(arg, col1, col2)
+```
+
 ## Arguments
 
-- arg:
-
-  `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
-
-- col1:
-
-  `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
-
-- col2:
+- arg, col1, col2:
 
   `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 

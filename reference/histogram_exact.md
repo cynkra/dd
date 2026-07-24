@@ -6,7 +6,7 @@ buckets exactly.
 ## Usage
 
 ``` r
-histogram_exact(arg = ANY, bins = `ANY[]`)
+histogram_exact(arg, bins)
 ```
 
 ## Arguments

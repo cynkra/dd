@@ -2,6 +2,12 @@
 
 Extract the timezone component from a date or timestamp.
 
+## Usage
+
+``` r
+timezone(ts, col1)
+```
+
 ## Arguments
 
 - ts:

@@ -5,7 +5,7 @@ Returns the name of the data type of the result of the expression.
 ## Usage
 
 ``` r
-typeof(expression = ANY)
+typeof(expression)
 ```
 
 ## Arguments

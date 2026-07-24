@@ -2,6 +2,12 @@
 
 DuckDB function `subtract()`.
 
+## Usage
+
+``` r
+subtract(col0, col1)
+```
+
 ## Arguments
 
 - col0:

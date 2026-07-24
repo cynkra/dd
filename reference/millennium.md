@@ -2,6 +2,12 @@
 
 Extract the millennium component from a date or timestamp.
 
+## Usage
+
+``` r
+millennium(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,16 +17,6 @@ Extract the millennium component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `millennium(ts = DATE)`
-
-- `millennium(ts = INTERVAL)`
-
-- `millennium(ts = TIMESTAMP)`
-
-- `` millennium(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

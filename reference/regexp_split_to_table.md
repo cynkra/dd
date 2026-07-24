@@ -10,11 +10,7 @@ regexp_split_to_table(text, pattern)
 
 ## Arguments
 
-- text:
-
-  Unspecified.
-
-- pattern:
+- text, pattern:
 
   Unspecified.
 

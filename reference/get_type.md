@@ -5,7 +5,7 @@ Returns the type of the result of the expression.
 ## Usage
 
 ``` r
-get_type(expression = ANY)
+get_type(expression)
 ```
 
 ## Arguments

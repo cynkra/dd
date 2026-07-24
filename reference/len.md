@@ -1,24 +1,22 @@
 # DuckDB function len
 
-Number of characters in `string`.
+- `len(string = VARCHAR)`: Number of characters in `string`.
 
-Returns the bit-length of the `bit` argument.
+- `len(bit = BIT)`: Returns the bit-length of the `bit` argument.
 
-Returns the length of the `list`.
+- `` len(list = `ANY[]`) ``: Returns the length of the `list`.
+
+## Usage
+
+``` r
+len(string)
+```
 
 ## Arguments
 
 - string:
 
   `VARCHAR`
-
-- bit:
-
-  `BIT`
-
-- list:
-
-  `ANY[]`
 
 ## Value
 

@@ -5,7 +5,7 @@ Counts the total number of TRUE values for a boolean column.
 ## Usage
 
 ``` r
-count_if(arg = BOOLEAN)
+count_if(arg)
 ```
 
 ## Arguments

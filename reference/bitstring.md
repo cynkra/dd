@@ -2,6 +2,12 @@
 
 Pads the bitstring until the specified length.
 
+## Usage
+
+``` r
+bitstring(bitstring, length)
+```
+
 ## Arguments
 
 - bitstring:
@@ -15,12 +21,6 @@ Pads the bitstring until the specified length.
 ## Value
 
 `BIT`
-
-## Overloads
-
-- `bitstring(bitstring = VARCHAR, length = INTEGER)`
-
-- `bitstring(bitstring = BIT, length = INTEGER)`
 
 ## SQL examples
 

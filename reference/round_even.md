@@ -10,11 +10,7 @@ round_even(x, n)
 
 ## Arguments
 
-- x:
-
-  Unspecified.
-
-- n:
+- x, n:
 
   Unspecified.
 

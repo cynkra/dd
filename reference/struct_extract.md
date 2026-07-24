@@ -2,25 +2,25 @@
 
 Extract the named entry from the STRUCT.
 
+## Usage
+
+``` r
+struct_extract(struct, entry)
+```
+
 ## Arguments
 
 - struct:
 
   `STRUCT`
 
-- 'entry':
+- entry:
 
   `VARCHAR | BIGINT`
 
 ## Value
 
 `ANY`
-
-## Overloads
-
-- `` struct_extract(struct = STRUCT, `'entry'` = VARCHAR) ``
-
-- `` struct_extract(struct = STRUCT, `'entry'` = BIGINT) ``
 
 ## SQL examples
 

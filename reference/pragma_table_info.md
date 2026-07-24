@@ -5,7 +5,7 @@ DuckDB function `pragma_table_info()`.
 ## Usage
 
 ``` r
-pragma_table_info(col0 = VARCHAR)
+pragma_table_info(col0)
 ```
 
 ## Arguments

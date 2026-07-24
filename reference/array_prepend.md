@@ -10,11 +10,7 @@ array_prepend(el, arr)
 
 ## Arguments
 
-- el:
-
-  Unspecified.
-
-- arr:
+- el, arr:
 
   Unspecified.
 

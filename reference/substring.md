@@ -5,6 +5,12 @@ string. If optional argument `length` is set, extracts a substring of
 `length` characters instead. Note that a `start` value of `1` refers to
 the first character of the `string`.
 
+## Usage
+
+``` r
+substring(string, start, length)
+```
+
 ## Arguments
 
 - string:

@@ -3,13 +3,15 @@
 Computes the logarithm of x to base b. b may be omitted, in which case
 the default 10.
 
+## Usage
+
+``` r
+log(b, x)
+```
+
 ## Arguments
 
-- b:
-
-  `DOUBLE`
-
-- x:
+- b, x:
 
   `DOUBLE`
 

@@ -2,6 +2,12 @@
 
 Construct a week interval.
 
+## Usage
+
+``` r
+to_weeks(integer)
+```
+
 ## Arguments
 
 - integer:
@@ -11,12 +17,6 @@ Construct a week interval.
 ## Value
 
 `INTERVAL`
-
-## Overloads
-
-- `to_weeks(integer = INTEGER)`
-
-- `to_weeks(integer = BIGINT)`
 
 ## SQL examples
 

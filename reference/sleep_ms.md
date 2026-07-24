@@ -5,7 +5,7 @@ Sleeps for the specified number of milliseconds and returns NULL.
 ## Usage
 
 ``` r
-sleep_ms(milliseconds = BIGINT)
+sleep_ms(milliseconds)
 ```
 
 ## Arguments

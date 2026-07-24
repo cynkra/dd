@@ -10,11 +10,7 @@ date_add(date, interval)
 
 ## Arguments
 
-- date:
-
-  Unspecified.
-
-- interval:
+- date, interval:
 
   Unspecified.
 

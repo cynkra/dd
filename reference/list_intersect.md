@@ -6,16 +6,12 @@ Returns a list containing the distinct elements that are present in both
 ## Usage
 
 ``` r
-list_intersect(list1 = `T[]`, list2 = `T[]`)
+list_intersect(list1, list2)
 ```
 
 ## Arguments
 
-- list1:
-
-  `T[]`
-
-- list2:
+- list1, list2:
 
   `T[]`
 

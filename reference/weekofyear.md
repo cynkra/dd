@@ -2,6 +2,12 @@
 
 Extract the weekofyear component from a date or timestamp.
 
+## Usage
+
+``` r
+weekofyear(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,16 +17,6 @@ Extract the weekofyear component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `weekofyear(ts = DATE)`
-
-- `weekofyear(ts = INTERVAL)`
-
-- `weekofyear(ts = TIMESTAMP)`
-
-- `` weekofyear(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

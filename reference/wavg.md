@@ -10,11 +10,7 @@ wavg(value, weight)
 
 ## Arguments
 
-- value:
-
-  Unspecified.
-
-- weight:
+- value, weight:
 
   Unspecified.
 

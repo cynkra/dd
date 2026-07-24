@@ -3,17 +3,23 @@
 Resizes the `list` to contain `size` elements. Initializes new elements
 with `value` or `NULL` if `value` is not set.
 
+## Usage
+
+``` r
+list_resize(list, size, value)
+```
+
 ## Arguments
 
 - list:
 
   `ANY[]`
 
-- size\[:
+- size:
 
   `ANY`
 
-- value\]:
+- value:
 
   `ANY`
 
@@ -23,9 +29,9 @@ with `value` or `NULL` if `value` is not set.
 
 ## Overloads
 
-- `` list_resize(list = `ANY[]`, `size[` = ANY) ``
+- `` list_resize(list = `ANY[]`, size = ANY) ``
 
-- `` list_resize(list = `ANY[]`, `size[` = ANY, `value]` = ANY) ``
+- `` list_resize(list = `ANY[]`, size = ANY, value = ANY) ``
 
 ## SQL examples
 

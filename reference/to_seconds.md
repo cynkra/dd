@@ -5,7 +5,7 @@ Construct a second interval.
 ## Usage
 
 ``` r
-to_seconds(double = DOUBLE)
+to_seconds(double)
 ```
 
 ## Arguments

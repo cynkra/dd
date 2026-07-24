@@ -2,6 +2,12 @@
 
 Returns the number of bits that are set.
 
+## Usage
+
+``` r
+bit_count(x)
+```
+
 ## Arguments
 
 - x:
@@ -11,20 +17,6 @@ Returns the number of bits that are set.
 ## Value
 
 `TINYINT | BIGINT`
-
-## Overloads
-
-- `bit_count(x = TINYINT)`
-
-- `bit_count(x = SMALLINT)`
-
-- `bit_count(x = INTEGER)`
-
-- `bit_count(x = BIGINT)`
-
-- `bit_count(x = HUGEINT)`
-
-- `bit_count(x = BIT)`
 
 ## SQL examples
 

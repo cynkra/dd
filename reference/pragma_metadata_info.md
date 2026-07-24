@@ -2,6 +2,12 @@
 
 DuckDB function `pragma_metadata_info()`.
 
+## Usage
+
+``` r
+pragma_metadata_info(col0)
+```
+
 ## Arguments
 
 - col0:

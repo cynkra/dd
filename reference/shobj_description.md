@@ -10,11 +10,7 @@ shobj_description(object_oid, catalog_name)
 
 ## Arguments
 
-- object_oid:
-
-  Unspecified.
-
-- catalog_name:
+- object_oid, catalog_name:
 
   Unspecified.
 

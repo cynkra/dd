@@ -2,6 +2,12 @@
 
 Extract the isoyear component from a date or timestamp.
 
+## Usage
+
+``` r
+isoyear(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,16 +17,6 @@ Extract the isoyear component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `isoyear(ts = DATE)`
-
-- `isoyear(ts = INTERVAL)`
-
-- `isoyear(ts = TIMESTAMP)`
-
-- `` isoyear(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

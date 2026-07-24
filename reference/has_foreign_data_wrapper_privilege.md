@@ -2,17 +2,15 @@
 
 DuckDB function `has_foreign_data_wrapper_privilege()`.
 
+## Usage
+
+``` r
+has_foreign_data_wrapper_privilege(user, fdw, privilege)
+```
+
 ## Arguments
 
-- fdw:
-
-  Unspecified.
-
-- privilege:
-
-  Unspecified.
-
-- user:
+- user, fdw, privilege:
 
   Unspecified.
 

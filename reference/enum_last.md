@@ -5,7 +5,7 @@ Returns the last value of the input enum type.
 ## Usage
 
 ``` r
-enum_last(enum = ANY)
+enum_last(enum)
 ```
 
 ## Arguments

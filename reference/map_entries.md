@@ -5,7 +5,7 @@ Returns the map entries as a list of keys/values.
 ## Usage
 
 ``` r
-map_entries(map = `MAP(K, V)`)
+map_entries(map)
 ```
 
 ## Arguments

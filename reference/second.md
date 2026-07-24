@@ -2,6 +2,12 @@
 
 Extract the second component from a date or timestamp.
 
+## Usage
+
+``` r
+second(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,22 +17,6 @@ Extract the second component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `second(ts = DATE)`
-
-- `second(ts = INTERVAL)`
-
-- `second(ts = TIME)`
-
-- `second(ts = TIMESTAMP)`
-
-- `` second(ts = `TIME WITH TIME ZONE`) ``
-
-- `second(ts = TIME_NS)`
-
-- `` second(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

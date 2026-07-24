@@ -5,7 +5,7 @@ Get the position of the entry in an unnamed STRUCT, starting at 1.
 ## Usage
 
 ``` r
-struct_position(struct = STRUCT, `'entry'` = ANY)
+struct_position(struct, entry)
 ```
 
 ## Arguments
@@ -14,7 +14,7 @@ struct_position(struct = STRUCT, `'entry'` = ANY)
 
   `STRUCT`
 
-- 'entry':
+- entry:
 
   `ANY`
 

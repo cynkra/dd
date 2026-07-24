@@ -6,7 +6,7 @@ with a bias correction according to the sample size.
 ## Usage
 
 ``` r
-kurtosis(x = DOUBLE)
+kurtosis(x)
 ```
 
 ## Arguments

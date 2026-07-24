@@ -5,7 +5,7 @@ Counts the unique elements of a `list`.
 ## Usage
 
 ``` r
-list_unique(list = `ANY[]`)
+list_unique(list)
 ```
 
 ## Arguments

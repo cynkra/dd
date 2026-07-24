@@ -6,16 +6,12 @@ counting from 1. Returns 0 if no match found.
 ## Usage
 
 ``` r
-instr(string = VARCHAR, search_string = VARCHAR)
+instr(string, search_string)
 ```
 
 ## Arguments
 
-- string:
-
-  `VARCHAR`
-
-- search_string:
+- string, search_string:
 
   `VARCHAR`
 

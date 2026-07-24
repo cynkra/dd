@@ -5,7 +5,7 @@ Returns the name of a given expression.
 ## Usage
 
 ``` r
-alias(expr = ANY)
+alias(expr)
 ```
 
 ## Arguments

@@ -7,16 +7,12 @@ different cases (e.g., `a` and `A`) are considered different.
 ## Usage
 
 ``` r
-levenshtein(s1 = VARCHAR, s2 = VARCHAR)
+levenshtein(s1, s2)
 ```
 
 ## Arguments
 
-- s1:
-
-  `VARCHAR`
-
-- s2:
+- s1, s2:
 
   `VARCHAR`
 

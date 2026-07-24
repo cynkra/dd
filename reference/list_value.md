@@ -2,6 +2,12 @@
 
 Creates a LIST containing the argument values.
 
+## Usage
+
+``` r
+list_value(any)
+```
+
 ## Arguments
 
 - any:

@@ -2,6 +2,12 @@
 
 Concatenates the column string values with an optional separator.
 
+## Usage
+
+``` r
+string_agg(str, arg)
+```
+
 ## Arguments
 
 - str:

@@ -6,7 +6,7 @@ Sum).
 ## Usage
 
 ``` r
-kahan_sum(arg = DOUBLE)
+kahan_sum(arg)
 ```
 
 ## Arguments

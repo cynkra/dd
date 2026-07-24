@@ -5,7 +5,7 @@ Returns the sample variance of all input values.
 ## Usage
 
 ``` r
-var_samp(x = DOUBLE)
+var_samp(x)
 ```
 
 ## Arguments

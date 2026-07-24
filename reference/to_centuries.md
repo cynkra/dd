@@ -2,6 +2,12 @@
 
 Construct a century interval.
 
+## Usage
+
+``` r
+to_centuries(integer)
+```
+
 ## Arguments
 
 - integer:
@@ -11,12 +17,6 @@ Construct a century interval.
 ## Value
 
 `INTERVAL`
-
-## Overloads
-
-- `to_centuries(integer = INTEGER)`
-
-- `to_centuries(integer = BIGINT)`
 
 ## SQL examples
 

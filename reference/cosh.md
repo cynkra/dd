@@ -5,7 +5,7 @@ Computes the hyperbolic cos of x.
 ## Usage
 
 ``` r
-cosh(x = DOUBLE)
+cosh(x)
 ```
 
 ## Arguments

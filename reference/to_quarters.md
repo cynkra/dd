@@ -2,6 +2,12 @@
 
 Construct a quarter interval.
 
+## Usage
+
+``` r
+to_quarters(integer)
+```
+
 ## Arguments
 
 - integer:
@@ -11,12 +17,6 @@ Construct a quarter interval.
 ## Value
 
 `INTERVAL`
-
-## Overloads
-
-- `to_quarters(integer = INTEGER)`
-
-- `to_quarters(integer = BIGINT)`
 
 ## SQL examples
 

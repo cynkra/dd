@@ -5,7 +5,7 @@ Converts degrees to radians.
 ## Usage
 
 ``` r
-radians(x = DOUBLE)
+radians(x)
 ```
 
 ## Arguments

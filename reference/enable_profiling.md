@@ -2,6 +2,12 @@
 
 DuckDB function `enable_profiling()`.
 
+## Usage
+
+``` r
+enable_profiling(mode, metrics, save_location, coverage, format)
+```
+
 ## Arguments
 
 - mode:

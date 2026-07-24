@@ -5,7 +5,7 @@ Number of grapheme clusters in `string`.
 ## Usage
 
 ``` r
-length_grapheme(string = VARCHAR)
+length_grapheme(string)
 ```
 
 ## Arguments

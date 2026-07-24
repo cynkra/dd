@@ -5,7 +5,7 @@ Computes the cos of x.
 ## Usage
 
 ``` r
-cos(x = DOUBLE)
+cos(x)
 ```
 
 ## Arguments

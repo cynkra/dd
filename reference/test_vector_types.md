@@ -5,7 +5,7 @@ DuckDB function `test_vector_types()`.
 ## Usage
 
 ``` r
-test_vector_types(col0 = ANY, all_flat = BOOLEAN)
+test_vector_types(col0, all_flat)
 ```
 
 ## Arguments

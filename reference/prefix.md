@@ -5,16 +5,12 @@ Returns `true` if `string` starts with `search_string`.
 ## Usage
 
 ``` r
-prefix(string = VARCHAR, search_string = VARCHAR)
+prefix(string, search_string)
 ```
 
 ## Arguments
 
-- string:
-
-  `VARCHAR`
-
-- search_string:
+- string, search_string:
 
   `VARCHAR`
 

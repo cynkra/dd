@@ -5,7 +5,7 @@ Computes the inverse hyperbolic cos of x.
 ## Usage
 
 ``` r
-acosh(x = DOUBLE)
+acosh(x)
 ```
 
 ## Arguments

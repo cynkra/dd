@@ -2,17 +2,15 @@
 
 DuckDB function `has_sequence_privilege()`.
 
+## Usage
+
+``` r
+has_sequence_privilege(user, sequence, privilege)
+```
+
 ## Arguments
 
-- sequence:
-
-  Unspecified.
-
-- privilege:
-
-  Unspecified.
-
-- user:
+- user, sequence, privilege:
 
   Unspecified.
 

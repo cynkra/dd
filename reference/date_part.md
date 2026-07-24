@@ -2,6 +2,12 @@
 
 Get subfield (equivalent to extract).
 
+## Usage
+
+``` r
+date_part(ts, col1)
+```
+
 ## Arguments
 
 - ts:
@@ -15,36 +21,6 @@ Get subfield (equivalent to extract).
 ## Value
 
 `STRUCT() | BIGINT`
-
-## Overloads
-
-- `` date_part(ts = `VARCHAR[]`, col1 = DATE) ``
-
-- `` date_part(ts = `VARCHAR[]`, col1 = INTERVAL) ``
-
-- `` date_part(ts = `VARCHAR[]`, col1 = TIME) ``
-
-- `` date_part(ts = `VARCHAR[]`, col1 = TIMESTAMP) ``
-
-- `` date_part(ts = `VARCHAR[]`, col1 = `TIME WITH TIME ZONE`) ``
-
-- `` date_part(ts = `VARCHAR[]`, col1 = TIME_NS) ``
-
-- `date_part(ts = VARCHAR, col1 = DATE)`
-
-- `date_part(ts = VARCHAR, col1 = INTERVAL)`
-
-- `date_part(ts = VARCHAR, col1 = TIME)`
-
-- `date_part(ts = VARCHAR, col1 = TIMESTAMP)`
-
-- `` date_part(ts = VARCHAR, col1 = `TIME WITH TIME ZONE`) ``
-
-- `date_part(ts = VARCHAR, col1 = TIME_NS)`
-
-- `` date_part(ts = `VARCHAR[]`, col1 = `TIMESTAMP WITH TIME ZONE`) ``
-
-- `` date_part(ts = VARCHAR, col1 = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

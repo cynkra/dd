@@ -2,6 +2,12 @@
 
 DuckDB function `/()`.
 
+## Usage
+
+``` r
+col0/col1
+```
+
 ## Arguments
 
 - col0:
@@ -15,11 +21,3 @@ DuckDB function `/()`.
 ## Value
 
 `FLOAT | DOUBLE | INTERVAL`
-
-## Overloads
-
-- `` `/`(col0 = FLOAT, col1 = FLOAT) ``
-
-- `` `/`(col0 = DOUBLE, col1 = DOUBLE) ``
-
-- `` `/`(col0 = INTERVAL, col1 = DOUBLE) ``

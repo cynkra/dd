@@ -5,16 +5,12 @@ Casts the first argument to the type of the second argument.
 ## Usage
 
 ``` r
-cast_to_type(param = ANY, type = ANY)
+cast_to_type(param, type)
 ```
 
 ## Arguments
 
-- param:
-
-  `ANY`
-
-- type:
+- param, type:
 
   `ANY`
 

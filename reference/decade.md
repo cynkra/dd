@@ -2,6 +2,12 @@
 
 Extract the decade component from a date or timestamp.
 
+## Usage
+
+``` r
+decade(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,16 +17,6 @@ Extract the decade component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `decade(ts = DATE)`
-
-- `decade(ts = INTERVAL)`
-
-- `decade(ts = TIMESTAMP)`
-
-- `` decade(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

@@ -5,16 +5,12 @@ Computes x to the power of y.
 ## Usage
 
 ``` r
-pow(x = DOUBLE, y = DOUBLE)
+pow(x, y)
 ```
 
 ## Arguments
 
-- x:
-
-  `DOUBLE`
-
-- y:
+- x, y:
 
   `DOUBLE`
 

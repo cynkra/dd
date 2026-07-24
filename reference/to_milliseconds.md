@@ -5,7 +5,7 @@ Construct a millisecond interval.
 ## Usage
 
 ``` r
-to_milliseconds(double = DOUBLE)
+to_milliseconds(double)
 ```
 
 ## Arguments

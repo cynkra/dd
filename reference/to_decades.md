@@ -2,6 +2,12 @@
 
 Construct a decade interval.
 
+## Usage
+
+``` r
+to_decades(integer)
+```
+
 ## Arguments
 
 - integer:
@@ -11,12 +17,6 @@ Construct a decade interval.
 ## Value
 
 `INTERVAL`
-
-## Overloads
-
-- `to_decades(integer = INTEGER)`
-
-- `to_decades(integer = BIGINT)`
 
 ## SQL examples
 

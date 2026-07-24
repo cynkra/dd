@@ -6,16 +6,12 @@ zero if it is not present. The first (leftmost) bit is indexed 1.
 ## Usage
 
 ``` r
-bit_position(substring = BIT, bitstring = BIT)
+bit_position(substring, bitstring)
 ```
 
 ## Arguments
 
-- substring:
-
-  `BIT`
-
-- bitstring:
+- substring, bitstring:
 
   `BIT`
 

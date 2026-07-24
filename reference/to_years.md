@@ -2,6 +2,12 @@
 
 Construct a year interval.
 
+## Usage
+
+``` r
+to_years(integer)
+```
+
 ## Arguments
 
 - integer:
@@ -11,12 +17,6 @@ Construct a year interval.
 ## Value
 
 `INTERVAL`
-
-## Overloads
-
-- `to_years(integer = INTEGER)`
-
-- `to_years(integer = BIGINT)`
 
 ## SQL examples
 

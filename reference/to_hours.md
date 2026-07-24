@@ -5,7 +5,7 @@ Construct a hour interval.
 ## Usage
 
 ``` r
-to_hours(integer = BIGINT)
+to_hours(integer)
 ```
 
 ## Arguments

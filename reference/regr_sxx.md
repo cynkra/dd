@@ -5,16 +5,12 @@ DuckDB function `regr_sxx()`.
 ## Usage
 
 ``` r
-regr_sxx(y = DOUBLE, x = DOUBLE)
+regr_sxx(y, x)
 ```
 
 ## Arguments
 
-- y:
-
-  `DOUBLE`
-
-- x:
+- y, x:
 
   `DOUBLE`
 

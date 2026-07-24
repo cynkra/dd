@@ -5,7 +5,7 @@ Returns the Well-Known Binary (WKB) representation of the geometry.
 ## Usage
 
 ``` r
-st_aswkb(geom = GEOMETRY)
+st_aswkb(geom)
 ```
 
 ## Arguments

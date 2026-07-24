@@ -5,7 +5,7 @@ Returns TRUE if any input value is TRUE, otherwise FALSE.
 ## Usage
 
 ``` r
-bool_or(arg = BOOLEAN)
+bool_or(arg)
 ```
 
 ## Arguments

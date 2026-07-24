@@ -6,7 +6,7 @@ a column, constant, or SQL expression.
 ## Usage
 
 ``` r
-stats(expression = ANY)
+stats(expression)
 ```
 
 ## Arguments

@@ -5,16 +5,12 @@ DuckDB function `copy_database()`.
 ## Usage
 
 ``` r
-copy_database(col0 = VARCHAR, col1 = VARCHAR)
+copy_database(col0, col1)
 ```
 
 ## Arguments
 
-- col0:
-
-  `VARCHAR`
-
-- col1:
+- col0, col1:
 
   `VARCHAR`
 

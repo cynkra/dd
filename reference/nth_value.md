@@ -5,7 +5,7 @@ DuckDB function `nth_value()`.
 ## Usage
 
 ``` r
-nth_value(col0 = T, col1 = BIGINT)
+nth_value(col0, col1)
 ```
 
 ## Arguments

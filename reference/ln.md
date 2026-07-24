@@ -5,7 +5,7 @@ Computes the natural logarithm of x.
 ## Usage
 
 ``` r
-ln(x = DOUBLE)
+ln(x)
 ```
 
 ## Arguments

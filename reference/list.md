@@ -5,7 +5,7 @@ Returns a LIST containing all the values of a column.
 ## Usage
 
 ``` r
-list(arg = T)
+list(arg)
 ```
 
 ## Arguments

@@ -5,7 +5,7 @@ Returns the VectorType of a given column.
 ## Usage
 
 ``` r
-vector_type(col = ANY)
+vector_type(col)
 ```
 
 ## Arguments

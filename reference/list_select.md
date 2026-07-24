@@ -5,7 +5,7 @@ Returns a list based on the elements selected by the `index_list`.
 ## Usage
 
 ``` r
-list_select(value_list = `T[]`, index_list = `BIGINT[]`)
+list_select(value_list, index_list)
 ```
 
 ## Arguments

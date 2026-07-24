@@ -2,6 +2,12 @@
 
 Extract the minute component from a date or timestamp.
 
+## Usage
+
+``` r
+minute(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,22 +17,6 @@ Extract the minute component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `minute(ts = DATE)`
-
-- `minute(ts = INTERVAL)`
-
-- `minute(ts = TIME)`
-
-- `minute(ts = TIMESTAMP)`
-
-- `` minute(ts = `TIME WITH TIME ZONE`) ``
-
-- `minute(ts = TIME_NS)`
-
-- `` minute(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

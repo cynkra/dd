@@ -2,6 +2,12 @@
 
 Rounds the number up.
 
+## Usage
+
+``` r
+ceil(x)
+```
+
 ## Arguments
 
 - x:
@@ -11,14 +17,6 @@ Rounds the number up.
 ## Value
 
 `FLOAT | DOUBLE | DECIMAL`
-
-## Overloads
-
-- `ceil(x = FLOAT)`
-
-- `ceil(x = DOUBLE)`
-
-- `ceil(x = DECIMAL)`
 
 ## SQL examples
 

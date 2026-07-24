@@ -6,7 +6,7 @@ on powers of 10 (KB, MB, GB, etc.).
 ## Usage
 
 ``` r
-formatReadableDecimalSize(integer = BIGINT)
+formatReadableDecimalSize(integer)
 ```
 
 ## Arguments

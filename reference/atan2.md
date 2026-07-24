@@ -5,16 +5,12 @@ Computes the arctangent (y, x).
 ## Usage
 
 ``` r
-atan2(y = DOUBLE, x = DOUBLE)
+atan2(y, x)
 ```
 
 ## Arguments
 
-- y:
-
-  `DOUBLE`
-
-- x:
+- y, x:
 
   `DOUBLE`
 

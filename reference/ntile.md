@@ -5,7 +5,7 @@ DuckDB function `ntile()`.
 ## Usage
 
 ``` r
-ntile(col0 = BIGINT)
+ntile(col0)
 ```
 
 ## Arguments

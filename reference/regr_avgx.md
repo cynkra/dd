@@ -7,16 +7,12 @@ variable.
 ## Usage
 
 ``` r
-regr_avgx(y = DOUBLE, x = DOUBLE)
+regr_avgx(y, x)
 ```
 
 ## Arguments
 
-- y:
-
-  `DOUBLE`
-
-- x:
+- y, x:
 
   `DOUBLE`
 

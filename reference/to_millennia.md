@@ -2,6 +2,12 @@
 
 Construct a millenium interval.
 
+## Usage
+
+``` r
+to_millennia(integer)
+```
+
 ## Arguments
 
 - integer:
@@ -11,12 +17,6 @@ Construct a millenium interval.
 ## Value
 
 `INTERVAL`
-
-## Overloads
-
-- `to_millennia(integer = INTEGER)`
-
-- `to_millennia(integer = BIGINT)`
 
 ## SQL examples
 

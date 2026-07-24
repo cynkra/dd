@@ -5,7 +5,7 @@ The timestamp for the given microseconds since the epoch.
 ## Usage
 
 ``` r
-make_timestamp_ms(nanos = BIGINT)
+make_timestamp_ms(nanos)
 ```
 
 ## Arguments

@@ -2,13 +2,15 @@
 
 DuckDB function `pg_get_constraintdef()`.
 
+## Usage
+
+``` r
+pg_get_constraintdef(constraint_oid, pretty_bool)
+```
+
 ## Arguments
 
-- constraint_oid:
-
-  Unspecified.
-
-- pretty_bool:
+- constraint_oid, pretty_bool:
 
   Unspecified.
 

@@ -3,6 +3,12 @@
 Gives the approximate quantile using reservoir sampling, the sample size
 is optional and uses 8192 as a default size.
 
+## Usage
+
+``` r
+reservoir_quantile(x, quantile, sample_size)
+```
+
 ## Arguments
 
 - x:

@@ -5,7 +5,7 @@ Converts a base64 encoded `string` to a character string (`BLOB`).
 ## Usage
 
 ``` r
-from_base64(string = VARCHAR)
+from_base64(string)
 ```
 
 ## Arguments

@@ -5,7 +5,7 @@ Interpolation of (x-1) factorial (so decimal inputs are allowed).
 ## Usage
 
 ``` r
-gamma(x = DOUBLE)
+gamma(x)
 ```
 
 ## Arguments

@@ -5,6 +5,12 @@ Returns the last component of the `path` similarly to Python's
 extension will be removed (defaults to `false`). `separator` options:
 `system`, `both_slash` (default), `forward_slash`, `backslash`.
 
+## Usage
+
+``` r
+parse_filename(string, trim_extension)
+```
+
 ## Arguments
 
 - string:
@@ -14,10 +20,6 @@ extension will be removed (defaults to `false`). `separator` options:
 - trim_extension:
 
   `VARCHAR | BOOLEAN`
-
-- separator:
-
-  `VARCHAR`
 
 ## Value
 

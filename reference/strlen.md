@@ -5,7 +5,7 @@ Number of bytes in `string`.
 ## Usage
 
 ``` r
-strlen(string = VARCHAR)
+strlen(string)
 ```
 
 ## Arguments

@@ -2,6 +2,12 @@
 
 Returns whether the signbit is set or not.
 
+## Usage
+
+``` r
+signbit(x)
+```
+
 ## Arguments
 
 - x:
@@ -11,12 +17,6 @@ Returns whether the signbit is set or not.
 ## Value
 
 `BOOLEAN`
-
-## Overloads
-
-- `signbit(x = FLOAT)`
-
-- `signbit(x = DOUBLE)`
 
 ## SQL examples
 

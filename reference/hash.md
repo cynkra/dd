@@ -6,7 +6,7 @@ a cryptographic hash.
 ## Usage
 
 ``` r
-hash(value = ANY)
+hash(value)
 ```
 
 ## Arguments

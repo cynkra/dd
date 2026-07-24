@@ -2,6 +2,12 @@
 
 Construct a day interval.
 
+## Usage
+
+``` r
+to_days(integer)
+```
+
 ## Arguments
 
 - integer:
@@ -11,12 +17,6 @@ Construct a day interval.
 ## Value
 
 `INTERVAL`
-
-## Overloads
-
-- `to_days(integer = INTEGER)`
-
-- `to_days(integer = BIGINT)`
 
 ## SQL examples
 

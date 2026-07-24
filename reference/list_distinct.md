@@ -6,7 +6,7 @@ the original order.
 ## Usage
 
 ``` r
-list_distinct(list = `T[]`)
+list_distinct(list)
 ```
 
 ## Arguments

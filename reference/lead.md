@@ -5,7 +5,7 @@ DuckDB function `lead()`.
 ## Usage
 
 ``` r
-lead(col0 = T, col1 = BIGINT, col2 = T)
+lead(col0, col1, col2)
 ```
 
 ## Arguments

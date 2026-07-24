@@ -6,7 +6,7 @@ Calculates the average using a more accurate floating point summation
 ## Usage
 
 ``` r
-favg(x = DOUBLE)
+favg(x)
 ```
 
 ## Arguments

@@ -2,25 +2,21 @@
 
 Returns the next floating point value after x in the direction of y.
 
+## Usage
+
+``` r
+nextafter(x, y)
+```
+
 ## Arguments
 
-- x:
-
-  `DOUBLE | FLOAT`
-
-- y:
+- x, y:
 
   `DOUBLE | FLOAT`
 
 ## Value
 
 `DOUBLE | FLOAT`
-
-## Overloads
-
-- `nextafter(x = DOUBLE, y = DOUBLE)`
-
-- `nextafter(x = FLOAT, y = FLOAT)`
 
 ## SQL examples
 

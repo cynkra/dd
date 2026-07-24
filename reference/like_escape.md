@@ -7,20 +7,12 @@ search for wildcard characters in the `string`.
 ## Usage
 
 ``` r
-like_escape(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR)
+like_escape(string, like_specifier, escape_character)
 ```
 
 ## Arguments
 
-- string:
-
-  `VARCHAR`
-
-- like_specifier:
-
-  `VARCHAR`
-
-- escape_character:
+- string, like_specifier, escape_character:
 
   `VARCHAR`
 

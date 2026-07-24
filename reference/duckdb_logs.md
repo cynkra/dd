@@ -5,7 +5,7 @@ DuckDB function `duckdb_logs()`.
 ## Usage
 
 ``` r
-duckdb_logs(denormalized_table = BOOLEAN)
+duckdb_logs(denormalized_table)
 ```
 
 ## Arguments

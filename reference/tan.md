@@ -5,7 +5,7 @@ Computes the tan of x.
 ## Usage
 
 ``` r
-tan(x = DOUBLE)
+tan(x)
 ```
 
 ## Arguments

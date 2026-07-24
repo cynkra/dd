@@ -5,7 +5,7 @@ Returns the first value of the input enum type.
 ## Usage
 
 ``` r
-enum_first(enum = ANY)
+enum_first(enum)
 ```
 
 ## Arguments

@@ -2,6 +2,12 @@
 
 Extract the dayofweek component from a date or timestamp.
 
+## Usage
+
+``` r
+dayofweek(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,16 +17,6 @@ Extract the dayofweek component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `dayofweek(ts = DATE)`
-
-- `dayofweek(ts = INTERVAL)`
-
-- `dayofweek(ts = TIMESTAMP)`
-
-- `` dayofweek(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

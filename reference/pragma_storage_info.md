@@ -5,7 +5,7 @@ DuckDB function `pragma_storage_info()`.
 ## Usage
 
 ``` r
-pragma_storage_info(col0 = VARCHAR)
+pragma_storage_info(col0)
 ```
 
 ## Arguments

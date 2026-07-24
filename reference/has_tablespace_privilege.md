@@ -2,17 +2,15 @@
 
 DuckDB function `has_tablespace_privilege()`.
 
+## Usage
+
+``` r
+has_tablespace_privilege(user, tablespace, privilege)
+```
+
 ## Arguments
 
-- tablespace:
-
-  Unspecified.
-
-- privilege:
-
-  Unspecified.
-
-- user:
+- user, tablespace, privilege:
 
   Unspecified.
 

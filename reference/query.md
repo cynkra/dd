@@ -5,7 +5,7 @@ DuckDB function `query()`.
 ## Usage
 
 ``` r
-query(col0 = VARCHAR)
+query(col0)
 ```
 
 ## Arguments

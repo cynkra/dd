@@ -5,7 +5,7 @@ DuckDB function `unnest()`.
 ## Usage
 
 ``` r
-unnest(col0 = ANY)
+unnest(col0)
 ```
 
 ## Arguments

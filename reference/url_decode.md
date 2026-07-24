@@ -5,7 +5,7 @@ Decodes a URL from a representation using Percent-Encoding.
 ## Usage
 
 ``` r
-url_decode(string = VARCHAR)
+url_decode(string)
 ```
 
 ## Arguments

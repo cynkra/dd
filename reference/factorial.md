@@ -6,7 +6,7 @@ integers below it.
 ## Usage
 
 ``` r
-factorial(x = INTEGER)
+factorial(x)
 ```
 
 ## Arguments

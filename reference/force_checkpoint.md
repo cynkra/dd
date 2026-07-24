@@ -2,11 +2,11 @@
 
 DuckDB function `force_checkpoint()`.
 
-## Arguments
+## Usage
 
-- col0:
-
-  `VARCHAR`
+``` r
+force_checkpoint()
+```
 
 ## Value
 

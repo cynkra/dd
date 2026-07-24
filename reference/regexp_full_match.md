@@ -3,17 +3,15 @@
 Returns `true` if the entire `string` matches the `regex`. A set of
 optional regex `options` can be set.
 
+## Usage
+
+``` r
+regexp_full_match(string, regex, col2)
+```
+
 ## Arguments
 
-- string:
-
-  `VARCHAR`
-
-- regex:
-
-  `VARCHAR`
-
-- col2:
+- string, regex, col2:
 
   `VARCHAR`
 

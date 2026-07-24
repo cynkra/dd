@@ -5,7 +5,7 @@ Construct a minute interval.
 ## Usage
 
 ``` r
-to_minutes(integer = BIGINT)
+to_minutes(integer)
 ```
 
 ## Arguments

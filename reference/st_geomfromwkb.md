@@ -5,7 +5,7 @@ Creates a geometry from Well-Known Binary (WKB) representation.
 ## Usage
 
 ``` r
-st_geomfromwkb(wkb = BLOB)
+st_geomfromwkb(wkb)
 ```
 
 ## Arguments

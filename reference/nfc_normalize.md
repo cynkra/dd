@@ -7,7 +7,7 @@ and not.
 ## Usage
 
 ``` r
-nfc_normalize(string = VARCHAR)
+nfc_normalize(string)
 ```
 
 ## Arguments

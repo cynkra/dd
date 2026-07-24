@@ -2,6 +2,12 @@
 
 Extract the Julian Day number from a date or timestamp.
 
+## Usage
+
+``` r
+julian(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,14 +17,6 @@ Extract the Julian Day number from a date or timestamp.
 ## Value
 
 `DOUBLE`
-
-## Overloads
-
-- `julian(ts = DATE)`
-
-- `julian(ts = TIMESTAMP)`
-
-- `` julian(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

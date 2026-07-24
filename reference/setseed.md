@@ -5,7 +5,7 @@ Sets the seed to be used for the random function.
 ## Usage
 
 ``` r
-setseed(col0 = DOUBLE)
+setseed(col0)
 ```
 
 ## Arguments

@@ -5,16 +5,12 @@ DuckDB function `add_parquet_key()`.
 ## Usage
 
 ``` r
-add_parquet_key(col0 = VARCHAR, col1 = VARCHAR)
+add_parquet_key(col0, col1)
 ```
 
 ## Arguments
 
-- col0:
-
-  `VARCHAR`
-
-- col1:
+- col0, col1:
 
   `VARCHAR`
 

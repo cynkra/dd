@@ -1,26 +1,25 @@
 # DuckDB function strptime
 
-Converts the `string` text to timestamp according to the format string.
-Throws an error on failure. To return `NULL` on failure, use
-try_strptime.
+- `strptime(text = VARCHAR, format = VARCHAR)`: Converts the `string`
+  text to timestamp according to the format string. Throws an error on
+  failure. To return `NULL` on failure, use try_strptime.
 
-Converts the `string` text to timestamp applying the format strings in
-the list until one succeeds. Throws an error on failure. To return
-`NULL` on failure, use try_strptime.
+- `` strptime(text = VARCHAR, format.list = `VARCHAR[]`) ``: Converts
+  the `string` text to timestamp applying the format strings in the list
+  until one succeeds. Throws an error on failure. To return `NULL` on
+  failure, use try_strptime.
+
+## Usage
+
+``` r
+strptime(text, format)
+```
 
 ## Arguments
 
-- text:
+- text, format:
 
   `VARCHAR`
-
-- format:
-
-  `VARCHAR`
-
-- format-list:
-
-  `VARCHAR[]`
 
 ## Value
 
@@ -30,7 +29,7 @@ the list until one succeeds. Throws an error on failure. To return
 
 - `strptime(text = VARCHAR, format = VARCHAR)`
 
-- `` strptime(text = VARCHAR, `format-list` = `VARCHAR[]`) ``
+- `` strptime(text = VARCHAR, format.list = `VARCHAR[]`) ``
 
 ## SQL examples
 

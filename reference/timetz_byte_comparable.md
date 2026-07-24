@@ -5,7 +5,7 @@ Converts a TIME WITH TIME ZONE to an integer sort key.
 ## Usage
 
 ``` r
-timetz_byte_comparable(time_tz = `TIME WITH TIME ZONE`)
+timetz_byte_comparable(time_tz)
 ```
 
 ## Arguments

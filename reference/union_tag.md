@@ -5,7 +5,7 @@ Retrieve the currently selected tag of the union as an ENUM.
 ## Usage
 
 ``` r
-union_tag(union = UNION)
+union_tag(union)
 ```
 
 ## Arguments

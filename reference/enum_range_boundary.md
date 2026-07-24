@@ -8,16 +8,12 @@ parameter is NULL, the result ends with the last value of the enum type.
 ## Usage
 
 ``` r
-enum_range_boundary(start = ANY, end = ANY)
+enum_range_boundary(start, end)
 ```
 
 ## Arguments
 
-- start:
-
-  `ANY`
-
-- end:
+- start, end:
 
   `ANY`
 

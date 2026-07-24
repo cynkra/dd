@@ -2,6 +2,12 @@
 
 The (English) name of the month.
 
+## Usage
+
+``` r
+monthname(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,14 +17,6 @@ The (English) name of the month.
 ## Value
 
 `VARCHAR`
-
-## Overloads
-
-- `monthname(ts = DATE)`
-
-- `monthname(ts = TIMESTAMP)`
-
-- `` monthname(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

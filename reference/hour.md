@@ -2,6 +2,12 @@
 
 Extract the hour component from a date or timestamp.
 
+## Usage
+
+``` r
+hour(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,22 +17,6 @@ Extract the hour component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `hour(ts = DATE)`
-
-- `hour(ts = INTERVAL)`
-
-- `hour(ts = TIME)`
-
-- `hour(ts = TIMESTAMP)`
-
-- `` hour(ts = `TIME WITH TIME ZONE`) ``
-
-- `hour(ts = TIME_NS)`
-
-- `` hour(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

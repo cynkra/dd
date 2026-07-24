@@ -3,6 +3,12 @@
 Finds the rows with N maximum vals, including nulls. Calculates the arg
 expression at that row.
 
+## Usage
+
+``` r
+arg_max_nulls_last(arg, val)
+```
+
 ## Arguments
 
 - arg:
@@ -12,10 +18,6 @@ expression at that row.
 - val:
 
   `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
-
-- N:
-
-  `BIGINT`
 
 ## Value
 

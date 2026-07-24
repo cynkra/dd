@@ -2,17 +2,15 @@
 
 DuckDB function `has_any_column_privilege()`.
 
+## Usage
+
+``` r
+has_any_column_privilege(user, table, privilege)
+```
+
 ## Arguments
 
-- table:
-
-  Unspecified.
-
-- privilege:
-
-  Unspecified.
-
-- user:
+- user, table, privilege:
 
   Unspecified.
 

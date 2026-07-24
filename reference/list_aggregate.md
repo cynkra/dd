@@ -6,7 +6,7 @@ Executes the aggregate function `function_name` on the elements of
 ## Usage
 
 ``` r
-list_aggregate(list = `ANY[]`, function_name = VARCHAR)
+list_aggregate(list, function_name)
 ```
 
 ## Arguments

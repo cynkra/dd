@@ -5,7 +5,7 @@ DuckDB function `duckdb_secrets()`.
 ## Usage
 
 ``` r
-duckdb_secrets(redact = BOOLEAN)
+duckdb_secrets(redact)
 ```
 
 ## Arguments

@@ -6,7 +6,7 @@ also operator `||`.
 ## Usage
 
 ``` r
-concat(value = ANY)
+concat(value)
 ```
 
 ## Arguments

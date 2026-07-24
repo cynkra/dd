@@ -5,16 +5,12 @@ If arg2 is NULL, return NULL. Otherwise, return arg1.
 ## Usage
 
 ``` r
-constant_or_null(arg1 = ANY, arg2 = ANY)
+constant_or_null(arg1, arg2)
 ```
 
 ## Arguments
 
-- arg1:
-
-  `ANY`
-
-- arg2:
+- arg1, arg2:
 
   `ANY`
 

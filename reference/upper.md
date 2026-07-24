@@ -5,7 +5,7 @@ Converts `string` to upper case.
 ## Usage
 
 ``` r
-upper(string = VARCHAR)
+upper(string)
 ```
 
 ## Arguments

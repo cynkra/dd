@@ -2,6 +2,12 @@
 
 Extract the timezone_hour component from a date or timestamp.
 
+## Usage
+
+``` r
+timezone_hour(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,16 +17,6 @@ Extract the timezone_hour component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `timezone_hour(ts = DATE)`
-
-- `timezone_hour(ts = INTERVAL)`
-
-- `timezone_hour(ts = TIMESTAMP)`
-
-- `` timezone_hour(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

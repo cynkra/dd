@@ -3,6 +3,12 @@
 Returns true if the floating point value is not a number, false
 otherwise.
 
+## Usage
+
+``` r
+isnan(x)
+```
+
 ## Arguments
 
 - x:
@@ -12,12 +18,6 @@ otherwise.
 ## Value
 
 `BOOLEAN`
-
-## Overloads
-
-- `isnan(x = FLOAT)`
-
-- `isnan(x = DOUBLE)`
 
 ## SQL examples
 

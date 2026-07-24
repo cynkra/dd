@@ -7,7 +7,7 @@ characters and collations are not supported.
 ## Usage
 
 ``` r
-greatest(arg1 = ANY)
+greatest(arg1)
 ```
 
 ## Arguments

@@ -5,7 +5,7 @@ DuckDB function `variant_to_parquet_variant()`.
 ## Usage
 
 ``` r
-variant_to_parquet_variant(col0 = VARIANT)
+variant_to_parquet_variant(col0)
 ```
 
 ## Arguments

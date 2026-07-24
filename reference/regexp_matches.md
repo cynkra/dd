@@ -3,17 +3,15 @@
 Returns `true` if `string` contains the `regex`, `false` otherwise. A
 set of optional regex `options` can be set.
 
+## Usage
+
+``` r
+regexp_matches(string, regex, options)
+```
+
 ## Arguments
 
-- string:
-
-  `VARCHAR`
-
-- regex:
-
-  `VARCHAR`
-
-- options:
+- string, regex, options:
 
   `VARCHAR`
 

@@ -7,7 +7,7 @@ characters. Truncates the `string` on the right if it has more than
 ## Usage
 
 ``` r
-rpad(string = VARCHAR, count = INTEGER, character = VARCHAR)
+rpad(string, count, character)
 ```
 
 ## Arguments

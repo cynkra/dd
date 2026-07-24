@@ -5,7 +5,7 @@ Construct a type from its name and optional parameters.
 ## Usage
 
 ``` r
-make_type(name = VARCHAR)
+make_type(name)
 ```
 
 ## Arguments

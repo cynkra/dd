@@ -5,16 +5,12 @@ Returns the sample covariance for non-NULL pairs in a group.
 ## Usage
 
 ``` r
-covar_samp(y = DOUBLE, x = DOUBLE)
+covar_samp(y, x)
 ```
 
 ## Arguments
 
-- y:
-
-  `DOUBLE`
-
-- x:
+- y, x:
 
   `DOUBLE`
 

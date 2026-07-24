@@ -4,6 +4,12 @@ Finds non-overlapping occurrences of the `regex` in the `string` and
 returns the corresponding values of the capturing `group`. A set of
 optional regex `options` can be set.
 
+## Usage
+
+``` r
+regexp_extract_all(string, regex, group, options)
+```
+
 ## Arguments
 
 - string:

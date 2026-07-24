@@ -10,11 +10,7 @@ map_contains_value(map, value)
 
 ## Arguments
 
-- map:
-
-  Unspecified.
-
-- value:
+- map, value:
 
   Unspecified.
 

@@ -2,6 +2,12 @@
 
 Extract the year component from a date or timestamp.
 
+## Usage
+
+``` r
+year(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,16 +17,6 @@ Extract the year component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `year(ts = DATE)`
-
-- `year(ts = INTERVAL)`
-
-- `year(ts = TIMESTAMP)`
-
-- `` year(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

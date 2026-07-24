@@ -10,11 +10,7 @@ pg_get_expr(pg_node_tree, relation_oid)
 
 ## Arguments
 
-- pg_node_tree:
-
-  Unspecified.
-
-- relation_oid:
+- pg_node_tree, relation_oid:
 
   Unspecified.
 

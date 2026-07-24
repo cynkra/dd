@@ -2,6 +2,12 @@
 
 Rounds the number down.
 
+## Usage
+
+``` r
+floor(x)
+```
+
 ## Arguments
 
 - x:
@@ -11,14 +17,6 @@ Rounds the number down.
 ## Value
 
 `FLOAT | DOUBLE | DECIMAL`
-
-## Overloads
-
-- `floor(x = FLOAT)`
-
-- `floor(x = DOUBLE)`
-
-- `floor(x = DECIMAL)`
 
 ## SQL examples
 

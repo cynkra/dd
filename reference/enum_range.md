@@ -5,7 +5,7 @@ Returns all values of the input enum type as an array.
 ## Usage
 
 ``` r
-enum_range(enum = ANY)
+enum_range(enum)
 ```
 
 ## Arguments

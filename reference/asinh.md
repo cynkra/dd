@@ -5,7 +5,7 @@ Computes the inverse hyperbolic sin of x.
 ## Usage
 
 ``` r
-asinh(x = DOUBLE)
+asinh(x)
 ```
 
 ## Arguments

@@ -3,17 +3,15 @@
 Splits the `string` along the `regex`. A set of optional regex `options`
 can be set.
 
+## Usage
+
+``` r
+string_split_regex(string, regex, options)
+```
+
 ## Arguments
 
-- string:
-
-  `VARCHAR`
-
-- regex:
-
-  `VARCHAR`
-
-- options:
+- string, regex, options:
 
   `VARCHAR`
 

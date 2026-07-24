@@ -2,6 +2,12 @@
 
 Construct a month interval.
 
+## Usage
+
+``` r
+to_months(integer)
+```
+
 ## Arguments
 
 - integer:
@@ -11,12 +17,6 @@ Construct a month interval.
 ## Value
 
 `INTERVAL`
-
-## Overloads
-
-- `to_months(integer = INTEGER)`
-
-- `to_months(integer = BIGINT)`
 
 ## SQL examples
 

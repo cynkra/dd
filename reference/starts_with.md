@@ -5,16 +5,12 @@ Returns `true` if `string` begins with `search_string`.
 ## Usage
 
 ``` r
-starts_with(string = VARCHAR, search_string = VARCHAR)
+starts_with(string, search_string)
 ```
 
 ## Arguments
 
-- string:
-
-  `VARCHAR`
-
-- search_string:
+- string, search_string:
 
   `VARCHAR`
 

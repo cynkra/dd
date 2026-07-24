@@ -10,19 +10,7 @@ histogram_values(source, col_name, bin_count, technique)
 
 ## Arguments
 
-- source:
-
-  Unspecified.
-
-- col_name:
-
-  Unspecified.
-
-- bin_count:
-
-  Unspecified.
-
-- technique:
+- source, col_name, bin_count, technique:
 
   Unspecified.
 

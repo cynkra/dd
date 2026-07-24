@@ -10,15 +10,7 @@ map_contains_entry(map, key, value)
 
 ## Arguments
 
-- map:
-
-  Unspecified.
-
-- key:
-
-  Unspecified.
-
-- value:
+- map, key, value:
 
   Unspecified.
 

@@ -5,16 +5,12 @@ Parse the message into the expected logical type.
 ## Usage
 
 ``` r
-parse_duckdb_log_message(type = VARCHAR, message = VARCHAR)
+parse_duckdb_log_message(type, message)
 ```
 
 ## Arguments
 
-- type:
-
-  `VARCHAR`
-
-- message:
+- type, message:
 
   `VARCHAR`
 

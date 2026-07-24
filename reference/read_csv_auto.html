@@ -37,6 +37,57 @@
     <p>DuckDB function <code>read_csv_auto()</code>.</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">read_csv_auto</span><span class="op">(</span></span>
+<span>  <span class="va">col0</span>,</span>
+<span>  <span class="va">thousands</span>,</span>
+<span>  <span class="va">strict_mode</span>,</span>
+<span>  <span class="va">dtypes</span>,</span>
+<span>  <span class="va">column_types</span>,</span>
+<span>  <span class="va">null_padding</span>,</span>
+<span>  <span class="va">column_names</span>,</span>
+<span>  <span class="va">buffer_size</span>,</span>
+<span>  <span class="va">parallel</span>,</span>
+<span>  <span class="va">force_not_null</span>,</span>
+<span>  <span class="va">hive_types</span>,</span>
+<span>  <span class="va">new_line</span>,</span>
+<span>  <span class="va">files_to_sniff</span>,</span>
+<span>  <span class="va">dateformat</span>,</span>
+<span>  <span class="va">delim</span>,</span>
+<span>  <span class="va">sep</span>,</span>
+<span>  <span class="va">decimal_separator</span>,</span>
+<span>  <span class="va">nullstr</span>,</span>
+<span>  <span class="va">escape</span>,</span>
+<span>  <span class="va">compression</span>,</span>
+<span>  <span class="va">encoding</span>,</span>
+<span>  <span class="va">hive_types_autocast</span>,</span>
+<span>  <span class="va">all_varchar</span>,</span>
+<span>  <span class="va">columns</span>,</span>
+<span>  <span class="va">hive_partitioning</span>,</span>
+<span>  <span class="va">auto_detect</span>,</span>
+<span>  <span class="va">comment</span>,</span>
+<span>  <span class="va">quote</span>,</span>
+<span>  <span class="va">max_line_size</span>,</span>
+<span>  <span class="va">store_rejects</span>,</span>
+<span>  <span class="va">union_by_name</span>,</span>
+<span>  <span class="va">header</span>,</span>
+<span>  <span class="va">types</span>,</span>
+<span>  <span class="va">skip</span>,</span>
+<span>  <span class="va">filename</span>,</span>
+<span>  <span class="va">sample_size</span>,</span>
+<span>  <span class="va">timestampformat</span>,</span>
+<span>  <span class="va">normalize_names</span>,</span>
+<span>  <span class="va">ignore_errors</span>,</span>
+<span>  <span class="va">names</span>,</span>
+<span>  <span class="va">allow_quoted_nulls</span>,</span>
+<span>  <span class="va">maximum_line_size</span>,</span>
+<span>  <span class="va">rejects_table</span>,</span>
+<span>  <span class="va">auto_type_candidates</span>,</span>
+<span>  <span class="va">rejects_scan</span>,</span>
+<span>  <span class="va">rejects_limit</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+    </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
@@ -230,13 +281,6 @@
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     <p>Unspecified.</p>
     </div>
-    <div class="section level2">
-    <h2 id="overloads">Overloads<a class="anchor" aria-label="anchor" href="#overloads"></a></h2>
-
-
-<ul><li><p><code>read_csv_auto(col0 = VARCHAR, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, column_types = ANY, null_padding = BOOLEAN, column_names = `VARCHAR[]`, buffer_size = UBIGINT, parallel = BOOLEAN, force_not_null = `VARCHAR[]`, hive_types = ANY, new_line = VARCHAR, files_to_sniff = BIGINT, dateformat = VARCHAR, delim = VARCHAR, sep = VARCHAR, decimal_separator = VARCHAR, nullstr = ANY, escape = VARCHAR, compression = VARCHAR, encoding = VARCHAR, hive_types_autocast = BOOLEAN, all_varchar = BOOLEAN, columns = ANY, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, comment = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, store_rejects = BOOLEAN, union_by_name = BOOLEAN, header = BOOLEAN, types = ANY, skip = BIGINT, filename = ANY, sample_size = BIGINT, timestampformat = VARCHAR, normalize_names = BOOLEAN, ignore_errors = BOOLEAN, names = `VARCHAR[]`, allow_quoted_nulls = BOOLEAN, maximum_line_size = VARCHAR, rejects_table = VARCHAR, auto_type_candidates = ANY, rejects_scan = VARCHAR, rejects_limit = BIGINT)</code></p></li>
-<li><p><code>read_csv_auto(col0 = `VARCHAR[]`, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, column_types = ANY, null_padding = BOOLEAN, column_names = `VARCHAR[]`, buffer_size = UBIGINT, parallel = BOOLEAN, force_not_null = `VARCHAR[]`, hive_types = ANY, new_line = VARCHAR, files_to_sniff = BIGINT, dateformat = VARCHAR, delim = VARCHAR, sep = VARCHAR, decimal_separator = VARCHAR, nullstr = ANY, escape = VARCHAR, compression = VARCHAR, encoding = VARCHAR, hive_types_autocast = BOOLEAN, all_varchar = BOOLEAN, columns = ANY, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, comment = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, store_rejects = BOOLEAN, union_by_name = BOOLEAN, header = BOOLEAN, types = ANY, skip = BIGINT, filename = ANY, sample_size = BIGINT, timestampformat = VARCHAR, normalize_names = BOOLEAN, ignore_errors = BOOLEAN, names = `VARCHAR[]`, allow_quoted_nulls = BOOLEAN, maximum_line_size = VARCHAR, rejects_table = VARCHAR, auto_type_candidates = ANY, rejects_scan = VARCHAR, rejects_limit = BIGINT)</code></p></li>
-</ul></div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>

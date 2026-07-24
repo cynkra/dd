@@ -5,7 +5,7 @@ Converts secs since epoch to a timestamp with time zone.
 ## Usage
 
 ``` r
-to_timestamp(sec = DOUBLE)
+to_timestamp(sec)
 ```
 
 ## Arguments

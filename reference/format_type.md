@@ -10,11 +10,7 @@ format_type(type_oid, typemod)
 
 ## Arguments
 
-- type_oid:
-
-  Unspecified.
-
-- typemod:
+- type_oid, typemod:
 
   Unspecified.
 

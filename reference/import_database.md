@@ -5,7 +5,7 @@ DuckDB function `import_database()`.
 ## Usage
 
 ``` r
-import_database(col0 = VARCHAR)
+import_database(col0)
 ```
 
 ## Arguments

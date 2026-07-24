@@ -1,14 +1,19 @@
 # DuckDB function bin
 
-Converts the `string` to binary representation.
+- `bin(string = VARCHAR)`: Converts the `string` to binary
+  representation.
 
-Converts the `value` to binary representation.
+- `bin(value = BIGNUM)`, `bin(value = UBIGINT)`, `bin(value = BIGINT)`,
+  `bin(value = HUGEINT)`, `bin(value = UHUGEINT)`: Converts the `value`
+  to binary representation.
+
+## Usage
+
+``` r
+bin(value)
+```
 
 ## Arguments
-
-- string:
-
-  `VARCHAR`
 
 - value:
 

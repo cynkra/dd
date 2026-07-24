@@ -5,7 +5,7 @@ Returns the population variance.
 ## Usage
 
 ``` r
-var_pop(x = DOUBLE)
+var_pop(x)
 ```
 
 ## Arguments

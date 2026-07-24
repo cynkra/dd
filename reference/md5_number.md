@@ -1,18 +1,22 @@
 # DuckDB function md5_number
 
-Returns the MD5 hash of the `string` as a `HUGEINT`.
+- `md5_number(string = VARCHAR)`: Returns the MD5 hash of the `string`
+  as a `HUGEINT`.
 
-Returns the MD5 hash of the `blob` as a `HUGEINT`.
+- `md5_number(blob = BLOB)`: Returns the MD5 hash of the `blob` as a
+  `HUGEINT`.
+
+## Usage
+
+``` r
+md5_number(string)
+```
 
 ## Arguments
 
 - string:
 
   `VARCHAR`
-
-- blob:
-
-  `BLOB`
 
 ## Value
 

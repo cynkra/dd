@@ -5,7 +5,7 @@ Returns the square root of x.
 ## Usage
 
 ``` r
-sqrt(x = DOUBLE)
+sqrt(x)
 ```
 
 ## Arguments

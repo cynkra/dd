@@ -5,7 +5,7 @@ Throws the given error message.
 ## Usage
 
 ``` r
-error(message = VARCHAR)
+error(message)
 ```
 
 ## Arguments

@@ -3,21 +3,15 @@
 If `string` contains the `regex`, replaces the matching part with
 `replacement`. A set of optional regex `options` can be set.
 
+## Usage
+
+``` r
+regexp_replace(string, regex, replacement, options)
+```
+
 ## Arguments
 
-- string:
-
-  `VARCHAR`
-
-- regex:
-
-  `VARCHAR`
-
-- replacement:
-
-  `VARCHAR`
-
-- options:
+- string, regex, replacement, options:
 
   `VARCHAR`
 

@@ -32,9 +32,9 @@
     </div>
 
     <div class="section level2">
-      <h2 id="all-functions">All functions<a class="anchor" aria-label="anchor" href="#all-functions"></a></h2>
+      <h2 id="string">String<a class="anchor" aria-label="anchor" href="#string"></a></h2>
 
-
+      <div class="section-desc"><p>Operate on text (<code>VARCHAR</code>) values.</p></div>
 
       <dl></dl></div><div class="section level2">
 
@@ -43,7 +43,1320 @@
 
       <dl><dt>
 
-          <code><a href="abs.html">abs</a></code> <code><a href="abs.html">@</a></code>
+          <code><a href="array_extract.html">array_extract()</a></code>
+
+        </dt>
+        <dd>DuckDB function array_extract</dd>
+
+        <dt>
+
+          <code><a href="ascii.html">ascii()</a></code>
+
+        </dt>
+        <dd>DuckDB function ascii</dd>
+
+        <dt>
+
+          <code><a href="bar.html">bar()</a></code>
+
+        </dt>
+        <dd>DuckDB function bar</dd>
+
+        <dt>
+
+          <code><a href="bin.html">bin()</a></code>
+
+        </dt>
+        <dd>DuckDB function bin</dd>
+
+        <dt>
+
+          <code><a href="bit_length.html">bit_length()</a></code>
+
+        </dt>
+        <dd>DuckDB function bit_length</dd>
+
+        <dt>
+
+          <code><a href="chr.html">chr()</a></code>
+
+        </dt>
+        <dd>DuckDB function chr</dd>
+
+        <dt>
+
+          <code><a href="concat.html">concat()</a></code>
+
+        </dt>
+        <dd>DuckDB function concat</dd>
+
+        <dt>
+
+          <code><a href="concat_ws.html">concat_ws()</a></code>
+
+        </dt>
+        <dd>DuckDB function concat_ws</dd>
+
+        <dt>
+
+          <code><a href="contains.html">contains()</a></code>
+
+        </dt>
+        <dd>DuckDB function contains</dd>
+
+        <dt>
+
+          <code><a href="formatReadableDecimalSize.html">formatReadableDecimalSize()</a></code>
+
+        </dt>
+        <dd>DuckDB function formatReadableDecimalSize</dd>
+
+        <dt>
+
+          <code><a href="format_bytes.html">format_bytes()</a></code>
+
+        </dt>
+        <dd>DuckDB function format_bytes</dd>
+
+        <dt>
+
+          <code><a href="from_base64.html">from_base64()</a></code>
+
+        </dt>
+        <dd>DuckDB function from_base64</dd>
+
+        <dt>
+
+          <code><a href="greatest.html">greatest()</a></code>
+
+        </dt>
+        <dd>DuckDB function greatest</dd>
+
+        <dt>
+
+          <code><a href="hash.html">hash()</a></code>
+
+        </dt>
+        <dd>DuckDB function hash</dd>
+
+        <dt>
+
+          <code><a href="hex.html">hex()</a></code>
+
+        </dt>
+        <dd>DuckDB function hex</dd>
+
+        <dt>
+
+          <code><a href="ilike_escape.html">ilike_escape()</a></code>
+
+        </dt>
+        <dd>DuckDB function ilike_escape</dd>
+
+        <dt>
+
+          <code><a href="instr.html">instr()</a></code>
+
+        </dt>
+        <dd>DuckDB function instr</dd>
+
+        <dt>
+
+          <code><a href="least.html">least()</a></code>
+
+        </dt>
+        <dd>DuckDB function least</dd>
+
+        <dt>
+
+          <code><a href="left.html">left()</a></code>
+
+        </dt>
+        <dd>DuckDB function left</dd>
+
+        <dt>
+
+          <code><a href="left_grapheme.html">left_grapheme()</a></code>
+
+        </dt>
+        <dd>DuckDB function left_grapheme</dd>
+
+        <dt>
+
+          <code><a href="len.html">len()</a></code>
+
+        </dt>
+        <dd>DuckDB function len</dd>
+
+        <dt>
+
+          <code><a href="length_grapheme.html">length_grapheme()</a></code>
+
+        </dt>
+        <dd>DuckDB function length_grapheme</dd>
+
+        <dt>
+
+          <code><a href="like_escape.html">like_escape()</a></code>
+
+        </dt>
+        <dd>DuckDB function like_escape</dd>
+
+        <dt>
+
+          <code><a href="list_slice.html">list_slice()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_slice</dd>
+
+        <dt>
+
+          <code><a href="lower.html">lower()</a></code>
+
+        </dt>
+        <dd>DuckDB function lower</dd>
+
+        <dt>
+
+          <code><a href="lpad.html">lpad()</a></code>
+
+        </dt>
+        <dd>DuckDB function lpad</dd>
+
+        <dt>
+
+          <code><a href="ltrim.html">ltrim()</a></code>
+
+        </dt>
+        <dd>DuckDB function ltrim</dd>
+
+        <dt>
+
+          <code><a href="md5.html">md5()</a></code>
+
+        </dt>
+        <dd>DuckDB function md5</dd>
+
+        <dt>
+
+          <code><a href="md5_number.html">md5_number()</a></code>
+
+        </dt>
+        <dd>DuckDB function md5_number</dd>
+
+        <dt>
+
+          <code><a href="nfc_normalize.html">nfc_normalize()</a></code>
+
+        </dt>
+        <dd>DuckDB function nfc_normalize</dd>
+
+        <dt>
+
+          <code><a href="not_ilike_escape.html">not_ilike_escape()</a></code>
+
+        </dt>
+        <dd>DuckDB function not_ilike_escape</dd>
+
+        <dt>
+
+          <code><a href="not_like_escape.html">not_like_escape()</a></code>
+
+        </dt>
+        <dd>DuckDB function not_like_escape</dd>
+
+        <dt>
+
+          <code><a href="or-or.html">`||`()</a></code>
+
+        </dt>
+        <dd>DuckDB function ||</dd>
+
+        <dt>
+
+          <code><a href="parse_dirname.html">parse_dirname()</a></code>
+
+        </dt>
+        <dd>DuckDB function parse_dirname</dd>
+
+        <dt>
+
+          <code><a href="parse_dirpath.html">parse_dirpath()</a></code>
+
+        </dt>
+        <dd>DuckDB function parse_dirpath</dd>
+
+        <dt>
+
+          <code><a href="parse_filename.html">parse_filename()</a></code>
+
+        </dt>
+        <dd>DuckDB function parse_filename</dd>
+
+        <dt>
+
+          <code><a href="parse_formatted_bytes.html">parse_formatted_bytes()</a></code>
+
+        </dt>
+        <dd>DuckDB function parse_formatted_bytes</dd>
+
+        <dt>
+
+          <code><a href="parse_path.html">parse_path()</a></code>
+
+        </dt>
+        <dd>DuckDB function parse_path</dd>
+
+        <dt>
+
+          <code><a href="prefix.html">prefix()</a></code>
+
+        </dt>
+        <dd>DuckDB function prefix</dd>
+
+        <dt>
+
+          <code><a href="printf.html">printf()</a></code>
+
+        </dt>
+        <dd>DuckDB function printf</dd>
+
+        <dt>
+
+          <code><a href="repeat.html">`repeat`()</a></code>
+
+        </dt>
+        <dd>DuckDB function repeat</dd>
+
+        <dt>
+
+          <code><a href="replace.html">replace()</a></code>
+
+        </dt>
+        <dd>DuckDB function replace</dd>
+
+        <dt>
+
+          <code><a href="reverse.html">reverse()</a></code>
+
+        </dt>
+        <dd>DuckDB function reverse</dd>
+
+        <dt>
+
+          <code><a href="right.html">right()</a></code>
+
+        </dt>
+        <dd>DuckDB function right</dd>
+
+        <dt>
+
+          <code><a href="right_grapheme.html">right_grapheme()</a></code>
+
+        </dt>
+        <dd>DuckDB function right_grapheme</dd>
+
+        <dt>
+
+          <code><a href="rpad.html">rpad()</a></code>
+
+        </dt>
+        <dd>DuckDB function rpad</dd>
+
+        <dt>
+
+          <code><a href="rtrim.html">rtrim()</a></code>
+
+        </dt>
+        <dd>DuckDB function rtrim</dd>
+
+        <dt>
+
+          <code><a href="sha1.html">sha1()</a></code>
+
+        </dt>
+        <dd>DuckDB function sha1</dd>
+
+        <dt>
+
+          <code><a href="sha256.html">sha256()</a></code>
+
+        </dt>
+        <dd>DuckDB function sha256</dd>
+
+        <dt>
+
+          <code><a href="starts_with.html">starts_with()</a></code>
+
+        </dt>
+        <dd>DuckDB function starts_with</dd>
+
+        <dt>
+
+          <code><a href="string_split.html">string_split()</a></code>
+
+        </dt>
+        <dd>DuckDB function string_split</dd>
+
+        <dt>
+
+          <code><a href="strip_accents.html">strip_accents()</a></code>
+
+        </dt>
+        <dd>DuckDB function strip_accents</dd>
+
+        <dt>
+
+          <code><a href="strlen.html">strlen()</a></code>
+
+        </dt>
+        <dd>DuckDB function strlen</dd>
+
+        <dt>
+
+          <code><a href="substring.html">substring()</a></code>
+
+        </dt>
+        <dd>DuckDB function substring</dd>
+
+        <dt>
+
+          <code><a href="substring_grapheme.html">substring_grapheme()</a></code>
+
+        </dt>
+        <dd>DuckDB function substring_grapheme</dd>
+
+        <dt>
+
+          <code><a href="suffix.html">suffix()</a></code>
+
+        </dt>
+        <dd>DuckDB function suffix</dd>
+
+        <dt>
+
+          <code><a href="to_base.html">to_base()</a></code>
+
+        </dt>
+        <dd>DuckDB function to_base</dd>
+
+        <dt>
+
+          <code><a href="to_base64.html">to_base64()</a></code>
+
+        </dt>
+        <dd>DuckDB function to_base64</dd>
+
+        <dt>
+
+          <code><a href="translate.html">translate()</a></code>
+
+        </dt>
+        <dd>DuckDB function translate</dd>
+
+        <dt>
+
+          <code><a href="trim.html">trim()</a></code>
+
+        </dt>
+        <dd>DuckDB function trim</dd>
+
+        <dt>
+
+          <code><a href="unbin.html">unbin()</a></code>
+
+        </dt>
+        <dd>DuckDB function unbin</dd>
+
+        <dt>
+
+          <code><a href="unhex.html">unhex()</a></code>
+
+        </dt>
+        <dd>DuckDB function unhex</dd>
+
+        <dt>
+
+          <code><a href="unicode.html">unicode()</a></code>
+
+        </dt>
+        <dd>DuckDB function unicode</dd>
+
+        <dt>
+
+          <code><a href="upper.html">upper()</a></code>
+
+        </dt>
+        <dd>DuckDB function upper</dd>
+
+        <dt>
+
+          <code><a href="url_decode.html">url_decode()</a></code>
+
+        </dt>
+        <dd>DuckDB function url_decode</dd>
+
+        <dt>
+
+          <code><a href="url_encode.html">url_encode()</a></code>
+
+        </dt>
+        <dd>DuckDB function url_encode</dd>
+      </dl></div><div class="section level2">
+      <h2 id="list">List<a class="anchor" aria-label="anchor" href="#list"></a></h2>
+
+      <div class="section-desc"><p>Operate on <code>LIST</code> values.</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="array_extract.html">array_extract()</a></code>
+
+        </dt>
+        <dd>DuckDB function array_extract</dd>
+
+        <dt>
+
+          <code><a href="array_length.html">array_length()</a></code>
+
+        </dt>
+        <dd>DuckDB function array_length</dd>
+
+        <dt>
+
+          <code><a href="concat.html">concat()</a></code>
+
+        </dt>
+        <dd>DuckDB function concat</dd>
+
+        <dt>
+
+          <code><a href="contains.html">contains()</a></code>
+
+        </dt>
+        <dd>DuckDB function contains</dd>
+
+        <dt>
+
+          <code><a href="flatten.html">flatten()</a></code>
+
+        </dt>
+        <dd>DuckDB function flatten</dd>
+
+        <dt>
+
+          <code><a href="generate_series.html">generate_series()</a></code>
+
+        </dt>
+        <dd>DuckDB function generate_series</dd>
+
+        <dt>
+
+          <code><a href="len.html">len()</a></code>
+
+        </dt>
+        <dd>DuckDB function len</dd>
+
+        <dt>
+
+          <code><a href="list_aggregate.html">list_aggregate()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_aggregate</dd>
+
+        <dt>
+
+          <code><a href="list_concat.html">list_concat()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_concat</dd>
+
+        <dt>
+
+          <code><a href="list_contains.html">list_contains()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_contains</dd>
+
+        <dt>
+
+          <code><a href="list_cosine_distance.html">list_cosine_distance()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_cosine_distance</dd>
+
+        <dt>
+
+          <code><a href="list_cosine_similarity.html">list_cosine_similarity()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_cosine_similarity</dd>
+
+        <dt>
+
+          <code><a href="list_distance.html">list_distance()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_distance</dd>
+
+        <dt>
+
+          <code><a href="list_distinct.html">list_distinct()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_distinct</dd>
+
+        <dt>
+
+          <code><a href="list_extract.html">list_extract()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_extract</dd>
+
+        <dt>
+
+          <code><a href="list_filter.html">list_filter()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_filter</dd>
+
+        <dt>
+
+          <code><a href="list_grade_up.html">list_grade_up()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_grade_up</dd>
+
+        <dt>
+
+          <code><a href="list_has_all.html">list_has_all()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_has_all</dd>
+
+        <dt>
+
+          <code><a href="list_has_any.html">list_has_any()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_has_any</dd>
+
+        <dt>
+
+          <code><a href="list_inner_product.html">list_inner_product()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_inner_product</dd>
+
+        <dt>
+
+          <code><a href="list_intersect.html">list_intersect()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_intersect</dd>
+
+        <dt>
+
+          <code><a href="list_negative_inner_product.html">list_negative_inner_product()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_negative_inner_product</dd>
+
+        <dt>
+
+          <code><a href="list_position.html">list_position()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_position</dd>
+
+        <dt>
+
+          <code><a href="list_reduce.html">list_reduce()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_reduce</dd>
+
+        <dt>
+
+          <code><a href="list_resize.html">list_resize()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_resize</dd>
+
+        <dt>
+
+          <code><a href="list_reverse_sort.html">list_reverse_sort()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_reverse_sort</dd>
+
+        <dt>
+
+          <code><a href="list_select.html">list_select()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_select</dd>
+
+        <dt>
+
+          <code><a href="list_slice.html">list_slice()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_slice</dd>
+
+        <dt>
+
+          <code><a href="list_sort.html">list_sort()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_sort</dd>
+
+        <dt>
+
+          <code><a href="list_transform.html">list_transform()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_transform</dd>
+
+        <dt>
+
+          <code><a href="list_unique.html">list_unique()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_unique</dd>
+
+        <dt>
+
+          <code><a href="list_value.html">list_value()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_value</dd>
+
+        <dt>
+
+          <code><a href="list_where.html">list_where()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_where</dd>
+
+        <dt>
+
+          <code><a href="list_zip.html">list_zip()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_zip</dd>
+
+        <dt>
+
+          <code><a href="or-or.html">`||`()</a></code>
+
+        </dt>
+        <dd>DuckDB function ||</dd>
+
+        <dt>
+
+          <code><a href="range.html">range()</a></code>
+
+        </dt>
+        <dd>DuckDB function range</dd>
+
+        <dt>
+
+          <code><a href="repeat.html">`repeat`()</a></code>
+
+        </dt>
+        <dd>DuckDB function repeat</dd>
+
+        <dt>
+
+          <code><a href="unpivot_list.html">unpivot_list()</a></code>
+
+        </dt>
+        <dd>DuckDB function unpivot_list</dd>
+      </dl></div><div class="section level2">
+      <h2 id="array">Array<a class="anchor" aria-label="anchor" href="#array"></a></h2>
+
+      <div class="section-desc"><p>Operate on fixed-size <code>ARRAY</code> values.</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="array_cosine_distance.html">array_cosine_distance()</a></code>
+
+        </dt>
+        <dd>DuckDB function array_cosine_distance</dd>
+
+        <dt>
+
+          <code><a href="array_cosine_similarity.html">array_cosine_similarity()</a></code>
+
+        </dt>
+        <dd>DuckDB function array_cosine_similarity</dd>
+
+        <dt>
+
+          <code><a href="array_cross_product.html">array_cross_product()</a></code>
+
+        </dt>
+        <dd>DuckDB function array_cross_product</dd>
+
+        <dt>
+
+          <code><a href="array_distance.html">array_distance()</a></code>
+
+        </dt>
+        <dd>DuckDB function array_distance</dd>
+
+        <dt>
+
+          <code><a href="array_inner_product.html">array_inner_product()</a></code>
+
+        </dt>
+        <dd>DuckDB function array_inner_product</dd>
+
+        <dt>
+
+          <code><a href="array_negative_inner_product.html">array_negative_inner_product()</a></code>
+
+        </dt>
+        <dd>DuckDB function array_negative_inner_product</dd>
+
+        <dt>
+
+          <code><a href="array_value.html">array_value()</a></code>
+
+        </dt>
+        <dd>DuckDB function array_value</dd>
+      </dl></div><div class="section level2">
+      <h2 id="struct">Struct<a class="anchor" aria-label="anchor" href="#struct"></a></h2>
+
+      <div class="section-desc"><p>Operate on <code>STRUCT</code> values.</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="array_extract.html">array_extract()</a></code>
+
+        </dt>
+        <dd>DuckDB function array_extract</dd>
+      </dl></div><div class="section level2">
+      <h2 id="map">Map<a class="anchor" aria-label="anchor" href="#map"></a></h2>
+
+      <div class="section-desc"><p>Operate on <code>MAP</code> values.</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="contains.html">contains()</a></code>
+
+        </dt>
+        <dd>DuckDB function contains</dd>
+      </dl></div><div class="section level2">
+      <h2 id="variant">Variant<a class="anchor" aria-label="anchor" href="#variant"></a></h2>
+
+      <div class="section-desc"><p>Operate on <code>VARIANT</code> values.</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="variant_extract.html">variant_extract()</a></code>
+
+        </dt>
+        <dd>DuckDB function variant_extract</dd>
+
+        <dt>
+
+          <code><a href="variant_normalize.html">variant_normalize()</a></code>
+
+        </dt>
+        <dd>DuckDB function variant_normalize</dd>
+
+        <dt>
+
+          <code><a href="variant_typeof.html">variant_typeof()</a></code>
+
+        </dt>
+        <dd>DuckDB function variant_typeof</dd>
+      </dl></div><div class="section level2">
+      <h2 id="numeric">Numeric<a class="anchor" aria-label="anchor" href="#numeric"></a></h2>
+
+      <div class="section-desc"><p>Numeric and mathematical functions.</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="bin.html">bin()</a></code>
+
+        </dt>
+        <dd>DuckDB function bin</dd>
+
+        <dt>
+
+          <code><a href="bit_length.html">bit_length()</a></code>
+
+        </dt>
+        <dd>DuckDB function bit_length</dd>
+
+        <dt>
+
+          <code><a href="formatReadableDecimalSize.html">formatReadableDecimalSize()</a></code>
+
+        </dt>
+        <dd>DuckDB function formatReadableDecimalSize</dd>
+
+        <dt>
+
+          <code><a href="format_bytes.html">format_bytes()</a></code>
+
+        </dt>
+        <dd>DuckDB function format_bytes</dd>
+
+        <dt>
+
+          <code><a href="greatest.html">greatest()</a></code>
+
+        </dt>
+        <dd>DuckDB function greatest</dd>
+
+        <dt>
+
+          <code><a href="hex.html">hex()</a></code>
+
+        </dt>
+        <dd>DuckDB function hex</dd>
+
+        <dt>
+
+          <code><a href="least.html">least()</a></code>
+
+        </dt>
+        <dd>DuckDB function least</dd>
+
+        <dt>
+
+          <code><a href="len.html">len()</a></code>
+
+        </dt>
+        <dd>DuckDB function len</dd>
+
+        <dt>
+
+          <code><a href="parse_formatted_bytes.html">parse_formatted_bytes()</a></code>
+
+        </dt>
+        <dd>DuckDB function parse_formatted_bytes</dd>
+
+        <dt>
+
+          <code><a href="to_base.html">to_base()</a></code>
+
+        </dt>
+        <dd>DuckDB function to_base</dd>
+      </dl></div><div class="section level2">
+      <h2 id="bitstring">Bitstring<a class="anchor" aria-label="anchor" href="#bitstring"></a></h2>
+
+      <div class="section-desc"><p>Operate on <code>BIT</code> (bitstring) values.</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="octet_length.html">octet_length()</a></code>
+
+        </dt>
+        <dd>DuckDB function octet_length</dd>
+      </dl></div><div class="section level2">
+      <h2 id="blob">Blob<a class="anchor" aria-label="anchor" href="#blob"></a></h2>
+
+      <div class="section-desc"><p>Operate on binary large objects (<code>BLOB</code>).</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="decode.html">decode()</a></code>
+
+        </dt>
+        <dd>DuckDB function decode</dd>
+
+        <dt>
+
+          <code><a href="encode.html">encode()</a></code>
+
+        </dt>
+        <dd>DuckDB function encode</dd>
+
+        <dt>
+
+          <code><a href="from_base64.html">from_base64()</a></code>
+
+        </dt>
+        <dd>DuckDB function from_base64</dd>
+
+        <dt>
+
+          <code><a href="hex.html">hex()</a></code>
+
+        </dt>
+        <dd>DuckDB function hex</dd>
+
+        <dt>
+
+          <code><a href="md5.html">md5()</a></code>
+
+        </dt>
+        <dd>DuckDB function md5</dd>
+
+        <dt>
+
+          <code><a href="md5_number.html">md5_number()</a></code>
+
+        </dt>
+        <dd>DuckDB function md5_number</dd>
+
+        <dt>
+
+          <code><a href="octet_length.html">octet_length()</a></code>
+
+        </dt>
+        <dd>DuckDB function octet_length</dd>
+
+        <dt>
+
+          <code><a href="or-or.html">`||`()</a></code>
+
+        </dt>
+        <dd>DuckDB function ||</dd>
+
+        <dt>
+
+          <code><a href="repeat.html">`repeat`()</a></code>
+
+        </dt>
+        <dd>DuckDB function repeat</dd>
+
+        <dt>
+
+          <code><a href="sha1.html">sha1()</a></code>
+
+        </dt>
+        <dd>DuckDB function sha1</dd>
+
+        <dt>
+
+          <code><a href="sha256.html">sha256()</a></code>
+
+        </dt>
+        <dd>DuckDB function sha256</dd>
+
+        <dt>
+
+          <code><a href="to_base64.html">to_base64()</a></code>
+
+        </dt>
+        <dd>DuckDB function to_base64</dd>
+
+        <dt>
+
+          <code><a href="unbin.html">unbin()</a></code>
+
+        </dt>
+        <dd>DuckDB function unbin</dd>
+
+        <dt>
+
+          <code><a href="unhex.html">unhex()</a></code>
+
+        </dt>
+        <dd>DuckDB function unhex</dd>
+      </dl></div><div class="section level2">
+      <h2 id="date">Date<a class="anchor" aria-label="anchor" href="#date"></a></h2>
+
+      <div class="section-desc"><p>Operate on <code>DATE</code> values.</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="greatest.html">greatest()</a></code>
+
+        </dt>
+        <dd>DuckDB function greatest</dd>
+
+        <dt>
+
+          <code><a href="least.html">least()</a></code>
+
+        </dt>
+        <dd>DuckDB function least</dd>
+      </dl></div><div class="section level2">
+      <h2 id="timestamp">Timestamp<a class="anchor" aria-label="anchor" href="#timestamp"></a></h2>
+
+      <div class="section-desc"><p>Operate on <code>TIMESTAMP</code> values.</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="greatest.html">greatest()</a></code>
+
+        </dt>
+        <dd>DuckDB function greatest</dd>
+
+        <dt>
+
+          <code><a href="least.html">least()</a></code>
+
+        </dt>
+        <dd>DuckDB function least</dd>
+      </dl></div><div class="section level2">
+      <h2 id="regular-expressions">Regular expressions<a class="anchor" aria-label="anchor" href="#regular-expressions"></a></h2>
+
+      <div class="section-desc"><p>Match and extract with regular expressions.</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="regexp_escape.html">regexp_escape()</a></code>
+
+        </dt>
+        <dd>DuckDB function regexp_escape</dd>
+
+        <dt>
+
+          <code><a href="regexp_extract.html">regexp_extract()</a></code>
+
+        </dt>
+        <dd>DuckDB function regexp_extract</dd>
+
+        <dt>
+
+          <code><a href="regexp_extract_all.html">regexp_extract_all()</a></code>
+
+        </dt>
+        <dd>DuckDB function regexp_extract_all</dd>
+
+        <dt>
+
+          <code><a href="regexp_full_match.html">regexp_full_match()</a></code>
+
+        </dt>
+        <dd>DuckDB function regexp_full_match</dd>
+
+        <dt>
+
+          <code><a href="regexp_matches.html">regexp_matches()</a></code>
+
+        </dt>
+        <dd>DuckDB function regexp_matches</dd>
+
+        <dt>
+
+          <code><a href="regexp_replace.html">regexp_replace()</a></code>
+
+        </dt>
+        <dd>DuckDB function regexp_replace</dd>
+
+        <dt>
+
+          <code><a href="string_split_regex.html">string_split_regex()</a></code>
+
+        </dt>
+        <dd>DuckDB function string_split_regex</dd>
+      </dl></div><div class="section level2">
+      <h2 id="text-similarity">Text similarity<a class="anchor" aria-label="anchor" href="#text-similarity"></a></h2>
+
+      <div class="section-desc"><p>Measure similarity or distance between strings.</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="damerau_levenshtein.html">damerau_levenshtein()</a></code>
+
+        </dt>
+        <dd>DuckDB function damerau_levenshtein</dd>
+
+        <dt>
+
+          <code><a href="hamming.html">hamming()</a></code>
+
+        </dt>
+        <dd>DuckDB function hamming</dd>
+
+        <dt>
+
+          <code><a href="jaccard.html">jaccard()</a></code>
+
+        </dt>
+        <dd>DuckDB function jaccard</dd>
+
+        <dt>
+
+          <code><a href="jaro_similarity.html">jaro_similarity()</a></code>
+
+        </dt>
+        <dd>DuckDB function jaro_similarity</dd>
+
+        <dt>
+
+          <code><a href="jaro_winkler_similarity.html">jaro_winkler_similarity()</a></code>
+
+        </dt>
+        <dd>DuckDB function jaro_winkler_similarity</dd>
+
+        <dt>
+
+          <code><a href="levenshtein.html">levenshtein()</a></code>
+
+        </dt>
+        <dd>DuckDB function levenshtein</dd>
+      </dl></div><div class="section level2">
+      <h2 id="lambda">Lambda<a class="anchor" aria-label="anchor" href="#lambda"></a></h2>
+
+      <div class="section-desc"><p>Higher-order functions taking lambda expressions.</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="list_filter.html">list_filter()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_filter</dd>
+
+        <dt>
+
+          <code><a href="list_reduce.html">list_reduce()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_reduce</dd>
+
+        <dt>
+
+          <code><a href="list_transform.html">list_transform()</a></code>
+
+        </dt>
+        <dd>DuckDB function list_transform</dd>
+      </dl></div><div class="section level2">
+      <h2 id="geometry">Geometry<a class="anchor" aria-label="anchor" href="#geometry"></a></h2>
+
+      <div class="section-desc"><p>Spatial and geometry functions.</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="st_astext.html">st_astext()</a></code>
+
+        </dt>
+        <dd>DuckDB function st_astext</dd>
+
+        <dt>
+
+          <code><a href="st_aswkb.html">st_aswkb()</a></code>
+
+        </dt>
+        <dd>DuckDB function st_aswkb</dd>
+
+        <dt>
+
+          <code><a href="st_crs.html">st_crs()</a></code>
+
+        </dt>
+        <dd>DuckDB function st_crs</dd>
+
+        <dt>
+
+          <code><a href="st_geomfromwkb.html">st_geomfromwkb()</a></code>
+
+        </dt>
+        <dd>DuckDB function st_geomfromwkb</dd>
+      </dl></div><div class="section level2">
+      <h2 id="aggregate">Aggregate<a class="anchor" aria-label="anchor" href="#aggregate"></a></h2>
+
+      <div class="section-desc"><p>Aggregate functions.</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="greatest.html">greatest()</a></code>
+
+        </dt>
+        <dd>DuckDB function greatest</dd>
+
+        <dt>
+
+          <code><a href="least.html">least()</a></code>
+
+        </dt>
+        <dd>DuckDB function least</dd>
+      </dl></div><div class="section level2">
+      <h2 id="other-functions">Other functions<a class="anchor" aria-label="anchor" href="#other-functions"></a></h2>
+
+      <div class="section-desc"><p>Functions that DuckDB does not assign to a category.</p></div>
+
+      <dl></dl></div><div class="section level2">
+
+
+
+
+      <dl><dt>
+
+          <code><a href="abs.html">abs()</a></code>
 
         </dt>
         <dd>DuckDB function abs</dd>
@@ -64,7 +1377,7 @@
 
         <dt>
 
-          <code><a href="add.html">add</a></code>
+          <code><a href="add.html">add()</a></code>
 
         </dt>
         <dd>DuckDB function add</dd>
@@ -78,7 +1391,7 @@
 
         <dt>
 
-          <code><a href="age.html">age</a></code>
+          <code><a href="age.html">age()</a></code>
 
         </dt>
         <dd>DuckDB function age</dd>
@@ -106,14 +1419,14 @@
 
         <dt>
 
-          <code><a href="and.html">&amp;</a></code>
+          <code><a href="and.html">`&amp;`()</a></code>
 
         </dt>
         <dd>DuckDB function &amp;</dd>
 
         <dt>
 
-          <code><a href="any_value.html">any_value</a></code>
+          <code><a href="any_value.html">any_value()</a></code>
 
         </dt>
         <dd>DuckDB function any_value</dd>
@@ -127,7 +1440,7 @@
 
         <dt>
 
-          <code><a href="approx_quantile.html">approx_quantile</a></code>
+          <code><a href="approx_quantile.html">approx_quantile()</a></code>
 
         </dt>
         <dd>DuckDB function approx_quantile</dd>
@@ -141,42 +1454,42 @@
 
         <dt>
 
-          <code><a href="arg_max.html">arg_max</a></code> <code><a href="arg_max.html">argmax</a></code> <code><a href="arg_max.html">max_by</a></code>
+          <code><a href="arg_max.html">arg_max()</a></code>
 
         </dt>
         <dd>DuckDB function arg_max</dd>
 
         <dt>
 
-          <code><a href="arg_max_null.html">arg_max_null</a></code>
+          <code><a href="arg_max_null.html">arg_max_null()</a></code>
 
         </dt>
         <dd>DuckDB function arg_max_null</dd>
 
         <dt>
 
-          <code><a href="arg_max_nulls_last.html">arg_max_nulls_last</a></code>
+          <code><a href="arg_max_nulls_last.html">arg_max_nulls_last()</a></code>
 
         </dt>
         <dd>DuckDB function arg_max_nulls_last</dd>
 
         <dt>
 
-          <code><a href="arg_min.html">arg_min</a></code> <code><a href="arg_min.html">argmin</a></code> <code><a href="arg_min.html">min_by</a></code>
+          <code><a href="arg_min.html">arg_min()</a></code>
 
         </dt>
         <dd>DuckDB function arg_min</dd>
 
         <dt>
 
-          <code><a href="arg_min_null.html">arg_min_null</a></code>
+          <code><a href="arg_min_null.html">arg_min_null()</a></code>
 
         </dt>
         <dd>DuckDB function arg_min_null</dd>
 
         <dt>
 
-          <code><a href="arg_min_nulls_last.html">arg_min_nulls_last</a></code>
+          <code><a href="arg_min_nulls_last.html">arg_min_nulls_last()</a></code>
 
         </dt>
         <dd>DuckDB function arg_min_nulls_last</dd>
@@ -190,59 +1503,10 @@
 
         <dt>
 
-          <code><a href="array_cosine_distance.html">array_cosine_distance</a></code>
-
-        </dt>
-        <dd>DuckDB function array_cosine_distance</dd>
-
-        <dt>
-
-          <code><a href="array_cosine_similarity.html">array_cosine_similarity</a></code>
-
-        </dt>
-        <dd>DuckDB function array_cosine_similarity</dd>
-
-        <dt>
-
-          <code><a href="array_cross_product.html">array_cross_product</a></code>
-
-        </dt>
-        <dd>DuckDB function array_cross_product</dd>
-
-        <dt>
-
-          <code><a href="array_distance.html">array_distance</a></code>
-
-        </dt>
-        <dd>DuckDB function array_distance</dd>
-
-        <dt>
-
-          <code><a href="array_extract.html">array_extract</a></code>
+          <code><a href="array_extract.html">array_extract()</a></code>
 
         </dt>
         <dd>DuckDB function array_extract</dd>
-
-        <dt>
-
-          <code><a href="array_inner_product.html">array_inner_product</a></code> <code><a href="array_inner_product.html">array_dot_product</a></code>
-
-        </dt>
-        <dd>DuckDB function array_inner_product</dd>
-
-        <dt>
-
-          <code><a href="array_length.html">array_length</a></code>
-
-        </dt>
-        <dd>DuckDB function array_length</dd>
-
-        <dt>
-
-          <code><a href="array_negative_inner_product.html">array_negative_inner_product</a></code> <code><a href="array_negative_inner_product.html">array_negative_dot_product</a></code>
-
-        </dt>
-        <dd>DuckDB function array_negative_inner_product</dd>
 
         <dt>
 
@@ -302,13 +1566,6 @@
 
         <dt>
 
-          <code><a href="array_value.html">array_value()</a></code>
-
-        </dt>
-        <dd>DuckDB function array_value</dd>
-
-        <dt>
-
           <code><a href="arrow_scan.html">arrow_scan()</a></code>
 
         </dt>
@@ -320,13 +1577,6 @@
 
         </dt>
         <dd>DuckDB function arrow_scan_dumb</dd>
-
-        <dt>
-
-          <code><a href="ascii.html">ascii()</a></code>
-
-        </dt>
-        <dd>DuckDB function ascii</dd>
 
         <dt>
 
@@ -365,49 +1615,28 @@
 
         <dt>
 
-          <code><a href="avg.html">avg</a></code> <code><a href="avg.html">mean</a></code>
+          <code><a href="avg.html">avg()</a></code>
 
         </dt>
         <dd>DuckDB function avg</dd>
 
         <dt>
 
-          <code><a href="bar.html">bar</a></code>
-
-        </dt>
-        <dd>DuckDB function bar</dd>
-
-        <dt>
-
-          <code><a href="bin.html">bin</a></code> <code><a href="bin.html">to_binary</a></code>
-
-        </dt>
-        <dd>DuckDB function bin</dd>
-
-        <dt>
-
-          <code><a href="bit_and.html">bit_and</a></code>
+          <code><a href="bit_and.html">bit_and()</a></code>
 
         </dt>
         <dd>DuckDB function bit_and</dd>
 
         <dt>
 
-          <code><a href="bit_count.html">bit_count</a></code>
+          <code><a href="bit_count.html">bit_count()</a></code>
 
         </dt>
         <dd>DuckDB function bit_count</dd>
 
         <dt>
 
-          <code><a href="bit_length.html">bit_length</a></code>
-
-        </dt>
-        <dd>DuckDB function bit_length</dd>
-
-        <dt>
-
-          <code><a href="bit_or.html">bit_or</a></code>
+          <code><a href="bit_or.html">bit_or()</a></code>
 
         </dt>
         <dd>DuckDB function bit_or</dd>
@@ -421,21 +1650,21 @@
 
         <dt>
 
-          <code><a href="bit_xor.html">bit_xor</a></code>
+          <code><a href="bit_xor.html">bit_xor()</a></code>
 
         </dt>
         <dd>DuckDB function bit_xor</dd>
 
         <dt>
 
-          <code><a href="bitstring.html">bitstring</a></code>
+          <code><a href="bitstring.html">bitstring()</a></code>
 
         </dt>
         <dd>DuckDB function bitstring</dd>
 
         <dt>
 
-          <code><a href="bitstring_agg.html">bitstring_agg</a></code>
+          <code><a href="bitstring_agg.html">bitstring_agg()</a></code>
 
         </dt>
         <dd>DuckDB function bitstring_agg</dd>
@@ -484,31 +1713,24 @@
 
         <dt>
 
-          <code><a href="ceil.html">ceil</a></code> <code><a href="ceil.html">ceiling</a></code>
+          <code><a href="ceil.html">ceil()</a></code>
 
         </dt>
         <dd>DuckDB function ceil</dd>
 
         <dt>
 
-          <code><a href="century.html">century</a></code>
+          <code><a href="century.html">century()</a></code>
 
         </dt>
         <dd>DuckDB function century</dd>
 
         <dt>
 
-          <code><a href="checkpoint.html">checkpoint</a></code>
+          <code><a href="checkpoint.html">checkpoint()</a></code>
 
         </dt>
         <dd>DuckDB function checkpoint</dd>
-
-        <dt>
-
-          <code><a href="chr.html">chr()</a></code>
-
-        </dt>
-        <dd>DuckDB function chr</dd>
 
         <dt>
 
@@ -540,24 +1762,10 @@
 
         <dt>
 
-          <code><a href="concat_ws.html">concat_ws()</a></code>
-
-        </dt>
-        <dd>DuckDB function concat_ws</dd>
-
-        <dt>
-
           <code><a href="constant_or_null.html">constant_or_null()</a></code>
 
         </dt>
         <dd>DuckDB function constant_or_null</dd>
-
-        <dt>
-
-          <code><a href="contains.html">contains</a></code>
-
-        </dt>
-        <dd>DuckDB function contains</dd>
 
         <dt>
 
@@ -596,7 +1804,7 @@
 
         <dt>
 
-          <code><a href="count.html">count</a></code>
+          <code><a href="count.html">count()</a></code>
 
         </dt>
         <dd>DuckDB function count</dd>
@@ -694,7 +1902,7 @@
 
         <dt>
 
-          <code><a href="current_schemas.html">current_schemas</a></code>
+          <code><a href="current_schemas.html">current_schemas()</a></code>
 
         </dt>
         <dd>DuckDB function current_schemas</dd>
@@ -729,13 +1937,6 @@
 
         <dt>
 
-          <code><a href="damerau_levenshtein.html">damerau_levenshtein()</a></code>
-
-        </dt>
-        <dd>DuckDB function damerau_levenshtein</dd>
-
-        <dt>
-
           <code><a href="database_list.html">database_list()</a></code>
 
         </dt>
@@ -757,63 +1958,63 @@
 
         <dt>
 
-          <code><a href="date_diff.html">date_diff</a></code> <code><a href="date_diff.html">datediff</a></code>
+          <code><a href="date_diff.html">date_diff()</a></code>
 
         </dt>
         <dd>DuckDB function date_diff</dd>
 
         <dt>
 
-          <code><a href="date_part.html">date_part</a></code> <code><a href="date_part.html">datepart</a></code>
+          <code><a href="date_part.html">date_part()</a></code>
 
         </dt>
         <dd>DuckDB function date_part</dd>
 
         <dt>
 
-          <code><a href="date_sub.html">date_sub</a></code> <code><a href="date_sub.html">datesub</a></code>
+          <code><a href="date_sub.html">date_sub()</a></code>
 
         </dt>
         <dd>DuckDB function date_sub</dd>
 
         <dt>
 
-          <code><a href="date_trunc.html">date_trunc</a></code> <code><a href="date_trunc.html">datetrunc</a></code>
+          <code><a href="date_trunc.html">date_trunc()</a></code>
 
         </dt>
         <dd>DuckDB function date_trunc</dd>
 
         <dt>
 
-          <code><a href="day.html">day</a></code>
+          <code><a href="day.html">day()</a></code>
 
         </dt>
         <dd>DuckDB function day</dd>
 
         <dt>
 
-          <code><a href="dayname.html">dayname</a></code>
+          <code><a href="dayname.html">dayname()</a></code>
 
         </dt>
         <dd>DuckDB function dayname</dd>
 
         <dt>
 
-          <code><a href="dayofmonth.html">dayofmonth</a></code>
+          <code><a href="dayofmonth.html">dayofmonth()</a></code>
 
         </dt>
         <dd>DuckDB function dayofmonth</dd>
 
         <dt>
 
-          <code><a href="dayofweek.html">dayofweek</a></code>
+          <code><a href="dayofweek.html">dayofweek()</a></code>
 
         </dt>
         <dd>DuckDB function dayofweek</dd>
 
         <dt>
 
-          <code><a href="dayofyear.html">dayofyear</a></code>
+          <code><a href="dayofyear.html">dayofyear()</a></code>
 
         </dt>
         <dd>DuckDB function dayofyear</dd>
@@ -834,17 +2035,10 @@
 
         <dt>
 
-          <code><a href="decade.html">decade</a></code>
+          <code><a href="decade.html">decade()</a></code>
 
         </dt>
         <dd>DuckDB function decade</dd>
-
-        <dt>
-
-          <code><a href="decode.html">decode</a></code>
-
-        </dt>
-        <dd>DuckDB function decode</dd>
 
         <dt>
 
@@ -953,7 +2147,7 @@
 
         <dt>
 
-          <code><a href="divide.html">divide</a></code> <code><a href="divide.html">//</a></code>
+          <code><a href="divide.html">divide()</a></code>
 
         </dt>
         <dd>DuckDB function divide</dd>
@@ -1205,7 +2399,7 @@
 
         <dt>
 
-          <code><a href="enable_profiling.html">enable_profiling</a></code>
+          <code><a href="enable_profiling.html">enable_profiling()</a></code>
 
         </dt>
         <dd>DuckDB function enable_profiling</dd>
@@ -1223,13 +2417,6 @@
 
         </dt>
         <dd>DuckDB function enable_verification</dd>
-
-        <dt>
-
-          <code><a href="encode.html">encode()</a></code>
-
-        </dt>
-        <dd>DuckDB function encode</dd>
 
         <dt>
 
@@ -1275,42 +2462,42 @@
 
         <dt>
 
-          <code><a href="epoch.html">epoch</a></code>
+          <code><a href="epoch.html">epoch()</a></code>
 
         </dt>
         <dd>DuckDB function epoch</dd>
 
         <dt>
 
-          <code><a href="epoch_ms.html">epoch_ms</a></code>
+          <code><a href="epoch_ms.html">epoch_ms()</a></code>
 
         </dt>
         <dd>DuckDB function epoch_ms</dd>
 
         <dt>
 
-          <code><a href="epoch_ns.html">epoch_ns</a></code>
+          <code><a href="epoch_ns.html">epoch_ns()</a></code>
 
         </dt>
         <dd>DuckDB function epoch_ns</dd>
 
         <dt>
 
-          <code><a href="epoch_us.html">epoch_us</a></code>
+          <code><a href="epoch_us.html">epoch_us()</a></code>
 
         </dt>
         <dd>DuckDB function epoch_us</dd>
 
         <dt>
 
-          <code><a href="equi_width_bins.html">equi_width_bins</a></code>
+          <code><a href="equi_width_bins.html">equi_width_bins()</a></code>
 
         </dt>
         <dd>DuckDB function equi_width_bins</dd>
 
         <dt>
 
-          <code><a href="era.html">era</a></code>
+          <code><a href="era.html">era()</a></code>
 
         </dt>
         <dd>DuckDB function era</dd>
@@ -1380,7 +2567,7 @@
 
         <dt>
 
-          <code><a href="first.html">first</a></code> <code><a href="first.html">arbitrary</a></code>
+          <code><a href="first.html">first()</a></code>
 
         </dt>
         <dd>DuckDB function first</dd>
@@ -1394,14 +2581,7 @@
 
         <dt>
 
-          <code><a href="flatten.html">flatten()</a></code>
-
-        </dt>
-        <dd>DuckDB function flatten</dd>
-
-        <dt>
-
-          <code><a href="floor.html">floor</a></code>
+          <code><a href="floor.html">floor()</a></code>
 
         </dt>
         <dd>DuckDB function floor</dd>
@@ -1415,24 +2595,10 @@
 
         <dt>
 
-          <code><a href="force_checkpoint.html">force_checkpoint</a></code>
+          <code><a href="force_checkpoint.html">force_checkpoint()</a></code>
 
         </dt>
         <dd>DuckDB function force_checkpoint</dd>
-
-        <dt>
-
-          <code><a href="formatReadableDecimalSize.html">formatReadableDecimalSize()</a></code>
-
-        </dt>
-        <dd>DuckDB function formatReadableDecimalSize</dd>
-
-        <dt>
-
-          <code><a href="format_bytes.html">format_bytes()</a></code>
-
-        </dt>
-        <dd>DuckDB function format_bytes</dd>
 
         <dt>
 
@@ -1450,13 +2616,6 @@
 
         <dt>
 
-          <code><a href="from_base64.html">from_base64()</a></code>
-
-        </dt>
-        <dd>DuckDB function from_base64</dd>
-
-        <dt>
-
           <code><a href="functions.html">functions()</a></code>
 
         </dt>
@@ -1468,13 +2627,6 @@
 
         </dt>
         <dd>DuckDB function gamma</dd>
-
-        <dt>
-
-          <code><a href="generate_series.html">generate_series</a></code>
-
-        </dt>
-        <dd>DuckDB function generate_series</dd>
 
         <dt>
 
@@ -1534,133 +2686,112 @@
 
         <dt>
 
-          <code><a href="glob.html">glob</a></code>
+          <code><a href="glob.html">glob()</a></code>
 
         </dt>
         <dd>DuckDB function glob</dd>
 
         <dt>
 
-          <code><a href="greater-than-greater-than.html">&gt;&gt;</a></code>
+          <code><a href="greater-than-greater-than.html">`&gt;&gt;`()</a></code>
 
         </dt>
         <dd>DuckDB function &gt;&gt;</dd>
 
         <dt>
 
-          <code><a href="greatest.html">greatest()</a></code>
-
-        </dt>
-        <dd>DuckDB function greatest</dd>
-
-        <dt>
-
-          <code><a href="greatest_common_divisor.html">greatest_common_divisor</a></code> <code><a href="greatest_common_divisor.html">gcd</a></code>
+          <code><a href="greatest_common_divisor.html">greatest_common_divisor()</a></code>
 
         </dt>
         <dd>DuckDB function greatest_common_divisor</dd>
 
         <dt>
 
-          <code><a href="hamming.html">hamming()</a></code>
-
-        </dt>
-        <dd>DuckDB function hamming</dd>
-
-        <dt>
-
-          <code><a href="has_any_column_privilege.html">has_any_column_privilege</a></code>
+          <code><a href="has_any_column_privilege.html">has_any_column_privilege()</a></code>
 
         </dt>
         <dd>DuckDB function has_any_column_privilege</dd>
 
         <dt>
 
-          <code><a href="has_column_privilege.html">has_column_privilege</a></code>
+          <code><a href="has_column_privilege.html">has_column_privilege()</a></code>
 
         </dt>
         <dd>DuckDB function has_column_privilege</dd>
 
         <dt>
 
-          <code><a href="has_database_privilege.html">has_database_privilege</a></code>
+          <code><a href="has_database_privilege.html">has_database_privilege()</a></code>
 
         </dt>
         <dd>DuckDB function has_database_privilege</dd>
 
         <dt>
 
-          <code><a href="has_foreign_data_wrapper_privilege.html">has_foreign_data_wrapper_privilege</a></code>
+          <code><a href="has_foreign_data_wrapper_privilege.html">has_foreign_data_wrapper_privilege()</a></code>
 
         </dt>
         <dd>DuckDB function has_foreign_data_wrapper_privilege</dd>
 
         <dt>
 
-          <code><a href="has_function_privilege.html">has_function_privilege</a></code>
+          <code><a href="has_function_privilege.html">has_function_privilege()</a></code>
 
         </dt>
         <dd>DuckDB function has_function_privilege</dd>
 
         <dt>
 
-          <code><a href="has_language_privilege.html">has_language_privilege</a></code>
+          <code><a href="has_language_privilege.html">has_language_privilege()</a></code>
 
         </dt>
         <dd>DuckDB function has_language_privilege</dd>
 
         <dt>
 
-          <code><a href="has_schema_privilege.html">has_schema_privilege</a></code>
+          <code><a href="has_schema_privilege.html">has_schema_privilege()</a></code>
 
         </dt>
         <dd>DuckDB function has_schema_privilege</dd>
 
         <dt>
 
-          <code><a href="has_sequence_privilege.html">has_sequence_privilege</a></code>
+          <code><a href="has_sequence_privilege.html">has_sequence_privilege()</a></code>
 
         </dt>
         <dd>DuckDB function has_sequence_privilege</dd>
 
         <dt>
 
-          <code><a href="has_server_privilege.html">has_server_privilege</a></code>
+          <code><a href="has_server_privilege.html">has_server_privilege()</a></code>
 
         </dt>
         <dd>DuckDB function has_server_privilege</dd>
 
         <dt>
 
-          <code><a href="has_table_privilege.html">has_table_privilege</a></code>
+          <code><a href="has_table_privilege.html">has_table_privilege()</a></code>
 
         </dt>
         <dd>DuckDB function has_table_privilege</dd>
 
         <dt>
 
-          <code><a href="has_tablespace_privilege.html">has_tablespace_privilege</a></code>
+          <code><a href="has_tablespace_privilege.html">has_tablespace_privilege()</a></code>
 
         </dt>
         <dd>DuckDB function has_tablespace_privilege</dd>
 
         <dt>
 
-          <code><a href="hash.html">hash()</a></code>
-
-        </dt>
-        <dd>DuckDB function hash</dd>
-
-        <dt>
-
-          <code><a href="hex.html">hex</a></code> <code><a href="hex.html">to_hex</a></code>
+          <code><a href="hex.html">hex()</a></code>
 
         </dt>
         <dd>DuckDB function hex</dd>
 
         <dt>
 
-          <code><a href="histogram.html">histogram</a></code>
+          <code><a href="histogram.html">histogram()</a></code>
 
         </dt>
         <dd>DuckDB function histogram</dd>
@@ -1681,17 +2812,10 @@
 
         <dt>
 
-          <code><a href="hour.html">hour</a></code>
+          <code><a href="hour.html">hour()</a></code>
 
         </dt>
         <dd>DuckDB function hour</dd>
-
-        <dt>
-
-          <code><a href="ilike_escape.html">ilike_escape()</a></code>
-
-        </dt>
-        <dd>DuckDB function ilike_escape</dd>
 
         <dt>
 
@@ -1737,13 +2861,6 @@
 
         <dt>
 
-          <code><a href="instr.html">instr()</a></code>
-
-        </dt>
-        <dd>DuckDB function instr</dd>
-
-        <dt>
-
           <code><a href="is_histogram_other_bin.html">is_histogram_other_bin()</a></code>
 
         </dt>
@@ -1751,63 +2868,42 @@
 
         <dt>
 
-          <code><a href="isfinite.html">isfinite</a></code>
+          <code><a href="isfinite.html">isfinite()</a></code>
 
         </dt>
         <dd>DuckDB function isfinite</dd>
 
         <dt>
 
-          <code><a href="isinf.html">isinf</a></code>
+          <code><a href="isinf.html">isinf()</a></code>
 
         </dt>
         <dd>DuckDB function isinf</dd>
 
         <dt>
 
-          <code><a href="isnan.html">isnan</a></code>
+          <code><a href="isnan.html">isnan()</a></code>
 
         </dt>
         <dd>DuckDB function isnan</dd>
 
         <dt>
 
-          <code><a href="isodow.html">isodow</a></code>
+          <code><a href="isodow.html">isodow()</a></code>
 
         </dt>
         <dd>DuckDB function isodow</dd>
 
         <dt>
 
-          <code><a href="isoyear.html">isoyear</a></code>
+          <code><a href="isoyear.html">isoyear()</a></code>
 
         </dt>
         <dd>DuckDB function isoyear</dd>
 
         <dt>
 
-          <code><a href="jaccard.html">jaccard()</a></code>
-
-        </dt>
-        <dd>DuckDB function jaccard</dd>
-
-        <dt>
-
-          <code><a href="jaro_similarity.html">jaro_similarity</a></code>
-
-        </dt>
-        <dd>DuckDB function jaro_similarity</dd>
-
-        <dt>
-
-          <code><a href="jaro_winkler_similarity.html">jaro_winkler_similarity</a></code>
-
-        </dt>
-        <dd>DuckDB function jaro_winkler_similarity</dd>
-
-        <dt>
-
-          <code><a href="julian.html">julian</a></code>
+          <code><a href="julian.html">julian()</a></code>
 
         </dt>
         <dd>DuckDB function julian</dd>
@@ -1842,14 +2938,14 @@
 
         <dt>
 
-          <code><a href="last.html">last</a></code>
+          <code><a href="last.html">last()</a></code>
 
         </dt>
         <dd>DuckDB function last</dd>
 
         <dt>
 
-          <code><a href="last_day.html">last_day</a></code>
+          <code><a href="last_day.html">last_day()</a></code>
 
         </dt>
         <dd>DuckDB function last_day</dd>
@@ -1870,59 +2966,24 @@
 
         <dt>
 
-          <code><a href="least.html">least()</a></code>
-
-        </dt>
-        <dd>DuckDB function least</dd>
-
-        <dt>
-
-          <code><a href="least_common_multiple.html">least_common_multiple</a></code> <code><a href="least_common_multiple.html">lcm</a></code>
+          <code><a href="least_common_multiple.html">least_common_multiple()</a></code>
 
         </dt>
         <dd>DuckDB function least_common_multiple</dd>
 
         <dt>
 
-          <code><a href="left.html">left()</a></code>
-
-        </dt>
-        <dd>DuckDB function left</dd>
-
-        <dt>
-
-          <code><a href="left_grapheme.html">left_grapheme()</a></code>
-
-        </dt>
-        <dd>DuckDB function left_grapheme</dd>
-
-        <dt>
-
-          <code><a href="len.html">len</a></code> <code><a href="len.html">char_length</a></code> <code><a href="len.html">character_length</a></code>
+          <code><a href="len.html">len()</a></code>
 
         </dt>
         <dd>DuckDB function len</dd>
 
         <dt>
 
-          <code><a href="length_grapheme.html">length_grapheme()</a></code>
-
-        </dt>
-        <dd>DuckDB function length_grapheme</dd>
-
-        <dt>
-
-          <code><a href="less-than-less-than.html">&lt;&lt;</a></code>
+          <code><a href="less-than-less-than.html">`&lt;&lt;`()</a></code>
 
         </dt>
         <dd>DuckDB function &lt;&lt;</dd>
-
-        <dt>
-
-          <code><a href="levenshtein.html">levenshtein()</a></code>
-
-        </dt>
-        <dd>DuckDB function levenshtein</dd>
 
         <dt>
 
@@ -1933,24 +2994,10 @@
 
         <dt>
 
-          <code><a href="like_escape.html">like_escape()</a></code>
-
-        </dt>
-        <dd>DuckDB function like_escape</dd>
-
-        <dt>
-
           <code><a href="list.html">list()</a></code>
 
         </dt>
         <dd>DuckDB function list</dd>
-
-        <dt>
-
-          <code><a href="list_aggregate.html">list_aggregate()</a></code>
-
-        </dt>
-        <dd>DuckDB function list_aggregate</dd>
 
         <dt>
 
@@ -2017,52 +3064,10 @@
 
         <dt>
 
-          <code><a href="list_concat.html">list_concat()</a></code>
-
-        </dt>
-        <dd>DuckDB function list_concat</dd>
-
-        <dt>
-
-          <code><a href="list_contains.html">list_contains()</a></code>
-
-        </dt>
-        <dd>DuckDB function list_contains</dd>
-
-        <dt>
-
-          <code><a href="list_cosine_distance.html">list_cosine_distance</a></code> <code><a href="list_cosine_distance.html">&lt;=&gt;</a></code>
-
-        </dt>
-        <dd>DuckDB function list_cosine_distance</dd>
-
-        <dt>
-
-          <code><a href="list_cosine_similarity.html">list_cosine_similarity</a></code>
-
-        </dt>
-        <dd>DuckDB function list_cosine_similarity</dd>
-
-        <dt>
-
           <code><a href="list_count.html">list_count()</a></code>
 
         </dt>
         <dd>DuckDB function list_count</dd>
-
-        <dt>
-
-          <code><a href="list_distance.html">list_distance</a></code>
-
-        </dt>
-        <dd>DuckDB function list_distance</dd>
-
-        <dt>
-
-          <code><a href="list_distinct.html">list_distinct()</a></code>
-
-        </dt>
-        <dd>DuckDB function list_distinct</dd>
 
         <dt>
 
@@ -2073,20 +3078,6 @@
 
         <dt>
 
-          <code><a href="list_extract.html">list_extract</a></code> <code><a href="list_extract.html">list_element</a></code>
-
-        </dt>
-        <dd>DuckDB function list_extract</dd>
-
-        <dt>
-
-          <code><a href="list_filter.html">list_filter()</a></code>
-
-        </dt>
-        <dd>DuckDB function list_filter</dd>
-
-        <dt>
-
           <code><a href="list_first.html">list_first()</a></code>
 
         </dt>
@@ -2094,45 +3085,10 @@
 
         <dt>
 
-          <code><a href="list_grade_up.html">list_grade_up</a></code> <code><a href="list_grade_up.html">array_grade_up</a></code> <code><a href="list_grade_up.html">grade_up</a></code>
-
-        </dt>
-        <dd>DuckDB function list_grade_up</dd>
-
-        <dt>
-
-          <code><a href="list_has_all.html">list_has_all()</a></code>
-
-        </dt>
-        <dd>DuckDB function list_has_all</dd>
-
-        <dt>
-
-          <code><a href="list_has_any.html">list_has_any()</a></code>
-
-        </dt>
-        <dd>DuckDB function list_has_any</dd>
-
-        <dt>
-
           <code><a href="list_histogram.html">list_histogram()</a></code>
 
         </dt>
         <dd>DuckDB function list_histogram</dd>
-
-        <dt>
-
-          <code><a href="list_inner_product.html">list_inner_product</a></code> <code><a href="list_inner_product.html">list_dot_product</a></code>
-
-        </dt>
-        <dd>DuckDB function list_inner_product</dd>
-
-        <dt>
-
-          <code><a href="list_intersect.html">list_intersect()</a></code>
-
-        </dt>
-        <dd>DuckDB function list_intersect</dd>
 
         <dt>
 
@@ -2192,20 +3148,6 @@
 
         <dt>
 
-          <code><a href="list_negative_inner_product.html">list_negative_inner_product</a></code> <code><a href="list_negative_inner_product.html">list_negative_dot_product</a></code>
-
-        </dt>
-        <dd>DuckDB function list_negative_inner_product</dd>
-
-        <dt>
-
-          <code><a href="list_position.html">list_position()</a></code>
-
-        </dt>
-        <dd>DuckDB function list_position</dd>
-
-        <dt>
-
           <code><a href="list_prepend.html">list_prepend()</a></code>
 
         </dt>
@@ -2220,38 +3162,10 @@
 
         <dt>
 
-          <code><a href="list_reduce.html">list_reduce</a></code> <code><a href="list_reduce.html">array_reduce</a></code> <code><a href="list_reduce.html">reduce</a></code>
-
-        </dt>
-        <dd>DuckDB function list_reduce</dd>
-
-        <dt>
-
-          <code><a href="list_resize.html">list_resize</a></code> <code><a href="list_resize.html">array_resize</a></code>
-
-        </dt>
-        <dd>DuckDB function list_resize</dd>
-
-        <dt>
-
           <code><a href="list_reverse.html">list_reverse()</a></code>
 
         </dt>
         <dd>DuckDB function list_reverse</dd>
-
-        <dt>
-
-          <code><a href="list_reverse_sort.html">list_reverse_sort</a></code> <code><a href="list_reverse_sort.html">array_reverse_sort</a></code>
-
-        </dt>
-        <dd>DuckDB function list_reverse_sort</dd>
-
-        <dt>
-
-          <code><a href="list_select.html">list_select()</a></code>
-
-        </dt>
-        <dd>DuckDB function list_select</dd>
 
         <dt>
 
@@ -2269,17 +3183,10 @@
 
         <dt>
 
-          <code><a href="list_slice.html">list_slice</a></code> <code><a href="list_slice.html">array_slice</a></code>
+          <code><a href="list_slice.html">list_slice()</a></code>
 
         </dt>
         <dd>DuckDB function list_slice</dd>
-
-        <dt>
-
-          <code><a href="list_sort.html">list_sort</a></code> <code><a href="list_sort.html">array_sort</a></code>
-
-        </dt>
-        <dd>DuckDB function list_sort</dd>
 
         <dt>
 
@@ -2311,27 +3218,6 @@
 
         <dt>
 
-          <code><a href="list_transform.html">list_transform()</a></code>
-
-        </dt>
-        <dd>DuckDB function list_transform</dd>
-
-        <dt>
-
-          <code><a href="list_unique.html">list_unique()</a></code>
-
-        </dt>
-        <dd>DuckDB function list_unique</dd>
-
-        <dt>
-
-          <code><a href="list_value.html">list_value</a></code> <code><a href="list_value.html">list_pack</a></code>
-
-        </dt>
-        <dd>DuckDB function list_value</dd>
-
-        <dt>
-
           <code><a href="list_var_pop.html">list_var_pop()</a></code>
 
         </dt>
@@ -2346,20 +3232,6 @@
 
         <dt>
 
-          <code><a href="list_where.html">list_where()</a></code>
-
-        </dt>
-        <dd>DuckDB function list_where</dd>
-
-        <dt>
-
-          <code><a href="list_zip.html">list_zip()</a></code>
-
-        </dt>
-        <dd>DuckDB function list_zip</dd>
-
-        <dt>
-
           <code><a href="ln.html">ln()</a></code>
 
         </dt>
@@ -2367,7 +3239,7 @@
 
         <dt>
 
-          <code><a href="log.html">log</a></code>
+          <code><a href="log.html">log()</a></code>
 
         </dt>
         <dd>DuckDB function log</dd>
@@ -2388,35 +3260,14 @@
 
         <dt>
 
-          <code><a href="lower.html">lower()</a></code>
-
-        </dt>
-        <dd>DuckDB function lower</dd>
-
-        <dt>
-
-          <code><a href="lpad.html">lpad()</a></code>
-
-        </dt>
-        <dd>DuckDB function lpad</dd>
-
-        <dt>
-
-          <code><a href="ltrim.html">ltrim</a></code>
-
-        </dt>
-        <dd>DuckDB function ltrim</dd>
-
-        <dt>
-
-          <code><a href="mad.html">mad</a></code>
+          <code><a href="mad.html">mad()</a></code>
 
         </dt>
         <dd>DuckDB function mad</dd>
 
         <dt>
 
-          <code><a href="make_date.html">make_date</a></code>
+          <code><a href="make_date.html">make_date()</a></code>
 
         </dt>
         <dd>DuckDB function make_date</dd>
@@ -2430,7 +3281,7 @@
 
         <dt>
 
-          <code><a href="make_timestamp.html">make_timestamp</a></code>
+          <code><a href="make_timestamp.html">make_timestamp()</a></code>
 
         </dt>
         <dd>DuckDB function make_timestamp</dd>
@@ -2458,7 +3309,7 @@
 
         <dt>
 
-          <code><a href="map.html">map</a></code>
+          <code><a href="map.html">map()</a></code>
 
         </dt>
         <dd>DuckDB function map</dd>
@@ -2542,24 +3393,10 @@
 
         <dt>
 
-          <code><a href="max.html">max</a></code>
+          <code><a href="max.html">max()</a></code>
 
         </dt>
         <dd>DuckDB function max</dd>
-
-        <dt>
-
-          <code><a href="md5.html">md5</a></code>
-
-        </dt>
-        <dd>DuckDB function md5</dd>
-
-        <dt>
-
-          <code><a href="md5_number.html">md5_number</a></code>
-
-        </dt>
-        <dd>DuckDB function md5_number</dd>
 
         <dt>
 
@@ -2591,42 +3428,42 @@
 
         <dt>
 
-          <code><a href="microsecond.html">microsecond</a></code>
+          <code><a href="microsecond.html">microsecond()</a></code>
 
         </dt>
         <dd>DuckDB function microsecond</dd>
 
         <dt>
 
-          <code><a href="millennium.html">millennium</a></code>
+          <code><a href="millennium.html">millennium()</a></code>
 
         </dt>
         <dd>DuckDB function millennium</dd>
 
         <dt>
 
-          <code><a href="millisecond.html">millisecond</a></code>
+          <code><a href="millisecond.html">millisecond()</a></code>
 
         </dt>
         <dd>DuckDB function millisecond</dd>
 
         <dt>
 
-          <code><a href="min.html">min</a></code>
+          <code><a href="min.html">min()</a></code>
 
         </dt>
         <dd>DuckDB function min</dd>
 
         <dt>
 
-          <code><a href="minute.html">minute</a></code>
+          <code><a href="minute.html">minute()</a></code>
 
         </dt>
         <dd>DuckDB function minute</dd>
 
         <dt>
 
-          <code><a href="mod.html">mod</a></code> <code><a href="mod.html">%</a></code>
+          <code><a href="mod.html">mod()</a></code>
 
         </dt>
         <dd>DuckDB function mod</dd>
@@ -2640,35 +3477,35 @@
 
         <dt>
 
-          <code><a href="month.html">month</a></code>
+          <code><a href="month.html">month()</a></code>
 
         </dt>
         <dd>DuckDB function month</dd>
 
         <dt>
 
-          <code><a href="monthname.html">monthname</a></code>
+          <code><a href="monthname.html">monthname()</a></code>
 
         </dt>
         <dd>DuckDB function monthname</dd>
 
         <dt>
 
-          <code><a href="multiply.html">multiply</a></code> <code><a href="multiply.html">*</a></code>
+          <code><a href="multiply.html">multiply()</a></code>
 
         </dt>
         <dd>DuckDB function multiply</dd>
 
         <dt>
 
-          <code><a href="nanosecond.html">nanosecond</a></code>
+          <code><a href="nanosecond.html">nanosecond()</a></code>
 
         </dt>
         <dd>DuckDB function nanosecond</dd>
 
         <dt>
 
-          <code><a href="nextafter.html">nextafter</a></code>
+          <code><a href="nextafter.html">nextafter()</a></code>
 
         </dt>
         <dd>DuckDB function nextafter</dd>
@@ -2679,13 +3516,6 @@
 
         </dt>
         <dd>DuckDB function nextval</dd>
-
-        <dt>
-
-          <code><a href="nfc_normalize.html">nfc_normalize()</a></code>
-
-        </dt>
-        <dd>DuckDB function nfc_normalize</dd>
 
         <dt>
 
@@ -2707,20 +3537,6 @@
 
         </dt>
         <dd>DuckDB function !~~</dd>
-
-        <dt>
-
-          <code><a href="not_ilike_escape.html">not_ilike_escape()</a></code>
-
-        </dt>
-        <dd>DuckDB function not_ilike_escape</dd>
-
-        <dt>
-
-          <code><a href="not_like_escape.html">not_like_escape()</a></code>
-
-        </dt>
-        <dd>DuckDB function not_like_escape</dd>
 
         <dt>
 
@@ -2752,87 +3568,66 @@
 
         <dt>
 
-          <code><a href="octet_length.html">octet_length</a></code>
+          <code><a href="octet_length.html">octet_length()</a></code>
 
         </dt>
         <dd>DuckDB function octet_length</dd>
 
         <dt>
 
-          <code><a href="or-or.html">`||`()</a></code>
-
-        </dt>
-        <dd>DuckDB function ||</dd>
-
-        <dt>
-
-          <code><a href="or.html">or-</a></code> <code><a href="or.html">|</a></code>
+          <code><a href="or.html">`|`</a></code>
 
         </dt>
         <dd>DuckDB function |</dd>
 
         <dt>
 
-          <code><a href="parquet_bloom_probe.html">parquet_bloom_probe</a></code>
+          <code><a href="parquet_bloom_probe.html">parquet_bloom_probe()</a></code>
 
         </dt>
         <dd>DuckDB function parquet_bloom_probe</dd>
 
         <dt>
 
-          <code><a href="parquet_file_metadata.html">parquet_file_metadata</a></code>
+          <code><a href="parquet_file_metadata.html">parquet_file_metadata()</a></code>
 
         </dt>
         <dd>DuckDB function parquet_file_metadata</dd>
 
         <dt>
 
-          <code><a href="parquet_full_metadata.html">parquet_full_metadata</a></code>
+          <code><a href="parquet_full_metadata.html">parquet_full_metadata()</a></code>
 
         </dt>
         <dd>DuckDB function parquet_full_metadata</dd>
 
         <dt>
 
-          <code><a href="parquet_kv_metadata.html">parquet_kv_metadata</a></code>
+          <code><a href="parquet_kv_metadata.html">parquet_kv_metadata()</a></code>
 
         </dt>
         <dd>DuckDB function parquet_kv_metadata</dd>
 
         <dt>
 
-          <code><a href="parquet_metadata.html">parquet_metadata</a></code>
+          <code><a href="parquet_metadata.html">parquet_metadata()</a></code>
 
         </dt>
         <dd>DuckDB function parquet_metadata</dd>
 
         <dt>
 
-          <code><a href="parquet_scan.html">parquet_scan</a></code>
+          <code><a href="parquet_scan.html">parquet_scan()</a></code>
 
         </dt>
         <dd>DuckDB function parquet_scan</dd>
 
         <dt>
 
-          <code><a href="parquet_schema.html">parquet_schema</a></code>
+          <code><a href="parquet_schema.html">parquet_schema()</a></code>
 
         </dt>
         <dd>DuckDB function parquet_schema</dd>
-
-        <dt>
-
-          <code><a href="parse_dirname.html">parse_dirname</a></code>
-
-        </dt>
-        <dd>DuckDB function parse_dirname</dd>
-
-        <dt>
-
-          <code><a href="parse_dirpath.html">parse_dirpath</a></code>
-
-        </dt>
-        <dd>DuckDB function parse_dirpath</dd>
 
         <dt>
 
@@ -2840,27 +3635,6 @@
 
         </dt>
         <dd>DuckDB function parse_duckdb_log_message</dd>
-
-        <dt>
-
-          <code><a href="parse_filename.html">parse_filename</a></code>
-
-        </dt>
-        <dd>DuckDB function parse_filename</dd>
-
-        <dt>
-
-          <code><a href="parse_formatted_bytes.html">parse_formatted_bytes()</a></code>
-
-        </dt>
-        <dd>DuckDB function parse_formatted_bytes</dd>
-
-        <dt>
-
-          <code><a href="parse_path.html">parse_path</a></code>
-
-        </dt>
-        <dd>DuckDB function parse_path</dd>
 
         <dt>
 
@@ -2899,7 +3673,7 @@
 
         <dt>
 
-          <code><a href="pg_get_constraintdef.html">pg_get_constraintdef</a></code>
+          <code><a href="pg_get_constraintdef.html">pg_get_constraintdef()</a></code>
 
         </dt>
         <dd>DuckDB function pg_get_constraintdef</dd>
@@ -2920,7 +3694,7 @@
 
         <dt>
 
-          <code><a href="pg_has_role.html">pg_has_role</a></code>
+          <code><a href="pg_has_role.html">pg_has_role()</a></code>
 
         </dt>
         <dd>DuckDB function pg_has_role</dd>
@@ -3067,7 +3841,7 @@
 
         <dt>
 
-          <code><a href="pragma_metadata_info.html">pragma_metadata_info</a></code>
+          <code><a href="pragma_metadata_info.html">pragma_metadata_info()</a></code>
 
         </dt>
         <dd>DuckDB function pragma_metadata_info</dd>
@@ -3116,20 +3890,6 @@
 
         <dt>
 
-          <code><a href="prefix.html">prefix()</a></code>
-
-        </dt>
-        <dd>DuckDB function prefix</dd>
-
-        <dt>
-
-          <code><a href="printf.html">printf()</a></code>
-
-        </dt>
-        <dd>DuckDB function printf</dd>
-
-        <dt>
-
           <code><a href="product.html">product()</a></code>
 
         </dt>
@@ -3137,21 +3897,21 @@
 
         <dt>
 
-          <code><a href="quantile_cont.html">quantile_cont</a></code>
+          <code><a href="quantile_cont.html">quantile_cont()</a></code>
 
         </dt>
         <dd>DuckDB function quantile_cont</dd>
 
         <dt>
 
-          <code><a href="quantile_disc.html">quantile_disc</a></code> <code><a href="quantile_disc.html">quantile</a></code>
+          <code><a href="quantile_disc.html">quantile_disc()</a></code>
 
         </dt>
         <dd>DuckDB function quantile_disc</dd>
 
         <dt>
 
-          <code><a href="quarter.html">quarter</a></code>
+          <code><a href="quarter.html">quarter()</a></code>
 
         </dt>
         <dd>DuckDB function quarter</dd>
@@ -3165,7 +3925,7 @@
 
         <dt>
 
-          <code><a href="query_table.html">query_table</a></code>
+          <code><a href="query_table.html">query_table()</a></code>
 
         </dt>
         <dd>DuckDB function query_table</dd>
@@ -3193,13 +3953,6 @@
 
         <dt>
 
-          <code><a href="range.html">range</a></code>
-
-        </dt>
-        <dd>DuckDB function range</dd>
-
-        <dt>
-
           <code><a href="rank.html">rank()</a></code>
 
         </dt>
@@ -3214,87 +3967,45 @@
 
         <dt>
 
-          <code><a href="read_blob.html">read_blob</a></code>
+          <code><a href="read_blob.html">read_blob()</a></code>
 
         </dt>
         <dd>DuckDB function read_blob</dd>
 
         <dt>
 
-          <code><a href="read_csv.html">read_csv</a></code>
+          <code><a href="read_csv.html">read_csv()</a></code>
 
         </dt>
         <dd>DuckDB function read_csv</dd>
 
         <dt>
 
-          <code><a href="read_csv_auto.html">read_csv_auto</a></code>
+          <code><a href="read_csv_auto.html">read_csv_auto()</a></code>
 
         </dt>
         <dd>DuckDB function read_csv_auto</dd>
 
         <dt>
 
-          <code><a href="read_duckdb.html">read_duckdb</a></code>
+          <code><a href="read_duckdb.html">read_duckdb()</a></code>
 
         </dt>
         <dd>DuckDB function read_duckdb</dd>
 
         <dt>
 
-          <code><a href="read_parquet.html">read_parquet</a></code>
+          <code><a href="read_parquet.html">read_parquet()</a></code>
 
         </dt>
         <dd>DuckDB function read_parquet</dd>
 
         <dt>
 
-          <code><a href="read_text.html">read_text</a></code>
+          <code><a href="read_text.html">read_text()</a></code>
 
         </dt>
         <dd>DuckDB function read_text</dd>
-
-        <dt>
-
-          <code><a href="regexp_escape.html">regexp_escape()</a></code>
-
-        </dt>
-        <dd>DuckDB function regexp_escape</dd>
-
-        <dt>
-
-          <code><a href="regexp_extract.html">regexp_extract</a></code>
-
-        </dt>
-        <dd>DuckDB function regexp_extract</dd>
-
-        <dt>
-
-          <code><a href="regexp_extract_all.html">regexp_extract_all</a></code>
-
-        </dt>
-        <dd>DuckDB function regexp_extract_all</dd>
-
-        <dt>
-
-          <code><a href="regexp_full_match.html">regexp_full_match</a></code>
-
-        </dt>
-        <dd>DuckDB function regexp_full_match</dd>
-
-        <dt>
-
-          <code><a href="regexp_matches.html">regexp_matches</a></code>
-
-        </dt>
-        <dd>DuckDB function regexp_matches</dd>
-
-        <dt>
-
-          <code><a href="regexp_replace.html">regexp_replace</a></code>
-
-        </dt>
-        <dd>DuckDB function regexp_replace</dd>
 
         <dt>
 
@@ -3368,24 +4079,10 @@
 
         <dt>
 
-          <code><a href="repeat.html">repeat</a></code>
-
-        </dt>
-        <dd>DuckDB function repeat</dd>
-
-        <dt>
-
           <code><a href="repeat_row.html">repeat_row()</a></code>
 
         </dt>
         <dd>DuckDB function repeat_row</dd>
-
-        <dt>
-
-          <code><a href="replace.html">replace()</a></code>
-
-        </dt>
-        <dd>DuckDB function replace</dd>
 
         <dt>
 
@@ -3396,35 +4093,14 @@
 
         <dt>
 
-          <code><a href="reservoir_quantile.html">reservoir_quantile</a></code>
+          <code><a href="reservoir_quantile.html">reservoir_quantile()</a></code>
 
         </dt>
         <dd>DuckDB function reservoir_quantile</dd>
 
         <dt>
 
-          <code><a href="reverse.html">reverse()</a></code>
-
-        </dt>
-        <dd>DuckDB function reverse</dd>
-
-        <dt>
-
-          <code><a href="right.html">right()</a></code>
-
-        </dt>
-        <dd>DuckDB function right</dd>
-
-        <dt>
-
-          <code><a href="right_grapheme.html">right_grapheme()</a></code>
-
-        </dt>
-        <dd>DuckDB function right_grapheme</dd>
-
-        <dt>
-
-          <code><a href="round.html">round</a></code>
+          <code><a href="round.html">round()</a></code>
 
         </dt>
         <dd>DuckDB function round</dd>
@@ -3459,21 +4135,7 @@
 
         <dt>
 
-          <code><a href="rpad.html">rpad()</a></code>
-
-        </dt>
-        <dd>DuckDB function rpad</dd>
-
-        <dt>
-
-          <code><a href="rtrim.html">rtrim</a></code>
-
-        </dt>
-        <dd>DuckDB function rtrim</dd>
-
-        <dt>
-
-          <code><a href="second.html">second</a></code>
+          <code><a href="second.html">second()</a></code>
 
         </dt>
         <dd>DuckDB function second</dd>
@@ -3515,20 +4177,6 @@
 
         <dt>
 
-          <code><a href="sha1.html">sha1</a></code>
-
-        </dt>
-        <dd>DuckDB function sha1</dd>
-
-        <dt>
-
-          <code><a href="sha256.html">sha256</a></code>
-
-        </dt>
-        <dd>DuckDB function sha256</dd>
-
-        <dt>
-
           <code><a href="shobj_description.html">shobj_description()</a></code>
 
         </dt>
@@ -3564,14 +4212,14 @@
 
         <dt>
 
-          <code><a href="sign.html">sign</a></code>
+          <code><a href="sign.html">sign()</a></code>
 
         </dt>
         <dd>DuckDB function sign</dd>
 
         <dt>
 
-          <code><a href="signbit.html">signbit</a></code>
+          <code><a href="signbit.html">signbit()</a></code>
 
         </dt>
         <dd>DuckDB function signbit</dd>
@@ -3599,7 +4247,7 @@
 
         <dt>
 
-          <code><a href="slash.html">/</a></code>
+          <code><a href="slash.html">`/`</a></code>
 
         </dt>
         <dd>DuckDB function /</dd>
@@ -3627,45 +4275,10 @@
 
         <dt>
 
-          <code><a href="st_astext.html">st_astext()</a></code>
-
-        </dt>
-        <dd>DuckDB function st_astext</dd>
-
-        <dt>
-
-          <code><a href="st_aswkb.html">st_aswkb()</a></code>
-
-        </dt>
-        <dd>DuckDB function st_aswkb</dd>
-
-        <dt>
-
-          <code><a href="st_crs.html">st_crs()</a></code>
-
-        </dt>
-        <dd>DuckDB function st_crs</dd>
-
-        <dt>
-
-          <code><a href="st_geomfromwkb.html">st_geomfromwkb()</a></code>
-
-        </dt>
-        <dd>DuckDB function st_geomfromwkb</dd>
-
-        <dt>
-
           <code><a href="st_setcrs.html">st_setcrs()</a></code>
 
         </dt>
         <dd>DuckDB function st_setcrs</dd>
-
-        <dt>
-
-          <code><a href="starts_with.html">starts_with()</a></code>
-
-        </dt>
-        <dd>DuckDB function starts_with</dd>
 
         <dt>
 
@@ -3697,49 +4310,21 @@
 
         <dt>
 
-          <code><a href="strftime.html">strftime</a></code>
+          <code><a href="strftime.html">strftime()</a></code>
 
         </dt>
         <dd>DuckDB function strftime</dd>
 
         <dt>
 
-          <code><a href="string_agg.html">string_agg</a></code> <code><a href="string_agg.html">group_concat</a></code> <code><a href="string_agg.html">listagg</a></code>
+          <code><a href="string_agg.html">string_agg()</a></code>
 
         </dt>
         <dd>DuckDB function string_agg</dd>
 
         <dt>
 
-          <code><a href="string_split.html">string_split()</a></code>
-
-        </dt>
-        <dd>DuckDB function string_split</dd>
-
-        <dt>
-
-          <code><a href="string_split_regex.html">string_split_regex</a></code> <code><a href="string_split_regex.html">regexp_split_to_array</a></code> <code><a href="string_split_regex.html">str_split_regex</a></code>
-
-        </dt>
-        <dd>DuckDB function string_split_regex</dd>
-
-        <dt>
-
-          <code><a href="strip_accents.html">strip_accents()</a></code>
-
-        </dt>
-        <dd>DuckDB function strip_accents</dd>
-
-        <dt>
-
-          <code><a href="strlen.html">strlen()</a></code>
-
-        </dt>
-        <dd>DuckDB function strlen</dd>
-
-        <dt>
-
-          <code><a href="strptime.html">strptime</a></code>
+          <code><a href="strptime.html">strptime()</a></code>
 
         </dt>
         <dd>DuckDB function strptime</dd>
@@ -3760,7 +4345,7 @@
 
         <dt>
 
-          <code><a href="struct_extract.html">struct_extract</a></code>
+          <code><a href="struct_extract.html">struct_extract()</a></code>
 
         </dt>
         <dd>DuckDB function struct_extract</dd>
@@ -3809,42 +4394,21 @@
 
         <dt>
 
-          <code><a href="substring.html">substring</a></code> <code><a href="substring.html">substr</a></code>
-
-        </dt>
-        <dd>DuckDB function substring</dd>
-
-        <dt>
-
-          <code><a href="substring_grapheme.html">substring_grapheme</a></code>
-
-        </dt>
-        <dd>DuckDB function substring_grapheme</dd>
-
-        <dt>
-
-          <code><a href="subtract.html">subtract</a></code>
+          <code><a href="subtract.html">subtract()</a></code>
 
         </dt>
         <dd>DuckDB function subtract</dd>
 
         <dt>
 
-          <code><a href="suffix.html">suffix()</a></code>
-
-        </dt>
-        <dd>DuckDB function suffix</dd>
-
-        <dt>
-
-          <code><a href="sum.html">sum</a></code>
+          <code><a href="sum.html">sum()</a></code>
 
         </dt>
         <dd>DuckDB function sum</dd>
 
         <dt>
 
-          <code><a href="sum_no_overflow.html">sum_no_overflow</a></code>
+          <code><a href="sum_no_overflow.html">sum_no_overflow()</a></code>
 
         </dt>
         <dd>DuckDB function sum_no_overflow</dd>
@@ -3858,7 +4422,7 @@
 
         <dt>
 
-          <code><a href="switch.html">switch</a></code>
+          <code><a href="switch.html">switch()</a></code>
 
         </dt>
         <dd>DuckDB function switch</dd>
@@ -3900,7 +4464,7 @@
 
         <dt>
 
-          <code><a href="time_bucket.html">time_bucket</a></code>
+          <code><a href="time_bucket.html">time_bucket()</a></code>
 
         </dt>
         <dd>DuckDB function time_bucket</dd>
@@ -3914,56 +4478,42 @@
 
         <dt>
 
-          <code><a href="timezone.html">timezone</a></code>
+          <code><a href="timezone.html">timezone()</a></code>
 
         </dt>
         <dd>DuckDB function timezone</dd>
 
         <dt>
 
-          <code><a href="timezone_hour.html">timezone_hour</a></code>
+          <code><a href="timezone_hour.html">timezone_hour()</a></code>
 
         </dt>
         <dd>DuckDB function timezone_hour</dd>
 
         <dt>
 
-          <code><a href="timezone_minute.html">timezone_minute</a></code>
+          <code><a href="timezone_minute.html">timezone_minute()</a></code>
 
         </dt>
         <dd>DuckDB function timezone_minute</dd>
 
         <dt>
 
-          <code><a href="to_base.html">to_base</a></code>
-
-        </dt>
-        <dd>DuckDB function to_base</dd>
-
-        <dt>
-
-          <code><a href="to_base64.html">to_base64()</a></code>
-
-        </dt>
-        <dd>DuckDB function to_base64</dd>
-
-        <dt>
-
-          <code><a href="to_centuries.html">to_centuries</a></code>
+          <code><a href="to_centuries.html">to_centuries()</a></code>
 
         </dt>
         <dd>DuckDB function to_centuries</dd>
 
         <dt>
 
-          <code><a href="to_days.html">to_days</a></code>
+          <code><a href="to_days.html">to_days()</a></code>
 
         </dt>
         <dd>DuckDB function to_days</dd>
 
         <dt>
 
-          <code><a href="to_decades.html">to_decades</a></code>
+          <code><a href="to_decades.html">to_decades()</a></code>
 
         </dt>
         <dd>DuckDB function to_decades</dd>
@@ -3984,7 +4534,7 @@
 
         <dt>
 
-          <code><a href="to_millennia.html">to_millennia</a></code>
+          <code><a href="to_millennia.html">to_millennia()</a></code>
 
         </dt>
         <dd>DuckDB function to_millennia</dd>
@@ -4005,14 +4555,14 @@
 
         <dt>
 
-          <code><a href="to_months.html">to_months</a></code>
+          <code><a href="to_months.html">to_months()</a></code>
 
         </dt>
         <dd>DuckDB function to_months</dd>
 
         <dt>
 
-          <code><a href="to_quarters.html">to_quarters</a></code>
+          <code><a href="to_quarters.html">to_quarters()</a></code>
 
         </dt>
         <dd>DuckDB function to_quarters</dd>
@@ -4033,35 +4583,21 @@
 
         <dt>
 
-          <code><a href="to_weeks.html">to_weeks</a></code>
+          <code><a href="to_weeks.html">to_weeks()</a></code>
 
         </dt>
         <dd>DuckDB function to_weeks</dd>
 
         <dt>
 
-          <code><a href="to_years.html">to_years</a></code>
+          <code><a href="to_years.html">to_years()</a></code>
 
         </dt>
         <dd>DuckDB function to_years</dd>
 
         <dt>
 
-          <code><a href="translate.html">translate()</a></code>
-
-        </dt>
-        <dd>DuckDB function translate</dd>
-
-        <dt>
-
-          <code><a href="trim.html">trim</a></code>
-
-        </dt>
-        <dd>DuckDB function trim</dd>
-
-        <dt>
-
-          <code><a href="trunc.html">trunc</a></code>
+          <code><a href="trunc.html">trunc()</a></code>
 
         </dt>
         <dd>DuckDB function trunc</dd>
@@ -4075,7 +4611,7 @@
 
         <dt>
 
-          <code><a href="try_strptime.html">try_strptime</a></code>
+          <code><a href="try_strptime.html">try_strptime()</a></code>
 
         </dt>
         <dd>DuckDB function try_strptime</dd>
@@ -4103,7 +4639,7 @@
 
         <dt>
 
-          <code><a href="twiddle.html">~</a></code>
+          <code><a href="twiddle.html">`~`()</a></code>
 
         </dt>
         <dd>DuckDB function ~</dd>
@@ -4121,27 +4657,6 @@
 
         </dt>
         <dd>DuckDB function typeof</dd>
-
-        <dt>
-
-          <code><a href="unbin.html">unbin()</a></code>
-
-        </dt>
-        <dd>DuckDB function unbin</dd>
-
-        <dt>
-
-          <code><a href="unhex.html">unhex()</a></code>
-
-        </dt>
-        <dd>DuckDB function unhex</dd>
-
-        <dt>
-
-          <code><a href="unicode.html">unicode()</a></code>
-
-        </dt>
-        <dd>DuckDB function unicode</dd>
 
         <dt>
 
@@ -4170,34 +4685,6 @@
 
         </dt>
         <dd>DuckDB function unnest</dd>
-
-        <dt>
-
-          <code><a href="unpivot_list.html">unpivot_list()</a></code>
-
-        </dt>
-        <dd>DuckDB function unpivot_list</dd>
-
-        <dt>
-
-          <code><a href="upper.html">upper()</a></code>
-
-        </dt>
-        <dd>DuckDB function upper</dd>
-
-        <dt>
-
-          <code><a href="url_decode.html">url_decode()</a></code>
-
-        </dt>
-        <dd>DuckDB function url_decode</dd>
-
-        <dt>
-
-          <code><a href="url_encode.html">url_encode()</a></code>
-
-        </dt>
-        <dd>DuckDB function url_encode</dd>
 
         <dt>
 
@@ -4271,31 +4758,10 @@
 
         <dt>
 
-          <code><a href="variant_extract.html">variant_extract</a></code>
-
-        </dt>
-        <dd>DuckDB function variant_extract</dd>
-
-        <dt>
-
-          <code><a href="variant_normalize.html">variant_normalize()</a></code>
-
-        </dt>
-        <dd>DuckDB function variant_normalize</dd>
-
-        <dt>
-
           <code><a href="variant_to_parquet_variant.html">variant_to_parquet_variant()</a></code>
 
         </dt>
         <dd>DuckDB function variant_to_parquet_variant</dd>
-
-        <dt>
-
-          <code><a href="variant_typeof.html">variant_typeof()</a></code>
-
-        </dt>
-        <dd>DuckDB function variant_typeof</dd>
 
         <dt>
 
@@ -4348,21 +4814,21 @@
 
         <dt>
 
-          <code><a href="week.html">week</a></code>
+          <code><a href="week.html">week()</a></code>
 
         </dt>
         <dd>DuckDB function week</dd>
 
         <dt>
 
-          <code><a href="weekday.html">weekday</a></code>
+          <code><a href="weekday.html">weekday()</a></code>
 
         </dt>
         <dd>DuckDB function weekday</dd>
 
         <dt>
 
-          <code><a href="weekofyear.html">weekofyear</a></code>
+          <code><a href="weekofyear.html">weekofyear()</a></code>
 
         </dt>
         <dd>DuckDB function weekofyear</dd>
@@ -4390,26 +4856,27 @@
 
         <dt>
 
-          <code><a href="xor.html">xor</a></code>
+          <code><a href="xor.html">xor()</a></code>
 
         </dt>
         <dd>DuckDB function xor</dd>
 
         <dt>
 
-          <code><a href="year.html">year</a></code>
+          <code><a href="year.html">year()</a></code>
 
         </dt>
         <dd>DuckDB function year</dd>
 
         <dt>
 
-          <code><a href="yearweek.html">yearweek</a></code>
+          <code><a href="yearweek.html">yearweek()</a></code>
 
         </dt>
         <dd>DuckDB function yearweek</dd>
       </dl></div>
-  </main></div>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside></div>
 
 
     <footer><div class="pkgdown-footer-left">

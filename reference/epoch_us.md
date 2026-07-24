@@ -2,6 +2,12 @@
 
 Extract the epoch component in microseconds from a temporal type.
 
+## Usage
+
+``` r
+epoch_us(temporal)
+```
+
 ## Arguments
 
 - temporal:
@@ -11,22 +17,6 @@ Extract the epoch component in microseconds from a temporal type.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `epoch_us(temporal = DATE)`
-
-- `epoch_us(temporal = TIMESTAMP)`
-
-- `epoch_us(temporal = INTERVAL)`
-
-- `epoch_us(temporal = TIME)`
-
-- `epoch_us(temporal = TIME_NS)`
-
-- `` epoch_us(temporal = `TIME WITH TIME ZONE`) ``
-
-- `` epoch_us(temporal = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

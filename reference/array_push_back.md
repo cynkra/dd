@@ -10,11 +10,7 @@ array_push_back(arr, e)
 
 ## Arguments
 
-- arr:
-
-  Unspecified.
-
-- e:
+- arr, e:
 
   Unspecified.
 

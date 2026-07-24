@@ -3,6 +3,12 @@
 Finds the row with the minimum val. Calculates the non-NULL arg
 expression at that row.
 
+## Usage
+
+``` r
+arg_min(arg, val)
+```
+
 ## Arguments
 
 - arg:
@@ -12,10 +18,6 @@ expression at that row.
 - val:
 
   `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
-
-- col2:
-
-  `BIGINT`
 
 ## Value
 

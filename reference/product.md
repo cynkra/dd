@@ -5,7 +5,7 @@ Calculates the product of all tuples in arg.
 ## Usage
 
 ``` r
-product(arg = DOUBLE)
+product(arg)
 ```
 
 ## Arguments

@@ -5,7 +5,7 @@ Computes the arccosine of x.
 ## Usage
 
 ``` r
-acos(x = DOUBLE)
+acos(x)
 ```
 
 ## Arguments

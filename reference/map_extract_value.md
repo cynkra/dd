@@ -7,7 +7,7 @@ the type of the map’s keys else an error is returned.
 ## Usage
 
 ``` r
-map_extract_value(map = `MAP(K, V)`, key = K)
+map_extract_value(map, key)
 ```
 
 ## Arguments

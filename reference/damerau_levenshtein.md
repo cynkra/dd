@@ -9,16 +9,12 @@ of different cases (e.g., `a` and `A`) are considered different.
 ## Usage
 
 ``` r
-damerau_levenshtein(s1 = VARCHAR, s2 = VARCHAR)
+damerau_levenshtein(s1, s2)
 ```
 
 ## Arguments
 
-- s1:
-
-  `VARCHAR`
-
-- s2:
+- s1, s2:
 
   `VARCHAR`
 

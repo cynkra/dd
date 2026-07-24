@@ -4,25 +4,21 @@ Computes the cosine similarity between two arrays of the same size. The
 array elements can not be `NULL`. The arrays can have any size as long
 as the size is the same for both arguments.
 
+## Usage
+
+``` r
+array_cosine_similarity(array1, array2)
+```
+
 ## Arguments
 
-- array1:
-
-  `FLOAT[ANY] | DOUBLE[ANY]`
-
-- array2:
+- array1, array2:
 
   `FLOAT[ANY] | DOUBLE[ANY]`
 
 ## Value
 
 `FLOAT | DOUBLE`
-
-## Overloads
-
-- `` array_cosine_similarity(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`) ``
-
-- `` array_cosine_similarity(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`) ``
 
 ## SQL examples
 

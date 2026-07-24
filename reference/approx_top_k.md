@@ -5,7 +5,7 @@ Finds the k approximately most occurring values in the data set.
 ## Usage
 
 ``` r
-approx_top_k(val = ANY, k = BIGINT)
+approx_top_k(val, k)
 ```
 
 ## Arguments

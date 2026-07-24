@@ -10,11 +10,7 @@ generate_subscripts(arr, dim)
 
 ## Arguments
 
-- arr:
-
-  Unspecified.
-
-- dim:
+- arr, dim:
 
   Unspecified.
 

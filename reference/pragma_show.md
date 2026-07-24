@@ -5,7 +5,7 @@ DuckDB function `pragma_show()`.
 ## Usage
 
 ``` r
-pragma_show(col0 = VARCHAR)
+pragma_show(col0)
 ```
 
 ## Arguments

@@ -2,6 +2,12 @@
 
 DuckDB function `checkpoint()`.
 
+## Usage
+
+``` r
+checkpoint(col0)
+```
+
 ## Arguments
 
 - col0:

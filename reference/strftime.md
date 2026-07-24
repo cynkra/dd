@@ -2,6 +2,12 @@
 
 Converts a `date` to a string according to the format string.
 
+## Usage
+
+``` r
+strftime(data, format)
+```
+
 ## Arguments
 
 - data:
@@ -15,24 +21,6 @@ Converts a `date` to a string according to the format string.
 ## Value
 
 `VARCHAR`
-
-## Overloads
-
-- `strftime(data = DATE, format = VARCHAR)`
-
-- `strftime(data = TIMESTAMP, format = VARCHAR)`
-
-- `strftime(data = TIMESTAMP_NS, format = VARCHAR)`
-
-- `strftime(data = VARCHAR, format = DATE)`
-
-- `strftime(data = VARCHAR, format = TIMESTAMP)`
-
-- `strftime(data = VARCHAR, format = TIMESTAMP_NS)`
-
-- `` strftime(data = `TIMESTAMP WITH TIME ZONE`, format = VARCHAR) ``
-
-- `` strftime(data = VARCHAR, format = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

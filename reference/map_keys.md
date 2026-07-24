@@ -5,7 +5,7 @@ Returns the keys of a map as a list.
 ## Usage
 
 ``` r
-map_keys(map = `MAP(K, V)`)
+map_keys(map)
 ```
 
 ## Arguments

@@ -5,16 +5,12 @@ Returns the population covariance of input values.
 ## Usage
 
 ``` r
-covar_pop(y = DOUBLE, x = DOUBLE)
+covar_pop(y, x)
 ```
 
 ## Arguments
 
-- y:
-
-  `DOUBLE`
-
-- x:
+- y, x:
 
   `DOUBLE`
 

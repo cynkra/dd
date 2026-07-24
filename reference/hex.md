@@ -1,24 +1,26 @@
 # DuckDB function hex
 
-Converts the `string` to hexadecimal representation.
+- `hex(string = VARCHAR)`: Converts the `string` to hexadecimal
+  representation.
 
-Converts the `value` to `VARCHAR` using hexadecimal representation.
+- `hex(value = BIGNUM)`, `hex(value = BIGINT)`, `hex(value = UBIGINT)`,
+  `hex(value = HUGEINT)`, `hex(value = UHUGEINT)`: Converts the `value`
+  to `VARCHAR` using hexadecimal representation.
 
-Converts `blob` to `VARCHAR` using hexadecimal encoding.
+- `hex(blob = BLOB)`: Converts `blob` to `VARCHAR` using hexadecimal
+  encoding.
+
+## Usage
+
+``` r
+hex(value)
+```
 
 ## Arguments
-
-- string:
-
-  `VARCHAR`
 
 - value:
 
   `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`
-
-- blob:
-
-  `BLOB`
 
 ## Value
 

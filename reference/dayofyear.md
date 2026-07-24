@@ -2,6 +2,12 @@
 
 Extract the dayofyear component from a date or timestamp.
 
+## Usage
+
+``` r
+dayofyear(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,16 +17,6 @@ Extract the dayofyear component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `dayofyear(ts = DATE)`
-
-- `dayofyear(ts = INTERVAL)`
-
-- `dayofyear(ts = TIMESTAMP)`
-
-- `` dayofyear(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

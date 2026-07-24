@@ -10,11 +10,7 @@ nullif(a, b)
 
 ## Arguments
 
-- a:
-
-  Unspecified.
-
-- b:
+- a, b:
 
   Unspecified.
 

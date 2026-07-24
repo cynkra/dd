@@ -10,11 +10,7 @@ list_append(l, e)
 
 ## Arguments
 
-- l:
-
-  Unspecified.
-
-- e:
+- l, e:
 
   Unspecified.
 

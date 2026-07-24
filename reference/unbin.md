@@ -5,7 +5,7 @@ Converts a `value` from binary representation to a blob.
 ## Usage
 
 ``` r
-unbin(value = VARCHAR)
+unbin(value)
 ```
 
 ## Arguments

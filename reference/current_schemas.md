@@ -3,6 +3,12 @@
 Returns list of schemas. Pass a parameter of True to include implicit
 schemas.
 
+## Usage
+
+``` r
+current_schemas(include_implicit)
+```
+
 ## Arguments
 
 - include_implicit:
@@ -12,12 +18,6 @@ schemas.
 ## Value
 
 `VARCHAR[]`
-
-## Overloads
-
-- `current_schemas(include_implicit = BOOLEAN)`
-
-- `current_schemas(include_implicit)`
 
 ## SQL examples
 

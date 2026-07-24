@@ -7,16 +7,12 @@ between 0 and 1.
 ## Usage
 
 ``` r
-jaccard(s1 = VARCHAR, s2 = VARCHAR)
+jaccard(s1, s2)
 ```
 
 ## Arguments
 
-- s1:
-
-  `VARCHAR`
-
-- s2:
+- s1, s2:
 
   `VARCHAR`
 

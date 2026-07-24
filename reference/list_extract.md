@@ -2,6 +2,12 @@
 
 Extract the `index`th (1-based) value from the list.
 
+## Usage
+
+``` r
+list_extract(list, index)
+```
+
 ## Arguments
 
 - list:
@@ -15,12 +21,6 @@ Extract the `index`th (1-based) value from the list.
 ## Value
 
 `T | VARCHAR`
-
-## Overloads
-
-- `` list_extract(list = `T[]`, index = BIGINT) ``
-
-- `list_extract(list = VARCHAR, index = BIGINT)`
 
 ## SQL examples
 

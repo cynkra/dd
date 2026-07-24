@@ -6,7 +6,7 @@ not currently selected.
 ## Usage
 
 ``` r
-union_extract(union = UNION, tag = VARCHAR)
+union_extract(union, tag)
 ```
 
 ## Arguments

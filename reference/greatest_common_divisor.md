@@ -2,25 +2,21 @@
 
 Computes the greatest common divisor of x and y.
 
+## Usage
+
+``` r
+greatest_common_divisor(x, y)
+```
+
 ## Arguments
 
-- x:
-
-  `BIGINT | HUGEINT`
-
-- y:
+- x, y:
 
   `BIGINT | HUGEINT`
 
 ## Value
 
 `BIGINT | HUGEINT`
-
-## Overloads
-
-- `greatest_common_divisor(x = BIGINT, y = BIGINT)`
-
-- `greatest_common_divisor(x = HUGEINT, y = HUGEINT)`
 
 ## SQL examples
 

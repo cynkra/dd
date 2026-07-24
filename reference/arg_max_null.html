@@ -37,6 +37,10 @@
     <p>Finds the row with the maximum val. Calculates the arg expression at that row.</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">arg_max_null</span><span class="op">(</span><span class="va">arg</span>, <span class="va">val</span><span class="op">)</span></span></code></pre></div>
+    </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
@@ -54,102 +58,6 @@
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     <p><code>INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY</code></p>
     </div>
-    <div class="section level2">
-    <h2 id="overloads">Overloads<a class="anchor" aria-label="anchor" href="#overloads"></a></h2>
-
-
-<ul><li><p><code>arg_max_null(arg = INTEGER, val = INTEGER)</code></p></li>
-<li><p><code>arg_max_null(arg = INTEGER, val = BIGINT)</code></p></li>
-<li><p><code>arg_max_null(arg = INTEGER, val = HUGEINT)</code></p></li>
-<li><p><code>arg_max_null(arg = INTEGER, val = DOUBLE)</code></p></li>
-<li><p><code>arg_max_null(arg = INTEGER, val = VARCHAR)</code></p></li>
-<li><p><code>arg_max_null(arg = INTEGER, val = DATE)</code></p></li>
-<li><p><code>arg_max_null(arg = INTEGER, val = TIMESTAMP)</code></p></li>
-<li><p><code>arg_max_null(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)</code></p></li>
-<li><p><code>arg_max_null(arg = INTEGER, val = BLOB)</code></p></li>
-<li><p><code>arg_max_null(arg = BIGINT, val = INTEGER)</code></p></li>
-<li><p><code>arg_max_null(arg = BIGINT, val = BIGINT)</code></p></li>
-<li><p><code>arg_max_null(arg = BIGINT, val = HUGEINT)</code></p></li>
-<li><p><code>arg_max_null(arg = BIGINT, val = DOUBLE)</code></p></li>
-<li><p><code>arg_max_null(arg = BIGINT, val = VARCHAR)</code></p></li>
-<li><p><code>arg_max_null(arg = BIGINT, val = DATE)</code></p></li>
-<li><p><code>arg_max_null(arg = BIGINT, val = TIMESTAMP)</code></p></li>
-<li><p><code>arg_max_null(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)</code></p></li>
-<li><p><code>arg_max_null(arg = BIGINT, val = BLOB)</code></p></li>
-<li><p><code>arg_max_null(arg = DOUBLE, val = INTEGER)</code></p></li>
-<li><p><code>arg_max_null(arg = DOUBLE, val = BIGINT)</code></p></li>
-<li><p><code>arg_max_null(arg = DOUBLE, val = HUGEINT)</code></p></li>
-<li><p><code>arg_max_null(arg = DOUBLE, val = DOUBLE)</code></p></li>
-<li><p><code>arg_max_null(arg = DOUBLE, val = VARCHAR)</code></p></li>
-<li><p><code>arg_max_null(arg = DOUBLE, val = DATE)</code></p></li>
-<li><p><code>arg_max_null(arg = DOUBLE, val = TIMESTAMP)</code></p></li>
-<li><p><code>arg_max_null(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)</code></p></li>
-<li><p><code>arg_max_null(arg = DOUBLE, val = BLOB)</code></p></li>
-<li><p><code>arg_max_null(arg = VARCHAR, val = INTEGER)</code></p></li>
-<li><p><code>arg_max_null(arg = VARCHAR, val = BIGINT)</code></p></li>
-<li><p><code>arg_max_null(arg = VARCHAR, val = HUGEINT)</code></p></li>
-<li><p><code>arg_max_null(arg = VARCHAR, val = DOUBLE)</code></p></li>
-<li><p><code>arg_max_null(arg = VARCHAR, val = VARCHAR)</code></p></li>
-<li><p><code>arg_max_null(arg = VARCHAR, val = DATE)</code></p></li>
-<li><p><code>arg_max_null(arg = VARCHAR, val = TIMESTAMP)</code></p></li>
-<li><p><code>arg_max_null(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)</code></p></li>
-<li><p><code>arg_max_null(arg = VARCHAR, val = BLOB)</code></p></li>
-<li><p><code>arg_max_null(arg = DATE, val = INTEGER)</code></p></li>
-<li><p><code>arg_max_null(arg = DATE, val = BIGINT)</code></p></li>
-<li><p><code>arg_max_null(arg = DATE, val = HUGEINT)</code></p></li>
-<li><p><code>arg_max_null(arg = DATE, val = DOUBLE)</code></p></li>
-<li><p><code>arg_max_null(arg = DATE, val = VARCHAR)</code></p></li>
-<li><p><code>arg_max_null(arg = DATE, val = DATE)</code></p></li>
-<li><p><code>arg_max_null(arg = DATE, val = TIMESTAMP)</code></p></li>
-<li><p><code>arg_max_null(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)</code></p></li>
-<li><p><code>arg_max_null(arg = DATE, val = BLOB)</code></p></li>
-<li><p><code>arg_max_null(arg = TIMESTAMP, val = INTEGER)</code></p></li>
-<li><p><code>arg_max_null(arg = TIMESTAMP, val = BIGINT)</code></p></li>
-<li><p><code>arg_max_null(arg = TIMESTAMP, val = HUGEINT)</code></p></li>
-<li><p><code>arg_max_null(arg = TIMESTAMP, val = DOUBLE)</code></p></li>
-<li><p><code>arg_max_null(arg = TIMESTAMP, val = VARCHAR)</code></p></li>
-<li><p><code>arg_max_null(arg = TIMESTAMP, val = DATE)</code></p></li>
-<li><p><code>arg_max_null(arg = TIMESTAMP, val = TIMESTAMP)</code></p></li>
-<li><p><code>arg_max_null(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)</code></p></li>
-<li><p><code>arg_max_null(arg = TIMESTAMP, val = BLOB)</code></p></li>
-<li><p><code>arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)</code></p></li>
-<li><p><code>arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)</code></p></li>
-<li><p><code>arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)</code></p></li>
-<li><p><code>arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)</code></p></li>
-<li><p><code>arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)</code></p></li>
-<li><p><code>arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)</code></p></li>
-<li><p><code>arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)</code></p></li>
-<li><p><code>arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)</code></p></li>
-<li><p><code>arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)</code></p></li>
-<li><p><code>arg_max_null(arg = BLOB, val = INTEGER)</code></p></li>
-<li><p><code>arg_max_null(arg = BLOB, val = BIGINT)</code></p></li>
-<li><p><code>arg_max_null(arg = BLOB, val = HUGEINT)</code></p></li>
-<li><p><code>arg_max_null(arg = BLOB, val = DOUBLE)</code></p></li>
-<li><p><code>arg_max_null(arg = BLOB, val = VARCHAR)</code></p></li>
-<li><p><code>arg_max_null(arg = BLOB, val = DATE)</code></p></li>
-<li><p><code>arg_max_null(arg = BLOB, val = TIMESTAMP)</code></p></li>
-<li><p><code>arg_max_null(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)</code></p></li>
-<li><p><code>arg_max_null(arg = BLOB, val = BLOB)</code></p></li>
-<li><p><code>arg_max_null(arg = DECIMAL, val = INTEGER)</code></p></li>
-<li><p><code>arg_max_null(arg = DECIMAL, val = BIGINT)</code></p></li>
-<li><p><code>arg_max_null(arg = DECIMAL, val = HUGEINT)</code></p></li>
-<li><p><code>arg_max_null(arg = DECIMAL, val = DOUBLE)</code></p></li>
-<li><p><code>arg_max_null(arg = DECIMAL, val = VARCHAR)</code></p></li>
-<li><p><code>arg_max_null(arg = DECIMAL, val = DATE)</code></p></li>
-<li><p><code>arg_max_null(arg = DECIMAL, val = TIMESTAMP)</code></p></li>
-<li><p><code>arg_max_null(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)</code></p></li>
-<li><p><code>arg_max_null(arg = DECIMAL, val = BLOB)</code></p></li>
-<li><p><code>arg_max_null(arg = ANY, val = INTEGER)</code></p></li>
-<li><p><code>arg_max_null(arg = ANY, val = BIGINT)</code></p></li>
-<li><p><code>arg_max_null(arg = ANY, val = HUGEINT)</code></p></li>
-<li><p><code>arg_max_null(arg = ANY, val = DOUBLE)</code></p></li>
-<li><p><code>arg_max_null(arg = ANY, val = VARCHAR)</code></p></li>
-<li><p><code>arg_max_null(arg = ANY, val = DATE)</code></p></li>
-<li><p><code>arg_max_null(arg = ANY, val = TIMESTAMP)</code></p></li>
-<li><p><code>arg_max_null(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)</code></p></li>
-<li><p><code>arg_max_null(arg = ANY, val = BLOB)</code></p></li>
-<li><p><code>arg_max_null(arg = ANY, val = ANY)</code></p></li>
-</ul></div>
     <div class="section level2">
     <h2 id="sql-examples">SQL examples<a class="anchor" aria-label="anchor" href="#sql-examples"></a></h2>
 

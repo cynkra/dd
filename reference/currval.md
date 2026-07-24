@@ -6,12 +6,12 @@ called at least once prior to calling currval.
 ## Usage
 
 ``` r
-currval(`'sequence_name'` = VARCHAR)
+currval(sequence_name)
 ```
 
 ## Arguments
 
-- 'sequence_name':
+- sequence_name:
 
   `VARCHAR`
 

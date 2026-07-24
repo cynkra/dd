@@ -5,7 +5,7 @@ Returns a map created from the entries of the array.
 ## Usage
 
 ``` r
-map_from_entries(map = `STRUCT(K, V)[]`)
+map_from_entries(map)
 ```
 
 ## Arguments

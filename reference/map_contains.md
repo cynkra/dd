@@ -5,7 +5,7 @@ Checks if a map contains a given key.
 ## Usage
 
 ``` r
-map_contains(map = `MAP(K, V)`, key = K)
+map_contains(map, key)
 ```
 
 ## Arguments

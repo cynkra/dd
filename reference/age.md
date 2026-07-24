@@ -3,9 +3,15 @@
 Subtract arguments, resulting in the time difference between the two
 timestamps.
 
+## Usage
+
+``` r
+age(timestamp, timestamp.1)
+```
+
 ## Arguments
 
-- timestamp:
+- timestamp, timestamp.1:
 
   `TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 
@@ -17,11 +23,11 @@ timestamps.
 
 - `age(timestamp = TIMESTAMP)`
 
-- `age(timestamp = TIMESTAMP, timestamp = TIMESTAMP)`
+- `age(timestamp = TIMESTAMP, timestamp.1 = TIMESTAMP)`
 
 - `` age(timestamp = `TIMESTAMP WITH TIME ZONE`) ``
 
-- `` age(timestamp = `TIMESTAMP WITH TIME ZONE`, timestamp = `TIMESTAMP WITH TIME ZONE`) ``
+- `` age(timestamp = `TIMESTAMP WITH TIME ZONE`, timestamp.1 = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

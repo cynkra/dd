@@ -5,7 +5,7 @@ Converts a `value` from hexadecimal representation to a blob.
 ## Usage
 
 ``` r
-unhex(value = VARCHAR)
+unhex(value)
 ```
 
 ## Arguments

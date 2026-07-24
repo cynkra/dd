@@ -2,6 +2,12 @@
 
 Returns the number of non-NULL values in arg.
 
+## Usage
+
+``` r
+count(arg)
+```
+
 ## Arguments
 
 - arg:

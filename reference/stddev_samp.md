@@ -5,7 +5,7 @@ Returns the sample standard deviation.
 ## Usage
 
 ``` r
-stddev_samp(x = DOUBLE)
+stddev_samp(x)
 ```
 
 ## Arguments

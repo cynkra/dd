@@ -2,6 +2,12 @@
 
 Extract the century component from a date or timestamp.
 
+## Usage
+
+``` r
+century(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,16 +17,6 @@ Extract the century component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `century(ts = DATE)`
-
-- `century(ts = INTERVAL)`
-
-- `century(ts = TIMESTAMP)`
-
-- `` century(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

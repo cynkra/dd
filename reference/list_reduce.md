@@ -4,19 +4,25 @@ Reduces all elements of the input `list` into a single scalar value by
 executing the `lambda` function on a running result and the next list
 element. The `lambda` function has an optional `initial_value` argument.
 
+## Usage
+
+``` r
+list_reduce(list, lambda, initial_value)
+```
+
 ## Arguments
 
 - list:
 
   `ANY[]`
 
+- lambda:
+
+  `LAMBDA`
+
 - initial_value:
 
   `ANY`
-
-- lambda(x, y):
-
-  `LAMBDA`
 
 ## Value
 
@@ -24,9 +30,9 @@ element. The `lambda` function has an optional `initial_value` argument.
 
 ## Overloads
 
-- `` list_reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA) ``
+- `` list_reduce(list = `ANY[]`, lambda = LAMBDA) ``
 
-- `` list_reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY) ``
+- `` list_reduce(list = `ANY[]`, lambda = LAMBDA, initial_value = ANY) ``
 
 ## SQL examples
 

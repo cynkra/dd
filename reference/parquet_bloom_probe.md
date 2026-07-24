@@ -2,6 +2,12 @@
 
 DuckDB function `parquet_bloom_probe()`.
 
+## Usage
+
+``` r
+parquet_bloom_probe(col0, col1, col2)
+```
+
 ## Arguments
 
 - col0:
@@ -19,9 +25,3 @@ DuckDB function `parquet_bloom_probe()`.
 ## Value
 
 Unspecified.
-
-## Overloads
-
-- `parquet_bloom_probe(col0 = VARCHAR, col1 = VARCHAR, col2 = ANY)`
-
-- `` parquet_bloom_probe(col0 = `VARCHAR[]`, col1 = VARCHAR, col2 = ANY) ``

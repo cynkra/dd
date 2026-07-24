@@ -2,6 +2,12 @@
 
 DuckDB function `read_blob()`.
 
+## Usage
+
+``` r
+read_blob(col0)
+```
+
 ## Arguments
 
 - col0:
@@ -11,9 +17,3 @@ DuckDB function `read_blob()`.
 ## Value
 
 Unspecified.
-
-## Overloads
-
-- `read_blob(col0 = VARCHAR)`
-
-- `` read_blob(col0 = `VARCHAR[]`) ``

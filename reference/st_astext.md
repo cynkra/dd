@@ -5,7 +5,7 @@ Returns the Well-Known Text (WKT) representation of the geometry.
 ## Usage
 
 ``` r
-st_astext(geom = GEOMETRY)
+st_astext(geom)
 ```
 
 ## Arguments

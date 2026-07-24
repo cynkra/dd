@@ -2,6 +2,12 @@
 
 Returns true if the floating point value is infinite, false otherwise.
 
+## Usage
+
+``` r
+isinf(x)
+```
+
 ## Arguments
 
 - x:
@@ -11,18 +17,6 @@ Returns true if the floating point value is infinite, false otherwise.
 ## Value
 
 `BOOLEAN`
-
-## Overloads
-
-- `isinf(x = FLOAT)`
-
-- `isinf(x = DOUBLE)`
-
-- `isinf(x = DATE)`
-
-- `isinf(x = TIMESTAMP)`
-
-- `` isinf(x = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

@@ -5,6 +5,12 @@ cases (e.g., `a` and `A`) are considered different. Returns a number
 between 0 and 1. For similarity \< `score_cutoff`, 0 is returned
 instead. `score_cutoff` defaults to 0.
 
+## Usage
+
+``` r
+jaro_winkler_similarity(s1, s2, score_cutoff)
+```
+
 ## Arguments
 
 - s1:

@@ -5,16 +5,12 @@ Returns the number of non-NULL number pairs in a group.
 ## Usage
 
 ``` r
-regr_count(y = DOUBLE, x = DOUBLE)
+regr_count(y, x)
 ```
 
 ## Arguments
 
-- y:
-
-  `DOUBLE`
-
-- x:
+- y, x:
 
   `DOUBLE`
 

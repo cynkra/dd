@@ -2,6 +2,12 @@
 
 DuckDB function `parquet_kv_metadata()`.
 
+## Usage
+
+``` r
+parquet_kv_metadata(col0)
+```
+
 ## Arguments
 
 - col0:
@@ -11,9 +17,3 @@ DuckDB function `parquet_kv_metadata()`.
 ## Value
 
 Unspecified.
-
-## Overloads
-
-- `parquet_kv_metadata(col0 = VARCHAR)`
-
-- `` parquet_kv_metadata(col0 = `VARCHAR[]`) ``

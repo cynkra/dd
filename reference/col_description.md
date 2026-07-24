@@ -10,11 +10,7 @@ col_description(table_oid, column_number)
 
 ## Arguments
 
-- table_oid:
-
-  Unspecified.
-
-- column_number:
+- table_oid, column_number:
 
   Unspecified.
 

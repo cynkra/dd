@@ -6,7 +6,7 @@ parameters and sort qualifiers.
 ## Usage
 
 ``` r
-create_sort_key(parameters... = ANY)
+create_sort_key(parameters...)
 ```
 
 ## Arguments

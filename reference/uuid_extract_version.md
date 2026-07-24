@@ -5,7 +5,7 @@ Extract a version for the given UUID.
 ## Usage
 
 ``` r
-uuid_extract_version(uuid = UUID)
+uuid_extract_version(uuid)
 ```
 
 ## Arguments

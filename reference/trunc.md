@@ -2,6 +2,12 @@
 
 Truncates the number.
 
+## Usage
+
+``` r
+trunc(x, col1)
+```
+
 ## Arguments
 
 - x:

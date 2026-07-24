@@ -2,6 +2,12 @@
 
 Extract the quarter component from a date or timestamp.
 
+## Usage
+
+``` r
+quarter(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,16 +17,6 @@ Extract the quarter component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `quarter(ts = DATE)`
-
-- `quarter(ts = INTERVAL)`
-
-- `quarter(ts = TIMESTAMP)`
-
-- `` quarter(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

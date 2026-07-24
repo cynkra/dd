@@ -2,6 +2,12 @@
 
 DuckDB function `parquet_schema()`.
 
+## Usage
+
+``` r
+parquet_schema(col0)
+```
+
 ## Arguments
 
 - col0:
@@ -11,9 +17,3 @@ DuckDB function `parquet_schema()`.
 ## Value
 
 Unspecified.
-
-## Overloads
-
-- `parquet_schema(col0 = VARCHAR)`
-
-- `` parquet_schema(col0 = `VARCHAR[]`) ``

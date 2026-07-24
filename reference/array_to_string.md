@@ -10,11 +10,7 @@ array_to_string(arr, sep)
 
 ## Arguments
 
-- arr:
-
-  Unspecified.
-
-- sep:
+- arr, sep:
 
   Unspecified.
 

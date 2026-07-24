@@ -5,7 +5,7 @@ Computes the 2-log of x.
 ## Usage
 
 ``` r
-log2(x = DOUBLE)
+log2(x)
 ```
 
 ## Arguments

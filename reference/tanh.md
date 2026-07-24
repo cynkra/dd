@@ -5,7 +5,7 @@ Computes the hyperbolic tan of x.
 ## Usage
 
 ``` r
-tanh(x = DOUBLE)
+tanh(x)
 ```
 
 ## Arguments

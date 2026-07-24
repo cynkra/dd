@@ -6,7 +6,7 @@ encoding.
 ## Usage
 
 ``` r
-encode(string = VARCHAR)
+encode(string)
 ```
 
 ## Arguments

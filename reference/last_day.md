@@ -2,6 +2,12 @@
 
 Returns the last day of the month.
 
+## Usage
+
+``` r
+last_day(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,14 +17,6 @@ Returns the last day of the month.
 ## Value
 
 `DATE`
-
-## Overloads
-
-- `last_day(ts = DATE)`
-
-- `last_day(ts = TIMESTAMP)`
-
-- `` last_day(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

@@ -5,20 +5,12 @@ Replaces any occurrences of the `source` with `target` in `string`.
 ## Usage
 
 ``` r
-replace(string = VARCHAR, source = VARCHAR, target = VARCHAR)
+replace(string, source, target)
 ```
 
 ## Arguments
 
-- string:
-
-  `VARCHAR`
-
-- source:
-
-  `VARCHAR`
-
-- target:
+- string, source, target:
 
   `VARCHAR`
 

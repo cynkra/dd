@@ -5,7 +5,7 @@ Returns the field values of a STRUCT as an UnnamedStruct.
 ## Usage
 
 ``` r
-struct_values(struct = STRUCT)
+struct_values(struct)
 ```
 
 ## Arguments

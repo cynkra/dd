@@ -2,6 +2,12 @@
 
 Extract the month component from a date or timestamp.
 
+## Usage
+
+``` r
+month(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,16 +17,6 @@ Extract the month component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `month(ts = DATE)`
-
-- `month(ts = INTERVAL)`
-
-- `month(ts = TIMESTAMP)`
-
-- `` month(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

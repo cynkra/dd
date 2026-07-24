@@ -5,7 +5,7 @@ Computes the arcsine of x.
 ## Usage
 
 ``` r
-asin(x = DOUBLE)
+asin(x)
 ```
 
 ## Arguments

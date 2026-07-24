@@ -5,20 +5,12 @@ Casts all fields of type1 to type2.
 ## Usage
 
 ``` r
-replace_type(param = ANY, type1 = ANY, type2 = ANY)
+replace_type(param, type1, type2)
 ```
 
 ## Arguments
 
-- param:
-
-  `ANY`
-
-- type1:
-
-  `ANY`
-
-- type2:
+- param, type1, type2:
 
   `ANY`
 

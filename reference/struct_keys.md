@@ -5,7 +5,7 @@ Returns the field names of a STRUCT as a list.
 ## Usage
 
 ``` r
-struct_keys(struct = ANY)
+struct_keys(struct)
 ```
 
 ## Arguments

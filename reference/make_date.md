@@ -1,30 +1,24 @@
 # DuckDB function make_date
 
-The date for the given parts.
+- `make_date(year = BIGINT, month = BIGINT, day = BIGINT)`: The date for
+  the given parts.
 
-The date for the given struct.
+- `` make_date(date.struct = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`) ``:
+  The date for the given struct.
+
+- `make_date(col0 = INTEGER)`: (Description missing.)
+
+## Usage
+
+``` r
+make_date(year, month, day)
+```
 
 ## Arguments
 
-- col0:
-
-  `INTEGER`
-
-- year:
+- year, month, day:
 
   `BIGINT`
-
-- month:
-
-  `BIGINT`
-
-- day:
-
-  `BIGINT`
-
-- date-struct:
-
-  `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`
 
 ## Value
 
@@ -36,7 +30,7 @@ The date for the given struct.
 
 - `make_date(year = BIGINT, month = BIGINT, day = BIGINT)`
 
-- `` make_date(`date-struct` = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`) ``
+- `` make_date(date.struct = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`) ``
 
 ## SQL examples
 

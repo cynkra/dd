@@ -6,7 +6,7 @@ skipped.
 ## Usage
 
 ``` r
-concat_ws(separator = VARCHAR, string = ANY)
+concat_ws(separator, string)
 ```
 
 ## Arguments

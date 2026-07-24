@@ -5,7 +5,7 @@ Flattens a nested list by one level.
 ## Usage
 
 ``` r
-flatten(nested_list = `T[][]`)
+flatten(nested_list)
 ```
 
 ## Arguments

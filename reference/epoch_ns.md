@@ -2,6 +2,12 @@
 
 Extract the epoch component in nanoseconds from a temporal type.
 
+## Usage
+
+``` r
+epoch_ns(temporal)
+```
+
 ## Arguments
 
 - temporal:
@@ -11,24 +17,6 @@ Extract the epoch component in nanoseconds from a temporal type.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `epoch_ns(temporal = DATE)`
-
-- `epoch_ns(temporal = TIMESTAMP)`
-
-- `epoch_ns(temporal = INTERVAL)`
-
-- `epoch_ns(temporal = TIME)`
-
-- `epoch_ns(temporal = TIME_NS)`
-
-- `` epoch_ns(temporal = `TIME WITH TIME ZONE`) ``
-
-- `` epoch_ns(temporal = `TIMESTAMP WITH TIME ZONE`) ``
-
-- `epoch_ns(temporal = TIMESTAMP_NS)`
 
 ## SQL examples
 

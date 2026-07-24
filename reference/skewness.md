@@ -5,7 +5,7 @@ Returns the skewness of all input values.
 ## Usage
 
 ``` r
-skewness(x = DOUBLE)
+skewness(x)
 ```
 
 ## Arguments

@@ -5,7 +5,7 @@ Strips accents from `string`.
 ## Usage
 
 ``` r
-strip_accents(string = VARCHAR)
+strip_accents(string)
 ```
 
 ## Arguments

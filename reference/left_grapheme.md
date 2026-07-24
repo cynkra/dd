@@ -5,7 +5,7 @@ Extracts the left-most count grapheme clusters.
 ## Usage
 
 ``` r
-left_grapheme(string = VARCHAR, count = BIGINT)
+left_grapheme(string, count)
 ```
 
 ## Arguments

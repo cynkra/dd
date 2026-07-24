@@ -2,17 +2,15 @@
 
 DuckDB function `has_server_privilege()`.
 
+## Usage
+
+``` r
+has_server_privilege(user, server, privilege)
+```
+
 ## Arguments
 
-- server:
-
-  Unspecified.
-
-- privilege:
-
-  Unspecified.
-
-- user:
+- user, server, privilege:
 
   Unspecified.
 

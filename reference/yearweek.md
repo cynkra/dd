@@ -2,6 +2,12 @@
 
 Extract the yearweek component from a date or timestamp.
 
+## Usage
+
+``` r
+yearweek(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,16 +17,6 @@ Extract the yearweek component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `yearweek(ts = DATE)`
-
-- `yearweek(ts = INTERVAL)`
-
-- `yearweek(ts = TIMESTAMP)`
-
-- `` yearweek(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

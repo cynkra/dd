@@ -3,21 +3,15 @@
 Draws a band whose width is proportional to (`x - min`) and equal to
 `width` characters when `x` = `max`. `width` defaults to 80.
 
+## Usage
+
+``` r
+bar(x, min, max, width)
+```
+
 ## Arguments
 
-- x:
-
-  `DOUBLE`
-
-- min:
-
-  `DOUBLE`
-
-- max:
-
-  `DOUBLE`
-
-- width:
+- x, min, max, width:
 
   `DOUBLE`
 

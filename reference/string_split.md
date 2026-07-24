@@ -5,16 +5,12 @@ Splits the `string` along the `separator`.
 ## Usage
 
 ``` r
-string_split(string = VARCHAR, separator = VARCHAR)
+string_split(string, separator)
 ```
 
 ## Arguments
 
-- string:
-
-  `VARCHAR`
-
-- separator:
+- string, separator:
 
   `VARCHAR`
 

@@ -5,7 +5,7 @@ Returns the size of the map (or the number of entries in the map).
 ## Usage
 
 ``` r
-cardinality(map = ANY)
+cardinality(map)
 ```
 
 ## Arguments

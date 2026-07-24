@@ -6,7 +6,7 @@ integer.
 ## Usage
 
 ``` r
-parse_formatted_bytes(string = VARCHAR)
+parse_formatted_bytes(string)
 ```
 
 ## Arguments

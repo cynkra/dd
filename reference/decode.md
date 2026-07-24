@@ -5,6 +5,12 @@ error behavior argument. Can be 'strict' (default, fail), 'replace' to
 replace invalid characters with '?', or 'ignore' to skip invalid
 characters.
 
+## Usage
+
+``` r
+decode(blob, varchar)
+```
+
 ## Arguments
 
 - blob:

@@ -1,18 +1,21 @@
 # DuckDB function md5
 
-Returns the MD5 hash of the `string` as a `VARCHAR`.
+- `md5(string = VARCHAR)`: Returns the MD5 hash of the `string` as a
+  `VARCHAR`.
 
-Returns the MD5 hash of the `blob` as a `VARCHAR`.
+- `md5(blob = BLOB)`: Returns the MD5 hash of the `blob` as a `VARCHAR`.
+
+## Usage
+
+``` r
+md5(string)
+```
 
 ## Arguments
 
 - string:
 
   `VARCHAR`
-
-- blob:
-
-  `BLOB`
 
 ## Value
 

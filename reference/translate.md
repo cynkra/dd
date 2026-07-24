@@ -8,20 +8,12 @@ deleted.
 ## Usage
 
 ``` r
-translate(string = VARCHAR, from = VARCHAR, to = VARCHAR)
+translate(string, from, to)
 ```
 
 ## Arguments
 
-- string:
-
-  `VARCHAR`
-
-- from:
-
-  `VARCHAR`
-
-- to:
+- string, from, to:
 
   `VARCHAR`
 

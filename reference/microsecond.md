@@ -2,6 +2,12 @@
 
 Extract the microsecond component from a date or timestamp.
 
+## Usage
+
+``` r
+microsecond(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,22 +17,6 @@ Extract the microsecond component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `microsecond(ts = DATE)`
-
-- `microsecond(ts = INTERVAL)`
-
-- `microsecond(ts = TIME)`
-
-- `microsecond(ts = TIMESTAMP)`
-
-- `` microsecond(ts = `TIME WITH TIME ZONE`) ``
-
-- `microsecond(ts = TIME_NS)`
-
-- `` microsecond(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

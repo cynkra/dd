@@ -5,7 +5,7 @@ DuckDB function `summary()`.
 ## Usage
 
 ``` r
-summary(col0 = TABLE)
+summary(col0)
 ```
 
 ## Arguments

@@ -7,16 +7,12 @@ Concatenates two strings, lists, or blobs. Any `NULL` input results in
 ## Usage
 
 ``` r
-ANY || ANY
+arg1 || arg2
 ```
 
 ## Arguments
 
-- arg1:
-
-  `ANY`
-
-- arg2:
+- arg1, arg2:
 
   `ANY`
 

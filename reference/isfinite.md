@@ -2,6 +2,12 @@
 
 Returns true if the floating point value is finite, false otherwise.
 
+## Usage
+
+``` r
+isfinite(x)
+```
+
 ## Arguments
 
 - x:
@@ -11,18 +17,6 @@ Returns true if the floating point value is finite, false otherwise.
 ## Value
 
 `BOOLEAN`
-
-## Overloads
-
-- `isfinite(x = FLOAT)`
-
-- `isfinite(x = DOUBLE)`
-
-- `isfinite(x = DATE)`
-
-- `isfinite(x = TIMESTAMP)`
-
-- `` isfinite(x = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

@@ -5,12 +5,12 @@ Return the following value of the sequence.
 ## Usage
 
 ``` r
-nextval(`'sequence_name'` = VARCHAR)
+nextval(sequence_name)
 ```
 
 ## Arguments
 
-- 'sequence_name':
+- sequence_name:
 
   `VARCHAR`
 

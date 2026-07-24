@@ -10,11 +10,7 @@ fmod(x, y)
 
 ## Arguments
 
-- x:
-
-  Unspecified.
-
-- y:
+- x, y:
 
   Unspecified.
 

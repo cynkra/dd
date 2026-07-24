@@ -2,6 +2,12 @@
 
 Extract the week component from a date or timestamp.
 
+## Usage
+
+``` r
+week(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,16 +17,6 @@ Extract the week component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `week(ts = DATE)`
-
-- `week(ts = INTERVAL)`
-
-- `week(ts = TIMESTAMP)`
-
-- `` week(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

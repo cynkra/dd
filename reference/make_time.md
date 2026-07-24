@@ -5,7 +5,7 @@ The time for the given parts.
 ## Usage
 
 ``` r
-make_time(hour = BIGINT, minute = BIGINT, seconds = DOUBLE)
+make_time(hour, minute, seconds)
 ```
 
 ## Arguments

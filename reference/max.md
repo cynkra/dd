@@ -2,6 +2,12 @@
 
 Returns the maximum value present in arg.
 
+## Usage
+
+``` r
+max(arg, col1)
+```
+
 ## Arguments
 
 - arg:

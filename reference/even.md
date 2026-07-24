@@ -5,7 +5,7 @@ Rounds x to next even number by rounding away from zero.
 ## Usage
 
 ``` r
-even(x = DOUBLE)
+even(x)
 ```
 
 ## Arguments

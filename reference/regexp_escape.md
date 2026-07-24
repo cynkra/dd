@@ -6,7 +6,7 @@ similarly to Python's `re.escape` function.
 ## Usage
 
 ``` r
-regexp_escape(string = VARCHAR)
+regexp_escape(string)
 ```
 
 ## Arguments

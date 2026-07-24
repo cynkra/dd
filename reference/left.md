@@ -5,7 +5,7 @@ Extracts the left-most count characters.
 ## Usage
 
 ``` r
-left(string = VARCHAR, count = BIGINT)
+left(string, count)
 ```
 
 ## Arguments

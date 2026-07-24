@@ -2,6 +2,12 @@
 
 Extract the epoch component from a temporal type.
 
+## Usage
+
+``` r
+epoch(temporal)
+```
+
 ## Arguments
 
 - temporal:
@@ -11,22 +17,6 @@ Extract the epoch component from a temporal type.
 ## Value
 
 `DOUBLE`
-
-## Overloads
-
-- `epoch(temporal = DATE)`
-
-- `epoch(temporal = INTERVAL)`
-
-- `epoch(temporal = TIME)`
-
-- `epoch(temporal = TIMESTAMP)`
-
-- `` epoch(temporal = `TIME WITH TIME ZONE`) ``
-
-- `epoch(temporal = TIME_NS)`
-
-- `` epoch(temporal = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

@@ -5,7 +5,7 @@ Computes the 10-log of x.
 ## Usage
 
 ``` r
-log10(x = DOUBLE)
+log10(x)
 ```
 
 ## Arguments

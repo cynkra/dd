@@ -6,16 +6,12 @@ non-NULL pairs in a group.
 ## Usage
 
 ``` r
-regr_intercept(y = DOUBLE, x = DOUBLE)
+regr_intercept(y, x)
 ```
 
 ## Arguments
 
-- y:
-
-  `DOUBLE`
-
-- x:
+- y, x:
 
   `DOUBLE`
 

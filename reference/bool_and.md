@@ -5,7 +5,7 @@ Returns TRUE if every input value is TRUE, otherwise FALSE.
 ## Usage
 
 ``` r
-bool_and(arg = BOOLEAN)
+bool_and(arg)
 ```
 
 ## Arguments

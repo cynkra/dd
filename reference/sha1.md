@@ -1,18 +1,22 @@
 # DuckDB function sha1
 
-Returns a `VARCHAR` with the SHA-1 hash of the `value`.
+- `sha1(value = VARCHAR)`: Returns a `VARCHAR` with the SHA-1 hash of
+  the `value`.
 
-Returns a `VARCHAR` with the SHA-1 hash of the `blob`.
+- `sha1(blob = BLOB)`: Returns a `VARCHAR` with the SHA-1 hash of the
+  `blob`.
+
+## Usage
+
+``` r
+sha1(value)
+```
 
 ## Arguments
 
 - value:
 
   `VARCHAR`
-
-- blob:
-
-  `BLOB`
 
 ## Value
 

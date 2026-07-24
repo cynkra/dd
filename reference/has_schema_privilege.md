@@ -2,17 +2,15 @@
 
 DuckDB function `has_schema_privilege()`.
 
+## Usage
+
+``` r
+has_schema_privilege(user, schema, privilege)
+```
+
 ## Arguments
 
-- schema:
-
-  Unspecified.
-
-- privilege:
-
-  Unspecified.
-
-- user:
+- user, schema, privilege:
 
   Unspecified.
 

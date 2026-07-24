@@ -6,7 +6,7 @@ the `value_list`.
 ## Usage
 
 ``` r
-list_where(value_list = `T[]`, mask_list = `BOOLEAN[]`)
+list_where(value_list, mask_list)
 ```
 
 ## Arguments

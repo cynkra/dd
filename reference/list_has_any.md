@@ -5,16 +5,12 @@ Returns true if the lists have any element in common. NULLs are ignored.
 ## Usage
 
 ``` r
-list_has_any(list1 = `T[]`, list2 = `T[]`)
+list_has_any(list1, list2)
 ```
 
 ## Arguments
 
-- list1:
-
-  `T[]`
-
-- list2:
+- list1, list2:
 
   `T[]`
 

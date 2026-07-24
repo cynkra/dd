@@ -5,7 +5,7 @@ Returns the cube root of x.
 ## Usage
 
 ``` r
-cbrt(x = DOUBLE)
+cbrt(x)
 ```
 
 ## Arguments

@@ -5,6 +5,12 @@ of the string. If optional argument `length` is set, extracts a
 substring of `length` grapheme clusters instead. Note that a `start`
 value of `1` refers to the `first` character of the `string`.
 
+## Usage
+
+``` r
+substring_grapheme(string, start, length)
+```
+
 ## Arguments
 
 - string:

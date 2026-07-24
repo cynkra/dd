@@ -5,6 +5,12 @@ aligned relative to origin TIMESTAMPTZ. The origin defaults to
 2000-01-03 00:00:00+00 for buckets that do not include a month or year
 interval, and to 2000-01-01 00:00:00+00 for month and year buckets.
 
+## Usage
+
+``` r
+time_bucket(bucket_width, timestamp, origin)
+```
+
 ## Arguments
 
 - bucket_width:

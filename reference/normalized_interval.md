@@ -5,7 +5,7 @@ Normalizes an INTERVAL to an equivalent interval.
 ## Usage
 
 ``` r
-normalized_interval(interval = INTERVAL)
+normalized_interval(interval)
 ```
 
 ## Arguments

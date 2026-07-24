@@ -2,6 +2,12 @@
 
 Absolute value.
 
+## Usage
+
+``` r
+abs(x)
+```
+
 ## Arguments
 
 - x:
@@ -11,34 +17,6 @@ Absolute value.
 ## Value
 
 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
-
-## Overloads
-
-- `abs(x = TINYINT)`
-
-- `abs(x = SMALLINT)`
-
-- `abs(x = INTEGER)`
-
-- `abs(x = BIGINT)`
-
-- `abs(x = HUGEINT)`
-
-- `abs(x = FLOAT)`
-
-- `abs(x = DOUBLE)`
-
-- `abs(x = DECIMAL)`
-
-- `abs(x = UTINYINT)`
-
-- `abs(x = USMALLINT)`
-
-- `abs(x = UINTEGER)`
-
-- `abs(x = UBIGINT)`
-
-- `abs(x = UHUGEINT)`
 
 ## SQL examples
 

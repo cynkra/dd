@@ -6,7 +6,7 @@ without bias correction.
 ## Usage
 
 ``` r
-kurtosis_pop(x = DOUBLE)
+kurtosis_pop(x)
 ```
 
 ## Arguments

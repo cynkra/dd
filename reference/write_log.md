@@ -5,7 +5,7 @@ Writes to the logger.
 ## Usage
 
 ``` r
-write_log(string = VARCHAR)
+write_log(string)
 ```
 
 ## Arguments

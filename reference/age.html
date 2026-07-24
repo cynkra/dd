@@ -37,12 +37,16 @@
     <p>Subtract arguments, resulting in the time difference between the two timestamps.</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">age</span><span class="op">(</span><span class="va">timestamp</span>, <span class="va">timestamp.1</span><span class="op">)</span></span></code></pre></div>
+    </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
 
 
-<dl><dt id="arg-timestamp">timestamp<a class="anchor" aria-label="anchor" href="#arg-timestamp"></a></dt>
+<dl><dt id="arg-timestamp-timestamp-">timestamp, timestamp.1<a class="anchor" aria-label="anchor" href="#arg-timestamp-timestamp-"></a></dt>
 <dd><p><code>TIMESTAMP | TIMESTAMP WITH TIME ZONE</code></p></dd>
 
 </dl></div>
@@ -55,9 +59,9 @@
 
 
 <ul><li><p><code>age(timestamp = TIMESTAMP)</code></p></li>
-<li><p><code>age(timestamp = TIMESTAMP, timestamp = TIMESTAMP)</code></p></li>
+<li><p><code>age(timestamp = TIMESTAMP, timestamp.1 = TIMESTAMP)</code></p></li>
 <li><p><code>age(timestamp = `TIMESTAMP WITH TIME ZONE`)</code></p></li>
-<li><p><code>age(timestamp = `TIMESTAMP WITH TIME ZONE`, timestamp = `TIMESTAMP WITH TIME ZONE`)</code></p></li>
+<li><p><code>age(timestamp = `TIMESTAMP WITH TIME ZONE`, timestamp.1 = `TIMESTAMP WITH TIME ZONE`)</code></p></li>
 </ul></div>
     <div class="section level2">
     <h2 id="sql-examples">SQL examples<a class="anchor" aria-label="anchor" href="#sql-examples"></a></h2>

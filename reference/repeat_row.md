@@ -5,7 +5,7 @@ DuckDB function `repeat_row()`.
 ## Usage
 
 ``` r
-repeat_row(num_rows = BIGINT)
+repeat_row(num_rows)
 ```
 
 ## Arguments

@@ -2,6 +2,12 @@
 
 Rounds x to s decimal places.
 
+## Usage
+
+``` r
+round(x, precision)
+```
+
 ## Arguments
 
 - x:

@@ -5,7 +5,7 @@ Computes the inverse hyperbolic tan of x.
 ## Usage
 
 ``` r
-atanh(x = DOUBLE)
+atanh(x)
 ```
 
 ## Arguments

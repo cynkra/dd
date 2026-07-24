@@ -10,11 +10,7 @@ format_pg_type(logical_type, type_name)
 
 ## Arguments
 
-- logical_type:
-
-  Unspecified.
-
-- type_name:
+- logical_type, type_name:
 
   Unspecified.
 

@@ -6,7 +6,7 @@ values not belonging to any provided bin).
 ## Usage
 
 ``` r
-is_histogram_other_bin(val = ANY)
+is_histogram_other_bin(val)
 ```
 
 ## Arguments

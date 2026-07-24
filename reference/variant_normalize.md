@@ -5,7 +5,7 @@ Normalizes the `input_variant` to a canonical representation.
 ## Usage
 
 ``` r
-variant_normalize(input_variant = VARIANT)
+variant_normalize(input_variant)
 ```
 
 ## Arguments

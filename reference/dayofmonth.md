@@ -2,6 +2,12 @@
 
 Extract the dayofmonth component from a date or timestamp.
 
+## Usage
+
+``` r
+dayofmonth(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,16 +17,6 @@ Extract the dayofmonth component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `dayofmonth(ts = DATE)`
-
-- `dayofmonth(ts = INTERVAL)`
-
-- `dayofmonth(ts = TIMESTAMP)`
-
-- `` dayofmonth(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

@@ -5,7 +5,7 @@ Computes the cotangent of x.
 ## Usage
 
 ``` r
-cot(x = DOUBLE)
+cot(x)
 ```
 
 ## Arguments

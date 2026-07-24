@@ -2,25 +2,21 @@
 
 Computes the negative inner product between two same-sized lists.
 
+## Usage
+
+``` r
+list_negative_inner_product(list1, list2)
+```
+
 ## Arguments
 
-- list1:
-
-  `FLOAT[] | DOUBLE[]`
-
-- list2:
+- list1, list2:
 
   `FLOAT[] | DOUBLE[]`
 
 ## Value
 
 `FLOAT | DOUBLE`
-
-## Overloads
-
-- `` list_negative_inner_product(list1 = `FLOAT[]`, list2 = `FLOAT[]`) ``
-
-- `` list_negative_inner_product(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`) ``
 
 ## SQL examples
 

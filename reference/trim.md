@@ -3,13 +3,15 @@
 Removes any occurrences of any of the `characters` from either side of
 the `string`. `characters` defaults to `space`.
 
+## Usage
+
+``` r
+trim(string, characters)
+```
+
 ## Arguments
 
-- string:
-
-  `VARCHAR`
-
-- characters:
+- string, characters:
 
   `VARCHAR`
 

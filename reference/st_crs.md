@@ -6,7 +6,7 @@ geometry.
 ## Usage
 
 ``` r
-st_crs(geom = GEOMETRY)
+st_crs(geom)
 ```
 
 ## Arguments

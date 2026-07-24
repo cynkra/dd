@@ -3,15 +3,17 @@
 Returns the last value of a column. This function is affected by
 ordering.
 
+## Usage
+
+``` r
+last(arg)
+```
+
 ## Arguments
 
 - arg:
 
   `DECIMAL | ANY`
-
-- col0:
-
-  `T`
 
 ## Value
 

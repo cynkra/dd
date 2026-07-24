@@ -7,7 +7,7 @@ lowercase characters, and collations are not supported.
 ## Usage
 
 ``` r
-least(arg1 = ANY)
+least(arg1)
 ```
 
 ## Arguments

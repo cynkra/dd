@@ -5,16 +5,12 @@ Returns `true` if `string` ends with `search_string`.
 ## Usage
 
 ``` r
-suffix(string = VARCHAR, search_string = VARCHAR)
+suffix(string, search_string)
 ```
 
 ## Arguments
 
-- string:
-
-  `VARCHAR`
-
-- search_string:
+- string, search_string:
 
   `VARCHAR`
 

@@ -5,7 +5,7 @@ Construct a microsecond interval.
 ## Usage
 
 ``` r
-to_microseconds(integer = BIGINT)
+to_microseconds(integer)
 ```
 
 ## Arguments

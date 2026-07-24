@@ -6,7 +6,7 @@ character in the `string`.
 ## Usage
 
 ``` r
-unicode(string = VARCHAR)
+unicode(string)
 ```
 
 ## Arguments

@@ -5,7 +5,7 @@ Computes the log of the gamma function.
 ## Usage
 
 ``` r
-lgamma(x = DOUBLE)
+lgamma(x)
 ```
 
 ## Arguments

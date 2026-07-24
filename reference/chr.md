@@ -6,7 +6,7 @@ Unicode code point.
 ## Usage
 
 ``` r
-chr(code_point = INTEGER)
+chr(code_point)
 ```
 
 ## Arguments

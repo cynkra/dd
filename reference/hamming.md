@@ -8,16 +8,12 @@ are considered different.
 ## Usage
 
 ``` r
-hamming(s1 = VARCHAR, s2 = VARCHAR)
+hamming(s1, s2)
 ```
 
 ## Arguments
 
-- s1:
-
-  `VARCHAR`
-
-- s2:
+- s1, s2:
 
   `VARCHAR`
 

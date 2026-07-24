@@ -5,7 +5,7 @@ DuckDB function `getvariable()`.
 ## Usage
 
 ``` r
-getvariable(col0 = VARCHAR)
+getvariable(col0)
 ```
 
 ## Arguments

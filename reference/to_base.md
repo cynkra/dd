@@ -3,6 +3,12 @@
 Converts `number` to a string in the given base `radix`, optionally
 padding with leading zeros to `min_length`.
 
+## Usage
+
+``` r
+to_base(number, radix, min_length)
+```
+
 ## Arguments
 
 - number:

@@ -1,18 +1,20 @@
 # DuckDB function bit_length
 
-Number of bits in a `string`.
+- `bit_length(string = VARCHAR)`: Number of bits in a `string`.
 
-Returns the bit-length of the `bit` argument.
+- `bit_length(bit = BIT)`: Returns the bit-length of the `bit` argument.
+
+## Usage
+
+``` r
+bit_length(string)
+```
 
 ## Arguments
 
 - string:
 
   `VARCHAR`
-
-- bit:
-
-  `BIT`
 
 ## Value
 

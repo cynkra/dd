@@ -6,7 +6,7 @@ on powers of 2 (KiB, MiB, GiB, etc.).
 ## Usage
 
 ``` r
-format_bytes(integer = BIGINT)
+format_bytes(integer)
 ```
 
 ## Arguments

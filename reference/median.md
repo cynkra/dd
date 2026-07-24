@@ -8,7 +8,7 @@ else) return the lower of the two middle values.
 ## Usage
 
 ``` r
-median(x = ANY)
+median(x)
 ```
 
 ## Arguments

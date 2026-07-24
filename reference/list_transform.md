@@ -7,7 +7,7 @@ return type of the `lambda` function.
 ## Usage
 
 ``` r
-list_transform(list = `ANY[]`, `lambda(x)` = LAMBDA)
+list_transform(list, lambda)
 ```
 
 ## Arguments
@@ -16,7 +16,7 @@ list_transform(list = `ANY[]`, `lambda(x)` = LAMBDA)
 
   `ANY[]`
 
-- lambda(x):
+- lambda:
 
   `LAMBDA`
 

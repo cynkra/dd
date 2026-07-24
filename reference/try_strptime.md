@@ -3,6 +3,12 @@
 Converts the `string` text to timestamp according to the format string.
 Returns `NULL` on failure.
 
+## Usage
+
+``` r
+try_strptime(text, format)
+```
+
 ## Arguments
 
 - text:
@@ -16,12 +22,6 @@ Returns `NULL` on failure.
 ## Value
 
 `TIMESTAMP`
-
-## Overloads
-
-- `try_strptime(text = VARCHAR, format = VARCHAR)`
-
-- `` try_strptime(text = VARCHAR, format = `VARCHAR[]`) ``
 
 ## SQL examples
 

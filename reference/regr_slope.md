@@ -6,16 +6,12 @@ group.
 ## Usage
 
 ``` r
-regr_slope(y = DOUBLE, x = DOUBLE)
+regr_slope(y, x)
 ```
 
 ## Arguments
 
-- y:
-
-  `DOUBLE`
-
-- x:
+- y, x:
 
   `DOUBLE`
 

@@ -5,7 +5,7 @@ Extract the right-most `count` characters.
 ## Usage
 
 ``` r
-right(string = VARCHAR, count = BIGINT)
+right(string, count)
 ```
 
 ## Arguments

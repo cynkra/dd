@@ -5,7 +5,7 @@ Computes the sin of x.
 ## Usage
 
 ``` r
-sin(x = DOUBLE)
+sin(x)
 ```
 
 ## Arguments

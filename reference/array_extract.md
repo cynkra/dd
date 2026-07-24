@@ -1,39 +1,32 @@
 # DuckDB function array_extract
 
-Extracts a single character from a `string` using a (1-based) `index`.
+- `` array_extract(list = `T[]`, index = BIGINT) ``: Extracts the
+  `index`th (1-based) value from the `list`.
 
-Extracts the named `entry` from the `STRUCT`.
+- `array_extract(string = VARCHAR, index = BIGINT)`: Extracts a single
+  character from a `string` using a (1-based) `index`.
 
-Extracts the entry from an unnamed `STRUCT` (tuple) using an index
-(1-based).
+- `array_extract(struct = STRUCT, entry = VARCHAR)`: Extracts the named
+  `entry` from the `STRUCT`.
 
-Extracts the `index`th (1-based) value from the `list`.
+- `array_extract(struct = STRUCT, index = BIGINT)`: Extracts the entry
+  from an unnamed `STRUCT` (tuple) using an index (1-based).
+
+## Usage
+
+``` r
+array_extract(list, index)
+```
 
 ## Arguments
 
-- col0:
+- list:
 
   `T[]`
-
-- col1:
-
-  `BIGINT`
-
-- string:
-
-  `VARCHAR`
 
 - index:
 
   `BIGINT`
-
-- struct:
-
-  `STRUCT`
-
-- entry:
-
-  `VARCHAR`
 
 ## Value
 
@@ -41,7 +34,7 @@ Extracts the `index`th (1-based) value from the `list`.
 
 ## Overloads
 
-- `` array_extract(col0 = `T[]`, col1 = BIGINT) ``
+- `` array_extract(list = `T[]`, index = BIGINT) ``
 
 - `array_extract(string = VARCHAR, index = BIGINT)`
 

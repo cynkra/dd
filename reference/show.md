@@ -5,7 +5,7 @@ DuckDB function `show()`.
 ## Usage
 
 ``` r
-show(col0 = VARCHAR)
+show(col0)
 ```
 
 ## Arguments

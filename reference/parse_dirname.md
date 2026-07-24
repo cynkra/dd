@@ -3,13 +3,15 @@
 Returns the top-level directory name from the given `path`. `separator`
 options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
 
+## Usage
+
+``` r
+parse_dirname(path, separator)
+```
+
 ## Arguments
 
-- path:
-
-  `VARCHAR`
-
-- separator:
+- path, separator:
 
   `VARCHAR`
 

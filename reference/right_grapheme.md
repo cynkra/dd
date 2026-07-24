@@ -5,7 +5,7 @@ Extracts the right-most `count` grapheme clusters.
 ## Usage
 
 ``` r
-right_grapheme(string = VARCHAR, count = BIGINT)
+right_grapheme(string, count)
 ```
 
 ## Arguments

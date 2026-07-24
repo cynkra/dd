@@ -2,17 +2,15 @@
 
 DuckDB function `has_language_privilege()`.
 
+## Usage
+
+``` r
+has_language_privilege(user, language, privilege)
+```
+
 ## Arguments
 
-- language:
-
-  Unspecified.
-
-- privilege:
-
-  Unspecified.
-
-- user:
+- user, language, privilege:
 
   Unspecified.
 

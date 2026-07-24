@@ -5,7 +5,7 @@ Extract the timestamp for the given UUID v7.
 ## Usage
 
 ``` r
-uuid_extract_timestamp(uuid = UUID)
+uuid_extract_timestamp(uuid)
 ```
 
 ## Arguments

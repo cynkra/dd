@@ -2,6 +2,12 @@
 
 Calculates the average value for all tuples in x.
 
+## Usage
+
+``` r
+avg(x)
+```
+
 ## Arguments
 
 - x:
@@ -11,30 +17,6 @@ Calculates the average value for all tuples in x.
 ## Value
 
 `DECIMAL | DOUBLE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`
-
-## Overloads
-
-- `avg(x = DECIMAL)`
-
-- `avg(x = SMALLINT)`
-
-- `avg(x = INTEGER)`
-
-- `avg(x = BIGINT)`
-
-- `avg(x = HUGEINT)`
-
-- `avg(x = INTERVAL)`
-
-- `avg(x = DOUBLE)`
-
-- `avg(x = TIMESTAMP)`
-
-- `` avg(x = `TIMESTAMP WITH TIME ZONE`) ``
-
-- `avg(x = TIME)`
-
-- `` avg(x = `TIME WITH TIME ZONE`) ``
 
 ## SQL examples
 

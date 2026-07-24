@@ -1,28 +1,27 @@
 # DuckDB function contains
 
-Returns `true` if `search_string` is found within `string`.
+- `contains(string = VARCHAR, search_string = VARCHAR)`: Returns `true`
+  if `search_string` is found within `string`.
 
-Returns `true` if the `list` contains the `element`.
+- `` contains(list = `T[]`, element = T) ``: Returns `true` if the
+  `list` contains the `element`.
 
-Checks if a `map` contains a given `key`.
+- `` contains(map = `MAP(K, V)`, key = K) ``: Checks if a `map` contains
+  a given `key`.
+
+- `contains(col0 = STRUCT, col1 = ANY)`: (Description missing.)
+
+## Usage
+
+``` r
+contains(string, search_string)
+```
 
 ## Arguments
 
-- string:
+- string, search_string:
 
   `VARCHAR`
-
-- search_string:
-
-  `VARCHAR`
-
-- col0:
-
-  `T[] | MAP(K, V) | STRUCT`
-
-- col1:
-
-  `T | K | ANY`
 
 ## Value
 
@@ -32,9 +31,9 @@ Checks if a `map` contains a given `key`.
 
 - `contains(string = VARCHAR, search_string = VARCHAR)`
 
-- `` contains(col0 = `T[]`, col1 = T) ``
+- `` contains(list = `T[]`, element = T) ``
 
-- `` contains(col0 = `MAP(K, V)`, col1 = K) ``
+- `` contains(map = `MAP(K, V)`, key = K) ``
 
 - `contains(col0 = STRUCT, col1 = ANY)`
 

@@ -5,16 +5,12 @@ DuckDB function `~~()`.
 ## Usage
 
 ``` r
-`~~`(col0 = VARCHAR, col1 = VARCHAR)
+`~~`(col0, col1)
 ```
 
 ## Arguments
 
-- col0:
-
-  `VARCHAR`
-
-- col1:
+- col0, col1:
 
   `VARCHAR`
 

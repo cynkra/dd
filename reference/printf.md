@@ -5,7 +5,7 @@ Formats a `string` using printf syntax.
 ## Usage
 
 ``` r
-printf(format = VARCHAR)
+printf(format)
 ```
 
 ## Arguments

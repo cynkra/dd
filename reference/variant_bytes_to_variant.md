@@ -5,7 +5,7 @@ DuckDB function `variant_bytes_to_variant()`.
 ## Usage
 
 ``` r
-variant_bytes_to_variant(col0 = BLOB)
+variant_bytes_to_variant(col0)
 ```
 
 ## Arguments

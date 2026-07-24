@@ -2,6 +2,12 @@
 
 The (English) name of the weekday.
 
+## Usage
+
+``` r
+dayname(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,14 +17,6 @@ The (English) name of the weekday.
 ## Value
 
 `VARCHAR`
-
-## Overloads
-
-- `dayname(ts = DATE)`
-
-- `dayname(ts = TIMESTAMP)`
-
-- `` dayname(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

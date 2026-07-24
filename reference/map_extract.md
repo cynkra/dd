@@ -8,7 +8,7 @@ returned.
 ## Usage
 
 ``` r
-map_extract(map = `MAP(K, V)`, key = K)
+map_extract(map, key)
 ```
 
 ## Arguments

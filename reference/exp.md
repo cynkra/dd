@@ -5,7 +5,7 @@ Computes e to the power of x.
 ## Usage
 
 ``` r
-exp(x = DOUBLE)
+exp(x)
 ```
 
 ## Arguments

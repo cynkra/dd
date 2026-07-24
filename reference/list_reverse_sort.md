@@ -2,6 +2,12 @@
 
 Sorts the elements of the list in reverse order.
 
+## Usage
+
+``` r
+list_reverse_sort(list, col1)
+```
+
 ## Arguments
 
 - list:

@@ -5,7 +5,7 @@ Returns the current value of the configuration setting.
 ## Usage
 
 ``` r
-current_setting(setting_name = VARCHAR)
+current_setting(setting_name)
 ```
 
 ## Arguments

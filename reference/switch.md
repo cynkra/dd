@@ -2,6 +2,12 @@
 
 Creates a switch statement similar to CASE WHEN/THEN.
 
+## Usage
+
+``` r
+switch(key, map)
+```
+
 ## Arguments
 
 - key:
@@ -11,10 +17,6 @@ Creates a switch statement similar to CASE WHEN/THEN.
 - map:
 
   `MAP(K, V) | V`
-
-- value:
-
-  `V`
 
 ## Value
 

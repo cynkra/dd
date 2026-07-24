@@ -5,20 +5,12 @@ DuckDB function `arrow_scan()`.
 ## Usage
 
 ``` r
-arrow_scan(col0 = POINTER, col1 = POINTER, col2 = POINTER)
+arrow_scan(col0, col1, col2)
 ```
 
 ## Arguments
 
-- col0:
-
-  `POINTER`
-
-- col1:
-
-  `POINTER`
-
-- col2:
+- col0, col1, col2:
 
   `POINTER`
 

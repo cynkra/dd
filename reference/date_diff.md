@@ -2,6 +2,12 @@
 
 The number of partition boundaries between the timestamps.
 
+## Usage
+
+``` r
+date_diff(part, startdate, enddate)
+```
+
 ## Arguments
 
 - part:
@@ -19,16 +25,6 @@ The number of partition boundaries between the timestamps.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `date_diff(part = VARCHAR, startdate = DATE, enddate = DATE)`
-
-- `date_diff(part = VARCHAR, startdate = TIME, enddate = TIME)`
-
-- `date_diff(part = VARCHAR, startdate = TIMESTAMP, enddate = TIMESTAMP)`
-
-- `` date_diff(part = VARCHAR, startdate = `TIMESTAMP WITH TIME ZONE`, enddate = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

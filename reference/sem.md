@@ -5,7 +5,7 @@ Returns the standard error of the mean.
 ## Usage
 
 ``` r
-sem(x = DOUBLE)
+sem(x)
 ```
 
 ## Arguments

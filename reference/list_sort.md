@@ -2,6 +2,12 @@
 
 Sorts the elements of the list.
 
+## Usage
+
+``` r
+list_sort(list, col1, col2)
+```
+
 ## Arguments
 
 - list:

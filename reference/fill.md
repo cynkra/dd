@@ -5,7 +5,7 @@ DuckDB function `fill()`.
 ## Usage
 
 ``` r
-fill(col0 = T)
+fill(col0)
 ```
 
 ## Arguments

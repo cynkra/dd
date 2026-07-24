@@ -6,7 +6,7 @@ Extracts the nth bit from bitstring; the first (leftmost) bit is indexed
 ## Usage
 
 ``` r
-get_bit(bitstring = BIT, index = INTEGER)
+get_bit(bitstring, index)
 ```
 
 ## Arguments

@@ -2,17 +2,15 @@
 
 DuckDB function `has_table_privilege()`.
 
+## Usage
+
+``` r
+has_table_privilege(user, table, privilege)
+```
+
 ## Arguments
 
-- table:
-
-  Unspecified.
-
-- privilege:
-
-  Unspecified.
-
-- user:
+- user, table, privilege:
 
   Unspecified.
 

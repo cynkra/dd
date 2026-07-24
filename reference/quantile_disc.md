@@ -3,6 +3,12 @@
 Returns the exact quantile number between 0 and 1 . If pos is a LIST of
 FLOATs, then the result is a LIST of the corresponding exact quantiles.
 
+## Usage
+
+``` r
+quantile_disc(x, pos)
+```
+
 ## Arguments
 
 - x:

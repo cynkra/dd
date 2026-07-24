@@ -10,11 +10,7 @@ list_prepend(e, l)
 
 ## Arguments
 
-- e:
-
-  Unspecified.
-
-- l:
+- e, l:
 
   Unspecified.
 

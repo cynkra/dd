@@ -2,6 +2,12 @@
 
 Extract the weekday component from a date or timestamp.
 
+## Usage
+
+``` r
+weekday(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,16 +17,6 @@ Extract the weekday component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `weekday(ts = DATE)`
-
-- `weekday(ts = INTERVAL)`
-
-- `weekday(ts = TIMESTAMP)`
-
-- `` weekday(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

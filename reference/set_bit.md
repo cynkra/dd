@@ -6,7 +6,7 @@ indexed 0. Returns a new bitstring.
 ## Usage
 
 ``` r
-set_bit(bitstring = BIT, index = INTEGER, new_value = INTEGER)
+set_bit(bitstring, index, new_value)
 ```
 
 ## Arguments

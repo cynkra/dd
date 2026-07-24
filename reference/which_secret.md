@@ -5,16 +5,12 @@ DuckDB function `which_secret()`.
 ## Usage
 
 ``` r
-which_secret(col0 = VARCHAR, col1 = VARCHAR)
+which_secret(col0, col1)
 ```
 
 ## Arguments
 
-- col0:
-
-  `VARCHAR`
-
-- col1:
+- col0, col1:
 
   `VARCHAR`
 

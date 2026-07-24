@@ -2,6 +2,12 @@
 
 Extract the isodow component from a date or timestamp.
 
+## Usage
+
+``` r
+isodow(ts)
+```
+
 ## Arguments
 
 - ts:
@@ -11,16 +17,6 @@ Extract the isodow component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `isodow(ts = DATE)`
-
-- `isodow(ts = INTERVAL)`
-
-- `isodow(ts = TIMESTAMP)`
-
-- `` isodow(ts = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

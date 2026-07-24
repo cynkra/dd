@@ -3,6 +3,12 @@
 Works like list_sort, but the results are the indexes that correspond to
 the position in the original list instead of the actual values.
 
+## Usage
+
+``` r
+list_grade_up(list, col1, col2)
+```
+
 ## Arguments
 
 - list:

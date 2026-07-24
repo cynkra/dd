@@ -5,7 +5,7 @@ Returns the values of a map as a list.
 ## Usage
 
 ``` r
-map_values(map = `MAP(K, V)`)
+map_values(map)
 ```
 
 ## Arguments

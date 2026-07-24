@@ -1,18 +1,21 @@
 # DuckDB function octet_length
 
-Number of bytes in `blob`.
+- `octet_length(blob = BLOB)`: Number of bytes in `blob`.
 
-Returns the number of bytes in the `bitstring`.
+- `octet_length(bitstring = BIT)`: Returns the number of bytes in the
+  `bitstring`.
+
+## Usage
+
+``` r
+octet_length(blob)
+```
 
 ## Arguments
 
 - blob:
 
   `BLOB`
-
-- bitstring:
-
-  `BIT`
 
 ## Value
 

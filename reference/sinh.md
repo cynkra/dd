@@ -5,7 +5,7 @@ Computes the hyperbolic sin of x.
 ## Usage
 
 ``` r
-sinh(x = DOUBLE)
+sinh(x)
 ```
 
 ## Arguments

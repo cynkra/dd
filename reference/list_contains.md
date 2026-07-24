@@ -5,7 +5,7 @@ Returns true if the list contains the element.
 ## Usage
 
 ``` r
-list_contains(list = `T[]`, element = T)
+list_contains(list, element)
 ```
 
 ## Arguments

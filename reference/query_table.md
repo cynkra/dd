@@ -2,15 +2,17 @@
 
 DuckDB function `query_table()`.
 
+## Usage
+
+``` r
+query_table(col0)
+```
+
 ## Arguments
 
 - col0:
 
   `VARCHAR | VARCHAR[]`
-
-- col1:
-
-  `BOOLEAN`
 
 ## Value
 

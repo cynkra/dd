@@ -2,6 +2,12 @@
 
 DuckDB function `glob()`.
 
+## Usage
+
+``` r
+glob(col0)
+```
+
 ## Arguments
 
 - col0:
@@ -11,9 +17,3 @@ DuckDB function `glob()`.
 ## Value
 
 Unspecified.
-
-## Overloads
-
-- `glob(col0 = VARCHAR)`
-
-- `` glob(col0 = `VARCHAR[]`) ``

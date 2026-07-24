@@ -7,20 +7,12 @@ used to search for wildcard characters in the `string`.
 ## Usage
 
 ``` r
-not_ilike_escape(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR)
+not_ilike_escape(string, like_specifier, escape_character)
 ```
 
 ## Arguments
 
-- string:
-
-  `VARCHAR`
-
-- like_specifier:
-
-  `VARCHAR`
-
-- escape_character:
+- string, like_specifier, escape_character:
 
   `VARCHAR`
 

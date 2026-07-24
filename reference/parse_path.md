@@ -4,13 +4,15 @@ Returns a list of the components (directories and filename) in the
 `path` similarly to Python's `pathlib.parts` function. `separator`
 options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
 
+## Usage
+
+``` r
+parse_path(path, separator)
+```
+
 ## Arguments
 
-- path:
-
-  `VARCHAR`
-
-- separator:
+- path, separator:
 
   `VARCHAR`
 

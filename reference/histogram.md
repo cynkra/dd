@@ -2,29 +2,15 @@
 
 Returns a LIST of STRUCTs with the fields bucket and count.
 
+## Usage
+
+``` r
+histogram(source, col_name, bin_count, technique)
+```
+
 ## Arguments
 
-- arg:
-
-  `ANY`
-
-- col1:
-
-  `ANY[]`
-
-- source:
-
-  Unspecified.
-
-- col_name:
-
-  Unspecified.
-
-- bin_count:
-
-  Unspecified.
-
-- technique:
+- source, col_name, bin_count, technique:
 
   Unspecified.
 

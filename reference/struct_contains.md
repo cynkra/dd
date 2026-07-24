@@ -5,7 +5,7 @@ Check if an unnamed STRUCT contains the value.
 ## Usage
 
 ``` r
-struct_contains(struct = STRUCT, `'entry'` = ANY)
+struct_contains(struct, entry)
 ```
 
 ## Arguments
@@ -14,7 +14,7 @@ struct_contains(struct = STRUCT, `'entry'` = ANY)
 
   `STRUCT`
 
-- 'entry':
+- entry:
 
   `ANY`
 

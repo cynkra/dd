@@ -2,6 +2,12 @@
 
 The number of complete partitions between the timestamps.
 
+## Usage
+
+``` r
+date_sub(part, startdate, enddate)
+```
+
 ## Arguments
 
 - part:
@@ -19,16 +25,6 @@ The number of complete partitions between the timestamps.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `date_sub(part = VARCHAR, startdate = DATE, enddate = DATE)`
-
-- `date_sub(part = VARCHAR, startdate = TIME, enddate = TIME)`
-
-- `date_sub(part = VARCHAR, startdate = TIMESTAMP, enddate = TIMESTAMP)`
-
-- `` date_sub(part = VARCHAR, startdate = `TIMESTAMP WITH TIME ZONE`, enddate = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 

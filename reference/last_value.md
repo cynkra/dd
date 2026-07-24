@@ -5,7 +5,7 @@ DuckDB function `last_value()`.
 ## Usage
 
 ``` r
-last_value(col0 = T)
+last_value(col0)
 ```
 
 ## Arguments

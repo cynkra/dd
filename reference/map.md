@@ -2,6 +2,12 @@
 
 Creates a map from a set of keys and values.
 
+## Usage
+
+``` r
+map(keys, values)
+```
+
 ## Arguments
 
 - keys:

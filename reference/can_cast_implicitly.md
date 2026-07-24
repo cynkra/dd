@@ -6,16 +6,12 @@ type.
 ## Usage
 
 ``` r
-can_cast_implicitly(source_type = ANY, target_type = ANY)
+can_cast_implicitly(source_type, target_type)
 ```
 
 ## Arguments
 
-- source_type:
-
-  `ANY`
-
-- target_type:
+- source_type, target_type:
 
   `ANY`
 

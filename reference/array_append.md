@@ -10,11 +10,7 @@ array_append(arr, el)
 
 ## Arguments
 
-- arr:
-
-  Unspecified.
-
-- el:
+- arr, el:
 
   Unspecified.
 

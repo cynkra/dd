@@ -6,7 +6,7 @@ ignored.
 ## Usage
 
 ``` r
-mode(x = ANY)
+mode(x)
 ```
 
 ## Arguments

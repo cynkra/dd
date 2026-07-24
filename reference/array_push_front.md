@@ -10,11 +10,7 @@ array_push_front(arr, e)
 
 ## Arguments
 
-- arr:
-
-  Unspecified.
-
-- e:
+- arr, e:
 
   Unspecified.
 

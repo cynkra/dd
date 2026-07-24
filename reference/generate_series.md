@@ -3,19 +3,13 @@
 Creates a list of values between `start` and `stop` - the stop parameter
 is inclusive.
 
+## Usage
+
+``` r
+generate_series(start, stop, step)
+```
+
 ## Arguments
-
-- col0:
-
-  `BIGINT | TIMESTAMP`
-
-- col1:
-
-  `BIGINT | TIMESTAMP`
-
-- col2:
-
-  `BIGINT | INTERVAL`
 
 - start:
 

@@ -5,16 +5,12 @@ Returns true if all elements of list2 are in list1. NULLs are ignored.
 ## Usage
 
 ``` r
-list_has_all(list1 = `T[]`, list2 = `T[]`)
+list_has_all(list1, list2)
 ```
 
 ## Arguments
 
-- list1:
-
-  `T[]`
-
-- list2:
+- list1, list2:
 
   `T[]`
 

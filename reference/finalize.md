@@ -5,7 +5,7 @@ DuckDB function `finalize()`.
 ## Usage
 
 ``` r
-finalize(col0 = `AGGREGATE_STATE<?>`)
+finalize(col0)
 ```
 
 ## Arguments

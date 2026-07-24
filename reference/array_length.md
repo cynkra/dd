@@ -1,8 +1,15 @@
 # DuckDB function array_length
 
-Returns the length of the `list`.
+- `` array_length(list = `ANY[]`) ``: Returns the length of the `list`.
 
-`array_length` for lists with dimensions other than 1 not implemented.
+- `` array_length(list = `ANY[]`, dimension = BIGINT) ``: `array_length`
+  for lists with dimensions other than 1 not implemented.
+
+## Usage
+
+``` r
+array_length(list, dimension)
+```
 
 ## Arguments
 

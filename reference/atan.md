@@ -5,7 +5,7 @@ Computes the arctangent of x.
 ## Usage
 
 ``` r
-atan(x = DOUBLE)
+atan(x)
 ```
 
 ## Arguments

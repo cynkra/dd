@@ -5,7 +5,7 @@ Returns the internal type of the `input_variant`.
 ## Usage
 
 ``` r
-variant_typeof(input_variant = VARIANT)
+variant_typeof(input_variant)
 ```
 
 ## Arguments

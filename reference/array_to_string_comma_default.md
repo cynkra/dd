@@ -10,11 +10,7 @@ array_to_string_comma_default(arr, sep)
 
 ## Arguments
 
-- arr:
-
-  Unspecified.
-
-- sep:
+- arr, sep:
 
   Unspecified.
 

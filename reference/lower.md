@@ -5,7 +5,7 @@ Converts `string` to lower case.
 ## Usage
 
 ``` r
-lower(string = VARCHAR)
+lower(string)
 ```
 
 ## Arguments

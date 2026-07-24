@@ -5,16 +5,12 @@ Returns the population covariance of input values.
 ## Usage
 
 ``` r
-regr_sxy(y = DOUBLE, x = DOUBLE)
+regr_sxy(y, x)
 ```
 
 ## Arguments
 
-- y:
-
-  `DOUBLE`
-
-- x:
+- y, x:
 
   `DOUBLE`
 

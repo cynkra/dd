@@ -5,7 +5,7 @@ Sets the Coordinate Reference System (CRS) identifier of the geometry.
 ## Usage
 
 ``` r
-st_setcrs(geom = GEOMETRY, crs = VARCHAR)
+st_setcrs(geom, crs)
 ```
 
 ## Arguments

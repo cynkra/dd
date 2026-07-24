@@ -10,15 +10,7 @@ split_part(string, delimiter, position)
 
 ## Arguments
 
-- string:
-
-  Unspecified.
-
-- delimiter:
-
-  Unspecified.
-
-- position:
+- string, delimiter, position:
 
   Unspecified.
 

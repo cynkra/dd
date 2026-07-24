@@ -5,16 +5,12 @@ Returns the correlation coefficient for non-NULL pairs in a group.
 ## Usage
 
 ``` r
-corr(y = DOUBLE, x = DOUBLE)
+corr(y, x)
 ```
 
 ## Arguments
 
-- y:
-
-  `DOUBLE`
-
-- x:
+- y, x:
 
   `DOUBLE`
 

@@ -3,6 +3,12 @@
 Internal only. Calculates the sum value for all tuples in arg without
 overflow checks.
 
+## Usage
+
+``` r
+sum_no_overflow(arg)
+```
+
 ## Arguments
 
 - arg:
@@ -12,14 +18,6 @@ overflow checks.
 ## Value
 
 `HUGEINT | DECIMAL`
-
-## Overloads
-
-- `sum_no_overflow(arg = INTEGER)`
-
-- `sum_no_overflow(arg = BIGINT)`
-
-- `sum_no_overflow(arg = DECIMAL)`
 
 ## SQL examples
 

@@ -5,7 +5,7 @@ Returns the population standard deviation.
 ## Usage
 
 ``` r
-stddev_pop(x = DOUBLE)
+stddev_pop(x)
 ```
 
 ## Arguments

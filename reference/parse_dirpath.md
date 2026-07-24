@@ -4,13 +4,15 @@ Returns the head of the `path` (the pathname until the last slash)
 similarly to Python's `os.path.dirname`. `separator` options: `system`,
 `both_slash` (default), `forward_slash`, `backslash`.
 
+## Usage
+
+``` r
+parse_dirpath(path, separator)
+```
+
 ## Arguments
 
-- path:
-
-  `VARCHAR`
-
-- separator:
+- path, separator:
 
   `VARCHAR`
 

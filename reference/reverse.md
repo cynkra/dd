@@ -5,7 +5,7 @@ Reverses the `string`.
 ## Usage
 
 ``` r
-reverse(string = VARCHAR)
+reverse(string)
 ```
 
 ## Arguments

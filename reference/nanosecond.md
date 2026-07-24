@@ -2,6 +2,12 @@
 
 Extract the nanosecond component from a date or timestamp.
 
+## Usage
+
+``` r
+nanosecond(tsns)
+```
+
 ## Arguments
 
 - tsns:
@@ -11,24 +17,6 @@ Extract the nanosecond component from a date or timestamp.
 ## Value
 
 `BIGINT`
-
-## Overloads
-
-- `nanosecond(tsns = DATE)`
-
-- `nanosecond(tsns = TIMESTAMP)`
-
-- `nanosecond(tsns = INTERVAL)`
-
-- `nanosecond(tsns = TIME)`
-
-- `nanosecond(tsns = TIME_NS)`
-
-- `` nanosecond(tsns = `TIME WITH TIME ZONE`) ``
-
-- `nanosecond(tsns = TIMESTAMP_NS)`
-
-- `` nanosecond(tsns = `TIMESTAMP WITH TIME ZONE`) ``
 
 ## SQL examples
 
