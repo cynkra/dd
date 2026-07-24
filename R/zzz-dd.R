@@ -266,6 +266,7 @@ dd <- base::list(
   floor = floor,
   fmod = fmod,
   force_checkpoint = force_checkpoint,
+  format = format,
   formatReadableDecimalSize = formatReadableDecimalSize,
   formatReadableSize = formatReadableSize,
   format_bytes = format_bytes,

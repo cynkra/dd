@@ -718,7 +718,7 @@ funs <-
     )
   ) |>
   # FIXME: Breaks R CMD check
-  filter_print(!(function_name %in% c("<->", "+", "format"))) |>
+  filter_print(!(function_name %in% c("<->", "+"))) |>
   # FIXME: No documentation generated yet
   filter_print(
     !(function_name %in% c("-")) &
@@ -764,9 +764,21 @@ funs <-
   # from the canonical (alphanumeric) member rather than an operator alias.
   arrange(rd_name, desc(is_primary), function_name)
 
+# A handful of DuckDB functions share a name with a base R function that R's own
+# machinery calls while the package is attached (e.g. R CMD check's example
+# runner evaluates `proc.time() - ...` and `format(x, digits = 7)`). Exporting a
+# stub for those names shadows the base function on the search path and makes
+# that machinery dispatch to the stub, which errors -- breaking R CMD check.
+# Document them (so they still get a help page and appear in `dd`) but do not
+# `@export` them, so the base functions keep working when `library(dd)` is
+# attached. This is only needed for names base R itself relies on; the many
+# other base-shadowing stubs (`abs()`, `sqrt()`, ...) stay exported as before.
+no_export <- c("format")
+
 code <-
   funs |>
   mutate(
+    export_doc = if_else(function_name %in% no_export, "", "#' @export\n"),
     # The primary (representative) function carries the full documentation and
     # owns the canonical page via `@name`.
     primary_roxy = glue(
@@ -780,8 +792,7 @@ code <-
     {usage_doc}
     {param_doc}
     #' @return {if_else(return_type == "", "Unspecified.", paste0("`", return_type, "`"))}
-    #' @export
-    {overloads_doc}{family_doc}{examples}{tibble:::tick_if_needed(function_name)} <- function({signature}) {{
+    {export_doc}{overloads_doc}{family_doc}{examples}{tibble:::tick_if_needed(function_name)} <- function({signature}) {{
       stop("DuckDB function {function_name}() is not available in R.")
     }}
 
@@ -794,8 +805,7 @@ code <-
       r"(
     #' @rdname {rd_name}
     #' @usage NULL
-    #' @export
-    {tibble:::tick_if_needed(function_name)} <- function({signature}) {{
+    {export_doc}{tibble:::tick_if_needed(function_name)} <- function({signature}) {{
       stop("DuckDB function {function_name}() is not available in R.")
     }}
 
