@@ -66,7 +66,7 @@ Two related data gaps are worth fixing in the same pass:
 ## Engine-wide adoption
 
 Schema and content are enough for `dd`.
-To expose in `duckdb_functions()`, the engine must carry the descriptions through the registration path:
+To expose in `duckdb_functions()` and in DuckDB's docs, the engine must carry the descriptions through the registration path:
 
 1. `scripts/generate_functions.py`:
 
@@ -97,18 +97,21 @@ To expose in `duckdb_functions()`, the engine must carry the descriptions throug
 
   The DuckDB SQL function reference is generated from these same files,
   so it could render per-argument help, not just the signature.
+
 - Better tooling.
 
   CLIs, IDEs, and UIs that read `duckdb_functions()`
   can surface argument hints and autocomplete tooltips.
+
 - One source of truth.
 
   Descriptions authored once flow to the engine, the website,
   and every binding (Python, R, Java, …).
+
 - Drives completeness.
 
   Adding the field nudges authors to name every parameter
-  and fix the incomplete entries above.
+  and fix incomplete entries.
 
 The cost is the authoring:
 thousands of parameters, best filled in function by function,
@@ -121,7 +124,7 @@ Each parameter object gains a `description`.
 Only the `parameters` blocks are shown.
 For demonstration purposes, this is the exact text as produced by Claude Code using Opus 4.8 unchanged.
 
-### `array_extract` (`src/function/scalar/list/functions.json`)
+### `array_extract` ([`src/function/scalar/list/functions.json`](https://github.com/duckdb/duckdb/blob/main/src/function/scalar/list/functions.json))
 
 ```json
 "variants": [
@@ -140,7 +143,7 @@ For demonstration purposes, this is the exact text as produced by Claude Code us
 ]
 ```
 
-### `regexp_extract` (`src/function/scalar/string/functions.json`)
+### `regexp_extract` ([`src/function/scalar/string/functions.json`](https://github.com/duckdb/duckdb/blob/main/src/function/scalar/string/functions.json))
 
 ```json
 "parameters": [
@@ -151,7 +154,7 @@ For demonstration purposes, this is the exact text as produced by Claude Code us
 ]
 ```
 
-### `repeat` (`extension/core_functions/scalar/string/functions.json`)
+### `repeat` ([`extension/core_functions/scalar/string/functions.json`](https://github.com/duckdb/duckdb/blob/main/extension/core_functions/scalar/string/functions.json))
 
 ```json
 "variants": [
@@ -167,7 +170,7 @@ For demonstration purposes, this is the exact text as produced by Claude Code us
 ]
 ```
 
-### `list_slice` / `array_slice` (`extension/core_functions/scalar/list/functions.json`)
+### `list_slice` / `array_slice` ([`extension/core_functions/scalar/list/functions.json`](https://github.com/duckdb/duckdb/blob/main/extension/core_functions/scalar/list/functions.json))
 
 ```json
 "variants": [
@@ -183,7 +186,7 @@ For demonstration purposes, this is the exact text as produced by Claude Code us
 ]
 ```
 
-### `list_contains` (`src/function/scalar/list/functions.json`)
+### `list_contains` ([`src/function/scalar/list/functions.json`](https://github.com/duckdb/duckdb/blob/main/src/function/scalar/list/functions.json))
 
 ```json
 "parameters": [
@@ -192,7 +195,7 @@ For demonstration purposes, this is the exact text as produced by Claude Code us
 ]
 ```
 
-### `list_transform` (`extension/core_functions/scalar/list/functions.json`)
+### `list_transform` ([`extension/core_functions/scalar/list/functions.json`](https://github.com/duckdb/duckdb/blob/main/extension/core_functions/scalar/list/functions.json))
 
 ```json
 "parameters": [
@@ -204,7 +207,7 @@ For demonstration purposes, this is the exact text as produced by Claude Code us
 This change also fixes the current `"parameters": "list,lambda(x)"` flat string,
 whose `lambda(x)` is not a clean parameter name.
 
-### `date_part` (`extension/core_functions/scalar/date/functions.json`)
+### `date_part` ([`extension/core_functions/scalar/date/functions.json`](https://github.com/duckdb/duckdb/blob/main/extension/core_functions/scalar/date/functions.json))
 
 The current entry only lists `"parameters": "ts"`.
 Proposed corrected entry:
