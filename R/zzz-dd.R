@@ -1,6 +1,7 @@
 #' DuckDB functions
 #'
-#' A list of known DuckDB functions.
+#' A list of known DuckDB functions, as provided by DuckDB
+#' `r sub("^v", "", duckdb::sql_query("PRAGMA version")$library_version)`.
 #'
 #' @export
 #' @examples
