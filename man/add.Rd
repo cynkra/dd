@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{add}
 \alias{add}
+\alias{+}
 \title{DuckDB function add}
 \usage{
 add(col0, col1)

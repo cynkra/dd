@@ -718,7 +718,7 @@ funs <-
     )
   ) |>
   # FIXME: Breaks R CMD check
-  filter_print(!(function_name %in% c("<->", "+"))) |>
+  filter_print(!(function_name %in% c("<->"))) |>
   # FIXME: No documentation generated yet
   filter_print(
     !(function_name %in% c("-")) &
@@ -773,7 +773,7 @@ funs <-
 # `@export` them, so the base functions keep working when `library(dd)` is
 # attached. This is only needed for names base R itself relies on; the many
 # other base-shadowing stubs (`abs()`, `sqrt()`, ...) stay exported as before.
-no_export <- c("format")
+no_export <- c("format", "+")
 
 code <-
   funs |>
