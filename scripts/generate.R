@@ -717,7 +717,14 @@ funs <-
       examples
     )
   ) |>
-  # FIXME: Breaks R CMD check
+  # Omit `<->` (an alias of the documented `list_distance`). R CMD check's
+  # replacement-function check (`tools:::checkReplaceFuns`) treats every
+  # namespace object whose name *contains* the substring `<-` as a replacement
+  # function and demands its last formal be named `value` -- exported or not.
+  # `<->` takes `(list1, list2)`, so it always trips that check, and there is no
+  # non-misleading signature that would satisfy it. Its canonical page
+  # (`list_distance`) already documents the operation, so nothing user-facing is
+  # lost by dropping the `<->` stub.
   filter_print(!(function_name %in% c("<->"))) |>
   # Drop DuckDB's internal decompression helpers: they are implementation
   # details, not user-facing functions.
