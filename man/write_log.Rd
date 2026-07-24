@@ -4,7 +4,7 @@
 \alias{write_log}
 \title{DuckDB function write_log}
 \usage{
-write_log(string = VARCHAR)
+write_log(string)
 }
 \arguments{
 \item{string}{\code{VARCHAR}}

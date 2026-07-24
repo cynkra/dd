@@ -4,7 +4,7 @@
 \alias{to_microseconds}
 \title{DuckDB function to_microseconds}
 \usage{
-to_microseconds(integer = BIGINT)
+to_microseconds(integer)
 }
 \arguments{
 \item{integer}{\code{BIGINT}}

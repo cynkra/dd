@@ -3,6 +3,9 @@
 \name{epoch_ns}
 \alias{epoch_ns}
 \title{DuckDB function epoch_ns}
+\usage{
+epoch_ns(temporal)
+}
 \arguments{
 \item{temporal}{\verb{DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | TIMESTAMP_NS}}
 }
@@ -12,20 +15,6 @@
 \description{
 Extract the epoch component in nanoseconds from a temporal type.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{epoch_ns(temporal = DATE)}
-\item \code{epoch_ns(temporal = TIMESTAMP)}
-\item \code{epoch_ns(temporal = INTERVAL)}
-\item \code{epoch_ns(temporal = TIME)}
-\item \code{epoch_ns(temporal = TIME_NS)}
-\item \code{epoch_ns(temporal = `TIME WITH TIME ZONE`)}
-\item \code{epoch_ns(temporal = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{epoch_ns(temporal = TIMESTAMP_NS)}
-}
-}
-
 \section{SQL examples}{
 
 

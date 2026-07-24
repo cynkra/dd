@@ -7,9 +7,7 @@
 pg_get_expr(pg_node_tree, relation_oid)
 }
 \arguments{
-\item{pg_node_tree}{Unspecified.}
-
-\item{relation_oid}{Unspecified.}
+\item{pg_node_tree, relation_oid}{Unspecified.}
 }
 \value{
 Unspecified.

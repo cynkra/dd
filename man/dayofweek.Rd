@@ -3,6 +3,9 @@
 \name{dayofweek}
 \alias{dayofweek}
 \title{DuckDB function dayofweek}
+\usage{
+dayofweek(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,16 +15,6 @@
 \description{
 Extract the dayofweek component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{dayofweek(ts = DATE)}
-\item \code{dayofweek(ts = INTERVAL)}
-\item \code{dayofweek(ts = TIMESTAMP)}
-\item \code{dayofweek(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

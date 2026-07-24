@@ -5,7 +5,7 @@
 \alias{st_asbinary}
 \title{DuckDB function st_aswkb}
 \usage{
-st_aswkb(geom = GEOMETRY)
+st_aswkb(geom)
 }
 \arguments{
 \item{geom}{\code{GEOMETRY}}

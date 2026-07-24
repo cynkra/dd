@@ -4,7 +4,7 @@
 \alias{ntile}
 \title{DuckDB function ntile}
 \usage{
-ntile(col0 = BIGINT)
+ntile(col0)
 }
 \arguments{
 \item{col0}{\code{BIGINT}}

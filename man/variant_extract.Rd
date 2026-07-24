@@ -3,24 +3,28 @@
 \name{variant_extract}
 \alias{variant_extract}
 \title{DuckDB function variant_extract}
+\usage{
+variant_extract(input_variant, field)
+}
 \arguments{
-\item{col0}{\code{VARIANT}}
+\item{input_variant}{\code{VARIANT}}
 
-\item{col1}{\code{VARCHAR | UINTEGER}}
+\item{field}{\code{VARCHAR}}
 }
 \value{
 \code{VARIANT}
 }
 \description{
-Returns the \code{field} from the \code{input_variant} if it's an OBJECT.
-
-Returns the entry at \code{index} from the \code{input_variant} if it's an ARRAY.
+\itemize{
+\item \code{variant_extract(input_variant = VARIANT, field = VARCHAR)}: Returns the \code{field} from the \code{input_variant} if it's an OBJECT.
+\item \code{variant_extract(input_variant = VARIANT, index = UINTEGER)}: Returns the entry at \code{index} from the \code{input_variant} if it's an ARRAY.
+}
 }
 \section{Overloads}{
 
 \itemize{
-\item \code{variant_extract(col0 = VARIANT, col1 = VARCHAR)}
-\item \code{variant_extract(col0 = VARIANT, col1 = UINTEGER)}
+\item \code{variant_extract(input_variant = VARIANT, field = VARCHAR)}
+\item \code{variant_extract(input_variant = VARIANT, index = UINTEGER)}
 }
 }
 

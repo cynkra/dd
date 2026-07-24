@@ -4,7 +4,7 @@
 \alias{last_value}
 \title{DuckDB function last_value}
 \usage{
-last_value(col0 = T)
+last_value(col0)
 }
 \arguments{
 \item{col0}{\code{T}}

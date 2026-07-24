@@ -5,6 +5,9 @@
 \alias{group_concat}
 \alias{listagg}
 \title{DuckDB function string_agg}
+\usage{
+string_agg(str, arg)
+}
 \arguments{
 \item{str}{\code{ANY}}
 

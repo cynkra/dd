@@ -4,7 +4,7 @@
 \alias{lpad}
 \title{DuckDB function lpad}
 \usage{
-lpad(string = VARCHAR, count = INTEGER, character = VARCHAR)
+lpad(string, count, character)
 }
 \arguments{
 \item{string}{\code{VARCHAR}}

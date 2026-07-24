@@ -4,7 +4,7 @@
 \alias{variant_normalize}
 \title{DuckDB function variant_normalize}
 \usage{
-variant_normalize(input_variant = VARIANT)
+variant_normalize(input_variant)
 }
 \arguments{
 \item{input_variant}{\code{VARIANT}}

@@ -3,6 +3,9 @@
 \name{last_day}
 \alias{last_day}
 \title{DuckDB function last_day}
+\usage{
+last_day(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,15 +15,6 @@
 \description{
 Returns the last day of the month.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{last_day(ts = DATE)}
-\item \code{last_day(ts = TIMESTAMP)}
-\item \code{last_day(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

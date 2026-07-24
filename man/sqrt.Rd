@@ -4,7 +4,7 @@
 \alias{sqrt}
 \title{DuckDB function sqrt}
 \usage{
-sqrt(x = DOUBLE)
+sqrt(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

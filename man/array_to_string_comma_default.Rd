@@ -7,9 +7,7 @@
 array_to_string_comma_default(arr, sep)
 }
 \arguments{
-\item{arr}{Unspecified.}
-
-\item{sep}{Unspecified.}
+\item{arr, sep}{Unspecified.}
 }
 \value{
 Unspecified.

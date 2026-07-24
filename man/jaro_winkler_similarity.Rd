@@ -3,6 +3,9 @@
 \name{jaro_winkler_similarity}
 \alias{jaro_winkler_similarity}
 \title{DuckDB function jaro_winkler_similarity}
+\usage{
+jaro_winkler_similarity(s1, s2, score_cutoff)
+}
 \arguments{
 \item{s1}{\code{VARCHAR}}
 

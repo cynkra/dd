@@ -3,6 +3,9 @@
 \name{isfinite}
 \alias{isfinite}
 \title{DuckDB function isfinite}
+\usage{
+isfinite(x)
+}
 \arguments{
 \item{x}{\verb{FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,17 +15,6 @@
 \description{
 Returns true if the floating point value is finite, false otherwise.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{isfinite(x = FLOAT)}
-\item \code{isfinite(x = DOUBLE)}
-\item \code{isfinite(x = DATE)}
-\item \code{isfinite(x = TIMESTAMP)}
-\item \code{isfinite(x = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

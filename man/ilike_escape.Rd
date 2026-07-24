@@ -4,14 +4,10 @@
 \alias{ilike_escape}
 \title{DuckDB function ilike_escape}
 \usage{
-ilike_escape(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR)
+ilike_escape(string, like_specifier, escape_character)
 }
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{like_specifier}{\code{VARCHAR}}
-
-\item{escape_character}{\code{VARCHAR}}
+\item{string, like_specifier, escape_character}{\code{VARCHAR}}
 }
 \value{
 \code{BOOLEAN}

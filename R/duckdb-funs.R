@@ -6,23 +6,8 @@
 #' Bitwise AND.
 #'
 #' @name &
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{`&`(left = TINYINT, right = TINYINT)}
-#' \item \code{`&`(left = SMALLINT, right = SMALLINT)}
-#' \item \code{`&`(left = INTEGER, right = INTEGER)}
-#' \item \code{`&`(left = BIGINT, right = BIGINT)}
-#' \item \code{`&`(left = HUGEINT, right = HUGEINT)}
-#' \item \code{`&`(left = UTINYINT, right = UTINYINT)}
-#' \item \code{`&`(left = USMALLINT, right = USMALLINT)}
-#' \item \code{`&`(left = UINTEGER, right = UINTEGER)}
-#' \item \code{`&`(left = UBIGINT, right = UBIGINT)}
-#' \item \code{`&`(left = UHUGEINT, right = UHUGEINT)}
-#' \item \code{`&`(left = BIT, right = BIT)}
-#' }
-#' @param left `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
-#' @param right `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
+#' @usage `&`(left, right)
+#' @param left,right `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @export
 #' @section SQL examples:
@@ -39,13 +24,7 @@
 #' DuckDB function `/()`.
 #'
 #' @name /
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{`/`(col0 = FLOAT, col1 = FLOAT)}
-#' \item \code{`/`(col0 = DOUBLE, col1 = DOUBLE)}
-#' \item \code{`/`(col0 = INTERVAL, col1 = DOUBLE)}
-#' }
+#' @usage `/`(col0, col1)
 #' @param col0 `FLOAT | DOUBLE | INTERVAL`
 #' @param col1 `FLOAT | DOUBLE`
 #' @return `FLOAT | DOUBLE | INTERVAL`
@@ -60,21 +39,7 @@
 #' Bitwise shift left.
 #'
 #' @name <<
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{`<<`(input = TINYINT, col1 = TINYINT)}
-#' \item \code{`<<`(input = SMALLINT, col1 = SMALLINT)}
-#' \item \code{`<<`(input = INTEGER, col1 = INTEGER)}
-#' \item \code{`<<`(input = BIGINT, col1 = BIGINT)}
-#' \item \code{`<<`(input = HUGEINT, col1 = HUGEINT)}
-#' \item \code{`<<`(input = UTINYINT, col1 = UTINYINT)}
-#' \item \code{`<<`(input = USMALLINT, col1 = USMALLINT)}
-#' \item \code{`<<`(input = UINTEGER, col1 = UINTEGER)}
-#' \item \code{`<<`(input = UBIGINT, col1 = UBIGINT)}
-#' \item \code{`<<`(input = UHUGEINT, col1 = UHUGEINT)}
-#' \item \code{`<<`(input = BIT, col1 = INTEGER)}
-#' }
+#' @usage `<<`(input, col1)
 #' @param input `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
@@ -93,21 +58,7 @@
 #' Bitwise shift right.
 #'
 #' @name >>
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{`>>`(input = TINYINT, col1 = TINYINT)}
-#' \item \code{`>>`(input = SMALLINT, col1 = SMALLINT)}
-#' \item \code{`>>`(input = INTEGER, col1 = INTEGER)}
-#' \item \code{`>>`(input = BIGINT, col1 = BIGINT)}
-#' \item \code{`>>`(input = HUGEINT, col1 = HUGEINT)}
-#' \item \code{`>>`(input = UTINYINT, col1 = UTINYINT)}
-#' \item \code{`>>`(input = USMALLINT, col1 = USMALLINT)}
-#' \item \code{`>>`(input = UINTEGER, col1 = UINTEGER)}
-#' \item \code{`>>`(input = UBIGINT, col1 = UBIGINT)}
-#' \item \code{`>>`(input = UHUGEINT, col1 = UHUGEINT)}
-#' \item \code{`>>`(input = BIT, col1 = INTEGER)}
-#' }
+#' @usage `>>`(input, col1)
 #' @param input `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
@@ -126,23 +77,7 @@
 #' Absolute value.
 #'
 #' @name abs
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{abs(x = TINYINT)}
-#' \item \code{abs(x = SMALLINT)}
-#' \item \code{abs(x = INTEGER)}
-#' \item \code{abs(x = BIGINT)}
-#' \item \code{abs(x = HUGEINT)}
-#' \item \code{abs(x = FLOAT)}
-#' \item \code{abs(x = DOUBLE)}
-#' \item \code{abs(x = DECIMAL)}
-#' \item \code{abs(x = UTINYINT)}
-#' \item \code{abs(x = USMALLINT)}
-#' \item \code{abs(x = UINTEGER)}
-#' \item \code{abs(x = UBIGINT)}
-#' \item \code{abs(x = UHUGEINT)}
-#' }
+#' @usage abs(x)
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @export
@@ -167,7 +102,7 @@ abs <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | D
 #' Computes the arccosine of x.
 #'
 #' @name acos
-#' @usage acos(x = DOUBLE)
+#' @usage acos(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -185,7 +120,7 @@ acos <- function(x = DOUBLE) {
 #' Computes the inverse hyperbolic cos of x.
 #'
 #' @name acosh
-#' @usage acosh(x = DOUBLE)
+#' @usage acosh(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -203,7 +138,10 @@ acosh <- function(x = DOUBLE) {
 #' DuckDB function `add()`.
 #'
 #' @name add
-#' @usage NULL
+#' @usage add(col0, col1)
+#' @param col0,col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
+#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | ANY[] | BIGNUM`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{add(col0 = TINYINT)}
@@ -250,10 +188,6 @@ acosh <- function(x = DOUBLE) {
 #' \item \code{add()}
 #' \item \code{add(col0 = BIGNUM, col1 = BIGNUM)}
 #' }
-#' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
-#' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`
-#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | ANY[] | BIGNUM`
-#' @export
 add <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM`) {
   stop("DuckDB function add() is not available in R.")
 }
@@ -264,9 +198,8 @@ add <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT 
 #' DuckDB function `add_parquet_key()`.
 #'
 #' @name add_parquet_key
-#' @usage add_parquet_key(col0 = VARCHAR, col1 = VARCHAR)
-#' @param col0 `VARCHAR`
-#' @param col1 `VARCHAR`
+#' @usage add_parquet_key(col0, col1)
+#' @param col0,col1 `VARCHAR`
 #' @return Unspecified.
 #' @export
 add_parquet_key <- function(col0 = VARCHAR, col1 = VARCHAR) {
@@ -279,22 +212,22 @@ add_parquet_key <- function(col0 = VARCHAR, col1 = VARCHAR) {
 #' Subtract arguments, resulting in the time difference between the two timestamps.
 #'
 #' @name age
-#' @usage NULL
+#' @usage age(timestamp, timestamp.1)
+#' @param timestamp,timestamp.1 `TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `INTERVAL`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{age(timestamp = TIMESTAMP)}
-#' \item \code{age(timestamp = TIMESTAMP, timestamp = TIMESTAMP)}
+#' \item \code{age(timestamp = TIMESTAMP, timestamp.1 = TIMESTAMP)}
 #' \item \code{age(timestamp = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{age(timestamp = `TIMESTAMP WITH TIME ZONE`, timestamp = `TIMESTAMP WITH TIME ZONE`)}
+#' \item \code{age(timestamp = `TIMESTAMP WITH TIME ZONE`, timestamp.1 = `TIMESTAMP WITH TIME ZONE`)}
 #' }
-#' @param timestamp `TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @return `INTERVAL`
-#' @export
 #' @section SQL examples:
 #' ```
 #' age(TIMESTAMP '2001-04-10', TIMESTAMP '1992-09-20')
 #' ```
-age <- function(timestamp = `TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
+age <- function(timestamp = `TIMESTAMP | TIMESTAMP WITH TIME ZONE`, timestamp.1 = `TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
   stop("DuckDB function age() is not available in R.")
 }
 
@@ -318,7 +251,7 @@ ago <- function(i) {
 #' Returns the name of a given expression.
 #'
 #' @name alias
-#' @usage alias(expr = ANY)
+#' @usage alias(expr)
 #' @param expr `ANY`
 #' @return `VARCHAR`
 #' @export
@@ -350,12 +283,7 @@ all_profiling_output <- function() {
 #' Returns the first non-NULL value from arg. This function is affected by ordering.
 #'
 #' @name any_value
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{any_value(arg = DECIMAL)}
-#' \item \code{any_value(arg = ANY)}
-#' }
+#' @usage any_value(arg)
 #' @param arg `DECIMAL | ANY`
 #' @return `DECIMAL | ANY`
 #' @export
@@ -369,7 +297,7 @@ any_value <- function(arg = `DECIMAL | ANY`) {
 #' Computes the approximate count of distinct elements using HyperLogLog.
 #'
 #' @name approx_count_distinct
-#' @usage approx_count_distinct(any = ANY)
+#' @usage approx_count_distinct(any)
 #' @param any `ANY`
 #' @return `BIGINT`
 #' @export
@@ -387,34 +315,7 @@ approx_count_distinct <- function(any = ANY) {
 #' Computes the approximate quantile using T-Digest.
 #'
 #' @name approx_quantile
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{approx_quantile(x = DECIMAL, pos = FLOAT)}
-#' \item \code{approx_quantile(x = SMALLINT, pos = FLOAT)}
-#' \item \code{approx_quantile(x = INTEGER, pos = FLOAT)}
-#' \item \code{approx_quantile(x = BIGINT, pos = FLOAT)}
-#' \item \code{approx_quantile(x = HUGEINT, pos = FLOAT)}
-#' \item \code{approx_quantile(x = DOUBLE, pos = FLOAT)}
-#' \item \code{approx_quantile(x = DATE, pos = FLOAT)}
-#' \item \code{approx_quantile(x = TIME, pos = FLOAT)}
-#' \item \code{approx_quantile(x = `TIME WITH TIME ZONE`, pos = FLOAT)}
-#' \item \code{approx_quantile(x = TIMESTAMP, pos = FLOAT)}
-#' \item \code{approx_quantile(x = `TIMESTAMP WITH TIME ZONE`, pos = FLOAT)}
-#' \item \code{approx_quantile(x = DECIMAL, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = TINYINT, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = SMALLINT, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = INTEGER, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = BIGINT, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = HUGEINT, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = FLOAT, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = DOUBLE, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = DATE, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = TIME, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = `TIME WITH TIME ZONE`, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = TIMESTAMP, pos = `FLOAT[]`)}
-#' \item \code{approx_quantile(x = `TIMESTAMP WITH TIME ZONE`, pos = `FLOAT[]`)}
-#' }
+#' @usage approx_quantile(x, pos)
 #' @param x `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | DATE | TIME | TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TINYINT | FLOAT`
 #' @param pos `FLOAT | FLOAT[]`
 #' @return `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | DATE | TIME | TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | DECIMAL[] | TINYINT[] | SMALLINT[] | INTEGER[] | BIGINT[] | HUGEINT[] | FLOAT[] | DOUBLE[] | DATE[] | TIME[] | TIME WITH TIME ZONE[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
@@ -433,7 +334,7 @@ approx_quantile <- function(x = `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT
 #' Finds the k approximately most occurring values in the data set.
 #'
 #' @name approx_top_k
-#' @usage approx_top_k(val = ANY, k = BIGINT)
+#' @usage approx_top_k(val, k)
 #' @param val `ANY`
 #' @param k `BIGINT`
 #' @return `ANY[]`
@@ -452,7 +353,11 @@ approx_top_k <- function(val = ANY, k = BIGINT) {
 #' Finds the row with the maximum val. Calculates the non-NULL arg expression at that row.
 #'
 #' @name arg_max
-#' @usage NULL
+#' @usage arg_max(arg, val)
+#' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
+#' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
+#' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{arg_max(arg = INTEGER, val = INTEGER)}
@@ -548,30 +453,25 @@ approx_top_k <- function(val = ANY, k = BIGINT) {
 #' \item \code{arg_max(arg = ANY, val = ANY)}
 #' \item \code{arg_max(arg = ANY, val = ANY, col2 = BIGINT)}
 #' }
-#' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
-#' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
-#' @param col2 `BIGINT`
-#' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
-#' @export
 #' @section SQL examples:
 #' ```
 #' arg_max(A, B)
 #' ```
-arg_max <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, col2 = BIGINT) {
+arg_max <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`) {
   stop("DuckDB function arg_max() is not available in R.")
 }
 
 #' @rdname arg_max
 #' @usage NULL
 #' @export
-argmax <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, col2 = BIGINT) {
+argmax <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`) {
   stop("DuckDB function argmax() is not available in R.")
 }
 
 #' @rdname arg_max
 #' @usage NULL
 #' @export
-max_by <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, col2 = BIGINT) {
+max_by <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`) {
   stop("DuckDB function max_by() is not available in R.")
 }
 
@@ -581,101 +481,7 @@ max_by <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP
 #' Finds the row with the maximum val. Calculates the arg expression at that row.
 #'
 #' @name arg_max_null
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{arg_max_null(arg = INTEGER, val = INTEGER)}
-#' \item \code{arg_max_null(arg = INTEGER, val = BIGINT)}
-#' \item \code{arg_max_null(arg = INTEGER, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = INTEGER, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = INTEGER, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = INTEGER, val = DATE)}
-#' \item \code{arg_max_null(arg = INTEGER, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = INTEGER, val = BLOB)}
-#' \item \code{arg_max_null(arg = BIGINT, val = INTEGER)}
-#' \item \code{arg_max_null(arg = BIGINT, val = BIGINT)}
-#' \item \code{arg_max_null(arg = BIGINT, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = BIGINT, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = BIGINT, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = BIGINT, val = DATE)}
-#' \item \code{arg_max_null(arg = BIGINT, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = BIGINT, val = BLOB)}
-#' \item \code{arg_max_null(arg = DOUBLE, val = INTEGER)}
-#' \item \code{arg_max_null(arg = DOUBLE, val = BIGINT)}
-#' \item \code{arg_max_null(arg = DOUBLE, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = DOUBLE, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = DOUBLE, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = DOUBLE, val = DATE)}
-#' \item \code{arg_max_null(arg = DOUBLE, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = DOUBLE, val = BLOB)}
-#' \item \code{arg_max_null(arg = VARCHAR, val = INTEGER)}
-#' \item \code{arg_max_null(arg = VARCHAR, val = BIGINT)}
-#' \item \code{arg_max_null(arg = VARCHAR, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = VARCHAR, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = VARCHAR, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = VARCHAR, val = DATE)}
-#' \item \code{arg_max_null(arg = VARCHAR, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = VARCHAR, val = BLOB)}
-#' \item \code{arg_max_null(arg = DATE, val = INTEGER)}
-#' \item \code{arg_max_null(arg = DATE, val = BIGINT)}
-#' \item \code{arg_max_null(arg = DATE, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = DATE, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = DATE, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = DATE, val = DATE)}
-#' \item \code{arg_max_null(arg = DATE, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = DATE, val = BLOB)}
-#' \item \code{arg_max_null(arg = TIMESTAMP, val = INTEGER)}
-#' \item \code{arg_max_null(arg = TIMESTAMP, val = BIGINT)}
-#' \item \code{arg_max_null(arg = TIMESTAMP, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = TIMESTAMP, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = TIMESTAMP, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = TIMESTAMP, val = DATE)}
-#' \item \code{arg_max_null(arg = TIMESTAMP, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = TIMESTAMP, val = BLOB)}
-#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}
-#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}
-#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}
-#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}
-#' \item \code{arg_max_null(arg = BLOB, val = INTEGER)}
-#' \item \code{arg_max_null(arg = BLOB, val = BIGINT)}
-#' \item \code{arg_max_null(arg = BLOB, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = BLOB, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = BLOB, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = BLOB, val = DATE)}
-#' \item \code{arg_max_null(arg = BLOB, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = BLOB, val = BLOB)}
-#' \item \code{arg_max_null(arg = DECIMAL, val = INTEGER)}
-#' \item \code{arg_max_null(arg = DECIMAL, val = BIGINT)}
-#' \item \code{arg_max_null(arg = DECIMAL, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = DECIMAL, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = DECIMAL, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = DECIMAL, val = DATE)}
-#' \item \code{arg_max_null(arg = DECIMAL, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = DECIMAL, val = BLOB)}
-#' \item \code{arg_max_null(arg = ANY, val = INTEGER)}
-#' \item \code{arg_max_null(arg = ANY, val = BIGINT)}
-#' \item \code{arg_max_null(arg = ANY, val = HUGEINT)}
-#' \item \code{arg_max_null(arg = ANY, val = DOUBLE)}
-#' \item \code{arg_max_null(arg = ANY, val = VARCHAR)}
-#' \item \code{arg_max_null(arg = ANY, val = DATE)}
-#' \item \code{arg_max_null(arg = ANY, val = TIMESTAMP)}
-#' \item \code{arg_max_null(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_max_null(arg = ANY, val = BLOB)}
-#' \item \code{arg_max_null(arg = ANY, val = ANY)}
-#' }
+#' @usage arg_max_null(arg, val)
 #' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
 #' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
@@ -694,7 +500,11 @@ arg_max_null <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIM
 #' Finds the rows with N maximum vals, including nulls. Calculates the arg expression at that row.
 #'
 #' @name arg_max_nulls_last
-#' @usage NULL
+#' @usage arg_max_nulls_last(arg, val)
+#' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
+#' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
+#' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{arg_max_nulls_last(arg = INTEGER, val = INTEGER)}
@@ -790,16 +600,11 @@ arg_max_null <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIM
 #' \item \code{arg_max_nulls_last(arg = ANY, val = ANY)}
 #' \item \code{arg_max_nulls_last(arg = ANY, val = ANY, N = BIGINT)}
 #' }
-#' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
-#' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
-#' @param N `BIGINT`
-#' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
-#' @export
 #' @section SQL examples:
 #' ```
 #' arg_min_null_val(A, B, N)
 #' ```
-arg_max_nulls_last <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, N = BIGINT) {
+arg_max_nulls_last <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`) {
   stop("DuckDB function arg_max_nulls_last() is not available in R.")
 }
 
@@ -809,7 +614,11 @@ arg_max_nulls_last <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE
 #' Finds the row with the minimum val. Calculates the non-NULL arg expression at that row.
 #'
 #' @name arg_min
-#' @usage NULL
+#' @usage arg_min(arg, val)
+#' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
+#' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
+#' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{arg_min(arg = INTEGER, val = INTEGER)}
@@ -905,30 +714,25 @@ arg_max_nulls_last <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE
 #' \item \code{arg_min(arg = ANY, val = ANY)}
 #' \item \code{arg_min(arg = ANY, val = ANY, col2 = BIGINT)}
 #' }
-#' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
-#' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
-#' @param col2 `BIGINT`
-#' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
-#' @export
 #' @section SQL examples:
 #' ```
 #' arg_min(A, B)
 #' ```
-arg_min <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, col2 = BIGINT) {
+arg_min <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`) {
   stop("DuckDB function arg_min() is not available in R.")
 }
 
 #' @rdname arg_min
 #' @usage NULL
 #' @export
-argmin <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, col2 = BIGINT) {
+argmin <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`) {
   stop("DuckDB function argmin() is not available in R.")
 }
 
 #' @rdname arg_min
 #' @usage NULL
 #' @export
-min_by <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, col2 = BIGINT) {
+min_by <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`) {
   stop("DuckDB function min_by() is not available in R.")
 }
 
@@ -938,101 +742,7 @@ min_by <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP
 #' Finds the row with the minimum val. Calculates the arg expression at that row.
 #'
 #' @name arg_min_null
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{arg_min_null(arg = INTEGER, val = INTEGER)}
-#' \item \code{arg_min_null(arg = INTEGER, val = BIGINT)}
-#' \item \code{arg_min_null(arg = INTEGER, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = INTEGER, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = INTEGER, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = INTEGER, val = DATE)}
-#' \item \code{arg_min_null(arg = INTEGER, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = INTEGER, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = INTEGER, val = BLOB)}
-#' \item \code{arg_min_null(arg = BIGINT, val = INTEGER)}
-#' \item \code{arg_min_null(arg = BIGINT, val = BIGINT)}
-#' \item \code{arg_min_null(arg = BIGINT, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = BIGINT, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = BIGINT, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = BIGINT, val = DATE)}
-#' \item \code{arg_min_null(arg = BIGINT, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = BIGINT, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = BIGINT, val = BLOB)}
-#' \item \code{arg_min_null(arg = DOUBLE, val = INTEGER)}
-#' \item \code{arg_min_null(arg = DOUBLE, val = BIGINT)}
-#' \item \code{arg_min_null(arg = DOUBLE, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = DOUBLE, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = DOUBLE, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = DOUBLE, val = DATE)}
-#' \item \code{arg_min_null(arg = DOUBLE, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = DOUBLE, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = DOUBLE, val = BLOB)}
-#' \item \code{arg_min_null(arg = VARCHAR, val = INTEGER)}
-#' \item \code{arg_min_null(arg = VARCHAR, val = BIGINT)}
-#' \item \code{arg_min_null(arg = VARCHAR, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = VARCHAR, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = VARCHAR, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = VARCHAR, val = DATE)}
-#' \item \code{arg_min_null(arg = VARCHAR, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = VARCHAR, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = VARCHAR, val = BLOB)}
-#' \item \code{arg_min_null(arg = DATE, val = INTEGER)}
-#' \item \code{arg_min_null(arg = DATE, val = BIGINT)}
-#' \item \code{arg_min_null(arg = DATE, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = DATE, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = DATE, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = DATE, val = DATE)}
-#' \item \code{arg_min_null(arg = DATE, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = DATE, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = DATE, val = BLOB)}
-#' \item \code{arg_min_null(arg = TIMESTAMP, val = INTEGER)}
-#' \item \code{arg_min_null(arg = TIMESTAMP, val = BIGINT)}
-#' \item \code{arg_min_null(arg = TIMESTAMP, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = TIMESTAMP, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = TIMESTAMP, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = TIMESTAMP, val = DATE)}
-#' \item \code{arg_min_null(arg = TIMESTAMP, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = TIMESTAMP, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = TIMESTAMP, val = BLOB)}
-#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = INTEGER)}
-#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = BIGINT)}
-#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = DATE)}
-#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = `TIMESTAMP WITH TIME ZONE`, val = BLOB)}
-#' \item \code{arg_min_null(arg = BLOB, val = INTEGER)}
-#' \item \code{arg_min_null(arg = BLOB, val = BIGINT)}
-#' \item \code{arg_min_null(arg = BLOB, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = BLOB, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = BLOB, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = BLOB, val = DATE)}
-#' \item \code{arg_min_null(arg = BLOB, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = BLOB, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = BLOB, val = BLOB)}
-#' \item \code{arg_min_null(arg = DECIMAL, val = INTEGER)}
-#' \item \code{arg_min_null(arg = DECIMAL, val = BIGINT)}
-#' \item \code{arg_min_null(arg = DECIMAL, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = DECIMAL, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = DECIMAL, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = DECIMAL, val = DATE)}
-#' \item \code{arg_min_null(arg = DECIMAL, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = DECIMAL, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = DECIMAL, val = BLOB)}
-#' \item \code{arg_min_null(arg = ANY, val = INTEGER)}
-#' \item \code{arg_min_null(arg = ANY, val = BIGINT)}
-#' \item \code{arg_min_null(arg = ANY, val = HUGEINT)}
-#' \item \code{arg_min_null(arg = ANY, val = DOUBLE)}
-#' \item \code{arg_min_null(arg = ANY, val = VARCHAR)}
-#' \item \code{arg_min_null(arg = ANY, val = DATE)}
-#' \item \code{arg_min_null(arg = ANY, val = TIMESTAMP)}
-#' \item \code{arg_min_null(arg = ANY, val = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{arg_min_null(arg = ANY, val = BLOB)}
-#' \item \code{arg_min_null(arg = ANY, val = ANY)}
-#' }
+#' @usage arg_min_null(arg, val)
 #' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
 #' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
 #' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
@@ -1051,7 +761,11 @@ arg_min_null <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIM
 #' Finds the rows with N minimum vals, including nulls. Calculates the arg expression at that row.
 #'
 #' @name arg_min_nulls_last
-#' @usage NULL
+#' @usage arg_min_nulls_last(arg, val)
+#' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
+#' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
+#' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{arg_min_nulls_last(arg = INTEGER, val = INTEGER)}
@@ -1147,16 +861,11 @@ arg_min_null <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIM
 #' \item \code{arg_min_nulls_last(arg = ANY, val = ANY)}
 #' \item \code{arg_min_nulls_last(arg = ANY, val = ANY, N = BIGINT)}
 #' }
-#' @param arg `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`
-#' @param val `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`
-#' @param N `BIGINT`
-#' @return `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY | ANY[]`
-#' @export
 #' @section SQL examples:
 #' ```
 #' arg_min_null_val(A, B, N)
 #' ```
-arg_min_nulls_last <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`, N = BIGINT) {
+arg_min_nulls_last <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | DECIMAL | ANY`, val = `INTEGER | BIGINT | HUGEINT | DOUBLE | VARCHAR | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | BLOB | ANY`) {
   stop("DuckDB function arg_min_nulls_last() is not available in R.")
 }
 
@@ -1167,8 +876,7 @@ arg_min_nulls_last <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE
 #'
 #' @name array_append
 #' @usage array_append(arr, el)
-#' @param arr Unspecified.
-#' @param el Unspecified.
+#' @param arr,el Unspecified.
 #' @return Unspecified.
 #' @export
 array_append <- function(arr, el) {
@@ -1181,14 +889,8 @@ array_append <- function(arr, el) {
 #' Computes the cosine distance between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
 #'
 #' @name array_cosine_distance
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{array_cosine_distance(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)}
-#' \item \code{array_cosine_distance(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)}
-#' }
-#' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
-#' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @usage array_cosine_distance(array1, array2)
+#' @param array1,array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
 #' @export
 #' @family array
@@ -1206,14 +908,8 @@ array_cosine_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = 
 #' Computes the cosine similarity between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
 #'
 #' @name array_cosine_similarity
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{array_cosine_similarity(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)}
-#' \item \code{array_cosine_similarity(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)}
-#' }
-#' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
-#' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @usage array_cosine_similarity(array1, array2)
+#' @param array1,array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
 #' @export
 #' @family array
@@ -1231,13 +927,8 @@ array_cosine_similarity <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 
 #' Computes the cross product of two arrays of size 3. The array elements can not be `NULL`.
 #'
 #' @name array_cross_product
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{array_cross_product(array = `FLOAT[3]`, array = `FLOAT[3]`)}
-#' \item \code{array_cross_product(array = `DOUBLE[3]`, array = `DOUBLE[3]`)}
-#' }
-#' @param array `FLOAT[3] | DOUBLE[3]`
+#' @usage array_cross_product(array, array.1)
+#' @param array,array.1 `FLOAT[3] | DOUBLE[3]`
 #' @return `FLOAT[3] | DOUBLE[3]`
 #' @export
 #' @family array
@@ -1245,7 +936,7 @@ array_cosine_similarity <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 
 #' ```
 #' array_cross_product(array_value(1.0::FLOAT, 2.0::FLOAT, 3.0::FLOAT), array_value(2.0::FLOAT, 3.0::FLOAT, 4.0::FLOAT))
 #' ```
-array_cross_product <- function(array = `FLOAT[3] | DOUBLE[3]`) {
+array_cross_product <- function(array = `FLOAT[3] | DOUBLE[3]`, array.1 = `FLOAT[3] | DOUBLE[3]`) {
   stop("DuckDB function array_cross_product() is not available in R.")
 }
 
@@ -1255,14 +946,8 @@ array_cross_product <- function(array = `FLOAT[3] | DOUBLE[3]`) {
 #' Computes the distance between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
 #'
 #' @name array_distance
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{array_distance(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)}
-#' \item \code{array_distance(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)}
-#' }
-#' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
-#' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @usage array_distance(array1, array2)
+#' @param array1,array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
 #' @export
 #' @family array
@@ -1277,31 +962,26 @@ array_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[
 #' DuckDB function array_extract
 #'
 #' @description
-#' Extracts a single character from a `string` using a (1-based) `index`.
-#'
-#' Extracts the named `entry` from the `STRUCT`.
-#'
-#' Extracts the entry from an unnamed `STRUCT` (tuple) using an index (1-based).
-#'
-#' Extracts the `index`th (1-based) value from the `list`.
+#' \itemize{
+#' \item \code{array_extract(list = `T[]`, index = BIGINT)}: Extracts the `index`th (1-based) value from the `list`.
+#' \item \code{array_extract(string = VARCHAR, index = BIGINT)}: Extracts a single character from a `string` using a (1-based) `index`.
+#' \item \code{array_extract(struct = STRUCT, entry = VARCHAR)}: Extracts the named `entry` from the `STRUCT`.
+#' \item \code{array_extract(struct = STRUCT, index = BIGINT)}: Extracts the entry from an unnamed `STRUCT` (tuple) using an index (1-based).
+#' }
 #'
 #' @name array_extract
-#' @usage NULL
+#' @usage array_extract(list, index)
+#' @param list `T[]`
+#' @param index `BIGINT`
+#' @return `T | VARCHAR | ANY`
+#' @export
 #' @section Overloads:
 #' \itemize{
-#' \item \code{array_extract(col0 = `T[]`, col1 = BIGINT)}
+#' \item \code{array_extract(list = `T[]`, index = BIGINT)}
 #' \item \code{array_extract(string = VARCHAR, index = BIGINT)}
 #' \item \code{array_extract(struct = STRUCT, entry = VARCHAR)}
 #' \item \code{array_extract(struct = STRUCT, index = BIGINT)}
 #' }
-#' @param col0 `T[]`
-#' @param col1 `BIGINT`
-#' @param string `VARCHAR`
-#' @param index `BIGINT`
-#' @param struct `STRUCT`
-#' @param entry `VARCHAR`
-#' @return `T | VARCHAR | ANY`
-#' @export
 #' @family list
 #' @family string
 #' @family struct
@@ -1312,7 +992,7 @@ array_distance <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLOAT[
 #' array_extract(row(42, 84), 1)
 #' array_extract([4, 5, 6], 3)
 #' ```
-array_extract <- function(col0 = `T[]`, col1 = BIGINT, string = VARCHAR, index = BIGINT, struct = STRUCT, entry = VARCHAR) {
+array_extract <- function(list = `T[]`, index = BIGINT) {
   stop("DuckDB function array_extract() is not available in R.")
 }
 
@@ -1322,14 +1002,8 @@ array_extract <- function(col0 = `T[]`, col1 = BIGINT, string = VARCHAR, index =
 #' Computes the inner product between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
 #'
 #' @name array_inner_product
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{array_inner_product(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)}
-#' \item \code{array_inner_product(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)}
-#' }
-#' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
-#' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @usage array_inner_product(array1, array2)
+#' @param array1,array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
 #' @export
 #' @family array
@@ -1351,21 +1025,22 @@ array_dot_product <- function(array1 = `FLOAT[ANY] | DOUBLE[ANY]`, array2 = `FLO
 #' DuckDB function array_length
 #'
 #' @description
-#' Returns the length of the `list`.
-#'
-#' `array_length` for lists with dimensions other than 1 not implemented.
+#' \itemize{
+#' \item \code{array_length(list = `ANY[]`)}: Returns the length of the `list`.
+#' \item \code{array_length(list = `ANY[]`, dimension = BIGINT)}: `array_length` for lists with dimensions other than 1 not implemented.
+#' }
 #'
 #' @name array_length
-#' @usage NULL
+#' @usage array_length(list, dimension)
+#' @param list `ANY[]`
+#' @param dimension `BIGINT`
+#' @return `BIGINT`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{array_length(list = `ANY[]`)}
 #' \item \code{array_length(list = `ANY[]`, dimension = BIGINT)}
 #' }
-#' @param list `ANY[]`
-#' @param dimension `BIGINT`
-#' @return `BIGINT`
-#' @export
 #' @family list
 #' @section SQL examples:
 #' ```
@@ -1381,14 +1056,8 @@ array_length <- function(list = `ANY[]`, dimension = BIGINT) {
 #' Computes the negative inner product between two arrays of the same size. The array elements can not be `NULL`. The arrays can have any size as long as the size is the same for both arguments.
 #'
 #' @name array_negative_inner_product
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{array_negative_inner_product(array1 = `FLOAT[ANY]`, array2 = `FLOAT[ANY]`)}
-#' \item \code{array_negative_inner_product(array1 = `DOUBLE[ANY]`, array2 = `DOUBLE[ANY]`)}
-#' }
-#' @param array1 `FLOAT[ANY] | DOUBLE[ANY]`
-#' @param array2 `FLOAT[ANY] | DOUBLE[ANY]`
+#' @usage array_negative_inner_product(array1, array2)
+#' @param array1,array2 `FLOAT[ANY] | DOUBLE[ANY]`
 #' @return `FLOAT | DOUBLE`
 #' @export
 #' @family array
@@ -1442,8 +1111,7 @@ array_pop_front <- function(arr) {
 #'
 #' @name array_prepend
 #' @usage array_prepend(el, arr)
-#' @param el Unspecified.
-#' @param arr Unspecified.
+#' @param el,arr Unspecified.
 #' @return Unspecified.
 #' @export
 array_prepend <- function(el, arr) {
@@ -1457,8 +1125,7 @@ array_prepend <- function(el, arr) {
 #'
 #' @name array_push_back
 #' @usage array_push_back(arr, e)
-#' @param arr Unspecified.
-#' @param e Unspecified.
+#' @param arr,e Unspecified.
 #' @return Unspecified.
 #' @export
 array_push_back <- function(arr, e) {
@@ -1472,8 +1139,7 @@ array_push_back <- function(arr, e) {
 #'
 #' @name array_push_front
 #' @usage array_push_front(arr, e)
-#' @param arr Unspecified.
-#' @param e Unspecified.
+#' @param arr,e Unspecified.
 #' @return Unspecified.
 #' @export
 array_push_front <- function(arr, e) {
@@ -1501,8 +1167,7 @@ array_reverse <- function(l) {
 #'
 #' @name array_to_string
 #' @usage array_to_string(arr, sep)
-#' @param arr Unspecified.
-#' @param sep Unspecified.
+#' @param arr,sep Unspecified.
 #' @return Unspecified.
 #' @export
 array_to_string <- function(arr, sep) {
@@ -1516,8 +1181,7 @@ array_to_string <- function(arr, sep) {
 #'
 #' @name array_to_string_comma_default
 #' @usage array_to_string_comma_default(arr, sep)
-#' @param arr Unspecified.
-#' @param sep Unspecified.
+#' @param arr,sep Unspecified.
 #' @return Unspecified.
 #' @export
 array_to_string_comma_default <- function(arr, sep) {
@@ -1549,10 +1213,8 @@ array_value <- function() {
 #' DuckDB function `arrow_scan()`.
 #'
 #' @name arrow_scan
-#' @usage arrow_scan(col0 = POINTER, col1 = POINTER, col2 = POINTER)
-#' @param col0 `POINTER`
-#' @param col1 `POINTER`
-#' @param col2 `POINTER`
+#' @usage arrow_scan(col0, col1, col2)
+#' @param col0,col1,col2 `POINTER`
 #' @return Unspecified.
 #' @export
 arrow_scan <- function(col0 = POINTER, col1 = POINTER, col2 = POINTER) {
@@ -1565,10 +1227,8 @@ arrow_scan <- function(col0 = POINTER, col1 = POINTER, col2 = POINTER) {
 #' DuckDB function `arrow_scan_dumb()`.
 #'
 #' @name arrow_scan_dumb
-#' @usage arrow_scan_dumb(col0 = POINTER, col1 = POINTER, col2 = POINTER)
-#' @param col0 `POINTER`
-#' @param col1 `POINTER`
-#' @param col2 `POINTER`
+#' @usage arrow_scan_dumb(col0, col1, col2)
+#' @param col0,col1,col2 `POINTER`
 #' @return Unspecified.
 #' @export
 arrow_scan_dumb <- function(col0 = POINTER, col1 = POINTER, col2 = POINTER) {
@@ -1581,7 +1241,7 @@ arrow_scan_dumb <- function(col0 = POINTER, col1 = POINTER, col2 = POINTER) {
 #' Returns an integer that represents the Unicode code point of the first character of the `string`.
 #'
 #' @name ascii
-#' @usage ascii(string = VARCHAR)
+#' @usage ascii(string)
 #' @param string `VARCHAR`
 #' @return `INTEGER`
 #' @export
@@ -1600,7 +1260,7 @@ ascii <- function(string = VARCHAR) {
 #' Computes the arcsine of x.
 #'
 #' @name asin
-#' @usage asin(x = DOUBLE)
+#' @usage asin(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -1618,7 +1278,7 @@ asin <- function(x = DOUBLE) {
 #' Computes the inverse hyperbolic sin of x.
 #'
 #' @name asinh
-#' @usage asinh(x = DOUBLE)
+#' @usage asinh(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -1636,7 +1296,7 @@ asinh <- function(x = DOUBLE) {
 #' Computes the arctangent of x.
 #'
 #' @name atan
-#' @usage atan(x = DOUBLE)
+#' @usage atan(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -1654,9 +1314,8 @@ atan <- function(x = DOUBLE) {
 #' Computes the arctangent (y, x).
 #'
 #' @name atan2
-#' @usage atan2(y = DOUBLE, x = DOUBLE)
-#' @param y `DOUBLE`
-#' @param x `DOUBLE`
+#' @usage atan2(y, x)
+#' @param y,x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
 #' @section SQL examples:
@@ -1673,7 +1332,7 @@ atan2 <- function(y = DOUBLE, x = DOUBLE) {
 #' Computes the inverse hyperbolic tan of x.
 #'
 #' @name atanh
-#' @usage atanh(x = DOUBLE)
+#' @usage atanh(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -1691,21 +1350,7 @@ atanh <- function(x = DOUBLE) {
 #' Calculates the average value for all tuples in x.
 #'
 #' @name avg
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{avg(x = DECIMAL)}
-#' \item \code{avg(x = SMALLINT)}
-#' \item \code{avg(x = INTEGER)}
-#' \item \code{avg(x = BIGINT)}
-#' \item \code{avg(x = HUGEINT)}
-#' \item \code{avg(x = INTERVAL)}
-#' \item \code{avg(x = DOUBLE)}
-#' \item \code{avg(x = TIMESTAMP)}
-#' \item \code{avg(x = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{avg(x = TIME)}
-#' \item \code{avg(x = `TIME WITH TIME ZONE`)}
-#' }
+#' @usage avg(x)
 #' @param x `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL | DOUBLE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`
 #' @return `DECIMAL | DOUBLE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE`
 #' @export
@@ -1730,18 +1375,15 @@ mean <- function(x = `DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL
 #' Draws a band whose width is proportional to (`x - min`) and equal to `width` characters when `x` = `max`. `width` defaults to 80.
 #'
 #' @name bar
-#' @usage NULL
+#' @usage bar(x, min, max, width)
+#' @param x,min,max,width `DOUBLE`
+#' @return `VARCHAR`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{bar(x = DOUBLE, min = DOUBLE, max = DOUBLE, width = DOUBLE)}
 #' \item \code{bar(x = DOUBLE, min = DOUBLE, max = DOUBLE)}
 #' }
-#' @param x `DOUBLE`
-#' @param min `DOUBLE`
-#' @param max `DOUBLE`
-#' @param width `DOUBLE`
-#' @return `VARCHAR`
-#' @export
 #' @family string
 #' @section SQL examples:
 #' ```
@@ -1754,12 +1396,16 @@ bar <- function(x = DOUBLE, min = DOUBLE, max = DOUBLE, width = DOUBLE) {
 #' DuckDB function bin
 #'
 #' @description
-#' Converts the `string` to binary representation.
-#'
-#' Converts the `value` to binary representation.
+#' \itemize{
+#' \item \code{bin(string = VARCHAR)}: Converts the `string` to binary representation.
+#' \item \code{bin(value = BIGNUM)}, \code{bin(value = UBIGINT)}, \code{bin(value = BIGINT)}, \code{bin(value = HUGEINT)}, \code{bin(value = UHUGEINT)}: Converts the `value` to binary representation.
+#' }
 #'
 #' @name bin
-#' @usage NULL
+#' @usage bin(value)
+#' @param value `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`
+#' @return `VARCHAR`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{bin(string = VARCHAR)}
@@ -1769,10 +1415,6 @@ bar <- function(x = DOUBLE, min = DOUBLE, max = DOUBLE, width = DOUBLE) {
 #' \item \code{bin(value = HUGEINT)}
 #' \item \code{bin(value = UHUGEINT)}
 #' }
-#' @param string `VARCHAR`
-#' @param value `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`
-#' @return `VARCHAR`
-#' @export
 #' @family numeric
 #' @family string
 #' @section SQL examples:
@@ -1780,14 +1422,14 @@ bar <- function(x = DOUBLE, min = DOUBLE, max = DOUBLE, width = DOUBLE) {
 #' bin('Aa')
 #' bin(42)
 #' ```
-bin <- function(string = VARCHAR, value = `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`) {
+bin <- function(value = `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`) {
   stop("DuckDB function bin() is not available in R.")
 }
 
 #' @rdname bin
 #' @usage NULL
 #' @export
-to_binary <- function(string = VARCHAR, value = `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`) {
+to_binary <- function(value = `BIGNUM | UBIGINT | BIGINT | HUGEINT | UHUGEINT`) {
   stop("DuckDB function to_binary() is not available in R.")
 }
 
@@ -1797,21 +1439,7 @@ to_binary <- function(string = VARCHAR, value = `BIGNUM | UBIGINT | BIGINT | HUG
 #' Returns the bitwise AND of all bits in a given expression.
 #'
 #' @name bit_and
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{bit_and(arg = TINYINT)}
-#' \item \code{bit_and(arg = SMALLINT)}
-#' \item \code{bit_and(arg = INTEGER)}
-#' \item \code{bit_and(arg = BIGINT)}
-#' \item \code{bit_and(arg = HUGEINT)}
-#' \item \code{bit_and(arg = UTINYINT)}
-#' \item \code{bit_and(arg = USMALLINT)}
-#' \item \code{bit_and(arg = UINTEGER)}
-#' \item \code{bit_and(arg = UBIGINT)}
-#' \item \code{bit_and(arg = UHUGEINT)}
-#' \item \code{bit_and(arg = BIT)}
-#' }
+#' @usage bit_and(arg)
 #' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @export
@@ -1829,16 +1457,7 @@ bit_and <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTI
 #' Returns the number of bits that are set.
 #'
 #' @name bit_count
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{bit_count(x = TINYINT)}
-#' \item \code{bit_count(x = SMALLINT)}
-#' \item \code{bit_count(x = INTEGER)}
-#' \item \code{bit_count(x = BIGINT)}
-#' \item \code{bit_count(x = HUGEINT)}
-#' \item \code{bit_count(x = BIT)}
-#' }
+#' @usage bit_count(x)
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | BIT`
 #' @return `TINYINT | BIGINT`
 #' @export
@@ -1853,21 +1472,21 @@ bit_count <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | BIT
 #' DuckDB function bit_length
 #'
 #' @description
-#' Number of bits in a `string`.
-#'
-#' Returns the bit-length of the `bit` argument.
+#' \itemize{
+#' \item \code{bit_length(string = VARCHAR)}: Number of bits in a `string`.
+#' \item \code{bit_length(bit = BIT)}: Returns the bit-length of the `bit` argument.
+#' }
 #'
 #' @name bit_length
-#' @usage NULL
+#' @usage bit_length(string)
+#' @param string `VARCHAR`
+#' @return `BIGINT`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{bit_length(string = VARCHAR)}
 #' \item \code{bit_length(bit = BIT)}
 #' }
-#' @param string `VARCHAR`
-#' @param bit `BIT`
-#' @return `BIGINT`
-#' @export
 #' @family numeric
 #' @family string
 #' @section SQL examples:
@@ -1875,7 +1494,7 @@ bit_count <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | BIT
 #' bit_length('abc')
 #' bit_length(42::TINYINT::BIT)
 #' ```
-bit_length <- function(string = VARCHAR, bit = BIT) {
+bit_length <- function(string = VARCHAR) {
   stop("DuckDB function bit_length() is not available in R.")
 }
 
@@ -1885,21 +1504,7 @@ bit_length <- function(string = VARCHAR, bit = BIT) {
 #' Returns the bitwise OR of all bits in a given expression.
 #'
 #' @name bit_or
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{bit_or(arg = TINYINT)}
-#' \item \code{bit_or(arg = SMALLINT)}
-#' \item \code{bit_or(arg = INTEGER)}
-#' \item \code{bit_or(arg = BIGINT)}
-#' \item \code{bit_or(arg = HUGEINT)}
-#' \item \code{bit_or(arg = UTINYINT)}
-#' \item \code{bit_or(arg = USMALLINT)}
-#' \item \code{bit_or(arg = UINTEGER)}
-#' \item \code{bit_or(arg = UBIGINT)}
-#' \item \code{bit_or(arg = UHUGEINT)}
-#' \item \code{bit_or(arg = BIT)}
-#' }
+#' @usage bit_or(arg)
 #' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @export
@@ -1917,9 +1522,8 @@ bit_or <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTIN
 #' Returns first starting index of the specified substring within bits, or zero if it is not present. The first (leftmost) bit is indexed 1.
 #'
 #' @name bit_position
-#' @usage bit_position(substring = BIT, bitstring = BIT)
-#' @param substring `BIT`
-#' @param bitstring `BIT`
+#' @usage bit_position(substring, bitstring)
+#' @param substring,bitstring `BIT`
 #' @return `INTEGER`
 #' @export
 #' @section SQL examples:
@@ -1936,21 +1540,7 @@ bit_position <- function(substring = BIT, bitstring = BIT) {
 #' Returns the bitwise XOR of all bits in a given expression.
 #'
 #' @name bit_xor
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{bit_xor(arg = TINYINT)}
-#' \item \code{bit_xor(arg = SMALLINT)}
-#' \item \code{bit_xor(arg = INTEGER)}
-#' \item \code{bit_xor(arg = BIGINT)}
-#' \item \code{bit_xor(arg = HUGEINT)}
-#' \item \code{bit_xor(arg = UTINYINT)}
-#' \item \code{bit_xor(arg = USMALLINT)}
-#' \item \code{bit_xor(arg = UINTEGER)}
-#' \item \code{bit_xor(arg = UBIGINT)}
-#' \item \code{bit_xor(arg = UHUGEINT)}
-#' \item \code{bit_xor(arg = BIT)}
-#' }
+#' @usage bit_xor(arg)
 #' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @export
@@ -1968,12 +1558,7 @@ bit_xor <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTI
 #' Pads the bitstring until the specified length.
 #'
 #' @name bitstring
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{bitstring(bitstring = VARCHAR, length = INTEGER)}
-#' \item \code{bitstring(bitstring = BIT, length = INTEGER)}
-#' }
+#' @usage bitstring(bitstring, length)
 #' @param bitstring `VARCHAR | BIT`
 #' @param length `INTEGER`
 #' @return `BIT`
@@ -1992,7 +1577,10 @@ bitstring <- function(bitstring = `VARCHAR | BIT`, length = INTEGER) {
 #' Returns a bitstring with bits set for each distinct value.
 #'
 #' @name bitstring_agg
-#' @usage NULL
+#' @usage bitstring_agg(arg, col1, col2)
+#' @param arg,col1,col2 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
+#' @return `BIT`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{bitstring_agg(arg = TINYINT)}
@@ -2016,11 +1604,6 @@ bitstring <- function(bitstring = `VARCHAR | BIT`, length = INTEGER) {
 #' \item \code{bitstring_agg(arg = UHUGEINT)}
 #' \item \code{bitstring_agg(arg = UHUGEINT, col1 = UHUGEINT, col2 = UHUGEINT)}
 #' }
-#' @param arg `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
-#' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
-#' @param col2 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
-#' @return `BIT`
-#' @export
 #' @section SQL examples:
 #' ```
 #' bitstring_agg(A)
@@ -2035,7 +1618,7 @@ bitstring_agg <- function(arg = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT
 #' Returns TRUE if every input value is TRUE, otherwise FALSE.
 #'
 #' @name bool_and
-#' @usage bool_and(arg = BOOLEAN)
+#' @usage bool_and(arg)
 #' @param arg `BOOLEAN`
 #' @return `BOOLEAN`
 #' @export
@@ -2053,7 +1636,7 @@ bool_and <- function(arg = BOOLEAN) {
 #' Returns TRUE if any input value is TRUE, otherwise FALSE.
 #'
 #' @name bool_or
-#' @usage bool_or(arg = BOOLEAN)
+#' @usage bool_or(arg)
 #' @param arg `BOOLEAN`
 #' @return `BOOLEAN`
 #' @export
@@ -2071,9 +1654,8 @@ bool_or <- function(arg = BOOLEAN) {
 #' Whether or not we can implicitly cast from the source type to the other type.
 #'
 #' @name can_cast_implicitly
-#' @usage can_cast_implicitly(source_type = ANY, target_type = ANY)
-#' @param source_type `ANY`
-#' @param target_type `ANY`
+#' @usage can_cast_implicitly(source_type, target_type)
+#' @param source_type,target_type `ANY`
 #' @return `BOOLEAN`
 #' @export
 #' @section SQL examples:
@@ -2090,7 +1672,7 @@ can_cast_implicitly <- function(source_type = ANY, target_type = ANY) {
 #' Returns the size of the map (or the number of entries in the map).
 #'
 #' @name cardinality
-#' @usage cardinality(map = ANY)
+#' @usage cardinality(map)
 #' @param map `ANY`
 #' @return `UBIGINT`
 #' @export
@@ -2108,9 +1690,8 @@ cardinality <- function(map = ANY) {
 #' Casts the first argument to the type of the second argument.
 #'
 #' @name cast_to_type
-#' @usage cast_to_type(param = ANY, type = ANY)
-#' @param param `ANY`
-#' @param type `ANY`
+#' @usage cast_to_type(param, type)
+#' @param param,type `ANY`
 #' @return `ANY`
 #' @export
 #' @section SQL examples:
@@ -2127,7 +1708,7 @@ cast_to_type <- function(param = ANY, type = ANY) {
 #' Returns the cube root of x.
 #'
 #' @name cbrt
-#' @usage cbrt(x = DOUBLE)
+#' @usage cbrt(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -2145,13 +1726,7 @@ cbrt <- function(x = DOUBLE) {
 #' Rounds the number up.
 #'
 #' @name ceil
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{ceil(x = FLOAT)}
-#' \item \code{ceil(x = DOUBLE)}
-#' \item \code{ceil(x = DECIMAL)}
-#' }
+#' @usage ceil(x)
 #' @param x `FLOAT | DOUBLE | DECIMAL`
 #' @return `FLOAT | DOUBLE | DECIMAL`
 #' @export
@@ -2176,14 +1751,7 @@ ceiling <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
 #' Extract the century component from a date or timestamp.
 #'
 #' @name century
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{century(ts = DATE)}
-#' \item \code{century(ts = INTERVAL)}
-#' \item \code{century(ts = TIMESTAMP)}
-#' \item \code{century(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage century(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -2201,15 +1769,15 @@ century <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' DuckDB function `checkpoint()`.
 #'
 #' @name checkpoint
-#' @usage NULL
+#' @usage checkpoint(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{checkpoint()}
 #' \item \code{checkpoint(col0 = VARCHAR)}
 #' }
-#' @param col0 `VARCHAR`
-#' @return Unspecified.
-#' @export
 checkpoint <- function(col0 = VARCHAR) {
   stop("DuckDB function checkpoint() is not available in R.")
 }
@@ -2220,7 +1788,7 @@ checkpoint <- function(col0 = VARCHAR) {
 #' Returns a character which is corresponding the ASCII code value or Unicode code point.
 #'
 #' @name chr
-#' @usage chr(code_point = INTEGER)
+#' @usage chr(code_point)
 #' @param code_point `INTEGER`
 #' @return `VARCHAR`
 #' @export
@@ -2240,8 +1808,7 @@ chr <- function(code_point = INTEGER) {
 #'
 #' @name col_description
 #' @usage col_description(table_oid, column_number)
-#' @param table_oid Unspecified.
-#' @param column_number Unspecified.
+#' @param table_oid,column_number Unspecified.
 #' @return Unspecified.
 #' @export
 col_description <- function(table_oid, column_number) {
@@ -2268,7 +1835,7 @@ collations <- function() {
 #' DuckDB function `combine()`.
 #'
 #' @name combine
-#' @usage combine(col0 = `AGGREGATE_STATE<?>`, col1 = ANY)
+#' @usage combine(col0, col1)
 #' @param col0 `AGGREGATE_STATE<?>`
 #' @param col1 `ANY`
 #' @return `AGGREGATE_STATE<?>`
@@ -2283,7 +1850,7 @@ combine <- function(col0 = `AGGREGATE_STATE<?>`, col1 = ANY) {
 #' Concatenates multiple strings or lists. `NULL` inputs are skipped. See also operator `||`.
 #'
 #' @name concat
-#' @usage concat(value = ANY)
+#' @usage concat(value)
 #' @param value `ANY`
 #' @return `ANY`
 #' @export
@@ -2304,7 +1871,7 @@ concat <- function(value = ANY) {
 #' Concatenates many strings, separated by `separator`. `NULL` inputs are skipped.
 #'
 #' @name concat_ws
-#' @usage concat_ws(separator = VARCHAR, string = ANY)
+#' @usage concat_ws(separator, string)
 #' @param separator `VARCHAR`
 #' @param string `ANY`
 #' @return `VARCHAR`
@@ -2324,9 +1891,8 @@ concat_ws <- function(separator = VARCHAR, string = ANY) {
 #' If arg2 is NULL, return NULL. Otherwise, return arg1.
 #'
 #' @name constant_or_null
-#' @usage constant_or_null(arg1 = ANY, arg2 = ANY)
-#' @param arg1 `ANY`
-#' @param arg2 `ANY`
+#' @usage constant_or_null(arg1, arg2)
+#' @param arg1,arg2 `ANY`
 #' @return `ANY`
 #' @export
 #' @section SQL examples:
@@ -2340,27 +1906,25 @@ constant_or_null <- function(arg1 = ANY, arg2 = ANY) {
 #' DuckDB function contains
 #'
 #' @description
-#' Returns `true` if `search_string` is found within `string`.
-#'
-#' Returns `true` if the `list` contains the `element`.
-#'
-#' Checks if a `map` contains a given `key`.
+#' \itemize{
+#' \item \code{contains(string = VARCHAR, search_string = VARCHAR)}: Returns `true` if `search_string` is found within `string`.
+#' \item \code{contains(list = `T[]`, element = T)}: Returns `true` if the `list` contains the `element`.
+#' \item \code{contains(map = `MAP(K, V)`, key = K)}: Checks if a `map` contains a given `key`.
+#' \item \code{contains(col0 = STRUCT, col1 = ANY)}: (Description missing.)
+#' }
 #'
 #' @name contains
-#' @usage NULL
+#' @usage contains(string, search_string)
+#' @param string,search_string `VARCHAR`
+#' @return `BOOLEAN`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{contains(string = VARCHAR, search_string = VARCHAR)}
-#' \item \code{contains(col0 = `T[]`, col1 = T)}
-#' \item \code{contains(col0 = `MAP(K, V)`, col1 = K)}
+#' \item \code{contains(list = `T[]`, element = T)}
+#' \item \code{contains(map = `MAP(K, V)`, key = K)}
 #' \item \code{contains(col0 = STRUCT, col1 = ANY)}
 #' }
-#' @param string `VARCHAR`
-#' @param search_string `VARCHAR`
-#' @param col0 `T[] | MAP(K, V) | STRUCT`
-#' @param col1 `T | K | ANY`
-#' @return `BOOLEAN`
-#' @export
 #' @family list
 #' @family map
 #' @family string
@@ -2370,7 +1934,7 @@ constant_or_null <- function(arg1 = ANY, arg2 = ANY) {
 #' contains([1, 2, NULL], 1)
 #' contains(MAP {'key1': 10, 'key2': 20, 'key3': 30}, 'key2')
 #' ```
-contains <- function(string = VARCHAR, search_string = VARCHAR, col0 = `T[] | MAP(K, V) | STRUCT`, col1 = `T | K | ANY`) {
+contains <- function(string = VARCHAR, search_string = VARCHAR) {
   stop("DuckDB function contains() is not available in R.")
 }
 
@@ -2380,9 +1944,8 @@ contains <- function(string = VARCHAR, search_string = VARCHAR, col0 = `T[] | MA
 #' DuckDB function `copy_database()`.
 #'
 #' @name copy_database
-#' @usage copy_database(col0 = VARCHAR, col1 = VARCHAR)
-#' @param col0 `VARCHAR`
-#' @param col1 `VARCHAR`
+#' @usage copy_database(col0, col1)
+#' @param col0,col1 `VARCHAR`
 #' @return Unspecified.
 #' @export
 copy_database <- function(col0 = VARCHAR, col1 = VARCHAR) {
@@ -2395,9 +1958,8 @@ copy_database <- function(col0 = VARCHAR, col1 = VARCHAR) {
 #' Returns the correlation coefficient for non-NULL pairs in a group.
 #'
 #' @name corr
-#' @usage corr(y = DOUBLE, x = DOUBLE)
-#' @param y `DOUBLE`
-#' @param x `DOUBLE`
+#' @usage corr(y, x)
+#' @param y,x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
 #' @section SQL examples:
@@ -2414,7 +1976,7 @@ corr <- function(y = DOUBLE, x = DOUBLE) {
 #' Computes the cos of x.
 #'
 #' @name cos
-#' @usage cos(x = DOUBLE)
+#' @usage cos(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -2432,7 +1994,7 @@ cos <- function(x = DOUBLE) {
 #' Computes the hyperbolic cos of x.
 #'
 #' @name cosh
-#' @usage cosh(x = DOUBLE)
+#' @usage cosh(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -2450,7 +2012,7 @@ cosh <- function(x = DOUBLE) {
 #' Computes the cotangent of x.
 #'
 #' @name cot
-#' @usage cot(x = DOUBLE)
+#' @usage cot(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -2468,15 +2030,15 @@ cot <- function(x = DOUBLE) {
 #' Returns the number of non-NULL values in arg.
 #'
 #' @name count
-#' @usage NULL
+#' @usage count(arg)
+#' @param arg `ANY`
+#' @return `BIGINT`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{count(arg = ANY)}
 #' \item \code{count()}
 #' }
-#' @param arg `ANY`
-#' @return `BIGINT`
-#' @export
 #' @section SQL examples:
 #' ```
 #' count(A)
@@ -2491,7 +2053,7 @@ count <- function(arg = ANY) {
 #' Counts the total number of TRUE values for a boolean column.
 #'
 #' @name count_if
-#' @usage count_if(arg = BOOLEAN)
+#' @usage count_if(arg)
 #' @param arg `BOOLEAN`
 #' @return `HUGEINT`
 #' @export
@@ -2530,9 +2092,8 @@ count_star <- function() {
 #' Returns the population covariance of input values.
 #'
 #' @name covar_pop
-#' @usage covar_pop(y = DOUBLE, x = DOUBLE)
-#' @param y `DOUBLE`
-#' @param x `DOUBLE`
+#' @usage covar_pop(y, x)
+#' @param y,x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
 #' @section SQL examples:
@@ -2549,9 +2110,8 @@ covar_pop <- function(y = DOUBLE, x = DOUBLE) {
 #' Returns the sample covariance for non-NULL pairs in a group.
 #'
 #' @name covar_samp
-#' @usage covar_samp(y = DOUBLE, x = DOUBLE)
-#' @param y `DOUBLE`
-#' @param x `DOUBLE`
+#' @usage covar_samp(y, x)
+#' @param y,x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
 #' @section SQL examples:
@@ -2568,7 +2128,7 @@ covar_samp <- function(y = DOUBLE, x = DOUBLE) {
 #' Constructs a binary-comparable sort key based on a set of input parameters and sort qualifiers.
 #'
 #' @name create_sort_key
-#' @usage create_sort_key(parameters... = ANY)
+#' @usage create_sort_key(parameters...)
 #' @param parameters... `ANY`
 #' @return `BLOB`
 #' @export
@@ -2718,12 +2278,7 @@ current_schema <- function() {
 #' Returns list of schemas. Pass a parameter of True to include implicit schemas.
 #'
 #' @name current_schemas
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{current_schemas(include_implicit = BOOLEAN)}
-#' \item \code{current_schemas(include_implicit)}
-#' }
+#' @usage current_schemas(include_implicit)
 #' @param include_implicit `BOOLEAN`
 #' @return `VARCHAR[]`
 #' @export
@@ -2741,7 +2296,7 @@ current_schemas <- function(include_implicit = BOOLEAN) {
 #' Returns the current value of the configuration setting.
 #'
 #' @name current_setting
-#' @usage current_setting(setting_name = VARCHAR)
+#' @usage current_setting(setting_name)
 #' @param setting_name `VARCHAR`
 #' @return `ANY`
 #' @export
@@ -2791,15 +2346,15 @@ current_user <- function() {
 #' Return the current value of the sequence. Note that nextval must be called at least once prior to calling currval.
 #'
 #' @name currval
-#' @usage currval(`'sequence_name'` = VARCHAR)
-#' @param 'sequence_name' `VARCHAR`
+#' @usage currval(sequence_name)
+#' @param sequence_name `VARCHAR`
 #' @return `BIGINT`
 #' @export
 #' @section SQL examples:
 #' ```
 #' currval('my_sequence_name')
 #' ```
-currval <- function(`'sequence_name'` = VARCHAR) {
+currval <- function(sequence_name = VARCHAR) {
   stop("DuckDB function currval() is not available in R.")
 }
 
@@ -2809,9 +2364,8 @@ currval <- function(`'sequence_name'` = VARCHAR) {
 #' Extension of Levenshtein distance to also include transposition of adjacent characters as an allowed edit operation. In other words, the minimum number of edit operations (insertions, deletions, substitutions or transpositions) required to change one string to another. Characters of different cases (e.g., `a` and `A`) are considered different.
 #'
 #' @name damerau_levenshtein
-#' @usage damerau_levenshtein(s1 = VARCHAR, s2 = VARCHAR)
-#' @param s1 `VARCHAR`
-#' @param s2 `VARCHAR`
+#' @usage damerau_levenshtein(s1, s2)
+#' @param s1,s2 `VARCHAR`
 #' @return `BIGINT`
 #' @export
 #' @family text_similarity
@@ -2858,8 +2412,7 @@ database_size <- function() {
 #'
 #' @name date_add
 #' @usage date_add(date, interval)
-#' @param date Unspecified.
-#' @param interval Unspecified.
+#' @param date,interval Unspecified.
 #' @return Unspecified.
 #' @export
 date_add <- function(date, interval) {
@@ -2872,14 +2425,7 @@ date_add <- function(date, interval) {
 #' The number of partition boundaries between the timestamps.
 #'
 #' @name date_diff
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{date_diff(part = VARCHAR, startdate = DATE, enddate = DATE)}
-#' \item \code{date_diff(part = VARCHAR, startdate = TIME, enddate = TIME)}
-#' \item \code{date_diff(part = VARCHAR, startdate = TIMESTAMP, enddate = TIMESTAMP)}
-#' \item \code{date_diff(part = VARCHAR, startdate = `TIMESTAMP WITH TIME ZONE`, enddate = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage date_diff(part, startdate, enddate)
 #' @param part `VARCHAR`
 #' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
@@ -2906,24 +2452,7 @@ datediff <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIME
 #' Get subfield (equivalent to extract).
 #'
 #' @name date_part
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{date_part(ts = `VARCHAR[]`, col1 = DATE)}
-#' \item \code{date_part(ts = `VARCHAR[]`, col1 = INTERVAL)}
-#' \item \code{date_part(ts = `VARCHAR[]`, col1 = TIME)}
-#' \item \code{date_part(ts = `VARCHAR[]`, col1 = TIMESTAMP)}
-#' \item \code{date_part(ts = `VARCHAR[]`, col1 = `TIME WITH TIME ZONE`)}
-#' \item \code{date_part(ts = `VARCHAR[]`, col1 = TIME_NS)}
-#' \item \code{date_part(ts = VARCHAR, col1 = DATE)}
-#' \item \code{date_part(ts = VARCHAR, col1 = INTERVAL)}
-#' \item \code{date_part(ts = VARCHAR, col1 = TIME)}
-#' \item \code{date_part(ts = VARCHAR, col1 = TIMESTAMP)}
-#' \item \code{date_part(ts = VARCHAR, col1 = `TIME WITH TIME ZONE`)}
-#' \item \code{date_part(ts = VARCHAR, col1 = TIME_NS)}
-#' \item \code{date_part(ts = `VARCHAR[]`, col1 = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{date_part(ts = VARCHAR, col1 = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage date_part(ts, col1)
 #' @param ts `VARCHAR[] | VARCHAR`
 #' @param col1 `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `STRUCT() | BIGINT`
@@ -2949,14 +2478,7 @@ datepart <- function(ts = `VARCHAR[] | VARCHAR`, col1 = `DATE | INTERVAL | TIME 
 #' The number of complete partitions between the timestamps.
 #'
 #' @name date_sub
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{date_sub(part = VARCHAR, startdate = DATE, enddate = DATE)}
-#' \item \code{date_sub(part = VARCHAR, startdate = TIME, enddate = TIME)}
-#' \item \code{date_sub(part = VARCHAR, startdate = TIMESTAMP, enddate = TIMESTAMP)}
-#' \item \code{date_sub(part = VARCHAR, startdate = `TIMESTAMP WITH TIME ZONE`, enddate = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage date_sub(part, startdate, enddate)
 #' @param part `VARCHAR`
 #' @param startdate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @param enddate `DATE | TIME | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
@@ -2983,14 +2505,7 @@ datesub <- function(part = VARCHAR, startdate = `DATE | TIME | TIMESTAMP | TIMES
 #' Truncate to specified precision.
 #'
 #' @name date_trunc
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{date_trunc(part = VARCHAR, timestamp = DATE)}
-#' \item \code{date_trunc(part = VARCHAR, timestamp = INTERVAL)}
-#' \item \code{date_trunc(part = VARCHAR, timestamp = TIMESTAMP)}
-#' \item \code{date_trunc(part = VARCHAR, timestamp = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage date_trunc(part, timestamp)
 #' @param part `VARCHAR`
 #' @param timestamp `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `TIMESTAMP | INTERVAL | TIMESTAMP WITH TIME ZONE`
@@ -3016,14 +2531,7 @@ datetrunc <- function(part = VARCHAR, timestamp = `DATE | INTERVAL | TIMESTAMP |
 #' Extract the day component from a date or timestamp.
 #'
 #' @name day
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{day(ts = DATE)}
-#' \item \code{day(ts = INTERVAL)}
-#' \item \code{day(ts = TIMESTAMP)}
-#' \item \code{day(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage day(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -3041,13 +2549,7 @@ day <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' The (English) name of the weekday.
 #'
 #' @name dayname
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{dayname(ts = DATE)}
-#' \item \code{dayname(ts = TIMESTAMP)}
-#' \item \code{dayname(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage dayname(ts)
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `VARCHAR`
 #' @export
@@ -3065,14 +2567,7 @@ dayname <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' Extract the dayofmonth component from a date or timestamp.
 #'
 #' @name dayofmonth
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{dayofmonth(ts = DATE)}
-#' \item \code{dayofmonth(ts = INTERVAL)}
-#' \item \code{dayofmonth(ts = TIMESTAMP)}
-#' \item \code{dayofmonth(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage dayofmonth(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -3090,14 +2585,7 @@ dayofmonth <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME Z
 #' Extract the dayofweek component from a date or timestamp.
 #'
 #' @name dayofweek
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{dayofweek(ts = DATE)}
-#' \item \code{dayofweek(ts = INTERVAL)}
-#' \item \code{dayofweek(ts = TIMESTAMP)}
-#' \item \code{dayofweek(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage dayofweek(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -3115,14 +2603,7 @@ dayofweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZO
 #' Extract the dayofyear component from a date or timestamp.
 #'
 #' @name dayofyear
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{dayofyear(ts = DATE)}
-#' \item \code{dayofyear(ts = INTERVAL)}
-#' \item \code{dayofyear(ts = TIMESTAMP)}
-#' \item \code{dayofyear(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage dayofyear(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -3154,14 +2635,7 @@ days_in_month <- function(date) {
 #' Extract the decade component from a date or timestamp.
 #'
 #' @name decade
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{decade(ts = DATE)}
-#' \item \code{decade(ts = INTERVAL)}
-#' \item \code{decade(ts = TIMESTAMP)}
-#' \item \code{decade(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage decade(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -3179,16 +2653,16 @@ decade <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' Converts `blob` to `VARCHAR`. Invalid UTF-8 is handled based on the error behavior argument. Can be 'strict' (default, fail), 'replace' to replace invalid characters with '?', or 'ignore' to skip invalid characters.
 #'
 #' @name decode
-#' @usage NULL
+#' @usage decode(blob, varchar)
+#' @param blob `BLOB`
+#' @param varchar `VARCHAR`
+#' @return `VARCHAR`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{decode(blob = BLOB)}
 #' \item \code{decode(blob = BLOB, varchar = VARCHAR)}
 #' }
-#' @param blob `BLOB`
-#' @param varchar `VARCHAR`
-#' @return `VARCHAR`
-#' @export
 #' @family blob
 #' @section SQL examples:
 #' ```
@@ -3206,7 +2680,7 @@ decode <- function(blob = BLOB, varchar = VARCHAR) {
 #' Converts radians to degrees.
 #'
 #' @name degrees
-#' @usage degrees(x = DOUBLE)
+#' @usage degrees(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -3420,24 +2894,8 @@ disable_verify_serializer <- function() {
 #' DuckDB function `divide()`.
 #'
 #' @name divide
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{divide(col0 = TINYINT, col1 = TINYINT)}
-#' \item \code{divide(col0 = SMALLINT, col1 = SMALLINT)}
-#' \item \code{divide(col0 = INTEGER, col1 = INTEGER)}
-#' \item \code{divide(col0 = BIGINT, col1 = BIGINT)}
-#' \item \code{divide(col0 = HUGEINT, col1 = HUGEINT)}
-#' \item \code{divide(col0 = FLOAT, col1 = FLOAT)}
-#' \item \code{divide(col0 = DOUBLE, col1 = DOUBLE)}
-#' \item \code{divide(col0 = UTINYINT, col1 = UTINYINT)}
-#' \item \code{divide(col0 = USMALLINT, col1 = USMALLINT)}
-#' \item \code{divide(col0 = UINTEGER, col1 = UINTEGER)}
-#' \item \code{divide(col0 = UBIGINT, col1 = UBIGINT)}
-#' \item \code{divide(col0 = UHUGEINT, col1 = UHUGEINT)}
-#' }
-#' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
-#' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
+#' @usage divide(col0, col1)
+#' @param col0,col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @export
 divide <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
@@ -3639,7 +3097,7 @@ duckdb_log_contexts <- function() {
 #' DuckDB function `duckdb_logs()`.
 #'
 #' @name duckdb_logs
-#' @usage duckdb_logs(denormalized_table = BOOLEAN)
+#' @usage duckdb_logs(denormalized_table)
 #' @param denormalized_table `BOOLEAN`
 #' @return Unspecified.
 #' @export
@@ -3751,7 +3209,7 @@ duckdb_secret_types <- function() {
 #' DuckDB function `duckdb_secrets()`.
 #'
 #' @name duckdb_secrets
-#' @usage duckdb_secrets(redact = BOOLEAN)
+#' @usage duckdb_secrets(redact)
 #' @param redact `BOOLEAN`
 #' @return Unspecified.
 #' @export
@@ -3793,7 +3251,7 @@ duckdb_settings <- function() {
 #' DuckDB function `duckdb_table_sample()`.
 #'
 #' @name duckdb_table_sample
-#' @usage duckdb_table_sample(col0 = VARCHAR)
+#' @usage duckdb_table_sample(col0)
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
@@ -3947,12 +3405,7 @@ enable_profile <- function() {
 #' DuckDB function `enable_profiling()`.
 #'
 #' @name enable_profiling
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{enable_profiling(mode = VARCHAR, metrics = ANY, save_location = VARCHAR, coverage = VARCHAR, format = VARCHAR)}
-#' \item \code{enable_profiling()}
-#' }
+#' @usage enable_profiling(mode, metrics, save_location, coverage, format)
 #' @param mode `VARCHAR`
 #' @param metrics `ANY`
 #' @param save_location `VARCHAR`
@@ -3960,6 +3413,11 @@ enable_profile <- function() {
 #' @param format `VARCHAR`
 #' @return Unspecified.
 #' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{enable_profiling(mode = VARCHAR, metrics = ANY, save_location = VARCHAR, coverage = VARCHAR, format = VARCHAR)}
+#' \item \code{enable_profiling()}
+#' }
 enable_profiling <- function(mode = VARCHAR, metrics = ANY, save_location = VARCHAR, coverage = VARCHAR, format = VARCHAR) {
   stop("DuckDB function enable_profiling() is not available in R.")
 }
@@ -3998,7 +3456,7 @@ enable_verification <- function() {
 #' Converts the `string` to `BLOB`. Converts UTF-8 characters into literal encoding.
 #'
 #' @name encode
-#' @usage encode(string = VARCHAR)
+#' @usage encode(string)
 #' @param string `VARCHAR`
 #' @return `BLOB`
 #' @export
@@ -4017,7 +3475,7 @@ encode <- function(string = VARCHAR) {
 #' Returns the log-2 entropy of count input-values.
 #'
 #' @name entropy
-#' @usage entropy(x = ANY)
+#' @usage entropy(x)
 #' @param x `ANY`
 #' @return `DOUBLE`
 #' @export
@@ -4031,7 +3489,7 @@ entropy <- function(x = ANY) {
 #' Returns the numeric value backing the given enum value.
 #'
 #' @name enum_code
-#' @usage enum_code(enum = ANY)
+#' @usage enum_code(enum)
 #' @param enum `ANY`
 #' @return `ANY`
 #' @export
@@ -4049,7 +3507,7 @@ enum_code <- function(enum = ANY) {
 #' Returns the first value of the input enum type.
 #'
 #' @name enum_first
-#' @usage enum_first(enum = ANY)
+#' @usage enum_first(enum)
 #' @param enum `ANY`
 #' @return `VARCHAR`
 #' @export
@@ -4067,7 +3525,7 @@ enum_first <- function(enum = ANY) {
 #' Returns the last value of the input enum type.
 #'
 #' @name enum_last
-#' @usage enum_last(enum = ANY)
+#' @usage enum_last(enum)
 #' @param enum `ANY`
 #' @return `VARCHAR`
 #' @export
@@ -4085,7 +3543,7 @@ enum_last <- function(enum = ANY) {
 #' Returns all values of the input enum type as an array.
 #'
 #' @name enum_range
-#' @usage enum_range(enum = ANY)
+#' @usage enum_range(enum)
 #' @param enum `ANY`
 #' @return `VARCHAR[]`
 #' @export
@@ -4103,9 +3561,8 @@ enum_range <- function(enum = ANY) {
 #' Returns the range between the two given enum values as an array. The values must be of the same enum type. When the first parameter is NULL, the result starts with the first value of the enum type. When the second parameter is NULL, the result ends with the last value of the enum type.
 #'
 #' @name enum_range_boundary
-#' @usage enum_range_boundary(start = ANY, end = ANY)
-#' @param start `ANY`
-#' @param end `ANY`
+#' @usage enum_range_boundary(start, end)
+#' @param start,end `ANY`
 #' @return `VARCHAR[]`
 #' @export
 #' @section SQL examples:
@@ -4122,17 +3579,7 @@ enum_range_boundary <- function(start = ANY, end = ANY) {
 #' Extract the epoch component from a temporal type.
 #'
 #' @name epoch
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{epoch(temporal = DATE)}
-#' \item \code{epoch(temporal = INTERVAL)}
-#' \item \code{epoch(temporal = TIME)}
-#' \item \code{epoch(temporal = TIMESTAMP)}
-#' \item \code{epoch(temporal = `TIME WITH TIME ZONE`)}
-#' \item \code{epoch(temporal = TIME_NS)}
-#' \item \code{epoch(temporal = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage epoch(temporal)
 #' @param temporal `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `DOUBLE`
 #' @export
@@ -4150,18 +3597,7 @@ epoch <- function(temporal = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
 #' Extract the epoch component in milliseconds from a temporal type.
 #'
 #' @name epoch_ms
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{epoch_ms(temporal = DATE)}
-#' \item \code{epoch_ms(temporal = TIMESTAMP)}
-#' \item \code{epoch_ms(temporal = INTERVAL)}
-#' \item \code{epoch_ms(temporal = TIME)}
-#' \item \code{epoch_ms(temporal = TIME_NS)}
-#' \item \code{epoch_ms(temporal = `TIME WITH TIME ZONE`)}
-#' \item \code{epoch_ms(temporal = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{epoch_ms(temporal = BIGINT)}
-#' }
+#' @usage epoch_ms(temporal)
 #' @param temporal `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | BIGINT`
 #' @return `BIGINT | TIMESTAMP`
 #' @export
@@ -4179,18 +3615,7 @@ epoch_ms <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | 
 #' Extract the epoch component in nanoseconds from a temporal type.
 #'
 #' @name epoch_ns
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{epoch_ns(temporal = DATE)}
-#' \item \code{epoch_ns(temporal = TIMESTAMP)}
-#' \item \code{epoch_ns(temporal = INTERVAL)}
-#' \item \code{epoch_ns(temporal = TIME)}
-#' \item \code{epoch_ns(temporal = TIME_NS)}
-#' \item \code{epoch_ns(temporal = `TIME WITH TIME ZONE`)}
-#' \item \code{epoch_ns(temporal = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{epoch_ns(temporal = TIMESTAMP_NS)}
-#' }
+#' @usage epoch_ns(temporal)
 #' @param temporal `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | TIMESTAMP_NS`
 #' @return `BIGINT`
 #' @export
@@ -4208,17 +3633,7 @@ epoch_ns <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | 
 #' Extract the epoch component in microseconds from a temporal type.
 #'
 #' @name epoch_us
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{epoch_us(temporal = DATE)}
-#' \item \code{epoch_us(temporal = TIMESTAMP)}
-#' \item \code{epoch_us(temporal = INTERVAL)}
-#' \item \code{epoch_us(temporal = TIME)}
-#' \item \code{epoch_us(temporal = TIME_NS)}
-#' \item \code{epoch_us(temporal = `TIME WITH TIME ZONE`)}
-#' \item \code{epoch_us(temporal = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage epoch_us(temporal)
 #' @param temporal `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -4236,14 +3651,7 @@ epoch_us <- function(temporal = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | 
 #' Generates bin_count equi-width bins between the min and max. If enabled nice_rounding makes the numbers more readable/less jagged.
 #'
 #' @name equi_width_bins
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{equi_width_bins(min = BIGINT, max = BIGINT, bin_count = BIGINT, nice_rounding = BOOLEAN)}
-#' \item \code{equi_width_bins(min = DOUBLE, max = DOUBLE, bin_count = BIGINT, nice_rounding = BOOLEAN)}
-#' \item \code{equi_width_bins(min = TIMESTAMP, max = TIMESTAMP, bin_count = BIGINT, nice_rounding = BOOLEAN)}
-#' \item \code{equi_width_bins(min = ANY, max = ANY, bin_count = BIGINT, nice_rounding = BOOLEAN)}
-#' }
+#' @usage equi_width_bins(min, max, bin_count, nice_rounding)
 #' @param min `BIGINT | DOUBLE | TIMESTAMP | ANY`
 #' @param max `BIGINT | DOUBLE | TIMESTAMP | ANY`
 #' @param bin_count `BIGINT`
@@ -4264,14 +3672,7 @@ equi_width_bins <- function(min = `BIGINT | DOUBLE | TIMESTAMP | ANY`, max = `BI
 #' Extract the era component from a date or timestamp.
 #'
 #' @name era
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{era(ts = DATE)}
-#' \item \code{era(ts = INTERVAL)}
-#' \item \code{era(ts = TIMESTAMP)}
-#' \item \code{era(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage era(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -4289,7 +3690,7 @@ era <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' Throws the given error message.
 #'
 #' @name error
-#' @usage error(message = VARCHAR)
+#' @usage error(message)
 #' @param message `VARCHAR`
 #' @return `"NULL"`
 #' @export
@@ -4307,7 +3708,7 @@ error <- function(message = VARCHAR) {
 #' Rounds x to next even number by rounding away from zero.
 #'
 #' @name even
-#' @usage even(x = DOUBLE)
+#' @usage even(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -4325,7 +3726,7 @@ even <- function(x = DOUBLE) {
 #' Computes e to the power of x.
 #'
 #' @name exp
-#' @usage exp(x = DOUBLE)
+#' @usage exp(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -4357,7 +3758,7 @@ extension_versions <- function() {
 #' Factorial of x. Computes the product of the current integer and all integers below it.
 #'
 #' @name factorial
-#' @usage factorial(x = INTEGER)
+#' @usage factorial(x)
 #' @param x `INTEGER`
 #' @return `HUGEINT`
 #' @export
@@ -4382,7 +3783,7 @@ factorial <- function(x = INTEGER) {
 #' Calculates the average using a more accurate floating point summation (Kahan Sum).
 #'
 #' @name favg
-#' @usage favg(x = DOUBLE)
+#' @usage favg(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -4401,8 +3802,7 @@ favg <- function(x = DOUBLE) {
 #'
 #' @name fdiv
 #' @usage fdiv(x, y)
-#' @param x Unspecified.
-#' @param y Unspecified.
+#' @param x,y Unspecified.
 #' @return Unspecified.
 #' @export
 fdiv <- function(x, y) {
@@ -4415,7 +3815,7 @@ fdiv <- function(x, y) {
 #' DuckDB function `fill()`.
 #'
 #' @name fill
-#' @usage fill(col0 = T)
+#' @usage fill(col0)
 #' @param col0 `T`
 #' @return `T`
 #' @export
@@ -4429,7 +3829,7 @@ fill <- function(col0 = T) {
 #' DuckDB function `finalize()`.
 #'
 #' @name finalize
-#' @usage finalize(col0 = `AGGREGATE_STATE<?>`)
+#' @usage finalize(col0)
 #' @param col0 `AGGREGATE_STATE<?>`
 #' @return `INVALID`
 #' @export
@@ -4443,22 +3843,21 @@ finalize <- function(col0 = `AGGREGATE_STATE<?>`) {
 #' Returns the first value (NULL or non-NULL) from arg. This function is affected by ordering.
 #'
 #' @name first
-#' @usage NULL
+#' @usage first(arg)
+#' @param arg `DECIMAL | ANY`
+#' @return `DECIMAL | ANY | T`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{first(arg = DECIMAL)}
 #' \item \code{first(arg = ANY)}
 #' \item \code{first(col0 = T)}
 #' }
-#' @param arg `DECIMAL | ANY`
-#' @param col0 `T`
-#' @return `DECIMAL | ANY | T`
-#' @export
 #' @section SQL examples:
 #' ```
 #' first(A)
 #' ```
-first <- function(arg = `DECIMAL | ANY`, col0 = T) {
+first <- function(arg = `DECIMAL | ANY`) {
   stop("DuckDB function first() is not available in R.")
 }
 
@@ -4475,7 +3874,7 @@ arbitrary <- function(arg = `DECIMAL | ANY`) {
 #' DuckDB function `first_value()`.
 #'
 #' @name first_value
-#' @usage first_value(col0 = T)
+#' @usage first_value(col0)
 #' @param col0 `T`
 #' @return `T`
 #' @export
@@ -4489,7 +3888,7 @@ first_value <- function(col0 = T) {
 #' Flattens a nested list by one level.
 #'
 #' @name flatten
-#' @usage flatten(nested_list = `T[][]`)
+#' @usage flatten(nested_list)
 #' @param nested_list `T[][]`
 #' @return `T[]`
 #' @export
@@ -4508,13 +3907,7 @@ flatten <- function(nested_list = `T[][]`) {
 #' Rounds the number down.
 #'
 #' @name floor
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{floor(x = FLOAT)}
-#' \item \code{floor(x = DOUBLE)}
-#' \item \code{floor(x = DECIMAL)}
-#' }
+#' @usage floor(x)
 #' @param x `FLOAT | DOUBLE | DECIMAL`
 #' @return `FLOAT | DOUBLE | DECIMAL`
 #' @export
@@ -4533,8 +3926,7 @@ floor <- function(x = `FLOAT | DOUBLE | DECIMAL`) {
 #'
 #' @name fmod
 #' @usage fmod(x, y)
-#' @param x Unspecified.
-#' @param y Unspecified.
+#' @param x,y Unspecified.
 #' @return Unspecified.
 #' @export
 fmod <- function(x, y) {
@@ -4547,16 +3939,16 @@ fmod <- function(x, y) {
 #' DuckDB function `force_checkpoint()`.
 #'
 #' @name force_checkpoint
-#' @usage NULL
+#' @usage force_checkpoint()
+
+#' @return Unspecified.
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{force_checkpoint()}
 #' \item \code{force_checkpoint(col0 = VARCHAR)}
 #' }
-#' @param col0 `VARCHAR`
-#' @return Unspecified.
-#' @export
-force_checkpoint <- function(col0 = VARCHAR) {
+force_checkpoint <- function() {
   stop("DuckDB function force_checkpoint() is not available in R.")
 }
 
@@ -4566,7 +3958,7 @@ force_checkpoint <- function(col0 = VARCHAR) {
 #' Converts `integer` to a human-readable representation using units based on powers of 10 (KB, MB, GB, etc.).
 #'
 #' @name formatReadableDecimalSize
-#' @usage formatReadableDecimalSize(integer = BIGINT)
+#' @usage formatReadableDecimalSize(integer)
 #' @param integer `BIGINT`
 #' @return `VARCHAR`
 #' @export
@@ -4586,7 +3978,7 @@ formatReadableDecimalSize <- function(integer = BIGINT) {
 #' Converts `integer` to a human-readable representation using units based on powers of 2 (KiB, MiB, GiB, etc.).
 #'
 #' @name format_bytes
-#' @usage format_bytes(integer = BIGINT)
+#' @usage format_bytes(integer)
 #' @param integer `BIGINT`
 #' @return `VARCHAR`
 #' @export
@@ -4614,8 +4006,7 @@ formatReadableSize <- function(integer = BIGINT) {
 #'
 #' @name format_pg_type
 #' @usage format_pg_type(logical_type, type_name)
-#' @param logical_type Unspecified.
-#' @param type_name Unspecified.
+#' @param logical_type,type_name Unspecified.
 #' @return Unspecified.
 #' @export
 format_pg_type <- function(logical_type, type_name) {
@@ -4629,8 +4020,7 @@ format_pg_type <- function(logical_type, type_name) {
 #'
 #' @name format_type
 #' @usage format_type(type_oid, typemod)
-#' @param type_oid Unspecified.
-#' @param typemod Unspecified.
+#' @param type_oid,typemod Unspecified.
 #' @return Unspecified.
 #' @export
 format_type <- function(type_oid, typemod) {
@@ -4643,7 +4033,7 @@ format_type <- function(type_oid, typemod) {
 #' Converts a base64 encoded `string` to a character string (`BLOB`).
 #'
 #' @name from_base64
-#' @usage from_base64(string = VARCHAR)
+#' @usage from_base64(string)
 #' @param string `VARCHAR`
 #' @return `BLOB`
 #' @export
@@ -4677,7 +4067,7 @@ functions <- function() {
 #' Interpolation of (x-1) factorial (so decimal inputs are allowed).
 #'
 #' @name gamma
-#' @usage gamma(x = DOUBLE)
+#' @usage gamma(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -4695,7 +4085,12 @@ gamma <- function(x = DOUBLE) {
 #' Creates a list of values between `start` and `stop` - the stop parameter is inclusive.
 #'
 #' @name generate_series
-#' @usage NULL
+#' @usage generate_series(start, stop, step)
+#' @param start `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @param stop `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @param step `BIGINT | INTERVAL`
+#' @return `BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{generate_series(col0 = BIGINT)}
@@ -4708,20 +4103,12 @@ gamma <- function(x = DOUBLE) {
 #' \item \code{generate_series(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}
 #' \item \code{generate_series(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}
 #' }
-#' @param col0 `BIGINT | TIMESTAMP`
-#' @param col1 `BIGINT | TIMESTAMP`
-#' @param col2 `BIGINT | INTERVAL`
-#' @param start `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @param stop `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @param step `BIGINT | INTERVAL`
-#' @return `BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
-#' @export
 #' @family list
 #' @section SQL examples:
 #' ```
 #' generate_series(2, 5, 3)
 #' ```
-generate_series <- function(col0 = `BIGINT | TIMESTAMP`, col1 = `BIGINT | TIMESTAMP`, col2 = `BIGINT | INTERVAL`, start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, stop = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, step = `BIGINT | INTERVAL`) {
+generate_series <- function(start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, stop = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, step = `BIGINT | INTERVAL`) {
   stop("DuckDB function generate_series() is not available in R.")
 }
 
@@ -4732,8 +4119,7 @@ generate_series <- function(col0 = `BIGINT | TIMESTAMP`, col1 = `BIGINT | TIMEST
 #'
 #' @name generate_subscripts
 #' @usage generate_subscripts(arr, dim)
-#' @param arr Unspecified.
-#' @param dim Unspecified.
+#' @param arr,dim Unspecified.
 #' @return Unspecified.
 #' @export
 generate_subscripts <- function(arr, dim) {
@@ -4774,7 +4160,7 @@ geometric_mean <- function(x) {
 #' Extracts the nth bit from bitstring; the first (leftmost) bit is indexed 0.
 #'
 #' @name get_bit
-#' @usage get_bit(bitstring = BIT, index = INTEGER)
+#' @usage get_bit(bitstring, index)
 #' @param bitstring `BIT`
 #' @param index `INTEGER`
 #' @return `INTEGER`
@@ -4839,7 +4225,7 @@ transaction_timestamp <- function() {
 #' Returns the type of the result of the expression.
 #'
 #' @name get_type
-#' @usage get_type(expression = ANY)
+#' @usage get_type(expression)
 #' @param expression `ANY`
 #' @return `TYPE`
 #' @export
@@ -4857,7 +4243,7 @@ get_type <- function(expression = ANY) {
 #' DuckDB function `getvariable()`.
 #'
 #' @name getvariable
-#' @usage getvariable(col0 = VARCHAR)
+#' @usage getvariable(col0)
 #' @param col0 `VARCHAR`
 #' @return `ANY`
 #' @export
@@ -4871,12 +4257,7 @@ getvariable <- function(col0 = VARCHAR) {
 #' DuckDB function `glob()`.
 #'
 #' @name glob
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{glob(col0 = VARCHAR)}
-#' \item \code{glob(col0 = `VARCHAR[]`)}
-#' }
+#' @usage glob(col0)
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
 #' @export
@@ -4890,7 +4271,7 @@ glob <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' Returns the largest value. For strings lexicographical ordering is used. Note that lowercase characters are considered “larger” than uppercase characters and collations are not supported.
 #'
 #' @name greatest
-#' @usage greatest(arg1 = ANY)
+#' @usage greatest(arg1)
 #' @param arg1 `ANY`
 #' @return `ANY`
 #' @export
@@ -4914,14 +4295,8 @@ greatest <- function(arg1 = ANY) {
 #' Computes the greatest common divisor of x and y.
 #'
 #' @name greatest_common_divisor
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{greatest_common_divisor(x = BIGINT, y = BIGINT)}
-#' \item \code{greatest_common_divisor(x = HUGEINT, y = HUGEINT)}
-#' }
-#' @param x `BIGINT | HUGEINT`
-#' @param y `BIGINT | HUGEINT`
+#' @usage greatest_common_divisor(x, y)
+#' @param x,y `BIGINT | HUGEINT`
 #' @return `BIGINT | HUGEINT`
 #' @export
 #' @section SQL examples:
@@ -4945,9 +4320,8 @@ gcd <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
 #' The Hamming distance between to strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., `a` and `A`) are considered different.
 #'
 #' @name hamming
-#' @usage hamming(s1 = VARCHAR, s2 = VARCHAR)
-#' @param s1 `VARCHAR`
-#' @param s2 `VARCHAR`
+#' @usage hamming(s1, s2)
+#' @param s1,s2 `VARCHAR`
 #' @return `BIGINT`
 #' @export
 #' @family text_similarity
@@ -4972,18 +4346,16 @@ mismatches <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' DuckDB function `has_any_column_privilege()`.
 #'
 #' @name has_any_column_privilege
-#' @usage NULL
+#' @usage has_any_column_privilege(user, table, privilege)
+#' @param user,table,privilege Unspecified.
+#' @return Unspecified.
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{has_any_column_privilege(table, privilege)}
 #' \item \code{has_any_column_privilege(user, table, privilege)}
 #' }
-#' @param table Unspecified.
-#' @param privilege Unspecified.
-#' @param user Unspecified.
-#' @return Unspecified.
-#' @export
-has_any_column_privilege <- function(table, privilege, user) {
+has_any_column_privilege <- function(user, table, privilege) {
   stop("DuckDB function has_any_column_privilege() is not available in R.")
 }
 
@@ -4993,19 +4365,16 @@ has_any_column_privilege <- function(table, privilege, user) {
 #' DuckDB function `has_column_privilege()`.
 #'
 #' @name has_column_privilege
-#' @usage NULL
+#' @usage has_column_privilege(user, table, column, privilege)
+#' @param user,table,column,privilege Unspecified.
+#' @return Unspecified.
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{has_column_privilege(table, column, privilege)}
 #' \item \code{has_column_privilege(user, table, column, privilege)}
 #' }
-#' @param table Unspecified.
-#' @param column Unspecified.
-#' @param privilege Unspecified.
-#' @param user Unspecified.
-#' @return Unspecified.
-#' @export
-has_column_privilege <- function(table, column, privilege, user) {
+has_column_privilege <- function(user, table, column, privilege) {
   stop("DuckDB function has_column_privilege() is not available in R.")
 }
 
@@ -5015,18 +4384,16 @@ has_column_privilege <- function(table, column, privilege, user) {
 #' DuckDB function `has_database_privilege()`.
 #'
 #' @name has_database_privilege
-#' @usage NULL
+#' @usage has_database_privilege(user, database, privilege)
+#' @param user,database,privilege Unspecified.
+#' @return Unspecified.
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{has_database_privilege(database, privilege)}
 #' \item \code{has_database_privilege(user, database, privilege)}
 #' }
-#' @param database Unspecified.
-#' @param privilege Unspecified.
-#' @param user Unspecified.
-#' @return Unspecified.
-#' @export
-has_database_privilege <- function(database, privilege, user) {
+has_database_privilege <- function(user, database, privilege) {
   stop("DuckDB function has_database_privilege() is not available in R.")
 }
 
@@ -5036,18 +4403,16 @@ has_database_privilege <- function(database, privilege, user) {
 #' DuckDB function `has_foreign_data_wrapper_privilege()`.
 #'
 #' @name has_foreign_data_wrapper_privilege
-#' @usage NULL
+#' @usage has_foreign_data_wrapper_privilege(user, fdw, privilege)
+#' @param user,fdw,privilege Unspecified.
+#' @return Unspecified.
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{has_foreign_data_wrapper_privilege(fdw, privilege)}
 #' \item \code{has_foreign_data_wrapper_privilege(user, fdw, privilege)}
 #' }
-#' @param fdw Unspecified.
-#' @param privilege Unspecified.
-#' @param user Unspecified.
-#' @return Unspecified.
-#' @export
-has_foreign_data_wrapper_privilege <- function(fdw, privilege, user) {
+has_foreign_data_wrapper_privilege <- function(user, fdw, privilege) {
   stop("DuckDB function has_foreign_data_wrapper_privilege() is not available in R.")
 }
 
@@ -5057,18 +4422,16 @@ has_foreign_data_wrapper_privilege <- function(fdw, privilege, user) {
 #' DuckDB function `has_function_privilege()`.
 #'
 #' @name has_function_privilege
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{has_function_privilege(`function`, privilege)}
-#' \item \code{has_function_privilege(user, `function`, privilege)}
-#' }
-#' @param function Unspecified.
-#' @param privilege Unspecified.
-#' @param user Unspecified.
+#' @usage has_function_privilege(user, function., privilege)
+#' @param user,function.,privilege Unspecified.
 #' @return Unspecified.
 #' @export
-has_function_privilege <- function(`function`, privilege, user) {
+#' @section Overloads:
+#' \itemize{
+#' \item \code{has_function_privilege(function., privilege)}
+#' \item \code{has_function_privilege(user, function., privilege)}
+#' }
+has_function_privilege <- function(user, function., privilege) {
   stop("DuckDB function has_function_privilege() is not available in R.")
 }
 
@@ -5078,18 +4441,16 @@ has_function_privilege <- function(`function`, privilege, user) {
 #' DuckDB function `has_language_privilege()`.
 #'
 #' @name has_language_privilege
-#' @usage NULL
+#' @usage has_language_privilege(user, language, privilege)
+#' @param user,language,privilege Unspecified.
+#' @return Unspecified.
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{has_language_privilege(language, privilege)}
 #' \item \code{has_language_privilege(user, language, privilege)}
 #' }
-#' @param language Unspecified.
-#' @param privilege Unspecified.
-#' @param user Unspecified.
-#' @return Unspecified.
-#' @export
-has_language_privilege <- function(language, privilege, user) {
+has_language_privilege <- function(user, language, privilege) {
   stop("DuckDB function has_language_privilege() is not available in R.")
 }
 
@@ -5099,18 +4460,16 @@ has_language_privilege <- function(language, privilege, user) {
 #' DuckDB function `has_schema_privilege()`.
 #'
 #' @name has_schema_privilege
-#' @usage NULL
+#' @usage has_schema_privilege(user, schema, privilege)
+#' @param user,schema,privilege Unspecified.
+#' @return Unspecified.
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{has_schema_privilege(schema, privilege)}
 #' \item \code{has_schema_privilege(user, schema, privilege)}
 #' }
-#' @param schema Unspecified.
-#' @param privilege Unspecified.
-#' @param user Unspecified.
-#' @return Unspecified.
-#' @export
-has_schema_privilege <- function(schema, privilege, user) {
+has_schema_privilege <- function(user, schema, privilege) {
   stop("DuckDB function has_schema_privilege() is not available in R.")
 }
 
@@ -5120,18 +4479,16 @@ has_schema_privilege <- function(schema, privilege, user) {
 #' DuckDB function `has_sequence_privilege()`.
 #'
 #' @name has_sequence_privilege
-#' @usage NULL
+#' @usage has_sequence_privilege(user, sequence, privilege)
+#' @param user,sequence,privilege Unspecified.
+#' @return Unspecified.
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{has_sequence_privilege(sequence, privilege)}
 #' \item \code{has_sequence_privilege(user, sequence, privilege)}
 #' }
-#' @param sequence Unspecified.
-#' @param privilege Unspecified.
-#' @param user Unspecified.
-#' @return Unspecified.
-#' @export
-has_sequence_privilege <- function(sequence, privilege, user) {
+has_sequence_privilege <- function(user, sequence, privilege) {
   stop("DuckDB function has_sequence_privilege() is not available in R.")
 }
 
@@ -5141,18 +4498,16 @@ has_sequence_privilege <- function(sequence, privilege, user) {
 #' DuckDB function `has_server_privilege()`.
 #'
 #' @name has_server_privilege
-#' @usage NULL
+#' @usage has_server_privilege(user, server, privilege)
+#' @param user,server,privilege Unspecified.
+#' @return Unspecified.
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{has_server_privilege(server, privilege)}
 #' \item \code{has_server_privilege(user, server, privilege)}
 #' }
-#' @param server Unspecified.
-#' @param privilege Unspecified.
-#' @param user Unspecified.
-#' @return Unspecified.
-#' @export
-has_server_privilege <- function(server, privilege, user) {
+has_server_privilege <- function(user, server, privilege) {
   stop("DuckDB function has_server_privilege() is not available in R.")
 }
 
@@ -5162,18 +4517,16 @@ has_server_privilege <- function(server, privilege, user) {
 #' DuckDB function `has_table_privilege()`.
 #'
 #' @name has_table_privilege
-#' @usage NULL
+#' @usage has_table_privilege(user, table, privilege)
+#' @param user,table,privilege Unspecified.
+#' @return Unspecified.
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{has_table_privilege(table, privilege)}
 #' \item \code{has_table_privilege(user, table, privilege)}
 #' }
-#' @param table Unspecified.
-#' @param privilege Unspecified.
-#' @param user Unspecified.
-#' @return Unspecified.
-#' @export
-has_table_privilege <- function(table, privilege, user) {
+has_table_privilege <- function(user, table, privilege) {
   stop("DuckDB function has_table_privilege() is not available in R.")
 }
 
@@ -5183,18 +4536,16 @@ has_table_privilege <- function(table, privilege, user) {
 #' DuckDB function `has_tablespace_privilege()`.
 #'
 #' @name has_tablespace_privilege
-#' @usage NULL
+#' @usage has_tablespace_privilege(user, tablespace, privilege)
+#' @param user,tablespace,privilege Unspecified.
+#' @return Unspecified.
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{has_tablespace_privilege(tablespace, privilege)}
 #' \item \code{has_tablespace_privilege(user, tablespace, privilege)}
 #' }
-#' @param tablespace Unspecified.
-#' @param privilege Unspecified.
-#' @param user Unspecified.
-#' @return Unspecified.
-#' @export
-has_tablespace_privilege <- function(tablespace, privilege, user) {
+has_tablespace_privilege <- function(user, tablespace, privilege) {
   stop("DuckDB function has_tablespace_privilege() is not available in R.")
 }
 
@@ -5204,7 +4555,7 @@ has_tablespace_privilege <- function(tablespace, privilege, user) {
 #' Returns a `UBIGINT` with the hash of the `value`. Note that this is not a cryptographic hash.
 #'
 #' @name hash
-#' @usage hash(value = ANY)
+#' @usage hash(value)
 #' @param value `ANY`
 #' @return `UBIGINT`
 #' @export
@@ -5220,14 +4571,17 @@ hash <- function(value = ANY) {
 #' DuckDB function hex
 #'
 #' @description
-#' Converts the `string` to hexadecimal representation.
-#'
-#' Converts the `value` to `VARCHAR` using hexadecimal representation.
-#'
-#' Converts `blob` to `VARCHAR` using hexadecimal encoding.
+#' \itemize{
+#' \item \code{hex(string = VARCHAR)}: Converts the `string` to hexadecimal representation.
+#' \item \code{hex(value = BIGNUM)}, \code{hex(value = BIGINT)}, \code{hex(value = UBIGINT)}, \code{hex(value = HUGEINT)}, \code{hex(value = UHUGEINT)}: Converts the `value` to `VARCHAR` using hexadecimal representation.
+#' \item \code{hex(blob = BLOB)}: Converts `blob` to `VARCHAR` using hexadecimal encoding.
+#' }
 #'
 #' @name hex
-#' @usage NULL
+#' @usage hex(value)
+#' @param value `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`
+#' @return `VARCHAR`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{hex(string = VARCHAR)}
@@ -5238,11 +4592,6 @@ hash <- function(value = ANY) {
 #' \item \code{hex(value = HUGEINT)}
 #' \item \code{hex(value = UHUGEINT)}
 #' }
-#' @param string `VARCHAR`
-#' @param value `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`
-#' @param blob `BLOB`
-#' @return `VARCHAR`
-#' @export
 #' @family blob
 #' @family numeric
 #' @family string
@@ -5252,14 +4601,14 @@ hash <- function(value = ANY) {
 #' hex(42)
 #' hex('\xAA\xBB'::BLOB)
 #' ```
-hex <- function(string = VARCHAR, value = `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`, blob = BLOB) {
+hex <- function(value = `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`) {
   stop("DuckDB function hex() is not available in R.")
 }
 
 #' @rdname hex
 #' @usage NULL
 #' @export
-to_hex <- function(string = VARCHAR, value = `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`, blob = BLOB) {
+to_hex <- function(value = `BIGNUM | BIGINT | UBIGINT | HUGEINT | UHUGEINT`) {
   stop("DuckDB function to_hex() is not available in R.")
 }
 
@@ -5269,26 +4618,21 @@ to_hex <- function(string = VARCHAR, value = `BIGNUM | BIGINT | UBIGINT | HUGEIN
 #' Returns a LIST of STRUCTs with the fields bucket and count.
 #'
 #' @name histogram
-#' @usage NULL
+#' @usage histogram(source, col_name, bin_count, technique)
+#' @param source,col_name,bin_count,technique Unspecified.
+#' @return `MAP`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{histogram(arg = ANY, col1 = `ANY[]`)}
 #' \item \code{histogram(arg = ANY)}
 #' \item \code{histogram(source, col_name, bin_count, technique)}
 #' }
-#' @param arg `ANY`
-#' @param col1 `ANY[]`
-#' @param source Unspecified.
-#' @param col_name Unspecified.
-#' @param bin_count Unspecified.
-#' @param technique Unspecified.
-#' @return `MAP`
-#' @export
 #' @section SQL examples:
 #' ```
 #' histogram(A)
 #' ```
-histogram <- function(arg = ANY, col1 = `ANY[]`, source, col_name, bin_count, technique) {
+histogram <- function(source, col_name, bin_count, technique) {
   stop("DuckDB function histogram() is not available in R.")
 }
 
@@ -5298,7 +4642,7 @@ histogram <- function(arg = ANY, col1 = `ANY[]`, source, col_name, bin_count, te
 #' Returns a LIST of STRUCTs with the fields bucket and count matching the buckets exactly.
 #'
 #' @name histogram_exact
-#' @usage histogram_exact(arg = ANY, bins = `ANY[]`)
+#' @usage histogram_exact(arg, bins)
 #' @param arg `ANY`
 #' @param bins `ANY[]`
 #' @return `MAP`
@@ -5318,10 +4662,7 @@ histogram_exact <- function(arg = ANY, bins = `ANY[]`) {
 #'
 #' @name histogram_values
 #' @usage histogram_values(source, col_name, bin_count, technique)
-#' @param source Unspecified.
-#' @param col_name Unspecified.
-#' @param bin_count Unspecified.
-#' @param technique Unspecified.
+#' @param source,col_name,bin_count,technique Unspecified.
 #' @return Unspecified.
 #' @export
 histogram_values <- function(source, col_name, bin_count, technique) {
@@ -5334,17 +4675,7 @@ histogram_values <- function(source, col_name, bin_count, technique) {
 #' Extract the hour component from a date or timestamp.
 #'
 #' @name hour
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{hour(ts = DATE)}
-#' \item \code{hour(ts = INTERVAL)}
-#' \item \code{hour(ts = TIME)}
-#' \item \code{hour(ts = TIMESTAMP)}
-#' \item \code{hour(ts = `TIME WITH TIME ZONE`)}
-#' \item \code{hour(ts = TIME_NS)}
-#' \item \code{hour(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage hour(ts)
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -5362,10 +4693,8 @@ hour <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE 
 #' Returns `true` if the `string` matches the `like_specifier` (see Pattern Matching) using case-insensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name ilike_escape
-#' @usage ilike_escape(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR)
-#' @param string `VARCHAR`
-#' @param like_specifier `VARCHAR`
-#' @param escape_character `VARCHAR`
+#' @usage ilike_escape(string, like_specifier, escape_character)
+#' @param string,like_specifier,escape_character `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
 #' @family string
@@ -5383,7 +4712,7 @@ ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_char
 #' DuckDB function `import_database()`.
 #'
 #' @name import_database
-#' @usage import_database(col0 = VARCHAR)
+#' @usage import_database(col0)
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
@@ -5397,9 +4726,8 @@ import_database <- function(col0 = VARCHAR) {
 #' Returns whether or not the database/schema are in the search path.
 #'
 #' @name in_search_path
-#' @usage in_search_path(database_name = VARCHAR, schema_name = VARCHAR)
-#' @param database_name `VARCHAR`
-#' @param schema_name `VARCHAR`
+#' @usage in_search_path(database_name, schema_name)
+#' @param database_name,schema_name `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
 #' @section SQL examples:
@@ -5472,9 +4800,8 @@ inet_server_port <- function() {
 #' Returns location of first occurrence of `search_string` in `string`, counting from 1. Returns 0 if no match found.
 #'
 #' @name instr
-#' @usage instr(string = VARCHAR, search_string = VARCHAR)
-#' @param string `VARCHAR`
-#' @param search_string `VARCHAR`
+#' @usage instr(string, search_string)
+#' @param string,search_string `VARCHAR`
 #' @return `BIGINT`
 #' @export
 #' @family string
@@ -5507,7 +4834,7 @@ strpos <- function(string = VARCHAR, search_string = VARCHAR) {
 #' Whether or not the provided value is the histogram "other" bin (used for values not belonging to any provided bin).
 #'
 #' @name is_histogram_other_bin
-#' @usage is_histogram_other_bin(val = ANY)
+#' @usage is_histogram_other_bin(val)
 #' @param val `ANY`
 #' @return `BOOLEAN`
 #' @export
@@ -5525,15 +4852,7 @@ is_histogram_other_bin <- function(val = ANY) {
 #' Returns true if the floating point value is finite, false otherwise.
 #'
 #' @name isfinite
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{isfinite(x = FLOAT)}
-#' \item \code{isfinite(x = DOUBLE)}
-#' \item \code{isfinite(x = DATE)}
-#' \item \code{isfinite(x = TIMESTAMP)}
-#' \item \code{isfinite(x = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage isfinite(x)
 #' @param x `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BOOLEAN`
 #' @export
@@ -5551,15 +4870,7 @@ isfinite <- function(x = `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIM
 #' Returns true if the floating point value is infinite, false otherwise.
 #'
 #' @name isinf
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{isinf(x = FLOAT)}
-#' \item \code{isinf(x = DOUBLE)}
-#' \item \code{isinf(x = DATE)}
-#' \item \code{isinf(x = TIMESTAMP)}
-#' \item \code{isinf(x = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage isinf(x)
 #' @param x `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BOOLEAN`
 #' @export
@@ -5577,12 +4888,7 @@ isinf <- function(x = `FLOAT | DOUBLE | DATE | TIMESTAMP | TIMESTAMP WITH TIME Z
 #' Returns true if the floating point value is not a number, false otherwise.
 #'
 #' @name isnan
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{isnan(x = FLOAT)}
-#' \item \code{isnan(x = DOUBLE)}
-#' }
+#' @usage isnan(x)
 #' @param x `FLOAT | DOUBLE`
 #' @return `BOOLEAN`
 #' @export
@@ -5600,14 +4906,7 @@ isnan <- function(x = `FLOAT | DOUBLE`) {
 #' Extract the isodow component from a date or timestamp.
 #'
 #' @name isodow
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{isodow(ts = DATE)}
-#' \item \code{isodow(ts = INTERVAL)}
-#' \item \code{isodow(ts = TIMESTAMP)}
-#' \item \code{isodow(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage isodow(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -5625,14 +4924,7 @@ isodow <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' Extract the isoyear component from a date or timestamp.
 #'
 #' @name isoyear
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{isoyear(ts = DATE)}
-#' \item \code{isoyear(ts = INTERVAL)}
-#' \item \code{isoyear(ts = TIMESTAMP)}
-#' \item \code{isoyear(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage isoyear(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -5650,9 +4942,8 @@ isoyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' The Jaccard similarity between two strings. Characters of different cases (e.g., `a` and `A`) are considered different. Returns a number between 0 and 1.
 #'
 #' @name jaccard
-#' @usage jaccard(s1 = VARCHAR, s2 = VARCHAR)
-#' @param s1 `VARCHAR`
-#' @param s2 `VARCHAR`
+#' @usage jaccard(s1, s2)
+#' @param s1,s2 `VARCHAR`
 #' @return `DOUBLE`
 #' @export
 #' @family text_similarity
@@ -5670,17 +4961,17 @@ jaccard <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' The Jaro similarity between two strings. Characters of different cases (e.g., `a` and `A`) are considered different. Returns a number between 0 and 1. For similarity < `score_cutoff`, 0 is returned instead. `score_cutoff` defaults to 0.
 #'
 #' @name jaro_similarity
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{jaro_similarity(s1 = VARCHAR, s2 = VARCHAR)}
-#' \item \code{jaro_similarity(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE)}
-#' }
+#' @usage jaro_similarity(s1, s2, score_cutoff)
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
 #' @param score_cutoff `DOUBLE`
 #' @return `DOUBLE`
 #' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{jaro_similarity(s1 = VARCHAR, s2 = VARCHAR)}
+#' \item \code{jaro_similarity(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE)}
+#' }
 #' @family text_similarity
 #' @section SQL examples:
 #' ```
@@ -5696,17 +4987,17 @@ jaro_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE) {
 #' The Jaro-Winkler similarity between two strings. Characters of different cases (e.g., `a` and `A`) are considered different. Returns a number between 0 and 1. For similarity < `score_cutoff`, 0 is returned instead. `score_cutoff` defaults to 0.
 #'
 #' @name jaro_winkler_similarity
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{jaro_winkler_similarity(s1 = VARCHAR, s2 = VARCHAR)}
-#' \item \code{jaro_winkler_similarity(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE)}
-#' }
+#' @usage jaro_winkler_similarity(s1, s2, score_cutoff)
 #' @param s1 `VARCHAR`
 #' @param s2 `VARCHAR`
 #' @param score_cutoff `DOUBLE`
 #' @return `DOUBLE`
 #' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{jaro_winkler_similarity(s1 = VARCHAR, s2 = VARCHAR)}
+#' \item \code{jaro_winkler_similarity(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = DOUBLE)}
+#' }
 #' @family text_similarity
 #' @section SQL examples:
 #' ```
@@ -5722,13 +5013,7 @@ jaro_winkler_similarity <- function(s1 = VARCHAR, s2 = VARCHAR, score_cutoff = D
 #' Extract the Julian Day number from a date or timestamp.
 #'
 #' @name julian
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{julian(ts = DATE)}
-#' \item \code{julian(ts = TIMESTAMP)}
-#' \item \code{julian(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage julian(ts)
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `DOUBLE`
 #' @export
@@ -5746,7 +5031,7 @@ julian <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' Calculates the sum using a more accurate floating point summation (Kahan Sum).
 #'
 #' @name kahan_sum
-#' @usage kahan_sum(arg = DOUBLE)
+#' @usage kahan_sum(arg)
 #' @param arg `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -5778,7 +5063,7 @@ sumkahan <- function(arg = DOUBLE) {
 #' Returns the excess kurtosis (Fisher’s definition) of all input values, with a bias correction according to the sample size.
 #'
 #' @name kurtosis
-#' @usage kurtosis(x = DOUBLE)
+#' @usage kurtosis(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -5792,7 +5077,7 @@ kurtosis <- function(x = DOUBLE) {
 #' Returns the excess kurtosis (Fisher’s definition) of all input values, without bias correction.
 #'
 #' @name kurtosis_pop
-#' @usage kurtosis_pop(x = DOUBLE)
+#' @usage kurtosis_pop(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -5806,7 +5091,7 @@ kurtosis_pop <- function(x = DOUBLE) {
 #' DuckDB function `lag()`.
 #'
 #' @name lag
-#' @usage lag(col0 = T, col1 = BIGINT, col2 = T)
+#' @usage lag(col0, col1, col2)
 #' @param col0 `T`
 #' @param col1 `BIGINT`
 #' @param col2 `T`
@@ -5822,22 +5107,21 @@ lag <- function(col0 = T, col1 = BIGINT, col2 = T) {
 #' Returns the last value of a column. This function is affected by ordering.
 #'
 #' @name last
-#' @usage NULL
+#' @usage last(arg)
+#' @param arg `DECIMAL | ANY`
+#' @return `DECIMAL | ANY | T`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{last(arg = DECIMAL)}
 #' \item \code{last(arg = ANY)}
 #' \item \code{last(col0 = T)}
 #' }
-#' @param arg `DECIMAL | ANY`
-#' @param col0 `T`
-#' @return `DECIMAL | ANY | T`
-#' @export
 #' @section SQL examples:
 #' ```
 #' last(A)
 #' ```
-last <- function(arg = `DECIMAL | ANY`, col0 = T) {
+last <- function(arg = `DECIMAL | ANY`) {
   stop("DuckDB function last() is not available in R.")
 }
 
@@ -5847,13 +5131,7 @@ last <- function(arg = `DECIMAL | ANY`, col0 = T) {
 #' Returns the last day of the month.
 #'
 #' @name last_day
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{last_day(ts = DATE)}
-#' \item \code{last_day(ts = TIMESTAMP)}
-#' \item \code{last_day(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage last_day(ts)
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `DATE`
 #' @export
@@ -5871,7 +5149,7 @@ last_day <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' DuckDB function `last_value()`.
 #'
 #' @name last_value
-#' @usage last_value(col0 = T)
+#' @usage last_value(col0)
 #' @param col0 `T`
 #' @return `T`
 #' @export
@@ -5885,7 +5163,7 @@ last_value <- function(col0 = T) {
 #' DuckDB function `lead()`.
 #'
 #' @name lead
-#' @usage lead(col0 = T, col1 = BIGINT, col2 = T)
+#' @usage lead(col0, col1, col2)
 #' @param col0 `T`
 #' @param col1 `BIGINT`
 #' @param col2 `T`
@@ -5901,7 +5179,7 @@ lead <- function(col0 = T, col1 = BIGINT, col2 = T) {
 #' Returns the smallest value. For strings lexicographical ordering is used. Note that uppercase characters are considered “smaller” than lowercase characters, and collations are not supported.
 #'
 #' @name least
-#' @usage least(arg1 = ANY)
+#' @usage least(arg1)
 #' @param arg1 `ANY`
 #' @return `ANY`
 #' @export
@@ -5925,14 +5203,8 @@ least <- function(arg1 = ANY) {
 #' Computes the least common multiple of x and y.
 #'
 #' @name least_common_multiple
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{least_common_multiple(x = BIGINT, y = BIGINT)}
-#' \item \code{least_common_multiple(x = HUGEINT, y = HUGEINT)}
-#' }
-#' @param x `BIGINT | HUGEINT`
-#' @param y `BIGINT | HUGEINT`
+#' @usage least_common_multiple(x, y)
+#' @param x,y `BIGINT | HUGEINT`
 #' @return `BIGINT | HUGEINT`
 #' @export
 #' @section SQL examples:
@@ -5956,7 +5228,7 @@ lcm <- function(x = `BIGINT | HUGEINT`, y = `BIGINT | HUGEINT`) {
 #' Extracts the left-most count characters.
 #'
 #' @name left
-#' @usage left(string = VARCHAR, count = BIGINT)
+#' @usage left(string, count)
 #' @param string `VARCHAR`
 #' @param count `BIGINT`
 #' @return `VARCHAR`
@@ -5976,7 +5248,7 @@ left <- function(string = VARCHAR, count = BIGINT) {
 #' Extracts the left-most count grapheme clusters.
 #'
 #' @name left_grapheme
-#' @usage left_grapheme(string = VARCHAR, count = BIGINT)
+#' @usage left_grapheme(string, count)
 #' @param string `VARCHAR`
 #' @param count `BIGINT`
 #' @return `VARCHAR`
@@ -5993,25 +5265,23 @@ left_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #' DuckDB function len
 #'
 #' @description
-#' Number of characters in `string`.
-#'
-#' Returns the bit-length of the `bit` argument.
-#'
-#' Returns the length of the `list`.
+#' \itemize{
+#' \item \code{len(string = VARCHAR)}: Number of characters in `string`.
+#' \item \code{len(bit = BIT)}: Returns the bit-length of the `bit` argument.
+#' \item \code{len(list = `ANY[]`)}: Returns the length of the `list`.
+#' }
 #'
 #' @name len
-#' @usage NULL
+#' @usage len(string)
+#' @param string `VARCHAR`
+#' @return `BIGINT`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{len(string = VARCHAR)}
 #' \item \code{len(bit = BIT)}
 #' \item \code{len(list = `ANY[]`)}
 #' }
-#' @param string `VARCHAR`
-#' @param bit `BIT`
-#' @param list `ANY[]`
-#' @return `BIGINT`
-#' @export
 #' @family list
 #' @family numeric
 #' @family string
@@ -6021,21 +5291,21 @@ left_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #' length(42::TINYINT::BIT)
 #' length([1,2,3])
 #' ```
-len <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
+len <- function(string = VARCHAR) {
   stop("DuckDB function len() is not available in R.")
 }
 
 #' @rdname len
 #' @usage NULL
 #' @export
-char_length <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
+char_length <- function(string = VARCHAR) {
   stop("DuckDB function char_length() is not available in R.")
 }
 
 #' @rdname len
 #' @usage NULL
 #' @export
-character_length <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
+character_length <- function(string = VARCHAR) {
   stop("DuckDB function character_length() is not available in R.")
 }
 
@@ -6045,7 +5315,7 @@ character_length <- function(string = VARCHAR, bit = BIT, list = `ANY[]`) {
 #' Number of grapheme clusters in `string`.
 #'
 #' @name length_grapheme
-#' @usage length_grapheme(string = VARCHAR)
+#' @usage length_grapheme(string)
 #' @param string `VARCHAR`
 #' @return `BIGINT`
 #' @export
@@ -6064,9 +5334,8 @@ length_grapheme <- function(string = VARCHAR) {
 #' The minimum number of single-character edits (insertions, deletions or substitutions) required to change one string to the other. Characters of different cases (e.g., `a` and `A`) are considered different.
 #'
 #' @name levenshtein
-#' @usage levenshtein(s1 = VARCHAR, s2 = VARCHAR)
-#' @param s1 `VARCHAR`
-#' @param s2 `VARCHAR`
+#' @usage levenshtein(s1, s2)
+#' @param s1,s2 `VARCHAR`
 #' @return `BIGINT`
 #' @export
 #' @family text_similarity
@@ -6091,7 +5360,7 @@ editdist3 <- function(s1 = VARCHAR, s2 = VARCHAR) {
 #' Computes the log of the gamma function.
 #'
 #' @name lgamma
-#' @usage lgamma(x = DOUBLE)
+#' @usage lgamma(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -6109,10 +5378,8 @@ lgamma <- function(x = DOUBLE) {
 #' Returns `true` if the `string` matches the `like_specifier` (see Pattern Matching) using case-sensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name like_escape
-#' @usage like_escape(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR)
-#' @param string `VARCHAR`
-#' @param like_specifier `VARCHAR`
-#' @param escape_character `VARCHAR`
+#' @usage like_escape(string, like_specifier, escape_character)
+#' @param string,like_specifier,escape_character `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
 #' @family string
@@ -6130,7 +5397,7 @@ like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_chara
 #' Returns a LIST containing all the values of a column.
 #'
 #' @name list
-#' @usage list(arg = T)
+#' @usage list(arg)
 #' @param arg `T`
 #' @return `T[]`
 #' @export
@@ -6155,7 +5422,7 @@ array_agg <- function(arg = T) {
 #' Executes the aggregate function `function_name` on the elements of `list`.
 #'
 #' @name list_aggregate
-#' @usage list_aggregate(list = `ANY[]`, function_name = VARCHAR)
+#' @usage list_aggregate(list, function_name)
 #' @param list `ANY[]`
 #' @param function_name `VARCHAR`
 #' @return `ANY`
@@ -6218,8 +5485,7 @@ list_any_value <- function(l) {
 #'
 #' @name list_append
 #' @usage list_append(l, e)
-#' @param l Unspecified.
-#' @param e Unspecified.
+#' @param l,e Unspecified.
 #' @return Unspecified.
 #' @export
 list_append <- function(l, e) {
@@ -6370,7 +5636,7 @@ list_cat <- function() {
 #' Returns true if the list contains the element.
 #'
 #' @name list_contains
-#' @usage list_contains(list = `T[]`, element = T)
+#' @usage list_contains(list, element)
 #' @param list `T[]`
 #' @param element `T`
 #' @return `BOOLEAN`
@@ -6411,14 +5677,8 @@ list_has <- function(list = `T[]`, element = T) {
 #' Computes the cosine distance between two same-sized lists.
 #'
 #' @name list_cosine_distance
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{list_cosine_distance(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}
-#' \item \code{list_cosine_distance(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}
-#' }
-#' @param list1 `FLOAT[] | DOUBLE[]`
-#' @param list2 `FLOAT[] | DOUBLE[]`
+#' @usage list_cosine_distance(list1, list2)
+#' @param list1,list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
 #' @export
 #' @family list
@@ -6443,14 +5703,8 @@ list_cosine_distance <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] 
 #' Computes the cosine similarity between two same-sized lists.
 #'
 #' @name list_cosine_similarity
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{list_cosine_similarity(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}
-#' \item \code{list_cosine_similarity(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}
-#' }
-#' @param list1 `FLOAT[] | DOUBLE[]`
-#' @param list2 `FLOAT[] | DOUBLE[]`
+#' @usage list_cosine_similarity(list1, list2)
+#' @param list1,list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
 #' @export
 #' @family list
@@ -6482,14 +5736,8 @@ list_count <- function(l) {
 #' Calculates the Euclidean distance between two points with coordinates given in two inputs lists of equal length.
 #'
 #' @name list_distance
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{list_distance(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}
-#' \item \code{list_distance(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}
-#' }
-#' @param list1 `FLOAT[] | DOUBLE[]`
-#' @param list2 `FLOAT[] | DOUBLE[]`
+#' @usage list_distance(list1, list2)
+#' @param list1,list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
 #' @export
 #' @family list
@@ -6507,7 +5755,7 @@ list_distance <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBL
 #' Removes all duplicates and `NULL` values from a list. Does not preserve the original order.
 #'
 #' @name list_distinct
-#' @usage list_distinct(list = `T[]`)
+#' @usage list_distinct(list)
 #' @param list `T[]`
 #' @return `T[]`
 #' @export
@@ -6547,12 +5795,7 @@ list_entropy <- function(l) {
 #' Extract the `index`th (1-based) value from the list.
 #'
 #' @name list_extract
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{list_extract(list = `T[]`, index = BIGINT)}
-#' \item \code{list_extract(list = VARCHAR, index = BIGINT)}
-#' }
+#' @usage list_extract(list, index)
 #' @param list `T[] | VARCHAR`
 #' @param index `BIGINT`
 #' @return `T | VARCHAR`
@@ -6579,9 +5822,9 @@ list_element <- function(list = `T[] | VARCHAR`, index = BIGINT) {
 #' Constructs a list from those elements of the input `list` for which the `lambda` function returns `true`. DuckDB must be able to cast the `lambda` function's return type to `BOOL`. The return type of `list_filter` is the same as the input list's.
 #'
 #' @name list_filter
-#' @usage list_filter(list = `ANY[]`, `lambda(x)` = LAMBDA)
+#' @usage list_filter(list, lambda)
 #' @param list `ANY[]`
-#' @param lambda(x) `LAMBDA`
+#' @param lambda `LAMBDA`
 #' @return `ANY[]`
 #' @export
 #' @family lambda
@@ -6590,21 +5833,21 @@ list_element <- function(list = `T[] | VARCHAR`, index = BIGINT) {
 #' ```
 #' list_filter([3, 4, 5], lambda x : x > 4)
 #' ```
-list_filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
+list_filter <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function list_filter() is not available in R.")
 }
 
 #' @rdname list_filter
 #' @usage NULL
 #' @export
-array_filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
+array_filter <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function array_filter() is not available in R.")
 }
 
 #' @rdname list_filter
 #' @usage NULL
 #' @export
-filter <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
+filter <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function filter() is not available in R.")
 }
 
@@ -6628,18 +5871,18 @@ list_first <- function(l) {
 #' Works like list_sort, but the results are the indexes that correspond to the position in the original list instead of the actual values.
 #'
 #' @name list_grade_up
-#' @usage NULL
+#' @usage list_grade_up(list, col1, col2)
+#' @param list `ANY[]`
+#' @param col1 `VARCHAR`
+#' @param col2 `VARCHAR`
+#' @return `ANY[]`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{list_grade_up(list = `ANY[]`)}
 #' \item \code{list_grade_up(list = `ANY[]`, col1 = VARCHAR)}
 #' \item \code{list_grade_up(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR)}
 #' }
-#' @param list `ANY[]`
-#' @param col1 `VARCHAR`
-#' @param col2 `VARCHAR`
-#' @return `ANY[]`
-#' @export
 #' @family list
 #' @section SQL examples:
 #' ```
@@ -6669,9 +5912,8 @@ grade_up <- function(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR) {
 #' Returns true if all elements of list2 are in list1. NULLs are ignored.
 #'
 #' @name list_has_all
-#' @usage list_has_all(list1 = `T[]`, list2 = `T[]`)
-#' @param list1 `T[]`
-#' @param list2 `T[]`
+#' @usage list_has_all(list1, list2)
+#' @param list1,list2 `T[]`
 #' @return `BOOLEAN`
 #' @export
 #' @family list
@@ -6710,9 +5952,8 @@ array_has_all <- function(list1 = `T[]`, list2 = `T[]`) {
 #' Returns true if the lists have any element in common. NULLs are ignored.
 #'
 #' @name list_has_any
-#' @usage list_has_any(list1 = `T[]`, list2 = `T[]`)
-#' @param list1 `T[]`
-#' @param list2 `T[]`
+#' @usage list_has_any(list1, list2)
+#' @param list1,list2 `T[]`
 #' @return `BOOLEAN`
 #' @export
 #' @family list
@@ -6765,14 +6006,8 @@ list_histogram <- function(l) {
 #' Computes the inner product between two same-sized lists.
 #'
 #' @name list_inner_product
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{list_inner_product(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}
-#' \item \code{list_inner_product(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}
-#' }
-#' @param list1 `FLOAT[] | DOUBLE[]`
-#' @param list2 `FLOAT[] | DOUBLE[]`
+#' @usage list_inner_product(list1, list2)
+#' @param list1,list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
 #' @export
 #' @family list
@@ -6797,9 +6032,8 @@ list_dot_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DO
 #' Returns a list containing the distinct elements that are present in both `list1` and `list2`.
 #'
 #' @name list_intersect
-#' @usage list_intersect(list1 = `T[]`, list2 = `T[]`)
-#' @param list1 `T[]`
-#' @param list2 `T[]`
+#' @usage list_intersect(list1, list2)
+#' @param list1,list2 `T[]`
 #' @return `T[]`
 #' @export
 #' @family list
@@ -6936,14 +6170,8 @@ list_mode <- function(l) {
 #' Computes the negative inner product between two same-sized lists.
 #'
 #' @name list_negative_inner_product
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{list_negative_inner_product(list1 = `FLOAT[]`, list2 = `FLOAT[]`)}
-#' \item \code{list_negative_inner_product(list1 = `DOUBLE[]`, list2 = `DOUBLE[]`)}
-#' }
-#' @param list1 `FLOAT[] | DOUBLE[]`
-#' @param list2 `FLOAT[] | DOUBLE[]`
+#' @usage list_negative_inner_product(list1, list2)
+#' @param list1,list2 `FLOAT[] | DOUBLE[]`
 #' @return `FLOAT | DOUBLE`
 #' @export
 #' @family list
@@ -6968,7 +6196,7 @@ list_negative_dot_product <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLO
 #' Returns the index of the `element` if the `list` contains the `element`. If the `element` is not found, it returns `NULL`.
 #'
 #' @name list_position
-#' @usage list_position(list = `T[]`, element = T)
+#' @usage list_position(list, element)
 #' @param list `T[]`
 #' @param element `T`
 #' @return `INTEGER`
@@ -7010,8 +6238,7 @@ list_indexof <- function(list = `T[]`, element = T) {
 #'
 #' @name list_prepend
 #' @usage list_prepend(e, l)
-#' @param e Unspecified.
-#' @param l Unspecified.
+#' @param e,l Unspecified.
 #' @return Unspecified.
 #' @export
 list_prepend <- function(e, l) {
@@ -7038,38 +6265,38 @@ list_product <- function(l) {
 #' Reduces all elements of the input `list` into a single scalar value by executing the `lambda` function on a running result and the next list element. The `lambda` function has an optional `initial_value` argument.
 #'
 #' @name list_reduce
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{list_reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA)}
-#' \item \code{list_reduce(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY)}
-#' }
+#' @usage list_reduce(list, lambda, initial_value)
 #' @param list `ANY[]`
-#' @param lambda(x,y) `LAMBDA`
+#' @param lambda `LAMBDA`
 #' @param initial_value `ANY`
 #' @return `ANY`
 #' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{list_reduce(list = `ANY[]`, lambda = LAMBDA)}
+#' \item \code{list_reduce(list = `ANY[]`, lambda = LAMBDA, initial_value = ANY)}
+#' }
 #' @family lambda
 #' @family list
 #' @section SQL examples:
 #' ```
 #' list_reduce([1, 2, 3], lambda x, y : x + y)
 #' ```
-list_reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY) {
+list_reduce <- function(list = `ANY[]`, lambda = LAMBDA, initial_value = ANY) {
   stop("DuckDB function list_reduce() is not available in R.")
 }
 
 #' @rdname list_reduce
 #' @usage NULL
 #' @export
-array_reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY) {
+array_reduce <- function(list = `ANY[]`, lambda = LAMBDA, initial_value = ANY) {
   stop("DuckDB function array_reduce() is not available in R.")
 }
 
 #' @rdname list_reduce
 #' @usage NULL
 #' @export
-reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY) {
+reduce <- function(list = `ANY[]`, lambda = LAMBDA, initial_value = ANY) {
   stop("DuckDB function reduce() is not available in R.")
 }
 
@@ -7079,30 +6306,30 @@ reduce <- function(list = `ANY[]`, `lambda(x,y)` = LAMBDA, initial_value = ANY) 
 #' Resizes the `list` to contain `size` elements. Initializes new elements with `value` or `NULL` if `value` is not set.
 #'
 #' @name list_resize
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{list_resize(list = `ANY[]`, `size[` = ANY)}
-#' \item \code{list_resize(list = `ANY[]`, `size[` = ANY, `value]` = ANY)}
-#' }
+#' @usage list_resize(list, size, value)
 #' @param list `ANY[]`
-#' @param size[ `ANY`
-#' @param value] `ANY`
+#' @param size `ANY`
+#' @param value `ANY`
 #' @return `ANY[]`
 #' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{list_resize(list = `ANY[]`, size = ANY)}
+#' \item \code{list_resize(list = `ANY[]`, size = ANY, value = ANY)}
+#' }
 #' @family list
 #' @section SQL examples:
 #' ```
 #' list_resize([1, 2, 3], 5, 0)
 #' ```
-list_resize <- function(list = `ANY[]`, `size[` = ANY, `value]` = ANY) {
+list_resize <- function(list = `ANY[]`, size = ANY, value = ANY) {
   stop("DuckDB function list_resize() is not available in R.")
 }
 
 #' @rdname list_resize
 #' @usage NULL
 #' @export
-array_resize <- function(list = `ANY[]`, `size[` = ANY, `value]` = ANY) {
+array_resize <- function(list = `ANY[]`, size = ANY, value = ANY) {
   stop("DuckDB function array_resize() is not available in R.")
 }
 
@@ -7126,16 +6353,16 @@ list_reverse <- function(l) {
 #' Sorts the elements of the list in reverse order.
 #'
 #' @name list_reverse_sort
-#' @usage NULL
+#' @usage list_reverse_sort(list, col1)
+#' @param list `ANY[]`
+#' @param col1 `VARCHAR`
+#' @return `ANY[]`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{list_reverse_sort(list = `ANY[]`)}
 #' \item \code{list_reverse_sort(list = `ANY[]`, col1 = VARCHAR)}
 #' }
-#' @param list `ANY[]`
-#' @param col1 `VARCHAR`
-#' @return `ANY[]`
-#' @export
 #' @family list
 #' @section SQL examples:
 #' ```
@@ -7158,7 +6385,7 @@ array_reverse_sort <- function(list = `ANY[]`, col1 = VARCHAR) {
 #' Returns a list based on the elements selected by the `index_list`.
 #'
 #' @name list_select
-#' @usage list_select(value_list = `T[]`, index_list = `BIGINT[]`)
+#' @usage list_select(value_list, index_list)
 #' @param value_list `T[]`
 #' @param index_list `BIGINT[]`
 #' @return `T[]`
@@ -7210,23 +6437,24 @@ list_skewness <- function(l) {
 #' DuckDB function list_slice
 #'
 #' @description
-#' Extracts a sublist or substring using slice conventions. Negative values are accepted.
-#'
-#' list_slice with added step feature.
+#' \itemize{
+#' \item \code{list_slice(list = ANY, begin = ANY, end = ANY)}: Extracts a sublist or substring using slice conventions. Negative values are accepted.
+#' \item \code{list_slice(list = ANY, begin = ANY, end = ANY, step = BIGINT)}: list_slice with added step feature.
+#' }
 #'
 #' @name list_slice
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{list_slice(list = ANY, begin = ANY, end = ANY)}
-#' \item \code{list_slice(list = ANY, begin = ANY, end = ANY, step = BIGINT)}
-#' }
+#' @usage list_slice(list, begin, end, step)
 #' @param list `ANY`
 #' @param begin `ANY`
 #' @param end `ANY`
 #' @param step `BIGINT`
 #' @return `ANY`
 #' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{list_slice(list = ANY, begin = ANY, end = ANY)}
+#' \item \code{list_slice(list = ANY, begin = ANY, end = ANY, step = BIGINT)}
+#' }
 #' @family list
 #' @family string
 #' @section SQL examples:
@@ -7254,18 +6482,18 @@ array_slice <- function(list = ANY, begin = ANY, end = ANY, step = BIGINT) {
 #' Sorts the elements of the list.
 #'
 #' @name list_sort
-#' @usage NULL
+#' @usage list_sort(list, col1, col2)
+#' @param list `ANY[]`
+#' @param col1 `VARCHAR`
+#' @param col2 `VARCHAR`
+#' @return `ANY[]`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{list_sort(list = `ANY[]`)}
 #' \item \code{list_sort(list = `ANY[]`, col1 = VARCHAR)}
 #' \item \code{list_sort(list = `ANY[]`, col1 = VARCHAR, col2 = VARCHAR)}
 #' }
-#' @param list `ANY[]`
-#' @param col1 `VARCHAR`
-#' @param col2 `VARCHAR`
-#' @return `ANY[]`
-#' @export
 #' @family list
 #' @section SQL examples:
 #' ```
@@ -7344,9 +6572,9 @@ list_sum <- function(l) {
 #' Returns a list that is the result of applying the `lambda` function to each element of the input `list`. The return type is defined by the return type of the `lambda` function.
 #'
 #' @name list_transform
-#' @usage list_transform(list = `ANY[]`, `lambda(x)` = LAMBDA)
+#' @usage list_transform(list, lambda)
 #' @param list `ANY[]`
-#' @param lambda(x) `LAMBDA`
+#' @param lambda `LAMBDA`
 #' @return `ANY[]`
 #' @export
 #' @family lambda
@@ -7355,35 +6583,35 @@ list_sum <- function(l) {
 #' ```
 #' list_transform([1, 2, 3], lambda x : x + 1)
 #' ```
-list_transform <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
+list_transform <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function list_transform() is not available in R.")
 }
 
 #' @rdname list_transform
 #' @usage NULL
 #' @export
-apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
+apply <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function apply() is not available in R.")
 }
 
 #' @rdname list_transform
 #' @usage NULL
 #' @export
-array_apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
+array_apply <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function array_apply() is not available in R.")
 }
 
 #' @rdname list_transform
 #' @usage NULL
 #' @export
-array_transform <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
+array_transform <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function array_transform() is not available in R.")
 }
 
 #' @rdname list_transform
 #' @usage NULL
 #' @export
-list_apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
+list_apply <- function(list = `ANY[]`, lambda = LAMBDA) {
   stop("DuckDB function list_apply() is not available in R.")
 }
 
@@ -7393,7 +6621,7 @@ list_apply <- function(list = `ANY[]`, `lambda(x)` = LAMBDA) {
 #' Counts the unique elements of a `list`.
 #'
 #' @name list_unique
-#' @usage list_unique(list = `ANY[]`)
+#' @usage list_unique(list)
 #' @param list `ANY[]`
 #' @return `UBIGINT`
 #' @export
@@ -7419,15 +6647,15 @@ array_unique <- function(list = `ANY[]`) {
 #' Creates a LIST containing the argument values.
 #'
 #' @name list_value
-#' @usage NULL
+#' @usage list_value(any)
+#' @param any `T`
+#' @return `"NULL"[] | T[]`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{list_value()}
 #' \item \code{list_value(any = T)}
 #' }
-#' @param any `T`
-#' @return `"NULL"[] | T[]`
-#' @export
 #' @family list
 #' @section SQL examples:
 #' ```
@@ -7478,7 +6706,7 @@ list_var_samp <- function(l) {
 #' Returns a list with the `BOOLEAN`s in `mask_list` applied as a mask to the `value_list`.
 #'
 #' @name list_where
-#' @usage list_where(value_list = `T[]`, mask_list = `BOOLEAN[]`)
+#' @usage list_where(value_list, mask_list)
 #' @param value_list `T[]`
 #' @param mask_list `BOOLEAN[]`
 #' @return `T[]`
@@ -7533,7 +6761,7 @@ array_zip <- function() {
 #' Computes the natural logarithm of x.
 #'
 #' @name ln
-#' @usage ln(x = DOUBLE)
+#' @usage ln(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -7551,16 +6779,15 @@ ln <- function(x = DOUBLE) {
 #' Computes the logarithm of x to base b. b may be omitted, in which case the default 10.
 #'
 #' @name log
-#' @usage NULL
+#' @usage log(b, x)
+#' @param b,x `DOUBLE`
+#' @return `DOUBLE`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{log(b = DOUBLE)}
 #' \item \code{log(b = DOUBLE, x = DOUBLE)}
 #' }
-#' @param b `DOUBLE`
-#' @param x `DOUBLE`
-#' @return `DOUBLE`
-#' @export
 #' @section SQL examples:
 #' ```
 #' log(2, 64)
@@ -7575,7 +6802,7 @@ log <- function(b = DOUBLE, x = DOUBLE) {
 #' Computes the 10-log of x.
 #'
 #' @name log10
-#' @usage log10(x = DOUBLE)
+#' @usage log10(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -7593,7 +6820,7 @@ log10 <- function(x = DOUBLE) {
 #' Computes the 2-log of x.
 #'
 #' @name log2
-#' @usage log2(x = DOUBLE)
+#' @usage log2(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -7611,7 +6838,7 @@ log2 <- function(x = DOUBLE) {
 #' Converts `string` to lower case.
 #'
 #' @name lower
-#' @usage lower(string = VARCHAR)
+#' @usage lower(string)
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
 #' @export
@@ -7637,7 +6864,7 @@ lcase <- function(string = VARCHAR) {
 #' Pads the `string` with the `character` on the left until it has `count` characters. Truncates the `string` on the right if it has more than `count` characters.
 #'
 #' @name lpad
-#' @usage lpad(string = VARCHAR, count = INTEGER, character = VARCHAR)
+#' @usage lpad(string, count, character)
 #' @param string `VARCHAR`
 #' @param count `INTEGER`
 #' @param character `VARCHAR`
@@ -7658,16 +6885,15 @@ lpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #' Removes any occurrences of any of the `characters` from the left side of the `string`. `characters` defaults to `space`.
 #'
 #' @name ltrim
-#' @usage NULL
+#' @usage ltrim(string, characters)
+#' @param string,characters `VARCHAR`
+#' @return `VARCHAR`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{ltrim(string = VARCHAR)}
 #' \item \code{ltrim(string = VARCHAR, characters = VARCHAR)}
 #' }
-#' @param string `VARCHAR`
-#' @param characters `VARCHAR`
-#' @return `VARCHAR`
-#' @export
 #' @family string
 #' @section SQL examples:
 #' ```
@@ -7684,18 +6910,7 @@ ltrim <- function(string = VARCHAR, characters = VARCHAR) {
 #' Returns the median absolute deviation for the values within x. NULL values are ignored. Temporal types return a positive INTERVAL.	.
 #'
 #' @name mad
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{mad(x = DECIMAL)}
-#' \item \code{mad(x = FLOAT)}
-#' \item \code{mad(x = DOUBLE)}
-#' \item \code{mad(x = DATE)}
-#' \item \code{mad(x = TIMESTAMP)}
-#' \item \code{mad(x = TIME)}
-#' \item \code{mad(x = `TIMESTAMP WITH TIME ZONE`)}
-#' \item \code{mad(x = `TIME WITH TIME ZONE`)}
-#' }
+#' @usage mad(x)
 #' @param x `DECIMAL | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE`
 #' @return `DECIMAL | FLOAT | DOUBLE | INTERVAL`
 #' @export
@@ -7710,31 +6925,29 @@ mad <- function(x = `DECIMAL | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMEST
 #' DuckDB function make_date
 #'
 #' @description
-#' The date for the given parts.
-#'
-#' The date for the given struct.
+#' \itemize{
+#' \item \code{make_date(year = BIGINT, month = BIGINT, day = BIGINT)}: The date for the given parts.
+#' \item \code{make_date(date.struct = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`)}: The date for the given struct.
+#' \item \code{make_date(col0 = INTEGER)}: (Description missing.)
+#' }
 #'
 #' @name make_date
-#' @usage NULL
+#' @usage make_date(year, month, day)
+#' @param year,month,day `BIGINT`
+#' @return `DATE`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{make_date(col0 = INTEGER)}
 #' \item \code{make_date(year = BIGINT, month = BIGINT, day = BIGINT)}
-#' \item \code{make_date(`date-struct` = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`)}
+#' \item \code{make_date(date.struct = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`)}
 #' }
-#' @param col0 `INTEGER`
-#' @param year `BIGINT`
-#' @param month `BIGINT`
-#' @param day `BIGINT`
-#' @param date-struct `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`
-#' @return `DATE`
-#' @export
 #' @section SQL examples:
 #' ```
 #' make_date(1992, 9, 20)
 #' make_date({'year': 2024, 'month': 11, 'day': 14})
 #' ```
-make_date <- function(col0 = INTEGER, year = BIGINT, month = BIGINT, day = BIGINT, `date-struct` = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`) {
+make_date <- function(year = BIGINT, month = BIGINT, day = BIGINT) {
   stop("DuckDB function make_date() is not available in R.")
 }
 
@@ -7744,7 +6957,7 @@ make_date <- function(col0 = INTEGER, year = BIGINT, month = BIGINT, day = BIGIN
 #' The time for the given parts.
 #'
 #' @name make_time
-#' @usage make_time(hour = BIGINT, minute = BIGINT, seconds = DOUBLE)
+#' @usage make_time(hour, minute, seconds)
 #' @param hour `BIGINT`
 #' @param minute `BIGINT`
 #' @param seconds `DOUBLE`
@@ -7764,12 +6977,7 @@ make_time <- function(hour = BIGINT, minute = BIGINT, seconds = DOUBLE) {
 #' The timestamp for the given parts.
 #'
 #' @name make_timestamp
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{make_timestamp(year = BIGINT, month = BIGINT, day = BIGINT, hour = BIGINT, minute = BIGINT, seconds = DOUBLE)}
-#' \item \code{make_timestamp(year = BIGINT)}
-#' }
+#' @usage make_timestamp(year, month, day, hour, minute, seconds)
 #' @param year `BIGINT`
 #' @param month `BIGINT`
 #' @param day `BIGINT`
@@ -7778,6 +6986,11 @@ make_time <- function(hour = BIGINT, minute = BIGINT, seconds = DOUBLE) {
 #' @param seconds `DOUBLE`
 #' @return `TIMESTAMP`
 #' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{make_timestamp(year = BIGINT, month = BIGINT, day = BIGINT, hour = BIGINT, minute = BIGINT, seconds = DOUBLE)}
+#' \item \code{make_timestamp(year = BIGINT)}
+#' }
 #' @section SQL examples:
 #' ```
 #' make_timestamp(1992, 9, 20, 13, 34, 27.123456)
@@ -7792,7 +7005,7 @@ make_timestamp <- function(year = BIGINT, month = BIGINT, day = BIGINT, hour = B
 #' The timestamp for the given microseconds since the epoch.
 #'
 #' @name make_timestamp_ms
-#' @usage make_timestamp_ms(nanos = BIGINT)
+#' @usage make_timestamp_ms(nanos)
 #' @param nanos `BIGINT`
 #' @return `TIMESTAMP`
 #' @export
@@ -7810,7 +7023,7 @@ make_timestamp_ms <- function(nanos = BIGINT) {
 #' The timestamp for the given nanoseconds since epoch.
 #'
 #' @name make_timestamp_ns
-#' @usage make_timestamp_ns(nanos = BIGINT)
+#' @usage make_timestamp_ns(nanos)
 #' @param nanos `BIGINT`
 #' @return `TIMESTAMP_NS`
 #' @export
@@ -7828,7 +7041,7 @@ make_timestamp_ns <- function(nanos = BIGINT) {
 #' Construct a type from its name and optional parameters.
 #'
 #' @name make_type
-#' @usage make_type(name = VARCHAR)
+#' @usage make_type(name)
 #' @param name `VARCHAR`
 #' @return `TYPE`
 #' @export
@@ -7846,16 +7059,16 @@ make_type <- function(name = VARCHAR) {
 #' Creates a map from a set of keys and values.
 #'
 #' @name map
-#' @usage NULL
+#' @usage map(keys, values)
+#' @param keys `K[]`
+#' @param values `V[]`
+#' @return `MAP("NULL", "NULL") | MAP(K, V)`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{map()}
 #' \item \code{map(keys = `K[]`, values = `V[]`)}
 #' }
-#' @param keys `K[]`
-#' @param values `V[]`
-#' @return `MAP("NULL", "NULL") | MAP(K, V)`
-#' @export
 #' @section SQL examples:
 #' ```
 #' map(['key1', 'key2'], ['val1', 'val2'])
@@ -7888,7 +7101,7 @@ map_concat <- function() {
 #' Checks if a map contains a given key.
 #'
 #' @name map_contains
-#' @usage map_contains(map = `MAP(K, V)`, key = K)
+#' @usage map_contains(map, key)
 #' @param map `MAP(K, V)`
 #' @param key `K`
 #' @return `BOOLEAN`
@@ -7908,9 +7121,7 @@ map_contains <- function(map = `MAP(K, V)`, key = K) {
 #'
 #' @name map_contains_entry
 #' @usage map_contains_entry(map, key, value)
-#' @param map Unspecified.
-#' @param key Unspecified.
-#' @param value Unspecified.
+#' @param map,key,value Unspecified.
 #' @return Unspecified.
 #' @export
 map_contains_entry <- function(map, key, value) {
@@ -7924,8 +7135,7 @@ map_contains_entry <- function(map, key, value) {
 #'
 #' @name map_contains_value
 #' @usage map_contains_value(map, value)
-#' @param map Unspecified.
-#' @param value Unspecified.
+#' @param map,value Unspecified.
 #' @return Unspecified.
 #' @export
 map_contains_value <- function(map, value) {
@@ -7938,7 +7148,7 @@ map_contains_value <- function(map, value) {
 #' Returns the map entries as a list of keys/values.
 #'
 #' @name map_entries
-#' @usage map_entries(map = `MAP(K, V)`)
+#' @usage map_entries(map)
 #' @param map `MAP(K, V)`
 #' @return `STRUCT("key" K, "value" V)[]`
 #' @export
@@ -7956,7 +7166,7 @@ map_entries <- function(map = `MAP(K, V)`) {
 #' Returns a list containing the value for a given key or an empty list if the key is not contained in the map. The type of the key provided in the second parameter must match the type of the map’s keys else an error is returned.
 #'
 #' @name map_extract
-#' @usage map_extract(map = `MAP(K, V)`, key = K)
+#' @usage map_extract(map, key)
 #' @param map `MAP(K, V)`
 #' @param key `K`
 #' @return `V[]`
@@ -7982,7 +7192,7 @@ element_at <- function(map = `MAP(K, V)`, key = K) {
 #' Returns the value for a given key or NULL if the key is not contained in the map. The type of the key provided in the second parameter must match the type of the map’s keys else an error is returned.
 #'
 #' @name map_extract_value
-#' @usage map_extract_value(map = `MAP(K, V)`, key = K)
+#' @usage map_extract_value(map, key)
 #' @param map `MAP(K, V)`
 #' @param key `K`
 #' @return `V`
@@ -8001,7 +7211,7 @@ map_extract_value <- function(map = `MAP(K, V)`, key = K) {
 #' Returns a map created from the entries of the array.
 #'
 #' @name map_from_entries
-#' @usage map_from_entries(map = `STRUCT(K, V)[]`)
+#' @usage map_from_entries(map)
 #' @param map `STRUCT(K, V)[]`
 #' @return `MAP(K, V)`
 #' @export
@@ -8019,7 +7229,7 @@ map_from_entries <- function(map = `STRUCT(K, V)[]`) {
 #' Returns the keys of a map as a list.
 #'
 #' @name map_keys
-#' @usage map_keys(map = `MAP(K, V)`)
+#' @usage map_keys(map)
 #' @param map `MAP(K, V)`
 #' @return `K[]`
 #' @export
@@ -8051,7 +7261,7 @@ map_to_pg_oid <- function(type_name) {
 #' Returns the values of a map as a list.
 #'
 #' @name map_values
-#' @usage map_values(map = `MAP(K, V)`)
+#' @usage map_values(map)
 #' @param map `MAP(K, V)`
 #' @return `V[]`
 #' @export
@@ -8069,16 +7279,16 @@ map_values <- function(map = `MAP(K, V)`) {
 #' Returns the maximum value present in arg.
 #'
 #' @name max
-#' @usage NULL
+#' @usage max(arg, col1)
+#' @param arg `ANY`
+#' @param col1 `BIGINT`
+#' @return `ANY | ANY[]`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{max(arg = ANY)}
 #' \item \code{max(arg = ANY, col1 = BIGINT)}
 #' }
-#' @param arg `ANY`
-#' @param col1 `BIGINT`
-#' @return `ANY | ANY[]`
-#' @export
 #' @section SQL examples:
 #' ```
 #' max(A)
@@ -8090,21 +7300,21 @@ max <- function(arg = ANY, col1 = BIGINT) {
 #' DuckDB function md5
 #'
 #' @description
-#' Returns the MD5 hash of the `string` as a `VARCHAR`.
-#'
-#' Returns the MD5 hash of the `blob` as a `VARCHAR`.
+#' \itemize{
+#' \item \code{md5(string = VARCHAR)}: Returns the MD5 hash of the `string` as a `VARCHAR`.
+#' \item \code{md5(blob = BLOB)}: Returns the MD5 hash of the `blob` as a `VARCHAR`.
+#' }
 #'
 #' @name md5
-#' @usage NULL
+#' @usage md5(string)
+#' @param string `VARCHAR`
+#' @return `VARCHAR`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{md5(string = VARCHAR)}
 #' \item \code{md5(blob = BLOB)}
 #' }
-#' @param string `VARCHAR`
-#' @param blob `BLOB`
-#' @return `VARCHAR`
-#' @export
 #' @family blob
 #' @family string
 #' @section SQL examples:
@@ -8112,28 +7322,28 @@ max <- function(arg = ANY, col1 = BIGINT) {
 #' md5('abc')
 #' md5('\xAA\xBB'::BLOB)
 #' ```
-md5 <- function(string = VARCHAR, blob = BLOB) {
+md5 <- function(string = VARCHAR) {
   stop("DuckDB function md5() is not available in R.")
 }
 
 #' DuckDB function md5_number
 #'
 #' @description
-#' Returns the MD5 hash of the `string` as a `HUGEINT`.
-#'
-#' Returns the MD5 hash of the `blob` as a `HUGEINT`.
+#' \itemize{
+#' \item \code{md5_number(string = VARCHAR)}: Returns the MD5 hash of the `string` as a `HUGEINT`.
+#' \item \code{md5_number(blob = BLOB)}: Returns the MD5 hash of the `blob` as a `HUGEINT`.
+#' }
 #'
 #' @name md5_number
-#' @usage NULL
+#' @usage md5_number(string)
+#' @param string `VARCHAR`
+#' @return `UHUGEINT`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{md5_number(string = VARCHAR)}
 #' \item \code{md5_number(blob = BLOB)}
 #' }
-#' @param string `VARCHAR`
-#' @param blob `BLOB`
-#' @return `UHUGEINT`
-#' @export
 #' @family blob
 #' @family string
 #' @section SQL examples:
@@ -8141,7 +7351,7 @@ md5 <- function(string = VARCHAR, blob = BLOB) {
 #' md5_number('abc')
 #' md5_number('\xAA\xBB'::BLOB)
 #' ```
-md5_number <- function(string = VARCHAR, blob = BLOB) {
+md5_number <- function(string = VARCHAR) {
   stop("DuckDB function md5_number() is not available in R.")
 }
 
@@ -8179,7 +7389,7 @@ md5_number_upper <- function(param) {
 #' Returns the middle value of the set. NULL values are ignored. For even value counts, interpolate-able types (numeric, date/time) return the average of the two middle values. Non-interpolate-able types (everything else) return the lower of the two middle values.
 #'
 #' @name median
-#' @usage median(x = ANY)
+#' @usage median(x)
 #' @param x `ANY`
 #' @return `ANY`
 #' @export
@@ -8211,17 +7421,7 @@ metadata_info <- function() {
 #' Extract the microsecond component from a date or timestamp.
 #'
 #' @name microsecond
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{microsecond(ts = DATE)}
-#' \item \code{microsecond(ts = INTERVAL)}
-#' \item \code{microsecond(ts = TIME)}
-#' \item \code{microsecond(ts = TIMESTAMP)}
-#' \item \code{microsecond(ts = `TIME WITH TIME ZONE`)}
-#' \item \code{microsecond(ts = TIME_NS)}
-#' \item \code{microsecond(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage microsecond(ts)
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -8239,14 +7439,7 @@ microsecond <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
 #' Extract the millennium component from a date or timestamp.
 #'
 #' @name millennium
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{millennium(ts = DATE)}
-#' \item \code{millennium(ts = INTERVAL)}
-#' \item \code{millennium(ts = TIMESTAMP)}
-#' \item \code{millennium(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage millennium(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -8264,17 +7457,7 @@ millennium <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME Z
 #' Extract the millisecond component from a date or timestamp.
 #'
 #' @name millisecond
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{millisecond(ts = DATE)}
-#' \item \code{millisecond(ts = INTERVAL)}
-#' \item \code{millisecond(ts = TIME)}
-#' \item \code{millisecond(ts = TIMESTAMP)}
-#' \item \code{millisecond(ts = `TIME WITH TIME ZONE`)}
-#' \item \code{millisecond(ts = TIME_NS)}
-#' \item \code{millisecond(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage millisecond(ts)
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -8292,16 +7475,16 @@ millisecond <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIM
 #' Returns the minimum value present in arg.
 #'
 #' @name min
-#' @usage NULL
+#' @usage min(arg, col1)
+#' @param arg `ANY`
+#' @param col1 `BIGINT`
+#' @return `ANY | ANY[]`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{min(arg = ANY)}
 #' \item \code{min(arg = ANY, col1 = BIGINT)}
 #' }
-#' @param arg `ANY`
-#' @param col1 `BIGINT`
-#' @return `ANY | ANY[]`
-#' @export
 #' @section SQL examples:
 #' ```
 #' min(A)
@@ -8316,17 +7499,7 @@ min <- function(arg = ANY, col1 = BIGINT) {
 #' Extract the minute component from a date or timestamp.
 #'
 #' @name minute
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{minute(ts = DATE)}
-#' \item \code{minute(ts = INTERVAL)}
-#' \item \code{minute(ts = TIME)}
-#' \item \code{minute(ts = TIMESTAMP)}
-#' \item \code{minute(ts = `TIME WITH TIME ZONE`)}
-#' \item \code{minute(ts = TIME_NS)}
-#' \item \code{minute(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage minute(ts)
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -8344,25 +7517,8 @@ minute <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZON
 #' DuckDB function `mod()`.
 #'
 #' @name mod
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{mod(col0 = TINYINT, col1 = TINYINT)}
-#' \item \code{mod(col0 = SMALLINT, col1 = SMALLINT)}
-#' \item \code{mod(col0 = INTEGER, col1 = INTEGER)}
-#' \item \code{mod(col0 = BIGINT, col1 = BIGINT)}
-#' \item \code{mod(col0 = HUGEINT, col1 = HUGEINT)}
-#' \item \code{mod(col0 = FLOAT, col1 = FLOAT)}
-#' \item \code{mod(col0 = DOUBLE, col1 = DOUBLE)}
-#' \item \code{mod(col0 = DECIMAL, col1 = DECIMAL)}
-#' \item \code{mod(col0 = UTINYINT, col1 = UTINYINT)}
-#' \item \code{mod(col0 = USMALLINT, col1 = USMALLINT)}
-#' \item \code{mod(col0 = UINTEGER, col1 = UINTEGER)}
-#' \item \code{mod(col0 = UBIGINT, col1 = UBIGINT)}
-#' \item \code{mod(col0 = UHUGEINT, col1 = UHUGEINT)}
-#' }
-#' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
-#' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
+#' @usage mod(col0, col1)
+#' @param col0,col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @export
 mod <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`) {
@@ -8382,7 +7538,7 @@ mod <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT 
 #' Returns the most frequent value for the values within x. NULL values are ignored.
 #'
 #' @name mode
-#' @usage mode(x = ANY)
+#' @usage mode(x)
 #' @param x `ANY`
 #' @return `ANY`
 #' @export
@@ -8396,14 +7552,7 @@ mode <- function(x = ANY) {
 #' Extract the month component from a date or timestamp.
 #'
 #' @name month
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{month(ts = DATE)}
-#' \item \code{month(ts = INTERVAL)}
-#' \item \code{month(ts = TIMESTAMP)}
-#' \item \code{month(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage month(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -8421,13 +7570,7 @@ month <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`)
 #' The (English) name of the month.
 #'
 #' @name monthname
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{monthname(ts = DATE)}
-#' \item \code{monthname(ts = TIMESTAMP)}
-#' \item \code{monthname(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage monthname(ts)
 #' @param ts `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `VARCHAR`
 #' @export
@@ -8445,29 +7588,8 @@ monthname <- function(ts = `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) {
 #' DuckDB function `multiply()`.
 #'
 #' @name multiply
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{multiply(col0 = TINYINT, col1 = TINYINT)}
-#' \item \code{multiply(col0 = SMALLINT, col1 = SMALLINT)}
-#' \item \code{multiply(col0 = INTEGER, col1 = INTEGER)}
-#' \item \code{multiply(col0 = BIGINT, col1 = BIGINT)}
-#' \item \code{multiply(col0 = HUGEINT, col1 = HUGEINT)}
-#' \item \code{multiply(col0 = FLOAT, col1 = FLOAT)}
-#' \item \code{multiply(col0 = DOUBLE, col1 = DOUBLE)}
-#' \item \code{multiply(col0 = DECIMAL, col1 = DECIMAL)}
-#' \item \code{multiply(col0 = UTINYINT, col1 = UTINYINT)}
-#' \item \code{multiply(col0 = USMALLINT, col1 = USMALLINT)}
-#' \item \code{multiply(col0 = UINTEGER, col1 = UINTEGER)}
-#' \item \code{multiply(col0 = UBIGINT, col1 = UBIGINT)}
-#' \item \code{multiply(col0 = UHUGEINT, col1 = UHUGEINT)}
-#' \item \code{multiply(col0 = INTERVAL, col1 = DOUBLE)}
-#' \item \code{multiply(col0 = DOUBLE, col1 = INTERVAL)}
-#' \item \code{multiply(col0 = BIGINT, col1 = INTERVAL)}
-#' \item \code{multiply(col0 = INTERVAL, col1 = BIGINT)}
-#' }
-#' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
-#' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
+#' @usage multiply(col0, col1)
+#' @param col0,col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`
 #' @export
 multiply <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL`) {
@@ -8487,18 +7609,7 @@ multiply <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | F
 #' Extract the nanosecond component from a date or timestamp.
 #'
 #' @name nanosecond
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{nanosecond(tsns = DATE)}
-#' \item \code{nanosecond(tsns = TIMESTAMP)}
-#' \item \code{nanosecond(tsns = INTERVAL)}
-#' \item \code{nanosecond(tsns = TIME)}
-#' \item \code{nanosecond(tsns = TIME_NS)}
-#' \item \code{nanosecond(tsns = `TIME WITH TIME ZONE`)}
-#' \item \code{nanosecond(tsns = TIMESTAMP_NS)}
-#' \item \code{nanosecond(tsns = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage nanosecond(tsns)
 #' @param tsns `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -8516,14 +7627,8 @@ nanosecond <- function(tsns = `DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TI
 #' Returns the next floating point value after x in the direction of y.
 #'
 #' @name nextafter
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{nextafter(x = DOUBLE, y = DOUBLE)}
-#' \item \code{nextafter(x = FLOAT, y = FLOAT)}
-#' }
-#' @param x `DOUBLE | FLOAT`
-#' @param y `DOUBLE | FLOAT`
+#' @usage nextafter(x, y)
+#' @param x,y `DOUBLE | FLOAT`
 #' @return `DOUBLE | FLOAT`
 #' @export
 #' @section SQL examples:
@@ -8540,15 +7645,15 @@ nextafter <- function(x = `DOUBLE | FLOAT`, y = `DOUBLE | FLOAT`) {
 #' Return the following value of the sequence.
 #'
 #' @name nextval
-#' @usage nextval(`'sequence_name'` = VARCHAR)
-#' @param 'sequence_name' `VARCHAR`
+#' @usage nextval(sequence_name)
+#' @param sequence_name `VARCHAR`
 #' @return `BIGINT`
 #' @export
 #' @section SQL examples:
 #' ```
 #' nextval('my_sequence_name')
 #' ```
-nextval <- function(`'sequence_name'` = VARCHAR) {
+nextval <- function(sequence_name = VARCHAR) {
   stop("DuckDB function nextval() is not available in R.")
 }
 
@@ -8558,7 +7663,7 @@ nextval <- function(`'sequence_name'` = VARCHAR) {
 #' Converts `string` to Unicode NFC normalized string. Useful for comparisons and ordering if text data is mixed between NFC normalized and not.
 #'
 #' @name nfc_normalize
-#' @usage nfc_normalize(string = VARCHAR)
+#' @usage nfc_normalize(string)
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
 #' @export
@@ -8577,7 +7682,7 @@ nfc_normalize <- function(string = VARCHAR) {
 #' Normalizes an INTERVAL to an equivalent interval.
 #'
 #' @name normalized_interval
-#' @usage normalized_interval(interval = INTERVAL)
+#' @usage normalized_interval(interval)
 #' @param interval `INTERVAL`
 #' @return `INTERVAL`
 #' @export
@@ -8595,9 +7700,8 @@ normalized_interval <- function(interval = INTERVAL) {
 #' DuckDB function `!~~()`.
 #'
 #' @name not-~~
-#' @usage `!~~`(col0 = VARCHAR, col1 = VARCHAR)
-#' @param col0 `VARCHAR`
-#' @param col1 `VARCHAR`
+#' @usage `!~~`(col0, col1)
+#' @param col0,col1 `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
 `!~~` <- function(col0 = VARCHAR, col1 = VARCHAR) {
@@ -8610,9 +7714,8 @@ normalized_interval <- function(interval = INTERVAL) {
 #' DuckDB function `!~~*()`.
 #'
 #' @name not-~~*
-#' @usage `!~~*`(col0 = VARCHAR, col1 = VARCHAR)
-#' @param col0 `VARCHAR`
-#' @param col1 `VARCHAR`
+#' @usage `!~~*`(col0, col1)
+#' @param col0,col1 `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
 `!~~*` <- function(col0 = VARCHAR, col1 = VARCHAR) {
@@ -8625,10 +7728,8 @@ normalized_interval <- function(interval = INTERVAL) {
 #' Returns `false` if the `string` matches the `like_specifier` (see Pattern Matching) using case-insensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name not_ilike_escape
-#' @usage not_ilike_escape(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR)
-#' @param string `VARCHAR`
-#' @param like_specifier `VARCHAR`
-#' @param escape_character `VARCHAR`
+#' @usage not_ilike_escape(string, like_specifier, escape_character)
+#' @param string,like_specifier,escape_character `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
 #' @family string
@@ -8646,10 +7747,8 @@ not_ilike_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_
 #' Returns `false` if the `string` matches the `like_specifier` (see Pattern Matching) using case-sensitive matching. `escape_character` is used to search for wildcard characters in the `string`.
 #'
 #' @name not_like_escape
-#' @usage not_like_escape(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR)
-#' @param string `VARCHAR`
-#' @param like_specifier `VARCHAR`
-#' @param escape_character `VARCHAR`
+#' @usage not_like_escape(string, like_specifier, escape_character)
+#' @param string,like_specifier,escape_character `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
 #' @family string
@@ -8667,7 +7766,7 @@ not_like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_c
 #' DuckDB function `nth_value()`.
 #'
 #' @name nth_value
-#' @usage nth_value(col0 = T, col1 = BIGINT)
+#' @usage nth_value(col0, col1)
 #' @param col0 `T`
 #' @param col1 `BIGINT`
 #' @return `T`
@@ -8682,7 +7781,7 @@ nth_value <- function(col0 = T, col1 = BIGINT) {
 #' DuckDB function `ntile()`.
 #'
 #' @name ntile
-#' @usage ntile(col0 = BIGINT)
+#' @usage ntile(col0)
 #' @param col0 `BIGINT`
 #' @return `BIGINT`
 #' @export
@@ -8697,8 +7796,7 @@ ntile <- function(col0 = BIGINT) {
 #'
 #' @name nullif
 #' @usage nullif(a, b)
-#' @param a Unspecified.
-#' @param b Unspecified.
+#' @param a,b Unspecified.
 #' @return Unspecified.
 #' @export
 nullif <- function(a, b) {
@@ -8712,8 +7810,7 @@ nullif <- function(a, b) {
 #'
 #' @name obj_description
 #' @usage obj_description(object_oid, catalog_name)
-#' @param object_oid Unspecified.
-#' @param catalog_name Unspecified.
+#' @param object_oid,catalog_name Unspecified.
 #' @return Unspecified.
 #' @export
 obj_description <- function(object_oid, catalog_name) {
@@ -8723,21 +7820,21 @@ obj_description <- function(object_oid, catalog_name) {
 #' DuckDB function octet_length
 #'
 #' @description
-#' Number of bytes in `blob`.
-#'
-#' Returns the number of bytes in the `bitstring`.
+#' \itemize{
+#' \item \code{octet_length(blob = BLOB)}: Number of bytes in `blob`.
+#' \item \code{octet_length(bitstring = BIT)}: Returns the number of bytes in the `bitstring`.
+#' }
 #'
 #' @name octet_length
-#' @usage NULL
+#' @usage octet_length(blob)
+#' @param blob `BLOB`
+#' @return `BIGINT`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{octet_length(blob = BLOB)}
 #' \item \code{octet_length(bitstring = BIT)}
 #' }
-#' @param blob `BLOB`
-#' @param bitstring `BIT`
-#' @return `BIGINT`
-#' @export
 #' @family bitstring
 #' @family blob
 #' @section SQL examples:
@@ -8745,7 +7842,7 @@ obj_description <- function(object_oid, catalog_name) {
 #' octet_length('\xAA\xBB'::BLOB)
 #' octet_length('1101011'::BITSTRING)
 #' ```
-octet_length <- function(blob = BLOB, bitstring = BIT) {
+octet_length <- function(blob = BLOB) {
   stop("DuckDB function octet_length() is not available in R.")
 }
 
@@ -8755,23 +7852,8 @@ octet_length <- function(blob = BLOB, bitstring = BIT) {
 #' Bitwise OR.
 #'
 #' @name or-
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{`|`(left = TINYINT, right = TINYINT)}
-#' \item \code{`|`(left = SMALLINT, right = SMALLINT)}
-#' \item \code{`|`(left = INTEGER, right = INTEGER)}
-#' \item \code{`|`(left = BIGINT, right = BIGINT)}
-#' \item \code{`|`(left = HUGEINT, right = HUGEINT)}
-#' \item \code{`|`(left = UTINYINT, right = UTINYINT)}
-#' \item \code{`|`(left = USMALLINT, right = USMALLINT)}
-#' \item \code{`|`(left = UINTEGER, right = UINTEGER)}
-#' \item \code{`|`(left = UBIGINT, right = UBIGINT)}
-#' \item \code{`|`(left = UHUGEINT, right = UHUGEINT)}
-#' \item \code{`|`(left = BIT, right = BIT)}
-#' }
-#' @param left `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
-#' @param right `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
+#' @usage `|`(left, right)
+#' @param left,right `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @export
 #' @section SQL examples:
@@ -8788,9 +7870,8 @@ octet_length <- function(blob = BLOB, bitstring = BIT) {
 #' Concatenates two strings, lists, or blobs. Any `NULL` input results in `NULL`. See also `concat(arg1, arg2, ...)` and `list_concat(list1, list2, ...)`.
 #'
 #' @name or--or
-#' @usage `||`(arg1 = ANY, arg2 = ANY)
-#' @param arg1 `ANY`
-#' @param arg2 `ANY`
+#' @usage `||`(arg1, arg2)
+#' @param arg1,arg2 `ANY`
 #' @return `ANY`
 #' @export
 #' @family blob
@@ -8812,12 +7893,7 @@ octet_length <- function(blob = BLOB, bitstring = BIT) {
 #' DuckDB function `parquet_bloom_probe()`.
 #'
 #' @name parquet_bloom_probe
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{parquet_bloom_probe(col0 = VARCHAR, col1 = VARCHAR, col2 = ANY)}
-#' \item \code{parquet_bloom_probe(col0 = `VARCHAR[]`, col1 = VARCHAR, col2 = ANY)}
-#' }
+#' @usage parquet_bloom_probe(col0, col1, col2)
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @param col1 `VARCHAR`
 #' @param col2 `ANY`
@@ -8833,12 +7909,7 @@ parquet_bloom_probe <- function(col0 = `VARCHAR | VARCHAR[]`, col1 = VARCHAR, co
 #' DuckDB function `parquet_file_metadata()`.
 #'
 #' @name parquet_file_metadata
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{parquet_file_metadata(col0 = VARCHAR)}
-#' \item \code{parquet_file_metadata(col0 = `VARCHAR[]`)}
-#' }
+#' @usage parquet_file_metadata(col0)
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
 #' @export
@@ -8852,12 +7923,7 @@ parquet_file_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' DuckDB function `parquet_full_metadata()`.
 #'
 #' @name parquet_full_metadata
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{parquet_full_metadata(col0 = VARCHAR)}
-#' \item \code{parquet_full_metadata(col0 = `VARCHAR[]`)}
-#' }
+#' @usage parquet_full_metadata(col0)
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
 #' @export
@@ -8871,12 +7937,7 @@ parquet_full_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' DuckDB function `parquet_kv_metadata()`.
 #'
 #' @name parquet_kv_metadata
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{parquet_kv_metadata(col0 = VARCHAR)}
-#' \item \code{parquet_kv_metadata(col0 = `VARCHAR[]`)}
-#' }
+#' @usage parquet_kv_metadata(col0)
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
 #' @export
@@ -8890,12 +7951,7 @@ parquet_kv_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' DuckDB function `parquet_metadata()`.
 #'
 #' @name parquet_metadata
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{parquet_metadata(col0 = VARCHAR)}
-#' \item \code{parquet_metadata(col0 = `VARCHAR[]`)}
-#' }
+#' @usage parquet_metadata(col0)
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
 #' @export
@@ -8909,12 +7965,23 @@ parquet_metadata <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' DuckDB function `parquet_scan()`.
 #'
 #' @name parquet_scan
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{parquet_scan(col0 = VARCHAR, can_have_nan = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY, schema = ANY)}
-#' \item \code{parquet_scan(col0 = `VARCHAR[]`, can_have_nan = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY, schema = ANY)}
-#' }
+#' @usage parquet_scan(
+#'   col0,
+#'   can_have_nan,
+#'   filename,
+#'   union_by_name,
+#'   debug_use_openssl,
+#'   hive_partitioning,
+#'   parquet_version,
+#'   encryption_config,
+#'   hive_types_autocast,
+#'   binary_as_string,
+#'   explicit_cardinality,
+#'   compression,
+#'   file_row_number,
+#'   hive_types,
+#'   schema
+#' )
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @param can_have_nan `BOOLEAN`
 #' @param filename `ANY`
@@ -8942,12 +8009,7 @@ parquet_scan <- function(col0 = `VARCHAR | VARCHAR[]`, can_have_nan = BOOLEAN, f
 #' DuckDB function `parquet_schema()`.
 #'
 #' @name parquet_schema
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{parquet_schema(col0 = VARCHAR)}
-#' \item \code{parquet_schema(col0 = `VARCHAR[]`)}
-#' }
+#' @usage parquet_schema(col0)
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
 #' @export
@@ -8961,16 +8023,15 @@ parquet_schema <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' Returns the top-level directory name from the given `path`. `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
 #'
 #' @name parse_dirname
-#' @usage NULL
+#' @usage parse_dirname(path, separator)
+#' @param path,separator `VARCHAR`
+#' @return `VARCHAR`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{parse_dirname(path = VARCHAR)}
 #' \item \code{parse_dirname(path = VARCHAR, separator = VARCHAR)}
 #' }
-#' @param path `VARCHAR`
-#' @param separator `VARCHAR`
-#' @return `VARCHAR`
-#' @export
 #' @family string
 #' @section SQL examples:
 #' ```
@@ -8986,16 +8047,15 @@ parse_dirname <- function(path = VARCHAR, separator = VARCHAR) {
 #' Returns the head of the `path` (the pathname until the last slash) similarly to Python's `os.path.dirname`. `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
 #'
 #' @name parse_dirpath
-#' @usage NULL
+#' @usage parse_dirpath(path, separator)
+#' @param path,separator `VARCHAR`
+#' @return `VARCHAR`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{parse_dirpath(path = VARCHAR)}
 #' \item \code{parse_dirpath(path = VARCHAR, separator = VARCHAR)}
 #' }
-#' @param path `VARCHAR`
-#' @param separator `VARCHAR`
-#' @return `VARCHAR`
-#' @export
 #' @family string
 #' @section SQL examples:
 #' ```
@@ -9011,9 +8071,8 @@ parse_dirpath <- function(path = VARCHAR, separator = VARCHAR) {
 #' Parse the message into the expected logical type.
 #'
 #' @name parse_duckdb_log_message
-#' @usage parse_duckdb_log_message(type = VARCHAR, message = VARCHAR)
-#' @param type `VARCHAR`
-#' @param message `VARCHAR`
+#' @usage parse_duckdb_log_message(type, message)
+#' @param type,message `VARCHAR`
 #' @return `ANY`
 #' @export
 #' @section SQL examples:
@@ -9030,7 +8089,11 @@ parse_duckdb_log_message <- function(type = VARCHAR, message = VARCHAR) {
 #' Returns the last component of the `path` similarly to Python's `os.path.basename` function. If `trim_extension` is `true`, the file extension will be removed (defaults to `false`). `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
 #'
 #' @name parse_filename
-#' @usage NULL
+#' @usage parse_filename(string, trim_extension)
+#' @param string `VARCHAR`
+#' @param trim_extension `VARCHAR | BOOLEAN`
+#' @return `VARCHAR`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{parse_filename(string = VARCHAR)}
@@ -9038,17 +8101,12 @@ parse_duckdb_log_message <- function(type = VARCHAR, message = VARCHAR) {
 #' \item \code{parse_filename(string = VARCHAR, trim_extension = BOOLEAN)}
 #' \item \code{parse_filename(string = VARCHAR, trim_extension = BOOLEAN, separator = VARCHAR)}
 #' }
-#' @param string `VARCHAR`
-#' @param trim_extension `VARCHAR | BOOLEAN`
-#' @param separator `VARCHAR`
-#' @return `VARCHAR`
-#' @export
 #' @family string
 #' @section SQL examples:
 #' ```
 #' parse_filename('path/to/file.csv', true, 'forward_slash')
 #' ```
-parse_filename <- function(string = VARCHAR, trim_extension = `VARCHAR | BOOLEAN`, separator = VARCHAR) {
+parse_filename <- function(string = VARCHAR, trim_extension = `VARCHAR | BOOLEAN`) {
   stop("DuckDB function parse_filename() is not available in R.")
 }
 
@@ -9058,7 +8116,7 @@ parse_filename <- function(string = VARCHAR, trim_extension = `VARCHAR | BOOLEAN
 #' Parses a human-readable representation of a size in bytes into an integer.
 #'
 #' @name parse_formatted_bytes
-#' @usage parse_formatted_bytes(string = VARCHAR)
+#' @usage parse_formatted_bytes(string)
 #' @param string `VARCHAR`
 #' @return `UBIGINT`
 #' @export
@@ -9078,16 +8136,15 @@ parse_formatted_bytes <- function(string = VARCHAR) {
 #' Returns a list of the components (directories and filename) in the `path` similarly to Python's `pathlib.parts` function. `separator` options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
 #'
 #' @name parse_path
-#' @usage NULL
+#' @usage parse_path(path, separator)
+#' @param path,separator `VARCHAR`
+#' @return `VARCHAR[]`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{parse_path(path = VARCHAR)}
 #' \item \code{parse_path(path = VARCHAR, separator = VARCHAR)}
 #' }
-#' @param path `VARCHAR`
-#' @param separator `VARCHAR`
-#' @return `VARCHAR[]`
-#' @export
 #' @family string
 #' @section SQL examples:
 #' ```
@@ -9173,16 +8230,15 @@ pg_function_is_visible <- function(function_oid) {
 #' DuckDB function `pg_get_constraintdef()`.
 #'
 #' @name pg_get_constraintdef
-#' @usage NULL
+#' @usage pg_get_constraintdef(constraint_oid, pretty_bool)
+#' @param constraint_oid,pretty_bool Unspecified.
+#' @return Unspecified.
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{pg_get_constraintdef(constraint_oid)}
 #' \item \code{pg_get_constraintdef(constraint_oid, pretty_bool)}
 #' }
-#' @param constraint_oid Unspecified.
-#' @param pretty_bool Unspecified.
-#' @return Unspecified.
-#' @export
 pg_get_constraintdef <- function(constraint_oid, pretty_bool) {
   stop("DuckDB function pg_get_constraintdef() is not available in R.")
 }
@@ -9194,8 +8250,7 @@ pg_get_constraintdef <- function(constraint_oid, pretty_bool) {
 #'
 #' @name pg_get_expr
 #' @usage pg_get_expr(pg_node_tree, relation_oid)
-#' @param pg_node_tree Unspecified.
-#' @param relation_oid Unspecified.
+#' @param pg_node_tree,relation_oid Unspecified.
 #' @return Unspecified.
 #' @export
 pg_get_expr <- function(pg_node_tree, relation_oid) {
@@ -9222,17 +8277,15 @@ pg_get_viewdef <- function(oid) {
 #' DuckDB function `pg_has_role()`.
 #'
 #' @name pg_has_role
-#' @usage NULL
+#' @usage pg_has_role(user, role, privilege)
+#' @param user,role,privilege Unspecified.
+#' @return Unspecified.
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{pg_has_role(user, role, privilege)}
 #' \item \code{pg_has_role(role, privilege)}
 #' }
-#' @param user Unspecified.
-#' @param role Unspecified.
-#' @param privilege Unspecified.
-#' @return Unspecified.
-#' @export
 pg_has_role <- function(user, role, privilege) {
   stop("DuckDB function pg_has_role() is not available in R.")
 }
@@ -9485,9 +8538,8 @@ platform <- function() {
 #' Computes x to the power of y.
 #'
 #' @name pow
-#' @usage pow(x = DOUBLE, y = DOUBLE)
-#' @param x `DOUBLE`
-#' @param y `DOUBLE`
+#' @usage pow(x, y)
+#' @param x,y `DOUBLE`
 #' @return `DOUBLE`
 #' @export
 #' @section SQL examples:
@@ -9556,15 +8608,15 @@ pragma_database_size <- function() {
 #' DuckDB function `pragma_metadata_info()`.
 #'
 #' @name pragma_metadata_info
-#' @usage NULL
+#' @usage pragma_metadata_info(col0)
+#' @param col0 `VARCHAR`
+#' @return Unspecified.
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{pragma_metadata_info()}
 #' \item \code{pragma_metadata_info(col0 = VARCHAR)}
 #' }
-#' @param col0 `VARCHAR`
-#' @return Unspecified.
-#' @export
 pragma_metadata_info <- function(col0 = VARCHAR) {
   stop("DuckDB function pragma_metadata_info() is not available in R.")
 }
@@ -9589,7 +8641,7 @@ pragma_platform <- function() {
 #' DuckDB function `pragma_show()`.
 #'
 #' @name pragma_show
-#' @usage pragma_show(col0 = VARCHAR)
+#' @usage pragma_show(col0)
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
@@ -9603,7 +8655,7 @@ pragma_show <- function(col0 = VARCHAR) {
 #' DuckDB function `pragma_storage_info()`.
 #'
 #' @name pragma_storage_info
-#' @usage pragma_storage_info(col0 = VARCHAR)
+#' @usage pragma_storage_info(col0)
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
@@ -9617,7 +8669,7 @@ pragma_storage_info <- function(col0 = VARCHAR) {
 #' DuckDB function `pragma_table_info()`.
 #'
 #' @name pragma_table_info
-#' @usage pragma_table_info(col0 = VARCHAR)
+#' @usage pragma_table_info(col0)
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
@@ -9659,9 +8711,8 @@ pragma_version <- function() {
 #' Returns `true` if `string` starts with `search_string`.
 #'
 #' @name prefix
-#' @usage prefix(string = VARCHAR, search_string = VARCHAR)
-#' @param string `VARCHAR`
-#' @param search_string `VARCHAR`
+#' @usage prefix(string, search_string)
+#' @param string,search_string `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
 #' @family string
@@ -9679,7 +8730,7 @@ prefix <- function(string = VARCHAR, search_string = VARCHAR) {
 #' Formats a `string` using printf syntax.
 #'
 #' @name printf
-#' @usage printf(format = VARCHAR)
+#' @usage printf(format)
 #' @param format `VARCHAR`
 #' @return `VARCHAR`
 #' @export
@@ -9698,7 +8749,7 @@ printf <- function(format = VARCHAR) {
 #' Calculates the product of all tuples in arg.
 #'
 #' @name product
-#' @usage product(arg = DOUBLE)
+#' @usage product(arg)
 #' @param arg `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -9716,36 +8767,7 @@ product <- function(arg = DOUBLE) {
 #' Returns the interpolated quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding interpolated quantiles.	.
 #'
 #' @name quantile_cont
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{quantile_cont(x = DECIMAL, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = DECIMAL, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = TINYINT, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = TINYINT, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = SMALLINT, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = SMALLINT, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = INTEGER, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = INTEGER, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = BIGINT, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = BIGINT, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = HUGEINT, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = HUGEINT, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = FLOAT, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = FLOAT, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = DOUBLE, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = DOUBLE, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = DATE, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = DATE, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = TIMESTAMP, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = TIMESTAMP, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = TIME, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = TIME, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = `TIMESTAMP WITH TIME ZONE`, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = `TIMESTAMP WITH TIME ZONE`, pos = `DOUBLE[]`)}
-#' \item \code{quantile_cont(x = `TIME WITH TIME ZONE`, pos = DOUBLE)}
-#' \item \code{quantile_cont(x = `TIME WITH TIME ZONE`, pos = `DOUBLE[]`)}
-#' }
+#' @usage quantile_cont(x, pos)
 #' @param x `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE`
 #' @param pos `DOUBLE | DOUBLE[]`
 #' @return `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DATE | TIMESTAMP | TIME | TIMESTAMP WITH TIME ZONE | TIME WITH TIME ZONE`
@@ -9764,17 +8786,17 @@ quantile_cont <- function(x = `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT |
 #' Returns the exact quantile number between 0 and 1 . If pos is a LIST of FLOATs, then the result is a LIST of the corresponding exact quantiles.
 #'
 #' @name quantile_disc
-#' @usage NULL
+#' @usage quantile_disc(x, pos)
+#' @param x `ANY`
+#' @param pos `DOUBLE | DOUBLE[]`
+#' @return `ANY`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{quantile_disc(x = ANY, pos = DOUBLE)}
 #' \item \code{quantile_disc(x = ANY, pos = `DOUBLE[]`)}
 #' \item \code{quantile_disc(x = ANY)}
 #' }
-#' @param x `ANY`
-#' @param pos `DOUBLE | DOUBLE[]`
-#' @return `ANY`
-#' @export
 #' @section SQL examples:
 #' ```
 #' quantile_disc(x, 0.5)
@@ -9796,14 +8818,7 @@ quantile <- function(x = ANY, pos = `DOUBLE | DOUBLE[]`) {
 #' Extract the quarter component from a date or timestamp.
 #'
 #' @name quarter
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{quarter(ts = DATE)}
-#' \item \code{quarter(ts = INTERVAL)}
-#' \item \code{quarter(ts = TIMESTAMP)}
-#' \item \code{quarter(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage quarter(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -9821,7 +8836,7 @@ quarter <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' DuckDB function `query()`.
 #'
 #' @name query
-#' @usage query(col0 = VARCHAR)
+#' @usage query(col0)
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
@@ -9835,18 +8850,17 @@ query <- function(col0 = VARCHAR) {
 #' DuckDB function `query_table()`.
 #'
 #' @name query_table
-#' @usage NULL
+#' @usage query_table(col0)
+#' @param col0 `VARCHAR | VARCHAR[]`
+#' @return Unspecified.
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{query_table(col0 = VARCHAR)}
 #' \item \code{query_table(col0 = `VARCHAR[]`)}
 #' \item \code{query_table(col0 = `VARCHAR[]`, col1 = BOOLEAN)}
 #' }
-#' @param col0 `VARCHAR | VARCHAR[]`
-#' @param col1 `BOOLEAN`
-#' @return Unspecified.
-#' @export
-query_table <- function(col0 = `VARCHAR | VARCHAR[]`, col1 = BOOLEAN) {
+query_table <- function(col0 = `VARCHAR | VARCHAR[]`) {
   stop("DuckDB function query_table() is not available in R.")
 }
 
@@ -9856,12 +8870,7 @@ query_table <- function(col0 = `VARCHAR | VARCHAR[]`, col1 = BOOLEAN) {
 #' DuckDB function `r_dataframe_scan()`.
 #'
 #' @name r_dataframe_scan
-#' @usage r_dataframe_scan(
-#'   col0 = POINTER,
-#'   map_list_of = BOOLEAN,
-#'   experimental = BOOLEAN,
-#'   integer64 = BOOLEAN
-#' )
+#' @usage r_dataframe_scan(col0, map_list_of, experimental, integer64)
 #' @param col0 `POINTER`
 #' @param map_list_of `BOOLEAN`
 #' @param experimental `BOOLEAN`
@@ -9878,7 +8887,7 @@ r_dataframe_scan <- function(col0 = POINTER, map_list_of = BOOLEAN, experimental
 #' Converts degrees to radians.
 #'
 #' @name radians
-#' @usage radians(x = DOUBLE)
+#' @usage radians(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -9914,7 +8923,12 @@ random <- function() {
 #' Creates a list of values between `start` and `stop` - the stop parameter is exclusive.
 #'
 #' @name range
-#' @usage NULL
+#' @usage range(start, stop, step)
+#' @param start `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @param stop `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @param step `BIGINT | INTERVAL`
+#' @return `BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{range(col0 = BIGINT)}
@@ -9927,20 +8941,12 @@ random <- function() {
 #' \item \code{range(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}
 #' \item \code{range(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}
 #' }
-#' @param col0 `BIGINT | TIMESTAMP`
-#' @param col1 `BIGINT | TIMESTAMP`
-#' @param col2 `BIGINT | INTERVAL`
-#' @param start `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @param stop `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @param step `BIGINT | INTERVAL`
-#' @return `BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
-#' @export
 #' @family list
 #' @section SQL examples:
 #' ```
 #' range(2, 5, 3)
 #' ```
-range <- function(col0 = `BIGINT | TIMESTAMP`, col1 = `BIGINT | TIMESTAMP`, col2 = `BIGINT | INTERVAL`, start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, stop = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, step = `BIGINT | INTERVAL`) {
+range <- function(start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, stop = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, step = `BIGINT | INTERVAL`) {
   stop("DuckDB function range() is not available in R.")
 }
 
@@ -9978,12 +8984,7 @@ rank_dense <- function() {
 #' DuckDB function `read_blob()`.
 #'
 #' @name read_blob
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{read_blob(col0 = VARCHAR)}
-#' \item \code{read_blob(col0 = `VARCHAR[]`)}
-#' }
+#' @usage read_blob(col0)
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
 #' @export
@@ -9997,12 +8998,54 @@ read_blob <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' DuckDB function `read_csv()`.
 #'
 #' @name read_csv
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{read_csv(col0 = VARCHAR, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, column_types = ANY, null_padding = BOOLEAN, column_names = `VARCHAR[]`, buffer_size = UBIGINT, parallel = BOOLEAN, force_not_null = `VARCHAR[]`, hive_types = ANY, new_line = VARCHAR, files_to_sniff = BIGINT, dateformat = VARCHAR, delim = VARCHAR, sep = VARCHAR, decimal_separator = VARCHAR, nullstr = ANY, escape = VARCHAR, compression = VARCHAR, encoding = VARCHAR, hive_types_autocast = BOOLEAN, all_varchar = BOOLEAN, columns = ANY, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, comment = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, store_rejects = BOOLEAN, union_by_name = BOOLEAN, header = BOOLEAN, types = ANY, skip = BIGINT, filename = ANY, sample_size = BIGINT, timestampformat = VARCHAR, normalize_names = BOOLEAN, ignore_errors = BOOLEAN, names = `VARCHAR[]`, allow_quoted_nulls = BOOLEAN, maximum_line_size = VARCHAR, rejects_table = VARCHAR, auto_type_candidates = ANY, rejects_scan = VARCHAR, rejects_limit = BIGINT)}
-#' \item \code{read_csv(col0 = `VARCHAR[]`, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, column_types = ANY, null_padding = BOOLEAN, column_names = `VARCHAR[]`, buffer_size = UBIGINT, parallel = BOOLEAN, force_not_null = `VARCHAR[]`, hive_types = ANY, new_line = VARCHAR, files_to_sniff = BIGINT, dateformat = VARCHAR, delim = VARCHAR, sep = VARCHAR, decimal_separator = VARCHAR, nullstr = ANY, escape = VARCHAR, compression = VARCHAR, encoding = VARCHAR, hive_types_autocast = BOOLEAN, all_varchar = BOOLEAN, columns = ANY, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, comment = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, store_rejects = BOOLEAN, union_by_name = BOOLEAN, header = BOOLEAN, types = ANY, skip = BIGINT, filename = ANY, sample_size = BIGINT, timestampformat = VARCHAR, normalize_names = BOOLEAN, ignore_errors = BOOLEAN, names = `VARCHAR[]`, allow_quoted_nulls = BOOLEAN, maximum_line_size = VARCHAR, rejects_table = VARCHAR, auto_type_candidates = ANY, rejects_scan = VARCHAR, rejects_limit = BIGINT)}
-#' }
+#' @usage read_csv(
+#'   col0,
+#'   thousands,
+#'   strict_mode,
+#'   dtypes,
+#'   column_types,
+#'   null_padding,
+#'   column_names,
+#'   buffer_size,
+#'   parallel,
+#'   force_not_null,
+#'   hive_types,
+#'   new_line,
+#'   files_to_sniff,
+#'   dateformat,
+#'   delim,
+#'   sep,
+#'   decimal_separator,
+#'   nullstr,
+#'   escape,
+#'   compression,
+#'   encoding,
+#'   hive_types_autocast,
+#'   all_varchar,
+#'   columns,
+#'   hive_partitioning,
+#'   auto_detect,
+#'   comment,
+#'   quote,
+#'   max_line_size,
+#'   store_rejects,
+#'   union_by_name,
+#'   header,
+#'   types,
+#'   skip,
+#'   filename,
+#'   sample_size,
+#'   timestampformat,
+#'   normalize_names,
+#'   ignore_errors,
+#'   names,
+#'   allow_quoted_nulls,
+#'   maximum_line_size,
+#'   rejects_table,
+#'   auto_type_candidates,
+#'   rejects_scan,
+#'   rejects_limit
+#' )
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @param thousands `VARCHAR`
 #' @param strict_mode `BOOLEAN`
@@ -10061,12 +9104,54 @@ read_csv <- function(col0 = `VARCHAR | VARCHAR[]`, thousands = VARCHAR, strict_m
 #' DuckDB function `read_csv_auto()`.
 #'
 #' @name read_csv_auto
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{read_csv_auto(col0 = VARCHAR, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, column_types = ANY, null_padding = BOOLEAN, column_names = `VARCHAR[]`, buffer_size = UBIGINT, parallel = BOOLEAN, force_not_null = `VARCHAR[]`, hive_types = ANY, new_line = VARCHAR, files_to_sniff = BIGINT, dateformat = VARCHAR, delim = VARCHAR, sep = VARCHAR, decimal_separator = VARCHAR, nullstr = ANY, escape = VARCHAR, compression = VARCHAR, encoding = VARCHAR, hive_types_autocast = BOOLEAN, all_varchar = BOOLEAN, columns = ANY, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, comment = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, store_rejects = BOOLEAN, union_by_name = BOOLEAN, header = BOOLEAN, types = ANY, skip = BIGINT, filename = ANY, sample_size = BIGINT, timestampformat = VARCHAR, normalize_names = BOOLEAN, ignore_errors = BOOLEAN, names = `VARCHAR[]`, allow_quoted_nulls = BOOLEAN, maximum_line_size = VARCHAR, rejects_table = VARCHAR, auto_type_candidates = ANY, rejects_scan = VARCHAR, rejects_limit = BIGINT)}
-#' \item \code{read_csv_auto(col0 = `VARCHAR[]`, thousands = VARCHAR, strict_mode = BOOLEAN, dtypes = ANY, column_types = ANY, null_padding = BOOLEAN, column_names = `VARCHAR[]`, buffer_size = UBIGINT, parallel = BOOLEAN, force_not_null = `VARCHAR[]`, hive_types = ANY, new_line = VARCHAR, files_to_sniff = BIGINT, dateformat = VARCHAR, delim = VARCHAR, sep = VARCHAR, decimal_separator = VARCHAR, nullstr = ANY, escape = VARCHAR, compression = VARCHAR, encoding = VARCHAR, hive_types_autocast = BOOLEAN, all_varchar = BOOLEAN, columns = ANY, hive_partitioning = BOOLEAN, auto_detect = BOOLEAN, comment = VARCHAR, quote = VARCHAR, max_line_size = VARCHAR, store_rejects = BOOLEAN, union_by_name = BOOLEAN, header = BOOLEAN, types = ANY, skip = BIGINT, filename = ANY, sample_size = BIGINT, timestampformat = VARCHAR, normalize_names = BOOLEAN, ignore_errors = BOOLEAN, names = `VARCHAR[]`, allow_quoted_nulls = BOOLEAN, maximum_line_size = VARCHAR, rejects_table = VARCHAR, auto_type_candidates = ANY, rejects_scan = VARCHAR, rejects_limit = BIGINT)}
-#' }
+#' @usage read_csv_auto(
+#'   col0,
+#'   thousands,
+#'   strict_mode,
+#'   dtypes,
+#'   column_types,
+#'   null_padding,
+#'   column_names,
+#'   buffer_size,
+#'   parallel,
+#'   force_not_null,
+#'   hive_types,
+#'   new_line,
+#'   files_to_sniff,
+#'   dateformat,
+#'   delim,
+#'   sep,
+#'   decimal_separator,
+#'   nullstr,
+#'   escape,
+#'   compression,
+#'   encoding,
+#'   hive_types_autocast,
+#'   all_varchar,
+#'   columns,
+#'   hive_partitioning,
+#'   auto_detect,
+#'   comment,
+#'   quote,
+#'   max_line_size,
+#'   store_rejects,
+#'   union_by_name,
+#'   header,
+#'   types,
+#'   skip,
+#'   filename,
+#'   sample_size,
+#'   timestampformat,
+#'   normalize_names,
+#'   ignore_errors,
+#'   names,
+#'   allow_quoted_nulls,
+#'   maximum_line_size,
+#'   rejects_table,
+#'   auto_type_candidates,
+#'   rejects_scan,
+#'   rejects_limit
+#' )
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @param thousands `VARCHAR`
 #' @param strict_mode `BOOLEAN`
@@ -10125,12 +9210,16 @@ read_csv_auto <- function(col0 = `VARCHAR | VARCHAR[]`, thousands = VARCHAR, str
 #' DuckDB function `read_duckdb()`.
 #'
 #' @name read_duckdb
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{read_duckdb(col0 = VARCHAR, table_name = VARCHAR, schema_name = VARCHAR, hive_types_autocast = BOOLEAN, hive_types = ANY, hive_partitioning = BOOLEAN, union_by_name = BOOLEAN, filename = ANY)}
-#' \item \code{read_duckdb(col0 = `VARCHAR[]`, table_name = VARCHAR, schema_name = VARCHAR, hive_types_autocast = BOOLEAN, hive_types = ANY, hive_partitioning = BOOLEAN, union_by_name = BOOLEAN, filename = ANY)}
-#' }
+#' @usage read_duckdb(
+#'   col0,
+#'   table_name,
+#'   schema_name,
+#'   hive_types_autocast,
+#'   hive_types,
+#'   hive_partitioning,
+#'   union_by_name,
+#'   filename
+#' )
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @param table_name `VARCHAR`
 #' @param schema_name `VARCHAR`
@@ -10151,12 +9240,23 @@ read_duckdb <- function(col0 = `VARCHAR | VARCHAR[]`, table_name = VARCHAR, sche
 #' DuckDB function `read_parquet()`.
 #'
 #' @name read_parquet
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{read_parquet(col0 = VARCHAR, can_have_nan = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY, schema = ANY)}
-#' \item \code{read_parquet(col0 = `VARCHAR[]`, can_have_nan = BOOLEAN, filename = ANY, union_by_name = BOOLEAN, debug_use_openssl = BOOLEAN, hive_partitioning = BOOLEAN, parquet_version = VARCHAR, encryption_config = ANY, hive_types_autocast = BOOLEAN, binary_as_string = BOOLEAN, explicit_cardinality = UBIGINT, compression = VARCHAR, file_row_number = BOOLEAN, hive_types = ANY, schema = ANY)}
-#' }
+#' @usage read_parquet(
+#'   col0,
+#'   can_have_nan,
+#'   filename,
+#'   union_by_name,
+#'   debug_use_openssl,
+#'   hive_partitioning,
+#'   parquet_version,
+#'   encryption_config,
+#'   hive_types_autocast,
+#'   binary_as_string,
+#'   explicit_cardinality,
+#'   compression,
+#'   file_row_number,
+#'   hive_types,
+#'   schema
+#' )
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @param can_have_nan `BOOLEAN`
 #' @param filename `ANY`
@@ -10184,12 +9284,7 @@ read_parquet <- function(col0 = `VARCHAR | VARCHAR[]`, can_have_nan = BOOLEAN, f
 #' DuckDB function `read_text()`.
 #'
 #' @name read_text
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{read_text(col0 = VARCHAR)}
-#' \item \code{read_text(col0 = `VARCHAR[]`)}
-#' }
+#' @usage read_text(col0)
 #' @param col0 `VARCHAR | VARCHAR[]`
 #' @return Unspecified.
 #' @export
@@ -10203,7 +9298,7 @@ read_text <- function(col0 = `VARCHAR | VARCHAR[]`) {
 #' Escapes special patterns to turn `string` into a regular expression similarly to Python's `re.escape` function.
 #'
 #' @name regexp_escape
-#' @usage regexp_escape(string = VARCHAR)
+#' @usage regexp_escape(string)
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
 #' @export
@@ -10219,12 +9314,19 @@ regexp_escape <- function(string = VARCHAR) {
 #' DuckDB function regexp_extract
 #'
 #' @description
-#' If `string` contains the `regex` pattern, returns the capturing group specified by optional parameter `group`; otherwise, returns the empty string. The `group` must be a constant value. If no `group` is given, it defaults to 0. A set of optional regex `options` can be set.
-#'
-#' If `string` contains the `regex` pattern, returns the capturing groups as a struct with corresponding names from `name_list`; otherwise, returns a struct with the same keys and empty strings as values. A set of optional regex `options` can be set.
+#' \itemize{
+#' \item \code{regexp_extract(string = VARCHAR, regex = VARCHAR)}, \code{regexp_extract(string = VARCHAR, regex = VARCHAR, group = INTEGER)}, \code{regexp_extract(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR)}: If `string` contains the `regex` pattern, returns the capturing group specified by optional parameter `group`; otherwise, returns the empty string. The `group` must be a constant value. If no `group` is given, it defaults to 0. A set of optional regex `options` can be set.
+#' \item \code{regexp_extract(string = VARCHAR, regex = VARCHAR, name_list = `VARCHAR[]`)}, \code{regexp_extract(string = VARCHAR, regex = VARCHAR, name_list = `VARCHAR[]`, options = VARCHAR)}: If `string` contains the `regex` pattern, returns the capturing groups as a struct with corresponding names from `name_list`; otherwise, returns a struct with the same keys and empty strings as values. A set of optional regex `options` can be set.
+#' }
 #'
 #' @name regexp_extract
-#' @usage NULL
+#' @usage regexp_extract(string, regex, group, options)
+#' @param string `VARCHAR`
+#' @param regex `VARCHAR`
+#' @param group `INTEGER`
+#' @param options `VARCHAR`
+#' @return `VARCHAR`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{regexp_extract(string = VARCHAR, regex = VARCHAR)}
@@ -10233,13 +9335,6 @@ regexp_escape <- function(string = VARCHAR) {
 #' \item \code{regexp_extract(string = VARCHAR, regex = VARCHAR, name_list = `VARCHAR[]`)}
 #' \item \code{regexp_extract(string = VARCHAR, regex = VARCHAR, name_list = `VARCHAR[]`, options = VARCHAR)}
 #' }
-#' @param string `VARCHAR`
-#' @param regex `VARCHAR`
-#' @param group `INTEGER`
-#' @param options `VARCHAR`
-#' @param name_list `VARCHAR[]`
-#' @return `VARCHAR`
-#' @export
 #' @family regex
 #' @section SQL examples:
 #' ```
@@ -10249,7 +9344,7 @@ regexp_escape <- function(string = VARCHAR) {
 #' regexp_extract('2023-04-15', '(\d+)-(\d+)-(\d+)', ['y', 'm', 'd'])
 #' regexp_extract('John Doe', '([a-z]+) ([a-z]+)', ['first_name', 'last_name'], 'i')
 #' ```
-regexp_extract <- function(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR, name_list = `VARCHAR[]`) {
+regexp_extract <- function(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR) {
   stop("DuckDB function regexp_extract() is not available in R.")
 }
 
@@ -10259,7 +9354,13 @@ regexp_extract <- function(string = VARCHAR, regex = VARCHAR, group = INTEGER, o
 #' Finds non-overlapping occurrences of the `regex` in the `string` and returns the corresponding values of the capturing `group`. A set of optional regex `options` can be set.
 #'
 #' @name regexp_extract_all
-#' @usage NULL
+#' @usage regexp_extract_all(string, regex, group, options)
+#' @param string `VARCHAR`
+#' @param regex `VARCHAR`
+#' @param group `INTEGER | VARCHAR[]`
+#' @param options `VARCHAR`
+#' @return `VARCHAR[]`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR)}
@@ -10268,12 +9369,6 @@ regexp_extract <- function(string = VARCHAR, regex = VARCHAR, group = INTEGER, o
 #' \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = `VARCHAR[]`)}
 #' \item \code{regexp_extract_all(string = VARCHAR, regex = VARCHAR, group = `VARCHAR[]`, options = VARCHAR)}
 #' }
-#' @param string `VARCHAR`
-#' @param regex `VARCHAR`
-#' @param group `INTEGER | VARCHAR[]`
-#' @param options `VARCHAR`
-#' @return `VARCHAR[]`
-#' @export
 #' @family regex
 #' @section SQL examples:
 #' ```
@@ -10289,17 +9384,15 @@ regexp_extract_all <- function(string = VARCHAR, regex = VARCHAR, group = `INTEG
 #' Returns `true` if the entire `string` matches the `regex`. A set of optional regex `options` can be set.
 #'
 #' @name regexp_full_match
-#' @usage NULL
+#' @usage regexp_full_match(string, regex, col2)
+#' @param string,regex,col2 `VARCHAR`
+#' @return `BOOLEAN`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{regexp_full_match(string = VARCHAR, regex = VARCHAR)}
 #' \item \code{regexp_full_match(string = VARCHAR, regex = VARCHAR, col2 = VARCHAR)}
 #' }
-#' @param string `VARCHAR`
-#' @param regex `VARCHAR`
-#' @param col2 `VARCHAR`
-#' @return `BOOLEAN`
-#' @export
 #' @family regex
 #' @section SQL examples:
 #' ```
@@ -10315,17 +9408,15 @@ regexp_full_match <- function(string = VARCHAR, regex = VARCHAR, col2 = VARCHAR)
 #' Returns `true` if `string` contains the `regex`, `false` otherwise. A set of optional regex `options` can be set.
 #'
 #' @name regexp_matches
-#' @usage NULL
+#' @usage regexp_matches(string, regex, options)
+#' @param string,regex,options `VARCHAR`
+#' @return `BOOLEAN`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{regexp_matches(string = VARCHAR, regex = VARCHAR)}
 #' \item \code{regexp_matches(string = VARCHAR, regex = VARCHAR, options = VARCHAR)}
 #' }
-#' @param string `VARCHAR`
-#' @param regex `VARCHAR`
-#' @param options `VARCHAR`
-#' @return `BOOLEAN`
-#' @export
 #' @family regex
 #' @section SQL examples:
 #' ```
@@ -10341,18 +9432,15 @@ regexp_matches <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR)
 #' If `string` contains the `regex`, replaces the matching part with `replacement`. A set of optional regex `options` can be set.
 #'
 #' @name regexp_replace
-#' @usage NULL
+#' @usage regexp_replace(string, regex, replacement, options)
+#' @param string,regex,replacement,options `VARCHAR`
+#' @return `VARCHAR`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{regexp_replace(string = VARCHAR, regex = VARCHAR, replacement = VARCHAR)}
 #' \item \code{regexp_replace(string = VARCHAR, regex = VARCHAR, replacement = VARCHAR, options = VARCHAR)}
 #' }
-#' @param string `VARCHAR`
-#' @param regex `VARCHAR`
-#' @param replacement `VARCHAR`
-#' @param options `VARCHAR`
-#' @return `VARCHAR`
-#' @export
 #' @family regex
 #' @section SQL examples:
 #' ```
@@ -10369,8 +9457,7 @@ regexp_replace <- function(string = VARCHAR, regex = VARCHAR, replacement = VARC
 #'
 #' @name regexp_split_to_table
 #' @usage regexp_split_to_table(text, pattern)
-#' @param text Unspecified.
-#' @param pattern Unspecified.
+#' @param text,pattern Unspecified.
 #' @return Unspecified.
 #' @export
 regexp_split_to_table <- function(text, pattern) {
@@ -10383,9 +9470,8 @@ regexp_split_to_table <- function(text, pattern) {
 #' Returns the average of the independent variable for non-NULL pairs in a group, where x is the independent variable and y is the dependent variable.
 #'
 #' @name regr_avgx
-#' @usage regr_avgx(y = DOUBLE, x = DOUBLE)
-#' @param y `DOUBLE`
-#' @param x `DOUBLE`
+#' @usage regr_avgx(y, x)
+#' @param y,x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
 regr_avgx <- function(y = DOUBLE, x = DOUBLE) {
@@ -10398,9 +9484,8 @@ regr_avgx <- function(y = DOUBLE, x = DOUBLE) {
 #' Returns the average of the dependent variable for non-NULL pairs in a group, where x is the independent variable and y is the dependent variable.
 #'
 #' @name regr_avgy
-#' @usage regr_avgy(y = DOUBLE, x = DOUBLE)
-#' @param y `DOUBLE`
-#' @param x `DOUBLE`
+#' @usage regr_avgy(y, x)
+#' @param y,x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
 regr_avgy <- function(y = DOUBLE, x = DOUBLE) {
@@ -10413,9 +9498,8 @@ regr_avgy <- function(y = DOUBLE, x = DOUBLE) {
 #' Returns the number of non-NULL number pairs in a group.
 #'
 #' @name regr_count
-#' @usage regr_count(y = DOUBLE, x = DOUBLE)
-#' @param y `DOUBLE`
-#' @param x `DOUBLE`
+#' @usage regr_count(y, x)
+#' @param y,x `DOUBLE`
 #' @return `UINTEGER`
 #' @export
 #' @section SQL examples:
@@ -10432,9 +9516,8 @@ regr_count <- function(y = DOUBLE, x = DOUBLE) {
 #' Returns the intercept of the univariate linear regression line for non-NULL pairs in a group.
 #'
 #' @name regr_intercept
-#' @usage regr_intercept(y = DOUBLE, x = DOUBLE)
-#' @param y `DOUBLE`
-#' @param x `DOUBLE`
+#' @usage regr_intercept(y, x)
+#' @param y,x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
 #' @section SQL examples:
@@ -10451,9 +9534,8 @@ regr_intercept <- function(y = DOUBLE, x = DOUBLE) {
 #' Returns the coefficient of determination for non-NULL pairs in a group.
 #'
 #' @name regr_r2
-#' @usage regr_r2(y = DOUBLE, x = DOUBLE)
-#' @param y `DOUBLE`
-#' @param x `DOUBLE`
+#' @usage regr_r2(y, x)
+#' @param y,x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
 regr_r2 <- function(y = DOUBLE, x = DOUBLE) {
@@ -10466,9 +9548,8 @@ regr_r2 <- function(y = DOUBLE, x = DOUBLE) {
 #' Returns the slope of the linear regression line for non-NULL pairs in a group.
 #'
 #' @name regr_slope
-#' @usage regr_slope(y = DOUBLE, x = DOUBLE)
-#' @param y `DOUBLE`
-#' @param x `DOUBLE`
+#' @usage regr_slope(y, x)
+#' @param y,x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
 #' @section SQL examples:
@@ -10485,9 +9566,8 @@ regr_slope <- function(y = DOUBLE, x = DOUBLE) {
 #' DuckDB function `regr_sxx()`.
 #'
 #' @name regr_sxx
-#' @usage regr_sxx(y = DOUBLE, x = DOUBLE)
-#' @param y `DOUBLE`
-#' @param x `DOUBLE`
+#' @usage regr_sxx(y, x)
+#' @param y,x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
 #' @section SQL examples:
@@ -10504,9 +9584,8 @@ regr_sxx <- function(y = DOUBLE, x = DOUBLE) {
 #' Returns the population covariance of input values.
 #'
 #' @name regr_sxy
-#' @usage regr_sxy(y = DOUBLE, x = DOUBLE)
-#' @param y `DOUBLE`
-#' @param x `DOUBLE`
+#' @usage regr_sxy(y, x)
+#' @param y,x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
 #' @section SQL examples:
@@ -10523,9 +9602,8 @@ regr_sxy <- function(y = DOUBLE, x = DOUBLE) {
 #' DuckDB function `regr_syy()`.
 #'
 #' @name regr_syy
-#' @usage regr_syy(y = DOUBLE, x = DOUBLE)
-#' @param y `DOUBLE`
-#' @param x `DOUBLE`
+#' @usage regr_syy(y, x)
+#' @param y,x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
 #' @section SQL examples:
@@ -10539,28 +9617,26 @@ regr_syy <- function(y = DOUBLE, x = DOUBLE) {
 #' DuckDB function repeat
 #'
 #' @description
-#' Repeats the `string` `count` number of times.
-#'
-#' Repeats the `blob` `count` number of times.
-#'
-#' Repeats the `list` `count` number of times.
+#' \itemize{
+#' \item \code{`repeat`(string = VARCHAR, count = BIGINT)}: Repeats the `string` `count` number of times.
+#' \item \code{`repeat`(blob = BLOB, count = BIGINT)}: Repeats the `blob` `count` number of times.
+#' \item \code{`repeat`(list = `T[]`, count = BIGINT)}: Repeats the `list` `count` number of times.
+#' \item \code{`repeat`(col0 = ANY, col1 = BIGINT)}: (Description missing.)
+#' }
 #'
 #' @name repeat
-#' @usage NULL
+#' @usage `repeat`(col0, col1)
+#' @param col0 `ANY`
+#' @param col1 `BIGINT`
+#' @return `VARCHAR | BLOB | T[]`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{`repeat`(col0 = ANY, col1 = BIGINT)}
 #' \item \code{`repeat`(string = VARCHAR, count = BIGINT)}
 #' \item \code{`repeat`(blob = BLOB, count = BIGINT)}
-#' \item \code{`repeat`(col0 = `T[]`, col1 = BIGINT)}
+#' \item \code{`repeat`(list = `T[]`, count = BIGINT)}
 #' }
-#' @param col0 `ANY | T[]`
-#' @param col1 `BIGINT`
-#' @param string `VARCHAR`
-#' @param count `BIGINT`
-#' @param blob `BLOB`
-#' @return `VARCHAR | BLOB | T[]`
-#' @export
 #' @family blob
 #' @family list
 #' @family string
@@ -10570,7 +9646,7 @@ regr_syy <- function(y = DOUBLE, x = DOUBLE) {
 #' repeat('\xAA\xBB'::BLOB, 5)
 #' repeat([1, 2, 3], 5)
 #' ```
-`repeat` <- function(col0 = `ANY | T[]`, col1 = BIGINT, string = VARCHAR, count = BIGINT, blob = BLOB) {
+`repeat` <- function(col0 = ANY, col1 = BIGINT) {
   stop("DuckDB function repeat() is not available in R.")
 }
 
@@ -10580,7 +9656,7 @@ regr_syy <- function(y = DOUBLE, x = DOUBLE) {
 #' DuckDB function `repeat_row()`.
 #'
 #' @name repeat_row
-#' @usage repeat_row(num_rows = BIGINT)
+#' @usage repeat_row(num_rows)
 #' @param num_rows `BIGINT`
 #' @return Unspecified.
 #' @export
@@ -10594,10 +9670,8 @@ repeat_row <- function(num_rows = BIGINT) {
 #' Replaces any occurrences of the `source` with `target` in `string`.
 #'
 #' @name replace
-#' @usage replace(string = VARCHAR, source = VARCHAR, target = VARCHAR)
-#' @param string `VARCHAR`
-#' @param source `VARCHAR`
-#' @param target `VARCHAR`
+#' @usage replace(string, source, target)
+#' @param string,source,target `VARCHAR`
 #' @return `VARCHAR`
 #' @export
 #' @family string
@@ -10615,10 +9689,8 @@ replace <- function(string = VARCHAR, source = VARCHAR, target = VARCHAR) {
 #' Casts all fields of type1 to type2.
 #'
 #' @name replace_type
-#' @usage replace_type(param = ANY, type1 = ANY, type2 = ANY)
-#' @param param `ANY`
-#' @param type1 `ANY`
-#' @param type2 `ANY`
+#' @usage replace_type(param, type1, type2)
+#' @param param,type1,type2 `ANY`
 #' @return `ANY`
 #' @export
 #' @section SQL examples:
@@ -10635,7 +9707,12 @@ replace_type <- function(param = ANY, type1 = ANY, type2 = ANY) {
 #' Gives the approximate quantile using reservoir sampling, the sample size is optional and uses 8192 as a default size.
 #'
 #' @name reservoir_quantile
-#' @usage NULL
+#' @usage reservoir_quantile(x, quantile, sample_size)
+#' @param x `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE`
+#' @param quantile `DOUBLE | DOUBLE[]`
+#' @param sample_size `INTEGER`
+#' @return `DECIMAL | DECIMAL[] | TINYINT | TINYINT[] | SMALLINT | SMALLINT[] | INTEGER | INTEGER[] | BIGINT | BIGINT[] | HUGEINT | HUGEINT[] | FLOAT | FLOAT[] | DOUBLE | DOUBLE[]`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{reservoir_quantile(x = DECIMAL, quantile = DOUBLE)}
@@ -10671,11 +9748,6 @@ replace_type <- function(param = ANY, type1 = ANY, type2 = ANY) {
 #' \item \code{reservoir_quantile(x = DOUBLE, quantile = `DOUBLE[]`)}
 #' \item \code{reservoir_quantile(x = DOUBLE, quantile = `DOUBLE[]`, sample_size = INTEGER)}
 #' }
-#' @param x `DECIMAL | TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE`
-#' @param quantile `DOUBLE | DOUBLE[]`
-#' @param sample_size `INTEGER`
-#' @return `DECIMAL | DECIMAL[] | TINYINT | TINYINT[] | SMALLINT | SMALLINT[] | INTEGER | INTEGER[] | BIGINT | BIGINT[] | HUGEINT | HUGEINT[] | FLOAT | FLOAT[] | DOUBLE | DOUBLE[]`
-#' @export
 #' @section SQL examples:
 #' ```
 #' reservoir_quantile(A, 0.5, 1024)
@@ -10690,7 +9762,7 @@ reservoir_quantile <- function(x = `DECIMAL | TINYINT | SMALLINT | INTEGER | BIG
 #' Reverses the `string`.
 #'
 #' @name reverse
-#' @usage reverse(string = VARCHAR)
+#' @usage reverse(string)
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
 #' @export
@@ -10709,7 +9781,7 @@ reverse <- function(string = VARCHAR) {
 #' Extract the right-most `count` characters.
 #'
 #' @name right
-#' @usage right(string = VARCHAR, count = BIGINT)
+#' @usage right(string, count)
 #' @param string `VARCHAR`
 #' @param count `BIGINT`
 #' @return `VARCHAR`
@@ -10729,7 +9801,7 @@ right <- function(string = VARCHAR, count = BIGINT) {
 #' Extracts the right-most `count` grapheme clusters.
 #'
 #' @name right_grapheme
-#' @usage right_grapheme(string = VARCHAR, count = BIGINT)
+#' @usage right_grapheme(string, count)
 #' @param string `VARCHAR`
 #' @param count `BIGINT`
 #' @return `VARCHAR`
@@ -10749,7 +9821,11 @@ right_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #' Rounds x to s decimal places.
 #'
 #' @name round
-#' @usage NULL
+#' @usage round(x, precision)
+#' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL`
+#' @param precision `INTEGER`
+#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{round(x = TINYINT)}
@@ -10769,10 +9845,6 @@ right_grapheme <- function(string = VARCHAR, count = BIGINT) {
 #' \item \code{round(x = DECIMAL)}
 #' \item \code{round(x = DECIMAL, precision = INTEGER)}
 #' }
-#' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL`
-#' @param precision `INTEGER`
-#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL`
-#' @export
 #' @section SQL examples:
 #' ```
 #' round(42.4332, 2)
@@ -10788,8 +9860,7 @@ round <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT |
 #'
 #' @name round_even
 #' @usage round_even(x, n)
-#' @param x Unspecified.
-#' @param n Unspecified.
+#' @param x,n Unspecified.
 #' @return Unspecified.
 #' @export
 round_even <- function(x, n) {
@@ -10803,8 +9874,7 @@ round_even <- function(x, n) {
 #'
 #' @name roundbankers
 #' @usage roundbankers(x, n)
-#' @param x Unspecified.
-#' @param n Unspecified.
+#' @param x,n Unspecified.
 #' @return Unspecified.
 #' @export
 roundbankers <- function(x, n) {
@@ -10849,7 +9919,7 @@ row_number <- function() {
 #' Pads the `string` with the `character` on the right until it has `count` characters. Truncates the `string` on the right if it has more than `count` characters.
 #'
 #' @name rpad
-#' @usage rpad(string = VARCHAR, count = INTEGER, character = VARCHAR)
+#' @usage rpad(string, count, character)
 #' @param string `VARCHAR`
 #' @param count `INTEGER`
 #' @param character `VARCHAR`
@@ -10870,16 +9940,15 @@ rpad <- function(string = VARCHAR, count = INTEGER, character = VARCHAR) {
 #' Removes any occurrences of any of the `characters` from the right side of the `string`. `characters` defaults to `space`.
 #'
 #' @name rtrim
-#' @usage NULL
+#' @usage rtrim(string, characters)
+#' @param string,characters `VARCHAR`
+#' @return `VARCHAR`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{rtrim(string = VARCHAR)}
 #' \item \code{rtrim(string = VARCHAR, characters = VARCHAR)}
 #' }
-#' @param string `VARCHAR`
-#' @param characters `VARCHAR`
-#' @return `VARCHAR`
-#' @export
 #' @family string
 #' @section SQL examples:
 #' ```
@@ -10896,17 +9965,7 @@ rtrim <- function(string = VARCHAR, characters = VARCHAR) {
 #' Extract the second component from a date or timestamp.
 #'
 #' @name second
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{second(ts = DATE)}
-#' \item \code{second(ts = INTERVAL)}
-#' \item \code{second(ts = TIME)}
-#' \item \code{second(ts = TIMESTAMP)}
-#' \item \code{second(ts = `TIME WITH TIME ZONE`)}
-#' \item \code{second(ts = TIME_NS)}
-#' \item \code{second(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage second(ts)
 #' @param ts `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -10924,7 +9983,7 @@ second <- function(ts = `DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZON
 #' Returns the standard error of the mean.
 #'
 #' @name sem
-#' @usage sem(x = DOUBLE)
+#' @usage sem(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -10966,7 +10025,7 @@ session_user <- function() {
 #' Sets the nth bit in bitstring to newvalue; the first (leftmost) bit is indexed 0. Returns a new bitstring.
 #'
 #' @name set_bit
-#' @usage set_bit(bitstring = BIT, index = INTEGER, new_value = INTEGER)
+#' @usage set_bit(bitstring, index, new_value)
 #' @param bitstring `BIT`
 #' @param index `INTEGER`
 #' @param new_value `INTEGER`
@@ -10986,7 +10045,7 @@ set_bit <- function(bitstring = BIT, index = INTEGER, new_value = INTEGER) {
 #' Sets the seed to be used for the random function.
 #'
 #' @name setseed
-#' @usage setseed(col0 = DOUBLE)
+#' @usage setseed(col0)
 #' @param col0 `DOUBLE`
 #' @return `"NULL"`
 #' @export
@@ -11001,21 +10060,21 @@ setseed <- function(col0 = DOUBLE) {
 #' DuckDB function sha1
 #'
 #' @description
-#' Returns a `VARCHAR` with the SHA-1 hash of the `value`.
-#'
-#' Returns a `VARCHAR` with the SHA-1 hash of the `blob`.
+#' \itemize{
+#' \item \code{sha1(value = VARCHAR)}: Returns a `VARCHAR` with the SHA-1 hash of the `value`.
+#' \item \code{sha1(blob = BLOB)}: Returns a `VARCHAR` with the SHA-1 hash of the `blob`.
+#' }
 #'
 #' @name sha1
-#' @usage NULL
+#' @usage sha1(value)
+#' @param value `VARCHAR`
+#' @return `VARCHAR`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{sha1(value = VARCHAR)}
 #' \item \code{sha1(blob = BLOB)}
 #' }
-#' @param value `VARCHAR`
-#' @param blob `BLOB`
-#' @return `VARCHAR`
-#' @export
 #' @family blob
 #' @family string
 #' @section SQL examples:
@@ -11023,28 +10082,28 @@ setseed <- function(col0 = DOUBLE) {
 #' sha1('🦆')
 #' sha1('\xAA\xBB'::BLOB)
 #' ```
-sha1 <- function(value = VARCHAR, blob = BLOB) {
+sha1 <- function(value = VARCHAR) {
   stop("DuckDB function sha1() is not available in R.")
 }
 
 #' DuckDB function sha256
 #'
 #' @description
-#' Returns a `VARCHAR` with the SHA-256 hash of the `value`.
-#'
-#' Returns a `VARCHAR` with the SHA-256 hash of the `blob`.
+#' \itemize{
+#' \item \code{sha256(value = VARCHAR)}: Returns a `VARCHAR` with the SHA-256 hash of the `value`.
+#' \item \code{sha256(blob = BLOB)}: Returns a `VARCHAR` with the SHA-256 hash of the `blob`.
+#' }
 #'
 #' @name sha256
-#' @usage NULL
+#' @usage sha256(value)
+#' @param value `VARCHAR`
+#' @return `VARCHAR`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{sha256(value = VARCHAR)}
 #' \item \code{sha256(blob = BLOB)}
 #' }
-#' @param value `VARCHAR`
-#' @param blob `BLOB`
-#' @return `VARCHAR`
-#' @export
 #' @family blob
 #' @family string
 #' @section SQL examples:
@@ -11052,7 +10111,7 @@ sha1 <- function(value = VARCHAR, blob = BLOB) {
 #' sha256('🦆')
 #' sha256('\xAA\xBB'::BLOB)
 #' ```
-sha256 <- function(value = VARCHAR, blob = BLOB) {
+sha256 <- function(value = VARCHAR) {
   stop("DuckDB function sha256() is not available in R.")
 }
 
@@ -11063,8 +10122,7 @@ sha256 <- function(value = VARCHAR, blob = BLOB) {
 #'
 #' @name shobj_description
 #' @usage shobj_description(object_oid, catalog_name)
-#' @param object_oid Unspecified.
-#' @param catalog_name Unspecified.
+#' @param object_oid,catalog_name Unspecified.
 #' @return Unspecified.
 #' @export
 shobj_description <- function(object_oid, catalog_name) {
@@ -11077,7 +10135,7 @@ shobj_description <- function(object_oid, catalog_name) {
 #' DuckDB function `show()`.
 #'
 #' @name show
-#' @usage show(col0 = VARCHAR)
+#' @usage show(col0)
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
@@ -11133,22 +10191,7 @@ show_tables_expanded <- function() {
 #' Returns the sign of x as -1, 0 or 1.
 #'
 #' @name sign
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{sign(x = TINYINT)}
-#' \item \code{sign(x = SMALLINT)}
-#' \item \code{sign(x = INTEGER)}
-#' \item \code{sign(x = BIGINT)}
-#' \item \code{sign(x = HUGEINT)}
-#' \item \code{sign(x = FLOAT)}
-#' \item \code{sign(x = DOUBLE)}
-#' \item \code{sign(x = UTINYINT)}
-#' \item \code{sign(x = USMALLINT)}
-#' \item \code{sign(x = UINTEGER)}
-#' \item \code{sign(x = UBIGINT)}
-#' \item \code{sign(x = UHUGEINT)}
-#' }
+#' @usage sign(x)
 #' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
 #' @return `TINYINT`
 #' @export
@@ -11166,12 +10209,7 @@ sign <- function(x = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | 
 #' Returns whether the signbit is set or not.
 #'
 #' @name signbit
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{signbit(x = FLOAT)}
-#' \item \code{signbit(x = DOUBLE)}
-#' }
+#' @usage signbit(x)
 #' @param x `FLOAT | DOUBLE`
 #' @return `BOOLEAN`
 #' @export
@@ -11189,7 +10227,7 @@ signbit <- function(x = `FLOAT | DOUBLE`) {
 #' Computes the sin of x.
 #'
 #' @name sin
-#' @usage sin(x = DOUBLE)
+#' @usage sin(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -11207,7 +10245,7 @@ sin <- function(x = DOUBLE) {
 #' Computes the hyperbolic sin of x.
 #'
 #' @name sinh
-#' @usage sinh(x = DOUBLE)
+#' @usage sinh(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -11225,7 +10263,7 @@ sinh <- function(x = DOUBLE) {
 #' Returns the skewness of all input values.
 #'
 #' @name skewness
-#' @usage skewness(x = DOUBLE)
+#' @usage skewness(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -11243,7 +10281,7 @@ skewness <- function(x = DOUBLE) {
 #' Sleeps for the specified number of milliseconds and returns NULL.
 #'
 #' @name sleep_ms
-#' @usage sleep_ms(milliseconds = BIGINT)
+#' @usage sleep_ms(milliseconds)
 #' @param milliseconds `BIGINT`
 #' @return `"NULL"`
 #' @export
@@ -11262,9 +10300,7 @@ sleep_ms <- function(milliseconds = BIGINT) {
 #'
 #' @name split_part
 #' @usage split_part(string, delimiter, position)
-#' @param string Unspecified.
-#' @param delimiter Unspecified.
-#' @param position Unspecified.
+#' @param string,delimiter,position Unspecified.
 #' @return Unspecified.
 #' @export
 split_part <- function(string, delimiter, position) {
@@ -11277,7 +10313,7 @@ split_part <- function(string, delimiter, position) {
 #' Returns the square root of x.
 #'
 #' @name sqrt
-#' @usage sqrt(x = DOUBLE)
+#' @usage sqrt(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -11295,7 +10331,7 @@ sqrt <- function(x = DOUBLE) {
 #' Returns the Well-Known Text (WKT) representation of the geometry.
 #'
 #' @name st_astext
-#' @usage st_astext(geom = GEOMETRY)
+#' @usage st_astext(geom)
 #' @param geom `GEOMETRY`
 #' @return `VARCHAR`
 #' @export
@@ -11321,7 +10357,7 @@ st_aswkt <- function(geom = GEOMETRY) {
 #' Returns the Well-Known Binary (WKB) representation of the geometry.
 #'
 #' @name st_aswkb
-#' @usage st_aswkb(geom = GEOMETRY)
+#' @usage st_aswkb(geom)
 #' @param geom `GEOMETRY`
 #' @return `BLOB`
 #' @export
@@ -11347,7 +10383,7 @@ st_asbinary <- function(geom = GEOMETRY) {
 #' Returns the Coordinate Reference System (CRS) identifier of the geometry.
 #'
 #' @name st_crs
-#' @usage st_crs(geom = GEOMETRY)
+#' @usage st_crs(geom)
 #' @param geom `GEOMETRY`
 #' @return `VARCHAR`
 #' @export
@@ -11362,7 +10398,7 @@ st_crs <- function(geom = GEOMETRY) {
 #' Creates a geometry from Well-Known Binary (WKB) representation.
 #'
 #' @name st_geomfromwkb
-#' @usage st_geomfromwkb(wkb = BLOB)
+#' @usage st_geomfromwkb(wkb)
 #' @param wkb `BLOB`
 #' @return `GEOMETRY`
 #' @export
@@ -11381,7 +10417,7 @@ st_geomfromwkb <- function(wkb = BLOB) {
 #' Sets the Coordinate Reference System (CRS) identifier of the geometry.
 #'
 #' @name st_setcrs
-#' @usage st_setcrs(geom = GEOMETRY, crs = VARCHAR)
+#' @usage st_setcrs(geom, crs)
 #' @param geom `GEOMETRY`
 #' @param crs `VARCHAR`
 #' @return `GEOMETRY`
@@ -11396,9 +10432,8 @@ st_setcrs <- function(geom = GEOMETRY, crs = VARCHAR) {
 #' Returns `true` if `string` begins with `search_string`.
 #'
 #' @name starts_with
-#' @usage starts_with(string = VARCHAR, search_string = VARCHAR)
-#' @param string `VARCHAR`
-#' @param search_string `VARCHAR`
+#' @usage starts_with(string, search_string)
+#' @param string,search_string `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
 #' @family string
@@ -11423,7 +10458,7 @@ starts_with <- function(string = VARCHAR, search_string = VARCHAR) {
 #' Returns a string with statistics about the expression. Expression can be a column, constant, or SQL expression.
 #'
 #' @name stats
-#' @usage stats(expression = ANY)
+#' @usage stats(expression)
 #' @param expression `ANY`
 #' @return `VARCHAR`
 #' @export
@@ -11441,7 +10476,7 @@ stats <- function(expression = ANY) {
 #' Returns the population standard deviation.
 #'
 #' @name stddev_pop
-#' @usage stddev_pop(x = DOUBLE)
+#' @usage stddev_pop(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -11459,7 +10494,7 @@ stddev_pop <- function(x = DOUBLE) {
 #' Returns the sample standard deviation.
 #'
 #' @name stddev_samp
-#' @usage stddev_samp(x = DOUBLE)
+#' @usage stddev_samp(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -11484,7 +10519,7 @@ stddev <- function(x = DOUBLE) {
 #' DuckDB function `storage_info()`.
 #'
 #' @name storage_info
-#' @usage storage_info(col0 = VARCHAR)
+#' @usage storage_info(col0)
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
@@ -11498,18 +10533,7 @@ storage_info <- function(col0 = VARCHAR) {
 #' Converts a `date` to a string according to the format string.
 #'
 #' @name strftime
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{strftime(data = DATE, format = VARCHAR)}
-#' \item \code{strftime(data = TIMESTAMP, format = VARCHAR)}
-#' \item \code{strftime(data = TIMESTAMP_NS, format = VARCHAR)}
-#' \item \code{strftime(data = VARCHAR, format = DATE)}
-#' \item \code{strftime(data = VARCHAR, format = TIMESTAMP)}
-#' \item \code{strftime(data = VARCHAR, format = TIMESTAMP_NS)}
-#' \item \code{strftime(data = `TIMESTAMP WITH TIME ZONE`, format = VARCHAR)}
-#' \item \code{strftime(data = VARCHAR, format = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage strftime(data, format)
 #' @param data `DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR | TIMESTAMP WITH TIME ZONE`
 #' @param format `VARCHAR | DATE | TIMESTAMP | TIMESTAMP_NS | TIMESTAMP WITH TIME ZONE`
 #' @return `VARCHAR`
@@ -11528,16 +10552,16 @@ strftime <- function(data = `DATE | TIMESTAMP | TIMESTAMP_NS | VARCHAR | TIMESTA
 #' Concatenates the column string values with an optional separator.
 #'
 #' @name string_agg
-#' @usage NULL
+#' @usage string_agg(str, arg)
+#' @param str `ANY`
+#' @param arg `VARCHAR`
+#' @return `VARCHAR`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{string_agg(str = ANY)}
 #' \item \code{string_agg(str = ANY, arg = VARCHAR)}
 #' }
-#' @param str `ANY`
-#' @param arg `VARCHAR`
-#' @return `VARCHAR`
-#' @export
 #' @section SQL examples:
 #' ```
 #' string_agg(A, '-')
@@ -11566,9 +10590,8 @@ listagg <- function(str = ANY, arg = VARCHAR) {
 #' Splits the `string` along the `separator`.
 #'
 #' @name string_split
-#' @usage string_split(string = VARCHAR, separator = VARCHAR)
-#' @param string `VARCHAR`
-#' @param separator `VARCHAR`
+#' @usage string_split(string, separator)
+#' @param string,separator `VARCHAR`
 #' @return `VARCHAR[]`
 #' @export
 #' @family string
@@ -11607,17 +10630,15 @@ string_to_array <- function(string = VARCHAR, separator = VARCHAR) {
 #' Splits the `string` along the `regex`. A set of optional regex `options` can be set.
 #'
 #' @name string_split_regex
-#' @usage NULL
+#' @usage string_split_regex(string, regex, options)
+#' @param string,regex,options `VARCHAR`
+#' @return `VARCHAR[]`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{string_split_regex(string = VARCHAR, regex = VARCHAR)}
 #' \item \code{string_split_regex(string = VARCHAR, regex = VARCHAR, options = VARCHAR)}
 #' }
-#' @param string `VARCHAR`
-#' @param regex `VARCHAR`
-#' @param options `VARCHAR`
-#' @return `VARCHAR[]`
-#' @export
 #' @family regex
 #' @section SQL examples:
 #' ```
@@ -11647,7 +10668,7 @@ str_split_regex <- function(string = VARCHAR, regex = VARCHAR, options = VARCHAR
 #' Strips accents from `string`.
 #'
 #' @name strip_accents
-#' @usage strip_accents(string = VARCHAR)
+#' @usage strip_accents(string)
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
 #' @export
@@ -11666,7 +10687,7 @@ strip_accents <- function(string = VARCHAR) {
 #' Number of bytes in `string`.
 #'
 #' @name strlen
-#' @usage strlen(string = VARCHAR)
+#' @usage strlen(string)
 #' @param string `VARCHAR`
 #' @return `BIGINT`
 #' @export
@@ -11682,28 +10703,27 @@ strlen <- function(string = VARCHAR) {
 #' DuckDB function strptime
 #'
 #' @description
-#' Converts the `string` text to timestamp according to the format string. Throws an error on failure. To return `NULL` on failure, use try_strptime.
-#'
-#' Converts the `string` text to timestamp applying the format strings in the list until one succeeds. Throws an error on failure. To return `NULL` on failure, use try_strptime.
+#' \itemize{
+#' \item \code{strptime(text = VARCHAR, format = VARCHAR)}: Converts the `string` text to timestamp according to the format string. Throws an error on failure. To return `NULL` on failure, use try_strptime.
+#' \item \code{strptime(text = VARCHAR, format.list = `VARCHAR[]`)}: Converts the `string` text to timestamp applying the format strings in the list until one succeeds. Throws an error on failure. To return `NULL` on failure, use try_strptime.
+#' }
 #'
 #' @name strptime
-#' @usage NULL
+#' @usage strptime(text, format)
+#' @param text,format `VARCHAR`
+#' @return `TIMESTAMP`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{strptime(text = VARCHAR, format = VARCHAR)}
-#' \item \code{strptime(text = VARCHAR, `format-list` = `VARCHAR[]`)}
+#' \item \code{strptime(text = VARCHAR, format.list = `VARCHAR[]`)}
 #' }
-#' @param text `VARCHAR`
-#' @param format `VARCHAR`
-#' @param format-list `VARCHAR[]`
-#' @return `TIMESTAMP`
-#' @export
 #' @section SQL examples:
 #' ```
 #' strptime('Wed, 1 January 1992 - 08:38:40 PM', '%a, %-d %B %Y - %I:%M:%S %p')
 #' strptime('4/15/2023 10:56:00', ['%d/%m/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S'])
 #' ```
-strptime <- function(text = VARCHAR, format = VARCHAR, `format-list` = `VARCHAR[]`) {
+strptime <- function(text = VARCHAR, format = VARCHAR) {
   stop("DuckDB function strptime() is not available in R.")
 }
 
@@ -11731,23 +10751,23 @@ struct_concat <- function() {
 #' Check if an unnamed STRUCT contains the value.
 #'
 #' @name struct_contains
-#' @usage struct_contains(struct = STRUCT, `'entry'` = ANY)
+#' @usage struct_contains(struct, entry)
 #' @param struct `STRUCT`
-#' @param 'entry' `ANY`
+#' @param entry `ANY`
 #' @return `BOOLEAN`
 #' @export
 #' @section SQL examples:
 #' ```
 #' struct_contains(ROW(3, 3, 0), 3)
 #' ```
-struct_contains <- function(struct = STRUCT, `'entry'` = ANY) {
+struct_contains <- function(struct = STRUCT, entry = ANY) {
   stop("DuckDB function struct_contains() is not available in R.")
 }
 
 #' @rdname struct_contains
 #' @usage NULL
 #' @export
-struct_has <- function(struct = STRUCT, `'entry'` = ANY) {
+struct_has <- function(struct = STRUCT, entry = ANY) {
   stop("DuckDB function struct_has() is not available in R.")
 }
 
@@ -11757,21 +10777,16 @@ struct_has <- function(struct = STRUCT, `'entry'` = ANY) {
 #' Extract the named entry from the STRUCT.
 #'
 #' @name struct_extract
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{struct_extract(struct = STRUCT, `'entry'` = VARCHAR)}
-#' \item \code{struct_extract(struct = STRUCT, `'entry'` = BIGINT)}
-#' }
+#' @usage struct_extract(struct, entry)
 #' @param struct `STRUCT`
-#' @param 'entry' `VARCHAR | BIGINT`
+#' @param entry `VARCHAR | BIGINT`
 #' @return `ANY`
 #' @export
 #' @section SQL examples:
 #' ```
 #' struct_extract({'i': 3, 'v2': 3, 'v3': 0}, 'i')
 #' ```
-struct_extract <- function(struct = STRUCT, `'entry'` = `VARCHAR | BIGINT`) {
+struct_extract <- function(struct = STRUCT, entry = `VARCHAR | BIGINT`) {
   stop("DuckDB function struct_extract() is not available in R.")
 }
 
@@ -11799,7 +10814,7 @@ struct_insert <- function() {
 #' Returns the field names of a STRUCT as a list.
 #'
 #' @name struct_keys
-#' @usage struct_keys(struct = ANY)
+#' @usage struct_keys(struct)
 #' @param struct `ANY`
 #' @return `VARCHAR[]`
 #' @export
@@ -11835,23 +10850,23 @@ struct_pack <- function() {
 #' Get the position of the entry in an unnamed STRUCT, starting at 1.
 #'
 #' @name struct_position
-#' @usage struct_position(struct = STRUCT, `'entry'` = ANY)
+#' @usage struct_position(struct, entry)
 #' @param struct `STRUCT`
-#' @param 'entry' `ANY`
+#' @param entry `ANY`
 #' @return `INTEGER`
 #' @export
 #' @section SQL examples:
 #' ```
 #' struct_position(ROW(3, 3, 0), 3)
 #' ```
-struct_position <- function(struct = STRUCT, `'entry'` = ANY) {
+struct_position <- function(struct = STRUCT, entry = ANY) {
   stop("DuckDB function struct_position() is not available in R.")
 }
 
 #' @rdname struct_position
 #' @usage NULL
 #' @export
-struct_indexof <- function(struct = STRUCT, `'entry'` = ANY) {
+struct_indexof <- function(struct = STRUCT, entry = ANY) {
   stop("DuckDB function struct_indexof() is not available in R.")
 }
 
@@ -11879,7 +10894,7 @@ struct_update <- function() {
 #' Returns the field values of a STRUCT as an UnnamedStruct.
 #'
 #' @name struct_values
-#' @usage struct_values(struct = STRUCT)
+#' @usage struct_values(struct)
 #' @param struct `STRUCT`
 #' @return `STRUCT`
 #' @export
@@ -11897,17 +10912,17 @@ struct_values <- function(struct = STRUCT) {
 #' Extracts substring starting from character `start` up to the end of the string. If optional argument `length` is set, extracts a substring of `length` characters instead. Note that a `start` value of `1` refers to the first character of the `string`.
 #'
 #' @name substring
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{substring(string = VARCHAR, start = BIGINT, length = BIGINT)}
-#' \item \code{substring(string = VARCHAR, start = BIGINT)}
-#' }
+#' @usage substring(string, start, length)
 #' @param string `VARCHAR`
 #' @param start `BIGINT`
 #' @param length `BIGINT`
 #' @return `VARCHAR`
 #' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{substring(string = VARCHAR, start = BIGINT, length = BIGINT)}
+#' \item \code{substring(string = VARCHAR, start = BIGINT)}
+#' }
 #' @family string
 #' @section SQL examples:
 #' ```
@@ -11931,17 +10946,17 @@ substr <- function(string = VARCHAR, start = BIGINT, length = BIGINT) {
 #' Extracts substring starting from grapheme clusters `start` up to the end of the string. If optional argument `length` is set, extracts a substring of `length` grapheme clusters instead. Note that a `start` value of `1` refers to the `first` character of the `string`.
 #'
 #' @name substring_grapheme
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{substring_grapheme(string = VARCHAR, start = BIGINT, length = BIGINT)}
-#' \item \code{substring_grapheme(string = VARCHAR, start = BIGINT)}
-#' }
+#' @usage substring_grapheme(string, start, length)
 #' @param string `VARCHAR`
 #' @param start `BIGINT`
 #' @param length `BIGINT`
 #' @return `VARCHAR`
 #' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{substring_grapheme(string = VARCHAR, start = BIGINT, length = BIGINT)}
+#' \item \code{substring_grapheme(string = VARCHAR, start = BIGINT)}
+#' }
 #' @family string
 #' @section SQL examples:
 #' ```
@@ -11958,7 +10973,11 @@ substring_grapheme <- function(string = VARCHAR, start = BIGINT, length = BIGINT
 #' DuckDB function `subtract()`.
 #'
 #' @name subtract
-#' @usage NULL
+#' @usage subtract(col0, col1)
+#' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL | TIME | TIME WITH TIME ZONE`
+#' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL`
+#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{subtract(col0 = TINYINT)}
@@ -11999,10 +11018,6 @@ substring_grapheme <- function(string = VARCHAR, start = BIGINT, length = BIGINT
 #' \item \code{subtract(col0 = `TIME WITH TIME ZONE`, col1 = INTERVAL)}
 #' \item \code{subtract(col0 = INTERVAL)}
 #' }
-#' @param col0 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL | TIME | TIME WITH TIME ZONE`
-#' @param col1 `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL`
-#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | INTERVAL | TIMESTAMP | TIME | TIME WITH TIME ZONE`
-#' @export
 subtract <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL | TIME | TIME WITH TIME ZONE`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL`) {
   stop("DuckDB function subtract() is not available in R.")
 }
@@ -12013,9 +11028,8 @@ subtract <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | F
 #' Returns `true` if `string` ends with `search_string`.
 #'
 #' @name suffix
-#' @usage suffix(string = VARCHAR, search_string = VARCHAR)
-#' @param string `VARCHAR`
-#' @param search_string `VARCHAR`
+#' @usage suffix(string, search_string)
+#' @param string,search_string `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
 #' @family string
@@ -12040,18 +11054,7 @@ ends_with <- function(string = VARCHAR, search_string = VARCHAR) {
 #' Calculates the sum value for all tuples in arg.
 #'
 #' @name sum
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{sum(arg = DECIMAL)}
-#' \item \code{sum(arg = BOOLEAN)}
-#' \item \code{sum(arg = SMALLINT)}
-#' \item \code{sum(arg = INTEGER)}
-#' \item \code{sum(arg = BIGINT)}
-#' \item \code{sum(arg = HUGEINT)}
-#' \item \code{sum(arg = DOUBLE)}
-#' \item \code{sum(arg = BIGNUM)}
-#' }
+#' @usage sum(arg)
 #' @param arg `DECIMAL | BOOLEAN | SMALLINT | INTEGER | BIGINT | HUGEINT | DOUBLE | BIGNUM`
 #' @return `DECIMAL | HUGEINT | DOUBLE | BIGNUM`
 #' @export
@@ -12069,13 +11072,7 @@ sum <- function(arg = `DECIMAL | BOOLEAN | SMALLINT | INTEGER | BIGINT | HUGEINT
 #' Internal only. Calculates the sum value for all tuples in arg without overflow checks.
 #'
 #' @name sum_no_overflow
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{sum_no_overflow(arg = INTEGER)}
-#' \item \code{sum_no_overflow(arg = BIGINT)}
-#' \item \code{sum_no_overflow(arg = DECIMAL)}
-#' }
+#' @usage sum_no_overflow(arg)
 #' @param arg `INTEGER | BIGINT | DECIMAL`
 #' @return `HUGEINT | DECIMAL`
 #' @export
@@ -12093,7 +11090,7 @@ sum_no_overflow <- function(arg = `INTEGER | BIGINT | DECIMAL`) {
 #' DuckDB function `summary()`.
 #'
 #' @name summary
-#' @usage summary(col0 = TABLE)
+#' @usage summary(col0)
 #' @param col0 `TABLE`
 #' @return Unspecified.
 #' @export
@@ -12107,7 +11104,11 @@ summary <- function(col0 = TABLE) {
 #' Creates a switch statement similar to CASE WHEN/THEN.
 #'
 #' @name switch
-#' @usage NULL
+#' @usage switch(key, map)
+#' @param key `K | MAP(K, V)`
+#' @param map `MAP(K, V) | V`
+#' @return `V`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{switch(key = K, map = `MAP(K, V)`)}
@@ -12115,16 +11116,11 @@ summary <- function(col0 = TABLE) {
 #' \item \code{switch(key = `MAP(K, V)`, map = V)}
 #' \item \code{switch(key = `MAP(K, V)`)}
 #' }
-#' @param key `K | MAP(K, V)`
-#' @param map `MAP(K, V) | V`
-#' @param value `V`
-#' @return `V`
-#' @export
 #' @section SQL examples:
 #' ```
 #' switch(x, map({1 : 1}, default)
 #' ```
-switch <- function(key = `K | MAP(K, V)`, map = `MAP(K, V) | V`, value = V) {
+switch <- function(key = `K | MAP(K, V)`, map = `MAP(K, V) | V`) {
   stop("DuckDB function switch() is not available in R.")
 }
 
@@ -12134,7 +11130,7 @@ switch <- function(key = `K | MAP(K, V)`, map = `MAP(K, V) | V`, value = V) {
 #' DuckDB function `table_info()`.
 #'
 #' @name table_info
-#' @usage table_info(col0 = VARCHAR)
+#' @usage table_info(col0)
 #' @param col0 `VARCHAR`
 #' @return Unspecified.
 #' @export
@@ -12148,7 +11144,7 @@ table_info <- function(col0 = VARCHAR) {
 #' Computes the tan of x.
 #'
 #' @name tan
-#' @usage tan(x = DOUBLE)
+#' @usage tan(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -12166,7 +11162,7 @@ tan <- function(x = DOUBLE) {
 #' Computes the hyperbolic tan of x.
 #'
 #' @name tanh
-#' @usage tanh(x = DOUBLE)
+#' @usage tanh(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -12184,9 +11180,8 @@ tanh <- function(x = DOUBLE) {
 #' DuckDB function `test_all_types()`.
 #'
 #' @name test_all_types
-#' @usage test_all_types(use_large_bignum = BOOLEAN, use_large_enum = BOOLEAN)
-#' @param use_large_bignum `BOOLEAN`
-#' @param use_large_enum `BOOLEAN`
+#' @usage test_all_types(use_large_bignum, use_large_enum)
+#' @param use_large_bignum,use_large_enum `BOOLEAN`
 #' @return Unspecified.
 #' @export
 test_all_types <- function(use_large_bignum = BOOLEAN, use_large_enum = BOOLEAN) {
@@ -12199,7 +11194,7 @@ test_all_types <- function(use_large_bignum = BOOLEAN, use_large_enum = BOOLEAN)
 #' DuckDB function `test_vector_types()`.
 #'
 #' @name test_vector_types
-#' @usage test_vector_types(col0 = ANY, all_flat = BOOLEAN)
+#' @usage test_vector_types(col0, all_flat)
 #' @param col0 `ANY`
 #' @param all_flat `BOOLEAN`
 #' @return Unspecified.
@@ -12214,7 +11209,12 @@ test_vector_types <- function(col0 = ANY, all_flat = BOOLEAN) {
 #' Truncate TIMESTAMPTZ by the specified interval bucket_width. Buckets are aligned relative to origin TIMESTAMPTZ. The origin defaults to 2000-01-03 00:00:00+00 for buckets that do not include a month or year interval, and to 2000-01-01 00:00:00+00 for month and year buckets.
 #'
 #' @name time_bucket
-#' @usage NULL
+#' @usage time_bucket(bucket_width, timestamp, origin)
+#' @param bucket_width `INTERVAL`
+#' @param timestamp `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @param origin `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | VARCHAR`
+#' @return `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = DATE)}
@@ -12228,11 +11228,6 @@ test_vector_types <- function(col0 = ANY, all_flat = BOOLEAN) {
 #' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = `TIMESTAMP WITH TIME ZONE`, origin = `TIMESTAMP WITH TIME ZONE`)}
 #' \item \code{time_bucket(bucket_width = INTERVAL, timestamp = `TIMESTAMP WITH TIME ZONE`, origin = VARCHAR)}
 #' }
-#' @param bucket_width `INTERVAL`
-#' @param timestamp `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @param origin `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | VARCHAR`
-#' @return `DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @export
 #' @section SQL examples:
 #' ```
 #' time_bucket(INTERVAL '2 weeks', TIMESTAMP '1992-04-20 15:26:00-07', TIMESTAMP '1992-04-01 00:00:00-07')
@@ -12247,7 +11242,7 @@ time_bucket <- function(bucket_width = INTERVAL, timestamp = `DATE | TIMESTAMP |
 #' Converts a TIME WITH TIME ZONE to an integer sort key.
 #'
 #' @name timetz_byte_comparable
-#' @usage timetz_byte_comparable(time_tz = `TIME WITH TIME ZONE`)
+#' @usage timetz_byte_comparable(time_tz)
 #' @param time_tz `TIME WITH TIME ZONE`
 #' @return `UBIGINT`
 #' @export
@@ -12265,7 +11260,11 @@ timetz_byte_comparable <- function(time_tz = `TIME WITH TIME ZONE`) {
 #' Extract the timezone component from a date or timestamp.
 #'
 #' @name timezone
-#' @usage NULL
+#' @usage timezone(ts, col1)
+#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | VARCHAR`
+#' @param col1 `TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @return `BIGINT | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | TIMESTAMP`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{timezone(ts = DATE)}
@@ -12277,10 +11276,6 @@ timetz_byte_comparable <- function(time_tz = `TIME WITH TIME ZONE`) {
 #' \item \code{timezone(ts = VARCHAR, col1 = `TIMESTAMP WITH TIME ZONE`)}
 #' \item \code{timezone(ts = VARCHAR, col1 = `TIME WITH TIME ZONE`)}
 #' }
-#' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | VARCHAR`
-#' @param col1 `TIME WITH TIME ZONE | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @return `BIGINT | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | TIMESTAMP`
-#' @export
 #' @section SQL examples:
 #' ```
 #' timezone(timestamp '2021-08-03 11:59:44.123456')
@@ -12295,14 +11290,7 @@ timezone <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #' Extract the timezone_hour component from a date or timestamp.
 #'
 #' @name timezone_hour
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{timezone_hour(ts = DATE)}
-#' \item \code{timezone_hour(ts = INTERVAL)}
-#' \item \code{timezone_hour(ts = TIMESTAMP)}
-#' \item \code{timezone_hour(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage timezone_hour(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -12320,14 +11308,7 @@ timezone_hour <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIM
 #' Extract the timezone_minute component from a date or timestamp.
 #'
 #' @name timezone_minute
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{timezone_minute(ts = DATE)}
-#' \item \code{timezone_minute(ts = INTERVAL)}
-#' \item \code{timezone_minute(ts = TIMESTAMP)}
-#' \item \code{timezone_minute(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage timezone_minute(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -12345,17 +11326,17 @@ timezone_minute <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH T
 #' Converts `number` to a string in the given base `radix`, optionally padding with leading zeros to `min_length`.
 #'
 #' @name to_base
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{to_base(number = BIGINT, radix = INTEGER)}
-#' \item \code{to_base(number = BIGINT, radix = INTEGER, min_length = INTEGER)}
-#' }
+#' @usage to_base(number, radix, min_length)
 #' @param number `BIGINT`
 #' @param radix `INTEGER`
 #' @param min_length `INTEGER`
 #' @return `VARCHAR`
 #' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{to_base(number = BIGINT, radix = INTEGER)}
+#' \item \code{to_base(number = BIGINT, radix = INTEGER, min_length = INTEGER)}
+#' }
 #' @family numeric
 #' @family string
 #' @section SQL examples:
@@ -12372,7 +11353,7 @@ to_base <- function(number = BIGINT, radix = INTEGER, min_length = INTEGER) {
 #' Converts a `blob` to a base64 encoded string.
 #'
 #' @name to_base64
-#' @usage to_base64(blob = BLOB)
+#' @usage to_base64(blob)
 #' @param blob `BLOB`
 #' @return `VARCHAR`
 #' @export
@@ -12399,12 +11380,7 @@ base64 <- function(blob = BLOB) {
 #' Construct a century interval.
 #'
 #' @name to_centuries
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{to_centuries(integer = INTEGER)}
-#' \item \code{to_centuries(integer = BIGINT)}
-#' }
+#' @usage to_centuries(integer)
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
 #' @export
@@ -12422,12 +11398,7 @@ to_centuries <- function(integer = `INTEGER | BIGINT`) {
 #' Construct a day interval.
 #'
 #' @name to_days
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{to_days(integer = INTEGER)}
-#' \item \code{to_days(integer = BIGINT)}
-#' }
+#' @usage to_days(integer)
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
 #' @export
@@ -12445,12 +11416,7 @@ to_days <- function(integer = `INTEGER | BIGINT`) {
 #' Construct a decade interval.
 #'
 #' @name to_decades
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{to_decades(integer = INTEGER)}
-#' \item \code{to_decades(integer = BIGINT)}
-#' }
+#' @usage to_decades(integer)
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
 #' @export
@@ -12468,7 +11434,7 @@ to_decades <- function(integer = `INTEGER | BIGINT`) {
 #' Construct a hour interval.
 #'
 #' @name to_hours
-#' @usage to_hours(integer = BIGINT)
+#' @usage to_hours(integer)
 #' @param integer `BIGINT`
 #' @return `INTERVAL`
 #' @export
@@ -12486,7 +11452,7 @@ to_hours <- function(integer = BIGINT) {
 #' Construct a microsecond interval.
 #'
 #' @name to_microseconds
-#' @usage to_microseconds(integer = BIGINT)
+#' @usage to_microseconds(integer)
 #' @param integer `BIGINT`
 #' @return `INTERVAL`
 #' @export
@@ -12504,12 +11470,7 @@ to_microseconds <- function(integer = BIGINT) {
 #' Construct a millenium interval.
 #'
 #' @name to_millennia
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{to_millennia(integer = INTEGER)}
-#' \item \code{to_millennia(integer = BIGINT)}
-#' }
+#' @usage to_millennia(integer)
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
 #' @export
@@ -12527,7 +11488,7 @@ to_millennia <- function(integer = `INTEGER | BIGINT`) {
 #' Construct a millisecond interval.
 #'
 #' @name to_milliseconds
-#' @usage to_milliseconds(double = DOUBLE)
+#' @usage to_milliseconds(double)
 #' @param double `DOUBLE`
 #' @return `INTERVAL`
 #' @export
@@ -12545,7 +11506,7 @@ to_milliseconds <- function(double = DOUBLE) {
 #' Construct a minute interval.
 #'
 #' @name to_minutes
-#' @usage to_minutes(integer = BIGINT)
+#' @usage to_minutes(integer)
 #' @param integer `BIGINT`
 #' @return `INTERVAL`
 #' @export
@@ -12563,12 +11524,7 @@ to_minutes <- function(integer = BIGINT) {
 #' Construct a month interval.
 #'
 #' @name to_months
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{to_months(integer = INTEGER)}
-#' \item \code{to_months(integer = BIGINT)}
-#' }
+#' @usage to_months(integer)
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
 #' @export
@@ -12586,12 +11542,7 @@ to_months <- function(integer = `INTEGER | BIGINT`) {
 #' Construct a quarter interval.
 #'
 #' @name to_quarters
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{to_quarters(integer = INTEGER)}
-#' \item \code{to_quarters(integer = BIGINT)}
-#' }
+#' @usage to_quarters(integer)
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
 #' @export
@@ -12609,7 +11560,7 @@ to_quarters <- function(integer = `INTEGER | BIGINT`) {
 #' Construct a second interval.
 #'
 #' @name to_seconds
-#' @usage to_seconds(double = DOUBLE)
+#' @usage to_seconds(double)
 #' @param double `DOUBLE`
 #' @return `INTERVAL`
 #' @export
@@ -12627,7 +11578,7 @@ to_seconds <- function(double = DOUBLE) {
 #' Converts secs since epoch to a timestamp with time zone.
 #'
 #' @name to_timestamp
-#' @usage to_timestamp(sec = DOUBLE)
+#' @usage to_timestamp(sec)
 #' @param sec `DOUBLE`
 #' @return `TIMESTAMP WITH TIME ZONE`
 #' @export
@@ -12645,12 +11596,7 @@ to_timestamp <- function(sec = DOUBLE) {
 #' Construct a week interval.
 #'
 #' @name to_weeks
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{to_weeks(integer = INTEGER)}
-#' \item \code{to_weeks(integer = BIGINT)}
-#' }
+#' @usage to_weeks(integer)
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
 #' @export
@@ -12668,12 +11614,7 @@ to_weeks <- function(integer = `INTEGER | BIGINT`) {
 #' Construct a year interval.
 #'
 #' @name to_years
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{to_years(integer = INTEGER)}
-#' \item \code{to_years(integer = BIGINT)}
-#' }
+#' @usage to_years(integer)
 #' @param integer `INTEGER | BIGINT`
 #' @return `INTERVAL`
 #' @export
@@ -12691,10 +11632,8 @@ to_years <- function(integer = `INTEGER | BIGINT`) {
 #' Replaces each character in `string` that matches a character in the `from` set with the corresponding character in the `to` set. If `from` is longer than `to`, occurrences of the extra characters in `from` are deleted.
 #'
 #' @name translate
-#' @usage translate(string = VARCHAR, from = VARCHAR, to = VARCHAR)
-#' @param string `VARCHAR`
-#' @param from `VARCHAR`
-#' @param to `VARCHAR`
+#' @usage translate(string, from, to)
+#' @param string,from,to `VARCHAR`
 #' @return `VARCHAR`
 #' @export
 #' @family string
@@ -12712,16 +11651,15 @@ translate <- function(string = VARCHAR, from = VARCHAR, to = VARCHAR) {
 #' Removes any occurrences of any of the `characters` from either side of the `string`. `characters` defaults to `space`.
 #'
 #' @name trim
-#' @usage NULL
+#' @usage trim(string, characters)
+#' @param string,characters `VARCHAR`
+#' @return `VARCHAR`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{trim(string = VARCHAR)}
 #' \item \code{trim(string = VARCHAR, characters = VARCHAR)}
 #' }
-#' @param string `VARCHAR`
-#' @param characters `VARCHAR`
-#' @return `VARCHAR`
-#' @export
 #' @family string
 #' @section SQL examples:
 #' ```
@@ -12738,7 +11676,11 @@ trim <- function(string = VARCHAR, characters = VARCHAR) {
 #' Truncates the number.
 #'
 #' @name trunc
-#' @usage NULL
+#' @usage trunc(x, col1)
+#' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
+#' @param col1 `INTEGER`
+#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
+#' @export
 #' @section Overloads:
 #' \itemize{
 #' \item \code{trunc(x = TINYINT)}
@@ -12768,10 +11710,6 @@ trim <- function(string = VARCHAR, characters = VARCHAR) {
 #' \item \code{trunc(x = UHUGEINT)}
 #' \item \code{trunc(x = UHUGEINT, col1 = INTEGER)}
 #' }
-#' @param x `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
-#' @param col1 `INTEGER`
-#' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT`
-#' @export
 #' @section SQL examples:
 #' ```
 #' trunc(17.4)
@@ -12800,12 +11738,7 @@ truncate_duckdb_logs <- function() {
 #' Converts the `string` text to timestamp according to the format string. Returns `NULL` on failure.
 #'
 #' @name try_strptime
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{try_strptime(text = VARCHAR, format = VARCHAR)}
-#' \item \code{try_strptime(text = VARCHAR, format = `VARCHAR[]`)}
-#' }
+#' @usage try_strptime(text, format)
 #' @param text `VARCHAR`
 #' @param format `VARCHAR | VARCHAR[]`
 #' @return `TIMESTAMP`
@@ -12842,7 +11775,7 @@ txid_current <- function() {
 #' Returns the name of the data type of the result of the expression.
 #'
 #' @name typeof
-#' @usage typeof(expression = ANY)
+#' @usage typeof(expression)
 #' @param expression `ANY`
 #' @return `VARCHAR`
 #' @export
@@ -12860,7 +11793,7 @@ typeof <- function(expression = ANY) {
 #' Converts a `value` from binary representation to a blob.
 #'
 #' @name unbin
-#' @usage unbin(value = VARCHAR)
+#' @usage unbin(value)
 #' @param value `VARCHAR`
 #' @return `BLOB`
 #' @export
@@ -12887,7 +11820,7 @@ from_binary <- function(value = VARCHAR) {
 #' Converts a `value` from hexadecimal representation to a blob.
 #'
 #' @name unhex
-#' @usage unhex(value = VARCHAR)
+#' @usage unhex(value)
 #' @param value `VARCHAR`
 #' @return `BLOB`
 #' @export
@@ -12914,7 +11847,7 @@ from_hex <- function(value = VARCHAR) {
 #' Returns an `INTEGER` representing the `unicode` codepoint of the first character in the `string`.
 #'
 #' @name unicode
-#' @usage unicode(string = VARCHAR)
+#' @usage unicode(string)
 #' @param string `VARCHAR`
 #' @return `INTEGER`
 #' @export
@@ -12940,7 +11873,7 @@ ord <- function(string = VARCHAR) {
 #' Extract the value with the named tags from the union. NULL if the tag is not currently selected.
 #'
 #' @name union_extract
-#' @usage union_extract(union = UNION, tag = VARCHAR)
+#' @usage union_extract(union, tag)
 #' @param union `UNION`
 #' @param tag `VARCHAR`
 #' @return `ANY`
@@ -12959,7 +11892,7 @@ union_extract <- function(union = UNION, tag = VARCHAR) {
 #' Retrieve the currently selected tag of the union as an ENUM.
 #'
 #' @name union_tag
-#' @usage union_tag(union = UNION)
+#' @usage union_tag(union)
 #' @param union `UNION`
 #' @return `ANY`
 #' @export
@@ -12995,7 +11928,7 @@ union_value <- function() {
 #' DuckDB function `unnest()`.
 #'
 #' @name unnest
-#' @usage unnest(col0 = ANY)
+#' @usage unnest(col0)
 #' @param col0 `ANY`
 #' @return Unspecified.
 #' @export
@@ -13028,7 +11961,7 @@ unpivot_list <- function() {
 #' Converts `string` to upper case.
 #'
 #' @name upper
-#' @usage upper(string = VARCHAR)
+#' @usage upper(string)
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
 #' @export
@@ -13054,7 +11987,7 @@ ucase <- function(string = VARCHAR) {
 #' Decodes a URL from a representation using Percent-Encoding.
 #'
 #' @name url_decode
-#' @usage url_decode(string = VARCHAR)
+#' @usage url_decode(string)
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
 #' @export
@@ -13073,7 +12006,7 @@ url_decode <- function(string = VARCHAR) {
 #' Encodes a URL to a representation using Percent-Encoding.
 #'
 #' @name url_encode
-#' @usage url_encode(string = VARCHAR)
+#' @usage url_encode(string)
 #' @param string `VARCHAR`
 #' @return `VARCHAR`
 #' @export
@@ -13145,7 +12078,7 @@ gen_random_uuid <- function() {
 #' Extract the timestamp for the given UUID v7.
 #'
 #' @name uuid_extract_timestamp
-#' @usage uuid_extract_timestamp(uuid = UUID)
+#' @usage uuid_extract_timestamp(uuid)
 #' @param uuid `UUID`
 #' @return `TIMESTAMP WITH TIME ZONE`
 #' @export
@@ -13163,7 +12096,7 @@ uuid_extract_timestamp <- function(uuid = UUID) {
 #' Extract a version for the given UUID.
 #'
 #' @name uuid_extract_version
-#' @usage uuid_extract_version(uuid = UUID)
+#' @usage uuid_extract_version(uuid)
 #' @param uuid `UUID`
 #' @return `UINTEGER`
 #' @export
@@ -13217,7 +12150,7 @@ uuidv7 <- function() {
 #' Returns the population variance.
 #'
 #' @name var_pop
-#' @usage var_pop(x = DOUBLE)
+#' @usage var_pop(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -13231,7 +12164,7 @@ var_pop <- function(x = DOUBLE) {
 #' Returns the sample variance of all input values.
 #'
 #' @name var_samp
-#' @usage var_samp(x = DOUBLE)
+#' @usage var_samp(x)
 #' @param x `DOUBLE`
 #' @return `DOUBLE`
 #' @export
@@ -13256,7 +12189,7 @@ variance <- function(x = DOUBLE) {
 #' DuckDB function `variant_bytes_to_variant()`.
 #'
 #' @name variant_bytes_to_variant
-#' @usage variant_bytes_to_variant(col0 = BLOB)
+#' @usage variant_bytes_to_variant(col0)
 #' @param col0 `BLOB`
 #' @return `VARIANT`
 #' @export
@@ -13267,28 +12200,29 @@ variant_bytes_to_variant <- function(col0 = BLOB) {
 #' DuckDB function variant_extract
 #'
 #' @description
-#' Returns the `field` from the `input_variant` if it's an OBJECT.
-#'
-#' Returns the entry at `index` from the `input_variant` if it's an ARRAY.
+#' \itemize{
+#' \item \code{variant_extract(input_variant = VARIANT, field = VARCHAR)}: Returns the `field` from the `input_variant` if it's an OBJECT.
+#' \item \code{variant_extract(input_variant = VARIANT, index = UINTEGER)}: Returns the entry at `index` from the `input_variant` if it's an ARRAY.
+#' }
 #'
 #' @name variant_extract
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{variant_extract(col0 = VARIANT, col1 = VARCHAR)}
-#' \item \code{variant_extract(col0 = VARIANT, col1 = UINTEGER)}
-#' }
-#' @param col0 `VARIANT`
-#' @param col1 `VARCHAR | UINTEGER`
+#' @usage variant_extract(input_variant, field)
+#' @param input_variant `VARIANT`
+#' @param field `VARCHAR`
 #' @return `VARIANT`
 #' @export
+#' @section Overloads:
+#' \itemize{
+#' \item \code{variant_extract(input_variant = VARIANT, field = VARCHAR)}
+#' \item \code{variant_extract(input_variant = VARIANT, index = UINTEGER)}
+#' }
 #' @family variant
 #' @section SQL examples:
 #' ```
 #' variant_extract({'a': 42, 'b': [1,2,3])::VARIANT, 'b')
 #' variant_extract([1,2,3])::VARIANT, 0)
 #' ```
-variant_extract <- function(col0 = VARIANT, col1 = `VARCHAR | UINTEGER`) {
+variant_extract <- function(input_variant = VARIANT, field = VARCHAR) {
   stop("DuckDB function variant_extract() is not available in R.")
 }
 
@@ -13298,7 +12232,7 @@ variant_extract <- function(col0 = VARIANT, col1 = `VARCHAR | UINTEGER`) {
 #' Normalizes the `input_variant` to a canonical representation.
 #'
 #' @name variant_normalize
-#' @usage variant_normalize(input_variant = VARIANT)
+#' @usage variant_normalize(input_variant)
 #' @param input_variant `VARIANT`
 #' @return `VARIANT`
 #' @export
@@ -13317,7 +12251,7 @@ variant_normalize <- function(input_variant = VARIANT) {
 #' DuckDB function `variant_to_parquet_variant()`.
 #'
 #' @name variant_to_parquet_variant
-#' @usage variant_to_parquet_variant(col0 = VARIANT)
+#' @usage variant_to_parquet_variant(col0)
 #' @param col0 `VARIANT`
 #' @return `ANY`
 #' @export
@@ -13331,7 +12265,7 @@ variant_to_parquet_variant <- function(col0 = VARIANT) {
 #' Returns the internal type of the `input_variant`.
 #'
 #' @name variant_typeof
-#' @usage variant_typeof(input_variant = VARIANT)
+#' @usage variant_typeof(input_variant)
 #' @param input_variant `VARIANT`
 #' @return `VARCHAR`
 #' @export
@@ -13350,7 +12284,7 @@ variant_typeof <- function(input_variant = VARIANT) {
 #' Returns the VectorType of a given column.
 #'
 #' @name vector_type
-#' @usage vector_type(col = ANY)
+#' @usage vector_type(col)
 #' @param col `ANY`
 #' @return `VARCHAR`
 #' @export
@@ -13443,8 +12377,7 @@ version <- function() {
 #'
 #' @name wavg
 #' @usage wavg(value, weight)
-#' @param value Unspecified.
-#' @param weight Unspecified.
+#' @param value,weight Unspecified.
 #' @return Unspecified.
 #' @export
 wavg <- function(value, weight) {
@@ -13457,14 +12390,7 @@ wavg <- function(value, weight) {
 #' Extract the week component from a date or timestamp.
 #'
 #' @name week
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{week(ts = DATE)}
-#' \item \code{week(ts = INTERVAL)}
-#' \item \code{week(ts = TIMESTAMP)}
-#' \item \code{week(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage week(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -13482,14 +12408,7 @@ week <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) 
 #' Extract the weekday component from a date or timestamp.
 #'
 #' @name weekday
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{weekday(ts = DATE)}
-#' \item \code{weekday(ts = INTERVAL)}
-#' \item \code{weekday(ts = TIMESTAMP)}
-#' \item \code{weekday(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage weekday(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -13507,14 +12426,7 @@ weekday <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE
 #' Extract the weekofyear component from a date or timestamp.
 #'
 #' @name weekofyear
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{weekofyear(ts = DATE)}
-#' \item \code{weekofyear(ts = INTERVAL)}
-#' \item \code{weekofyear(ts = TIMESTAMP)}
-#' \item \code{weekofyear(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage weekofyear(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -13533,8 +12445,7 @@ weekofyear <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME Z
 #'
 #' @name weighted_avg
 #' @usage weighted_avg(value, weight)
-#' @param value Unspecified.
-#' @param weight Unspecified.
+#' @param value,weight Unspecified.
 #' @return Unspecified.
 #' @export
 weighted_avg <- function(value, weight) {
@@ -13547,9 +12458,8 @@ weighted_avg <- function(value, weight) {
 #' DuckDB function `which_secret()`.
 #'
 #' @name which_secret
-#' @usage which_secret(col0 = VARCHAR, col1 = VARCHAR)
-#' @param col0 `VARCHAR`
-#' @param col1 `VARCHAR`
+#' @usage which_secret(col0, col1)
+#' @param col0,col1 `VARCHAR`
 #' @return Unspecified.
 #' @export
 which_secret <- function(col0 = VARCHAR, col1 = VARCHAR) {
@@ -13562,7 +12472,7 @@ which_secret <- function(col0 = VARCHAR, col1 = VARCHAR) {
 #' Writes to the logger.
 #'
 #' @name write_log
-#' @usage write_log(string = VARCHAR)
+#' @usage write_log(string)
 #' @param string `VARCHAR`
 #' @return `ANY`
 #' @export
@@ -13580,23 +12490,8 @@ write_log <- function(string = VARCHAR) {
 #' Bitwise XOR.
 #'
 #' @name xor
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{xor(left = TINYINT, right = TINYINT)}
-#' \item \code{xor(left = SMALLINT, right = SMALLINT)}
-#' \item \code{xor(left = INTEGER, right = INTEGER)}
-#' \item \code{xor(left = BIGINT, right = BIGINT)}
-#' \item \code{xor(left = HUGEINT, right = HUGEINT)}
-#' \item \code{xor(left = UTINYINT, right = UTINYINT)}
-#' \item \code{xor(left = USMALLINT, right = USMALLINT)}
-#' \item \code{xor(left = UINTEGER, right = UINTEGER)}
-#' \item \code{xor(left = UBIGINT, right = UBIGINT)}
-#' \item \code{xor(left = UHUGEINT, right = UHUGEINT)}
-#' \item \code{xor(left = BIT, right = BIT)}
-#' }
-#' @param left `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
-#' @param right `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
+#' @usage xor(left, right)
+#' @param left,right `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @export
 #' @section SQL examples:
@@ -13613,14 +12508,7 @@ xor <- function(left = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYI
 #' Extract the year component from a date or timestamp.
 #'
 #' @name year
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{year(ts = DATE)}
-#' \item \code{year(ts = INTERVAL)}
-#' \item \code{year(ts = TIMESTAMP)}
-#' \item \code{year(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage year(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -13638,14 +12526,7 @@ year <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`) 
 #' Extract the yearweek component from a date or timestamp.
 #'
 #' @name yearweek
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{yearweek(ts = DATE)}
-#' \item \code{yearweek(ts = INTERVAL)}
-#' \item \code{yearweek(ts = TIMESTAMP)}
-#' \item \code{yearweek(ts = `TIMESTAMP WITH TIME ZONE`)}
-#' }
+#' @usage yearweek(ts)
 #' @param ts `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
 #' @return `BIGINT`
 #' @export
@@ -13663,21 +12544,7 @@ yearweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #' Bitwise NOT.
 #'
 #' @name ~
-#' @usage NULL
-#' @section Overloads:
-#' \itemize{
-#' \item \code{`~`(input = TINYINT)}
-#' \item \code{`~`(input = SMALLINT)}
-#' \item \code{`~`(input = INTEGER)}
-#' \item \code{`~`(input = BIGINT)}
-#' \item \code{`~`(input = HUGEINT)}
-#' \item \code{`~`(input = UTINYINT)}
-#' \item \code{`~`(input = USMALLINT)}
-#' \item \code{`~`(input = UINTEGER)}
-#' \item \code{`~`(input = UBIGINT)}
-#' \item \code{`~`(input = UHUGEINT)}
-#' \item \code{`~`(input = BIT)}
-#' }
+#' @usage `~`(input)
 #' @param input `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @return `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT`
 #' @export
@@ -13695,9 +12562,8 @@ yearweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #' DuckDB function `~~()`.
 #'
 #' @name ~~
-#' @usage `~~`(col0 = VARCHAR, col1 = VARCHAR)
-#' @param col0 `VARCHAR`
-#' @param col1 `VARCHAR`
+#' @usage `~~`(col0, col1)
+#' @param col0,col1 `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
 `~~` <- function(col0 = VARCHAR, col1 = VARCHAR) {
@@ -13710,9 +12576,8 @@ yearweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #' DuckDB function `~~*()`.
 #'
 #' @name ~~*
-#' @usage `~~*`(col0 = VARCHAR, col1 = VARCHAR)
-#' @param col0 `VARCHAR`
-#' @param col1 `VARCHAR`
+#' @usage `~~*`(col0, col1)
+#' @param col0,col1 `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
 `~~*` <- function(col0 = VARCHAR, col1 = VARCHAR) {
@@ -13725,9 +12590,8 @@ yearweek <- function(ts = `DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZON
 #' DuckDB function `~~~()`.
 #'
 #' @name ~~~
-#' @usage `~~~`(col0 = VARCHAR, col1 = VARCHAR)
-#' @param col0 `VARCHAR`
-#' @param col1 `VARCHAR`
+#' @usage `~~~`(col0, col1)
+#' @param col0,col1 `VARCHAR`
 #' @return `BOOLEAN`
 #' @export
 `~~~` <- function(col0 = VARCHAR, col1 = VARCHAR) {

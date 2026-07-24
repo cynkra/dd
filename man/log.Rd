@@ -3,10 +3,11 @@
 \name{log}
 \alias{log}
 \title{DuckDB function log}
+\usage{
+log(b, x)
+}
 \arguments{
-\item{b}{\code{DOUBLE}}
-
-\item{x}{\code{DOUBLE}}
+\item{b, x}{\code{DOUBLE}}
 }
 \value{
 \code{DOUBLE}

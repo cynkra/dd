@@ -3,6 +3,9 @@
 \name{bitstring}
 \alias{bitstring}
 \title{DuckDB function bitstring}
+\usage{
+bitstring(bitstring, length)
+}
 \arguments{
 \item{bitstring}{\code{VARCHAR | BIT}}
 
@@ -14,14 +17,6 @@
 \description{
 Pads the bitstring until the specified length.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{bitstring(bitstring = VARCHAR, length = INTEGER)}
-\item \code{bitstring(bitstring = BIT, length = INTEGER)}
-}
-}
-
 \section{SQL examples}{
 
 

@@ -3,6 +3,9 @@
 \name{microsecond}
 \alias{microsecond}
 \title{DuckDB function microsecond}
+\usage{
+microsecond(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,19 +15,6 @@
 \description{
 Extract the microsecond component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{microsecond(ts = DATE)}
-\item \code{microsecond(ts = INTERVAL)}
-\item \code{microsecond(ts = TIME)}
-\item \code{microsecond(ts = TIMESTAMP)}
-\item \code{microsecond(ts = `TIME WITH TIME ZONE`)}
-\item \code{microsecond(ts = TIME_NS)}
-\item \code{microsecond(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

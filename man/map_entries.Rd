@@ -4,7 +4,7 @@
 \alias{map_entries}
 \title{DuckDB function map_entries}
 \usage{
-map_entries(map = `MAP(K, V)`)
+map_entries(map)
 }
 \arguments{
 \item{map}{\code{MAP(K, V)}}

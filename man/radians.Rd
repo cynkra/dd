@@ -4,7 +4,7 @@
 \alias{radians}
 \title{DuckDB function radians}
 \usage{
-radians(x = DOUBLE)
+radians(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

@@ -3,12 +3,11 @@
 \name{regexp_full_match}
 \alias{regexp_full_match}
 \title{DuckDB function regexp_full_match}
+\usage{
+regexp_full_match(string, regex, col2)
+}
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{regex}{\code{VARCHAR}}
-
-\item{col2}{\code{VARCHAR}}
+\item{string, regex, col2}{\code{VARCHAR}}
 }
 \value{
 \code{BOOLEAN}

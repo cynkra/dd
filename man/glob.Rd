@@ -3,6 +3,9 @@
 \name{glob}
 \alias{glob}
 \title{DuckDB function glob}
+\usage{
+glob(col0)
+}
 \arguments{
 \item{col0}{\code{VARCHAR | VARCHAR[]}}
 }
@@ -12,11 +15,3 @@ Unspecified.
 \description{
 DuckDB function \code{glob()}.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{glob(col0 = VARCHAR)}
-\item \code{glob(col0 = `VARCHAR[]`)}
-}
-}
-

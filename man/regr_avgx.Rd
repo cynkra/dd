@@ -4,12 +4,10 @@
 \alias{regr_avgx}
 \title{DuckDB function regr_avgx}
 \usage{
-regr_avgx(y = DOUBLE, x = DOUBLE)
+regr_avgx(y, x)
 }
 \arguments{
-\item{y}{\code{DOUBLE}}
-
-\item{x}{\code{DOUBLE}}
+\item{y, x}{\code{DOUBLE}}
 }
 \value{
 \code{DOUBLE}

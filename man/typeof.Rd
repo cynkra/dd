@@ -4,7 +4,7 @@
 \alias{typeof}
 \title{DuckDB function typeof}
 \usage{
-typeof(expression = ANY)
+typeof(expression)
 }
 \arguments{
 \item{expression}{\code{ANY}}

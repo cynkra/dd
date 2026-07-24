@@ -3,6 +3,9 @@
 \name{read_blob}
 \alias{read_blob}
 \title{DuckDB function read_blob}
+\usage{
+read_blob(col0)
+}
 \arguments{
 \item{col0}{\code{VARCHAR | VARCHAR[]}}
 }
@@ -12,11 +15,3 @@ Unspecified.
 \description{
 DuckDB function \code{read_blob()}.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{read_blob(col0 = VARCHAR)}
-\item \code{read_blob(col0 = `VARCHAR[]`)}
-}
-}
-

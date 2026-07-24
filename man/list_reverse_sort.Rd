@@ -4,6 +4,9 @@
 \alias{list_reverse_sort}
 \alias{array_reverse_sort}
 \title{DuckDB function list_reverse_sort}
+\usage{
+list_reverse_sort(list, col1)
+}
 \arguments{
 \item{list}{\code{ANY[]}}
 

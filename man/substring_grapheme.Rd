@@ -3,6 +3,9 @@
 \name{substring_grapheme}
 \alias{substring_grapheme}
 \title{DuckDB function substring_grapheme}
+\usage{
+substring_grapheme(string, start, length)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

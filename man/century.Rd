@@ -3,6 +3,9 @@
 \name{century}
 \alias{century}
 \title{DuckDB function century}
+\usage{
+century(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,16 +15,6 @@
 \description{
 Extract the century component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{century(ts = DATE)}
-\item \code{century(ts = INTERVAL)}
-\item \code{century(ts = TIMESTAMP)}
-\item \code{century(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

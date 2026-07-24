@@ -5,12 +5,10 @@
 \alias{editdist3}
 \title{DuckDB function levenshtein}
 \usage{
-levenshtein(s1 = VARCHAR, s2 = VARCHAR)
+levenshtein(s1, s2)
 }
 \arguments{
-\item{s1}{\code{VARCHAR}}
-
-\item{s2}{\code{VARCHAR}}
+\item{s1, s2}{\code{VARCHAR}}
 }
 \value{
 \code{BIGINT}

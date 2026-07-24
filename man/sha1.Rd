@@ -3,18 +3,20 @@
 \name{sha1}
 \alias{sha1}
 \title{DuckDB function sha1}
+\usage{
+sha1(value)
+}
 \arguments{
 \item{value}{\code{VARCHAR}}
-
-\item{blob}{\code{BLOB}}
 }
 \value{
 \code{VARCHAR}
 }
 \description{
-Returns a \code{VARCHAR} with the SHA-1 hash of the \code{value}.
-
-Returns a \code{VARCHAR} with the SHA-1 hash of the \code{blob}.
+\itemize{
+\item \code{sha1(value = VARCHAR)}: Returns a \code{VARCHAR} with the SHA-1 hash of the \code{value}.
+\item \code{sha1(blob = BLOB)}: Returns a \code{VARCHAR} with the SHA-1 hash of the \code{blob}.
+}
 }
 \section{Overloads}{
 

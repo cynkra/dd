@@ -4,7 +4,7 @@
 \alias{set_bit}
 \title{DuckDB function set_bit}
 \usage{
-set_bit(bitstring = BIT, index = INTEGER, new_value = INTEGER)
+set_bit(bitstring, index, new_value)
 }
 \arguments{
 \item{bitstring}{\code{BIT}}

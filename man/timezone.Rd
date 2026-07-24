@@ -3,6 +3,9 @@
 \name{timezone}
 \alias{timezone}
 \title{DuckDB function timezone}
+\usage{
+timezone(ts, col1)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE | VARCHAR}}
 

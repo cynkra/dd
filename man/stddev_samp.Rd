@@ -5,7 +5,7 @@
 \alias{stddev}
 \title{DuckDB function stddev_samp}
 \usage{
-stddev_samp(x = DOUBLE)
+stddev_samp(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

@@ -7,12 +7,10 @@
 \alias{st_intersects_extent}
 \title{DuckDB function list_has_any}
 \usage{
-list_has_any(list1 = `T[]`, list2 = `T[]`)
+list_has_any(list1, list2)
 }
 \arguments{
-\item{list1}{\code{T[]}}
-
-\item{list2}{\code{T[]}}
+\item{list1, list2}{\code{T[]}}
 }
 \value{
 \code{BOOLEAN}

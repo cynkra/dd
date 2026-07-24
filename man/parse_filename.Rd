@@ -3,12 +3,13 @@
 \name{parse_filename}
 \alias{parse_filename}
 \title{DuckDB function parse_filename}
+\usage{
+parse_filename(string, trim_extension)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 
 \item{trim_extension}{\code{VARCHAR | BOOLEAN}}
-
-\item{separator}{\code{VARCHAR}}
 }
 \value{
 \code{VARCHAR}

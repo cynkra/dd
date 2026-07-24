@@ -4,7 +4,7 @@
 \alias{product}
 \title{DuckDB function product}
 \usage{
-product(arg = DOUBLE)
+product(arg)
 }
 \arguments{
 \item{arg}{\code{DOUBLE}}

@@ -4,12 +4,10 @@
 \alias{regr_count}
 \title{DuckDB function regr_count}
 \usage{
-regr_count(y = DOUBLE, x = DOUBLE)
+regr_count(y, x)
 }
 \arguments{
-\item{y}{\code{DOUBLE}}
-
-\item{x}{\code{DOUBLE}}
+\item{y, x}{\code{DOUBLE}}
 }
 \value{
 \code{UINTEGER}

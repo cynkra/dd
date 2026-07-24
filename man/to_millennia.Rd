@@ -3,6 +3,9 @@
 \name{to_millennia}
 \alias{to_millennia}
 \title{DuckDB function to_millennia}
+\usage{
+to_millennia(integer)
+}
 \arguments{
 \item{integer}{\code{INTEGER | BIGINT}}
 }
@@ -12,14 +15,6 @@
 \description{
 Construct a millenium interval.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{to_millennia(integer = INTEGER)}
-\item \code{to_millennia(integer = BIGINT)}
-}
-}
-
 \section{SQL examples}{
 
 

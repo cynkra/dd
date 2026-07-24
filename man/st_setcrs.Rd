@@ -4,7 +4,7 @@
 \alias{st_setcrs}
 \title{DuckDB function st_setcrs}
 \usage{
-st_setcrs(geom = GEOMETRY, crs = VARCHAR)
+st_setcrs(geom, crs)
 }
 \arguments{
 \item{geom}{\code{GEOMETRY}}

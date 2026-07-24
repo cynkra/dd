@@ -4,12 +4,10 @@
 \alias{in_search_path}
 \title{DuckDB function in_search_path}
 \usage{
-in_search_path(database_name = VARCHAR, schema_name = VARCHAR)
+in_search_path(database_name, schema_name)
 }
 \arguments{
-\item{database_name}{\code{VARCHAR}}
-
-\item{schema_name}{\code{VARCHAR}}
+\item{database_name, schema_name}{\code{VARCHAR}}
 }
 \value{
 \code{BOOLEAN}

@@ -5,12 +5,12 @@
 \alias{struct_indexof}
 \title{DuckDB function struct_position}
 \usage{
-struct_position(struct = STRUCT, `'entry'` = ANY)
+struct_position(struct, entry)
 }
 \arguments{
 \item{struct}{\code{STRUCT}}
 
-\item{'entry'}{\code{ANY}}
+\item{entry}{\code{ANY}}
 }
 \value{
 \code{INTEGER}

@@ -3,6 +3,9 @@
 \name{array_length}
 \alias{array_length}
 \title{DuckDB function array_length}
+\usage{
+array_length(list, dimension)
+}
 \arguments{
 \item{list}{\code{ANY[]}}
 
@@ -12,9 +15,10 @@
 \code{BIGINT}
 }
 \description{
-Returns the length of the \code{list}.
-
-\code{array_length} for lists with dimensions other than 1 not implemented.
+\itemize{
+\item \code{array_length(list = `ANY[]`)}: Returns the length of the \code{list}.
+\item \code{array_length(list = `ANY[]`, dimension = BIGINT)}: \code{array_length} for lists with dimensions other than 1 not implemented.
+}
 }
 \section{Overloads}{
 

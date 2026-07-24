@@ -4,7 +4,7 @@
 \alias{error}
 \title{DuckDB function error}
 \usage{
-error(message = VARCHAR)
+error(message)
 }
 \arguments{
 \item{message}{\code{VARCHAR}}

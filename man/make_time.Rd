@@ -4,7 +4,7 @@
 \alias{make_time}
 \title{DuckDB function make_time}
 \usage{
-make_time(hour = BIGINT, minute = BIGINT, seconds = DOUBLE)
+make_time(hour, minute, seconds)
 }
 \arguments{
 \item{hour}{\code{BIGINT}}

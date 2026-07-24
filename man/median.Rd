@@ -4,7 +4,7 @@
 \alias{median}
 \title{DuckDB function median}
 \usage{
-median(x = ANY)
+median(x)
 }
 \arguments{
 \item{x}{\code{ANY}}

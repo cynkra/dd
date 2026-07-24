@@ -7,9 +7,7 @@
 date_add(date, interval)
 }
 \arguments{
-\item{date}{Unspecified.}
-
-\item{interval}{Unspecified.}
+\item{date, interval}{Unspecified.}
 }
 \value{
 Unspecified.

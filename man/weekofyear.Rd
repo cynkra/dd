@@ -3,6 +3,9 @@
 \name{weekofyear}
 \alias{weekofyear}
 \title{DuckDB function weekofyear}
+\usage{
+weekofyear(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,16 +15,6 @@
 \description{
 Extract the weekofyear component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{weekofyear(ts = DATE)}
-\item \code{weekofyear(ts = INTERVAL)}
-\item \code{weekofyear(ts = TIMESTAMP)}
-\item \code{weekofyear(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

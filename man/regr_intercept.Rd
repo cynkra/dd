@@ -4,12 +4,10 @@
 \alias{regr_intercept}
 \title{DuckDB function regr_intercept}
 \usage{
-regr_intercept(y = DOUBLE, x = DOUBLE)
+regr_intercept(y, x)
 }
 \arguments{
-\item{y}{\code{DOUBLE}}
-
-\item{x}{\code{DOUBLE}}
+\item{y, x}{\code{DOUBLE}}
 }
 \value{
 \code{DOUBLE}

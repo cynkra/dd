@@ -4,12 +4,10 @@
 \alias{regr_slope}
 \title{DuckDB function regr_slope}
 \usage{
-regr_slope(y = DOUBLE, x = DOUBLE)
+regr_slope(y, x)
 }
 \arguments{
-\item{y}{\code{DOUBLE}}
-
-\item{x}{\code{DOUBLE}}
+\item{y, x}{\code{DOUBLE}}
 }
 \value{
 \code{DOUBLE}

@@ -4,6 +4,9 @@
 \alias{substring}
 \alias{substr}
 \title{DuckDB function substring}
+\usage{
+substring(string, start, length)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

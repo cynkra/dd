@@ -4,7 +4,7 @@
 \alias{variant_to_parquet_variant}
 \title{DuckDB function variant_to_parquet_variant}
 \usage{
-variant_to_parquet_variant(col0 = VARIANT)
+variant_to_parquet_variant(col0)
 }
 \arguments{
 \item{col0}{\code{VARIANT}}

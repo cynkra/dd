@@ -3,8 +3,11 @@
 \name{array_cross_product}
 \alias{array_cross_product}
 \title{DuckDB function array_cross_product}
+\usage{
+array_cross_product(array, array.1)
+}
 \arguments{
-\item{array}{\code{FLOAT[3] | DOUBLE[3]}}
+\item{array, array.1}{\code{FLOAT[3] | DOUBLE[3]}}
 }
 \value{
 \code{FLOAT[3] | DOUBLE[3]}
@@ -12,14 +15,6 @@
 \description{
 Computes the cross product of two arrays of size 3. The array elements can not be \code{NULL}.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{array_cross_product(array = `FLOAT[3]`, array = `FLOAT[3]`)}
-\item \code{array_cross_product(array = `DOUBLE[3]`, array = `DOUBLE[3]`)}
-}
-}
-
 \section{SQL examples}{
 
 

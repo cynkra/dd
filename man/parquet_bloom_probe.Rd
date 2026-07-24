@@ -3,6 +3,9 @@
 \name{parquet_bloom_probe}
 \alias{parquet_bloom_probe}
 \title{DuckDB function parquet_bloom_probe}
+\usage{
+parquet_bloom_probe(col0, col1, col2)
+}
 \arguments{
 \item{col0}{\code{VARCHAR | VARCHAR[]}}
 
@@ -16,11 +19,3 @@ Unspecified.
 \description{
 DuckDB function \code{parquet_bloom_probe()}.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{parquet_bloom_probe(col0 = VARCHAR, col1 = VARCHAR, col2 = ANY)}
-\item \code{parquet_bloom_probe(col0 = `VARCHAR[]`, col1 = VARCHAR, col2 = ANY)}
-}
-}
-

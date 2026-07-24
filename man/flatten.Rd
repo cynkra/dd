@@ -4,7 +4,7 @@
 \alias{flatten}
 \title{DuckDB function flatten}
 \usage{
-flatten(nested_list = `T[][]`)
+flatten(nested_list)
 }
 \arguments{
 \item{nested_list}{\code{T[][]}}

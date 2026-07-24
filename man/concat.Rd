@@ -4,7 +4,7 @@
 \alias{concat}
 \title{DuckDB function concat}
 \usage{
-concat(value = ANY)
+concat(value)
 }
 \arguments{
 \item{value}{\code{ANY}}

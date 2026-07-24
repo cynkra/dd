@@ -3,6 +3,9 @@
 \name{sum_no_overflow}
 \alias{sum_no_overflow}
 \title{DuckDB function sum_no_overflow}
+\usage{
+sum_no_overflow(arg)
+}
 \arguments{
 \item{arg}{\code{INTEGER | BIGINT | DECIMAL}}
 }
@@ -12,15 +15,6 @@
 \description{
 Internal only. Calculates the sum value for all tuples in arg without overflow checks.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{sum_no_overflow(arg = INTEGER)}
-\item \code{sum_no_overflow(arg = BIGINT)}
-\item \code{sum_no_overflow(arg = DECIMAL)}
-}
-}
-
 \section{SQL examples}{
 
 

@@ -4,7 +4,7 @@
 \alias{get_type}
 \title{DuckDB function get_type}
 \usage{
-get_type(expression = ANY)
+get_type(expression)
 }
 \arguments{
 \item{expression}{\code{ANY}}

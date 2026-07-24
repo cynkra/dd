@@ -7,9 +7,7 @@
 col_description(table_oid, column_number)
 }
 \arguments{
-\item{table_oid}{Unspecified.}
-
-\item{column_number}{Unspecified.}
+\item{table_oid, column_number}{Unspecified.}
 }
 \value{
 Unspecified.

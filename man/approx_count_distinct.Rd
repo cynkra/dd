@@ -4,7 +4,7 @@
 \alias{approx_count_distinct}
 \title{DuckDB function approx_count_distinct}
 \usage{
-approx_count_distinct(any = ANY)
+approx_count_distinct(any)
 }
 \arguments{
 \item{any}{\code{ANY}}

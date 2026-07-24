@@ -4,7 +4,7 @@
 \alias{least}
 \title{DuckDB function least}
 \usage{
-least(arg1 = ANY)
+least(arg1)
 }
 \arguments{
 \item{arg1}{\code{ANY}}

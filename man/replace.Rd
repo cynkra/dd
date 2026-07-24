@@ -4,14 +4,10 @@
 \alias{replace}
 \title{DuckDB function replace}
 \usage{
-replace(string = VARCHAR, source = VARCHAR, target = VARCHAR)
+replace(string, source, target)
 }
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{source}{\code{VARCHAR}}
-
-\item{target}{\code{VARCHAR}}
+\item{string, source, target}{\code{VARCHAR}}
 }
 \value{
 \code{VARCHAR}

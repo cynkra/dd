@@ -4,7 +4,7 @@
 \alias{greatest}
 \title{DuckDB function greatest}
 \usage{
-greatest(arg1 = ANY)
+greatest(arg1)
 }
 \arguments{
 \item{arg1}{\code{ANY}}

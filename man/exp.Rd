@@ -4,7 +4,7 @@
 \alias{exp}
 \title{DuckDB function exp}
 \usage{
-exp(x = DOUBLE)
+exp(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

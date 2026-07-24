@@ -4,7 +4,7 @@
 \alias{concat_ws}
 \title{DuckDB function concat_ws}
 \usage{
-concat_ws(separator = VARCHAR, string = ANY)
+concat_ws(separator, string)
 }
 \arguments{
 \item{separator}{\code{VARCHAR}}

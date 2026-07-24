@@ -7,9 +7,7 @@
 array_append(arr, el)
 }
 \arguments{
-\item{arr}{Unspecified.}
-
-\item{el}{Unspecified.}
+\item{arr, el}{Unspecified.}
 }
 \value{
 Unspecified.

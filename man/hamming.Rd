@@ -5,12 +5,10 @@
 \alias{mismatches}
 \title{DuckDB function hamming}
 \usage{
-hamming(s1 = VARCHAR, s2 = VARCHAR)
+hamming(s1, s2)
 }
 \arguments{
-\item{s1}{\code{VARCHAR}}
-
-\item{s2}{\code{VARCHAR}}
+\item{s1, s2}{\code{VARCHAR}}
 }
 \value{
 \code{BIGINT}

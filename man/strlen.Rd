@@ -4,7 +4,7 @@
 \alias{strlen}
 \title{DuckDB function strlen}
 \usage{
-strlen(string = VARCHAR)
+strlen(string)
 }
 \arguments{
 \item{string}{\code{VARCHAR}}

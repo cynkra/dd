@@ -4,14 +4,10 @@
 \alias{arrow_scan_dumb}
 \title{DuckDB function arrow_scan_dumb}
 \usage{
-arrow_scan_dumb(col0 = POINTER, col1 = POINTER, col2 = POINTER)
+arrow_scan_dumb(col0, col1, col2)
 }
 \arguments{
-\item{col0}{\code{POINTER}}
-
-\item{col1}{\code{POINTER}}
-
-\item{col2}{\code{POINTER}}
+\item{col0, col1, col2}{\code{POINTER}}
 }
 \value{
 Unspecified.

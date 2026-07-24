@@ -3,6 +3,9 @@
 \name{read_text}
 \alias{read_text}
 \title{DuckDB function read_text}
+\usage{
+read_text(col0)
+}
 \arguments{
 \item{col0}{\code{VARCHAR | VARCHAR[]}}
 }
@@ -12,11 +15,3 @@ Unspecified.
 \description{
 DuckDB function \code{read_text()}.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{read_text(col0 = VARCHAR)}
-\item \code{read_text(col0 = `VARCHAR[]`)}
-}
-}
-

@@ -4,6 +4,9 @@
 \alias{date_sub}
 \alias{datesub}
 \title{DuckDB function date_sub}
+\usage{
+date_sub(part, startdate, enddate)
+}
 \arguments{
 \item{part}{\code{VARCHAR}}
 
@@ -17,16 +20,6 @@
 \description{
 The number of complete partitions between the timestamps.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{date_sub(part = VARCHAR, startdate = DATE, enddate = DATE)}
-\item \code{date_sub(part = VARCHAR, startdate = TIME, enddate = TIME)}
-\item \code{date_sub(part = VARCHAR, startdate = TIMESTAMP, enddate = TIMESTAMP)}
-\item \code{date_sub(part = VARCHAR, startdate = `TIMESTAMP WITH TIME ZONE`, enddate = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

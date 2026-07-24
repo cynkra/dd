@@ -4,6 +4,9 @@
 \alias{avg}
 \alias{mean}
 \title{DuckDB function avg}
+\usage{
+avg(x)
+}
 \arguments{
 \item{x}{\verb{DECIMAL | SMALLINT | INTEGER | BIGINT | HUGEINT | INTERVAL | DOUBLE | TIMESTAMP | TIMESTAMP WITH TIME ZONE | TIME | TIME WITH TIME ZONE}}
 }
@@ -13,23 +16,6 @@
 \description{
 Calculates the average value for all tuples in x.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{avg(x = DECIMAL)}
-\item \code{avg(x = SMALLINT)}
-\item \code{avg(x = INTEGER)}
-\item \code{avg(x = BIGINT)}
-\item \code{avg(x = HUGEINT)}
-\item \code{avg(x = INTERVAL)}
-\item \code{avg(x = DOUBLE)}
-\item \code{avg(x = TIMESTAMP)}
-\item \code{avg(x = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{avg(x = TIME)}
-\item \code{avg(x = `TIME WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

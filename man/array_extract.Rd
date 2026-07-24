@@ -3,35 +3,29 @@
 \name{array_extract}
 \alias{array_extract}
 \title{DuckDB function array_extract}
+\usage{
+array_extract(list, index)
+}
 \arguments{
-\item{col0}{\code{T[]}}
-
-\item{col1}{\code{BIGINT}}
-
-\item{string}{\code{VARCHAR}}
+\item{list}{\code{T[]}}
 
 \item{index}{\code{BIGINT}}
-
-\item{struct}{\code{STRUCT}}
-
-\item{entry}{\code{VARCHAR}}
 }
 \value{
 \code{T | VARCHAR | ANY}
 }
 \description{
-Extracts a single character from a \code{string} using a (1-based) \code{index}.
-
-Extracts the named \code{entry} from the \code{STRUCT}.
-
-Extracts the entry from an unnamed \code{STRUCT} (tuple) using an index (1-based).
-
-Extracts the \code{index}th (1-based) value from the \code{list}.
+\itemize{
+\item \code{array_extract(list = `T[]`, index = BIGINT)}: Extracts the \code{index}th (1-based) value from the \code{list}.
+\item \code{array_extract(string = VARCHAR, index = BIGINT)}: Extracts a single character from a \code{string} using a (1-based) \code{index}.
+\item \code{array_extract(struct = STRUCT, entry = VARCHAR)}: Extracts the named \code{entry} from the \code{STRUCT}.
+\item \code{array_extract(struct = STRUCT, index = BIGINT)}: Extracts the entry from an unnamed \code{STRUCT} (tuple) using an index (1-based).
+}
 }
 \section{Overloads}{
 
 \itemize{
-\item \code{array_extract(col0 = `T[]`, col1 = BIGINT)}
+\item \code{array_extract(list = `T[]`, index = BIGINT)}
 \item \code{array_extract(string = VARCHAR, index = BIGINT)}
 \item \code{array_extract(struct = STRUCT, entry = VARCHAR)}
 \item \code{array_extract(struct = STRUCT, index = BIGINT)}

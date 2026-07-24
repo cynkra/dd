@@ -4,12 +4,10 @@
 \alias{enum_range_boundary}
 \title{DuckDB function enum_range_boundary}
 \usage{
-enum_range_boundary(start = ANY, end = ANY)
+enum_range_boundary(start, end)
 }
 \arguments{
-\item{start}{\code{ANY}}
-
-\item{end}{\code{ANY}}
+\item{start, end}{\code{ANY}}
 }
 \value{
 \code{VARCHAR[]}

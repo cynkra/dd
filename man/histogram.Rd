@@ -3,18 +3,11 @@
 \name{histogram}
 \alias{histogram}
 \title{DuckDB function histogram}
+\usage{
+histogram(source, col_name, bin_count, technique)
+}
 \arguments{
-\item{arg}{\code{ANY}}
-
-\item{col1}{\code{ANY[]}}
-
-\item{source}{Unspecified.}
-
-\item{col_name}{Unspecified.}
-
-\item{bin_count}{Unspecified.}
-
-\item{technique}{Unspecified.}
+\item{source, col_name, bin_count, technique}{Unspecified.}
 }
 \value{
 \code{MAP}

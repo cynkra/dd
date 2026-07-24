@@ -4,7 +4,7 @@
 \alias{summary}
 \title{DuckDB function summary}
 \usage{
-summary(col0 = TABLE)
+summary(col0)
 }
 \arguments{
 \item{col0}{\code{TABLE}}

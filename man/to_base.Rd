@@ -3,6 +3,9 @@
 \name{to_base}
 \alias{to_base}
 \title{DuckDB function to_base}
+\usage{
+to_base(number, radix, min_length)
+}
 \arguments{
 \item{number}{\code{BIGINT}}
 

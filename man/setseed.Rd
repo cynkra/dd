@@ -4,7 +4,7 @@
 \alias{setseed}
 \title{DuckDB function setseed}
 \usage{
-setseed(col0 = DOUBLE)
+setseed(col0)
 }
 \arguments{
 \item{col0}{\code{DOUBLE}}

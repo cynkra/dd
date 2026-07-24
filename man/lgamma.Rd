@@ -4,7 +4,7 @@
 \alias{lgamma}
 \title{DuckDB function lgamma}
 \usage{
-lgamma(x = DOUBLE)
+lgamma(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

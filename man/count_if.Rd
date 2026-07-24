@@ -5,7 +5,7 @@
 \alias{countif}
 \title{DuckDB function count_if}
 \usage{
-count_if(arg = BOOLEAN)
+count_if(arg)
 }
 \arguments{
 \item{arg}{\code{BOOLEAN}}

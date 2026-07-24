@@ -3,6 +3,9 @@
 \name{monthname}
 \alias{monthname}
 \title{DuckDB function monthname}
+\usage{
+monthname(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,15 +15,6 @@
 \description{
 The (English) name of the month.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{monthname(ts = DATE)}
-\item \code{monthname(ts = TIMESTAMP)}
-\item \code{monthname(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

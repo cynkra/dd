@@ -3,6 +3,9 @@
 \name{dayname}
 \alias{dayname}
 \title{DuckDB function dayname}
+\usage{
+dayname(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,15 +15,6 @@
 \description{
 The (English) name of the weekday.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{dayname(ts = DATE)}
-\item \code{dayname(ts = TIMESTAMP)}
-\item \code{dayname(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

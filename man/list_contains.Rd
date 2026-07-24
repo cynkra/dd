@@ -7,7 +7,7 @@
 \alias{list_has}
 \title{DuckDB function list_contains}
 \usage{
-list_contains(list = `T[]`, element = T)
+list_contains(list, element)
 }
 \arguments{
 \item{list}{\code{T[]}}

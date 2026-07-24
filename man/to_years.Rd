@@ -3,6 +3,9 @@
 \name{to_years}
 \alias{to_years}
 \title{DuckDB function to_years}
+\usage{
+to_years(integer)
+}
 \arguments{
 \item{integer}{\code{INTEGER | BIGINT}}
 }
@@ -12,14 +15,6 @@
 \description{
 Construct a year interval.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{to_years(integer = INTEGER)}
-\item \code{to_years(integer = BIGINT)}
-}
-}
-
 \section{SQL examples}{
 
 

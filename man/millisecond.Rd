@@ -3,6 +3,9 @@
 \name{millisecond}
 \alias{millisecond}
 \title{DuckDB function millisecond}
+\usage{
+millisecond(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,19 +15,6 @@
 \description{
 Extract the millisecond component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{millisecond(ts = DATE)}
-\item \code{millisecond(ts = INTERVAL)}
-\item \code{millisecond(ts = TIME)}
-\item \code{millisecond(ts = TIMESTAMP)}
-\item \code{millisecond(ts = `TIME WITH TIME ZONE`)}
-\item \code{millisecond(ts = TIME_NS)}
-\item \code{millisecond(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

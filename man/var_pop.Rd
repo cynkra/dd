@@ -4,7 +4,7 @@
 \alias{var_pop}
 \title{DuckDB function var_pop}
 \usage{
-var_pop(x = DOUBLE)
+var_pop(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

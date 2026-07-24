@@ -3,10 +3,11 @@
 \name{rtrim}
 \alias{rtrim}
 \title{DuckDB function rtrim}
+\usage{
+rtrim(string, characters)
+}
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{characters}{\code{VARCHAR}}
+\item{string, characters}{\code{VARCHAR}}
 }
 \value{
 \code{VARCHAR}

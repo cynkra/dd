@@ -3,6 +3,9 @@
 \name{regexp_extract_all}
 \alias{regexp_extract_all}
 \title{DuckDB function regexp_extract_all}
+\usage{
+regexp_extract_all(string, regex, group, options)
+}
 \arguments{
 \item{string}{\code{VARCHAR}}
 

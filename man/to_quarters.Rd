@@ -3,6 +3,9 @@
 \name{to_quarters}
 \alias{to_quarters}
 \title{DuckDB function to_quarters}
+\usage{
+to_quarters(integer)
+}
 \arguments{
 \item{integer}{\code{INTEGER | BIGINT}}
 }
@@ -12,14 +15,6 @@
 \description{
 Construct a quarter interval.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{to_quarters(integer = INTEGER)}
-\item \code{to_quarters(integer = BIGINT)}
-}
-}
-
 \section{SQL examples}{
 
 

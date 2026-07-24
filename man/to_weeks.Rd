@@ -3,6 +3,9 @@
 \name{to_weeks}
 \alias{to_weeks}
 \title{DuckDB function to_weeks}
+\usage{
+to_weeks(integer)
+}
 \arguments{
 \item{integer}{\code{INTEGER | BIGINT}}
 }
@@ -12,14 +15,6 @@
 \description{
 Construct a week interval.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{to_weeks(integer = INTEGER)}
-\item \code{to_weeks(integer = BIGINT)}
-}
-}
-
 \section{SQL examples}{
 
 

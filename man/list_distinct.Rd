@@ -5,7 +5,7 @@
 \alias{array_distinct}
 \title{DuckDB function list_distinct}
 \usage{
-list_distinct(list = `T[]`)
+list_distinct(list)
 }
 \arguments{
 \item{list}{\code{T[]}}

@@ -8,7 +8,7 @@
 \alias{list_aggr}
 \title{DuckDB function list_aggregate}
 \usage{
-list_aggregate(list = `ANY[]`, function_name = VARCHAR)
+list_aggregate(list, function_name)
 }
 \arguments{
 \item{list}{\code{ANY[]}}

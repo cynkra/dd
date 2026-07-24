@@ -3,6 +3,18 @@
 \name{read_duckdb}
 \alias{read_duckdb}
 \title{DuckDB function read_duckdb}
+\usage{
+read_duckdb(
+  col0,
+  table_name,
+  schema_name,
+  hive_types_autocast,
+  hive_types,
+  hive_partitioning,
+  union_by_name,
+  filename
+)
+}
 \arguments{
 \item{col0}{\code{VARCHAR | VARCHAR[]}}
 
@@ -26,11 +38,3 @@ Unspecified.
 \description{
 DuckDB function \code{read_duckdb()}.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{read_duckdb(col0 = VARCHAR, table_name = VARCHAR, schema_name = VARCHAR, hive_types_autocast = BOOLEAN, hive_types = ANY, hive_partitioning = BOOLEAN, union_by_name = BOOLEAN, filename = ANY)}
-\item \code{read_duckdb(col0 = `VARCHAR[]`, table_name = VARCHAR, schema_name = VARCHAR, hive_types_autocast = BOOLEAN, hive_types = ANY, hive_partitioning = BOOLEAN, union_by_name = BOOLEAN, filename = ANY)}
-}
-}
-

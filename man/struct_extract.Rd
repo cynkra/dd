@@ -3,10 +3,13 @@
 \name{struct_extract}
 \alias{struct_extract}
 \title{DuckDB function struct_extract}
+\usage{
+struct_extract(struct, entry)
+}
 \arguments{
 \item{struct}{\code{STRUCT}}
 
-\item{'entry'}{\code{VARCHAR | BIGINT}}
+\item{entry}{\code{VARCHAR | BIGINT}}
 }
 \value{
 \code{ANY}
@@ -14,14 +17,6 @@
 \description{
 Extract the named entry from the STRUCT.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{struct_extract(struct = STRUCT, `'entry'` = VARCHAR)}
-\item \code{struct_extract(struct = STRUCT, `'entry'` = BIGINT)}
-}
-}
-
 \section{SQL examples}{
 
 

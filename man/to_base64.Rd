@@ -5,7 +5,7 @@
 \alias{base64}
 \title{DuckDB function to_base64}
 \usage{
-to_base64(blob = BLOB)
+to_base64(blob)
 }
 \arguments{
 \item{blob}{\code{BLOB}}

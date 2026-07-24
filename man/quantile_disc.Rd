@@ -4,6 +4,9 @@
 \alias{quantile_disc}
 \alias{quantile}
 \title{DuckDB function quantile_disc}
+\usage{
+quantile_disc(x, pos)
+}
 \arguments{
 \item{x}{\code{ANY}}
 

@@ -7,12 +7,10 @@
 \alias{string_to_array}
 \title{DuckDB function string_split}
 \usage{
-string_split(string = VARCHAR, separator = VARCHAR)
+string_split(string, separator)
 }
 \arguments{
-\item{string}{\code{VARCHAR}}
-
-\item{separator}{\code{VARCHAR}}
+\item{string, separator}{\code{VARCHAR}}
 }
 \value{
 \code{VARCHAR[]}

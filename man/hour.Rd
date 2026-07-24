@@ -3,6 +3,9 @@
 \name{hour}
 \alias{hour}
 \title{DuckDB function hour}
+\usage{
+hour(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | TIME_NS | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,19 +15,6 @@
 \description{
 Extract the hour component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{hour(ts = DATE)}
-\item \code{hour(ts = INTERVAL)}
-\item \code{hour(ts = TIME)}
-\item \code{hour(ts = TIMESTAMP)}
-\item \code{hour(ts = `TIME WITH TIME ZONE`)}
-\item \code{hour(ts = TIME_NS)}
-\item \code{hour(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

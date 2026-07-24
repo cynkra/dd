@@ -5,12 +5,10 @@
 \alias{||}
 \title{DuckDB function ||}
 \usage{
-`||`(arg1 = ANY, arg2 = ANY)
+`||`(arg1, arg2)
 }
 \arguments{
-\item{arg1}{\code{ANY}}
-
-\item{arg2}{\code{ANY}}
+\item{arg1, arg2}{\code{ANY}}
 }
 \value{
 \code{ANY}

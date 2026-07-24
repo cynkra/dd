@@ -3,6 +3,9 @@
 \name{current_schemas}
 \alias{current_schemas}
 \title{DuckDB function current_schemas}
+\usage{
+current_schemas(include_implicit)
+}
 \arguments{
 \item{include_implicit}{\code{BOOLEAN}}
 }
@@ -12,14 +15,6 @@
 \description{
 Returns list of schemas. Pass a parameter of True to include implicit schemas.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{current_schemas(include_implicit = BOOLEAN)}
-\item \code{current_schemas(include_implicit)}
-}
-}
-
 \section{SQL examples}{
 
 

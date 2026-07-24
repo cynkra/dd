@@ -4,7 +4,7 @@
 \alias{duckdb_secrets}
 \title{DuckDB function duckdb_secrets}
 \usage{
-duckdb_secrets(redact = BOOLEAN)
+duckdb_secrets(redact)
 }
 \arguments{
 \item{redact}{\code{BOOLEAN}}

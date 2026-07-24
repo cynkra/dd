@@ -3,6 +3,9 @@
 \name{count}
 \alias{count}
 \title{DuckDB function count}
+\usage{
+count(arg)
+}
 \arguments{
 \item{arg}{\code{ANY}}
 }

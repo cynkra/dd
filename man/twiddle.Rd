@@ -3,6 +3,9 @@
 \name{~}
 \alias{~}
 \title{DuckDB function ~}
+\usage{
+`~`(input)
+}
 \arguments{
 \item{input}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT}}
 }
@@ -12,23 +15,6 @@
 \description{
 Bitwise NOT.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{`~`(input = TINYINT)}
-\item \code{`~`(input = SMALLINT)}
-\item \code{`~`(input = INTEGER)}
-\item \code{`~`(input = BIGINT)}
-\item \code{`~`(input = HUGEINT)}
-\item \code{`~`(input = UTINYINT)}
-\item \code{`~`(input = USMALLINT)}
-\item \code{`~`(input = UINTEGER)}
-\item \code{`~`(input = UBIGINT)}
-\item \code{`~`(input = UHUGEINT)}
-\item \code{`~`(input = BIT)}
-}
-}
-
 \section{SQL examples}{
 
 

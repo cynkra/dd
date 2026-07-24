@@ -3,6 +3,9 @@
 \name{round}
 \alias{round}
 \title{DuckDB function round}
+\usage{
+round(x, precision)
+}
 \arguments{
 \item{x}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL}}
 

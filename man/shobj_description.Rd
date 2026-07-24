@@ -7,9 +7,7 @@
 shobj_description(object_oid, catalog_name)
 }
 \arguments{
-\item{object_oid}{Unspecified.}
-
-\item{catalog_name}{Unspecified.}
+\item{object_oid, catalog_name}{Unspecified.}
 }
 \value{
 Unspecified.

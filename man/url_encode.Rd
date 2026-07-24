@@ -4,7 +4,7 @@
 \alias{url_encode}
 \title{DuckDB function url_encode}
 \usage{
-url_encode(string = VARCHAR)
+url_encode(string)
 }
 \arguments{
 \item{string}{\code{VARCHAR}}

@@ -7,9 +7,7 @@
 regexp_split_to_table(text, pattern)
 }
 \arguments{
-\item{text}{Unspecified.}
-
-\item{pattern}{Unspecified.}
+\item{text, pattern}{Unspecified.}
 }
 \value{
 Unspecified.

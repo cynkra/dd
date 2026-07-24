@@ -4,6 +4,9 @@
 \alias{date_trunc}
 \alias{datetrunc}
 \title{DuckDB function date_trunc}
+\usage{
+date_trunc(part, timestamp)
+}
 \arguments{
 \item{part}{\code{VARCHAR}}
 
@@ -15,16 +18,6 @@
 \description{
 Truncate to specified precision.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{date_trunc(part = VARCHAR, timestamp = DATE)}
-\item \code{date_trunc(part = VARCHAR, timestamp = INTERVAL)}
-\item \code{date_trunc(part = VARCHAR, timestamp = TIMESTAMP)}
-\item \code{date_trunc(part = VARCHAR, timestamp = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

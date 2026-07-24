@@ -4,6 +4,9 @@
 \alias{date_part}
 \alias{datepart}
 \title{DuckDB function date_part}
+\usage{
+date_part(ts, col1)
+}
 \arguments{
 \item{ts}{\code{VARCHAR[] | VARCHAR}}
 
@@ -15,26 +18,6 @@
 \description{
 Get subfield (equivalent to extract).
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{date_part(ts = `VARCHAR[]`, col1 = DATE)}
-\item \code{date_part(ts = `VARCHAR[]`, col1 = INTERVAL)}
-\item \code{date_part(ts = `VARCHAR[]`, col1 = TIME)}
-\item \code{date_part(ts = `VARCHAR[]`, col1 = TIMESTAMP)}
-\item \code{date_part(ts = `VARCHAR[]`, col1 = `TIME WITH TIME ZONE`)}
-\item \code{date_part(ts = `VARCHAR[]`, col1 = TIME_NS)}
-\item \code{date_part(ts = VARCHAR, col1 = DATE)}
-\item \code{date_part(ts = VARCHAR, col1 = INTERVAL)}
-\item \code{date_part(ts = VARCHAR, col1 = TIME)}
-\item \code{date_part(ts = VARCHAR, col1 = TIMESTAMP)}
-\item \code{date_part(ts = VARCHAR, col1 = `TIME WITH TIME ZONE`)}
-\item \code{date_part(ts = VARCHAR, col1 = TIME_NS)}
-\item \code{date_part(ts = `VARCHAR[]`, col1 = `TIMESTAMP WITH TIME ZONE`)}
-\item \code{date_part(ts = VARCHAR, col1 = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

@@ -4,10 +4,11 @@
 \alias{multiply}
 \alias{*}
 \title{DuckDB function multiply}
+\usage{
+multiply(col0, col1)
+}
 \arguments{
-\item{col0}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL}}
-
-\item{col1}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL}}
+\item{col0, col1}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL}}
 }
 \value{
 \code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | INTERVAL}
@@ -15,26 +16,3 @@
 \description{
 DuckDB function \code{multiply()}.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{multiply(col0 = TINYINT, col1 = TINYINT)}
-\item \code{multiply(col0 = SMALLINT, col1 = SMALLINT)}
-\item \code{multiply(col0 = INTEGER, col1 = INTEGER)}
-\item \code{multiply(col0 = BIGINT, col1 = BIGINT)}
-\item \code{multiply(col0 = HUGEINT, col1 = HUGEINT)}
-\item \code{multiply(col0 = FLOAT, col1 = FLOAT)}
-\item \code{multiply(col0 = DOUBLE, col1 = DOUBLE)}
-\item \code{multiply(col0 = DECIMAL, col1 = DECIMAL)}
-\item \code{multiply(col0 = UTINYINT, col1 = UTINYINT)}
-\item \code{multiply(col0 = USMALLINT, col1 = USMALLINT)}
-\item \code{multiply(col0 = UINTEGER, col1 = UINTEGER)}
-\item \code{multiply(col0 = UBIGINT, col1 = UBIGINT)}
-\item \code{multiply(col0 = UHUGEINT, col1 = UHUGEINT)}
-\item \code{multiply(col0 = INTERVAL, col1 = DOUBLE)}
-\item \code{multiply(col0 = DOUBLE, col1 = INTERVAL)}
-\item \code{multiply(col0 = BIGINT, col1 = INTERVAL)}
-\item \code{multiply(col0 = INTERVAL, col1 = BIGINT)}
-}
-}
-

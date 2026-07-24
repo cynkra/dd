@@ -3,18 +3,20 @@
 \name{octet_length}
 \alias{octet_length}
 \title{DuckDB function octet_length}
+\usage{
+octet_length(blob)
+}
 \arguments{
 \item{blob}{\code{BLOB}}
-
-\item{bitstring}{\code{BIT}}
 }
 \value{
 \code{BIGINT}
 }
 \description{
-Number of bytes in \code{blob}.
-
-Returns the number of bytes in the \code{bitstring}.
+\itemize{
+\item \code{octet_length(blob = BLOB)}: Number of bytes in \code{blob}.
+\item \code{octet_length(bitstring = BIT)}: Returns the number of bytes in the \code{bitstring}.
+}
 }
 \section{Overloads}{
 

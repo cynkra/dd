@@ -4,7 +4,7 @@
 \alias{cardinality}
 \title{DuckDB function cardinality}
 \usage{
-cardinality(map = ANY)
+cardinality(map)
 }
 \arguments{
 \item{map}{\code{ANY}}

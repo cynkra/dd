@@ -4,7 +4,7 @@
 \alias{sinh}
 \title{DuckDB function sinh}
 \usage{
-sinh(x = DOUBLE)
+sinh(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

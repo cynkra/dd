@@ -4,7 +4,7 @@
 \alias{combine}
 \title{DuckDB function combine}
 \usage{
-combine(col0 = `AGGREGATE_STATE<?>`, col1 = ANY)
+combine(col0, col1)
 }
 \arguments{
 \item{col0}{\verb{AGGREGATE_STATE<?>}}

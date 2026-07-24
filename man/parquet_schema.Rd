@@ -3,6 +3,9 @@
 \name{parquet_schema}
 \alias{parquet_schema}
 \title{DuckDB function parquet_schema}
+\usage{
+parquet_schema(col0)
+}
 \arguments{
 \item{col0}{\code{VARCHAR | VARCHAR[]}}
 }
@@ -12,11 +15,3 @@ Unspecified.
 \description{
 DuckDB function \code{parquet_schema()}.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{parquet_schema(col0 = VARCHAR)}
-\item \code{parquet_schema(col0 = `VARCHAR[]`)}
-}
-}
-

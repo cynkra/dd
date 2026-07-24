@@ -4,7 +4,7 @@
 \alias{cos}
 \title{DuckDB function cos}
 \usage{
-cos(x = DOUBLE)
+cos(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

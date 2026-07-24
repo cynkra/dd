@@ -3,6 +3,9 @@
 \name{week}
 \alias{week}
 \title{DuckDB function week}
+\usage{
+week(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,16 +15,6 @@
 \description{
 Extract the week component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{week(ts = DATE)}
-\item \code{week(ts = INTERVAL)}
-\item \code{week(ts = TIMESTAMP)}
-\item \code{week(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

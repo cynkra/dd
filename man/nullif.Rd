@@ -7,9 +7,7 @@
 nullif(a, b)
 }
 \arguments{
-\item{a}{Unspecified.}
-
-\item{b}{Unspecified.}
+\item{a, b}{Unspecified.}
 }
 \value{
 Unspecified.

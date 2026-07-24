@@ -3,6 +3,9 @@
 \name{<<}
 \alias{<<}
 \title{DuckDB function <<}
+\usage{
+`<<`(input, col1)
+}
 \arguments{
 \item{input}{\code{TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIT}}
 
@@ -14,23 +17,6 @@
 \description{
 Bitwise shift left.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{`<<`(input = TINYINT, col1 = TINYINT)}
-\item \code{`<<`(input = SMALLINT, col1 = SMALLINT)}
-\item \code{`<<`(input = INTEGER, col1 = INTEGER)}
-\item \code{`<<`(input = BIGINT, col1 = BIGINT)}
-\item \code{`<<`(input = HUGEINT, col1 = HUGEINT)}
-\item \code{`<<`(input = UTINYINT, col1 = UTINYINT)}
-\item \code{`<<`(input = USMALLINT, col1 = USMALLINT)}
-\item \code{`<<`(input = UINTEGER, col1 = UINTEGER)}
-\item \code{`<<`(input = UBIGINT, col1 = UBIGINT)}
-\item \code{`<<`(input = UHUGEINT, col1 = UHUGEINT)}
-\item \code{`<<`(input = BIT, col1 = INTEGER)}
-}
-}
-
 \section{SQL examples}{
 
 

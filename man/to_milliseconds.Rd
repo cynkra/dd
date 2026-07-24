@@ -4,7 +4,7 @@
 \alias{to_milliseconds}
 \title{DuckDB function to_milliseconds}
 \usage{
-to_milliseconds(double = DOUBLE)
+to_milliseconds(double)
 }
 \arguments{
 \item{double}{\code{DOUBLE}}

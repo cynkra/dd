@@ -4,12 +4,10 @@
 \alias{~~~}
 \title{DuckDB function ~~~}
 \usage{
-`~~~`(col0 = VARCHAR, col1 = VARCHAR)
+`~~~`(col0, col1)
 }
 \arguments{
-\item{col0}{\code{VARCHAR}}
-
-\item{col1}{\code{VARCHAR}}
+\item{col0, col1}{\code{VARCHAR}}
 }
 \value{
 \code{BOOLEAN}

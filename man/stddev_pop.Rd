@@ -4,7 +4,7 @@
 \alias{stddev_pop}
 \title{DuckDB function stddev_pop}
 \usage{
-stddev_pop(x = DOUBLE)
+stddev_pop(x)
 }
 \arguments{
 \item{x}{\code{DOUBLE}}

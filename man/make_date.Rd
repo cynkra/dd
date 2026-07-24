@@ -3,31 +3,28 @@
 \name{make_date}
 \alias{make_date}
 \title{DuckDB function make_date}
+\usage{
+make_date(year, month, day)
+}
 \arguments{
-\item{col0}{\code{INTEGER}}
-
-\item{year}{\code{BIGINT}}
-
-\item{month}{\code{BIGINT}}
-
-\item{day}{\code{BIGINT}}
-
-\item{date-struct}{\verb{STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)}}
+\item{year, month, day}{\code{BIGINT}}
 }
 \value{
 \code{DATE}
 }
 \description{
-The date for the given parts.
-
-The date for the given struct.
+\itemize{
+\item \code{make_date(year = BIGINT, month = BIGINT, day = BIGINT)}: The date for the given parts.
+\item \code{make_date(date.struct = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`)}: The date for the given struct.
+\item \code{make_date(col0 = INTEGER)}: (Description missing.)
+}
 }
 \section{Overloads}{
 
 \itemize{
 \item \code{make_date(col0 = INTEGER)}
 \item \code{make_date(year = BIGINT, month = BIGINT, day = BIGINT)}
-\item \code{make_date(`date-struct` = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`)}
+\item \code{make_date(date.struct = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`)}
 }
 }
 

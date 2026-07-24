@@ -3,6 +3,9 @@
 \name{day}
 \alias{day}
 \title{DuckDB function day}
+\usage{
+day(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,16 +15,6 @@
 \description{
 Extract the day component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{day(ts = DATE)}
-\item \code{day(ts = INTERVAL)}
-\item \code{day(ts = TIMESTAMP)}
-\item \code{day(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

@@ -4,6 +4,9 @@
 \alias{date_diff}
 \alias{datediff}
 \title{DuckDB function date_diff}
+\usage{
+date_diff(part, startdate, enddate)
+}
 \arguments{
 \item{part}{\code{VARCHAR}}
 
@@ -17,16 +20,6 @@
 \description{
 The number of partition boundaries between the timestamps.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{date_diff(part = VARCHAR, startdate = DATE, enddate = DATE)}
-\item \code{date_diff(part = VARCHAR, startdate = TIME, enddate = TIME)}
-\item \code{date_diff(part = VARCHAR, startdate = TIMESTAMP, enddate = TIMESTAMP)}
-\item \code{date_diff(part = VARCHAR, startdate = `TIMESTAMP WITH TIME ZONE`, enddate = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

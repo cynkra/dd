@@ -4,7 +4,7 @@
 \alias{finalize}
 \title{DuckDB function finalize}
 \usage{
-finalize(col0 = `AGGREGATE_STATE<?>`)
+finalize(col0)
 }
 \arguments{
 \item{col0}{\verb{AGGREGATE_STATE<?>}}

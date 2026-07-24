@@ -5,7 +5,7 @@
 \alias{ord}
 \title{DuckDB function unicode}
 \usage{
-unicode(string = VARCHAR)
+unicode(string)
 }
 \arguments{
 \item{string}{\code{VARCHAR}}

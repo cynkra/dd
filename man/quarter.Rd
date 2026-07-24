@@ -3,6 +3,9 @@
 \name{quarter}
 \alias{quarter}
 \title{DuckDB function quarter}
+\usage{
+quarter(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,16 +15,6 @@
 \description{
 Extract the quarter component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{quarter(ts = DATE)}
-\item \code{quarter(ts = INTERVAL)}
-\item \code{quarter(ts = TIMESTAMP)}
-\item \code{quarter(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

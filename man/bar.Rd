@@ -3,14 +3,11 @@
 \name{bar}
 \alias{bar}
 \title{DuckDB function bar}
+\usage{
+bar(x, min, max, width)
+}
 \arguments{
-\item{x}{\code{DOUBLE}}
-
-\item{min}{\code{DOUBLE}}
-
-\item{max}{\code{DOUBLE}}
-
-\item{width}{\code{DOUBLE}}
+\item{x, min, max, width}{\code{DOUBLE}}
 }
 \value{
 \code{VARCHAR}

@@ -4,7 +4,7 @@
 \alias{rpad}
 \title{DuckDB function rpad}
 \usage{
-rpad(string = VARCHAR, count = INTEGER, character = VARCHAR)
+rpad(string, count, character)
 }
 \arguments{
 \item{string}{\code{VARCHAR}}

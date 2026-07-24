@@ -7,9 +7,7 @@
 generate_subscripts(arr, dim)
 }
 \arguments{
-\item{arr}{Unspecified.}
-
-\item{dim}{Unspecified.}
+\item{arr, dim}{Unspecified.}
 }
 \value{
 Unspecified.

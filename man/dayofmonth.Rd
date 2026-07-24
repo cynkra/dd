@@ -3,6 +3,9 @@
 \name{dayofmonth}
 \alias{dayofmonth}
 \title{DuckDB function dayofmonth}
+\usage{
+dayofmonth(ts)
+}
 \arguments{
 \item{ts}{\verb{DATE | INTERVAL | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,16 +15,6 @@
 \description{
 Extract the dayofmonth component from a date or timestamp.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{dayofmonth(ts = DATE)}
-\item \code{dayofmonth(ts = INTERVAL)}
-\item \code{dayofmonth(ts = TIMESTAMP)}
-\item \code{dayofmonth(ts = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 

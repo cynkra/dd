@@ -5,7 +5,7 @@
 \alias{from_hex}
 \title{DuckDB function unhex}
 \usage{
-unhex(value = VARCHAR)
+unhex(value)
 }
 \arguments{
 \item{value}{\code{VARCHAR}}

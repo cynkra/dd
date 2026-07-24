@@ -3,6 +3,9 @@
 \name{epoch_us}
 \alias{epoch_us}
 \title{DuckDB function epoch_us}
+\usage{
+epoch_us(temporal)
+}
 \arguments{
 \item{temporal}{\verb{DATE | TIMESTAMP | INTERVAL | TIME | TIME_NS | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE}}
 }
@@ -12,19 +15,6 @@
 \description{
 Extract the epoch component in microseconds from a temporal type.
 }
-\section{Overloads}{
-
-\itemize{
-\item \code{epoch_us(temporal = DATE)}
-\item \code{epoch_us(temporal = TIMESTAMP)}
-\item \code{epoch_us(temporal = INTERVAL)}
-\item \code{epoch_us(temporal = TIME)}
-\item \code{epoch_us(temporal = TIME_NS)}
-\item \code{epoch_us(temporal = `TIME WITH TIME ZONE`)}
-\item \code{epoch_us(temporal = `TIMESTAMP WITH TIME ZONE`)}
-}
-}
-
 \section{SQL examples}{
 
 
