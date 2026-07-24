@@ -3,83 +3,90 @@
 This file is a working note for an **upstream DuckDB** improvement. It is not
 part of the R package (it is listed in `.Rbuildignore`).
 
-`dd` documents every DuckDB function from `duckdb_functions()` plus the source
-`functions.json` files. Those give us argument *names* and *types* and a
-function-level *description*, but **no description of what each argument means**.
-As a result the generated `@param` entries can only show the type. This note
-drafts the upstream changes needed to add per-argument descriptions, and shows
-concrete `functions.json` extensions for a handful of functions (semantics
+## Motivation
+
+`dd` turns every DuckDB function into an R help page, so `?acos` or
+[`array_extract`](https://cynkra.github.io/dd/reference/array_extract.html)
+resolve straight from the R console. Those pages are generated from
+`duckdb_functions()` and the source `functions.json` files, which supply
+argument *names* and *types* and a function-level *description* — but nothing
+about what each argument means. The `@param` entries can therefore only repeat
+the type:
+
+```
+Arguments:
+    list: T[]
+    index: BIGINT
+```
+
+A hand-written R function reads very differently. `duckdb::duckdb()` describes
+its `dbdir` argument as "Location for database files. Should be a path to an
+existing directory in the file system. With the default (or `""`), all data is
+kept in RAM." — a sentence that says what to pass and what happens if you don't.
+That prose is the baseline an R user expects from `?`. DuckDB already knows what
+`array_extract`'s `index` does; it just has nowhere to write it down where `dd`
+(or any other consumer) can read it.
+
+This note drafts that missing slot — a per-argument `description` in
+`functions.json` — and sketches entries for a handful of functions (semantics
 inferred from each function's existing description, examples, and behaviour).
 
-## What we need
+## What `dd` needs
 
 `dd` reads `functions.json` directly, so it only needs the descriptions to
 exist there:
 
-1. **`functions.json` schema** — allow an optional `description` on each
-   parameter object:
+1. **Schema** — allow an optional `description` on each parameter object:
    `{"name": "index", "type": "BIGINT", "description": "1-based position."}`.
    Purely additive; existing entries stay valid.
-2. **Content** — write the descriptions into `functions.json`. This is the bulk
-   of the work and can land incrementally; everything degrades gracefully when
-   the field is absent.
+2. **Content** — write the descriptions. This is the bulk of the work; it can
+   land incrementally, and everything degrades gracefully when the field is
+   absent.
 
-Related data gaps noticed while drafting (worth fixing in the same pass):
+Two related data gaps are worth fixing in the same pass:
 
-- Many overloads have no parameter names at all in `functions.json` (the C++
-  registration named nothing), so `duckdb_functions()` reports `col0`, `col1`,
-  …; `dd` currently recovers names only when the JSON provides them.
+- Many overloads have no parameter names at all (the C++ registration named
+  nothing), so `duckdb_functions()` reports `col0`, `col1`, …; `dd` recovers
+  names only when the JSON provides them.
 - Some flat entries are incomplete, e.g. `date_part` lists `"parameters":
-  "ts"` although the function takes `(part, ts)` — names and arity should be
-  filled in too.
+  "ts"` although the function takes `(part, ts)`.
 
-## How can DuckDB benefit
+## Surfacing it engine-wide
 
-- **Richer official docs.** The DuckDB SQL function reference is generated from
-  these same `functions.json` files, so it could render per-argument help, not
-  just the signature.
-- **Better tooling.** CLIs, IDEs, and UIs that read `duckdb_functions()` can
-  surface argument hints and autocomplete tooltips.
-- **One source of truth.** Descriptions authored once in `functions.json` flow
-  to the engine, the website, and every binding (Python, R, Java, …) and
-  downstream project (such as `dd`) — no per-consumer duplication.
-- **Drives completeness.** Adding the field nudges authors to name every
-  parameter and to fix incomplete entries (the `col0`/`date_part` gaps above),
-  improving metadata quality across the board.
-
-To surface the descriptions engine-wide (so `duckdb_functions()` and every
-binding get them, not just consumers that parse `functions.json`), DuckDB would
-also:
+Steps 1–2 are enough for `dd`. To carry the descriptions through the engine —
+so `duckdb_functions()` and every binding expose them, not just consumers that
+parse `functions.json` — DuckDB would also:
 
 3. **`scripts/generate_functions.py`** — add a parameter-description line
    paralleling `get_parameter_line` (same `\001` variant / `\002` element
-   encoding) and emit it into the generated `*_functions.hpp`, with a length
-   check against the parameter list.
+   encoding), emit it into the generated `*_functions.hpp`, and assert its
+   length matches the parameter list.
 4. **`FunctionDescription`** (`src/include/duckdb/function/function.hpp`) — add
-   `vector<string> parameter_descriptions;` parallel to `parameter_names`, and
-   populate it from the generated data (and via the registration macros for
-   functions defined directly in C++, where it defaults to empty).
+   `vector<string> parameter_descriptions;` alongside `parameter_names`, filled
+   from the generated data. Functions defined directly in C++ leave it empty.
 5. **`duckdb_functions()`** (`src/function/table/system/duckdb_functions.cpp`) —
-   add a `parameter_descriptions` column `LIST(VARCHAR)`, filled from
-   `FunctionDescription.parameter_descriptions` the same way `parameters` is
-   filled from `parameter_names` (the `ExtractFunctionParameters` path).
-   Additive column → backward compatible.
+   add a `parameter_descriptions` column of `LIST(VARCHAR)`, filled the same way
+   `parameters` is filled from `parameter_names`. Additive, so existing queries
+   keep working.
 
-## Implications for DuckDB
+## Why it helps DuckDB
 
-- **Backward compatible.** The new `functions.json` field and the new
-  `duckdb_functions()` column are additive; existing queries and consumers keep
-  working, and a missing description degrades to empty.
-- **Authoring burden.** Hundreds of parameters need descriptions; this is the
-  main cost. It can land incrementally, function by function, and a CI check
-  could warn when a new function or overload omits them.
-- **Validation.** The generator should assert that the number of parameter
-  descriptions matches the number of parameter names per overload, to catch
-  drift.
-- **Build and footprint.** Only `generate_functions.py` and the registration
-  path change; the extra strings add a negligible amount to the binary.
-- **Scope.** Functions registered directly in C++ (not via `functions.json`)
-  simply leave the field empty until someone fills it — no migration required.
+- **Richer official docs.** The DuckDB SQL function reference is generated from
+  these same files, so it could render per-argument help, not just the
+  signature.
+- **Better tooling.** CLIs, IDEs, and UIs that read `duckdb_functions()` can
+  surface argument hints and autocomplete tooltips.
+- **One source of truth.** Descriptions authored once flow to the engine, the
+  website, and every binding (Python, R, Java, …) — no per-consumer
+  duplication.
+- **Drives completeness.** Adding the field nudges authors to name every
+  parameter and fix the incomplete entries above.
+
+The cost is the authoring itself: hundreds of parameters, best filled in
+function by function, with a CI check to warn when a new overload omits them.
+Everything else is cheap — only the generator and the registration path change,
+the extra strings are negligible, and both the new field and the new column are
+backward compatible.
 
 ## Drafted `functions.json` extensions
 
