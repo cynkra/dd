@@ -1,6 +1,6 @@
 # DuckDB functions
 
-A list of known DuckDB functions.
+A list of known DuckDB functions, as provided by DuckDB 1.5.5.
 
 ## Usage
 
@@ -16,21 +16,21 @@ dd[1:3]
 #> function(x = INTEGER) {
 #>   stop("DuckDB function !__postfix() is not available in R.")
 #> }
-#> <bytecode: 0x5ca761a1b5c0>
+#> <bytecode: 0x5c002867b838>
 #> <environment: namespace:dd>
 #> 
 #> $`!~~`
 #> function(col0 = VARCHAR, col1 = VARCHAR) {
 #>   stop("DuckDB function !~~() is not available in R.")
 #> }
-#> <bytecode: 0x5ca761a19da0>
+#> <bytecode: 0x5c0028673758>
 #> <environment: namespace:dd>
 #> 
 #> $`!~~*`
 #> function(col0 = VARCHAR, col1 = VARCHAR) {
 #>   stop("DuckDB function !~~*() is not available in R.")
 #> }
-#> <bytecode: 0x5ca761a14200>
+#> <bytecode: 0x5c002866c328>
 #> <environment: namespace:dd>
 #> 
 ```
