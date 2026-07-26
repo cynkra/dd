@@ -875,6 +875,32 @@ arg_min_nulls_last <- function(arg = `INTEGER | BIGINT | DOUBLE | VARCHAR | DATE
   stop("DuckDB function arg_min_nulls_last() is not available in R.")
 }
 
+#' DuckDB function array_agg
+#'
+#' @description
+#' Returns a LIST containing all the values of a column.
+#'
+#' @name array_agg
+#' @usage array_agg(arg)
+#' @param arg `T`
+#' @return `T[]`
+#' @export
+#' @section SQL examples:
+#' ```
+#' array_agg(A)
+#' list(A)
+#' ```
+array_agg <- function(arg = T) {
+  stop("DuckDB function array_agg() is not available in R.")
+}
+
+#' @rdname array_agg
+#' @usage NULL
+#' @export
+list <- function(arg = T) {
+  stop("DuckDB function list() is not available in R.")
+}
+
 #' DuckDB function array_append
 #'
 #' @description
@@ -5439,31 +5465,6 @@ lgamma <- function(x = DOUBLE) {
 #' ```
 like_escape <- function(string = VARCHAR, like_specifier = VARCHAR, escape_character = VARCHAR) {
   stop("DuckDB function like_escape() is not available in R.")
-}
-
-#' DuckDB function list
-#'
-#' @description
-#' Returns a LIST containing all the values of a column.
-#'
-#' @name list
-#' @usage list(arg)
-#' @param arg `T`
-#' @return `T[]`
-#' @export
-#' @section SQL examples:
-#' ```
-#' list(A)
-#' ```
-list <- function(arg = T) {
-  stop("DuckDB function list() is not available in R.")
-}
-
-#' @rdname list
-#' @usage NULL
-#' @export
-array_agg <- function(arg = T) {
-  stop("DuckDB function array_agg() is not available in R.")
 }
 
 #' DuckDB function list_aggregate

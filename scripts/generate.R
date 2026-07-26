@@ -425,6 +425,14 @@ rdize_function_name <- function(x) {
 
 is_alnum <- function(x) grepl("^[A-Za-z0-9_]+$", x)
 
+# Is `x` the name of an object in base R? Used to keep the help topic for an
+# alias group off a name that collides with base (e.g. document the
+# `length`/`len` group under `len`, since `?length` would otherwise also
+# resolve to `base::length()`).
+masks_base <- function(x) {
+  vapply(x, exists, logical(1), envir = baseenv(), inherits = FALSE)
+}
+
 # Pick the representative function for an alias group. DuckDB reports aliases via
 # the `alias_of` column, so a group is the canonical function plus everything
 # pointing at it. We document the group on a single page named after a short,
@@ -433,6 +441,16 @@ is_alnum <- function(x) grepl("^[A-Za-z0-9_]+$", x)
 # the .Rd file name readable even when the canonical is an operator (e.g. `**`).
 pick_rep <- function(names, canonical) {
   alnum <- names[is_alnum(names)]
+  # Prefer a name that does not collide with a base R object, so the help topic
+  # is unambiguous; fall back to the previous behaviour when the whole group
+  # collides.
+  free <- alnum[!masks_base(alnum)]
+  if (canonical %in% free) {
+    return(canonical)
+  }
+  if (length(free) > 0) {
+    return(free[order(nchar(free), free)][[1]])
+  }
   if (canonical %in% alnum) {
     return(canonical)
   }
