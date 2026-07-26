@@ -4,6 +4,7 @@
 \alias{len}
 \alias{char_length}
 \alias{character_length}
+\alias{length}
 \title{DuckDB function len}
 \usage{
 len(string)

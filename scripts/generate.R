@@ -745,8 +745,6 @@ funs <-
       examples
     )
   ) |>
-  # FIXME: Breaks devtools::document()
-  filter_print(!(function_name %in% c("length"))) |>
   # FIXME: Breaks R CMD check
   filter_print(!(function_name %in% c("<->"))) |>
   # Drop DuckDB's internal decompression helpers: they are implementation
@@ -792,16 +790,18 @@ funs <-
   # from the canonical (alphanumeric) member rather than an operator alias.
   arrange(rd_name, desc(is_primary), function_name)
 
-# A handful of DuckDB functions share a name with a base R function that R's own
-# machinery calls while the package is attached (e.g. R CMD check's example
-# runner evaluates `format(x, digits = 7)` when timing examples). Exporting a
-# stub for those names shadows the base function on the search path and makes
-# that machinery dispatch to the stub, which errors -- breaking R CMD check.
+# A handful of DuckDB functions share a name with a base R function that tooling
+# calls while the package is attached: R CMD check's example runner evaluates
+# `format(x, digits = 7)` and `proc.time() - ...` when timing examples, and
+# pkgdown's site build reaches `length()` through `purrr::pluck()` while
+# rendering the navbar. Exporting a stub for those names shadows the base
+# function on the search path and makes that tooling dispatch to the stub, which
+# errors -- breaking R CMD check and the pkgdown build.
 # Document them (so they still get a help page and appear in `dd`) but do not
 # `@export` them, so the base functions keep working when `library(dd)` is
 # attached. This is only needed for names base R itself relies on; the many
 # other base-shadowing stubs (`abs()`, `sqrt()`, ...) stay exported as before.
-no_export <- c("format", "+", "-")
+no_export <- c("format", "+", "-", "length")
 
 code <-
   funs |>
