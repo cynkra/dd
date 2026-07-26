@@ -604,6 +604,7 @@ dd <- base::list(
   sinh = sinh,
   skewness = skewness,
   sleep_ms = sleep_ms,
+  sniff_csv = sniff_csv,
   split = split,
   split_part = split_part,
   sqrt = sqrt,
