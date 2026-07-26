@@ -38,6 +38,7 @@ Other string:
 [`chr()`](https://cynkra.github.io/dd/reference/chr.md),
 [`concat()`](https://cynkra.github.io/dd/reference/concat.md),
 [`contains()`](https://cynkra.github.io/dd/reference/contains.md),
+[`format()`](https://cynkra.github.io/dd/reference/format.md),
 [`formatReadableDecimalSize()`](https://cynkra.github.io/dd/reference/formatReadableDecimalSize.md),
 [`format_bytes()`](https://cynkra.github.io/dd/reference/format_bytes.md),
 [`from_base64()`](https://cynkra.github.io/dd/reference/from_base64.md),

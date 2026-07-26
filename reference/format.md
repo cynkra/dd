@@ -1,34 +1,26 @@
-# DuckDB function parse_path
+# DuckDB function format
 
-Returns a list of the components (directories and filename) in the
-`path` similarly to Python's `pathlib.parts` function. `separator`
-options: `system`, `both_slash` (default), `forward_slash`, `backslash`.
+Formats a string using the fmt syntax.
 
 ## Usage
 
 ``` r
-parse_path(path, separator)
+format(format)
 ```
 
 ## Arguments
 
-- path, separator:
+- format:
 
   `VARCHAR`
 
 ## Value
 
-`VARCHAR[]`
-
-## Overloads
-
-- `parse_path(path = VARCHAR)`
-
-- `parse_path(path = VARCHAR, separator = VARCHAR)`
+`VARCHAR`
 
 ## SQL examples
 
-    parse_path('path/to/file.csv', 'system')
+    format('Benchmark "{}" took {} seconds', 'CSV', 42)
 
 ## See also
 
@@ -42,7 +34,6 @@ Other string:
 [`concat()`](https://cynkra.github.io/dd/reference/concat.md),
 [`concat_ws()`](https://cynkra.github.io/dd/reference/concat_ws.md),
 [`contains()`](https://cynkra.github.io/dd/reference/contains.md),
-[`format()`](https://cynkra.github.io/dd/reference/format.md),
 [`formatReadableDecimalSize()`](https://cynkra.github.io/dd/reference/formatReadableDecimalSize.md),
 [`format_bytes()`](https://cynkra.github.io/dd/reference/format_bytes.md),
 [`from_base64()`](https://cynkra.github.io/dd/reference/from_base64.md),
@@ -71,6 +62,7 @@ Other string:
 [`parse_dirpath()`](https://cynkra.github.io/dd/reference/parse_dirpath.md),
 [`parse_filename()`](https://cynkra.github.io/dd/reference/parse_filename.md),
 [`parse_formatted_bytes()`](https://cynkra.github.io/dd/reference/parse_formatted_bytes.md),
+[`parse_path()`](https://cynkra.github.io/dd/reference/parse_path.md),
 [`prefix()`](https://cynkra.github.io/dd/reference/prefix.md),
 [`printf()`](https://cynkra.github.io/dd/reference/printf.md),
 [`repeat()`](https://cynkra.github.io/dd/reference/repeat.md),

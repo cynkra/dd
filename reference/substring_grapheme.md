@@ -52,6 +52,7 @@ Other string:
 [`concat()`](https://cynkra.github.io/dd/reference/concat.md),
 [`concat_ws()`](https://cynkra.github.io/dd/reference/concat_ws.md),
 [`contains()`](https://cynkra.github.io/dd/reference/contains.md),
+[`format()`](https://cynkra.github.io/dd/reference/format.md),
 [`formatReadableDecimalSize()`](https://cynkra.github.io/dd/reference/formatReadableDecimalSize.md),
 [`format_bytes()`](https://cynkra.github.io/dd/reference/format_bytes.md),
 [`from_base64()`](https://cynkra.github.io/dd/reference/from_base64.md),

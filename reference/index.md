@@ -22,6 +22,8 @@ Operate on text (`VARCHAR`) values.
   DuckDB function concat_ws
 - [`contains()`](https://cynkra.github.io/dd/reference/contains.md) :
   DuckDB function contains
+- [`format()`](https://cynkra.github.io/dd/reference/format.md) : DuckDB
+  function format
 - [`formatReadableDecimalSize()`](https://cynkra.github.io/dd/reference/formatReadableDecimalSize.md)
   : DuckDB function formatReadableDecimalSize
 - [`format_bytes()`](https://cynkra.github.io/dd/reference/format_bytes.md)
