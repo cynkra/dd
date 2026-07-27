@@ -2,6 +2,7 @@
 % Please edit documentation in R/duckdb-funs.R
 \name{list_distance}
 \alias{list_distance}
+\alias{<->}
 \title{DuckDB function list_distance}
 \usage{
 list_distance(list1, list2)

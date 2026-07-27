@@ -745,15 +745,8 @@ funs <-
       examples
     )
   ) |>
-  # Omit `<->` (an alias of the documented `list_distance`). R CMD check's
-  # replacement-function check (`tools:::checkReplaceFuns`) treats every
-  # namespace object whose name *contains* the substring `<-` as a replacement
-  # function and demands its last formal be named `value` -- exported or not.
-  # `<->` takes `(list1, list2)`, so it always trips that check, and there is no
-  # non-misleading signature that would satisfy it. Its canonical page
-  # (`list_distance`) already documents the operation, so nothing user-facing is
-  # lost by dropping the `<->` stub.
-  filter_print(!(function_name %in% c("<->"))) |>
+  # NOTE: `<->` is kept here but emitted as documentation only; see `alias_only`
+  # below.
   # Drop DuckDB's internal decompression helpers: they are implementation
   # details, not user-facing functions.
   filter_print(!stringr::str_detect(function_name, "^__internal")) |>
@@ -810,6 +803,26 @@ funs <-
 # other base-shadowing stubs (`abs()`, `sqrt()`, ...) stay exported as before.
 no_export <- c("format", "+", "-", "length")
 
+# DuckDB names that get a help page but no R function behind it. R CMD check's
+# replacement-function check (`tools:::checkReplaceFuns`) treats every *namespace
+# object* whose name contains the substring `<-` as a replacement function and
+# demands its last formal be named `value`. It inspects the whole namespace, so
+# unlike `no_export` above, withholding the export does not help, and `<->`
+# (list distance) takes `(list1, list2)` -- no honest signature satisfies it.
+#
+# An Rd `\alias{}`, though, is documentation, not an object. Documenting the name
+# on its alias group's page makes `?`<->`` resolve to the same topic as
+# `list_distance()` while nothing of that name ever enters the namespace for the
+# check to find. Such names are correspondingly absent from `NAMESPACE` and from
+# the `dd` list, both of which can only hold real objects.
+no_implement <- c("<->")
+
+# Such a name can only ride along on a page some *other* member of its alias
+# group owns, because it emits no primary block of its own. `pick_rep()` prefers
+# alphanumeric names, so this holds today; assert it so a future addition fails
+# loudly here instead of silently producing an `@rdname` to a missing topic.
+stopifnot(!any(funs$rep_name %in% no_implement))
+
 code <-
   funs |>
   mutate(
@@ -846,7 +859,23 @@ code <-
 
     )"
     ),
-    roxy = if_else(is_primary, primary_roxy, alias_roxy)
+    # Unimplemented names document the name and nothing else: a `NULL` block
+    # named after the function and routed to the group's page, so roxygen2
+    # records an `\alias{{}}` there without an object being defined. (roxygen2
+    # requires `@name` on a `NULL` block; `@rdname` keeps it on the same page.)
+    no_impl_roxy = glue(
+      r"(
+    #' @rdname {rd_name}
+    #' @name {function_name}
+    NULL
+
+    )"
+    ),
+    roxy = case_when(
+      function_name %in% no_implement ~ no_impl_roxy,
+      is_primary ~ primary_roxy,
+      .default = alias_roxy
+    )
   ) |>
   pull(roxy)
 
@@ -874,7 +903,12 @@ code <- c(
 
 writeLines(code, "R/duckdb-funs.R")
 
-dd_names <- sort(funs$function_name[parsed], method = "radix")
+# The `dd` list can only hold real objects, so the documentation-only names are
+# excluded.
+dd_names <- sort(
+  setdiff(funs$function_name[parsed], no_implement),
+  method = "radix"
+)
 
 dd_code <- glue(
   r"(
