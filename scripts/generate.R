@@ -425,6 +425,14 @@ rdize_function_name <- function(x) {
 
 is_alnum <- function(x) grepl("^[A-Za-z0-9_]+$", x)
 
+# Is `x` the name of an object in base R? Used to keep the help topic for an
+# alias group off a name that collides with base (e.g. document the
+# `length`/`len` group under `len`, since `?length` would otherwise also
+# resolve to `base::length()`).
+masks_base <- function(x) {
+  vapply(x, exists, logical(1), envir = baseenv(), inherits = FALSE)
+}
+
 # Pick the representative function for an alias group. DuckDB reports aliases via
 # the `alias_of` column, so a group is the canonical function plus everything
 # pointing at it. We document the group on a single page named after a short,
@@ -433,6 +441,16 @@ is_alnum <- function(x) grepl("^[A-Za-z0-9_]+$", x)
 # the .Rd file name readable even when the canonical is an operator (e.g. `**`).
 pick_rep <- function(names, canonical) {
   alnum <- names[is_alnum(names)]
+  # Prefer a name that does not collide with a base R object, so the help topic
+  # is unambiguous; fall back to the previous behaviour when the whole group
+  # collides.
+  free <- alnum[!masks_base(alnum)]
+  if (canonical %in% free) {
+    return(canonical)
+  }
+  if (length(free) > 0) {
+    return(free[order(nchar(free), free)][[1]])
+  }
   if (canonical %in% alnum) {
     return(canonical)
   }
@@ -727,21 +745,18 @@ funs <-
       examples
     )
   ) |>
-  # FIXME: Irregular
-  filter_print(!(function_name %in% c("struct_extract_at"))) |>
-  # FIXME: Example too long
-  filter_print(!(function_name %in% c("remap_struct"))) |>
-  # FIXME: Usage too long
-  filter_print(!(function_name %in% c("sniff_csv", "enable_logging"))) |>
-  # FIXME: Breaks devtools::document()
-  filter_print(!(function_name %in% c("length"))) |>
-  # FIXME: Breaks R CMD check
-  filter_print(!(function_name %in% c("<->", "+"))) |>
-  # FIXME: No documentation generated yet
-  filter_print(
-    !(function_name %in% c("-")) &
-      !stringr::str_detect(function_name, "^__internal")
-  ) |>
+  # Omit `<->` (an alias of the documented `list_distance`). R CMD check's
+  # replacement-function check (`tools:::checkReplaceFuns`) treats every
+  # namespace object whose name *contains* the substring `<-` as a replacement
+  # function and demands its last formal be named `value` -- exported or not.
+  # `<->` takes `(list1, list2)`, so it always trips that check, and there is no
+  # non-misleading signature that would satisfy it. Its canonical page
+  # (`list_distance`) already documents the operation, so nothing user-facing is
+  # lost by dropping the `<->` stub.
+  filter_print(!(function_name %in% c("<->"))) |>
+  # Drop DuckDB's internal decompression helpers: they are implementation
+  # details, not user-facing functions.
+  filter_print(!stringr::str_detect(function_name, "^__internal")) |>
   arrange(function_name)
 
 # Resolve alias groups from the catalog's `alias_of` column *and* the DuckDB
@@ -782,16 +797,18 @@ funs <-
   # from the canonical (alphanumeric) member rather than an operator alias.
   arrange(rd_name, desc(is_primary), function_name)
 
-# A handful of DuckDB functions share a name with a base R function that R's own
-# machinery calls while the package is attached (e.g. R CMD check's example
-# runner evaluates `format(x, digits = 7)` when timing examples). Exporting a
-# stub for those names shadows the base function on the search path and makes
-# that machinery dispatch to the stub, which errors -- breaking R CMD check.
+# A handful of DuckDB functions share a name with a base R function that tooling
+# calls while the package is attached: R CMD check's example runner evaluates
+# `format(x, digits = 7)` and `proc.time() - ...` when timing examples, and
+# pkgdown's site build reaches `length()` through `purrr::pluck()` while
+# rendering the navbar. Exporting a stub for those names shadows the base
+# function on the search path and makes that tooling dispatch to the stub, which
+# errors -- breaking R CMD check and the pkgdown build.
 # Document them (so they still get a help page and appear in `dd`) but do not
 # `@export` them, so the base functions keep working when `library(dd)` is
 # attached. This is only needed for names base R itself relies on; the many
 # other base-shadowing stubs (`abs()`, `sqrt()`, ...) stay exported as before.
-no_export <- c("format")
+no_export <- c("format", "+", "-", "length")
 
 code <-
   funs |>
