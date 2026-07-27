@@ -34,6 +34,7 @@ Other string:
 \code{\link[=chr]{chr()}},
 \code{\link[=concat]{concat()}},
 \code{\link[=contains]{contains()}},
+\code{\link[=format]{format()}},
 \code{\link[=formatReadableDecimalSize]{formatReadableDecimalSize()}},
 \code{\link[=format_bytes]{format_bytes()}},
 \code{\link[=from_base64]{from_base64()}},
