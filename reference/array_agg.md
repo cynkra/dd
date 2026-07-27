@@ -1,11 +1,11 @@
-# DuckDB function list
+# DuckDB function array_agg
 
 Returns a LIST containing all the values of a column.
 
 ## Usage
 
 ``` r
-list(arg)
+array_agg(arg)
 ```
 
 ## Arguments
@@ -20,4 +20,5 @@ list(arg)
 
 ## SQL examples
 
+    array_agg(A)
     list(A)

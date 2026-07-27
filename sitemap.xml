@@ -25,6 +25,7 @@
 <url><loc>https://cynkra.github.io/dd/reference/arg_min.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/arg_min_null.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/arg_min_nulls_last.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/array_agg.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/array_append.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/array_cosine_distance.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/array_cosine_similarity.html</loc></url>
@@ -168,6 +169,7 @@
 <url><loc>https://cynkra.github.io/dd/reference/duckdb_variables.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/duckdb_views.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/enable_checkpoint_on_shutdown.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/enable_logging.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/enable_object_cache.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/enable_optimizer.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/enable_print_progress_bar.html</loc></url>
@@ -279,7 +281,6 @@
 <url><loc>https://cynkra.github.io/dd/reference/levenshtein.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/lgamma.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/like_escape.html</loc></url>
-<url><loc>https://cynkra.github.io/dd/reference/list.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/list_aggregate.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/list_any_value.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/list_append.html</loc></url>
@@ -483,6 +484,7 @@
 <url><loc>https://cynkra.github.io/dd/reference/regr_sxx.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/regr_sxy.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/regr_syy.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/remap_struct.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/repeat.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/repeat_row.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/replace.html</loc></url>
@@ -518,6 +520,7 @@
 <url><loc>https://cynkra.github.io/dd/reference/skewness.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/slash.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/sleep_ms.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/sniff_csv.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/split_part.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/sqrt.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/st_astext.html</loc></url>
@@ -540,6 +543,7 @@
 <url><loc>https://cynkra.github.io/dd/reference/struct_concat.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/struct_contains.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/struct_extract.html</loc></url>
+<url><loc>https://cynkra.github.io/dd/reference/struct_extract_at.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/struct_insert.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/struct_keys.html</loc></url>
 <url><loc>https://cynkra.github.io/dd/reference/struct_pack.html</loc></url>

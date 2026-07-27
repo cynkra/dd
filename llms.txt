@@ -516,6 +516,8 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function arg_min_null
 - [`arg_min_nulls_last()`](https://cynkra.github.io/dd/reference/arg_min_nulls_last.md)
   : DuckDB function arg_min_nulls_last
+- [`array_agg()`](https://cynkra.github.io/dd/reference/array_agg.md) :
+  DuckDB function array_agg
 - [`array_append()`](https://cynkra.github.io/dd/reference/array_append.md)
   : DuckDB function array_append
 - [`array_extract()`](https://cynkra.github.io/dd/reference/array_extract.md)
@@ -765,6 +767,8 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function duckdb_views
 - [`enable_checkpoint_on_shutdown()`](https://cynkra.github.io/dd/reference/enable_checkpoint_on_shutdown.md)
   : DuckDB function enable_checkpoint_on_shutdown
+- [`enable_logging()`](https://cynkra.github.io/dd/reference/enable_logging.md)
+  : DuckDB function enable_logging
 - [`enable_object_cache()`](https://cynkra.github.io/dd/reference/enable_object_cache.md)
   : DuckDB function enable_object_cache
 - [`enable_optimizer()`](https://cynkra.github.io/dd/reference/enable_optimizer.md)
@@ -943,8 +947,6 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function \<\<
 - [`lgamma()`](https://cynkra.github.io/dd/reference/lgamma.md) : DuckDB
   function lgamma
-- [`list()`](https://cynkra.github.io/dd/reference/list.md) : DuckDB
-  function list
 - [`list_any_value()`](https://cynkra.github.io/dd/reference/list_any_value.md)
   : DuckDB function list_any_value
 - [`list_append()`](https://cynkra.github.io/dd/reference/list_append.md)
@@ -1253,6 +1255,8 @@ Functions that DuckDB does not assign to a category.
   DuckDB function regr_sxy
 - [`regr_syy()`](https://cynkra.github.io/dd/reference/regr_syy.md) :
   DuckDB function regr_syy
+- [`remap_struct()`](https://cynkra.github.io/dd/reference/remap_struct.md)
+  : DuckDB function remap_struct
 - [`repeat_row()`](https://cynkra.github.io/dd/reference/repeat_row.md)
   : DuckDB function repeat_row
 - [`replace_type()`](https://cynkra.github.io/dd/reference/replace_type.md)
@@ -1305,6 +1309,8 @@ Functions that DuckDB does not assign to a category.
   function /
 - [`sleep_ms()`](https://cynkra.github.io/dd/reference/sleep_ms.md) :
   DuckDB function sleep_ms
+- [`sniff_csv()`](https://cynkra.github.io/dd/reference/sniff_csv.md) :
+  DuckDB function sniff_csv
 - [`split_part()`](https://cynkra.github.io/dd/reference/split_part.md)
   : DuckDB function split_part
 - [`sqrt()`](https://cynkra.github.io/dd/reference/sqrt.md) : DuckDB
@@ -1331,6 +1337,8 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function struct_contains
 - [`struct_extract()`](https://cynkra.github.io/dd/reference/struct_extract.md)
   : DuckDB function struct_extract
+- [`struct_extract_at()`](https://cynkra.github.io/dd/reference/struct_extract_at.md)
+  : DuckDB function struct_extract_at
 - [`struct_insert()`](https://cynkra.github.io/dd/reference/struct_insert.md)
   : DuckDB function struct_insert
 - [`struct_keys()`](https://cynkra.github.io/dd/reference/struct_keys.md)
