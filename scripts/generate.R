@@ -33,6 +33,94 @@ duckdb_version <- sub(
   DBI::dbGetQuery(con, "PRAGMA version")$library_version
 )
 
+# Identity of a single function overload, used to attribute it to the extension
+# that introduced it. `duckdb_functions()` has no "extension" column, so the
+# only way to tell where an overload comes from is to observe when it appears.
+overload_key <- function(
+  function_name,
+  function_type,
+  parameters,
+  parameter_types
+) {
+  collapse <- function(x) vapply(x, function(e) paste(e, collapse = ","), "")
+  paste(
+    function_name,
+    function_type,
+    collapse(parameters),
+    collapse(parameter_types),
+    # A separator that cannot occur in a DuckDB name, type or function type.
+    sep = "|@|"
+  )
+}
+
+# Load DuckDB's core extensions so their functions are documented alongside the
+# built-in ones. `duckdb_functions()` only lists an extension's functions once
+# that extension is loaded, and a bare connection has just the statically
+# linked ones (`core_functions`, `parquet`). DuckDB's *core* extensions are
+# those served from its default ("core") repository at extensions.duckdb.org;
+# we install and load every one `duckdb_extensions()` knows about, pinning the
+# source to `core` so community extensions are never pulled in. Extensions that
+# cannot register offline (they need an external service or driver, e.g.
+# `motherduck`, `odbc_scanner`) fail the LOAD and are skipped.
+#
+# Extensions are loaded one at a time and the catalog is diffed after each, so
+# every overload that appears is attributed to the extension that introduced
+# it. Returns that attribution as a named vector (overload key -> extension);
+# overloads already present on a bare connection are `NA` (built-in, i.e. the
+# DuckDB core plus the statically linked `core_functions`/`parquet`).
+load_core_extensions <- function(con) {
+  catalog_keys <- function() {
+    d <- DBI::dbGetQuery(
+      con,
+      "SELECT function_name, function_type, parameters, parameter_types FROM duckdb_functions()"
+    )
+    unique(overload_key(
+      d$function_name,
+      d$function_type,
+      d$parameters,
+      d$parameter_types
+    ))
+  }
+
+  ext <- DBI::dbGetQuery(con, "FROM duckdb_extensions()")
+  # Statically linked extensions are already available; the rest we fetch.
+  todo <- sort(ext$extension_name[ext$install_mode != "STATICALLY_LINKED"])
+
+  seen <- catalog_keys()
+  extension_of <- setNames(rep(NA_character_, length(seen)), seen)
+  loaded <- character()
+  for (e in todo) {
+    ok <- tryCatch(
+      {
+        DBI::dbExecute(con, sprintf("INSTALL %s FROM core", e))
+        DBI::dbExecute(con, sprintf("LOAD %s", e))
+        TRUE
+      },
+      error = function(err) FALSE
+    )
+    if (!ok) {
+      next
+    }
+    loaded <- c(loaded, e)
+    now <- catalog_keys()
+    new <- setdiff(now, seen)
+    if (length(new) > 0) {
+      extension_of[new] <- e
+    }
+    seen <- now
+  }
+  cli::cli_inform(c(
+    "Loaded {length(loaded)} core extension{?s}.",
+    i = "Loaded: {loaded}",
+    i = if (length(setdiff(todo, loaded)) > 0) {
+      "Skipped (could not load offline): {setdiff(todo, loaded)}"
+    },
+    i = "Attributed {sum(!is.na(extension_of))} overload{?s} to an extension."
+  ))
+  extension_of
+}
+extension_of <- load_core_extensions(con)
+
 filter_print <- function(.data, expr) {
   quo <- rlang::enquo(expr)
   out <-
@@ -172,6 +260,33 @@ recover_param_names <- function(parameters, parameter_types, json_overloads) {
   parameters
 }
 
+# roxygen2 markdown turns bare bracketed prose such as `[latitude, longitude]`
+# into a `\link{}` cross-reference to a non-existent topic (an R CMD check
+# WARNING). Escape brackets in prose that are not part of a real inline link
+# (`[text](url)` is left untouched). Bracketed text inside an inline code span
+# (backticks) — e.g. an array type like `T[]` — is left untouched too, since
+# Markdown does not create links there and escaping would corrupt it. Applied
+# only to description prose, never to the generated `\code{}` signatures.
+escape_bare_brackets <- function(x) {
+  escape_outside_code <- function(s) {
+    if (is.na(s)) {
+      return(s)
+    }
+    # Split into inline code spans (`...`) and the runs between them; only the
+    # non-code runs are eligible for escaping.
+    parts <- regmatches(s, gregexpr("`[^`]*`|[^`]+|`", s))[[1]]
+    in_code <- startsWith(parts, "`") & endsWith(parts, "`") & nchar(parts) >= 2L
+    parts[!in_code] <- gsub(
+      "\\[([^][]*)\\](?!\\()",
+      "\\\\[\\1\\\\]",
+      parts[!in_code],
+      perl = TRUE
+    )
+    paste0(parts, collapse = "")
+  }
+  vapply(x, escape_outside_code, character(1), USE.NAMES = FALSE)
+}
+
 usage_and_params <- function(
   function_name,
   parameters,
@@ -179,6 +294,7 @@ usage_and_params <- function(
   description,
   macro_definition,
   examples,
+  extension = NULL,
   json_description = NULL,
   json_examples = NULL,
   json_categories = NULL,
@@ -262,12 +378,21 @@ usage_and_params <- function(
     )
 
   # Representative argument list for the \usage and stub: the most frequent
-  # combination of argument names across overloads (tie-break: more arguments,
-  # then first appearance). Every function gets a usage, for consistent display.
+  # combination of argument names across overloads, then more arguments, then
+  # *real* argument names over DuckDB's placeholder `col0`, `col1`, ... ones,
+  # then first appearance. Every function gets a usage, for consistent display.
+  #
+  # The placeholder key only breaks ties between otherwise equally good
+  # candidates: without it, an extension adding one placeholder-named overload
+  # can tie the vote and flip the documented signature to `col0, col1, col2`
+  # (as `icu` does for `generate_series()`/`range()`). It must stay *below*
+  # frequency and arity, though -- ranking it higher would favour short
+  # all-real-name overloads and drop arguments (`add(col0, col1)` -> `add()`).
   name_keys <- map_chr(parameters, ~ paste(.x, collapse = ","))
   rep_idx <- order(
     -ave(seq_along(name_keys), name_keys, FUN = length),
     -lengths(parameters),
+    map_lgl(parameters, ~ any(is_generic_name(.x))),
     seq_along(name_keys)
   )[[1]]
   rep_names <- parameters[[rep_idx]]
@@ -344,7 +469,13 @@ usage_and_params <- function(
         sigs = paste0("\\code{", sig, "}", collapse = ", ")
       ) |>
       arrange(desc == "(Description missing.)")
-    items <- paste0("#' \\item ", grouped$sigs, ": ", grouped$desc, "\n")
+    items <- paste0(
+      "#' \\item ",
+      grouped$sigs,
+      ": ",
+      escape_bare_brackets(grouped$desc),
+      "\n"
+    )
     description <- paste0(
       "#' \\itemize{\n",
       paste0(items, collapse = ""),
@@ -365,9 +496,16 @@ usage_and_params <- function(
       )
     } else {
       description <- gsub("[.]*$", ".", description)
+      description <- escape_bare_brackets(description)
       description <- paste0("#' ", description, collapse = "\n#'\n")
     }
   }
+
+  # A DuckDB description may span several lines (markdown paragraphs, fenced
+  # code blocks, matrix diagrams — e.g. `ST_Affine`). Prefix every continuation
+  # line with `#' ` so it stays inside the roxygen comment; otherwise it escapes
+  # as top-level code and the stub fails to parse or load.
+  description <- gsub("\n(?!#')", "\n#' ", description, perl = TRUE)
 
   examples <- na.omit(unique(unlist(examples)))
   examples <- examples[examples != ""]
@@ -375,15 +513,104 @@ usage_and_params <- function(
     json_ex <- na.omit(unique(unlist(json_examples)))
     examples <- unique(c(examples, json_ex[json_ex != ""]))
   }
+  # Many examples (especially from extensions like `spatial`) are multi-line: a
+  # SQL query followed by its expected result, either after a `----` separator
+  # or as a box-drawing table appended directly to the query. The result is
+  # worth keeping, but verbatim it would put Unicode box art into the Rd and
+  # make the block invalid SQL. So keep it, translated: box-drawing characters
+  # become their ASCII equivalents (`-`, `|`, `+`) and every result line is
+  # commented out with `--`, leaving the whole example copy-pasteable SQL.
+
+  # The "Box Drawing" block, U+2500-U+257F, is what DuckDB's CLI output uses.
+  # Map the plain horizontals and verticals to `-` and `|`; everything else in
+  # the block is a corner, tee or cross, which becomes `+`.
+  asciify_box <- function(x) {
+    x <- gsub("[\u2500\u2501\u2550]", "-", x)
+    x <- gsub("[\u2502\u2503\u2551]", "|", x)
+    gsub("[\u2500-\u257f]", "+", x)
+  }
+
+  is_separator <- function(x) grepl("^-{4,}$", trimws(x))
+
+  format_example <- function(ex) {
+    lines <- trimws(strsplit(ex, "\n", fixed = TRUE)[[1]], which = "right")
+    starts_result <- is_separator(lines) |
+      grepl("^[\u2500-\u257f]", trimws(lines))
+    at <- which(starts_result)
+    if (length(at) == 0) {
+      return(paste(lines, collapse = "\n"))
+    }
+    query <- lines[seq_len(at[[1]] - 1)]
+    # Drop the bare `----` separator; it carries no information once the result
+    # is commented out.
+    result <- lines[seq(at[[1]], length(lines))]
+    result <- result[!is_separator(result)]
+    result <- paste0("-- ", asciify_box(result))
+    paste(c(query, result), collapse = "\n")
+  }
+  examples <- trimws(vapply(examples, format_example, character(1)))
+  examples <- unique(examples[examples != ""])
   if (length(examples) > 0) {
+    # Prefix *every* line with `#' `; otherwise the continuation lines of a
+    # multi-line example escape the roxygen comment and become top-level code
+    # (e.g. a bare `POINT` that fails to load).
+    body <- gsub("\n", "\n#' ", examples)
     examples <- paste0(
       "#' @section SQL examples:\n",
       "#' ```\n",
-      paste0("#' ", examples, "\n", collapse = ""),
+      paste0("#' ", body, "\n", collapse = ""),
       "#' ```\n"
     )
   } else {
     examples <- ""
+  }
+
+  # State which DuckDB extension provides the function, so a reader knows what
+  # to `LOAD` before using it. Functions available on a bare connection (the
+  # DuckDB core plus the statically linked `core_functions`/`parquet`) get no
+  # section at all — the note is only interesting when an extension is needed.
+  # A handful of functions are provided by *both* the core and an extension, or
+  # by several extensions (e.g. `st_astext` by the core and `spatial`;
+  # `range` by the core and `icu`), and there the attribution is listed per
+  # overload rather than for the function as a whole.
+  provided_doc <- ""
+  if (length(extension) == length(signatures)) {
+    provided <-
+      tibble(sig = signatures, ext = extension) |>
+      summarize(
+        .by = sig,
+        ext = paste0(sort(unique(na.omit(ext))), collapse = ", ")
+      )
+    exts <- sort(unique(na.omit(extension)))
+    if (length(exts) == 1 && !any(is.na(extension))) {
+      # Every overload comes from the same single extension.
+      provided_doc <- paste0(
+        "#' @section Provided by:\n",
+        "#' The \\code{",
+        exts,
+        "} extension (\\code{LOAD ",
+        exts,
+        ";}).\n"
+      )
+    } else if (length(exts) > 0) {
+      items <- paste0(
+        "#' \\item \\code{",
+        provided$sig,
+        "}: ",
+        if_else(
+          provided$ext == "",
+          "built in",
+          paste0("\\code{", provided$ext, "}")
+        ),
+        "\n"
+      )
+      provided_doc <- paste0(
+        "#' @section Provided by:\n",
+        "#' \\itemize{\n",
+        paste0(items, collapse = ""),
+        "#' }\n"
+      )
+    }
   }
 
   # In "full" mode, expose the JSON category groupings as roxygen2 `@family`
@@ -402,6 +629,7 @@ usage_and_params <- function(
   tibble(
     usage_doc,
     overloads_doc,
+    provided_doc,
     param_doc,
     signature,
     types = list(params$type),
@@ -412,6 +640,12 @@ usage_and_params <- function(
 }
 
 rdize_function_name <- function(x) {
+  # roxygen2 derives the .Rd file name from the topic name and drops `-`, so the
+  # JSON extraction operators `->`/`->>` would land in the same file as the
+  # bitwise shifts `>`/`>>` and be merged into one (wrong) help page. Spell the
+  # arrow out to keep them apart. The operator itself stays reachable, because
+  # roxygen2 records it as an `\alias{}`.
+  x <- gsub("^->", "arrow->", x)
   x <- gsub("^!", "not-", x)
   x <- gsub("!", "-not-", x)
   x <- gsub("^[|]", "or-", x)
@@ -714,6 +948,13 @@ funs <-
   # FIXME: Why is this called `has_side_effects`? Called "deterministic" elsewhere.
   filter_print(internal) |>
   select(-internal) |>
+  # Attribute each overload to the extension that introduced it (NA = built-in),
+  # recorded while the extensions were loaded above.
+  mutate(
+    extension = unname(extension_of[
+      overload_key(function_name, function_type, parameters, parameter_types)
+    ])
+  ) |>
   left_join(json_meta, by = "function_name") |>
   summarize(
     .by = function_name,
@@ -726,6 +967,7 @@ funs <-
       description,
       macro_definition,
       examples,
+      extension = extension,
       json_description = first(json_description),
       json_examples = first(json_examples),
       json_categories = first(json_categories),
@@ -747,9 +989,11 @@ funs <-
   ) |>
   # NOTE: `<->` is kept here but emitted as documentation only; see `alias_only`
   # below.
-  # Drop DuckDB's internal decompression helpers: they are implementation
-  # details, not user-facing functions.
-  filter_print(!stringr::str_detect(function_name, "^__internal")) |>
+  # Drop double-underscore internal helpers: DuckDB's own `__internal*`
+  # decompression helpers and extension internals such as the `__lance_*`
+  # table functions. These are implementation details, not user-facing
+  # functions.
+  filter_print(!stringr::str_detect(function_name, "^__")) |>
   arrange(function_name)
 
 # Resolve alias groups from the catalog's `alias_of` column *and* the DuckDB
@@ -842,7 +1086,7 @@ code <-
     {usage_doc}
     {param_doc}
     #' @return {if_else(return_type == "", "Unspecified.", paste0("`", return_type, "`"))}
-    {export_doc}{overloads_doc}{family_doc}{examples}{tibble:::tick_if_needed(function_name)} <- function({signature}) {{
+    {export_doc}{overloads_doc}{provided_doc}{family_doc}{examples}{tibble:::tick_if_needed(function_name)} <- function({signature}) {{
       stop("DuckDB function {function_name}() is not available in R.")
     }}
 

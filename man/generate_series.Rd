@@ -26,11 +26,28 @@ Creates a list of values between \code{start} and \code{stop} - the stop paramet
 \item \code{generate_series(col0 = BIGINT, col1 = BIGINT)}
 \item \code{generate_series(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT)}
 \item \code{generate_series(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)}
+\item \code{generate_series(col0 = `TIMESTAMP WITH TIME ZONE`, col1 = `TIMESTAMP WITH TIME ZONE`, col2 = INTERVAL)}
 \item \code{generate_series(start = BIGINT)}
 \item \code{generate_series(start = BIGINT, stop = BIGINT)}
 \item \code{generate_series(start = BIGINT, stop = BIGINT, step = BIGINT)}
 \item \code{generate_series(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}
 \item \code{generate_series(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}
+}
+}
+
+\section{Provided by}{
+
+\itemize{
+\item \code{generate_series(col0 = BIGINT)}: built in
+\item \code{generate_series(col0 = BIGINT, col1 = BIGINT)}: built in
+\item \code{generate_series(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT)}: built in
+\item \code{generate_series(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)}: built in
+\item \code{generate_series(col0 = `TIMESTAMP WITH TIME ZONE`, col1 = `TIMESTAMP WITH TIME ZONE`, col2 = INTERVAL)}: \code{icu}
+\item \code{generate_series(start = BIGINT)}: built in
+\item \code{generate_series(start = BIGINT, stop = BIGINT)}: built in
+\item \code{generate_series(start = BIGINT, stop = BIGINT, step = BIGINT)}: built in
+\item \code{generate_series(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)}: built in
+\item \code{generate_series(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL)}: built in
 }
 }
 
