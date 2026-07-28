@@ -108,7 +108,7 @@
 <h2 id="important-notes">Important Notes<a class="anchor" aria-label="anchor" href="#important-notes"></a></h2>
 <ul><li>The main development workflow centers around <code>scripts/generate.R</code> - this script should be run after any changes to the generation logic</li>
 <li>Generated files should not be edited manually as they will be overwritten</li>
-<li>The package includes extensive filtering logic for problematic DuckDB functions that break R documentation or checks</li>
+<li>Edge-case DuckDB functions are handled by named mechanisms in <code>scripts/generate.R</code>: internal helpers (<code>__internal*</code>) are dropped, <code>no_export</code> documents names that base R relies on (<code>format</code>, <code>+</code>, <code>-</code>, <code>length</code>) without exporting them, and <code>no_object</code> documents names that cannot exist as R objects (<code>&lt;-&gt;</code>) as Rd aliases, mapping their <code>dd</code> list entry to the canonical function</li>
 <li>CI runs comprehensive checks across multiple R versions and dependency configurations</li>
 </ul></div>
 </div>

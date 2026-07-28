@@ -70,7 +70,11 @@ The package uses a sophisticated code generation system in
   this script should be run after any changes to the generation logic
 - Generated files should not be edited manually as they will be
   overwritten
-- The package includes extensive filtering logic for problematic DuckDB
-  functions that break R documentation or checks
+- Edge-case DuckDB functions are handled by named mechanisms in
+  `scripts/generate.R`: internal helpers (`__internal*`) are dropped,
+  `no_export` documents names that base R relies on (`format`, `+`, `-`,
+  `length`) without exporting them, and `no_object` documents names that
+  cannot exist as R objects (`<->`) as Rd aliases, mapping their `dd`
+  list entry to the canonical function
 - CI runs comprehensive checks across multiple R versions and dependency
   configurations
