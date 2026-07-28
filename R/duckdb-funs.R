@@ -13759,6 +13759,10 @@ list_distance <- function(list1 = `FLOAT[] | DOUBLE[]`, list2 = `FLOAT[] | DOUBL
   stop("DuckDB function list_distance() is not available in R.")
 }
 
+#' @rdname list_distance
+#' @name <->
+NULL
+
 #' DuckDB function list_distinct
 #'
 #' @description
