@@ -16,7 +16,9 @@ Method: all 30 pages under `docs/current/sql/functions/` were parsed into
 structured entries (594 detail blocks, 830 summary-table rows),
 joined against the catalog (901 distinct `main`-schema function names),
 the JSON metadata (436 flattened entries) and the `dd` package
-(628 generated stubs, 745 documented names including aliases).
+(1103 generated stubs, 1221 documented names including aliases,
+after [#28](https://github.com/cynkra/dd/pull/28) added the functions of
+DuckDB's core extensions; section 5 records the before/after).
 Every runnable inline example (461 of them) was executed on DuckDB 1.5.5
 with the same rendering the site generator uses
 (`SELECT ⟨example⟩::VARCHAR`, time zone `America/Los_Angeles`)
@@ -222,39 +224,68 @@ which would fix `dd` and the generated pages at the same time:
   (see `proposals/duckdb-argument-descriptions.md` for the same argument
   applied to parameters).
 
-## 5. Where `dd` is behind the website
+## 5. `dd` vs. the website: resolved by dd#28, and what it surfaced
 
-`dd` is generated through the R `duckdb` package,
-which does not bundle the `icu` and `json` extensions,
-so functions the website documents (and the Python engine exposes) are absent:
+An earlier revision of this note listed the ICU and JSON extension functions
+(`today`, `current_date`, `make_timestamptz`, `get_current_time`,
+`icu_sort_key`, the `->>` operator, ~40 `json_*` functions, …)
+as missing from `dd`,
+because the R `duckdb` package does not bundle those extensions.
+[dd#28](https://github.com/cynkra/dd/pull/28) closed this:
+`scripts/generate.R` now installs and loads every core extension
+before snapshotting `duckdb_functions()`,
+and attributes each function to the extension that provides it.
+`dd` grew from 745 to 1221 documented names
+(+476 functions across 23 core extensions:
+spatial 164, icu 144, json 43, ducklake 22, iceberg 16, delta 11, …).
 
-* **ICU**: `today`, `current_date`, `get_current_time`,
-  `current_localtime`, `current_localtimestamp`, `make_timestamptz`,
-  `icu_sort_key`, `icu_calendar_names`, `pg_timezone_names`
-  (all defined in `extension/icu` as of 1.5),
-  plus the 135 `icu_collate_*` entries.
-  The date/time pages on the website document `today()`,
-  `current_date`, `make_timestamptz` etc. prominently;
-  `?dd::today` does not exist.
-* **JSON**: the `->>` operator and ~40 `json_*` scalar/aggregate/macro functions
-  plus the `read_json*` table functions.
-* Possible fix in `scripts/generate.R`:
-  `INSTALL icu; LOAD icu; INSTALL json; LOAD json;`
-  before snapshotting `duckdb_functions()`
-  (both extensions are distributed for the R platform),
-  keeping the same filters afterwards.
-* Expected non-gaps: the website documents parser-level constructs
-  that have no catalog entry and therefore cannot appear in `dd`:
-  `coalesce`, `if`, `ifnull`, `extract`, `grouping`,
-  and the CLI-only `getenv`.
+After the change, the direction of the comparison flips:
+
+* The only names on the website's function pages that `dd` does not document
+  are the expected parser/CLI constructs with no catalog entry:
+  `coalesce`, `if`, `ifnull`, `extract`, `grouping`, `getenv`.
+  Every catalog-backed function on those pages now has a `dd` page.
+* Of the bare-engine catalog (901 `main`-schema names),
+  the only ones absent from `dd` are the Python-binding internals
+  `pandas_scan` and `python_map_function` (correctly absent from R)
+  and the deliberately dropped `__internal*` helpers.
+
+Sweeping *all* of `docs/current/` (not just the function pages)
+for the 1220 names `dd` now documents surfaces new website-side gaps —
+user-facing extension functions with no mention anywhere on duckdb.org:
+
+* **spatial** (`core_extensions/spatial/functions.md` omits them):
+  `ST_ClosestPoint`, `ST_CoverageClean`, `ST_Expand`, `ST_InteriorRingN`,
+  `ST_Snap`, `ST_SymDifference`,
+  plus `shapefile_meta` and `pragma_rtree_index_info`.
+* **json**: `json_pretty`, `json_serialize_plan` (also noted in section 2).
+* **sqlite_scanner**: `sqlite_query`
+  (the page documents attaching and `sqlite_scan`, not the query passthrough).
+* **ducklake**: 14 maintenance/table functions
+  (`ducklake_add_data_files`, `ducklake_commit`, `ducklake_list_files`, …) —
+  partly by design, since DuckLake documents itself on
+  [ducklake.select](https://ducklake.select),
+  but duckdb.org's DuckLake page does not say so per function.
+* Classes reasonably absent from the website, listed for completeness:
+  the 135 `icu_collate_*` entries backing `COLLATE`,
+  the `pg_catalog` compatibility macros
+  (`has_*_privilege`, `pg_*_is_visible`, `format_type`, …),
+  and extension debug/test helpers
+  (`delta_filter_pushdown_log`, `check_peg_parser`,
+  `mysql_debug_execution_plan`, the `quack` demo extension, …).
+  That last class raises a `dd`-side open question:
+  whether such debug helpers should be filtered out of `dd`
+  the way `__internal*` already is.
 
 ## 6. Numbers at a glance
 
 | Comparison | Count |
 |---|---|
 | Catalog names (`main` schema, 1.5.5 + icu + json) | 901 |
-| — documented in `dd` | 694 |
-| — missing from `dd` (icu/json extensions, see §5) | 188 |
+| — documented in `dd` (after dd#28) | 880 |
+| — missing from `dd` (Python-binding internals, `__internal*`) | 21 |
+| Names documented in `dd` (incl. 23 core extensions) | 1221 |
+| — with no mention anywhere under `docs/current/` (§5) | 257 |
 | Scalar/aggregate/macro names expected on function pages | 755 |
 | — present on `sql/functions/` pages | 496 |
 | — genuinely undocumented anywhere (§2) | ≈ 30 |
@@ -275,8 +306,11 @@ so functions the website documents (and the Python engine exposes) are absent:
    (histogram → MAP, `make_timestamp_ms`, `regr_sxy`, `hamming` typo)
    and add the missing `aliases` links —
    both `dd` and the generated pages pick these up automatically.
-4. `dd`: load `icu` and `json` in `scripts/generate.R`
-   so the package matches the website's function surface (section 5).
+4. ~~`dd`: load `icu` and `json` in `scripts/generate.R`~~
+   Done in [dd#28](https://github.com/cynkra/dd/pull/28),
+   which went further and loads *all* core extensions.
+   Follow-ups surfaced by it: the website-side extension gaps of section 5,
+   and the open question whether `dd` should filter extension debug helpers.
 5. Longer term: extend `generate_sql_function_docs.py` beyond its current
    5 pages, or add a CI check that executes documented examples —
    every error in section 1 would have been caught mechanically.
