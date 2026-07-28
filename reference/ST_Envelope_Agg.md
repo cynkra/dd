@@ -1,0 +1,31 @@
+# DuckDB function ST_Envelope_Agg
+
+Alias for [ST_Extent_Agg](#st_extent_agg).
+
+Computes the minimal-bounding-box polygon containing the set of input
+geometries.
+
+## Usage
+
+``` r
+ST_Envelope_Agg(col0)
+```
+
+## Arguments
+
+- col0:
+
+  `GEOMETRY`
+
+## Value
+
+`GEOMETRY`
+
+## Provided by
+
+The `spatial` extension (`LOAD spatial;`).
+
+## SQL examples
+
+    SELECT ST_Extent_Agg(geom) FROM UNNEST([ST_Point(1,1), ST_Point(5,5)]) AS _(geom);
+    -- POLYGON ((1 1, 1 5, 5 5, 5 1, 1 1))

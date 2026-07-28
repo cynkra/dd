@@ -476,6 +476,326 @@ Aggregate functions.
 
 Functions that DuckDB does not assign to a category.
 
+- [`DuckDB_PROJ_Compiled_Version()`](https://cynkra.github.io/dd/reference/DuckDB_PROJ_Compiled_Version.md)
+  : DuckDB function DuckDB_PROJ_Compiled_Version
+- [`DuckDB_Proj_Version()`](https://cynkra.github.io/dd/reference/DuckDB_Proj_Version.md)
+  : DuckDB function DuckDB_Proj_Version
+- [`ST_Affine()`](https://cynkra.github.io/dd/reference/ST_Affine.md) :
+  DuckDB function ST_Affine
+- [`ST_Area()`](https://cynkra.github.io/dd/reference/ST_Area.md) :
+  DuckDB function ST_Area
+- [`ST_Area_Spheroid()`](https://cynkra.github.io/dd/reference/ST_Area_Spheroid.md)
+  : DuckDB function ST_Area_Spheroid
+- [`ST_AsGeoJSON()`](https://cynkra.github.io/dd/reference/ST_AsGeoJSON.md)
+  : DuckDB function ST_AsGeoJSON
+- [`ST_AsHEXWKB()`](https://cynkra.github.io/dd/reference/ST_AsHEXWKB.md)
+  : DuckDB function ST_AsHEXWKB
+- [`ST_AsMVT()`](https://cynkra.github.io/dd/reference/ST_AsMVT.md) :
+  DuckDB function ST_AsMVT
+- [`ST_AsMVTGeom()`](https://cynkra.github.io/dd/reference/ST_AsMVTGeom.md)
+  : DuckDB function ST_AsMVTGeom
+- [`ST_AsSVG()`](https://cynkra.github.io/dd/reference/ST_AsSVG.md) :
+  DuckDB function ST_AsSVG
+- [`ST_Azimuth()`](https://cynkra.github.io/dd/reference/ST_Azimuth.md)
+  : DuckDB function ST_Azimuth
+- [`ST_Boundary()`](https://cynkra.github.io/dd/reference/ST_Boundary.md)
+  : DuckDB function ST_Boundary
+- [`ST_Buffer()`](https://cynkra.github.io/dd/reference/ST_Buffer.md) :
+  DuckDB function ST_Buffer
+- [`ST_BuildArea()`](https://cynkra.github.io/dd/reference/ST_BuildArea.md)
+  : DuckDB function ST_BuildArea
+- [`ST_Centroid()`](https://cynkra.github.io/dd/reference/ST_Centroid.md)
+  : DuckDB function ST_Centroid
+- [`ST_ClosestPoint()`](https://cynkra.github.io/dd/reference/ST_ClosestPoint.md)
+  : DuckDB function ST_ClosestPoint
+- [`ST_Collect()`](https://cynkra.github.io/dd/reference/ST_Collect.md)
+  : DuckDB function ST_Collect
+- [`ST_CollectionExtract()`](https://cynkra.github.io/dd/reference/ST_CollectionExtract.md)
+  : DuckDB function ST_CollectionExtract
+- [`ST_ConcaveHull()`](https://cynkra.github.io/dd/reference/ST_ConcaveHull.md)
+  : DuckDB function ST_ConcaveHull
+- [`ST_Contains()`](https://cynkra.github.io/dd/reference/ST_Contains.md)
+  : DuckDB function ST_Contains
+- [`ST_ContainsProperly()`](https://cynkra.github.io/dd/reference/ST_ContainsProperly.md)
+  : DuckDB function ST_ContainsProperly
+- [`ST_ConvexHull()`](https://cynkra.github.io/dd/reference/ST_ConvexHull.md)
+  : DuckDB function ST_ConvexHull
+- [`ST_CoverageClean()`](https://cynkra.github.io/dd/reference/ST_CoverageClean.md)
+  : DuckDB function ST_CoverageClean
+- [`ST_CoverageInvalidEdges()`](https://cynkra.github.io/dd/reference/ST_CoverageInvalidEdges.md)
+  : DuckDB function ST_CoverageInvalidEdges
+- [`ST_CoverageInvalidEdges_Agg()`](https://cynkra.github.io/dd/reference/ST_CoverageInvalidEdges_Agg.md)
+  : DuckDB function ST_CoverageInvalidEdges_Agg
+- [`ST_CoverageSimplify()`](https://cynkra.github.io/dd/reference/ST_CoverageSimplify.md)
+  : DuckDB function ST_CoverageSimplify
+- [`ST_CoverageSimplify_Agg()`](https://cynkra.github.io/dd/reference/ST_CoverageSimplify_Agg.md)
+  : DuckDB function ST_CoverageSimplify_Agg
+- [`ST_CoverageUnion()`](https://cynkra.github.io/dd/reference/ST_CoverageUnion.md)
+  : DuckDB function ST_CoverageUnion
+- [`ST_CoverageUnion_Agg()`](https://cynkra.github.io/dd/reference/ST_CoverageUnion_Agg.md)
+  : DuckDB function ST_CoverageUnion_Agg
+- [`ST_CoveredBy()`](https://cynkra.github.io/dd/reference/ST_CoveredBy.md)
+  : DuckDB function ST_CoveredBy
+- [`ST_Covers()`](https://cynkra.github.io/dd/reference/ST_Covers.md) :
+  DuckDB function ST_Covers
+- [`ST_Crosses()`](https://cynkra.github.io/dd/reference/ST_Crosses.md)
+  : DuckDB function ST_Crosses
+- [`ST_DWithin()`](https://cynkra.github.io/dd/reference/ST_DWithin.md)
+  : DuckDB function ST_DWithin
+- [`ST_DWithin_GEOS()`](https://cynkra.github.io/dd/reference/ST_DWithin_GEOS.md)
+  : DuckDB function ST_DWithin_GEOS
+- [`ST_DWithin_Spheroid()`](https://cynkra.github.io/dd/reference/ST_DWithin_Spheroid.md)
+  : DuckDB function ST_DWithin_Spheroid
+- [`ST_Difference()`](https://cynkra.github.io/dd/reference/ST_Difference.md)
+  : DuckDB function ST_Difference
+- [`ST_Dimension()`](https://cynkra.github.io/dd/reference/ST_Dimension.md)
+  : DuckDB function ST_Dimension
+- [`ST_Disjoint()`](https://cynkra.github.io/dd/reference/ST_Disjoint.md)
+  : DuckDB function ST_Disjoint
+- [`ST_Distance()`](https://cynkra.github.io/dd/reference/ST_Distance.md)
+  : DuckDB function ST_Distance
+- [`ST_Distance_GEOS()`](https://cynkra.github.io/dd/reference/ST_Distance_GEOS.md)
+  : DuckDB function ST_Distance_GEOS
+- [`ST_Distance_Sphere()`](https://cynkra.github.io/dd/reference/ST_Distance_Sphere.md)
+  : DuckDB function ST_Distance_Sphere
+- [`ST_Distance_Spheroid()`](https://cynkra.github.io/dd/reference/ST_Distance_Spheroid.md)
+  : DuckDB function ST_Distance_Spheroid
+- [`ST_Drivers()`](https://cynkra.github.io/dd/reference/ST_Drivers.md)
+  : DuckDB function ST_Drivers
+- [`ST_Dump()`](https://cynkra.github.io/dd/reference/ST_Dump.md) :
+  DuckDB function ST_Dump
+- [`ST_EndPoint()`](https://cynkra.github.io/dd/reference/ST_EndPoint.md)
+  : DuckDB function ST_EndPoint
+- [`ST_Envelope()`](https://cynkra.github.io/dd/reference/ST_Envelope.md)
+  : DuckDB function ST_Envelope
+- [`ST_Envelope_Agg()`](https://cynkra.github.io/dd/reference/ST_Envelope_Agg.md)
+  : DuckDB function ST_Envelope_Agg
+- [`ST_Equals()`](https://cynkra.github.io/dd/reference/ST_Equals.md) :
+  DuckDB function ST_Equals
+- [`ST_Expand()`](https://cynkra.github.io/dd/reference/ST_Expand.md) :
+  DuckDB function ST_Expand
+- [`ST_Extent()`](https://cynkra.github.io/dd/reference/ST_Extent.md) :
+  DuckDB function ST_Extent
+- [`ST_Extent_Agg()`](https://cynkra.github.io/dd/reference/ST_Extent_Agg.md)
+  : DuckDB function ST_Extent_Agg
+- [`ST_Extent_Approx()`](https://cynkra.github.io/dd/reference/ST_Extent_Approx.md)
+  : DuckDB function ST_Extent_Approx
+- [`ST_ExteriorRing()`](https://cynkra.github.io/dd/reference/ST_ExteriorRing.md)
+  : DuckDB function ST_ExteriorRing
+- [`ST_FlipCoordinates()`](https://cynkra.github.io/dd/reference/ST_FlipCoordinates.md)
+  : DuckDB function ST_FlipCoordinates
+- [`ST_Force2D()`](https://cynkra.github.io/dd/reference/ST_Force2D.md)
+  : DuckDB function ST_Force2D
+- [`ST_Force3DM()`](https://cynkra.github.io/dd/reference/ST_Force3DM.md)
+  : DuckDB function ST_Force3DM
+- [`ST_Force3DZ()`](https://cynkra.github.io/dd/reference/ST_Force3DZ.md)
+  : DuckDB function ST_Force3DZ
+- [`ST_Force4D()`](https://cynkra.github.io/dd/reference/ST_Force4D.md)
+  : DuckDB function ST_Force4D
+- [`ST_GeneratePoints()`](https://cynkra.github.io/dd/reference/ST_GeneratePoints.md)
+  : DuckDB function ST_GeneratePoints
+- [`ST_GeomFromGeoJSON()`](https://cynkra.github.io/dd/reference/ST_GeomFromGeoJSON.md)
+  : DuckDB function ST_GeomFromGeoJSON
+- [`ST_GeomFromHEXEWKB()`](https://cynkra.github.io/dd/reference/ST_GeomFromHEXEWKB.md)
+  : DuckDB function ST_GeomFromHEXEWKB
+- [`ST_GeomFromHEXWKB()`](https://cynkra.github.io/dd/reference/ST_GeomFromHEXWKB.md)
+  : DuckDB function ST_GeomFromHEXWKB
+- [`ST_GeomFromText()`](https://cynkra.github.io/dd/reference/ST_GeomFromText.md)
+  : DuckDB function ST_GeomFromText
+- [`ST_GeometryType()`](https://cynkra.github.io/dd/reference/ST_GeometryType.md)
+  : DuckDB function ST_GeometryType
+- [`ST_HasM()`](https://cynkra.github.io/dd/reference/ST_HasM.md) :
+  DuckDB function ST_HasM
+- [`ST_HasZ()`](https://cynkra.github.io/dd/reference/ST_HasZ.md) :
+  DuckDB function ST_HasZ
+- [`ST_Hilbert()`](https://cynkra.github.io/dd/reference/ST_Hilbert.md)
+  : DuckDB function ST_Hilbert
+- [`ST_InteriorRingN()`](https://cynkra.github.io/dd/reference/ST_InteriorRingN.md)
+  : DuckDB function ST_InteriorRingN
+- [`ST_InterpolatePoint()`](https://cynkra.github.io/dd/reference/ST_InterpolatePoint.md)
+  : DuckDB function ST_InterpolatePoint
+- [`ST_Intersection()`](https://cynkra.github.io/dd/reference/ST_Intersection.md)
+  : DuckDB function ST_Intersection
+- [`ST_Intersection_Agg()`](https://cynkra.github.io/dd/reference/ST_Intersection_Agg.md)
+  : DuckDB function ST_Intersection_Agg
+- [`ST_Intersects()`](https://cynkra.github.io/dd/reference/ST_Intersects.md)
+  : DuckDB function ST_Intersects
+- [`ST_IsClosed()`](https://cynkra.github.io/dd/reference/ST_IsClosed.md)
+  : DuckDB function ST_IsClosed
+- [`ST_IsEmpty()`](https://cynkra.github.io/dd/reference/ST_IsEmpty.md)
+  : DuckDB function ST_IsEmpty
+- [`ST_IsRing()`](https://cynkra.github.io/dd/reference/ST_IsRing.md) :
+  DuckDB function ST_IsRing
+- [`ST_IsSimple()`](https://cynkra.github.io/dd/reference/ST_IsSimple.md)
+  : DuckDB function ST_IsSimple
+- [`ST_IsValid()`](https://cynkra.github.io/dd/reference/ST_IsValid.md)
+  : DuckDB function ST_IsValid
+- [`ST_Length()`](https://cynkra.github.io/dd/reference/ST_Length.md) :
+  DuckDB function ST_Length
+- [`ST_Length_Spheroid()`](https://cynkra.github.io/dd/reference/ST_Length_Spheroid.md)
+  : DuckDB function ST_Length_Spheroid
+- [`ST_LineInterpolatePoint()`](https://cynkra.github.io/dd/reference/ST_LineInterpolatePoint.md)
+  : DuckDB function ST_LineInterpolatePoint
+- [`ST_LineInterpolatePoints()`](https://cynkra.github.io/dd/reference/ST_LineInterpolatePoints.md)
+  : DuckDB function ST_LineInterpolatePoints
+- [`ST_LineLocatePoint()`](https://cynkra.github.io/dd/reference/ST_LineLocatePoint.md)
+  : DuckDB function ST_LineLocatePoint
+- [`ST_LineMerge()`](https://cynkra.github.io/dd/reference/ST_LineMerge.md)
+  : DuckDB function ST_LineMerge
+- [`ST_LineString2DFromWKB()`](https://cynkra.github.io/dd/reference/ST_LineString2DFromWKB.md)
+  : DuckDB function ST_LineString2DFromWKB
+- [`ST_LineSubstring()`](https://cynkra.github.io/dd/reference/ST_LineSubstring.md)
+  : DuckDB function ST_LineSubstring
+- [`ST_LocateAlong()`](https://cynkra.github.io/dd/reference/ST_LocateAlong.md)
+  : DuckDB function ST_LocateAlong
+- [`ST_LocateBetween()`](https://cynkra.github.io/dd/reference/ST_LocateBetween.md)
+  : DuckDB function ST_LocateBetween
+- [`ST_M()`](https://cynkra.github.io/dd/reference/ST_M.md) : DuckDB
+  function ST_M
+- [`ST_MMax()`](https://cynkra.github.io/dd/reference/ST_MMax.md) :
+  DuckDB function ST_MMax
+- [`ST_MMin()`](https://cynkra.github.io/dd/reference/ST_MMin.md) :
+  DuckDB function ST_MMin
+- [`ST_MakeBox2D()`](https://cynkra.github.io/dd/reference/ST_MakeBox2D.md)
+  : DuckDB function ST_MakeBox2D
+- [`ST_MakeEnvelope()`](https://cynkra.github.io/dd/reference/ST_MakeEnvelope.md)
+  : DuckDB function ST_MakeEnvelope
+- [`ST_MakeLine()`](https://cynkra.github.io/dd/reference/ST_MakeLine.md)
+  : DuckDB function ST_MakeLine
+- [`ST_MakePoint()`](https://cynkra.github.io/dd/reference/ST_MakePoint.md)
+  : DuckDB function ST_MakePoint
+- [`ST_MakePolygon()`](https://cynkra.github.io/dd/reference/ST_MakePolygon.md)
+  : DuckDB function ST_MakePolygon
+- [`ST_MakeValid()`](https://cynkra.github.io/dd/reference/ST_MakeValid.md)
+  : DuckDB function ST_MakeValid
+- [`ST_MaximumInscribedCircle()`](https://cynkra.github.io/dd/reference/ST_MaximumInscribedCircle.md)
+  : DuckDB function ST_MaximumInscribedCircle
+- [`ST_MemUnion_Agg()`](https://cynkra.github.io/dd/reference/ST_MemUnion_Agg.md)
+  : DuckDB function ST_MemUnion_Agg
+- [`ST_MinimumRotatedRectangle()`](https://cynkra.github.io/dd/reference/ST_MinimumRotatedRectangle.md)
+  : DuckDB function ST_MinimumRotatedRectangle
+- [`ST_Multi()`](https://cynkra.github.io/dd/reference/ST_Multi.md) :
+  DuckDB function ST_Multi
+- [`ST_NGeometries()`](https://cynkra.github.io/dd/reference/ST_NGeometries.md)
+  : DuckDB function ST_NGeometries
+- [`ST_NInteriorRings()`](https://cynkra.github.io/dd/reference/ST_NInteriorRings.md)
+  : DuckDB function ST_NInteriorRings
+- [`ST_NPoints()`](https://cynkra.github.io/dd/reference/ST_NPoints.md)
+  : DuckDB function ST_NPoints
+- [`ST_Node()`](https://cynkra.github.io/dd/reference/ST_Node.md) :
+  DuckDB function ST_Node
+- [`ST_Normalize()`](https://cynkra.github.io/dd/reference/ST_Normalize.md)
+  : DuckDB function ST_Normalize
+- [`ST_NumGeometries()`](https://cynkra.github.io/dd/reference/ST_NumGeometries.md)
+  : DuckDB function ST_NumGeometries
+- [`ST_NumInteriorRings()`](https://cynkra.github.io/dd/reference/ST_NumInteriorRings.md)
+  : DuckDB function ST_NumInteriorRings
+- [`ST_NumPoints()`](https://cynkra.github.io/dd/reference/ST_NumPoints.md)
+  : DuckDB function ST_NumPoints
+- [`ST_Overlaps()`](https://cynkra.github.io/dd/reference/ST_Overlaps.md)
+  : DuckDB function ST_Overlaps
+- [`ST_Perimeter()`](https://cynkra.github.io/dd/reference/ST_Perimeter.md)
+  : DuckDB function ST_Perimeter
+- [`ST_Perimeter_Spheroid()`](https://cynkra.github.io/dd/reference/ST_Perimeter_Spheroid.md)
+  : DuckDB function ST_Perimeter_Spheroid
+- [`ST_Point()`](https://cynkra.github.io/dd/reference/ST_Point.md) :
+  DuckDB function ST_Point
+- [`ST_Point2D()`](https://cynkra.github.io/dd/reference/ST_Point2D.md)
+  : DuckDB function ST_Point2D
+- [`ST_Point2DFromWKB()`](https://cynkra.github.io/dd/reference/ST_Point2DFromWKB.md)
+  : DuckDB function ST_Point2DFromWKB
+- [`ST_Point3D()`](https://cynkra.github.io/dd/reference/ST_Point3D.md)
+  : DuckDB function ST_Point3D
+- [`ST_Point4D()`](https://cynkra.github.io/dd/reference/ST_Point4D.md)
+  : DuckDB function ST_Point4D
+- [`ST_PointN()`](https://cynkra.github.io/dd/reference/ST_PointN.md) :
+  DuckDB function ST_PointN
+- [`ST_PointOnSurface()`](https://cynkra.github.io/dd/reference/ST_PointOnSurface.md)
+  : DuckDB function ST_PointOnSurface
+- [`ST_Points()`](https://cynkra.github.io/dd/reference/ST_Points.md) :
+  DuckDB function ST_Points
+- [`ST_Polygon2DFromWKB()`](https://cynkra.github.io/dd/reference/ST_Polygon2DFromWKB.md)
+  : DuckDB function ST_Polygon2DFromWKB
+- [`ST_Polygonize()`](https://cynkra.github.io/dd/reference/ST_Polygonize.md)
+  : DuckDB function ST_Polygonize
+- [`ST_QuadKey()`](https://cynkra.github.io/dd/reference/ST_QuadKey.md)
+  : DuckDB function ST_QuadKey
+- [`ST_Read()`](https://cynkra.github.io/dd/reference/ST_Read.md) :
+  DuckDB function ST_Read
+- [`ST_ReadOSM()`](https://cynkra.github.io/dd/reference/ST_ReadOSM.md)
+  : DuckDB function ST_ReadOSM
+- [`ST_ReadSHP()`](https://cynkra.github.io/dd/reference/ST_ReadSHP.md)
+  : DuckDB function ST_ReadSHP
+- [`ST_Read_Meta()`](https://cynkra.github.io/dd/reference/ST_Read_Meta.md)
+  : DuckDB function ST_Read_Meta
+- [`ST_ReducePrecision()`](https://cynkra.github.io/dd/reference/ST_ReducePrecision.md)
+  : DuckDB function ST_ReducePrecision
+- [`ST_RemoveRepeatedPoints()`](https://cynkra.github.io/dd/reference/ST_RemoveRepeatedPoints.md)
+  : DuckDB function ST_RemoveRepeatedPoints
+- [`ST_Reverse()`](https://cynkra.github.io/dd/reference/ST_Reverse.md)
+  : DuckDB function ST_Reverse
+- [`ST_Rotate()`](https://cynkra.github.io/dd/reference/ST_Rotate.md) :
+  DuckDB function ST_Rotate
+- [`ST_RotateX()`](https://cynkra.github.io/dd/reference/ST_RotateX.md)
+  : DuckDB function ST_RotateX
+- [`ST_RotateY()`](https://cynkra.github.io/dd/reference/ST_RotateY.md)
+  : DuckDB function ST_RotateY
+- [`ST_RotateZ()`](https://cynkra.github.io/dd/reference/ST_RotateZ.md)
+  : DuckDB function ST_RotateZ
+- [`ST_Scale()`](https://cynkra.github.io/dd/reference/ST_Scale.md) :
+  DuckDB function ST_Scale
+- [`ST_ShortestLine()`](https://cynkra.github.io/dd/reference/ST_ShortestLine.md)
+  : DuckDB function ST_ShortestLine
+- [`ST_Simplify()`](https://cynkra.github.io/dd/reference/ST_Simplify.md)
+  : DuckDB function ST_Simplify
+- [`ST_SimplifyPreserveTopology()`](https://cynkra.github.io/dd/reference/ST_SimplifyPreserveTopology.md)
+  : DuckDB function ST_SimplifyPreserveTopology
+- [`ST_Snap()`](https://cynkra.github.io/dd/reference/ST_Snap.md) :
+  DuckDB function ST_Snap
+- [`ST_StartPoint()`](https://cynkra.github.io/dd/reference/ST_StartPoint.md)
+  : DuckDB function ST_StartPoint
+- [`ST_SymDifference()`](https://cynkra.github.io/dd/reference/ST_SymDifference.md)
+  : DuckDB function ST_SymDifference
+- [`ST_TileEnvelope()`](https://cynkra.github.io/dd/reference/ST_TileEnvelope.md)
+  : DuckDB function ST_TileEnvelope
+- [`ST_Touches()`](https://cynkra.github.io/dd/reference/ST_Touches.md)
+  : DuckDB function ST_Touches
+- [`ST_TransScale()`](https://cynkra.github.io/dd/reference/ST_TransScale.md)
+  : DuckDB function ST_TransScale
+- [`ST_Transform()`](https://cynkra.github.io/dd/reference/ST_Transform.md)
+  : DuckDB function ST_Transform
+- [`ST_Translate()`](https://cynkra.github.io/dd/reference/ST_Translate.md)
+  : DuckDB function ST_Translate
+- [`ST_Union()`](https://cynkra.github.io/dd/reference/ST_Union.md) :
+  DuckDB function ST_Union
+- [`ST_Union_Agg()`](https://cynkra.github.io/dd/reference/ST_Union_Agg.md)
+  : DuckDB function ST_Union_Agg
+- [`ST_VoronoiDiagram()`](https://cynkra.github.io/dd/reference/ST_VoronoiDiagram.md)
+  : DuckDB function ST_VoronoiDiagram
+- [`ST_Within()`](https://cynkra.github.io/dd/reference/ST_Within.md) :
+  DuckDB function ST_Within
+- [`ST_WithinProperly()`](https://cynkra.github.io/dd/reference/ST_WithinProperly.md)
+  : DuckDB function ST_WithinProperly
+- [`ST_X()`](https://cynkra.github.io/dd/reference/ST_X.md) : DuckDB
+  function ST_X
+- [`ST_XMax()`](https://cynkra.github.io/dd/reference/ST_XMax.md) :
+  DuckDB function ST_XMax
+- [`ST_XMin()`](https://cynkra.github.io/dd/reference/ST_XMin.md) :
+  DuckDB function ST_XMin
+- [`ST_Y()`](https://cynkra.github.io/dd/reference/ST_Y.md) : DuckDB
+  function ST_Y
+- [`ST_YMax()`](https://cynkra.github.io/dd/reference/ST_YMax.md) :
+  DuckDB function ST_YMax
+- [`ST_YMin()`](https://cynkra.github.io/dd/reference/ST_YMin.md) :
+  DuckDB function ST_YMin
+- [`ST_Z()`](https://cynkra.github.io/dd/reference/ST_Z.md) : DuckDB
+  function ST_Z
+- [`ST_ZMFlag()`](https://cynkra.github.io/dd/reference/ST_ZMFlag.md) :
+  DuckDB function ST_ZMFlag
+- [`ST_ZMax()`](https://cynkra.github.io/dd/reference/ST_ZMax.md) :
+  DuckDB function ST_ZMax
+- [`ST_ZMin()`](https://cynkra.github.io/dd/reference/ST_ZMin.md) :
+  DuckDB function ST_ZMin
 - [`abs()`](https://cynkra.github.io/dd/reference/abs.md) : DuckDB
   function abs
 - [`acos()`](https://cynkra.github.io/dd/reference/acos.md) : DuckDB
@@ -534,10 +854,14 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function array_push_front
 - [`array_reverse()`](https://cynkra.github.io/dd/reference/array_reverse.md)
   : DuckDB function array_reverse
+- [`array_to_json()`](https://cynkra.github.io/dd/reference/array_to_json.md)
+  : DuckDB function array_to_json
 - [`array_to_string()`](https://cynkra.github.io/dd/reference/array_to_string.md)
   : DuckDB function array_to_string
 - [`array_to_string_comma_default()`](https://cynkra.github.io/dd/reference/array_to_string_comma_default.md)
   : DuckDB function array_to_string_comma_default
+- [`` `->>`() ``](https://cynkra.github.io/dd/reference/arrow-greater-than-greater-than.md)
+  : DuckDB function -\>\>
 - [`arrow_scan()`](https://cynkra.github.io/dd/reference/arrow_scan.md)
   : DuckDB function arrow_scan
 - [`arrow_scan_dumb()`](https://cynkra.github.io/dd/reference/arrow_scan_dumb.md)
@@ -572,6 +896,8 @@ Functions that DuckDB does not assign to a category.
   DuckDB function bool_and
 - [`bool_or()`](https://cynkra.github.io/dd/reference/bool_or.md) :
   DuckDB function bool_or
+- [`broadcast()`](https://cynkra.github.io/dd/reference/broadcast.md) :
+  DuckDB function broadcast
 - [`can_cast_implicitly()`](https://cynkra.github.io/dd/reference/can_cast_implicitly.md)
   : DuckDB function can_cast_implicitly
 - [`cardinality()`](https://cynkra.github.io/dd/reference/cardinality.md)
@@ -584,6 +910,8 @@ Functions that DuckDB does not assign to a category.
   function ceil
 - [`century()`](https://cynkra.github.io/dd/reference/century.md) :
   DuckDB function century
+- [`check_peg_parser()`](https://cynkra.github.io/dd/reference/check_peg_parser.md)
+  : DuckDB function check_peg_parser
 - [`checkpoint()`](https://cynkra.github.io/dd/reference/checkpoint.md)
   : DuckDB function checkpoint
 - [`col_description()`](https://cynkra.github.io/dd/reference/col_description.md)
@@ -598,6 +926,8 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function constant_or_null
 - [`copy_database()`](https://cynkra.github.io/dd/reference/copy_database.md)
   : DuckDB function copy_database
+- [`copy_dir()`](https://cynkra.github.io/dd/reference/copy_dir.md) :
+  DuckDB function copy_dir
 - [`corr()`](https://cynkra.github.io/dd/reference/corr.md) : DuckDB
   function corr
 - [`cos()`](https://cynkra.github.io/dd/reference/cos.md) : DuckDB
@@ -616,6 +946,8 @@ Functions that DuckDB does not assign to a category.
   DuckDB function covar_pop
 - [`covar_samp()`](https://cynkra.github.io/dd/reference/covar_samp.md)
   : DuckDB function covar_samp
+- [`create_fts_index()`](https://cynkra.github.io/dd/reference/create_fts_index.md)
+  : DuckDB function create_fts_index
 - [`create_sort_key()`](https://cynkra.github.io/dd/reference/create_sort_key.md)
   : DuckDB function create_sort_key
 - [`cume_dist()`](https://cynkra.github.io/dd/reference/cume_dist.md) :
@@ -626,6 +958,12 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function current_connection_id
 - [`current_database()`](https://cynkra.github.io/dd/reference/current_database.md)
   : DuckDB function current_database
+- [`current_date()`](https://cynkra.github.io/dd/reference/current_date.md)
+  : DuckDB function current_date
+- [`current_localtime()`](https://cynkra.github.io/dd/reference/current_localtime.md)
+  : DuckDB function current_localtime
+- [`current_localtimestamp()`](https://cynkra.github.io/dd/reference/current_localtimestamp.md)
+  : DuckDB function current_localtimestamp
 - [`current_query()`](https://cynkra.github.io/dd/reference/current_query.md)
   : DuckDB function current_query
 - [`current_query_id()`](https://cynkra.github.io/dd/reference/current_query_id.md)
@@ -670,11 +1008,27 @@ Functions that DuckDB does not assign to a category.
   DuckDB function dayofyear
 - [`days_in_month()`](https://cynkra.github.io/dd/reference/days_in_month.md)
   : DuckDB function days_in_month
+- [`dbgen()`](https://cynkra.github.io/dd/reference/dbgen.md) : DuckDB
+  function dbgen
 - [`dd`](https://cynkra.github.io/dd/reference/dd.md) : DuckDB functions
 - [`decade()`](https://cynkra.github.io/dd/reference/decade.md) : DuckDB
   function decade
 - [`degrees()`](https://cynkra.github.io/dd/reference/degrees.md) :
   DuckDB function degrees
+- [`delta_domain_metadata()`](https://cynkra.github.io/dd/reference/delta_domain_metadata.md)
+  : DuckDB function delta_domain_metadata
+- [`delta_filter_pushdown_log()`](https://cynkra.github.io/dd/reference/delta_filter_pushdown_log.md)
+  : DuckDB function delta_filter_pushdown_log
+- [`delta_filter_pushdown_log_tpcds()`](https://cynkra.github.io/dd/reference/delta_filter_pushdown_log_tpcds.md)
+  : DuckDB function delta_filter_pushdown_log_tpcds
+- [`delta_get_transaction_version()`](https://cynkra.github.io/dd/reference/delta_get_transaction_version.md)
+  : DuckDB function delta_get_transaction_version
+- [`delta_list_files()`](https://cynkra.github.io/dd/reference/delta_list_files.md)
+  : DuckDB function delta_list_files
+- [`delta_scan()`](https://cynkra.github.io/dd/reference/delta_scan.md)
+  : DuckDB function delta_scan
+- [`delta_set_transaction_version()`](https://cynkra.github.io/dd/reference/delta_set_transaction_version.md)
+  : DuckDB function delta_set_transaction_version
 - [`dense_rank()`](https://cynkra.github.io/dd/reference/dense_rank.md)
   : DuckDB function dense_rank
 - [`disable_checkpoint_on_shutdown()`](https://cynkra.github.io/dd/reference/disable_checkpoint_on_shutdown.md)
@@ -685,6 +1039,8 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function disable_object_cache
 - [`disable_optimizer()`](https://cynkra.github.io/dd/reference/disable_optimizer.md)
   : DuckDB function disable_optimizer
+- [`disable_peg_parser()`](https://cynkra.github.io/dd/reference/disable_peg_parser.md)
+  : DuckDB function disable_peg_parser
 - [`disable_print_progress_bar()`](https://cynkra.github.io/dd/reference/disable_print_progress_bar.md)
   : DuckDB function disable_print_progress_bar
 - [`disable_profile()`](https://cynkra.github.io/dd/reference/disable_profile.md)
@@ -705,6 +1061,10 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function disable_verify_serializer
 - [`divide()`](https://cynkra.github.io/dd/reference/divide.md) : DuckDB
   function divide
+- [`drop_fts_index()`](https://cynkra.github.io/dd/reference/drop_fts_index.md)
+  : DuckDB function drop_fts_index
+- [`dsdgen()`](https://cynkra.github.io/dd/reference/dsdgen.md) : DuckDB
+  function dsdgen
 - [`duckdb_approx_database_count()`](https://cynkra.github.io/dd/reference/duckdb_approx_database_count.md)
   : DuckDB function duckdb_approx_database_count
 - [`duckdb_columns()`](https://cynkra.github.io/dd/reference/duckdb_columns.md)
@@ -765,6 +1125,48 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function duckdb_variables
 - [`duckdb_views()`](https://cynkra.github.io/dd/reference/duckdb_views.md)
   : DuckDB function duckdb_views
+- [`ducklake_add_data_files()`](https://cynkra.github.io/dd/reference/ducklake_add_data_files.md)
+  : DuckDB function ducklake_add_data_files
+- [`ducklake_cleanup_old_files()`](https://cynkra.github.io/dd/reference/ducklake_cleanup_old_files.md)
+  : DuckDB function ducklake_cleanup_old_files
+- [`ducklake_commit()`](https://cynkra.github.io/dd/reference/ducklake_commit.md)
+  : DuckDB function ducklake_commit
+- [`ducklake_current_snapshot()`](https://cynkra.github.io/dd/reference/ducklake_current_snapshot.md)
+  : DuckDB function ducklake_current_snapshot
+- [`ducklake_delete_orphaned_files()`](https://cynkra.github.io/dd/reference/ducklake_delete_orphaned_files.md)
+  : DuckDB function ducklake_delete_orphaned_files
+- [`ducklake_expire_snapshots()`](https://cynkra.github.io/dd/reference/ducklake_expire_snapshots.md)
+  : DuckDB function ducklake_expire_snapshots
+- [`ducklake_flush_inlined_data()`](https://cynkra.github.io/dd/reference/ducklake_flush_inlined_data.md)
+  : DuckDB function ducklake_flush_inlined_data
+- [`ducklake_last_committed_snapshot()`](https://cynkra.github.io/dd/reference/ducklake_last_committed_snapshot.md)
+  : DuckDB function ducklake_last_committed_snapshot
+- [`ducklake_list_files()`](https://cynkra.github.io/dd/reference/ducklake_list_files.md)
+  : DuckDB function ducklake_list_files
+- [`ducklake_merge_adjacent_files()`](https://cynkra.github.io/dd/reference/ducklake_merge_adjacent_files.md)
+  : DuckDB function ducklake_merge_adjacent_files
+- [`ducklake_options()`](https://cynkra.github.io/dd/reference/ducklake_options.md)
+  : DuckDB function ducklake_options
+- [`ducklake_rewrite_data_files()`](https://cynkra.github.io/dd/reference/ducklake_rewrite_data_files.md)
+  : DuckDB function ducklake_rewrite_data_files
+- [`ducklake_scan()`](https://cynkra.github.io/dd/reference/ducklake_scan.md)
+  : DuckDB function ducklake_scan
+- [`ducklake_set_commit_message()`](https://cynkra.github.io/dd/reference/ducklake_set_commit_message.md)
+  : DuckDB function ducklake_set_commit_message
+- [`ducklake_set_option()`](https://cynkra.github.io/dd/reference/ducklake_set_option.md)
+  : DuckDB function ducklake_set_option
+- [`ducklake_settings()`](https://cynkra.github.io/dd/reference/ducklake_settings.md)
+  : DuckDB function ducklake_settings
+- [`ducklake_snapshots()`](https://cynkra.github.io/dd/reference/ducklake_snapshots.md)
+  : DuckDB function ducklake_snapshots
+- [`ducklake_table_changes()`](https://cynkra.github.io/dd/reference/ducklake_table_changes.md)
+  : DuckDB function ducklake_table_changes
+- [`ducklake_table_deletions()`](https://cynkra.github.io/dd/reference/ducklake_table_deletions.md)
+  : DuckDB function ducklake_table_deletions
+- [`ducklake_table_info()`](https://cynkra.github.io/dd/reference/ducklake_table_info.md)
+  : DuckDB function ducklake_table_info
+- [`ducklake_table_insertions()`](https://cynkra.github.io/dd/reference/ducklake_table_insertions.md)
+  : DuckDB function ducklake_table_insertions
 - [`enable_checkpoint_on_shutdown()`](https://cynkra.github.io/dd/reference/enable_checkpoint_on_shutdown.md)
   : DuckDB function enable_checkpoint_on_shutdown
 - [`enable_logging()`](https://cynkra.github.io/dd/reference/enable_logging.md)
@@ -773,6 +1175,8 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function enable_object_cache
 - [`enable_optimizer()`](https://cynkra.github.io/dd/reference/enable_optimizer.md)
   : DuckDB function enable_optimizer
+- [`enable_peg_parser()`](https://cynkra.github.io/dd/reference/enable_peg_parser.md)
+  : DuckDB function enable_peg_parser
 - [`enable_print_progress_bar()`](https://cynkra.github.io/dd/reference/enable_print_progress_bar.md)
   : DuckDB function enable_print_progress_bar
 - [`enable_profile()`](https://cynkra.github.io/dd/reference/enable_profile.md)
@@ -811,12 +1215,16 @@ Functions that DuckDB does not assign to a category.
   function error
 - [`even()`](https://cynkra.github.io/dd/reference/even.md) : DuckDB
   function even
+- [`excel_text()`](https://cynkra.github.io/dd/reference/excel_text.md)
+  : DuckDB function excel_text
 - [`exp()`](https://cynkra.github.io/dd/reference/exp.md) : DuckDB
   function exp
 - [`extension_versions()`](https://cynkra.github.io/dd/reference/extension_versions.md)
   : DuckDB function extension_versions
 - [`factorial()`](https://cynkra.github.io/dd/reference/factorial.md) :
   DuckDB function factorial
+- [`family()`](https://cynkra.github.io/dd/reference/family.md) : DuckDB
+  function family
 - [`favg()`](https://cynkra.github.io/dd/reference/favg.md) : DuckDB
   function favg
 - [`fdiv()`](https://cynkra.github.io/dd/reference/fdiv.md) : DuckDB
@@ -839,6 +1247,10 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function format_pg_type
 - [`format_type()`](https://cynkra.github.io/dd/reference/format_type.md)
   : DuckDB function format_type
+- [`from_json()`](https://cynkra.github.io/dd/reference/from_json.md) :
+  DuckDB function from_json
+- [`from_json_strict()`](https://cynkra.github.io/dd/reference/from_json_strict.md)
+  : DuckDB function from_json_strict
 - [`functions()`](https://cynkra.github.io/dd/reference/functions.md) :
   DuckDB function functions
 - [`gamma()`](https://cynkra.github.io/dd/reference/gamma.md) : DuckDB
@@ -853,14 +1265,22 @@ Functions that DuckDB does not assign to a category.
   DuckDB function get_bit
 - [`get_block_size()`](https://cynkra.github.io/dd/reference/get_block_size.md)
   : DuckDB function get_block_size
+- [`get_current_time()`](https://cynkra.github.io/dd/reference/get_current_time.md)
+  : DuckDB function get_current_time
 - [`get_current_timestamp()`](https://cynkra.github.io/dd/reference/get_current_timestamp.md)
   : DuckDB function get_current_timestamp
+- [`get_delta_test_expression()`](https://cynkra.github.io/dd/reference/get_delta_test_expression.md)
+  : DuckDB function get_delta_test_expression
 - [`get_type()`](https://cynkra.github.io/dd/reference/get_type.md) :
   DuckDB function get_type
+- [`get_ui_url()`](https://cynkra.github.io/dd/reference/get_ui_url.md)
+  : DuckDB function get_ui_url
 - [`getvariable()`](https://cynkra.github.io/dd/reference/getvariable.md)
   : DuckDB function getvariable
 - [`glob()`](https://cynkra.github.io/dd/reference/glob.md) : DuckDB
   function glob
+- [`` `>>=`() ``](https://cynkra.github.io/dd/reference/greater-than-greater-than-equals.md)
+  : DuckDB function \>\>=
 - [`` `>>`() ``](https://cynkra.github.io/dd/reference/greater-than-greater-than.md)
   : DuckDB function \>\>
 - [`greatest_common_divisor()`](https://cynkra.github.io/dd/reference/greatest_common_divisor.md)
@@ -895,8 +1315,316 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function histogram_exact
 - [`histogram_values()`](https://cynkra.github.io/dd/reference/histogram_values.md)
   : DuckDB function histogram_values
+- [`hnsw_compact_index()`](https://cynkra.github.io/dd/reference/hnsw_compact_index.md)
+  : DuckDB function hnsw_compact_index
+- [`hnsw_index_scan()`](https://cynkra.github.io/dd/reference/hnsw_index_scan.md)
+  : DuckDB function hnsw_index_scan
+- [`host()`](https://cynkra.github.io/dd/reference/host.md) : DuckDB
+  function host
 - [`hour()`](https://cynkra.github.io/dd/reference/hour.md) : DuckDB
   function hour
+- [`html_escape()`](https://cynkra.github.io/dd/reference/html_escape.md)
+  : DuckDB function html_escape
+- [`html_unescape()`](https://cynkra.github.io/dd/reference/html_unescape.md)
+  : DuckDB function html_unescape
+- [`iceberg_bucket()`](https://cynkra.github.io/dd/reference/iceberg_bucket.md)
+  : DuckDB function iceberg_bucket
+- [`iceberg_column_stats()`](https://cynkra.github.io/dd/reference/iceberg_column_stats.md)
+  : DuckDB function iceberg_column_stats
+- [`iceberg_load_table_response()`](https://cynkra.github.io/dd/reference/iceberg_load_table_response.md)
+  : DuckDB function iceberg_load_table_response
+- [`iceberg_metadata()`](https://cynkra.github.io/dd/reference/iceberg_metadata.md)
+  : DuckDB function iceberg_metadata
+- [`iceberg_partition_stats()`](https://cynkra.github.io/dd/reference/iceberg_partition_stats.md)
+  : DuckDB function iceberg_partition_stats
+- [`iceberg_scan()`](https://cynkra.github.io/dd/reference/iceberg_scan.md)
+  : DuckDB function iceberg_scan
+- [`iceberg_schema_properties()`](https://cynkra.github.io/dd/reference/iceberg_schema_properties.md)
+  : DuckDB function iceberg_schema_properties
+- [`iceberg_snapshots()`](https://cynkra.github.io/dd/reference/iceberg_snapshots.md)
+  : DuckDB function iceberg_snapshots
+- [`iceberg_table_properties()`](https://cynkra.github.io/dd/reference/iceberg_table_properties.md)
+  : DuckDB function iceberg_table_properties
+- [`iceberg_to_ducklake()`](https://cynkra.github.io/dd/reference/iceberg_to_ducklake.md)
+  : DuckDB function iceberg_to_ducklake
+- [`iceberg_truncate()`](https://cynkra.github.io/dd/reference/iceberg_truncate.md)
+  : DuckDB function iceberg_truncate
+- [`iceberg_verify_equality_deletes()`](https://cynkra.github.io/dd/reference/iceberg_verify_equality_deletes.md)
+  : DuckDB function iceberg_verify_equality_deletes
+- [`icu_calendar_names()`](https://cynkra.github.io/dd/reference/icu_calendar_names.md)
+  : DuckDB function icu_calendar_names
+- [`icu_collate_af()`](https://cynkra.github.io/dd/reference/icu_collate_af.md)
+  : DuckDB function icu_collate_af
+- [`icu_collate_am()`](https://cynkra.github.io/dd/reference/icu_collate_am.md)
+  : DuckDB function icu_collate_am
+- [`icu_collate_ar()`](https://cynkra.github.io/dd/reference/icu_collate_ar.md)
+  : DuckDB function icu_collate_ar
+- [`icu_collate_ar_sa()`](https://cynkra.github.io/dd/reference/icu_collate_ar_sa.md)
+  : DuckDB function icu_collate_ar_sa
+- [`icu_collate_as()`](https://cynkra.github.io/dd/reference/icu_collate_as.md)
+  : DuckDB function icu_collate_as
+- [`icu_collate_az()`](https://cynkra.github.io/dd/reference/icu_collate_az.md)
+  : DuckDB function icu_collate_az
+- [`icu_collate_be()`](https://cynkra.github.io/dd/reference/icu_collate_be.md)
+  : DuckDB function icu_collate_be
+- [`icu_collate_bg()`](https://cynkra.github.io/dd/reference/icu_collate_bg.md)
+  : DuckDB function icu_collate_bg
+- [`icu_collate_bn()`](https://cynkra.github.io/dd/reference/icu_collate_bn.md)
+  : DuckDB function icu_collate_bn
+- [`icu_collate_bo()`](https://cynkra.github.io/dd/reference/icu_collate_bo.md)
+  : DuckDB function icu_collate_bo
+- [`icu_collate_br()`](https://cynkra.github.io/dd/reference/icu_collate_br.md)
+  : DuckDB function icu_collate_br
+- [`icu_collate_bs()`](https://cynkra.github.io/dd/reference/icu_collate_bs.md)
+  : DuckDB function icu_collate_bs
+- [`icu_collate_ca()`](https://cynkra.github.io/dd/reference/icu_collate_ca.md)
+  : DuckDB function icu_collate_ca
+- [`icu_collate_ceb()`](https://cynkra.github.io/dd/reference/icu_collate_ceb.md)
+  : DuckDB function icu_collate_ceb
+- [`icu_collate_chr()`](https://cynkra.github.io/dd/reference/icu_collate_chr.md)
+  : DuckDB function icu_collate_chr
+- [`icu_collate_cs()`](https://cynkra.github.io/dd/reference/icu_collate_cs.md)
+  : DuckDB function icu_collate_cs
+- [`icu_collate_cy()`](https://cynkra.github.io/dd/reference/icu_collate_cy.md)
+  : DuckDB function icu_collate_cy
+- [`icu_collate_da()`](https://cynkra.github.io/dd/reference/icu_collate_da.md)
+  : DuckDB function icu_collate_da
+- [`icu_collate_de()`](https://cynkra.github.io/dd/reference/icu_collate_de.md)
+  : DuckDB function icu_collate_de
+- [`icu_collate_de_at()`](https://cynkra.github.io/dd/reference/icu_collate_de_at.md)
+  : DuckDB function icu_collate_de_at
+- [`icu_collate_dsb()`](https://cynkra.github.io/dd/reference/icu_collate_dsb.md)
+  : DuckDB function icu_collate_dsb
+- [`icu_collate_dz()`](https://cynkra.github.io/dd/reference/icu_collate_dz.md)
+  : DuckDB function icu_collate_dz
+- [`icu_collate_ee()`](https://cynkra.github.io/dd/reference/icu_collate_ee.md)
+  : DuckDB function icu_collate_ee
+- [`icu_collate_el()`](https://cynkra.github.io/dd/reference/icu_collate_el.md)
+  : DuckDB function icu_collate_el
+- [`icu_collate_en()`](https://cynkra.github.io/dd/reference/icu_collate_en.md)
+  : DuckDB function icu_collate_en
+- [`icu_collate_en_us()`](https://cynkra.github.io/dd/reference/icu_collate_en_us.md)
+  : DuckDB function icu_collate_en_us
+- [`icu_collate_eo()`](https://cynkra.github.io/dd/reference/icu_collate_eo.md)
+  : DuckDB function icu_collate_eo
+- [`icu_collate_es()`](https://cynkra.github.io/dd/reference/icu_collate_es.md)
+  : DuckDB function icu_collate_es
+- [`icu_collate_et()`](https://cynkra.github.io/dd/reference/icu_collate_et.md)
+  : DuckDB function icu_collate_et
+- [`icu_collate_fa()`](https://cynkra.github.io/dd/reference/icu_collate_fa.md)
+  : DuckDB function icu_collate_fa
+- [`icu_collate_fa_af()`](https://cynkra.github.io/dd/reference/icu_collate_fa_af.md)
+  : DuckDB function icu_collate_fa_af
+- [`icu_collate_ff()`](https://cynkra.github.io/dd/reference/icu_collate_ff.md)
+  : DuckDB function icu_collate_ff
+- [`icu_collate_fi()`](https://cynkra.github.io/dd/reference/icu_collate_fi.md)
+  : DuckDB function icu_collate_fi
+- [`icu_collate_fil()`](https://cynkra.github.io/dd/reference/icu_collate_fil.md)
+  : DuckDB function icu_collate_fil
+- [`icu_collate_fo()`](https://cynkra.github.io/dd/reference/icu_collate_fo.md)
+  : DuckDB function icu_collate_fo
+- [`icu_collate_fr()`](https://cynkra.github.io/dd/reference/icu_collate_fr.md)
+  : DuckDB function icu_collate_fr
+- [`icu_collate_fr_ca()`](https://cynkra.github.io/dd/reference/icu_collate_fr_ca.md)
+  : DuckDB function icu_collate_fr_ca
+- [`icu_collate_fy()`](https://cynkra.github.io/dd/reference/icu_collate_fy.md)
+  : DuckDB function icu_collate_fy
+- [`icu_collate_ga()`](https://cynkra.github.io/dd/reference/icu_collate_ga.md)
+  : DuckDB function icu_collate_ga
+- [`icu_collate_gl()`](https://cynkra.github.io/dd/reference/icu_collate_gl.md)
+  : DuckDB function icu_collate_gl
+- [`icu_collate_gu()`](https://cynkra.github.io/dd/reference/icu_collate_gu.md)
+  : DuckDB function icu_collate_gu
+- [`icu_collate_ha()`](https://cynkra.github.io/dd/reference/icu_collate_ha.md)
+  : DuckDB function icu_collate_ha
+- [`icu_collate_haw()`](https://cynkra.github.io/dd/reference/icu_collate_haw.md)
+  : DuckDB function icu_collate_haw
+- [`icu_collate_he()`](https://cynkra.github.io/dd/reference/icu_collate_he.md)
+  : DuckDB function icu_collate_he
+- [`icu_collate_he_il()`](https://cynkra.github.io/dd/reference/icu_collate_he_il.md)
+  : DuckDB function icu_collate_he_il
+- [`icu_collate_hi()`](https://cynkra.github.io/dd/reference/icu_collate_hi.md)
+  : DuckDB function icu_collate_hi
+- [`icu_collate_hr()`](https://cynkra.github.io/dd/reference/icu_collate_hr.md)
+  : DuckDB function icu_collate_hr
+- [`icu_collate_hsb()`](https://cynkra.github.io/dd/reference/icu_collate_hsb.md)
+  : DuckDB function icu_collate_hsb
+- [`icu_collate_hu()`](https://cynkra.github.io/dd/reference/icu_collate_hu.md)
+  : DuckDB function icu_collate_hu
+- [`icu_collate_hy()`](https://cynkra.github.io/dd/reference/icu_collate_hy.md)
+  : DuckDB function icu_collate_hy
+- [`icu_collate_id()`](https://cynkra.github.io/dd/reference/icu_collate_id.md)
+  : DuckDB function icu_collate_id
+- [`icu_collate_id_id()`](https://cynkra.github.io/dd/reference/icu_collate_id_id.md)
+  : DuckDB function icu_collate_id_id
+- [`icu_collate_ig()`](https://cynkra.github.io/dd/reference/icu_collate_ig.md)
+  : DuckDB function icu_collate_ig
+- [`icu_collate_is()`](https://cynkra.github.io/dd/reference/icu_collate_is.md)
+  : DuckDB function icu_collate_is
+- [`icu_collate_it()`](https://cynkra.github.io/dd/reference/icu_collate_it.md)
+  : DuckDB function icu_collate_it
+- [`icu_collate_ja()`](https://cynkra.github.io/dd/reference/icu_collate_ja.md)
+  : DuckDB function icu_collate_ja
+- [`icu_collate_ka()`](https://cynkra.github.io/dd/reference/icu_collate_ka.md)
+  : DuckDB function icu_collate_ka
+- [`icu_collate_kk()`](https://cynkra.github.io/dd/reference/icu_collate_kk.md)
+  : DuckDB function icu_collate_kk
+- [`icu_collate_kl()`](https://cynkra.github.io/dd/reference/icu_collate_kl.md)
+  : DuckDB function icu_collate_kl
+- [`icu_collate_km()`](https://cynkra.github.io/dd/reference/icu_collate_km.md)
+  : DuckDB function icu_collate_km
+- [`icu_collate_kn()`](https://cynkra.github.io/dd/reference/icu_collate_kn.md)
+  : DuckDB function icu_collate_kn
+- [`icu_collate_ko()`](https://cynkra.github.io/dd/reference/icu_collate_ko.md)
+  : DuckDB function icu_collate_ko
+- [`icu_collate_kok()`](https://cynkra.github.io/dd/reference/icu_collate_kok.md)
+  : DuckDB function icu_collate_kok
+- [`icu_collate_ku()`](https://cynkra.github.io/dd/reference/icu_collate_ku.md)
+  : DuckDB function icu_collate_ku
+- [`icu_collate_ky()`](https://cynkra.github.io/dd/reference/icu_collate_ky.md)
+  : DuckDB function icu_collate_ky
+- [`icu_collate_lb()`](https://cynkra.github.io/dd/reference/icu_collate_lb.md)
+  : DuckDB function icu_collate_lb
+- [`icu_collate_lij()`](https://cynkra.github.io/dd/reference/icu_collate_lij.md)
+  : DuckDB function icu_collate_lij
+- [`icu_collate_lkt()`](https://cynkra.github.io/dd/reference/icu_collate_lkt.md)
+  : DuckDB function icu_collate_lkt
+- [`icu_collate_ln()`](https://cynkra.github.io/dd/reference/icu_collate_ln.md)
+  : DuckDB function icu_collate_ln
+- [`icu_collate_lo()`](https://cynkra.github.io/dd/reference/icu_collate_lo.md)
+  : DuckDB function icu_collate_lo
+- [`icu_collate_lt()`](https://cynkra.github.io/dd/reference/icu_collate_lt.md)
+  : DuckDB function icu_collate_lt
+- [`icu_collate_lv()`](https://cynkra.github.io/dd/reference/icu_collate_lv.md)
+  : DuckDB function icu_collate_lv
+- [`icu_collate_mk()`](https://cynkra.github.io/dd/reference/icu_collate_mk.md)
+  : DuckDB function icu_collate_mk
+- [`icu_collate_ml()`](https://cynkra.github.io/dd/reference/icu_collate_ml.md)
+  : DuckDB function icu_collate_ml
+- [`icu_collate_mn()`](https://cynkra.github.io/dd/reference/icu_collate_mn.md)
+  : DuckDB function icu_collate_mn
+- [`icu_collate_mr()`](https://cynkra.github.io/dd/reference/icu_collate_mr.md)
+  : DuckDB function icu_collate_mr
+- [`icu_collate_ms()`](https://cynkra.github.io/dd/reference/icu_collate_ms.md)
+  : DuckDB function icu_collate_ms
+- [`icu_collate_mt()`](https://cynkra.github.io/dd/reference/icu_collate_mt.md)
+  : DuckDB function icu_collate_mt
+- [`icu_collate_my()`](https://cynkra.github.io/dd/reference/icu_collate_my.md)
+  : DuckDB function icu_collate_my
+- [`icu_collate_nb()`](https://cynkra.github.io/dd/reference/icu_collate_nb.md)
+  : DuckDB function icu_collate_nb
+- [`icu_collate_nb_no()`](https://cynkra.github.io/dd/reference/icu_collate_nb_no.md)
+  : DuckDB function icu_collate_nb_no
+- [`icu_collate_ne()`](https://cynkra.github.io/dd/reference/icu_collate_ne.md)
+  : DuckDB function icu_collate_ne
+- [`icu_collate_nl()`](https://cynkra.github.io/dd/reference/icu_collate_nl.md)
+  : DuckDB function icu_collate_nl
+- [`icu_collate_nn()`](https://cynkra.github.io/dd/reference/icu_collate_nn.md)
+  : DuckDB function icu_collate_nn
+- [`icu_collate_noaccent()`](https://cynkra.github.io/dd/reference/icu_collate_noaccent.md)
+  : DuckDB function icu_collate_noaccent
+- [`icu_collate_nso()`](https://cynkra.github.io/dd/reference/icu_collate_nso.md)
+  : DuckDB function icu_collate_nso
+- [`icu_collate_om()`](https://cynkra.github.io/dd/reference/icu_collate_om.md)
+  : DuckDB function icu_collate_om
+- [`icu_collate_or()`](https://cynkra.github.io/dd/reference/icu_collate_or.md)
+  : DuckDB function icu_collate_or
+- [`icu_collate_pa()`](https://cynkra.github.io/dd/reference/icu_collate_pa.md)
+  : DuckDB function icu_collate_pa
+- [`icu_collate_pa_in()`](https://cynkra.github.io/dd/reference/icu_collate_pa_in.md)
+  : DuckDB function icu_collate_pa_in
+- [`icu_collate_pl()`](https://cynkra.github.io/dd/reference/icu_collate_pl.md)
+  : DuckDB function icu_collate_pl
+- [`icu_collate_ps()`](https://cynkra.github.io/dd/reference/icu_collate_ps.md)
+  : DuckDB function icu_collate_ps
+- [`icu_collate_pt()`](https://cynkra.github.io/dd/reference/icu_collate_pt.md)
+  : DuckDB function icu_collate_pt
+- [`icu_collate_ro()`](https://cynkra.github.io/dd/reference/icu_collate_ro.md)
+  : DuckDB function icu_collate_ro
+- [`icu_collate_ru()`](https://cynkra.github.io/dd/reference/icu_collate_ru.md)
+  : DuckDB function icu_collate_ru
+- [`icu_collate_sa()`](https://cynkra.github.io/dd/reference/icu_collate_sa.md)
+  : DuckDB function icu_collate_sa
+- [`icu_collate_se()`](https://cynkra.github.io/dd/reference/icu_collate_se.md)
+  : DuckDB function icu_collate_se
+- [`icu_collate_si()`](https://cynkra.github.io/dd/reference/icu_collate_si.md)
+  : DuckDB function icu_collate_si
+- [`icu_collate_sk()`](https://cynkra.github.io/dd/reference/icu_collate_sk.md)
+  : DuckDB function icu_collate_sk
+- [`icu_collate_sl()`](https://cynkra.github.io/dd/reference/icu_collate_sl.md)
+  : DuckDB function icu_collate_sl
+- [`icu_collate_smn()`](https://cynkra.github.io/dd/reference/icu_collate_smn.md)
+  : DuckDB function icu_collate_smn
+- [`icu_collate_sq()`](https://cynkra.github.io/dd/reference/icu_collate_sq.md)
+  : DuckDB function icu_collate_sq
+- [`icu_collate_sr()`](https://cynkra.github.io/dd/reference/icu_collate_sr.md)
+  : DuckDB function icu_collate_sr
+- [`icu_collate_sr_ba()`](https://cynkra.github.io/dd/reference/icu_collate_sr_ba.md)
+  : DuckDB function icu_collate_sr_ba
+- [`icu_collate_sr_me()`](https://cynkra.github.io/dd/reference/icu_collate_sr_me.md)
+  : DuckDB function icu_collate_sr_me
+- [`icu_collate_sr_rs()`](https://cynkra.github.io/dd/reference/icu_collate_sr_rs.md)
+  : DuckDB function icu_collate_sr_rs
+- [`icu_collate_st()`](https://cynkra.github.io/dd/reference/icu_collate_st.md)
+  : DuckDB function icu_collate_st
+- [`icu_collate_sv()`](https://cynkra.github.io/dd/reference/icu_collate_sv.md)
+  : DuckDB function icu_collate_sv
+- [`icu_collate_sw()`](https://cynkra.github.io/dd/reference/icu_collate_sw.md)
+  : DuckDB function icu_collate_sw
+- [`icu_collate_ta()`](https://cynkra.github.io/dd/reference/icu_collate_ta.md)
+  : DuckDB function icu_collate_ta
+- [`icu_collate_te()`](https://cynkra.github.io/dd/reference/icu_collate_te.md)
+  : DuckDB function icu_collate_te
+- [`icu_collate_th()`](https://cynkra.github.io/dd/reference/icu_collate_th.md)
+  : DuckDB function icu_collate_th
+- [`icu_collate_tk()`](https://cynkra.github.io/dd/reference/icu_collate_tk.md)
+  : DuckDB function icu_collate_tk
+- [`icu_collate_tn()`](https://cynkra.github.io/dd/reference/icu_collate_tn.md)
+  : DuckDB function icu_collate_tn
+- [`icu_collate_to()`](https://cynkra.github.io/dd/reference/icu_collate_to.md)
+  : DuckDB function icu_collate_to
+- [`icu_collate_tr()`](https://cynkra.github.io/dd/reference/icu_collate_tr.md)
+  : DuckDB function icu_collate_tr
+- [`icu_collate_ug()`](https://cynkra.github.io/dd/reference/icu_collate_ug.md)
+  : DuckDB function icu_collate_ug
+- [`icu_collate_uk()`](https://cynkra.github.io/dd/reference/icu_collate_uk.md)
+  : DuckDB function icu_collate_uk
+- [`icu_collate_ur()`](https://cynkra.github.io/dd/reference/icu_collate_ur.md)
+  : DuckDB function icu_collate_ur
+- [`icu_collate_uz()`](https://cynkra.github.io/dd/reference/icu_collate_uz.md)
+  : DuckDB function icu_collate_uz
+- [`icu_collate_vi()`](https://cynkra.github.io/dd/reference/icu_collate_vi.md)
+  : DuckDB function icu_collate_vi
+- [`icu_collate_wae()`](https://cynkra.github.io/dd/reference/icu_collate_wae.md)
+  : DuckDB function icu_collate_wae
+- [`icu_collate_wo()`](https://cynkra.github.io/dd/reference/icu_collate_wo.md)
+  : DuckDB function icu_collate_wo
+- [`icu_collate_xh()`](https://cynkra.github.io/dd/reference/icu_collate_xh.md)
+  : DuckDB function icu_collate_xh
+- [`icu_collate_yi()`](https://cynkra.github.io/dd/reference/icu_collate_yi.md)
+  : DuckDB function icu_collate_yi
+- [`icu_collate_yo()`](https://cynkra.github.io/dd/reference/icu_collate_yo.md)
+  : DuckDB function icu_collate_yo
+- [`icu_collate_yue()`](https://cynkra.github.io/dd/reference/icu_collate_yue.md)
+  : DuckDB function icu_collate_yue
+- [`icu_collate_yue_cn()`](https://cynkra.github.io/dd/reference/icu_collate_yue_cn.md)
+  : DuckDB function icu_collate_yue_cn
+- [`icu_collate_zh()`](https://cynkra.github.io/dd/reference/icu_collate_zh.md)
+  : DuckDB function icu_collate_zh
+- [`icu_collate_zh_cn()`](https://cynkra.github.io/dd/reference/icu_collate_zh_cn.md)
+  : DuckDB function icu_collate_zh_cn
+- [`icu_collate_zh_hk()`](https://cynkra.github.io/dd/reference/icu_collate_zh_hk.md)
+  : DuckDB function icu_collate_zh_hk
+- [`icu_collate_zh_mo()`](https://cynkra.github.io/dd/reference/icu_collate_zh_mo.md)
+  : DuckDB function icu_collate_zh_mo
+- [`icu_collate_zh_sg()`](https://cynkra.github.io/dd/reference/icu_collate_zh_sg.md)
+  : DuckDB function icu_collate_zh_sg
+- [`icu_collate_zh_tw()`](https://cynkra.github.io/dd/reference/icu_collate_zh_tw.md)
+  : DuckDB function icu_collate_zh_tw
+- [`icu_collate_zu()`](https://cynkra.github.io/dd/reference/icu_collate_zu.md)
+  : DuckDB function icu_collate_zu
+- [`icu_sort_key()`](https://cynkra.github.io/dd/reference/icu_sort_key.md)
+  : DuckDB function icu_sort_key
 - [`import_database()`](https://cynkra.github.io/dd/reference/import_database.md)
   : DuckDB function import_database
 - [`in_search_path()`](https://cynkra.github.io/dd/reference/in_search_path.md)
@@ -921,6 +1649,64 @@ Functions that DuckDB does not assign to a category.
   function isodow
 - [`isoyear()`](https://cynkra.github.io/dd/reference/isoyear.md) :
   DuckDB function isoyear
+- [`json()`](https://cynkra.github.io/dd/reference/json.md) : DuckDB
+  function json
+- [`json_array()`](https://cynkra.github.io/dd/reference/json_array.md)
+  : DuckDB function json_array
+- [`json_array_length()`](https://cynkra.github.io/dd/reference/json_array_length.md)
+  : DuckDB function json_array_length
+- [`json_contains()`](https://cynkra.github.io/dd/reference/json_contains.md)
+  : DuckDB function json_contains
+- [`json_deserialize_sql()`](https://cynkra.github.io/dd/reference/json_deserialize_sql.md)
+  : DuckDB function json_deserialize_sql
+- [`json_each()`](https://cynkra.github.io/dd/reference/json_each.md) :
+  DuckDB function json_each
+- [`json_execute_serialized_sql()`](https://cynkra.github.io/dd/reference/json_execute_serialized_sql.md)
+  : DuckDB function json_execute_serialized_sql
+- [`json_exists()`](https://cynkra.github.io/dd/reference/json_exists.md)
+  : DuckDB function json_exists
+- [`json_extract()`](https://cynkra.github.io/dd/reference/json_extract.md)
+  : DuckDB function json_extract
+- [`json_extract_path()`](https://cynkra.github.io/dd/reference/json_extract_path.md)
+  : DuckDB function json_extract_path
+- [`json_extract_path_text()`](https://cynkra.github.io/dd/reference/json_extract_path_text.md)
+  : DuckDB function json_extract_path_text
+- [`json_extract_string()`](https://cynkra.github.io/dd/reference/json_extract_string.md)
+  : DuckDB function json_extract_string
+- [`json_group_array()`](https://cynkra.github.io/dd/reference/json_group_array.md)
+  : DuckDB function json_group_array
+- [`json_group_object()`](https://cynkra.github.io/dd/reference/json_group_object.md)
+  : DuckDB function json_group_object
+- [`json_group_structure()`](https://cynkra.github.io/dd/reference/json_group_structure.md)
+  : DuckDB function json_group_structure
+- [`json_keys()`](https://cynkra.github.io/dd/reference/json_keys.md) :
+  DuckDB function json_keys
+- [`json_merge_patch()`](https://cynkra.github.io/dd/reference/json_merge_patch.md)
+  : DuckDB function json_merge_patch
+- [`json_object()`](https://cynkra.github.io/dd/reference/json_object.md)
+  : DuckDB function json_object
+- [`json_pretty()`](https://cynkra.github.io/dd/reference/json_pretty.md)
+  : DuckDB function json_pretty
+- [`json_quote()`](https://cynkra.github.io/dd/reference/json_quote.md)
+  : DuckDB function json_quote
+- [`json_serialize_plan()`](https://cynkra.github.io/dd/reference/json_serialize_plan.md)
+  : DuckDB function json_serialize_plan
+- [`json_serialize_sql()`](https://cynkra.github.io/dd/reference/json_serialize_sql.md)
+  : DuckDB function json_serialize_sql
+- [`json_structure()`](https://cynkra.github.io/dd/reference/json_structure.md)
+  : DuckDB function json_structure
+- [`json_transform()`](https://cynkra.github.io/dd/reference/json_transform.md)
+  : DuckDB function json_transform
+- [`json_transform_strict()`](https://cynkra.github.io/dd/reference/json_transform_strict.md)
+  : DuckDB function json_transform_strict
+- [`json_tree()`](https://cynkra.github.io/dd/reference/json_tree.md) :
+  DuckDB function json_tree
+- [`json_type()`](https://cynkra.github.io/dd/reference/json_type.md) :
+  DuckDB function json_type
+- [`json_valid()`](https://cynkra.github.io/dd/reference/json_valid.md)
+  : DuckDB function json_valid
+- [`json_value()`](https://cynkra.github.io/dd/reference/json_value.md)
+  : DuckDB function json_value
 - [`julian()`](https://cynkra.github.io/dd/reference/julian.md) : DuckDB
   function julian
 - [`kahan_sum()`](https://cynkra.github.io/dd/reference/kahan_sum.md) :
@@ -931,6 +1717,12 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function kurtosis_pop
 - [`lag()`](https://cynkra.github.io/dd/reference/lag.md) : DuckDB
   function lag
+- [`lance_fts()`](https://cynkra.github.io/dd/reference/lance_fts.md) :
+  DuckDB function lance_fts
+- [`lance_hybrid_search()`](https://cynkra.github.io/dd/reference/lance_hybrid_search.md)
+  : DuckDB function lance_hybrid_search
+- [`lance_vector_search()`](https://cynkra.github.io/dd/reference/lance_vector_search.md)
+  : DuckDB function lance_vector_search
 - [`last()`](https://cynkra.github.io/dd/reference/last.md) : DuckDB
   function last
 - [`last_day()`](https://cynkra.github.io/dd/reference/last_day.md) :
@@ -943,6 +1735,8 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function least_common_multiple
 - [`len()`](https://cynkra.github.io/dd/reference/len.md) : DuckDB
   function len
+- [`` `<<=`() ``](https://cynkra.github.io/dd/reference/less-than-less-than-equals.md)
+  : DuckDB function \<\<=
 - [`` `<<`() ``](https://cynkra.github.io/dd/reference/less-than-less-than.md)
   : DuckDB function \<\<
 - [`lgamma()`](https://cynkra.github.io/dd/reference/lgamma.md) : DuckDB
@@ -1015,6 +1809,8 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function list_var_samp
 - [`ln()`](https://cynkra.github.io/dd/reference/ln.md) : DuckDB
   function ln
+- [`load_aws_credentials()`](https://cynkra.github.io/dd/reference/load_aws_credentials.md)
+  : DuckDB function load_aws_credentials
 - [`log()`](https://cynkra.github.io/dd/reference/log.md) : DuckDB
   function log
 - [`log10()`](https://cynkra.github.io/dd/reference/log10.md) : DuckDB
@@ -1033,6 +1829,8 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function make_timestamp_ms
 - [`make_timestamp_ns()`](https://cynkra.github.io/dd/reference/make_timestamp_ns.md)
   : DuckDB function make_timestamp_ns
+- [`make_timestamptz()`](https://cynkra.github.io/dd/reference/make_timestamptz.md)
+  : DuckDB function make_timestamptz
 - [`make_type()`](https://cynkra.github.io/dd/reference/make_type.md) :
   DuckDB function make_type
 - [`map()`](https://cynkra.github.io/dd/reference/map.md) : DuckDB
@@ -1089,8 +1887,24 @@ Functions that DuckDB does not assign to a category.
   DuckDB function monthname
 - [`multiply()`](https://cynkra.github.io/dd/reference/multiply.md) :
   DuckDB function multiply
+- [`murmur3_32()`](https://cynkra.github.io/dd/reference/murmur3_32.md)
+  : DuckDB function murmur3_32
+- [`mysql_clear_cache()`](https://cynkra.github.io/dd/reference/mysql_clear_cache.md)
+  : DuckDB function mysql_clear_cache
+- [`mysql_debug_execution_plan()`](https://cynkra.github.io/dd/reference/mysql_debug_execution_plan.md)
+  : DuckDB function mysql_debug_execution_plan
+- [`mysql_execute()`](https://cynkra.github.io/dd/reference/mysql_execute.md)
+  : DuckDB function mysql_execute
+- [`mysql_explain_federated()`](https://cynkra.github.io/dd/reference/mysql_explain_federated.md)
+  : DuckDB function mysql_explain_federated
+- [`mysql_query()`](https://cynkra.github.io/dd/reference/mysql_query.md)
+  : DuckDB function mysql_query
 - [`nanosecond()`](https://cynkra.github.io/dd/reference/nanosecond.md)
   : DuckDB function nanosecond
+- [`netmask()`](https://cynkra.github.io/dd/reference/netmask.md) :
+  DuckDB function netmask
+- [`network()`](https://cynkra.github.io/dd/reference/network.md) :
+  DuckDB function network
 - [`nextafter()`](https://cynkra.github.io/dd/reference/nextafter.md) :
   DuckDB function nextafter
 - [`nextval()`](https://cynkra.github.io/dd/reference/nextval.md) :
@@ -1127,10 +1941,14 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function parquet_scan
 - [`parquet_schema()`](https://cynkra.github.io/dd/reference/parquet_schema.md)
   : DuckDB function parquet_schema
+- [`parse_delta_filter_logline()`](https://cynkra.github.io/dd/reference/parse_delta_filter_logline.md)
+  : DuckDB function parse_delta_filter_logline
 - [`parse_duckdb_log_message()`](https://cynkra.github.io/dd/reference/parse_duckdb_log_message.md)
   : DuckDB function parse_duckdb_log_message
 - [`percent_rank()`](https://cynkra.github.io/dd/reference/percent_rank.md)
   : DuckDB function percent_rank
+- [`pg_clear_cache()`](https://cynkra.github.io/dd/reference/pg_clear_cache.md)
+  : DuckDB function pg_clear_cache
 - [`pg_collation_is_visible()`](https://cynkra.github.io/dd/reference/pg_collation_is_visible.md)
   : DuckDB function pg_collation_is_visible
 - [`pg_conf_load_time()`](https://cynkra.github.io/dd/reference/pg_conf_load_time.md)
@@ -1165,6 +1983,8 @@ Functions that DuckDB does not assign to a category.
   DuckDB function pg_sleep
 - [`pg_table_is_visible()`](https://cynkra.github.io/dd/reference/pg_table_is_visible.md)
   : DuckDB function pg_table_is_visible
+- [`pg_timezone_names()`](https://cynkra.github.io/dd/reference/pg_timezone_names.md)
+  : DuckDB function pg_timezone_names
 - [`pg_ts_config_is_visible()`](https://cynkra.github.io/dd/reference/pg_ts_config_is_visible.md)
   : DuckDB function pg_ts_config_is_visible
 - [`pg_ts_dict_is_visible()`](https://cynkra.github.io/dd/reference/pg_ts_dict_is_visible.md)
@@ -1181,16 +2001,36 @@ Functions that DuckDB does not assign to a category.
   function pi
 - [`platform()`](https://cynkra.github.io/dd/reference/platform.md) :
   DuckDB function platform
+- [`postgres_attach()`](https://cynkra.github.io/dd/reference/postgres_attach.md)
+  : DuckDB function postgres_attach
+- [`postgres_configure_pool()`](https://cynkra.github.io/dd/reference/postgres_configure_pool.md)
+  : DuckDB function postgres_configure_pool
+- [`postgres_execute()`](https://cynkra.github.io/dd/reference/postgres_execute.md)
+  : DuckDB function postgres_execute
+- [`postgres_hstore_get()`](https://cynkra.github.io/dd/reference/postgres_hstore_get.md)
+  : DuckDB function postgres_hstore_get
+- [`postgres_hstore_to_json()`](https://cynkra.github.io/dd/reference/postgres_hstore_to_json.md)
+  : DuckDB function postgres_hstore_to_json
+- [`postgres_query()`](https://cynkra.github.io/dd/reference/postgres_query.md)
+  : DuckDB function postgres_query
+- [`postgres_scan()`](https://cynkra.github.io/dd/reference/postgres_scan.md)
+  : DuckDB function postgres_scan
+- [`postgres_scan_pushdown()`](https://cynkra.github.io/dd/reference/postgres_scan_pushdown.md)
+  : DuckDB function postgres_scan_pushdown
 - [`pow()`](https://cynkra.github.io/dd/reference/pow.md) : DuckDB
   function pow
 - [`pragma_collations()`](https://cynkra.github.io/dd/reference/pragma_collations.md)
   : DuckDB function pragma_collations
 - [`pragma_database_size()`](https://cynkra.github.io/dd/reference/pragma_database_size.md)
   : DuckDB function pragma_database_size
+- [`pragma_hnsw_index_info()`](https://cynkra.github.io/dd/reference/pragma_hnsw_index_info.md)
+  : DuckDB function pragma_hnsw_index_info
 - [`pragma_metadata_info()`](https://cynkra.github.io/dd/reference/pragma_metadata_info.md)
   : DuckDB function pragma_metadata_info
 - [`pragma_platform()`](https://cynkra.github.io/dd/reference/pragma_platform.md)
   : DuckDB function pragma_platform
+- [`pragma_rtree_index_info()`](https://cynkra.github.io/dd/reference/pragma_rtree_index_info.md)
+  : DuckDB function pragma_rtree_index_info
 - [`pragma_show()`](https://cynkra.github.io/dd/reference/pragma_show.md)
   : DuckDB function pragma_show
 - [`pragma_storage_info()`](https://cynkra.github.io/dd/reference/pragma_storage_info.md)
@@ -1203,6 +2043,28 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function pragma_version
 - [`product()`](https://cynkra.github.io/dd/reference/product.md) :
   DuckDB function product
+- [`quack_active_connections()`](https://cynkra.github.io/dd/reference/quack_active_connections.md)
+  : DuckDB function quack_active_connections
+- [`quack_check_token()`](https://cynkra.github.io/dd/reference/quack_check_token.md)
+  : DuckDB function quack_check_token
+- [`quack_clear_cache()`](https://cynkra.github.io/dd/reference/quack_clear_cache.md)
+  : DuckDB function quack_clear_cache
+- [`quack_identify()`](https://cynkra.github.io/dd/reference/quack_identify.md)
+  : DuckDB function quack_identify
+- [`quack_nop_authorization()`](https://cynkra.github.io/dd/reference/quack_nop_authorization.md)
+  : DuckDB function quack_nop_authorization
+- [`quack_query()`](https://cynkra.github.io/dd/reference/quack_query.md)
+  : DuckDB function quack_query
+- [`quack_query_by_name()`](https://cynkra.github.io/dd/reference/quack_query_by_name.md)
+  : DuckDB function quack_query_by_name
+- [`quack_serve()`](https://cynkra.github.io/dd/reference/quack_serve.md)
+  : DuckDB function quack_serve
+- [`quack_server_list()`](https://cynkra.github.io/dd/reference/quack_server_list.md)
+  : DuckDB function quack_server_list
+- [`quack_stop()`](https://cynkra.github.io/dd/reference/quack_stop.md)
+  : DuckDB function quack_stop
+- [`quack_uri_parser()`](https://cynkra.github.io/dd/reference/quack_uri_parser.md)
+  : DuckDB function quack_uri_parser
 - [`quantile_cont()`](https://cynkra.github.io/dd/reference/quantile_cont.md)
   : DuckDB function quantile_cont
 - [`quantile_disc()`](https://cynkra.github.io/dd/reference/quantile_disc.md)
@@ -1223,6 +2085,8 @@ Functions that DuckDB does not assign to a category.
   function rank
 - [`rank_dense()`](https://cynkra.github.io/dd/reference/rank_dense.md)
   : DuckDB function rank_dense
+- [`read_avro()`](https://cynkra.github.io/dd/reference/read_avro.md) :
+  DuckDB function read_avro
 - [`read_blob()`](https://cynkra.github.io/dd/reference/read_blob.md) :
   DuckDB function read_blob
 - [`read_csv()`](https://cynkra.github.io/dd/reference/read_csv.md) :
@@ -1231,10 +2095,30 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function read_csv_auto
 - [`read_duckdb()`](https://cynkra.github.io/dd/reference/read_duckdb.md)
   : DuckDB function read_duckdb
+- [`read_json()`](https://cynkra.github.io/dd/reference/read_json.md) :
+  DuckDB function read_json
+- [`read_json_auto()`](https://cynkra.github.io/dd/reference/read_json_auto.md)
+  : DuckDB function read_json_auto
+- [`read_json_objects()`](https://cynkra.github.io/dd/reference/read_json_objects.md)
+  : DuckDB function read_json_objects
+- [`read_json_objects_auto()`](https://cynkra.github.io/dd/reference/read_json_objects_auto.md)
+  : DuckDB function read_json_objects_auto
+- [`read_ndjson()`](https://cynkra.github.io/dd/reference/read_ndjson.md)
+  : DuckDB function read_ndjson
+- [`read_ndjson_auto()`](https://cynkra.github.io/dd/reference/read_ndjson_auto.md)
+  : DuckDB function read_ndjson_auto
+- [`read_ndjson_objects()`](https://cynkra.github.io/dd/reference/read_ndjson_objects.md)
+  : DuckDB function read_ndjson_objects
 - [`read_parquet()`](https://cynkra.github.io/dd/reference/read_parquet.md)
   : DuckDB function read_parquet
+- [`read_postgres_binary()`](https://cynkra.github.io/dd/reference/read_postgres_binary.md)
+  : DuckDB function read_postgres_binary
 - [`read_text()`](https://cynkra.github.io/dd/reference/read_text.md) :
   DuckDB function read_text
+- [`read_vortex()`](https://cynkra.github.io/dd/reference/read_vortex.md)
+  : DuckDB function read_vortex
+- [`read_xlsx()`](https://cynkra.github.io/dd/reference/read_xlsx.md) :
+  DuckDB function read_xlsx
 - [`regexp_split_to_table()`](https://cynkra.github.io/dd/reference/regexp_split_to_table.md)
   : DuckDB function regexp_split_to_table
 - [`regr_avgx()`](https://cynkra.github.io/dd/reference/regr_avgx.md) :
@@ -1257,6 +2141,10 @@ Functions that DuckDB does not assign to a category.
   DuckDB function regr_syy
 - [`remap_struct()`](https://cynkra.github.io/dd/reference/remap_struct.md)
   : DuckDB function remap_struct
+- [`remove_iceberg_schema_properties()`](https://cynkra.github.io/dd/reference/remove_iceberg_schema_properties.md)
+  : DuckDB function remove_iceberg_schema_properties
+- [`remove_iceberg_table_properties()`](https://cynkra.github.io/dd/reference/remove_iceberg_table_properties.md)
+  : DuckDB function remove_iceberg_table_properties
 - [`repeat_row()`](https://cynkra.github.io/dd/reference/repeat_row.md)
   : DuckDB function repeat_row
 - [`replace_type()`](https://cynkra.github.io/dd/reference/replace_type.md)
@@ -1273,6 +2161,12 @@ Functions that DuckDB does not assign to a category.
   function row
 - [`row_number()`](https://cynkra.github.io/dd/reference/row_number.md)
   : DuckDB function row_number
+- [`row_to_json()`](https://cynkra.github.io/dd/reference/row_to_json.md)
+  : DuckDB function row_to_json
+- [`rtree_index_dump()`](https://cynkra.github.io/dd/reference/rtree_index_dump.md)
+  : DuckDB function rtree_index_dump
+- [`rtree_index_scan()`](https://cynkra.github.io/dd/reference/rtree_index_scan.md)
+  : DuckDB function rtree_index_scan
 - [`second()`](https://cynkra.github.io/dd/reference/second.md) : DuckDB
   function second
 - [`sem()`](https://cynkra.github.io/dd/reference/sem.md) : DuckDB
@@ -1283,8 +2177,14 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function session_user
 - [`set_bit()`](https://cynkra.github.io/dd/reference/set_bit.md) :
   DuckDB function set_bit
+- [`set_iceberg_schema_properties()`](https://cynkra.github.io/dd/reference/set_iceberg_schema_properties.md)
+  : DuckDB function set_iceberg_schema_properties
+- [`set_iceberg_table_properties()`](https://cynkra.github.io/dd/reference/set_iceberg_table_properties.md)
+  : DuckDB function set_iceberg_table_properties
 - [`setseed()`](https://cynkra.github.io/dd/reference/setseed.md) :
   DuckDB function setseed
+- [`shapefile_meta()`](https://cynkra.github.io/dd/reference/shapefile_meta.md)
+  : DuckDB function shapefile_meta
 - [`shobj_description()`](https://cynkra.github.io/dd/reference/shobj_description.md)
   : DuckDB function shobj_description
 - [`show()`](https://cynkra.github.io/dd/reference/show.md) : DuckDB
@@ -1313,16 +2213,32 @@ Functions that DuckDB does not assign to a category.
   DuckDB function sniff_csv
 - [`split_part()`](https://cynkra.github.io/dd/reference/split_part.md)
   : DuckDB function split_part
+- [`sql_auto_complete()`](https://cynkra.github.io/dd/reference/sql_auto_complete.md)
+  : DuckDB function sql_auto_complete
+- [`sqlite_attach()`](https://cynkra.github.io/dd/reference/sqlite_attach.md)
+  : DuckDB function sqlite_attach
+- [`sqlite_query()`](https://cynkra.github.io/dd/reference/sqlite_query.md)
+  : DuckDB function sqlite_query
+- [`sqlite_scan()`](https://cynkra.github.io/dd/reference/sqlite_scan.md)
+  : DuckDB function sqlite_scan
 - [`sqrt()`](https://cynkra.github.io/dd/reference/sqrt.md) : DuckDB
   function sqrt
 - [`st_setcrs()`](https://cynkra.github.io/dd/reference/st_setcrs.md) :
   DuckDB function st_setcrs
+- [`start_ui()`](https://cynkra.github.io/dd/reference/start_ui.md) :
+  DuckDB function start_ui
+- [`start_ui_server()`](https://cynkra.github.io/dd/reference/start_ui_server.md)
+  : DuckDB function start_ui_server
 - [`stats()`](https://cynkra.github.io/dd/reference/stats.md) : DuckDB
   function stats
 - [`stddev_pop()`](https://cynkra.github.io/dd/reference/stddev_pop.md)
   : DuckDB function stddev_pop
 - [`stddev_samp()`](https://cynkra.github.io/dd/reference/stddev_samp.md)
   : DuckDB function stddev_samp
+- [`stem()`](https://cynkra.github.io/dd/reference/stem.md) : DuckDB
+  function stem
+- [`stop_ui_server()`](https://cynkra.github.io/dd/reference/stop_ui_server.md)
+  : DuckDB function stop_ui_server
 - [`storage_info()`](https://cynkra.github.io/dd/reference/storage_info.md)
   : DuckDB function storage_info
 - [`strftime()`](https://cynkra.github.io/dd/reference/strftime.md) :
@@ -1371,6 +2287,8 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function test_all_types
 - [`test_vector_types()`](https://cynkra.github.io/dd/reference/test_vector_types.md)
   : DuckDB function test_vector_types
+- [`text()`](https://cynkra.github.io/dd/reference/text.md) : DuckDB
+  function text
 - [`time_bucket()`](https://cynkra.github.io/dd/reference/time_bucket.md)
   : DuckDB function time_bucket
 - [`timetz_byte_comparable()`](https://cynkra.github.io/dd/reference/timetz_byte_comparable.md)
@@ -1389,6 +2307,8 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function to_decades
 - [`to_hours()`](https://cynkra.github.io/dd/reference/to_hours.md) :
   DuckDB function to_hours
+- [`to_json()`](https://cynkra.github.io/dd/reference/to_json.md) :
+  DuckDB function to_json
 - [`to_microseconds()`](https://cynkra.github.io/dd/reference/to_microseconds.md)
   : DuckDB function to_microseconds
 - [`to_millennia()`](https://cynkra.github.io/dd/reference/to_millennia.md)
@@ -1409,6 +2329,20 @@ Functions that DuckDB does not assign to a category.
   DuckDB function to_weeks
 - [`to_years()`](https://cynkra.github.io/dd/reference/to_years.md) :
   DuckDB function to_years
+- [`today()`](https://cynkra.github.io/dd/reference/today.md) : DuckDB
+  function today
+- [`tpcds()`](https://cynkra.github.io/dd/reference/tpcds.md) : DuckDB
+  function tpcds
+- [`tpcds_answers()`](https://cynkra.github.io/dd/reference/tpcds_answers.md)
+  : DuckDB function tpcds_answers
+- [`tpcds_queries()`](https://cynkra.github.io/dd/reference/tpcds_queries.md)
+  : DuckDB function tpcds_queries
+- [`tpch()`](https://cynkra.github.io/dd/reference/tpch.md) : DuckDB
+  function tpch
+- [`tpch_answers()`](https://cynkra.github.io/dd/reference/tpch_answers.md)
+  : DuckDB function tpch_answers
+- [`tpch_queries()`](https://cynkra.github.io/dd/reference/tpch_queries.md)
+  : DuckDB function tpch_queries
 - [`trunc()`](https://cynkra.github.io/dd/reference/trunc.md) : DuckDB
   function trunc
 - [`truncate_duckdb_logs()`](https://cynkra.github.io/dd/reference/truncate_duckdb_logs.md)
@@ -1427,12 +2361,18 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function txid_current
 - [`typeof()`](https://cynkra.github.io/dd/reference/typeof.md) : DuckDB
   function typeof
+- [`ui_is_started()`](https://cynkra.github.io/dd/reference/ui_is_started.md)
+  : DuckDB function ui_is_started
 - [`union_extract()`](https://cynkra.github.io/dd/reference/union_extract.md)
   : DuckDB function union_extract
 - [`union_tag()`](https://cynkra.github.io/dd/reference/union_tag.md) :
   DuckDB function union_tag
 - [`union_value()`](https://cynkra.github.io/dd/reference/union_value.md)
   : DuckDB function union_value
+- [`unity_catalog_checkpoint_table()`](https://cynkra.github.io/dd/reference/unity_catalog_checkpoint_table.md)
+  : DuckDB function unity_catalog_checkpoint_table
+- [`unity_catalog_force_checkpoint_table()`](https://cynkra.github.io/dd/reference/unity_catalog_force_checkpoint_table.md)
+  : DuckDB function unity_catalog_force_checkpoint_table
 - [`unnest()`](https://cynkra.github.io/dd/reference/unnest.md) : DuckDB
   function unnest
 - [`user()`](https://cynkra.github.io/dd/reference/user.md) : DuckDB
@@ -1469,6 +2409,12 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function verify_serializer
 - [`version()`](https://cynkra.github.io/dd/reference/version.md) :
   DuckDB function version
+- [`vortex_scan()`](https://cynkra.github.io/dd/reference/vortex_scan.md)
+  : DuckDB function vortex_scan
+- [`vss_join()`](https://cynkra.github.io/dd/reference/vss_join.md) :
+  DuckDB function vss_join
+- [`vss_match()`](https://cynkra.github.io/dd/reference/vss_match.md) :
+  DuckDB function vss_match
 - [`wavg()`](https://cynkra.github.io/dd/reference/wavg.md) : DuckDB
   function wavg
 - [`week()`](https://cynkra.github.io/dd/reference/week.md) : DuckDB
@@ -1481,6 +2427,10 @@ Functions that DuckDB does not assign to a category.
   : DuckDB function weighted_avg
 - [`which_secret()`](https://cynkra.github.io/dd/reference/which_secret.md)
   : DuckDB function which_secret
+- [`whoami()`](https://cynkra.github.io/dd/reference/whoami.md) : DuckDB
+  function whoami
+- [`write_blob()`](https://cynkra.github.io/dd/reference/write_blob.md)
+  : DuckDB function write_blob
 - [`write_log()`](https://cynkra.github.io/dd/reference/write_log.md) :
   DuckDB function write_log
 - [`xor()`](https://cynkra.github.io/dd/reference/xor.md) : DuckDB

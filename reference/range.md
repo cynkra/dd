@@ -37,6 +37,8 @@ range(start, stop, step)
 
 - `range(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)`
 
+- `` range(col0 = `TIMESTAMP WITH TIME ZONE`, col1 = `TIMESTAMP WITH TIME ZONE`, col2 = INTERVAL) ``
+
 - `range(start = BIGINT)`
 
 - `range(start = BIGINT, stop = BIGINT)`
@@ -46,6 +48,31 @@ range(start, stop, step)
 - `range(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)`
 
 - `` range(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL) ``
+
+## Provided by
+
+- `range(col0 = BIGINT)`: built in
+
+- `range(col0 = BIGINT, col1 = BIGINT)`: built in
+
+- `range(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT)`: built in
+
+- `range(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)`: built in
+
+- `` range(col0 = `TIMESTAMP WITH TIME ZONE`, col1 = `TIMESTAMP WITH TIME ZONE`, col2 = INTERVAL) ``:
+  `icu`
+
+- `range(start = BIGINT)`: built in
+
+- `range(start = BIGINT, stop = BIGINT)`: built in
+
+- `range(start = BIGINT, stop = BIGINT, step = BIGINT)`: built in
+
+- `range(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)`: built
+  in
+
+- `` range(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL) ``:
+  built in
 
 ## SQL examples
 

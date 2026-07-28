@@ -37,6 +37,8 @@ generate_series(start, stop, step)
 
 - `generate_series(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)`
 
+- `` generate_series(col0 = `TIMESTAMP WITH TIME ZONE`, col1 = `TIMESTAMP WITH TIME ZONE`, col2 = INTERVAL) ``
+
 - `generate_series(start = BIGINT)`
 
 - `generate_series(start = BIGINT, stop = BIGINT)`
@@ -46,6 +48,34 @@ generate_series(start, stop, step)
 - `generate_series(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)`
 
 - `` generate_series(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL) ``
+
+## Provided by
+
+- `generate_series(col0 = BIGINT)`: built in
+
+- `generate_series(col0 = BIGINT, col1 = BIGINT)`: built in
+
+- `generate_series(col0 = BIGINT, col1 = BIGINT, col2 = BIGINT)`: built
+  in
+
+- `generate_series(col0 = TIMESTAMP, col1 = TIMESTAMP, col2 = INTERVAL)`:
+  built in
+
+- `` generate_series(col0 = `TIMESTAMP WITH TIME ZONE`, col1 = `TIMESTAMP WITH TIME ZONE`, col2 = INTERVAL) ``:
+  `icu`
+
+- `generate_series(start = BIGINT)`: built in
+
+- `generate_series(start = BIGINT, stop = BIGINT)`: built in
+
+- `generate_series(start = BIGINT, stop = BIGINT, step = BIGINT)`: built
+  in
+
+- `generate_series(start = TIMESTAMP, stop = TIMESTAMP, step = INTERVAL)`:
+  built in
+
+- `` generate_series(start = `TIMESTAMP WITH TIME ZONE`, stop = `TIMESTAMP WITH TIME ZONE`, step = INTERVAL) ``:
+  built in
 
 ## SQL examples
 

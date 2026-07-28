@@ -1,0 +1,54 @@
+# DuckDB function ST_TileEnvelope
+
+The `ST_TileEnvelope` scalar function generates tile envelope
+rectangular polygons from specified zoom level and tile indices.
+
+This is used in MVT generation to select the features corresponding to
+the tile extent. The envelope is in the Web Mercator coordinate
+reference system (EPSG:3857). The tile pyramid starts at zoom level 0,
+corresponding to a single tile for the world. Each zoom level doubles
+the number of tiles in each direction, such that zoom level 1 is 2 tiles
+wide by 2 tiles high, zoom level 2 is 4 tiles wide by 4 tiles high, and
+so on. Tile indices start at `[x=0, y=0]` at the top left, and increase
+down and right. For example, at zoom level 2, the top right tile is
+`[x=3, y=0]`, the bottom left tile is `[x=0, y=3]`, and the bottom right
+is `[x=3, y=3]`.
+
+    SELECT ST_TileEnvelope(2, 3, 1);
+    ```.
+
+
+    [x=0, y=0]: R:x=0,%20y=0
+    [x=3, y=0]: R:x=3,%20y=0
+    [x=0, y=3]: R:x=0,%20y=3
+    [x=3, y=3]: R:x=3,%20y=3
+
+## Usage
+
+``` r
+ST_TileEnvelope(tile_zoom, tile_x, tile_y)
+```
+
+## Arguments
+
+- tile_zoom, tile_x, tile_y:
+
+  `INTEGER`
+
+## Value
+
+`GEOMETRY`
+
+## Provided by
+
+The `spatial` extension (`LOAD spatial;`).
+
+## SQL examples
+
+    SELECT ST_TileEnvelope(2, 3, 1);
+    -- +-----------------------------------------------------------------------------------------------------------+
+    -- |                                         st_tileenvelope(2, 3, 1)                                          |
+    -- |                                                 geometry                                                  |
+    -- +-----------------------------------------------------------------------------------------------------------+
+    -- | POLYGON ((1.00188E+07 0, 1.00188E+07 1.00188E+07, 2.00375E+07 1.00188E+07, 2.00375E+07 0, 1.00188E+07 0)) |
+    -- +-----------------------------------------------------------------------------------------------------------+

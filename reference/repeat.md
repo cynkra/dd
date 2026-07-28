@@ -14,16 +14,16 @@
 ## Usage
 
 ``` r
-repeat col0
+repeat string
 ```
 
 ## Arguments
 
-- col0:
+- string:
 
-  `ANY`
+  `VARCHAR`
 
-- col1:
+- count:
 
   `BIGINT`
 
