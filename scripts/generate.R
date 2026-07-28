@@ -813,15 +813,17 @@ no_export <- c("format", "+", "-", "length")
 # An Rd `\alias{}`, though, is documentation, not an object. Documenting the name
 # on its alias group's page makes `?`<->`` resolve to the same topic as
 # `list_distance()` while nothing of that name ever enters the namespace for the
-# check to find. Such names are correspondingly absent from `NAMESPACE` and from
-# the `dd` list, both of which can only hold real objects.
-no_implement <- c("<->")
+# check to find. Such names are correspondingly absent from `NAMESPACE`, and
+# their entry in the `dd` list points at the group's representative function
+# instead (the check only inspects namespace bindings, so a list *element name*
+# is as safe as an Rd alias).
+no_object <- c("<->")
 
 # Such a name can only ride along on a page some *other* member of its alias
 # group owns, because it emits no primary block of its own. `pick_rep()` prefers
 # alphanumeric names, so this holds today; assert it so a future addition fails
 # loudly here instead of silently producing an `@rdname` to a missing topic.
-stopifnot(!any(funs$rep_name %in% no_implement))
+stopifnot(!any(funs$rep_name %in% no_object))
 
 code <-
   funs |>
@@ -859,11 +861,11 @@ code <-
 
     )"
     ),
-    # Unimplemented names document the name and nothing else: a `NULL` block
+    # Objectless names document the name and nothing else: a `NULL` block
     # named after the function and routed to the group's page, so roxygen2
     # records an `\alias{{}}` there without an object being defined. (roxygen2
     # requires `@name` on a `NULL` block; `@rdname` keeps it on the same page.)
-    no_impl_roxy = glue(
+    no_object_roxy = glue(
       r"(
     #' @rdname {rd_name}
     #' @name {function_name}
@@ -872,7 +874,7 @@ code <-
     )"
     ),
     roxy = case_when(
-      function_name %in% no_implement ~ no_impl_roxy,
+      function_name %in% no_object ~ no_object_roxy,
       is_primary ~ primary_roxy,
       .default = alias_roxy
     )
@@ -903,12 +905,19 @@ code <- c(
 
 writeLines(code, "R/duckdb-funs.R")
 
-# The `dd` list can only hold real objects, so the documentation-only names are
-# excluded.
-dd_names <- sort(
-  setdiff(funs$function_name[parsed], no_implement),
-  method = "radix"
-)
+# Each name maps to the function that implements it -- itself, except for the
+# `no_object` names, whose entry points at the group's representative function
+# (e.g. `dd$"<->"` is `list_distance`).
+dd_entries <-
+  tibble(
+    name = funs$function_name[parsed],
+    value = if_else(
+      funs$function_name[parsed] %in% no_object,
+      funs$rep_name[parsed],
+      funs$function_name[parsed]
+    )
+  )
+dd_entries <- dd_entries[order(dd_entries$name, method = "radix"), ]
 
 dd_code <- glue(
   r"(
@@ -920,7 +929,7 @@ dd_code <- glue(
   #' @examples
   #' dd[1:3]
   dd <- base::list(
-  {paste0("  ", tibble:::tick_if_needed(dd_names), " = ", tibble:::tick_if_needed(dd_names), collapse = ",\n")}
+  {paste0("  ", tibble:::tick_if_needed(dd_entries$name), " = ", tibble:::tick_if_needed(dd_entries$value), collapse = ",\n")}
   )
   )"
 )
