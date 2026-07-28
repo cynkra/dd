@@ -26,6 +26,16 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{SELECT ST_Dump('MULTIPOINT(1 2, 3 4)'::GEOMETRY);
+-- [\{'geom': 'POINT(1 2)', 'path': [0]\}, \{'geom': 'POINT(3 4)', 'path': [1]\}]
+-- 
+-- SELECT unnest(ST_Dump('MULTIPOINT(1 2, 3 4)'::GEOMETRY), recursive := true);
+-- -- +-------------+---------+
+-- -- |    geom     |  path   |
+-- -- |  geometry   | int32[] |
+-- -- +-------------+---------+
+-- -- | POINT (1 2) | [1]     |
+-- -- | POINT (3 4) | [2]     |
+-- -- +-------------+---------+
 }\if{html}{\out{</div>}}
 }
 

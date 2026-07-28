@@ -24,6 +24,7 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{SELECT ST_GeomFromGeoJSON('\{"type": "Point", "coordinates": [1.0, 2.0]\}');
+-- POINT (1 2)
 }\if{html}{\out{</div>}}
 }
 

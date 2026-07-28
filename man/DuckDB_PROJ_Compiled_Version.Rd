@@ -21,12 +21,12 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{SELECT duckdb_proj_compiled_version();
-┌────────────────────────────────┐
-│ duckdb_proj_compiled_version() │
-│            varchar             │
-├────────────────────────────────┤
-│ Rel. 9.1.1, December 1st, 2022 │
-└────────────────────────────────┘
+-- +--------------------------------+
+-- | duckdb_proj_compiled_version() |
+-- |            varchar             |
+-- +--------------------------------+
+-- | Rel. 9.1.1, December 1st, 2022 |
+-- +--------------------------------+
 }\if{html}{\out{</div>}}
 }
 

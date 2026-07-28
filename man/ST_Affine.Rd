@@ -77,6 +77,15 @@ SELECT ST_Affine(ST_Point(1, 1),
                  1, 0,   -- a, b
                  0, 1,   -- d, e
                  2, 3);  -- xoff, yoff
+-- POINT (3 4)
+-- 
+-- -- Scale a geometry by factor 2 in X and Y
+-- SELECT ST_Affine(ST_Point(1, 1),
+--                  2, 0, 0,   -- a, b, c
+--                  0, 2, 0,   -- d, e, f
+--                  0, 0, 1,   -- g, h, i
+--                  0, 0, 0);  -- xoff, yoff, zoff
+-- POINT (2 2)
 }\if{html}{\out{</div>}}
 }
 

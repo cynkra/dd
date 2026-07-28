@@ -41,6 +41,7 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{SELECT ST_AsText(ST_MakePoint(143.3, -24.2));
+-- POINT (143.3 -24.2)
 }\if{html}{\out{</div>}}
 }
 

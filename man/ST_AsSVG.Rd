@@ -34,6 +34,7 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{SELECT ST_AsSVG('POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))'::GEOMETRY, false, 15);
+-- M 0 0 L 0 -1 1 -1 1 0 Z
 }\if{html}{\out{</div>}}
 }
 

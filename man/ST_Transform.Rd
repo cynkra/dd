@@ -61,6 +61,40 @@ SELECT
         'EPSG:4326',
         'EPSG:3857'
     );
+-- POINT (544615.0239773799 6867874.103539125)
+-- 
+-- -- Alternatively, let's say we got our input point from e.g. a GeoJSON file,
+-- -- which uses WGS84 but with [longitude, latitude] axis order. We can use the
+-- -- `always_xy` parameter to force the input geometry to be interpreted as having
+-- -- a [northing, easting] axis order instead, even though the source coordinate
+-- -- reference system definition (WGS84) says otherwise.
+-- 
+-- SELECT
+--     ST_Transform(
+--         -- note the axis order is reversed here
+--         st_point(4.892360, 52.373123),
+--         'EPSG:4326',
+--         'EPSG:3857',
+--         always_xy := true
+--     );
+-- POINT (544615.0239773799 6867874.103539125)
+-- 
+-- -- Transform a geometry from OSG36 British National Grid EPSG:27700 to EPSG:4326 WGS84
+-- -- Standard transform is often fine for the first few decimal places before being wrong
+-- -- which could result in an error starting at about 10m and possibly much more
+-- SELECT ST_Transform(bng, 'EPSG:27700', 'EPSG:4326', xy := true) AS without_grid_file
+-- FROM (SELECT ST_GeomFromText('POINT( 170370.718 11572.405 )') AS bng);
+-- POINT (-5.202992651563592 49.96007490162923)
+-- 
+-- -- By using an official NTv2 grid file, we can reduce the error down around the 9th decimal place
+-- -- which in theory is below a millimetre, and in practise unlikely that your coordinates are that precise
+-- -- British National Grid "NTv2 format files" download available here:
+-- -- https://www.ordnancesurvey.co.uk/products/os-net/for-developers
+-- SELECT ST_Transform(bng
+--     , '+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +units=m +no_defs +nadgrids=/full/path/to/OSTN15-NTv2/OSTN15_NTv2_OSGBtoETRS.gsb +type=crs'
+--     , 'EPSG:4326', xy := true) AS with_grid_file
+-- FROM (SELECT ST_GeomFromText('POINT( 170370.718 11572.405 )') AS bng) t;
+-- POINT (-5.203046090608746 49.96006137018598)
 }\if{html}{\out{</div>}}
 }
 

@@ -43,6 +43,7 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{SELECT ST_QuadKey(ST_Point(11.08, 49.45), 10);
+-- 1333203202
 }\if{html}{\out{</div>}}
 }
 

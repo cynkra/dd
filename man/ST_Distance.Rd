@@ -34,6 +34,11 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{SELECT ST_Distance('POINT (0 0)'::GEOMETRY, 'POINT (3 4)'::GEOMETRY);
+-- 5.0
+-- 
+-- -- Z coordinates are ignored
+-- SELECT ST_Distance('POINT Z (0 0 0)'::GEOMETRY, 'POINT Z (3 4 5)'::GEOMETRY);
+-- 5.0
 }\if{html}{\out{</div>}}
 }
 

@@ -25,6 +25,7 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{-- Translate by (1, 2) then scale by (2, 3)
 SELECT ST_TransScale(ST_Point(1, 1), 1, 2, 2, 3);
+-- POINT (4 9)
 }\if{html}{\out{</div>}}
 }
 

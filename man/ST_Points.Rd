@@ -24,6 +24,10 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{SELECT ST_Points('LINESTRING(1 1, 2 2)'::GEOMETRY);
+-- MULTIPOINT (1 1, 2 2)
+-- 
+-- SELECT ST_Points('MULTIPOLYGON Z EMPTY'::GEOMETRY);
+-- MULTIPOINT Z EMPTY
 }\if{html}{\out{</div>}}
 }
 

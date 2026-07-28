@@ -25,6 +25,7 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{-- Rotate a point 90 degrees (π/2 radians) around the Z-axis
 SELECT ST_RotateZ(ST_Point(1, 0), pi()/2);
+-- POINT (0 1)
 }\if{html}{\out{</div>}}
 }
 

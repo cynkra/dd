@@ -18,23 +18,6 @@
   stop("DuckDB function &() is not available in R.")
 }
 
-#' DuckDB function ->>
-#'
-#' @description
-#' DuckDB function `->>()`.
-#'
-#' @name ->>
-#' @usage `->>`(col0, col1)
-#' @param col0 `VARCHAR | JSON`
-#' @param col1 `BIGINT | VARCHAR | VARCHAR[]`
-#' @return `VARCHAR | VARCHAR[]`
-#' @export
-#' @section Provided by:
-#' The \code{json} extension (\code{LOAD json;}).
-`->>` <- function(col0 = `VARCHAR | JSON`, col1 = `BIGINT | VARCHAR | VARCHAR[]`) {
-  stop("DuckDB function ->>() is not available in R.")
-}
-
 #' DuckDB function /
 #'
 #' @description
@@ -135,12 +118,12 @@
 #' @section SQL examples:
 #' ```
 #' SELECT duckdb_proj_compiled_version();
-#' ┌────────────────────────────────┐
-#' │ duckdb_proj_compiled_version() │
-#' │            varchar             │
-#' ├────────────────────────────────┤
-#' │ Rel. 9.1.1, December 1st, 2022 │
-#' └────────────────────────────────┘
+#' -- +--------------------------------+
+#' -- | duckdb_proj_compiled_version() |
+#' -- |            varchar             |
+#' -- +--------------------------------+
+#' -- | Rel. 9.1.1, December 1st, 2022 |
+#' -- +--------------------------------+
 #' ```
 DuckDB_PROJ_Compiled_Version <- function() {
   stop("DuckDB function DuckDB_PROJ_Compiled_Version() is not available in R.")
@@ -161,12 +144,12 @@ DuckDB_PROJ_Compiled_Version <- function() {
 #' @section SQL examples:
 #' ```
 #' SELECT duckdb_proj_version();
-#' ┌───────────────────────┐
-#' │ duckdb_proj_version() │
-#' │        varchar        │
-#' ├───────────────────────┤
-#' │ 9.1.1                 │geometry_always_xy
-#' └───────────────────────┘
+#' -- +-----------------------+
+#' -- | duckdb_proj_version() |
+#' -- |        varchar        |
+#' -- +-----------------------+
+#' -- | 9.1.1                 |geometry_always_xy
+#' -- +-----------------------+
 #' ```
 DuckDB_Proj_Version <- function() {
   stop("DuckDB function DuckDB_Proj_Version() is not available in R.")
@@ -225,6 +208,15 @@ DuckDB_Proj_Version <- function() {
 #'                  1, 0,   -- a, b
 #'                  0, 1,   -- d, e
 #'                  2, 3);  -- xoff, yoff
+#' -- POINT (3 4)
+#' -- 
+#' -- -- Scale a geometry by factor 2 in X and Y
+#' -- SELECT ST_Affine(ST_Point(1, 1),
+#' --                  2, 0, 0,   -- a, b, c
+#' --                  0, 2, 0,   -- d, e, f
+#' --                  0, 0, 1,   -- g, h, i
+#' --                  0, 0, 0);  -- xoff, yoff, zoff
+#' -- POINT (2 2)
 #' ```
 ST_Affine <- function(geom = GEOMETRY, a = DOUBLE, b = DOUBLE, c = DOUBLE, d = DOUBLE, e = DOUBLE, f = DOUBLE, g = DOUBLE, h = DOUBLE, i = DOUBLE, xoff = DOUBLE, yoff = DOUBLE, zoff = DOUBLE) {
   stop("DuckDB function ST_Affine() is not available in R.")
@@ -310,6 +302,17 @@ ST_Area_Spheroid <- function(geom = GEOMETRY) {
 #' @section SQL examples:
 #' ```
 #' SELECT ST_AsGeoJSON('POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))'::GEOMETRY);
+#' -- {"type":"Polygon","coordinates":[[[0.0, 0.0], [0.0, 1.0], [1.0, 1.0], [1.0, 0.0], [0.0, 0.0]]]}
+#' -- 
+#' -- -- Convert a geometry into a full GeoJSON feature (requires the JSON extension to be loaded)
+#' -- SELECT CAST({
+#' --     type: 'Feature',
+#' --     geometry: ST_AsGeoJSON(ST_Point(1, 2)),
+#' --     properties: {
+#' --         name: 'my_point'
+#' --     }
+#' -- } AS JSON);
+#' -- {"type":"Feature","geometry":{"type":"Point","coordinates":[1.0, 2.0]},"properties":{"name":"my_point"}}
 #' ```
 ST_AsGeoJSON <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_AsGeoJSON() is not available in R.")
@@ -330,6 +333,7 @@ ST_AsGeoJSON <- function(geom = GEOMETRY) {
 #' @section SQL examples:
 #' ```
 #' SELECT ST_AsHexWKB('POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))'::GEOMETRY);
+#' -- 01030000000100000005000000000000000000000000000...
 #' ```
 ST_AsHEXWKB <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_AsHEXWKB() is not available in R.")
@@ -456,6 +460,7 @@ ST_AsMVTGeom <- function(geom = GEOMETRY, bounds = BOX_2D, extent = BIGINT, buff
 #' @section SQL examples:
 #' ```
 #' SELECT ST_AsSVG('POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))'::GEOMETRY, false, 15);
+#' -- M 0 0 L 0 -1 1 -1 1 0 Z
 #' ```
 ST_AsSVG <- function(geom = GEOMETRY, relative = BOOLEAN, precision = INTEGER) {
   stop("DuckDB function ST_AsSVG() is not available in R.")
@@ -476,6 +481,7 @@ ST_AsSVG <- function(geom = GEOMETRY, relative = BOOLEAN, precision = INTEGER) {
 #' @section SQL examples:
 #' ```
 #' SELECT degrees(ST_Azimuth(ST_Point(0, 0), ST_Point(0, 1)));
+#' -- 90.0
 #' ```
 ST_Azimuth <- function(origin = `GEOMETRY | POINT_2D`, target = `GEOMETRY | POINT_2D`) {
   stop("DuckDB function ST_Azimuth() is not available in R.")
@@ -619,6 +625,28 @@ ST_ClosestPoint <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' ```
 #' -- With all POINT's, a MULTIPOINT is returned
 #' SELECT ST_Collect([ST_Point(1, 2), ST_Point(3, 4)]);
+#' -- MULTIPOINT (1 2, 3 4)
+#' -- 
+#' -- -- With mixed geometry types, a GEOMETRYCOLLECTION is returned
+#' -- SELECT ST_Collect([ST_Point(1, 2), ST_GeomFromText('LINESTRING(3 4, 5 6)')]);
+#' -- GEOMETRYCOLLECTION (POINT (1 2), LINESTRING (3 4, 5 6))
+#' -- 
+#' -- -- Note that the empty geometry is ignored, so the result is a MULTIPOINT
+#' -- SELECT ST_Collect([ST_Point(1, 2), NULL, ST_GeomFromText('GEOMETRYCOLLECTION EMPTY')]);
+#' -- MULTIPOINT (1 2)
+#' -- 
+#' -- -- If all geometries are empty or NULL, a GEOMETRYCOLLECTION EMPTY is returned
+#' -- SELECT ST_Collect([NULL, ST_GeomFromText('GEOMETRYCOLLECTION EMPTY')]);
+#' -- GEOMETRYCOLLECTION EMPTY
+#' -- 
+#' -- -- Tip: You can use the `ST_Collect` function together with the `list()` aggregate function to collect multiple rows of geometries into a single geometry collection:
+#' -- 
+#' -- CREATE TABLE points (geom GEOMETRY);
+#' -- 
+#' -- INSERT INTO points VALUES (ST_Point(1, 2)), (ST_Point(3, 4));
+#' -- 
+#' -- SELECT ST_Collect(list(geom)) FROM points;
+#' -- MULTIPOINT (1 2, 3 4)
 #' ```
 ST_Collect <- function(geoms = `GEOMETRY[]`) {
   stop("DuckDB function ST_Collect() is not available in R.")
@@ -1032,6 +1060,7 @@ ST_Difference <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' @section SQL examples:
 #' ```
 #' SELECT ST_Dimension('POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))'::GEOMETRY);
+#' -- 2
 #' ```
 ST_Dimension <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_Dimension() is not available in R.")
@@ -1075,6 +1104,11 @@ ST_Disjoint <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' @section SQL examples:
 #' ```
 #' SELECT ST_Distance('POINT (0 0)'::GEOMETRY, 'POINT (3 4)'::GEOMETRY);
+#' -- 5.0
+#' -- 
+#' -- -- Z coordinates are ignored
+#' -- SELECT ST_Distance('POINT Z (0 0 0)'::GEOMETRY, 'POINT Z (3 4 5)'::GEOMETRY);
+#' -- 5.0
 #' ```
 ST_Distance <- function(point1 = POINT_2D, point2 = POINT_2D) {
   stop("DuckDB function ST_Distance() is not available in R.")
@@ -1143,6 +1177,8 @@ ST_Distance_Sphere <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' st_point(40.6446, -73.7797),
 #' st_point(52.3130, 4.7725)
 #' );
+#' -- 5863418.7459356235
+#' -- -- Roughly 5863km!
 #' ```
 ST_Distance_Spheroid <- function(p1 = POINT_2D, p2 = POINT_2D) {
   stop("DuckDB function ST_Distance_Spheroid() is not available in R.")
@@ -1189,6 +1225,16 @@ ST_Drivers <- function() {
 #' @section SQL examples:
 #' ```
 #' SELECT ST_Dump('MULTIPOINT(1 2, 3 4)'::GEOMETRY);
+#' -- [{'geom': 'POINT(1 2)', 'path': [0]}, {'geom': 'POINT(3 4)', 'path': [1]}]
+#' -- 
+#' -- SELECT unnest(ST_Dump('MULTIPOINT(1 2, 3 4)'::GEOMETRY), recursive := true);
+#' -- -- +-------------+---------+
+#' -- -- |    geom     |  path   |
+#' -- -- |  geometry   | int32[] |
+#' -- -- +-------------+---------+
+#' -- -- | POINT (1 2) | [1]     |
+#' -- -- | POINT (3 4) | [2]     |
+#' -- -- +-------------+---------+
 #' ```
 ST_Dump <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_Dump() is not available in R.")
@@ -1530,6 +1576,7 @@ ST_GeneratePoints <- function(col0 = BOX_2D, col1 = BIGINT, col2 = BIGINT) {
 #' @section SQL examples:
 #' ```
 #' SELECT ST_GeomFromGeoJSON('{"type": "Point", "coordinates": [1.0, 2.0]}');
+#' -- POINT (1 2)
 #' ```
 ST_GeomFromGeoJSON <- function(geojson = `JSON | VARCHAR`) {
   stop("DuckDB function ST_GeomFromGeoJSON() is not available in R.")
@@ -1615,6 +1662,7 @@ ST_GeomFromText <- function(wkt = VARCHAR, ignore_invalid = BOOLEAN) {
 #' @section SQL examples:
 #' ```
 #' SELECT DISTINCT ST_GeometryType(ST_GeomFromText('POINT(1 1)'));
+#' -- POINT
 #' ```
 ST_GeometryType <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_GeometryType() is not available in R.")
@@ -1636,6 +1684,19 @@ ST_GeometryType <- function(geom = GEOMETRY) {
 #' ```
 #' -- HasM for a 2D geometry
 #' SELECT ST_HasM(ST_GeomFromText('POINT(1 1)'));
+#' -- false
+#' -- 
+#' -- -- HasM for a 3DZ geometry
+#' -- SELECT ST_HasM(ST_GeomFromText('POINT Z(1 1 1)'));
+#' -- false
+#' -- 
+#' -- -- HasM for a 3DM geometry
+#' -- SELECT ST_HasM(ST_GeomFromText('POINT M(1 1 1)'));
+#' -- true
+#' -- 
+#' -- -- HasM for a 4D geometry
+#' -- SELECT ST_HasM(ST_GeomFromText('POINT ZM(1 1 1 1)'));
+#' -- true
 #' ```
 ST_HasM <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_HasM() is not available in R.")
@@ -1657,6 +1718,19 @@ ST_HasM <- function(geom = GEOMETRY) {
 #' ```
 #' -- HasZ for a 2D geometry
 #' SELECT ST_HasZ(ST_GeomFromText('POINT(1 1)'));
+#' -- false
+#' -- 
+#' -- -- HasZ for a 3DZ geometry
+#' -- SELECT ST_HasZ(ST_GeomFromText('POINT Z(1 1 1)'));
+#' -- true
+#' -- 
+#' -- -- HasZ for a 3DM geometry
+#' -- SELECT ST_HasZ(ST_GeomFromText('POINT M(1 1 1)'));
+#' -- false
+#' -- 
+#' -- -- HasZ for a 4D geometry
+#' -- SELECT ST_HasZ(ST_GeomFromText('POINT ZM(1 1 1 1)'));
+#' -- true
 #' ```
 ST_HasZ <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_HasZ() is not available in R.")
@@ -2165,6 +2239,7 @@ ST_MMin <- function(geom = GEOMETRY) {
 #' @section SQL examples:
 #' ```
 #' SELECT ST_MakeBox2D(ST_Point(0, 0), ST_Point(1, 1));
+#' -- BOX(0 0, 1 1)
 #' ```
 ST_MakeBox2D <- function(point1 = GEOMETRY, point2 = GEOMETRY) {
   stop("DuckDB function ST_MakeBox2D() is not available in R.")
@@ -2209,7 +2284,9 @@ ST_MakeEnvelope <- function(min_x = DOUBLE, min_y = DOUBLE, max_x = DOUBLE, max_
 #' @section SQL examples:
 #' ```
 #' SELECT ST_MakeLine([ST_Point(0, 0), ST_Point(1, 1)]);
+#' -- LINESTRING(0 0, 1 1)
 #' SELECT ST_MakeLine(ST_Point(0, 0), ST_Point(1, 1));
+#' -- LINESTRING(0 0, 1 1)
 #' ```
 ST_MakeLine <- function(start = GEOMETRY, end = GEOMETRY) {
   stop("DuckDB function ST_MakeLine() is not available in R.")
@@ -2244,6 +2321,7 @@ ST_MakeLine <- function(start = GEOMETRY, end = GEOMETRY) {
 #' @section SQL examples:
 #' ```
 #' SELECT ST_AsText(ST_MakePoint(143.3, -24.2));
+#' -- POINT (143.3 -24.2)
 #' ```
 ST_MakePoint <- function(x = DOUBLE, y = DOUBLE, z = DOUBLE, m = DOUBLE) {
   stop("DuckDB function ST_MakePoint() is not available in R.")
@@ -2322,6 +2400,7 @@ ST_MakeValid <- function(geom = GEOMETRY) {
 #' SELECT ST_MaximumInscribedCircle(
 #'     ST_GeomFromText('POLYGON((0 0, 10 0, 10 10, 0 10, 0 0))')
 #' );
+#' -- {'center': POINT (5 5), 'nearest': POINT (5 0), 'radius': 5.0}
 #' ```
 ST_MaximumInscribedCircle <- function(geom = GEOMETRY, tolerance = DOUBLE) {
   stop("DuckDB function ST_MaximumInscribedCircle() is not available in R.")
@@ -2377,6 +2456,13 @@ ST_MinimumRotatedRectangle <- function(geom = GEOMETRY) {
 #' @section SQL examples:
 #' ```
 #' SELECT ST_Multi(ST_GeomFromText('POINT(1 2)'));
+#' -- MULTIPOINT (1 2)
+#' -- 
+#' -- SELECT ST_Multi(ST_GeomFromText('LINESTRING(1 1, 2 2)'));
+#' -- MULTILINESTRING ((1 1, 2 2))
+#' -- 
+#' -- SELECT ST_Multi(ST_GeomFromText('POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))'));
+#' -- MULTIPOLYGON (((0 0, 0 1, 1 1, 1 0, 0 0)))
 #' ```
 ST_Multi <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_Multi() is not available in R.")
@@ -2462,6 +2548,7 @@ ST_NPoints <- function(geom = GEOMETRY) {
 #' SELECT ST_Node(
 #'     ST_GeomFromText('MULTILINESTRING((0 0, 2 2), (0 2, 2 0))')
 #' );
+#' -- MULTILINESTRING ((0 0, 1 1), (1 1, 2 2), (0 2, 1 1), (1 1, 2 0))
 #' ```
 ST_Node <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_Node() is not available in R.")
@@ -2741,6 +2828,10 @@ ST_PointOnSurface <- function(geom = GEOMETRY) {
 #' @section SQL examples:
 #' ```
 #' SELECT ST_Points('LINESTRING(1 1, 2 2)'::GEOMETRY);
+#' -- MULTIPOINT (1 1, 2 2)
+#' -- 
+#' -- SELECT ST_Points('MULTIPOLYGON Z EMPTY'::GEOMETRY);
+#' -- MULTIPOINT Z EMPTY
 #' ```
 ST_Points <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_Points() is not available in R.")
@@ -2816,6 +2907,7 @@ ST_Polygonize <- function(geometries = `GEOMETRY[]`) {
 #' @section SQL examples:
 #' ```
 #' SELECT ST_QuadKey(ST_Point(11.08, 49.45), 10);
+#' -- 1333203202
 #' ```
 ST_QuadKey <- function(longitude = DOUBLE, latitude = DOUBLE, level = INTEGER) {
   stop("DuckDB function ST_QuadKey() is not available in R.")
@@ -2920,6 +3012,16 @@ ST_Read <- function(col0 = VARCHAR, keep_wkb = BOOLEAN, max_batch_size = INTEGER
 #' FROM ST_ReadOSM('tmp/data/germany.osm.pbf')
 #' WHERE tags['highway'] != []
 #' LIMIT 5;
+#' -- +----------------------+--------+----------------------+---------+--------------------+------------+-----------+------------------------+
+#' -- |         kind         |   id   |         tags         |  refs   |        lat         |    lon     | ref_roles |       ref_types        |
+#' -- | enum('node', 'way'…  | int64  | map(varchar, varch…  | int64[] |       double       |   double   | varchar[] | enum('node', 'way', …  |
+#' -- +----------------------+--------+----------------------+---------+--------------------+------------+-----------+------------------------+
+#' -- | node                 | 122351 | {bicycle=yes, butt…  |         |         53.5492951 |   9.977553 |           |                        |
+#' -- | node                 | 122397 | {crossing=no, high…  |         | 53.520990100000006 | 10.0156924 |           |                        |
+#' -- | node                 | 122493 | {TMC:cid_58:tabcd_…  |         | 53.129614600000004 |  8.1970173 |           |                        |
+#' -- | node                 | 123566 | {highway=traffic_s…  |         | 54.617268200000005 |  8.9718171 |           |                        |
+#' -- | node                 | 125801 | {TMC:cid_58:tabcd_…  |         | 53.070685000000005 |  8.7819939 |           |                        |
+#' -- +----------------------+--------+----------------------+---------+--------------------+------------+-----------+------------------------+
 #' ```
 ST_ReadOSM <- function(col0 = VARCHAR) {
   stop("DuckDB function ST_ReadOSM() is not available in R.")
@@ -3060,6 +3162,7 @@ ST_Rotate <- function(geom, radians) {
 #' ```
 #' -- Rotate a 3D point 90 degrees (π/2 radians) around the X-axis
 #' SELECT ST_RotateX(ST_GeomFromText('POINT Z(0 1 0)'), pi()/2);
+#' -- POINT Z (0 0 1)
 #' ```
 ST_RotateX <- function(geom, radians) {
   stop("DuckDB function ST_RotateX() is not available in R.")
@@ -3081,6 +3184,7 @@ ST_RotateX <- function(geom, radians) {
 #' ```
 #' -- Rotate a 3D point 90 degrees (π/2 radians) around the Y-axis
 #' SELECT ST_RotateY(ST_GeomFromText('POINT Z(1 0 0)'), pi()/2);
+#' -- POINT Z (0 0 -1)
 #' ```
 ST_RotateY <- function(geom, radians) {
   stop("DuckDB function ST_RotateY() is not available in R.")
@@ -3102,6 +3206,7 @@ ST_RotateY <- function(geom, radians) {
 #' ```
 #' -- Rotate a point 90 degrees (π/2 radians) around the Z-axis
 #' SELECT ST_RotateZ(ST_Point(1, 0), pi()/2);
+#' -- POINT (0 1)
 #' ```
 ST_RotateZ <- function(geom, radians) {
   stop("DuckDB function ST_RotateZ() is not available in R.")
@@ -3259,12 +3364,12 @@ ST_SymDifference <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' @section SQL examples:
 #' ```
 #' SELECT ST_TileEnvelope(2, 3, 1);
-#' ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-#' │                                         st_tileenvelope(2, 3, 1)                                          │
-#' │                                                 geometry                                                  │
-#' ├───────────────────────────────────────────────────────────────────────────────────────────────────────────┤
-#' │ POLYGON ((1.00188E+07 0, 1.00188E+07 1.00188E+07, 2.00375E+07 1.00188E+07, 2.00375E+07 0, 1.00188E+07 0)) │
-#' └───────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+#' -- +-----------------------------------------------------------------------------------------------------------+
+#' -- |                                         st_tileenvelope(2, 3, 1)                                          |
+#' -- |                                                 geometry                                                  |
+#' -- +-----------------------------------------------------------------------------------------------------------+
+#' -- | POLYGON ((1.00188E+07 0, 1.00188E+07 1.00188E+07, 2.00375E+07 1.00188E+07, 2.00375E+07 0, 1.00188E+07 0)) |
+#' -- +-----------------------------------------------------------------------------------------------------------+
 #' ```
 ST_TileEnvelope <- function(tile_zoom = INTEGER, tile_x = INTEGER, tile_y = INTEGER) {
   stop("DuckDB function ST_TileEnvelope() is not available in R.")
@@ -3302,6 +3407,7 @@ ST_Touches <- function(geom1 = GEOMETRY, geom2 = GEOMETRY) {
 #' ```
 #' -- Translate by (1, 2) then scale by (2, 3)
 #' SELECT ST_TransScale(ST_Point(1, 1), 1, 2, 2, 3);
+#' -- POINT (4 9)
 #' ```
 ST_TransScale <- function(geom, dx, dy, xs, ys) {
   stop("DuckDB function ST_TransScale() is not available in R.")
@@ -3353,6 +3459,40 @@ ST_TransScale <- function(geom, dx, dy, xs, ys) {
 #'         'EPSG:4326',
 #'         'EPSG:3857'
 #'     );
+#' -- POINT (544615.0239773799 6867874.103539125)
+#' -- 
+#' -- -- Alternatively, let's say we got our input point from e.g. a GeoJSON file,
+#' -- -- which uses WGS84 but with [longitude, latitude] axis order. We can use the
+#' -- -- `always_xy` parameter to force the input geometry to be interpreted as having
+#' -- -- a [northing, easting] axis order instead, even though the source coordinate
+#' -- -- reference system definition (WGS84) says otherwise.
+#' -- 
+#' -- SELECT
+#' --     ST_Transform(
+#' --         -- note the axis order is reversed here
+#' --         st_point(4.892360, 52.373123),
+#' --         'EPSG:4326',
+#' --         'EPSG:3857',
+#' --         always_xy := true
+#' --     );
+#' -- POINT (544615.0239773799 6867874.103539125)
+#' -- 
+#' -- -- Transform a geometry from OSG36 British National Grid EPSG:27700 to EPSG:4326 WGS84
+#' -- -- Standard transform is often fine for the first few decimal places before being wrong
+#' -- -- which could result in an error starting at about 10m and possibly much more
+#' -- SELECT ST_Transform(bng, 'EPSG:27700', 'EPSG:4326', xy := true) AS without_grid_file
+#' -- FROM (SELECT ST_GeomFromText('POINT( 170370.718 11572.405 )') AS bng);
+#' -- POINT (-5.202992651563592 49.96007490162923)
+#' -- 
+#' -- -- By using an official NTv2 grid file, we can reduce the error down around the 9th decimal place
+#' -- -- which in theory is below a millimetre, and in practise unlikely that your coordinates are that precise
+#' -- -- British National Grid "NTv2 format files" download available here:
+#' -- -- https://www.ordnancesurvey.co.uk/products/os-net/for-developers
+#' -- SELECT ST_Transform(bng
+#' --     , '+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +units=m +no_defs +nadgrids=/full/path/to/OSTN15-NTv2/OSTN15_NTv2_OSGBtoETRS.gsb +type=crs'
+#' --     , 'EPSG:4326', xy := true) AS with_grid_file
+#' -- FROM (SELECT ST_GeomFromText('POINT( 170370.718 11572.405 )') AS bng) t;
+#' -- POINT (-5.203046090608746 49.96006137018598)
 #' ```
 ST_Transform <- function(box = BOX_2D, source_crs = VARCHAR, target_crs = VARCHAR, always_xy = BOOLEAN) {
   stop("DuckDB function ST_Transform() is not available in R.")
@@ -3668,6 +3808,19 @@ ST_Z <- function(geom = GEOMETRY) {
 #' ```
 #' -- ZMFlag for a 2D geometry
 #' SELECT ST_ZMFlag(ST_GeomFromText('POINT(1 1)'));
+#' -- 0
+#' -- 
+#' -- -- ZMFlag for a 3DZ geometry
+#' -- SELECT ST_ZMFlag(ST_GeomFromText('POINT Z(1 1 1)'));
+#' -- 2
+#' -- 
+#' -- -- ZMFlag for a 3DM geometry
+#' -- SELECT ST_ZMFlag(ST_GeomFromText('POINT M(1 1 1)'));
+#' -- 1
+#' -- 
+#' -- -- ZMFlag for a 4D geometry
+#' -- SELECT ST_ZMFlag(ST_GeomFromText('POINT ZM(1 1 1 1)'));
+#' -- 3
 #' ```
 ST_ZMFlag <- function(geom = GEOMETRY) {
   stop("DuckDB function ST_ZMFlag() is not available in R.")
@@ -4895,6 +5048,23 @@ array_to_string_comma_default <- function(arr, sep) {
 #' ```
 array_value <- function() {
   stop("DuckDB function array_value() is not available in R.")
+}
+
+#' DuckDB function ->>
+#'
+#' @description
+#' DuckDB function `->>()`.
+#'
+#' @name arrow->>
+#' @usage `->>`(col0, col1)
+#' @param col0 `VARCHAR | JSON`
+#' @param col1 `BIGINT | VARCHAR | VARCHAR[]`
+#' @return `VARCHAR | VARCHAR[]`
+#' @export
+#' @section Provided by:
+#' The \code{json} extension (\code{LOAD json;}).
+`->>` <- function(col0 = `VARCHAR | JSON`, col1 = `BIGINT | VARCHAR | VARCHAR[]`) {
+  stop("DuckDB function ->>() is not available in R.")
 }
 
 #' DuckDB function arrow_scan
@@ -8685,10 +8855,10 @@ gamma <- function(x = DOUBLE) {
 #' Creates a list of values between `start` and `stop` - the stop parameter is inclusive.
 #'
 #' @name generate_series
-#' @usage generate_series(col0, col1, col2)
-#' @param col0 `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @param col1 `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @param col2 `BIGINT | INTERVAL`
+#' @usage generate_series(start, stop, step)
+#' @param start `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @param stop `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @param step `BIGINT | INTERVAL`
 #' @return `BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
 #' @export
 #' @section Overloads:
@@ -8722,7 +8892,7 @@ gamma <- function(x = DOUBLE) {
 #' ```
 #' generate_series(2, 5, 3)
 #' ```
-generate_series <- function(col0 = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, col1 = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, col2 = `BIGINT | INTERVAL`) {
+generate_series <- function(start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, stop = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, step = `BIGINT | INTERVAL`) {
   stop("DuckDB function generate_series() is not available in R.")
 }
 
@@ -17371,10 +17541,10 @@ random <- function() {
 #' Creates a list of values between `start` and `stop` - the stop parameter is exclusive.
 #'
 #' @name range
-#' @usage range(col0, col1, col2)
-#' @param col0 `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @param col1 `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
-#' @param col2 `BIGINT | INTERVAL`
+#' @usage range(start, stop, step)
+#' @param start `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @param stop `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`
+#' @param step `BIGINT | INTERVAL`
 #' @return `BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]`
 #' @export
 #' @section Overloads:
@@ -17408,7 +17578,7 @@ random <- function() {
 #' ```
 #' range(2, 5, 3)
 #' ```
-range <- function(col0 = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, col1 = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, col2 = `BIGINT | INTERVAL`) {
+range <- function(start = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, stop = `BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE`, step = `BIGINT | INTERVAL`) {
   stop("DuckDB function range() is not available in R.")
 }
 
@@ -18591,9 +18761,9 @@ remove_iceberg_table_properties <- function(col0 = VARCHAR, col1 = `VARCHAR[]`) 
 #' }
 #'
 #' @name repeat
-#' @usage `repeat`(col0, col1)
-#' @param col0 `ANY`
-#' @param col1 `BIGINT`
+#' @usage `repeat`(string, count)
+#' @param string `VARCHAR`
+#' @param count `BIGINT`
 #' @return `VARCHAR | BLOB | T[]`
 #' @export
 #' @section Overloads:
@@ -18612,7 +18782,7 @@ remove_iceberg_table_properties <- function(col0 = VARCHAR, col1 = `VARCHAR[]`) 
 #' repeat('\xAA\xBB'::BLOB, 5)
 #' repeat([1, 2, 3], 5)
 #' ```
-`repeat` <- function(col0 = ANY, col1 = BIGINT) {
+`repeat` <- function(string = VARCHAR, count = BIGINT) {
   stop("DuckDB function repeat() is not available in R.")
 }
 
@@ -19606,6 +19776,7 @@ sqrt <- function(x = DOUBLE) {
 #' ```
 #' ST_AsText(ST_GeomFromWKB(X'01010000000000000000000000000000000000000000000000'))
 #' SELECT ST_MakeEnvelope(0, 0, 1, 1);
+#' -- POLYGON ((0 0, 0 1, 1 1, 1 0, 0 0))
 #' ```
 st_astext <- function(geom = GEOMETRY) {
   stop("DuckDB function st_astext() is not available in R.")

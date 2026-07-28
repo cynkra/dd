@@ -4,12 +4,12 @@
 \alias{repeat}
 \title{DuckDB function repeat}
 \usage{
-`repeat`(col0, col1)
+`repeat`(string, count)
 }
 \arguments{
-\item{col0}{\code{ANY}}
+\item{string}{\code{VARCHAR}}
 
-\item{col1}{\code{BIGINT}}
+\item{count}{\code{BIGINT}}
 }
 \value{
 \code{VARCHAR | BLOB | T[]}

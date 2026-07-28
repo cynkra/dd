@@ -46,6 +46,7 @@ st_astext(geom)
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{ST_AsText(ST_GeomFromWKB(X'01010000000000000000000000000000000000000000000000'))
 SELECT ST_MakeEnvelope(0, 0, 1, 1);
+-- POLYGON ((0 0, 0 1, 1 1, 1 0, 0 0))
 }\if{html}{\out{</div>}}
 }
 

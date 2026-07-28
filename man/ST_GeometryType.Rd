@@ -34,6 +34,7 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{SELECT DISTINCT ST_GeometryType(ST_GeomFromText('POINT(1 1)'));
+-- POINT
 }\if{html}{\out{</div>}}
 }
 

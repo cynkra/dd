@@ -24,6 +24,7 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{SELECT degrees(ST_Azimuth(ST_Point(0, 0), ST_Point(0, 1)));
+-- 90.0
 }\if{html}{\out{</div>}}
 }
 

@@ -378,12 +378,21 @@ usage_and_params <- function(
     )
 
   # Representative argument list for the \usage and stub: the most frequent
-  # combination of argument names across overloads (tie-break: more arguments,
-  # then first appearance). Every function gets a usage, for consistent display.
+  # combination of argument names across overloads, then more arguments, then
+  # *real* argument names over DuckDB's placeholder `col0`, `col1`, ... ones,
+  # then first appearance. Every function gets a usage, for consistent display.
+  #
+  # The placeholder key only breaks ties between otherwise equally good
+  # candidates: without it, an extension adding one placeholder-named overload
+  # can tie the vote and flip the documented signature to `col0, col1, col2`
+  # (as `icu` does for `generate_series()`/`range()`). It must stay *below*
+  # frequency and arity, though -- ranking it higher would favour short
+  # all-real-name overloads and drop arguments (`add(col0, col1)` -> `add()`).
   name_keys <- map_chr(parameters, ~ paste(.x, collapse = ","))
   rep_idx <- order(
     -ave(seq_along(name_keys), name_keys, FUN = length),
     -lengths(parameters),
+    map_lgl(parameters, ~ any(is_generic_name(.x))),
     seq_along(name_keys)
   )[[1]]
   rep_names <- parameters[[rep_idx]]
@@ -504,19 +513,42 @@ usage_and_params <- function(
     json_ex <- na.omit(unique(unlist(json_examples)))
     examples <- unique(c(examples, json_ex[json_ex != ""]))
   }
-  # Many examples (especially from extensions like `spatial`) are multi-line:
-  # a SQL query, then a `----` separator, then the expected result — often a
-  # Unicode result table. Keep only the query part; dropping the result avoids
-  # non-ASCII result tables in the Rd.
-  strip_example <- function(ex) {
-    lines <- strsplit(ex, "\n", fixed = TRUE)[[1]]
-    cut <- which(grepl("^-{4,}$", trimws(lines)))
-    if (length(cut) > 0) {
-      lines <- lines[seq_len(cut[[1]] - 1)]
-    }
-    paste(trimws(lines, which = "right"), collapse = "\n")
+  # Many examples (especially from extensions like `spatial`) are multi-line: a
+  # SQL query followed by its expected result, either after a `----` separator
+  # or as a box-drawing table appended directly to the query. The result is
+  # worth keeping, but verbatim it would put Unicode box art into the Rd and
+  # make the block invalid SQL. So keep it, translated: box-drawing characters
+  # become their ASCII equivalents (`-`, `|`, `+`) and every result line is
+  # commented out with `--`, leaving the whole example copy-pasteable SQL.
+
+  # The "Box Drawing" block, U+2500-U+257F, is what DuckDB's CLI output uses.
+  # Map the plain horizontals and verticals to `-` and `|`; everything else in
+  # the block is a corner, tee or cross, which becomes `+`.
+  asciify_box <- function(x) {
+    x <- gsub("[\u2500\u2501\u2550]", "-", x)
+    x <- gsub("[\u2502\u2503\u2551]", "|", x)
+    gsub("[\u2500-\u257f]", "+", x)
   }
-  examples <- trimws(vapply(examples, strip_example, character(1)))
+
+  is_separator <- function(x) grepl("^-{4,}$", trimws(x))
+
+  format_example <- function(ex) {
+    lines <- trimws(strsplit(ex, "\n", fixed = TRUE)[[1]], which = "right")
+    starts_result <- is_separator(lines) |
+      grepl("^[\u2500-\u257f]", trimws(lines))
+    at <- which(starts_result)
+    if (length(at) == 0) {
+      return(paste(lines, collapse = "\n"))
+    }
+    query <- lines[seq_len(at[[1]] - 1)]
+    # Drop the bare `----` separator; it carries no information once the result
+    # is commented out.
+    result <- lines[seq(at[[1]], length(lines))]
+    result <- result[!is_separator(result)]
+    result <- paste0("-- ", asciify_box(result))
+    paste(c(query, result), collapse = "\n")
+  }
+  examples <- trimws(vapply(examples, format_example, character(1)))
   examples <- unique(examples[examples != ""])
   if (length(examples) > 0) {
     # Prefix *every* line with `#' `; otherwise the continuation lines of a
@@ -608,6 +640,12 @@ usage_and_params <- function(
 }
 
 rdize_function_name <- function(x) {
+  # roxygen2 derives the .Rd file name from the topic name and drops `-`, so the
+  # JSON extraction operators `->`/`->>` would land in the same file as the
+  # bitwise shifts `>`/`>>` and be merged into one (wrong) help page. Spell the
+  # arrow out to keep them apart. The operator itself stays reachable, because
+  # roxygen2 records it as an `\alias{}`.
+  x <- gsub("^->", "arrow->", x)
   x <- gsub("^!", "not-", x)
   x <- gsub("!", "-not-", x)
   x <- gsub("^[|]", "or-", x)

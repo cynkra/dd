@@ -4,14 +4,14 @@
 \alias{range}
 \title{DuckDB function range}
 \usage{
-range(col0, col1, col2)
+range(start, stop, step)
 }
 \arguments{
-\item{col0}{\verb{BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
+\item{start}{\verb{BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 
-\item{col1}{\verb{BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
+\item{stop}{\verb{BIGINT | TIMESTAMP | TIMESTAMP WITH TIME ZONE}}
 
-\item{col2}{\code{BIGINT | INTERVAL}}
+\item{step}{\code{BIGINT | INTERVAL}}
 }
 \value{
 \verb{BIGINT[] | TIMESTAMP[] | TIMESTAMP WITH TIME ZONE[]}

@@ -26,6 +26,13 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{SELECT ST_Multi(ST_GeomFromText('POINT(1 2)'));
+-- MULTIPOINT (1 2)
+-- 
+-- SELECT ST_Multi(ST_GeomFromText('LINESTRING(1 1, 2 2)'));
+-- MULTILINESTRING ((1 1, 2 2))
+-- 
+-- SELECT ST_Multi(ST_GeomFromText('POLYGON((0 0, 0 1, 1 1, 1 0, 0 0))'));
+-- MULTIPOLYGON (((0 0, 0 1, 1 1, 1 0, 0 0)))
 }\if{html}{\out{</div>}}
 }
 

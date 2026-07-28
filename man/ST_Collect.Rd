@@ -33,6 +33,28 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{-- With all POINT's, a MULTIPOINT is returned
 SELECT ST_Collect([ST_Point(1, 2), ST_Point(3, 4)]);
+-- MULTIPOINT (1 2, 3 4)
+-- 
+-- -- With mixed geometry types, a GEOMETRYCOLLECTION is returned
+-- SELECT ST_Collect([ST_Point(1, 2), ST_GeomFromText('LINESTRING(3 4, 5 6)')]);
+-- GEOMETRYCOLLECTION (POINT (1 2), LINESTRING (3 4, 5 6))
+-- 
+-- -- Note that the empty geometry is ignored, so the result is a MULTIPOINT
+-- SELECT ST_Collect([ST_Point(1, 2), NULL, ST_GeomFromText('GEOMETRYCOLLECTION EMPTY')]);
+-- MULTIPOINT (1 2)
+-- 
+-- -- If all geometries are empty or NULL, a GEOMETRYCOLLECTION EMPTY is returned
+-- SELECT ST_Collect([NULL, ST_GeomFromText('GEOMETRYCOLLECTION EMPTY')]);
+-- GEOMETRYCOLLECTION EMPTY
+-- 
+-- -- Tip: You can use the `ST_Collect` function together with the `list()` aggregate function to collect multiple rows of geometries into a single geometry collection:
+-- 
+-- CREATE TABLE points (geom GEOMETRY);
+-- 
+-- INSERT INTO points VALUES (ST_Point(1, 2)), (ST_Point(3, 4));
+-- 
+-- SELECT ST_Collect(list(geom)) FROM points;
+-- MULTIPOINT (1 2, 3 4)
 }\if{html}{\out{</div>}}
 }
 

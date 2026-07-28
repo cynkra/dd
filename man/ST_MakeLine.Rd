@@ -35,7 +35,9 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{SELECT ST_MakeLine([ST_Point(0, 0), ST_Point(1, 1)]);
+-- LINESTRING(0 0, 1 1)
 SELECT ST_MakeLine(ST_Point(0, 0), ST_Point(1, 1));
+-- LINESTRING(0 0, 1 1)
 }\if{html}{\out{</div>}}
 }
 

@@ -29,6 +29,19 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{-- ZMFlag for a 2D geometry
 SELECT ST_ZMFlag(ST_GeomFromText('POINT(1 1)'));
+-- 0
+-- 
+-- -- ZMFlag for a 3DZ geometry
+-- SELECT ST_ZMFlag(ST_GeomFromText('POINT Z(1 1 1)'));
+-- 2
+-- 
+-- -- ZMFlag for a 3DM geometry
+-- SELECT ST_ZMFlag(ST_GeomFromText('POINT M(1 1 1)'));
+-- 1
+-- 
+-- -- ZMFlag for a 4D geometry
+-- SELECT ST_ZMFlag(ST_GeomFromText('POINT ZM(1 1 1 1)'));
+-- 3
 }\if{html}{\out{</div>}}
 }
 

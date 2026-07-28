@@ -27,6 +27,7 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 SELECT ST_Node(
     ST_GeomFromText('MULTILINESTRING((0 0, 2 2), (0 2, 2 0))')
 );
+-- MULTILINESTRING ((0 0, 1 1), (1 1, 2 2), (0 2, 1 1), (1 1, 2 0))
 }\if{html}{\out{</div>}}
 }
 

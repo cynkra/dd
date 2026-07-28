@@ -24,6 +24,7 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 
 
 \if{html}{\out{<div class="sourceCode">}}\preformatted{SELECT ST_MakeBox2D(ST_Point(0, 0), ST_Point(1, 1));
+-- BOX(0 0, 1 1)
 }\if{html}{\out{</div>}}
 }
 

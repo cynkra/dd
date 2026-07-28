@@ -40,6 +40,7 @@ The \code{spatial} extension (\code{LOAD spatial;}).
 SELECT ST_MaximumInscribedCircle(
     ST_GeomFromText('POLYGON((0 0, 10 0, 10 10, 0 10, 0 0))')
 );
+-- \{'center': POINT (5 5), 'nearest': POINT (5 0), 'radius': 5.0\}
 }\if{html}{\out{</div>}}
 }
 

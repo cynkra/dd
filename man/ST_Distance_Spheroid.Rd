@@ -31,6 +31,8 @@ SELECT st_distance_spheroid(
 st_point(40.6446, -73.7797),
 st_point(52.3130, 4.7725)
 );
+-- 5863418.7459356235
+-- -- Roughly 5863km!
 }\if{html}{\out{</div>}}
 }
 
