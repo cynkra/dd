@@ -312,3 +312,223 @@ Ordered; each is a separate, semantically-diffed change *after* migration:
 * The `duckdb-spatial` repository generates its function reference from
   C++ annotations; converging it on the same YAML schema would unify the
   last big function surface, but is a separate conversation.
+
+## 8. Implementation (prototype, on the review branches)
+
+The design above is implemented end to end on branch
+`claude/duckdb-docs-review-d86823` of `krlmlr/duckdb` and
+`krlmlr/duckdb-web`, relaxing byte-identity per review feedback:
+the JSON artifact is *normalized* rather than byte-preserved
+("similar in spirit"), and reading YAML directly from
+`generate_functions.py`, as well as duckdb-spatial, stay out of scope.
+
+`krlmlr/duckdb` (four commits, reviewable independently):
+
+1. `scripts/functions_yaml.py` (~170 lines, PyYAML only) with three
+   subcommands:
+   `to-yaml` (one-time bootstrap conversion),
+   `to-json` (emit the normalized `functions.json` artifact),
+   `check` (CI guard: JSON semantically matches YAML).
+   Normalizations: `example` → `examples` (list), canonical key order,
+   4-space indent; `check` fails on any other delta,
+   and unknown keys are a hard error.
+2. Bootstrap: 38 `functions.yaml` files converted from the JSON
+   (449 entries; structured variant parameters render as
+   `{name: x, type: T}` flow mappings, descriptions as folded scalars).
+3. Regenerated `functions.json` (38 files, +2876/−1170 lines of
+   mechanical normalization).
+   Verified: `scripts/generate_functions.py` output — the generated C++ —
+   is **byte-identical** before and after,
+   since the codegen already accepts both `example` and `examples`.
+4. A demo amendment editing only YAML and regenerating JSON:
+   the `hamming` "between to strings" typo
+   and the wrong `regr_sxy` description (§ review, section 4).
+
+`krlmlr/duckdb-web` (one commit):
+
+* `scripts/generate_sql_function_docs_from_yaml.py` imports the existing
+  generator and swaps only its data source:
+  `DocFunction` records are built from the checkout's `functions.yaml`
+  (variants × categories, alias rows synthesized from `aliases`)
+  instead of `duckdb_functions()`;
+  rendering, `OVERRIDES`, sorting, pruning and URL conversion
+  are reused unchanged, and example results are still executed live.
+  A tolerant fallback emits result-less example rows when the installed
+  engine predates a function (metadata newer than engine).
+  Note: the upstream generator requires Python ≥ 3.12 (PEP 701 f-strings).
+* All five generated sections regenerate with 2 warnings and a
+  +177/−147 diff across the five pages, which decomposes into:
+  genuine metadata evolution (`overlay` is new upstream, next to the
+  1.5.5 engine used for results); one rendering *fix*
+  (`array_resize(list, size[[, value]])` → `[, value]`);
+  and optional-argument renderings that need amendment A3
+  (`default:` in YAML) to match the catalog's overload-derived brackets
+  (`list_sort(list[, col1][, col2])` currently regenerates as
+  `list_sort(list)` because the single YAML variant lists no optionals).
+  That last class is the main fidelity gap of the prototype
+  and A3 is the fix, not more override code.
+
+## 9. Diff filters: observed behavior
+
+Tools exercised on the commits above
+(jd 2.5.0 via `go install github.com/josephburnett/jd/v2/jd@latest`,
+difftastic 0.69.0 via `cargo install difftastic`,
+dyff via `go install github.com/homeport/dyff/cmd/dyff@latest`,
+plus stock `git` + `jq`).
+All outputs below are captured verbatim, uncolored.
+Summary first:
+
+| Filter | Setup | Bulk-regen noise | Path-addressed | Word diff inside strings |
+|---|---|---|---|---|
+| plain `git diff` | none | high (reorder shows as churn) | no | YAML source: yes, via `--word-diff`; JSON: line-level |
+| `jq` textconv | 2 config lines | hidden | no (line numbers) | **yes** (`--word-diff` composes with textconv) |
+| `jd` diff driver | go install + 2 lines | minimal, exact paths (`@ [1,"variants",0,"example"]`) | **yes** | no (whole-value − / +) |
+| difftastic | cargo install, `GIT_EXTERNAL_DIFF` | low (syntax-aware) | no (aligned lines) | in color terminals: sub-line token highlight (lost in plain capture) |
+| `dyff` (YAML) | go install, difftool | n/a (YAML side) | **yes**, human labels (`regr_sxy.description`) | no (− / + values) |
+
+Two observations that shape the choice:
+
+* Because `functions.json` becomes a *generated, canonical* artifact,
+  its plain diffs are already mostly clean after the migration;
+  the semantic filter earns its keep on the one-time normalization
+  review, on guarding hand-edits, and on word-level readability
+  of long description strings.
+* On the YAML source files, plain `git diff --word-diff`
+  is already excellent (case 2b below) —
+  "no new tools" is a defensible choice for day-to-day review,
+  with `jd`/`dyff` reserved for CI equality checks.
+
+Configuration used (repo `.gitattributes` + user config):
+
+```
+# .gitattributes
+*functions.json diff=semantic
+# user config, option A (jq):
+[diff "semantic"]
+    textconv = jq --sort-keys .
+# user config, option B (jd):
+[diff "semantic"]
+    command = jd -git-diff-driver
+```
+
+### Case 1: one-word typo fix inside a long description (hamming, JSON artifact)
+
+#### (a) plain `git diff`
+```diff
+@@ -162,3 +162,3 @@
+         "parameters": "s1,s2",
+-        "description": "The Hamming distance between to strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., `a` and `A`) are considered different.",
++        "description": "The Hamming distance between two strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., `a` and `A`) are considered different.",
+         "examples": [
+```
+#### (b) jq textconv (`textconv = jq --sort-keys .`)
+```diff
+@@ -166,3 +166,3 @@
+     ],
+-    "description": "The Hamming distance between to strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., `a` and `A`) are considered different.",
++    "description": "The Hamming distance between two strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., `a` and `A`) are considered different.",
+     "examples": [
+```
+#### (c) jq textconv + `--word-diff` (word diff inside JSON strings)
+```text
+@@ -167 +167 @@
+    "description": "The Hamming distance between [-to-]{+two+} strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., `a` and `A`) are considered different.",
+```
+#### (d) jd as git diff driver (`command = jd -git-diff-driver`)
+```text
+^ {"file":"extension/core_functions/scalar/string/functions.json"}
+@ [10]
+  {"categories":["string","numeric"],"description":"Converts `integer` to a human-readable representation using units based on powers of 10 (KB, MB, GB, etc.).","examples":["formatReadableDecimalSize(16_000)"],"name":"formatReadableDecimalSize","parameters":"integer","type":"scalar_function"}
+- {"aliases":["mismatches"],"categories":["text_similarity"],"description":"The Hamming distance between to strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., `a` and `A`) are considered different.","examples":["hamming('duck', 'luck')"],"name":"hamming","parameters":"s1,s2","type":"scalar_function"}
++ {"aliases":["mismatches"],"categories":["text_similarity"],"description":"The Hamming distance between two strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., `a` and `A`) are considered different.","examples":["hamming('duck', 'luck')"],"name":"hamming","parameters":"s1,s2","type":"scalar_function"}
+  {"aliases":["to_hex"],"name":"hex","type":"scalar_function_set","variants":[{"categories":["string"],"description":"Converts the `string` to hexadecimal representation.","examples":["hex('Hello')"],"parameters":[{"name":"string","type":"VARCHAR"}]},{"categories":["blob"],"description":"Converts `blob` to `VARCHAR` using hexadecimal encoding.","examples":["hex('\\xAA\\xBB'::BLOB)"],"parameters":[{"name":"blob","type":"BLOB"}]},{"categories":["numeric"],"description":"Converts the `value` to `VARCHAR` using hexadecimal representation.","examples":["hex(42)"],"parameters":[{"name":"value","type":"ANY"}]}]}
+```
+#### (e) difftastic (`GIT_EXTERNAL_DIFF=difft`)
+```text
+extension/core_functions/scalar/string/functions.json --- JSON
+159        },
+160        {
+161            "name": "hamming",
+162            "parameters": "s1,s2",
+163            "description": "The Hamming distance between to strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., `a` and `A`) are considered different.",
+   163         "description": "The Hamming distance between two strings, i.e., the number of positions with different characters for two strings of equal length. Strings must be of equal length. Characters of different cases (e.g., `a` and `A`) are considered different.",
+   164         "examples": [
+```
+### Case 2: description replacement (regr_sxy), YAML source file
+#### (a) plain `git diff` on the YAML
+```diff
+@@ -55,5 +55,5 @@
+ - name: regr_sxy
+   parameters: y,x
+-  description: Returns the population covariance of input values
++  description: Returns the sum of deviation products of the input values, sum((y - avg(y)) * (x - avg(x)))
+   examples:
+     - REGR_COUNT(y, x) * COVAR_POP(y, x)
+```
+#### (b) plain `git diff --word-diff` on the YAML
+```text
+@@ -57 +57 @@
+  description: Returns the [-population covariance-]{+sum+} of {+deviation products of the+} input [-values-]{+values, sum((y - avg(y)) * (x - avg(x)))+}
+```
+#### (c) dyff between (YAML-aware)
+```text
+
+regr_sxy.description
+  ± value change
+    - Returns the population covariance of input values
+    + Returns the sum of deviation products of the input values, sum((y - avg(y)) * (x - avg(x)))
+  
+
+```
+#### (d) difftastic on the YAML
+```text
+extension/core_functions/aggregate/regression/functions.yaml --- YAML
+53      type: aggregate_function
+54      struct: RegrSXXFun
+55    - name: regr_sxy
+56      parameters: y,x
+57      description: Returns the population covariance of input values
+   57   description: Returns the sum of deviation products of the input values, sum((y - avg(y)) * (x - avg(x)))
+   58   examples:
+   59     - REGR_COUNT(y, x) * COVAR_POP(y, x)
+   60   type: aggregate_function
+```
+### Case 3: the bulk normalization commit (38 regenerated functions.json)
+#### (a) plain `git diff --stat`: 38 files changed, 2876 insertions(+), 1170 deletions(-)
+#### (b) plain diff, one file (src/function/scalar/date/functions.json)
+```diff
+@@ -6 +6,3 @@
+-        "example": "strftime(date '1992-01-01', '%a, %-d %B %Y')",
++        "examples": [
++            "strftime(date '1992-01-01', '%a, %-d %B %Y')"
++        ],
+@@ -11,0 +14,2 @@
++        "type": "scalar_function_set",
++        "struct": "StrpTimeFun",
+@@ -15,2 +19,8 @@
+-                    {"name": "text", "type": "VARCHAR"},
+```
+#### (c) jq-textconv diff, same file
+```diff
+@@ -4 +4,3 @@
+-    "example": "strftime(date '1992-01-01', '%a, %-d %B %Y')",
++    "examples": [
++      "strftime(date '1992-01-01', '%a, %-d %B %Y')"
++    ],
+@@ -17 +19,3 @@
+-        "example": "strptime('Wed, 1 January 1992 - 08:38:40 PM', '%a, %-d %B %Y - %I:%M:%S %p')",
++        "examples": [
++          "strptime('Wed, 1 January 1992 - 08:38:40 PM', '%a, %-d %B %Y - %I:%M:%S %p')"
++        ],
+```
+#### (d) jd, same file
+```text
+^ {"file":"src/function/scalar/date/functions.json"}
+@ [0,"example"]
+- "strftime(date '1992-01-01', '%a, %-d %B %Y')"
+@ [0,"examples"]
++ ["strftime(date '1992-01-01', '%a, %-d %B %Y')"]
+@ [1,"variants",0,"example"]
+- "strptime('Wed, 1 January 1992 - 08:38:40 PM', '%a, %-d %B %Y - %I:%M:%S %p')"
+@ [1,"variants",0,"examples"]
+```
