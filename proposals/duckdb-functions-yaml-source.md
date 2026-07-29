@@ -286,6 +286,16 @@ Ordered; each is a separate, semantically-diffed change *after* migration:
   semantically-empty diff, and is the one normalization that
   conflicts with replaying independent fixes — which is why the
   migration no longer performs it.
+* **A10** — give the three `regr_s**` helper aggregates real examples.
+  Their `example` fields hold defining formulas, not invocations
+  (`regr_sxy`: `REGR_COUNT(y, x) * COVAR_POP(y, x)`;
+  `regr_sxx`/`regr_syy`: `REGR_COUNT(y, x) * VAR_POP(x|y)`) —
+  until the minimal-fixes branch, that formula was the *only*
+  documentation of `regr_sxx`/`regr_syy` (their descriptions were empty),
+  and paraphrasing it badly is how the wrong prose arose in the first
+  place. Replace each example with a real call (`regr_sxy(y, x)`, …)
+  and append the equivalence to the description
+  ("Equivalent to `REGR_COUNT(y, x) * COVAR_POP(y, x)`.").
 * **A8** — "can not" → "cannot" in the four array-distance/similarity
   descriptions ("The array elements can not be `NULL`",
   `extension/core_functions/scalar/array/functions.yaml`);
@@ -382,7 +392,11 @@ carries only what is unarguably wrong:
   Internally *consistent* per-file styles (the tab-indented variant
   file, the 2-space geometry file) are deliberately left to the
   discretionary migration.
-* *Fix hamming typo and regr_sxy description*,
+* *Fix and add descriptions in the regression aggregates and hamming*:
+  the `hamming` typo, the wrong `regr_sxy` description,
+  and new descriptions for `regr_sxx` / `regr_syy`
+  (previously empty — the defining formula in their `example` field
+  was their only documentation; see A10),
   with their regenerated headers.
 
 Verified by replaying: rebasing the full five-commit series onto the
