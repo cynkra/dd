@@ -278,6 +278,13 @@ Ordered; each is a separate, semantically-diffed change *after* migration:
   (web wrong), `map_extract` empty-list (web detail wrong), ….
 * **A7** — port the ~260 richer website descriptions upstream
   as block scalars, page by page, in step with §6.
+* **A8** — "can not" → "cannot" in the four array-distance/similarity
+  descriptions ("The array elements can not be `NULL`",
+  `extension/core_functions/scalar/array/functions.yaml`);
+  the nonstandard spelling propagates from there to the generated
+  `array.md` sections (12 of the website's 19 occurrences) and to `dd`.
+  The ~186 remaining "can not" comments and error strings elsewhere in
+  the DuckDB sources are an ordinary cleanup PR, outside this queue.
 
 ## 6. Rollout
 
@@ -329,20 +336,32 @@ the JSON artifact is *normalized* rather than byte-preserved
    `to-yaml` (one-time bootstrap conversion),
    `to-json` (emit the normalized `functions.json` artifact),
    `check` (CI guard: JSON semantically matches YAML).
-   Normalizations: `example` → `examples` (list), canonical key order,
-   4-space indent; `check` fails on any other delta,
-   and unknown keys are a hard error.
+   The YAML holds the normalized form (`examples` always a list);
+   the JSON emitter maps back to the files' established conventions,
+   so `example` → `examples` unification stays queued as amendment A1.
+   `check` fails on any semantic delta, and unknown keys are a hard error.
 2. Bootstrap: 38 `functions.yaml` files converted from the JSON
    (449 entries; structured variant parameters render as
    `{name: x, type: T}` flow mappings, descriptions as folded scalars).
-3. Regenerated `functions.json` (38 files, +2876/−1170 lines of
-   mechanical normalization).
+3. Regenerated `functions.json`.
+   The emitter reproduces the files' established conventions —
+   inline scalar lists and parameter objects, singular `example`,
+   name-first key order — so **18 of 38 files are byte-identical**
+   and the rest shrink to +317/−460 lines
+   (down from +2876/−1170 in a first, naive `json.dumps` version:
+   the bulk really was indentation and layout).
+   What remains normalizes genuine inconsistencies *between* files:
+   one tab-indented file, one 2-space file, unicode escapes vs. UTF-8,
+   stray blank lines, and `struct`/`type`/`aliases` order variance.
+   Under the configured diff driver the commit is **semantically empty**:
+   zero changed lines across all 20 touched files.
    Verified: `scripts/generate_functions.py` output — the generated C++ —
-   is **byte-identical** before and after,
-   since the codegen already accepts both `example` and `examples`.
+   is byte-identical before and after.
 4. A demo amendment editing only YAML and regenerating JSON:
    the `hamming` "between to strings" typo
    and the wrong `regr_sxy` description (§ review, section 4).
+   The regenerated C++ headers ride along in the same commit,
+   showing the full YAML → JSON → codegen propagation.
 
 `krlmlr/duckdb-web` (one commit):
 
@@ -505,42 +524,36 @@ extension/core_functions/aggregate/regression/functions.yaml --- YAML
    59     - REGR_COUNT(y, x) * COVAR_POP(y, x)
    60   type: aggregate_function
 ```
-### Case 3: the bulk normalization commit (38 regenerated functions.json)
-#### (a) plain `git diff --stat`: 38 files changed, 2876 insertions(+), 1170 deletions(-)
-#### (b) plain diff, one file (src/function/scalar/date/functions.json)
+### Case 3: the migration commit (functions.json regenerated from YAML)
+
+#### (a) plain `git diff --stat`: 20 files changed, 317 insertions(+), 460 deletions(-) — 18 of 38 files byte-identical
+
+#### (b) plain diff, a typical residual hunk (stray blank lines, window/rows)
+
 ```diff
-@@ -6 +6,3 @@
--        "example": "strftime(date '1992-01-01', '%a, %-d %B %Y')",
-+        "examples": [
-+            "strftime(date '1992-01-01', '%a, %-d %B %Y')"
-+        ],
-@@ -11,0 +14,2 @@
-+        "type": "scalar_function_set",
-+        "struct": "StrpTimeFun",
-@@ -15,2 +19,8 @@
--                    {"name": "text", "type": "VARCHAR"},
+@@ -5,7 +5,6 @@
+         "description": "The row number in a window partition",
+         "example": "ROW_NUMBER() OVER (PARTITION BY client ORDER BY date)",
+         "categories": "",
+-
+         "type": "window_function"
 ```
-#### (c) jq-textconv diff, same file
-```diff
-@@ -4 +4,3 @@
--    "example": "strftime(date '1992-01-01', '%a, %-d %B %Y')",
-+    "examples": [
-+      "strftime(date '1992-01-01', '%a, %-d %B %Y')"
-+    ],
-@@ -17 +19,3 @@
--        "example": "strptime('Wed, 1 January 1992 - 08:38:40 PM', '%a, %-d %B %Y - %I:%M:%S %p')",
-+        "examples": [
-+          "strptime('Wed, 1 January 1992 - 08:38:40 PM', '%a, %-d %B %Y - %I:%M:%S %p')"
-+        ],
-```
-#### (d) jd, same file
+
+#### (c) jq textconv (`diff.functionsjson.textconv`), whole commit
+
 ```text
-^ {"file":"src/function/scalar/date/functions.json"}
-@ [0,"example"]
-- "strftime(date '1992-01-01', '%a, %-d %B %Y')"
-@ [0,"examples"]
-+ ["strftime(date '1992-01-01', '%a, %-d %B %Y')"]
-@ [1,"variants",0,"example"]
-- "strptime('Wed, 1 January 1992 - 08:38:40 PM', '%a, %-d %B %Y - %I:%M:%S %p')"
-@ [1,"variants",0,"examples"]
+(empty — 0 changed lines in all 20 files; the commit is pure formatting)
 ```
+
+#### (d) jd, whole commit
+
+```text
+(no output — structurally identical)
+```
+
+One operational note observed while capturing:
+the repo `.gitattributes` binds the files to the `functionsjson` driver,
+and repo attributes take precedence —
+so the textconv must be configured under that exact name
+(`git config diff.functionsjson.textconv 'jq --sort-keys .'`);
+a driver configured under another name is silently ignored.
