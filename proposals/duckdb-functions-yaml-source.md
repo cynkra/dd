@@ -165,9 +165,9 @@ functions.yaml ──(emit-json: strip web.*, down-convert)──▶ functions.j
 ```
 
 * **`emit-json`** (new, small): YAML → `functions.json`,
-  4-space indent, today's key order
-  (`name`, `parameters`, `description`, `example[s]`, `categories`,
-  `type`, `struct`, `aliases`, `variants`, `extra_functions`),
+  4-space indent, each entry's key order preserved as-is
+  (canonicalizing the order is deliberately *not* part of the migration —
+  it would grow the diff and break clean replays; see A9),
   trailing newline — **byte-identical output for the migration commit**.
   `functions.json` stays checked in and `generate_functions.py`
   stays unchanged, so there is zero C++ or build-system churn;
@@ -278,6 +278,14 @@ Ordered; each is a separate, semantically-diffed change *after* migration:
   (web wrong), `map_extract` empty-list (web detail wrong), ….
 * **A7** — port the ~260 richer website descriptions upstream
   as block scalars, page by page, in step with §6.
+* **A9** — canonicalize per-entry key order
+  (`name`, `parameters`, `description`, `examples`, `categories`,
+  `variants`, `type`, `struct`, `aliases`, `extra_functions`),
+  in YAML and JSON together.
+  Optional: it buys uniformity, costs a one-off ~100-line
+  semantically-empty diff, and is the one normalization that
+  conflicts with replaying independent fixes — which is why the
+  migration no longer performs it.
 * **A8** — "can not" → "cannot" in the four array-distance/similarity
   descriptions ("The array elements can not be `NULL`",
   `extension/core_functions/scalar/array/functions.yaml`);
@@ -346,17 +354,45 @@ the JSON artifact is *normalized* rather than byte-preserved
 3. Regenerated `functions.json`.
    The emitter reproduces the files' established conventions —
    inline scalar lists and parameter objects, singular `example`,
-   name-first key order — so **18 of 38 files are byte-identical**
-   and the rest shrink to +317/−460 lines
+   and (after review feedback) **per-entry key order preserved** —
+   so **22 of 38 files are byte-identical**
+   and the rest shrink to +268/−434 lines
    (down from +2876/−1170 in a first, naive `json.dumps` version:
-   the bulk really was indentation and layout).
-   What remains normalizes genuine inconsistencies *between* files:
-   one tab-indented file, one 2-space file, unicode escapes vs. UTF-8,
-   stray blank lines, and `struct`/`type`/`aliases` order variance.
-   Under the configured diff driver the commit is **semantically empty**:
-   zero changed lines across all 20 touched files.
+   the bulk really was indentation and layout,
+   and another slice was key-order canonicalization, now dropped).
+   What remains normalizes genuine defects and per-file deviations:
+   stray blank lines, misindented lines, one tab-indented file,
+   one 2-space file, unicode escapes vs. UTF-8,
+   and multiline scalar lists.
+   Under the configured diff driver the commit is **semantically empty**.
    Verified: `scripts/generate_functions.py` output — the generated C++ —
    is byte-identical before and after.
+
+Both branches are rooted directly on upstream `main`
+(the fork's unrelated infrastructure commits are no longer in their
+history), and a third, **super-minimal branch**
+`claude/functions-json-minimal-d86823` (`main` + 2 commits)
+carries only what is unarguably wrong:
+
+* *Fix stray whitespace*: blank lines between and after entries
+  (enum, the three window files), a 5-space and a tab-indented closing
+  brace (math), 6-space entries in the 4-space struct and sequence
+  files, and a misindented key line in window/value —
+  +18/−34 across 7 files, no content changes.
+  Internally *consistent* per-file styles (the tab-indented variant
+  file, the 2-space geometry file) are deliberately left to the
+  discretionary migration.
+* *Fix hamming typo and regr_sxy description*,
+  with their regenerated headers.
+
+Verified by replaying: rebasing the full five-commit series onto the
+minimal branch completes **without conflicts** and produces a tree
+**byte-identical** to the full branch's tip —
+the minimal branch is a strict, mergeable subset.
+(An earlier canonical-key-order emitter failed exactly this test:
+reordering `aliases`/`type` next to a stray blank line in
+`window/ranking` collided with the whitespace fix —
+the empirical reason key order stays untouched.)
 4. A demo amendment editing only YAML and regenerating JSON:
    the `hamming` "between to strings" typo
    and the wrong `regr_sxy` description (§ review, section 4).
@@ -526,7 +562,7 @@ extension/core_functions/aggregate/regression/functions.yaml --- YAML
 ```
 ### Case 3: the migration commit (functions.json regenerated from YAML)
 
-#### (a) plain `git diff --stat`: 20 files changed, 317 insertions(+), 460 deletions(-) — 18 of 38 files byte-identical
+#### (a) plain `git diff --stat`: 16 files changed, 268 insertions(+), 434 deletions(-) — 22 of 38 files byte-identical
 
 #### (b) plain diff, a typical residual hunk (stray blank lines, window/rows)
 
@@ -542,7 +578,7 @@ extension/core_functions/aggregate/regression/functions.yaml --- YAML
 #### (c) jq textconv (`diff.functionsjson.textconv`), whole commit
 
 ```text
-(empty — 0 changed lines in all 20 files; the commit is pure formatting)
+(empty — 0 changed lines in all 16 files; the commit is pure formatting)
 ```
 
 #### (d) jd, whole commit
