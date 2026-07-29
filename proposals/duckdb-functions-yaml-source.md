@@ -286,16 +286,23 @@ Ordered; each is a separate, semantically-diffed change *after* migration:
   semantically-empty diff, and is the one normalization that
   conflicts with replaying independent fixes — which is why the
   migration no longer performs it.
-* **A10** — give the three `regr_s**` helper aggregates real examples.
-  Their `example` fields hold defining formulas, not invocations
-  (`regr_sxy`: `REGR_COUNT(y, x) * COVAR_POP(y, x)`;
-  `regr_sxx`/`regr_syy`: `REGR_COUNT(y, x) * VAR_POP(x|y)`) —
-  until the minimal-fixes branch, that formula was the *only*
-  documentation of `regr_sxx`/`regr_syy` (their descriptions were empty),
-  and paraphrasing it badly is how the wrong prose arose in the first
-  place. Replace each example with a real call (`regr_sxy(y, x)`, …)
-  and append the equivalence to the description
-  ("Equivalent to `REGR_COUNT(y, x) * COVAR_POP(y, x)`.").
+* **A10** — give `regr_sxy` a real example.
+  Its `example` field holds the defining identity
+  `REGR_COUNT(y, x) * COVAR_POP(y, x)` (true, since `covar_pop` is
+  pairwise); replace it with `regr_sxy(y, x)` and fold the equivalence
+  into the description.
+  The analogous formulas for `regr_sxx`/`regr_syy`
+  (`REGR_COUNT(y, x) * VAR_POP(x|y)`) turned out to be **wrong under
+  NULLs** — `var_pop(x)` sees rows where `y` is NULL,
+  which the pairwise aggregate excludes
+  (`regr_sxx = 0.67` vs `n * var_pop(x) = 1.5` on
+  `(1,2),(2,3),(2,3),(NULL,4),(4,NULL)`) —
+  so those two were fixed on the branches directly, not queued.
+  The corrected descriptions also state that the computation is
+  numerically stable, verified against the Welford-style updates in
+  the implementation and empirically
+  (exact at offsets of 1e12 where `sum(x^2) - n*avg(x)^2`
+  cancels to 0.0).
 * **A8** — "can not" → "cannot" in the four array-distance/similarity
   descriptions ("The array elements can not be `NULL`",
   `extension/core_functions/scalar/array/functions.yaml`);
@@ -398,6 +405,13 @@ carries only what is unarguably wrong:
   (previously empty — the defining formula in their `example` field
   was their only documentation; see A10),
   with their regenerated headers.
+
+The minimal branch is additionally split into three
+independently reviewable branches with draft PRs on the fork:
+`whitespace` → `main` ([krlmlr/duckdb#64](https://github.com/krlmlr/duckdb/pull/64)),
+`hamming` → `main` ([#65](https://github.com/krlmlr/duckdb/pull/65)),
+and `regr` → `v1.4-andium` ([#66](https://github.com/krlmlr/duckdb/pull/66),
+based on the 1.4 line, which carries the identical defects).
 
 Verified by replaying: rebasing the full five-commit series onto the
 minimal branch completes **without conflicts** and produces a tree
