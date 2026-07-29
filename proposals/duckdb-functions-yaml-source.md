@@ -398,7 +398,19 @@ Two observations that shape the choice:
   "no new tools" is a defensible choice for day-to-day review,
   with `jd`/`dyff` reserved for CI equality checks.
 
-Configuration used (repo `.gitattributes` + user config):
+**Decision**: standardized on the `jq` textconv driver —
+zero new dependencies, reorder/reformat noise hidden,
+and `git diff --word-diff` gives word-level diffs inside JSON strings
+(the only option that does).
+`.gitattributes` on the `krlmlr/duckdb` branch binds
+`src/function/**/functions.json` and
+`extension/core_functions/**/functions.json` to the driver;
+each user enables it once with
+`git config diff.functionsjson.textconv 'jq --sort-keys .'`.
+`jd` remains the CI equality check
+(`functions_yaml.py check` already covers YAML↔JSON).
+
+Configuration used for the captures (repo `.gitattributes` + user config):
 
 ```
 # .gitattributes
