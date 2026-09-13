@@ -56,6 +56,24 @@ It is meant to be used in conjunction with [duckplyr](https://duckplyr.tidyverse
 `r sprintf("These pages document the functions of **DuckDB %s**.", sub("^v", "", duckdb::sql_query("PRAGMA version")$library_version))`
 
 
+## Goals and non-goals
+
+dd aims to:
+
+- Give every DuckDB function a help page in R, so `?acos` and `help(acos, package = "dd")` work from the R console.
+- Describe each function as DuckDB does: argument names and types, return type, overloads, SQL examples, and the extension that provides it.
+- Cover the DuckDB build it was generated from, including the functions DuckDB's core extensions add.
+- Make the same set of names reachable through the `dd` list, so a function can be looked up by name as well as with `?`.
+- Install with nothing but R itself: the package declares no `Imports` and no `Suggests`.
+
+It is explicitly not trying to:
+
+- Run DuckDB functions in R. Every stub errors with `DuckDB function acos() is not available in R.`
+- Stand in for duckplyr or the duckdb R client; dd is meant to be used alongside them.
+- Shadow the base R functions it documents. `format()`, `length()`, `+` and `-` get a help page but are deliberately not exported.
+- Document DuckDB's internals. Function names beginning with `__` are dropped.
+- Reach past DuckDB's core extension repository. Extensions are installed `FROM core`, so community extensions are never documented.
+
 ## Installation
 
 You can install the development version of dd like so:
