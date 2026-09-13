@@ -17,8 +17,8 @@ variant_extract(input_variant, field)
 \description{
 \itemize{
 \item \code{variant_extract(input_variant = VARIANT, field = VARCHAR)}: Returns the \code{field} from the \code{input_variant} if it's an OBJECT.
-\item \code{variant_extract(input_variant = VARIANT, index = UINTEGER)}: Returns the entry at \code{index} from the \code{input_variant} if it's an ARRAY.
-}
+ \item \code{variant_extract(input_variant = VARIANT, index = UINTEGER)}: Returns the entry at \code{index} from the \code{input_variant} if it's an ARRAY.
+ }
 }
 \section{Overloads}{
 

@@ -18,7 +18,7 @@ ST_Contains(geom1, geom2)
 Returns true if the first geometry contains the second geometry
 
 In contrast to \code{ST_ContainsProperly}, this function will also return true if \code{geom2} is contained strictly on the boundary of \code{geom1}.
-A geometry always \code{ST_Contains} itself, but does not \code{ST_ContainsProperly} itself.
+ A geometry always \code{ST_Contains} itself, but does not \code{ST_ContainsProperly} itself.
 }
 \section{Provided by}{
 

@@ -14,9 +14,9 @@ ST_Hilbert(box, bounds)
 }
 \description{
 Encodes the X and Y values as the hilbert curve index for a curve covering the given bounding box.
-If a geometry is provided, the center of the approximate bounding box is used as the point to encode.
-If no bounding box is provided, the hilbert curve index is mapped to the full range of a single-precision float.
-For the BOX_2D and BOX_2DF variants, the center of the box is used as the point to encode.
+ If a geometry is provided, the center of the approximate bounding box is used as the point to encode.
+ If no bounding box is provided, the hilbert curve index is mapped to the full range of a single-precision float.
+ For the BOX_2D and BOX_2DF variants, the center of the box is used as the point to encode.
 }
 \section{Overloads}{
 

@@ -13,8 +13,8 @@ Unspecified.
 Returns the list of supported GDAL drivers and file formats
 
 Note that far from all of these drivers have been tested properly.
-Some may require additional options to be passed to work as expected.
-If you run into any issues please first consult the \href{https://gdal.org/drivers/vector/index.html}{consult the GDAL docs}.
+ Some may require additional options to be passed to work as expected.
+ If you run into any issues please first consult the \href{https://gdal.org/drivers/vector/index.html}{consult the GDAL docs}.
 }
 \section{Provided by}{
 

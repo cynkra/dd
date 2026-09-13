@@ -15,8 +15,8 @@ ST_MakeLine(start, end)
 \description{
 \itemize{
 \item \code{ST_MakeLine(geoms = `GEOMETRY[]`)}: Create a LINESTRING from a list of POINT geometries.
-\item \code{ST_MakeLine(start = GEOMETRY, end = GEOMETRY)}: Create a LINESTRING from two POINT geometries.
-}
+ \item \code{ST_MakeLine(start = GEOMETRY, end = GEOMETRY)}: Create a LINESTRING from two POINT geometries.
+ }
 }
 \section{Overloads}{
 

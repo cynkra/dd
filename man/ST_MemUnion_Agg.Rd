@@ -14,7 +14,7 @@ ST_MemUnion_Agg(col0)
 }
 \description{
 Computes the union of a set of input geometries.
-"Slower, but might be more memory efficient than ST_UnionAgg as each geometry is merged into the union individually rather than all at once.
+ "Slower, but might be more memory efficient than ST_UnionAgg as each geometry is merged into the union individually rather than all at once.
 }
 \section{Provided by}{
 

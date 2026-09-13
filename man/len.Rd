@@ -18,9 +18,9 @@ len(string)
 \description{
 \itemize{
 \item \code{len(string = VARCHAR)}: Number of characters in \code{string}.
-\item \code{len(bit = BIT)}: Returns the bit-length of the \code{bit} argument.
-\item \code{len(list = `ANY[]`)}: Returns the length of the \code{list}.
-}
+ \item \code{len(bit = BIT)}: Returns the bit-length of the \code{bit} argument.
+ \item \code{len(list = `ANY[]`)}: Returns the length of the \code{list}.
+ }
 }
 \section{Overloads}{
 

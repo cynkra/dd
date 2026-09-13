@@ -15,8 +15,8 @@ bit_length(string)
 \description{
 \itemize{
 \item \code{bit_length(string = VARCHAR)}: Number of bits in a \code{string}.
-\item \code{bit_length(bit = BIT)}: Returns the bit-length of the \code{bit} argument.
-}
+ \item \code{bit_length(bit = BIT)}: Returns the bit-length of the \code{bit} argument.
+ }
 }
 \section{Overloads}{
 

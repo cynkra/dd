@@ -17,8 +17,8 @@ array_length(list, dimension)
 \description{
 \itemize{
 \item \code{array_length(list = `ANY[]`)}: Returns the length of the \code{list}.
-\item \code{array_length(list = `ANY[]`, dimension = BIGINT)}: \code{array_length} for lists with dimensions other than 1 not implemented.
-}
+ \item \code{array_length(list = `ANY[]`, dimension = BIGINT)}: \code{array_length} for lists with dimensions other than 1 not implemented.
+ }
 }
 \section{Overloads}{
 
