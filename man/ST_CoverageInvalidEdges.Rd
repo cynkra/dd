@@ -16,8 +16,8 @@ ST_CoverageInvalidEdges(geoms, tolerance)
 }
 \description{
 Returns the invalid edges in a polygonal coverage, which are edges that are not shared by two polygons.
-Returns NULL if the input is not a polygonal coverage, or if the input is valid.
-Tolerance is 0 by default.
+ Returns NULL if the input is not a polygonal coverage, or if the input is valid.
+ Tolerance is 0 by default.
 }
 \section{Overloads}{
 

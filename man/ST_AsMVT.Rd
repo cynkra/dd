@@ -23,7 +23,7 @@ ST_AsMVT(col0, col1, col2, col3, col4)
 \description{
 Make a Mapbox Vector Tile from a set of geometries and properties
 The function takes as input a row type (STRUCT) containing a geometry column and any number of property columns.
-It returns a single binary BLOB containing the Mapbox Vector Tile.
+ It returns a single binary BLOB containing the Mapbox Vector Tile.
 
 The function has the following signature:
 
@@ -47,8 +47,8 @@ FROM cities;
 This example creates a vector tile named 'cities' with an extent of 4096 from the 'cities' table, using 'geom' as the geometry column and 'id' as the feature id column.
 
 However, you probably want to use the ST_AsMVTGeom function to first transform and clip your geometries to the tile extent.
-The following example assumes the geometry is in WebMercator ("EPSG:3857") coordinates.
-Replace \code{{z}}, \code{{x}}, and \code{{y}} with the appropriate tile coordinates, \verb{\{your table\}} with your table name, and \code{{tile_path}} with the path to write the tile to.
+ The following example assumes the geometry is in WebMercator ("EPSG:3857") coordinates.
+ Replace \code{{z}}, \code{{x}}, and \code{{y}} with the appropriate tile coordinates, \verb{\{your table\}} with your table name, and \code{{tile_path}} with the path to write the tile to.
 
 \if{html}{\out{<div class="sourceCode sql">}}\preformatted{COPY (
     SELECT ST_AsMVT(\{\{

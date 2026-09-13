@@ -19,9 +19,9 @@ ST_MakePoint(x, y, z, m)
 For geodetic coordinate systems, x is typically the longitude value and y is the latitude value.
 
 Note that ST_Point is equivalent. ST_MakePoint is provided for PostGIS compatibility.
-\item \code{ST_MakePoint(x = DOUBLE, y = DOUBLE, z = DOUBLE)}: Creates a POINT_3D.
-\item \code{ST_MakePoint(x = DOUBLE, y = DOUBLE, z = DOUBLE, m = DOUBLE)}: Creates a POINT_4D.
-}
+ \item \code{ST_MakePoint(x = DOUBLE, y = DOUBLE, z = DOUBLE)}: Creates a POINT_3D.
+ \item \code{ST_MakePoint(x = DOUBLE, y = DOUBLE, z = DOUBLE, m = DOUBLE)}: Creates a POINT_4D.
+ }
 }
 \section{Overloads}{
 

@@ -21,8 +21,8 @@ regexp_extract(string, regex, group, options)
 \description{
 \itemize{
 \item \code{regexp_extract(string = VARCHAR, regex = VARCHAR)}, \code{regexp_extract(string = VARCHAR, regex = VARCHAR, group = INTEGER)}, \code{regexp_extract(string = VARCHAR, regex = VARCHAR, group = INTEGER, options = VARCHAR)}: If \code{string} contains the \code{regex} pattern, returns the capturing group specified by optional parameter \code{group}; otherwise, returns the empty string. The \code{group} must be a constant value. If no \code{group} is given, it defaults to 0. A set of optional regex \code{options} can be set.
-\item \code{regexp_extract(string = VARCHAR, regex = VARCHAR, name_list = `VARCHAR[]`)}, \code{regexp_extract(string = VARCHAR, regex = VARCHAR, name_list = `VARCHAR[]`, options = VARCHAR)}: If \code{string} contains the \code{regex} pattern, returns the capturing groups as a struct with corresponding names from \code{name_list}; otherwise, returns a struct with the same keys and empty strings as values. A set of optional regex \code{options} can be set.
-}
+ \item \code{regexp_extract(string = VARCHAR, regex = VARCHAR, name_list = `VARCHAR[]`)}, \code{regexp_extract(string = VARCHAR, regex = VARCHAR, name_list = `VARCHAR[]`, options = VARCHAR)}: If \code{string} contains the \code{regex} pattern, returns the capturing groups as a struct with corresponding names from \code{name_list}; otherwise, returns a struct with the same keys and empty strings as values. A set of optional regex \code{options} can be set.
+ }
 }
 \section{Overloads}{
 

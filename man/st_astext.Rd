@@ -16,8 +16,8 @@ st_astext(geom)
 \description{
 \itemize{
 \item \code{st_astext(geom = GEOMETRY)}: Returns the Well-Known Text (WKT) representation of the geometry.
-\item \code{st_astext(point = POINT_2D)}, \code{st_astext(linestring = LINESTRING_2D)}, \code{st_astext(polygon = POLYGON_2D)}, \code{st_astext(box = BOX_2D)}: Returns the geometry as a WKT string.
-}
+ \item \code{st_astext(point = POINT_2D)}, \code{st_astext(linestring = LINESTRING_2D)}, \code{st_astext(polygon = POLYGON_2D)}, \code{st_astext(box = BOX_2D)}: Returns the geometry as a WKT string.
+ }
 }
 \section{Overloads}{
 

@@ -16,8 +16,8 @@ ST_AsGeoJSON(geom)
 Returns the geometry as a GeoJSON fragment
 
 This does not return a complete GeoJSON document, only the geometry fragment.
-To construct a complete GeoJSON document or feature, look into using the DuckDB JSON extension in conjunction with this function.
-This function supports geometries with Z values, but not M values. M values are ignored.
+ To construct a complete GeoJSON document or feature, look into using the DuckDB JSON extension in conjunction with this function.
+ This function supports geometries with Z values, but not M values. M values are ignored.
 }
 \section{Provided by}{
 

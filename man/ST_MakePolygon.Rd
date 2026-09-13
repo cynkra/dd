@@ -17,8 +17,8 @@ ST_MakePolygon(shell, holes)
 \description{
 \itemize{
 \item \code{ST_MakePolygon(shell = GEOMETRY)}: Create a POLYGON from a LINESTRING shell.
-\item \code{ST_MakePolygon(shell = GEOMETRY, holes = `GEOMETRY[]`)}: Create a POLYGON from a LINESTRING shell and a list of LINESTRING holes.
-}
+ \item \code{ST_MakePolygon(shell = GEOMETRY, holes = `GEOMETRY[]`)}: Create a POLYGON from a LINESTRING shell and a list of LINESTRING holes.
+ }
 }
 \section{Overloads}{
 

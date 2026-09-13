@@ -16,8 +16,8 @@ bin(value)
 \description{
 \itemize{
 \item \code{bin(string = VARCHAR)}: Converts the \code{string} to binary representation.
-\item \code{bin(value = BIGNUM)}, \code{bin(value = UBIGINT)}, \code{bin(value = BIGINT)}, \code{bin(value = HUGEINT)}, \code{bin(value = UHUGEINT)}: Converts the \code{value} to binary representation.
-}
+ \item \code{bin(value = BIGNUM)}, \code{bin(value = UBIGINT)}, \code{bin(value = BIGINT)}, \code{bin(value = HUGEINT)}, \code{bin(value = UHUGEINT)}: Converts the \code{value} to binary representation.
+ }
 }
 \section{Overloads}{
 

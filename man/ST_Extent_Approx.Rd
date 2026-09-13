@@ -16,7 +16,7 @@ ST_Extent_Approx(geom)
 Returns the approximate bounding box of a geometry, if available.
 
 This function is only really used internally, and returns the cached bounding box of the geometry if it exists.
-This function may be removed or renamed in the future.
+ This function may be removed or renamed in the future.
 }
 \section{Provided by}{
 
