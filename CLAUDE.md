@@ -21,7 +21,28 @@ This is an R package called `dd` that provides documentation for all DuckDB func
 
 - **Document package**: `devtools::document()`
 - **Check package**: `rcmdcheck::rcmdcheck(args = "--no-manual")`
-- **Install locally**: `R CMD INSTALL .`
+- **Install locally**: `R CMD INSTALL --with-keep.source .`
+
+### Rendering the README
+
+`README.md` and `index.md` are rendered from `README.Rmd` and **must be rendered against a package installed with `--with-keep.source`**.
+
+The Example section prints `dd$acos`, a generated stub.
+With srcrefs kept, R prints the stub's original source, which is what the committed `README.md` contains:
+
+```
+#> function(x = DOUBLE) {
+#>   stop("DuckDB function acos() is not available in R.")
+#> }
+```
+
+Without them, R deparses the closure instead, putting `function (x = DOUBLE)` on its own line and reindenting the body.
+That is a five-line hunk in each of `README.md` and `index.md` that looks like a pandoc or formatting change and is not.
+
+`Rscript scripts/generate.R` is already safe:
+it renders through `devtools::build_readme()`, which installs into a temporary library with `quick = TRUE` and therefore keeps sources.
+The trap is rendering by hand — `rmarkdown::render("README.Rmd")` or `devtools::build_rmd()` — against a library where `dd` was installed with a plain `R CMD INSTALL .`.
+Install it again with the flag before rendering.
 
 ## Architecture
 
