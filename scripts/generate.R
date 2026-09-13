@@ -4,13 +4,11 @@ library(tidyr)
 library(purrr)
 library(glue)
 
-# How much of the metadata from DuckDB's source `functions.json` files to merge
-# into the generated documentation. The `duckdb_functions()` catalog already
-# exposes descriptions, examples, parameters and categories for many functions,
-# but leaves some empty (notably function *sets* defined via `variants`, such as
-# `array_extract`, and the arithmetic/bitwise operators). The JSON files in the
-# DuckDB sources fill those gaps and additionally provide category groupings and
-# alias lists. Flip this switch to control the behaviour:
+# How much of the metadata from DuckDB's source `functions.json` files to merge into the generated documentation.
+# The `duckdb_functions()` catalog already exposes descriptions, examples, parameters and categories for many functions,
+# but leaves some empty (notably function *sets* defined via `variants`, such as `array_extract`, and the arithmetic/bitwise operators).
+# The JSON files in the DuckDB sources fill those gaps and additionally provide category groupings and alias lists.
+# Flip this switch to control the behaviour:
 #   "full" : fill gaps in description/examples/categories from the JSON *and*
 #            tag each function with its categories via roxygen2 `@family`
 #            (which generates `\concept{}` entries and "See also" links).
@@ -23,19 +21,17 @@ json_merge_mode <- "full"
 
 con <- DBI::dbConnect(duckdb::duckdb())
 
-# The DuckDB engine version these docs are generated from. `PRAGMA version`
-# reports the git tag as `library_version` (e.g. "v1.5.5"); drop the leading
-# "v" for display. Baked into the generated `?dd` page below, so the help page
-# states the version even where roxygen cannot evaluate inline R code.
+# The DuckDB engine version these docs are generated from.
+# `PRAGMA version` reports the git tag as `library_version` (e.g. "v1.5.5"); drop the leading "v" for display.
+# Baked into the generated `?dd` page below, so the help page states the version even where roxygen cannot evaluate inline R code.
 duckdb_version <- sub(
   "^v",
   "",
   DBI::dbGetQuery(con, "PRAGMA version")$library_version
 )
 
-# Identity of a single function overload, used to attribute it to the extension
-# that introduced it. `duckdb_functions()` has no "extension" column, so the
-# only way to tell where an overload comes from is to observe when it appears.
+# Identity of a single function overload, used to attribute it to the extension that introduced it.
+# `duckdb_functions()` has no "extension" column, so the only way to tell where an overload comes from is to observe when it appears.
 overload_key <- function(
   function_name,
   function_type,
@@ -53,21 +49,19 @@ overload_key <- function(
   )
 }
 
-# Load DuckDB's core extensions so their functions are documented alongside the
-# built-in ones. `duckdb_functions()` only lists an extension's functions once
-# that extension is loaded, and a bare connection has just the statically
-# linked ones (`core_functions`, `parquet`). DuckDB's *core* extensions are
-# those served from its default ("core") repository at extensions.duckdb.org;
-# we install and load every one `duckdb_extensions()` knows about, pinning the
-# source to `core` so community extensions are never pulled in. Extensions that
-# cannot register offline (they need an external service or driver, e.g.
-# `motherduck`, `odbc_scanner`) fail the LOAD and are skipped.
+# Load DuckDB's core extensions so their functions are documented alongside the built-in ones.
+# `duckdb_functions()` only lists an extension's functions once that extension is loaded,
+# and a bare connection has just the statically linked ones (`core_functions`, `parquet`).
+# DuckDB's *core* extensions are those served from its default ("core") repository at extensions.duckdb.org;
+# we install and load every one `duckdb_extensions()` knows about, pinning the source to `core` so community extensions are never pulled in.
+# Extensions that cannot register offline (they need an external service or driver, e.g. `motherduck`, `odbc_scanner`)
+# fail the LOAD and are skipped.
 #
-# Extensions are loaded one at a time and the catalog is diffed after each, so
-# every overload that appears is attributed to the extension that introduced
-# it. Returns that attribution as a named vector (overload key -> extension);
-# overloads already present on a bare connection are `NA` (built-in, i.e. the
-# DuckDB core plus the statically linked `core_functions`/`parquet`).
+# Extensions are loaded one at a time and the catalog is diffed after each,
+# so every overload that appears is attributed to the extension that introduced it.
+# Returns that attribution as a named vector (overload key -> extension);
+# overloads already present on a bare connection are `NA`
+# (built-in, i.e. the DuckDB core plus the statically linked `core_functions`/`parquet`).
 load_core_extensions <- function(con) {
   catalog_keys <- function() {
     d <- DBI::dbGetQuery(
@@ -149,9 +143,8 @@ param_type_tick_if_needed <- function(x) {
   if_else(is.na(x) | x == "", "", paste0(" = ", tibble:::tick_if_needed(x)))
 }
 
-# Build the `@usage` signature for a single overload, wrapping one argument per
-# line when the one-line form would exceed the Rd 90-character usage width that
-# R CMD check flags.
+# Build the `@usage` signature for a single overload,
+# wrapping one argument per line when the one-line form would exceed the Rd 90-character usage width that R CMD check flags.
 usage_signature <- function(function_name, parameters, parameter_types) {
   name <- tibble:::tick_if_needed(function_name)
   if (length(parameters) == 0) {
@@ -176,12 +169,11 @@ usage_signature <- function(function_name, parameters, parameter_types) {
 
 is_generic_name <- function(x) grepl("^col[0-9]+$", x)
 
-# Are two parameter-type lists compatible position-by-position? Used to line up
-# a catalog overload with a JSON overload. DuckDB spells type variables
-# differently on each side (catalog `T[]`/`BIGINT` vs JSON `ANY[]`/`ANY`), so we
-# compare list-ness exactly and treat `ANY`, empty, and single-letter type
-# variables (`T`, `K`, ...) as wildcards. An unknown (NA) JSON type matches
-# anything (flat JSON entries carry names but no types).
+# Are two parameter-type lists compatible position-by-position?
+# Used to line up a catalog overload with a JSON overload.
+# DuckDB spells type variables differently on each side (catalog `T[]`/`BIGINT` vs JSON `ANY[]`/`ANY`),
+# so we compare list-ness exactly and treat `ANY`, empty, and single-letter type variables (`T`, `K`, ...) as wildcards.
+# An unknown (NA) JSON type matches anything (flat JSON entries carry names but no types).
 type_compatible <- function(catalog_types, json_types) {
   if (length(catalog_types) != length(json_types)) {
     return(FALSE)
@@ -207,18 +199,17 @@ type_compatible <- function(catalog_types, json_types) {
   TRUE
 }
 
-# Replace the generic argument names (`col0`, `col1`, ...) that DuckDB's
-# `duckdb_functions()` catalog reports for some overloads with the real names
-# recorded in the source JSON. Each generic overload is matched to a JSON
-# overload by arity and type compatibility; a name is only substituted on an
-# unambiguous (single-candidate) match. JSON overloads already represented by a
-# properly named catalog overload are not borrowed again.
+# Replace the generic argument names (`col0`, `col1`, ...) that DuckDB's `duckdb_functions()` catalog reports for some overloads
+# with the real names recorded in the source JSON.
+# Each generic overload is matched to a JSON overload by arity and type compatibility;
+# a name is only substituted on an unambiguous (single-candidate) match.
+# JSON overloads already represented by a properly named catalog overload are not borrowed again.
 #
 # NOTE (upstream): for ~85 functions the JSON carries no argument names either
-# (no `variants`, or the C++ registration named nothing), so `col0`/`col1`
-# survive here. The real fix belongs upstream in duckdb/duckdb: name those
-# parameters in the function definitions / functions.json so `duckdb_functions()`
-# exposes them. Until then there is nothing to extract.
+# (no `variants`, or the C++ registration named nothing), so `col0`/`col1` survive here.
+# The real fix belongs upstream in duckdb/duckdb:
+# name those parameters in the function definitions / functions.json so `duckdb_functions()` exposes them.
+# Until then there is nothing to extract.
 recover_param_names <- function(parameters, parameter_types, json_overloads) {
   if (length(json_overloads) == 0) {
     return(parameters)
@@ -246,11 +237,9 @@ recover_param_names <- function(parameters, parameter_types, json_overloads) {
       generic <- is_generic_name(nm)
       recovered <- replacement[generic]
       nm[generic] <- recovered
-      # Only adopt the recovered names if they are syntactic R names (some JSON
-      # names are messy, e.g. `date-struct` or `lambda(x`) and don't collide
-      # with a real name already in this overload. Non-syntactic names would
-      # mismatch between \usage (backticked) and @param (not), so keep the
-      # generic ones instead.
+      # Only adopt the recovered names if they are syntactic R names (some JSON names are messy, e.g. `date-struct` or `lambda(x`)
+      # and don't collide with a real name already in this overload.
+      # Non-syntactic names would mismatch between \usage (backticked) and @param (not), so keep the generic ones instead.
       if (all(recovered == make.names(recovered)) && anyDuplicated(nm) == 0) {
         parameters[[i]] <- nm
         taken[cand] <- TRUE
@@ -260,20 +249,19 @@ recover_param_names <- function(parameters, parameter_types, json_overloads) {
   parameters
 }
 
-# roxygen2 markdown turns bare bracketed prose such as `[latitude, longitude]`
-# into a `\link{}` cross-reference to a non-existent topic (an R CMD check
-# WARNING). Escape brackets in prose that are not part of a real inline link
-# (`[text](url)` is left untouched). Bracketed text inside an inline code span
-# (backticks) — e.g. an array type like `T[]` — is left untouched too, since
-# Markdown does not create links there and escaping would corrupt it. Applied
-# only to description prose, never to the generated `\code{}` signatures.
+# roxygen2 markdown turns bare bracketed prose such as `[latitude, longitude]` into a `\link{}` cross-reference to a non-existent topic
+# (an R CMD check WARNING).
+# Escape brackets in prose that are not part of a real inline link (`[text](url)` is left untouched).
+# Bracketed text inside an inline code span (backticks) — e.g. an array type like `T[]` — is left untouched too,
+# since Markdown does not create links there and escaping would corrupt it.
+# Applied only to description prose, never to the generated `\code{}` signatures.
 escape_bare_brackets <- function(x) {
   escape_outside_code <- function(s) {
     if (is.na(s)) {
       return(s)
     }
-    # Split into inline code spans (`...`) and the runs between them; only the
-    # non-code runs are eligible for escaping.
+    # Split into inline code spans (`...`) and the runs between them;
+    # only the non-code runs are eligible for escaping.
     parts <- regmatches(s, gregexpr("`[^`]*`|[^`]+|`", s))[[1]]
     in_code <- startsWith(parts, "`") & endsWith(parts, "`") & nchar(parts) >= 2L
     parts[!in_code] <- gsub(
@@ -302,8 +290,7 @@ usage_and_params <- function(
   json_overloads = NULL,
   merge_mode = "off"
 ) {
-  # Some catalog/JSON parameter names are quoted string literals (e.g.
-  # `'entry'`); the quotes aren't part of the name.
+  # Some catalog/JSON parameter names are quoted string literals (e.g. `'entry'`); the quotes aren't part of the name.
   parameters <- map(parameters, ~ gsub("^['\"](.*)['\"]$", "\\1", .x))
   if (merge_mode != "off") {
     parameters <- recover_param_names(
@@ -312,11 +299,9 @@ usage_and_params <- function(
       json_overloads %||% list()
     )
   }
-  # Sanitize names to syntactic, unique-per-overload R names so the stub
-  # formals, \usage and @param all agree (and stay valid Rd). Quotes were
-  # stripped above; drop any bracket/paren fragment first (e.g. `lambda(x)` ->
-  # `lambda`), then make.names() handles the rest (e.g. dashes) and
-  # disambiguates a name repeated within one overload (array_cross_product).
+  # Sanitize names to syntactic, unique-per-overload R names so the stub formals, \usage and @param all agree (and stay valid Rd).
+  # Quotes were stripped above; drop any bracket/paren fragment first (e.g. `lambda(x)` -> `lambda`),
+  # then make.names() handles the rest (e.g. dashes) and disambiguates a name repeated within one overload (array_cross_product).
   parameters <- map(
     parameters,
     ~ make.names(sub("[][()].*$", "", .x), unique = TRUE)
@@ -339,18 +324,18 @@ usage_and_params <- function(
     }
   )
 
-  # Match each overload's description to its signature. The catalog pairs them
-  # row by row; where its description is missing, fall back to the JSON variant
-  # with the same parameter names.
+  # Match each overload's description to its signature.
+  # The catalog pairs them row by row;
+  # where its description is missing, fall back to the JSON variant with the same parameter names.
   sig_desc <- description
   if (merge_mode != "off" && length(json_variant_desc) > 0) {
     gap <- is.na(sig_desc) & param_keys %in% names(json_variant_desc)
     sig_desc[gap] <- unname(json_variant_desc[param_keys[gap]])
   }
 
-  # DuckDB registers some functions under several `function_type`s (e.g. both a
-  # table function and a pragma) with identical parameters, yielding duplicate
-  # overloads. Keep each distinct signature once.
+  # DuckDB registers some functions under several `function_type`s (e.g. both a table function and a pragma) with identical parameters,
+  # yielding duplicate overloads.
+  # Keep each distinct signature once.
   dedup <- !duplicated(signatures)
 
   # Each distinct signature paired with the description that applies to it.
@@ -377,17 +362,16 @@ usage_and_params <- function(
       type = paste0(na.omit(unique(type)), collapse = " | ")
     )
 
-  # Representative argument list for the \usage and stub: the most frequent
-  # combination of argument names across overloads, then more arguments, then
-  # *real* argument names over DuckDB's placeholder `col0`, `col1`, ... ones,
-  # then first appearance. Every function gets a usage, for consistent display.
+  # Representative argument list for the \usage and stub:
+  # the most frequent combination of argument names across overloads, then more arguments,
+  # then *real* argument names over DuckDB's placeholder `col0`, `col1`, ... ones, then first appearance.
+  # Every function gets a usage, for consistent display.
   #
-  # The placeholder key only breaks ties between otherwise equally good
-  # candidates: without it, an extension adding one placeholder-named overload
-  # can tie the vote and flip the documented signature to `col0, col1, col2`
-  # (as `icu` does for `generate_series()`/`range()`). It must stay *below*
-  # frequency and arity, though -- ranking it higher would favour short
-  # all-real-name overloads and drop arguments (`add(col0, col1)` -> `add()`).
+  # The placeholder key only breaks ties between otherwise equally good candidates:
+  # without it, an extension adding one placeholder-named overload can tie the vote and flip the documented signature to `col0, col1, col2`
+  # (as `icu` does for `generate_series()`/`range()`).
+  # It must stay *below* frequency and arity, though --
+  # ranking it higher would favour short all-real-name overloads and drop arguments (`add(col0, col1)` -> `add()`).
   name_keys <- map_chr(parameters, ~ paste(.x, collapse = ","))
   rep_idx <- order(
     -ave(seq_along(name_keys), name_keys, FUN = length),
@@ -407,8 +391,8 @@ usage_and_params <- function(
     )
   }
 
-  # When overloads use different argument-name combinations, list every distinct
-  # signature (the representative usage only shows one of them).
+  # When overloads use different argument-name combinations, list every distinct signature
+  # (the representative usage only shows one of them).
   overloads_doc <- ""
   if (length(unique(name_keys)) > 1) {
     overloads_doc <- paste0(
@@ -419,10 +403,8 @@ usage_and_params <- function(
     )
   }
 
-  # Document the arguments, collapsing to a single `@param a,b` when every
-  # argument shares one type (e.g. for a binary operator). Names are ticked to
-  # match the stub formals and the \usage (some DuckDB names are non-syntactic,
-  # e.g. `'entry'`).
+  # Document the arguments, collapsing to a single `@param a,b` when every argument shares one type (e.g. for a binary operator).
+  # Names are ticked to match the stub formals and the \usage (some DuckDB names are non-syntactic, e.g. `'entry'`).
   param_types_doc <-
     rep_params |>
     mutate(
@@ -455,11 +437,11 @@ usage_and_params <- function(
     glue_collapse(sep = ", ")
 
   is_macro <- length(macro_definition) == 1 && !is.na(macro_definition)
-  # The description. When the overloads are described differently, list them
-  # here (in addition to the Overloads section), grouping signatures that share
-  # a description and flagging any overload whose description is missing. A
-  # single description (even if missing for some overloads) is shown as plain
-  # text; where the catalog has none, fall back to the JSON description.
+  # The description.
+  # When the overloads are described differently, list them here (in addition to the Overloads section),
+  # grouping signatures that share a description and flagging any overload whose description is missing.
+  # A single description (even if missing for some overloads) is shown as plain text;
+  # where the catalog has none, fall back to the JSON description.
   if (length(distinct_desc) >= 2) {
     grouped <-
       overloads |>
@@ -501,10 +483,9 @@ usage_and_params <- function(
     }
   }
 
-  # A DuckDB description may span several lines (markdown paragraphs, fenced
-  # code blocks, matrix diagrams — e.g. `ST_Affine`). Prefix every continuation
-  # line with `#' ` so it stays inside the roxygen comment; otherwise it escapes
-  # as top-level code and the stub fails to parse or load.
+  # A DuckDB description may span several lines (markdown paragraphs, fenced code blocks, matrix diagrams — e.g. `ST_Affine`).
+  # Prefix every continuation line with `#' ` so it stays inside the roxygen comment;
+  # otherwise it escapes as top-level code and the stub fails to parse or load.
   description <- gsub("\n(?!#')", "\n#' ", description, perl = TRUE)
 
   examples <- na.omit(unique(unlist(examples)))
@@ -513,17 +494,16 @@ usage_and_params <- function(
     json_ex <- na.omit(unique(unlist(json_examples)))
     examples <- unique(c(examples, json_ex[json_ex != ""]))
   }
-  # Many examples (especially from extensions like `spatial`) are multi-line: a
-  # SQL query followed by its expected result, either after a `----` separator
-  # or as a box-drawing table appended directly to the query. The result is
-  # worth keeping, but verbatim it would put Unicode box art into the Rd and
-  # make the block invalid SQL. So keep it, translated: box-drawing characters
-  # become their ASCII equivalents (`-`, `|`, `+`) and every result line is
-  # commented out with `--`, leaving the whole example copy-pasteable SQL.
+  # Many examples (especially from extensions like `spatial`) are multi-line:
+  # a SQL query followed by its expected result,
+  # either after a `----` separator or as a box-drawing table appended directly to the query.
+  # The result is worth keeping, but verbatim it would put Unicode box art into the Rd and make the block invalid SQL.
+  # So keep it, translated: box-drawing characters become their ASCII equivalents (`-`, `|`, `+`)
+  # and every result line is commented out with `--`, leaving the whole example copy-pasteable SQL.
 
   # The "Box Drawing" block, U+2500-U+257F, is what DuckDB's CLI output uses.
-  # Map the plain horizontals and verticals to `-` and `|`; everything else in
-  # the block is a corner, tee or cross, which becomes `+`.
+  # Map the plain horizontals and verticals to `-` and `|`;
+  # everything else in the block is a corner, tee or cross, which becomes `+`.
   asciify_box <- function(x) {
     x <- gsub("[\u2500\u2501\u2550]", "-", x)
     x <- gsub("[\u2502\u2503\u2551]", "|", x)
@@ -541,8 +521,7 @@ usage_and_params <- function(
       return(paste(lines, collapse = "\n"))
     }
     query <- lines[seq_len(at[[1]] - 1)]
-    # Drop the bare `----` separator; it carries no information once the result
-    # is commented out.
+    # Drop the bare `----` separator; it carries no information once the result is commented out.
     result <- lines[seq(at[[1]], length(lines))]
     result <- result[!is_separator(result)]
     result <- paste0("-- ", asciify_box(result))
@@ -551,8 +530,8 @@ usage_and_params <- function(
   examples <- trimws(vapply(examples, format_example, character(1)))
   examples <- unique(examples[examples != ""])
   if (length(examples) > 0) {
-    # Prefix *every* line with `#' `; otherwise the continuation lines of a
-    # multi-line example escape the roxygen comment and become top-level code
+    # Prefix *every* line with `#' `;
+    # otherwise the continuation lines of a multi-line example escape the roxygen comment and become top-level code
     # (e.g. a bare `POINT` that fails to load).
     body <- gsub("\n", "\n#' ", examples)
     examples <- paste0(
@@ -565,14 +544,12 @@ usage_and_params <- function(
     examples <- ""
   }
 
-  # State which DuckDB extension provides the function, so a reader knows what
-  # to `LOAD` before using it. Functions available on a bare connection (the
-  # DuckDB core plus the statically linked `core_functions`/`parquet`) get no
-  # section at all — the note is only interesting when an extension is needed.
-  # A handful of functions are provided by *both* the core and an extension, or
-  # by several extensions (e.g. `st_astext` by the core and `spatial`;
-  # `range` by the core and `icu`), and there the attribution is listed per
-  # overload rather than for the function as a whole.
+  # State which DuckDB extension provides the function, so a reader knows what to `LOAD` before using it.
+  # Functions available on a bare connection (the DuckDB core plus the statically linked `core_functions`/`parquet`)
+  # get no section at all — the note is only interesting when an extension is needed.
+  # A handful of functions are provided by *both* the core and an extension, or by several extensions
+  # (e.g. `st_astext` by the core and `spatial`; `range` by the core and `icu`),
+  # and there the attribution is listed per overload rather than for the function as a whole.
   provided_doc <- ""
   if (length(extension) == length(signatures)) {
     provided <-
@@ -613,10 +590,9 @@ usage_and_params <- function(
     }
   }
 
-  # In "full" mode, expose the JSON category groupings as roxygen2 `@family`
-  # tags. roxygen2 turns each family into a `\concept{}` entry *and* an
-  # auto-generated "See also" list linking the other functions in the category,
-  # which a home-grown section cannot do.
+  # In "full" mode, expose the JSON category groupings as roxygen2 `@family` tags.
+  # roxygen2 turns each family into a `\concept{}` entry *and* an auto-generated "See also" list
+  # linking the other functions in the category, which a home-grown section cannot do.
   family_doc <- ""
   if (merge_mode == "full") {
     cats <- sort(unique(unlist(json_categories)))
@@ -640,11 +616,11 @@ usage_and_params <- function(
 }
 
 rdize_function_name <- function(x) {
-  # roxygen2 derives the .Rd file name from the topic name and drops `-`, so the
-  # JSON extraction operators `->`/`->>` would land in the same file as the
-  # bitwise shifts `>`/`>>` and be merged into one (wrong) help page. Spell the
-  # arrow out to keep them apart. The operator itself stays reachable, because
-  # roxygen2 records it as an `\alias{}`.
+  # roxygen2 derives the .Rd file name from the topic name and drops `-`,
+  # so the JSON extraction operators `->`/`->>` would land in the same file as the bitwise shifts `>`/`>>`
+  # and be merged into one (wrong) help page.
+  # Spell the arrow out to keep them apart.
+  # The operator itself stays reachable, because roxygen2 records it as an `\alias{}`.
   x <- gsub("^->", "arrow->", x)
   x <- gsub("^!", "not-", x)
   x <- gsub("!", "-not-", x)
@@ -659,25 +635,22 @@ rdize_function_name <- function(x) {
 
 is_alnum <- function(x) grepl("^[A-Za-z0-9_]+$", x)
 
-# Is `x` the name of an object in base R? Used to keep the help topic for an
-# alias group off a name that collides with base (e.g. document the
-# `length`/`len` group under `len`, since `?length` would otherwise also
-# resolve to `base::length()`).
+# Is `x` the name of an object in base R?
+# Used to keep the help topic for an alias group off a name that collides with base
+# (e.g. document the `length`/`len` group under `len`, since `?length` would otherwise also resolve to `base::length()`).
 masks_base <- function(x) {
   vapply(x, exists, logical(1), envir = baseenv(), inherits = FALSE)
 }
 
-# Pick the representative function for an alias group. DuckDB reports aliases via
-# the `alias_of` column, so a group is the canonical function plus everything
-# pointing at it. We document the group on a single page named after a short,
-# alphanumeric member: the canonical itself when it is alphanumeric and present,
-# otherwise the shortest alphanumeric alias (alphabetical tie-break). This keeps
-# the .Rd file name readable even when the canonical is an operator (e.g. `**`).
+# Pick the representative function for an alias group.
+# DuckDB reports aliases via the `alias_of` column, so a group is the canonical function plus everything pointing at it.
+# We document the group on a single page named after a short, alphanumeric member:
+# the canonical itself when it is alphanumeric and present, otherwise the shortest alphanumeric alias (alphabetical tie-break).
+# This keeps the .Rd file name readable even when the canonical is an operator (e.g. `**`).
 pick_rep <- function(names, canonical) {
   alnum <- names[is_alnum(names)]
-  # Prefer a name that does not collide with a base R object, so the help topic
-  # is unambiguous; fall back to the previous behaviour when the whole group
-  # collides.
+  # Prefer a name that does not collide with a base R object, so the help topic is unambiguous;
+  # fall back to the previous behaviour when the whole group collides.
   free <- alnum[!masks_base(alnum)]
   if (canonical %in% free) {
     return(canonical)
@@ -697,12 +670,10 @@ pick_rep <- function(names, canonical) {
   names[order(nchar(names), names)][[1]]
 }
 
-# Download the DuckDB sources for the *exact* engine version that is running and
-# extract every `functions.json` file from them. Pinning to `library_version`
-# (the DuckDB git tag, e.g. "v1.5.4") guarantees the JSON matches the catalog we
-# query above. The location of these files moves between releases (e.g.
-# `src/core_functions/` became `extension/core_functions/`), so we discover them
-# dynamically rather than hard-coding paths.
+# Download the DuckDB sources for the *exact* engine version that is running and extract every `functions.json` file from them.
+# Pinning to `library_version` (the DuckDB git tag, e.g. "v1.5.4") guarantees the JSON matches the catalog we query above.
+# The location of these files moves between releases (e.g. `src/core_functions/` became `extension/core_functions/`),
+# so we discover them dynamically rather than hard-coding paths.
 duckdb_json_files <- function(ref) {
   cache <- file.path(
     tempdir(),
@@ -734,8 +705,8 @@ duckdb_json_files <- function(ref) {
   )
 }
 
-# Flatten one JSON entry into one row per overload/variant. `parameters` may be a
-# comma-separated string or, inside `variants`, an array of `{name, type}`.
+# Flatten one JSON entry into one row per overload/variant.
+# `parameters` may be a comma-separated string or, inside `variants`, an array of `{name, type}`.
 parse_json_entry <- function(entry) {
   blank_to_na <- function(x) {
     if (is.null(x) || length(x) == 0 || identical(x, "")) NA_character_ else x
@@ -762,8 +733,7 @@ parse_json_entry <- function(entry) {
       names <- character(0)
       types <- character(0)
     }
-    # Some JSON names are quoted string literals (e.g. `'entry'`); the quotes
-    # aren't part of the name.
+    # Some JSON names are quoted string literals (e.g. `'entry'`); the quotes aren't part of the name.
     names <- gsub("^['\"](.*)['\"]$", "\\1", names)
     param_names <- if (length(names) > 0) {
       paste(names, collapse = ",")
@@ -819,8 +789,8 @@ build_json_meta <- function(ref) {
       json_aliases = list(sort(unique(unlist(aliases)))),
     )
 
-  # Per-variant description keyed by parameter names ("a,b"), so a signature
-  # whose catalog description is missing can recover it (see usage_and_params).
+  # Per-variant description keyed by parameter names ("a,b"),
+  # so a signature whose catalog description is missing can recover it (see usage_and_params).
   variant_desc <-
     json_long |>
     filter(!is.na(parameters), !is.na(description)) |>
@@ -831,10 +801,9 @@ build_json_meta <- function(ref) {
     )
   meta <- meta |> left_join(variant_desc, by = "function_name")
 
-  # The (names, types) of each JSON overload, used to recover the real argument
-  # names for overloads the catalog only exposes as `col0`, `col1`, ... Dedupe
-  # on names *and* types so overloads that share names but differ in type stay
-  # available for matching.
+  # The (names, types) of each JSON overload,
+  # used to recover the real argument names for overloads the catalog only exposes as `col0`, `col1`, ...
+  # Dedupe on names *and* types so overloads that share names but differ in type stay available for matching.
   overloads <-
     json_long |>
     mutate(.type_key = map_chr(param_types, ~ paste(.x, collapse = ","))) |>
@@ -886,10 +855,9 @@ if (json_merge_mode == "off") {
   json_alias_edges <- json_bits$edges
 }
 
-# Group function names into alias equivalence classes by union-find over the
-# (alias -> canonical) edges. The catalog's `alias_of` column and the DuckDB
-# source JSON each contribute edges; the JSON catches relationships the catalog
-# omits (e.g. `datetrunc` -> `date_trunc`).
+# Group function names into alias equivalence classes by union-find over the (alias -> canonical) edges.
+# The catalog's `alias_of` column and the DuckDB source JSON each contribute edges;
+# the JSON catches relationships the catalog omits (e.g. `datetrunc` -> `date_trunc`).
 alias_components <- function(nodes, from, to) {
   parent <- new.env(parent = emptyenv())
   for (n in nodes) {
@@ -917,9 +885,8 @@ alias_components <- function(nodes, from, to) {
   vapply(nodes, find, character(1))
 }
 
-# Canonical member of an alias group: the unique "sink" that is never an alias
-# of another member. Falls back to the shortest alphanumeric name when the
-# edges leave it ambiguous (no sink, e.g. a cycle, or several).
+# Canonical member of an alias group: the unique "sink" that is never an alias of another member.
+# Falls back to the shortest alphanumeric name when the edges leave it ambiguous (no sink, e.g. a cycle, or several).
 pick_canonical <- function(names, froms) {
   sinks <- names[!(names %in% froms)]
   if (length(sinks) == 1) {
@@ -948,8 +915,7 @@ funs <-
   # FIXME: Why is this called `has_side_effects`? Called "deterministic" elsewhere.
   filter_print(internal) |>
   select(-internal) |>
-  # Attribute each overload to the extension that introduced it (NA = built-in),
-  # recorded while the extensions were loaded above.
+  # Attribute each overload to the extension that introduced it (NA = built-in), recorded while the extensions were loaded above.
   mutate(
     extension = unname(extension_of[
       overload_key(function_name, function_type, parameters, parameter_types)
@@ -975,8 +941,7 @@ funs <-
       json_overloads = first(json_overloads),
       merge_mode = json_merge_mode
     ),
-    # The categories surfaced as @family / \concept tags (used for the pkgdown
-    # reference index below).
+    # The categories surfaced as @family / \concept tags (used for the pkgdown reference index below).
     categories = list(sort(unique(unlist(first(json_categories))))),
   ) |>
   # https://github.com/duckdb/duckdb/pull/18977
@@ -987,19 +952,16 @@ funs <-
       examples
     )
   ) |>
-  # NOTE: `<->` is kept here but emitted as documentation only; see `alias_only`
-  # below.
-  # Drop double-underscore internal helpers: DuckDB's own `__internal*`
-  # decompression helpers and extension internals such as the `__lance_*`
-  # table functions. These are implementation details, not user-facing
-  # functions.
+  # NOTE: `<->` is kept here but emitted as documentation only; see `alias_only` below.
+  # Drop double-underscore internal helpers:
+  # DuckDB's own `__internal*` decompression helpers and extension internals such as the `__lance_*` table functions.
+  # These are implementation details, not user-facing functions.
   filter_print(!stringr::str_detect(function_name, "^__")) |>
   arrange(function_name)
 
-# Resolve alias groups from the catalog's `alias_of` column *and* the DuckDB
-# source JSON, then route every member to one canonical page, so e.g.
-# `list_aggr`/`list_aggregate` and `datetrunc`/`date_trunc` no longer produce
-# separate .Rd files.
+# Resolve alias groups from the catalog's `alias_of` column *and* the DuckDB source JSON,
+# then route every member to one canonical page,
+# so e.g. `list_aggr`/`list_aggregate` and `datetrunc`/`date_trunc` no longer produce separate .Rd files.
 alias_edges <-
   bind_rows(
     funs |>
@@ -1007,10 +969,9 @@ alias_edges <-
       transmute(from = function_name, to = alias_of),
     json_alias_edges
   ) |>
-  # The alias being documented must be a function we still emit, but its
-  # canonical may have been filtered out above (e.g. `length`). Keep those
-  # edges so its surviving aliases (`len`, `char_length`, ...) still share one
-  # page instead of splitting into singletons.
+  # The alias being documented must be a function we still emit,
+  # but its canonical may have been filtered out above (e.g. `length`).
+  # Keep those edges so its surviving aliases (`len`, `char_length`, ...) still share one page instead of splitting into singletons.
   filter(from %in% funs$function_name, from != to) |>
   distinct()
 
@@ -1030,51 +991,46 @@ funs <-
     rd_name = rdize_function_name(rep_name),
     is_primary = function_name == rep_name
   ) |>
-  # Emit each group's primary block first so roxygen2 derives the topic `\name`
-  # from the canonical (alphanumeric) member rather than an operator alias.
+  # Emit each group's primary block first
+  # so roxygen2 derives the topic `\name` from the canonical (alphanumeric) member rather than an operator alias.
   arrange(rd_name, desc(is_primary), function_name)
 
-# A handful of DuckDB functions share a name with a base R function that tooling
-# calls while the package is attached: R CMD check's example runner evaluates
-# `format(x, digits = 7)` and `proc.time() - ...` when timing examples, and
-# pkgdown's site build reaches `length()` through `purrr::pluck()` while
-# rendering the navbar. Exporting a stub for those names shadows the base
-# function on the search path and makes that tooling dispatch to the stub, which
-# errors -- breaking R CMD check and the pkgdown build.
-# Document them (so they still get a help page and appear in `dd`) but do not
-# `@export` them, so the base functions keep working when `library(dd)` is
-# attached. This is only needed for names base R itself relies on; the many
-# other base-shadowing stubs (`abs()`, `sqrt()`, ...) stay exported as before.
+# A handful of DuckDB functions share a name with a base R function that tooling calls while the package is attached:
+# R CMD check's example runner evaluates `format(x, digits = 7)` and `proc.time() - ...` when timing examples,
+# and pkgdown's site build reaches `length()` through `purrr::pluck()` while rendering the navbar.
+# Exporting a stub for those names shadows the base function on the search path and makes that tooling dispatch to the stub,
+# which errors -- breaking R CMD check and the pkgdown build.
+# Document them (so they still get a help page and appear in `dd`) but do not `@export` them,
+# so the base functions keep working when `library(dd)` is attached.
+# This is only needed for names base R itself relies on;
+# the many other base-shadowing stubs (`abs()`, `sqrt()`, ...) stay exported as before.
 no_export <- c("format", "+", "-", "length")
 
-# DuckDB names that get a help page but no R function behind it. R CMD check's
-# replacement-function check (`tools:::checkReplaceFuns`) treats every *namespace
-# object* whose name contains the substring `<-` as a replacement function and
-# demands its last formal be named `value`. It inspects the whole namespace, so
-# unlike `no_export` above, withholding the export does not help, and `<->`
-# (list distance) takes `(list1, list2)` -- no honest signature satisfies it.
+# DuckDB names that get a help page but no R function behind it.
+# R CMD check's replacement-function check (`tools:::checkReplaceFuns`) treats every *namespace object*
+# whose name contains the substring `<-` as a replacement function and demands its last formal be named `value`.
+# It inspects the whole namespace, so unlike `no_export` above, withholding the export does not help,
+# and `<->` (list distance) takes `(list1, list2)` -- no honest signature satisfies it.
 #
-# An Rd `\alias{}`, though, is documentation, not an object. Documenting the name
-# on its alias group's page makes `?`<->`` resolve to the same topic as
-# `list_distance()` while nothing of that name ever enters the namespace for the
-# check to find. Such names are correspondingly absent from `NAMESPACE`, and
-# their entry in the `dd` list points at the group's representative function
-# instead (the check only inspects namespace bindings, so a list *element name*
-# is as safe as an Rd alias).
+# An Rd `\alias{}`, though, is documentation, not an object.
+# Documenting the name on its alias group's page makes `?`<->`` resolve to the same topic as `list_distance()`
+# while nothing of that name ever enters the namespace for the check to find.
+# Such names are correspondingly absent from `NAMESPACE`,
+# and their entry in the `dd` list points at the group's representative function instead
+# (the check only inspects namespace bindings, so a list *element name* is as safe as an Rd alias).
 no_object <- c("<->")
 
-# Such a name can only ride along on a page some *other* member of its alias
-# group owns, because it emits no primary block of its own. `pick_rep()` prefers
-# alphanumeric names, so this holds today; assert it so a future addition fails
-# loudly here instead of silently producing an `@rdname` to a missing topic.
+# Such a name can only ride along on a page some *other* member of its alias group owns,
+# because it emits no primary block of its own.
+# `pick_rep()` prefers alphanumeric names, so this holds today;
+# assert it so a future addition fails loudly here instead of silently producing an `@rdname` to a missing topic.
 stopifnot(!any(funs$rep_name %in% no_object))
 
 code <-
   funs |>
   mutate(
     export_doc = if_else(function_name %in% no_export, "", "#' @export\n"),
-    # The primary (representative) function carries the full documentation and
-    # owns the canonical page via `@name`.
+    # The primary (representative) function carries the full documentation and owns the canonical page via `@name`.
     primary_roxy = glue(
       r"(
     #' DuckDB function {function_name}
@@ -1092,9 +1048,9 @@ code <-
 
     )"
     ),
-    # Alias functions reuse the canonical page via `@rdname`; roxygen2 adds the
-    # `\alias{{}}` so `?{function_name}` resolves there. `@usage NULL` keeps the
-    # page's usage to the canonical signature.
+    # Alias functions reuse the canonical page via `@rdname`;
+    # roxygen2 adds the `\alias{{}}` so `?{function_name}` resolves there.
+    # `@usage NULL` keeps the page's usage to the canonical signature.
     alias_roxy = glue(
       r"(
     #' @rdname {rd_name}
@@ -1105,10 +1061,10 @@ code <-
 
     )"
     ),
-    # Objectless names document the name and nothing else: a `NULL` block
-    # named after the function and routed to the group's page, so roxygen2
-    # records an `\alias{{}}` there without an object being defined. (roxygen2
-    # requires `@name` on a `NULL` block; `@rdname` keeps it on the same page.)
+    # Objectless names document the name and nothing else:
+    # a `NULL` block named after the function and routed to the group's page,
+    # so roxygen2 records an `\alias{{}}` there without an object being defined.
+    # (roxygen2 requires `@name` on a `NULL` block; `@rdname` keeps it on the same page.)
     no_object_roxy = glue(
       r"(
     #' @rdname {rd_name}
@@ -1149,9 +1105,8 @@ code <- c(
 
 writeLines(code, "R/duckdb-funs.R")
 
-# Each name maps to the function that implements it -- itself, except for the
-# `no_object` names, whose entry points at the group's representative function
-# (e.g. `dd$"<->"` is `list_distance`).
+# Each name maps to the function that implements it -- itself,
+# except for the `no_object` names, whose entry points at the group's representative function (e.g. `dd$"<->"` is `list_distance`).
 dd_entries <-
   tibble(
     name = funs$function_name[parsed],
@@ -1199,10 +1154,9 @@ invisible(parse(text = globals_code))
 writeLines(globals_code, "R/globals.R")
 
 # ---- pkgdown reference index -------------------------------------------------
-# Group the reference index by DuckDB function category (the @family / \concept
-# tags). DuckDB does not ship descriptions for its categories, so they are
-# curated here; categories seen in the data but missing from this table fall
-# back to a generic description.
+# Group the reference index by DuckDB function category (the @family / \concept tags).
+# DuckDB does not ship descriptions for its categories, so they are curated here;
+# categories seen in the data but missing from this table fall back to a generic description.
 category_info <- tibble::tribble(
   ~category         , ~title                , ~desc                                               ,
   "string"          , "String"              , "Operate on text (`VARCHAR`) values."               ,
@@ -1263,8 +1217,8 @@ reference_yaml <- c(
   other_block
 )
 
-# Splice into _pkgdown.yml, replacing any previously generated reference section
-# (always appended last) and keeping the curated header above it.
+# Splice into _pkgdown.yml, replacing any previously generated reference section (always appended last)
+# and keeping the curated header above it.
 pkgdown_file <- "_pkgdown.yml"
 pkgdown_yml <- readLines(pkgdown_file)
 ref_start <- grep("^reference:", pkgdown_yml)
@@ -1278,10 +1232,9 @@ writeLines(c(pkgdown_yml, "", reference_yaml), pkgdown_file)
 
 callr::r(function() {
   devtools::document()
-  # `devtools::document()` regenerates the Rd files (so `?dd` picks up the
-  # DuckDB version baked into `R/zzz-dd.R` above) but does not touch README.md,
-  # whose badge and homepage line read the version inline. Re-render it in the
-  # same step so both stay in sync with the version the docs came from.
+  # `devtools::document()` regenerates the Rd files (so `?dd` picks up the DuckDB version baked into `R/zzz-dd.R` above)
+  # but does not touch README.md, whose badge and homepage line read the version inline.
+  # Re-render it in the same step so both stay in sync with the version the docs came from.
   devtools::build_readme()
 })
 
