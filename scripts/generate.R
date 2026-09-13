@@ -768,7 +768,8 @@ parse_json_entry <- function(entry) {
   }
 }
 
-# Summarise the JSON metadata for the running engine. Returns:
+# Summarise the JSON metadata for the running engine.
+# Returns:
 #   `meta`  - one row per function name (and per alias, so catalog entries that
 #             are themselves aliases pick up their canonical's metadata).
 #   `edges` - alias -> canonical relationships declared in the JSON, used below
