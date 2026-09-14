@@ -56,7 +56,8 @@ The package uses a sophisticated code generation system in `scripts/generate.R`:
 - Generated files should not be edited manually as they will be overwritten
 - Edge-case DuckDB functions are handled by named mechanisms in `scripts/generate.R`:
   internal helpers (`__internal*`) are dropped,
-  `no_export` documents names that base R relies on (`format`, `+`, `-`, `length`) without exporting them,
+  `no_bind` documents names that ordinary R code relies on (`format`, `+`, `-`, `length`)
+  but binds their stub as `.dd.<name>` in `R/no-bind.R`, so no loader can put the name on the search path,
   and `no_object` documents names that cannot exist as R objects (`<->`) as Rd aliases,
   mapping their `dd` list entry to the canonical function
 - CI runs comprehensive checks across multiple R versions and dependency configurations
