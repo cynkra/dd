@@ -17,10 +17,10 @@ array_extract(list, index)
 \description{
 \itemize{
 \item \code{array_extract(list = `T[]`, index = BIGINT)}: Extracts the \code{index}th (1-based) value from the \code{list}.
-\item \code{array_extract(string = VARCHAR, index = BIGINT)}: Extracts a single character from a \code{string} using a (1-based) \code{index}.
-\item \code{array_extract(struct = STRUCT, entry = VARCHAR)}: Extracts the named \code{entry} from the \code{STRUCT}.
-\item \code{array_extract(struct = STRUCT, index = BIGINT)}: Extracts the entry from an unnamed \code{STRUCT} (tuple) using an index (1-based).
-}
+ \item \code{array_extract(string = VARCHAR, index = BIGINT)}: Extracts a single character from a \code{string} using a (1-based) \code{index}.
+ \item \code{array_extract(struct = STRUCT, entry = VARCHAR)}: Extracts the named \code{entry} from the \code{STRUCT}.
+ \item \code{array_extract(struct = STRUCT, index = BIGINT)}: Extracts the entry from an unnamed \code{STRUCT} (tuple) using an index (1-based).
+ }
 }
 \section{Overloads}{
 

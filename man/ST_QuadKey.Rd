@@ -18,7 +18,7 @@ ST_QuadKey(longitude, latitude, level)
 }
 \description{
 Compute the \href{https://learn.microsoft.com/en-us/bingmaps/articles/bing-maps-tile-system}{quadkey} for a given lon/lat point at a given level.
-Note that the parameter order is \strong{longitude}, \strong{latitude}.
+ Note that the parameter order is \strong{longitude}, \strong{latitude}.
 
 \code{level} has to be between 1 and 23, inclusive.
 

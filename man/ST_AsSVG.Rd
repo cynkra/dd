@@ -20,8 +20,8 @@ ST_AsSVG(geom, relative, precision)
 Convert the geometry into a SVG fragment or path
 
 The SVG fragment is returned as a string. The fragment is a path element that can be used in an SVG document.
-The second boolean argument specifies whether the path should be relative or absolute.
-The third argument specifies the maximum number of digits to use for the coordinates.
+ The second boolean argument specifies whether the path should be relative or absolute.
+ The third argument specifies the maximum number of digits to use for the coordinates.
 
 Points are formatted as cx/cy using absolute coordinates or x/y using relative coordinates.
 }

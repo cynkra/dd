@@ -15,8 +15,8 @@ md5_number(string)
 \description{
 \itemize{
 \item \code{md5_number(string = VARCHAR)}: Returns the MD5 hash of the \code{string} as a \code{HUGEINT}.
-\item \code{md5_number(blob = BLOB)}: Returns the MD5 hash of the \code{blob} as a \code{HUGEINT}.
-}
+ \item \code{md5_number(blob = BLOB)}: Returns the MD5 hash of the \code{blob} as a \code{HUGEINT}.
+ }
 }
 \section{Overloads}{
 

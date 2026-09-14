@@ -15,9 +15,9 @@ make_date(year, month, day)
 \description{
 \itemize{
 \item \code{make_date(year = BIGINT, month = BIGINT, day = BIGINT)}: The date for the given parts.
-\item \code{make_date(date.struct = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`)}: The date for the given struct.
-\item \code{make_date(col0 = INTEGER)}: (Description missing.)
-}
+ \item \code{make_date(date.struct = `STRUCT("year" BIGINT, "month" BIGINT, "day" BIGINT)`)}: The date for the given struct.
+ \item \code{make_date(col0 = INTEGER)}: (Description missing.)
+ }
 }
 \section{Overloads}{
 

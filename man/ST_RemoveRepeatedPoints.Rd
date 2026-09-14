@@ -17,8 +17,8 @@ ST_RemoveRepeatedPoints(line, tolerance)
 \description{
 \itemize{
 \item \code{ST_RemoveRepeatedPoints(line = LINESTRING_2D)}, \code{ST_RemoveRepeatedPoints(line = LINESTRING_2D, tolerance = DOUBLE)}: Remove repeated points from a LINESTRING.
-\item \code{ST_RemoveRepeatedPoints(geom = GEOMETRY)}, \code{ST_RemoveRepeatedPoints(geom = GEOMETRY, tolerance = DOUBLE)}: Returns the geometry with repeated points removed.
-}
+ \item \code{ST_RemoveRepeatedPoints(geom = GEOMETRY)}, \code{ST_RemoveRepeatedPoints(geom = GEOMETRY, tolerance = DOUBLE)}: Returns the geometry with repeated points removed.
+ }
 }
 \section{Overloads}{
 
