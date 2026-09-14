@@ -176,7 +176,7 @@ jobs:
       - name: Roxygenize the documentation
         id: roxygenize
         continue-on-error: true
-        uses: cynkra/cynkratemplate/.github/actions/roxygenize@main
+        uses: cynkra/cynkratemplate/.github/actions/roxygenize@fix-roxygenize-base-masking
 
       - name: Remove config files from previous iteration
         run: |
