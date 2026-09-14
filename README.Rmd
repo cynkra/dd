@@ -7,6 +7,12 @@ output:
 <!-- README.md and index.md are generated from README.Rmd. Please edit that file. -->
 
 ```{r setup, include = FALSE}
+# Render this file against a `dd` installed with `R CMD INSTALL --with-keep.source`.
+# The Example section below prints a generated stub: with srcrefs kept R shows
+# the stub's original source, without them it deparses the closure instead, and
+# the output silently changes shape. See "Rendering the README" in CLAUDE.md.
+# `Rscript scripts/generate.R` already does the right thing.
+
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
