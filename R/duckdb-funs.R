@@ -3988,10 +3988,8 @@ add <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT 
 }
 
 #' @rdname add
-#' @usage NULL
-`+` <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM | TIMESTAMP WITH TIME ZONE | INET`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | DATE | INTERVAL | TIME | TIMESTAMP | TIME WITH TIME ZONE | BIGNUM | TIMESTAMP WITH TIME ZONE`) {
-  stop("DuckDB function +() is not available in R.")
-}
+#' @name +
+NULL
 
 #' DuckDB function add_parquet_key
 #'
@@ -8676,7 +8674,7 @@ force_checkpoint <- function() {
 #' Formats a string using the fmt syntax.
 #'
 #' @name format
-#' @usage format(format)
+#' @usage NULL
 #' @param format `VARCHAR`
 #' @return `VARCHAR`
 #' @family string
@@ -8684,9 +8682,7 @@ force_checkpoint <- function() {
 #' ```
 #' format('Benchmark "{}" took {} seconds', 'CSV', 42)
 #' ```
-format <- function(format = VARCHAR) {
-  stop("DuckDB function format() is not available in R.")
-}
+NULL
 
 #' DuckDB function formatReadableDecimalSize
 #'
@@ -13339,10 +13335,8 @@ character_length <- function(string = VARCHAR) {
 }
 
 #' @rdname len
-#' @usage NULL
-length <- function(string = VARCHAR) {
-  stop("DuckDB function length() is not available in R.")
-}
+#' @name length
+NULL
 
 #' DuckDB function length_grapheme
 #'
@@ -20548,10 +20542,8 @@ subtract <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | F
 }
 
 #' @rdname subtract
-#' @usage NULL
-`-` <- function(col0 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL | TIME | TIME WITH TIME ZONE | TIMESTAMP WITH TIME ZONE | INET`, col1 = `TINYINT | SMALLINT | INTEGER | BIGINT | HUGEINT | FLOAT | DOUBLE | DECIMAL | UTINYINT | USMALLINT | UINTEGER | UBIGINT | UHUGEINT | BIGNUM | DATE | TIMESTAMP | INTERVAL | TIMESTAMP WITH TIME ZONE`) {
-  stop("DuckDB function -() is not available in R.")
-}
+#' @name -
+NULL
 
 #' DuckDB function suffix
 #'
