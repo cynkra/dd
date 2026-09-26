@@ -10,7 +10,7 @@ Lists DuckDB functions for integration in R's help system.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/krlmlr/dd}
+  \item \url{https://github.com/cynkra/dd}
   \item \url{https://cynkra.github.io/dd}
   \item Report bugs at \url{https://github.com/cynkra/dd/issues}
 }
