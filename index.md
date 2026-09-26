@@ -31,25 +31,27 @@ dd$acos
 help(acos, package = "dd")
 ```
 
-    DuckDB function acos
+``` R
+DuckDB function acos
 
-    Description:
+Description:
 
-         Computes the arccosine of x.
+     Computes the arccosine of x.
 
-    Usage:
+Usage:
 
-         acos(x)
+     acos(x)
+     
+Arguments:
 
-    Arguments:
+       x: 'DOUBLE'
 
-           x: 'DOUBLE'
+Value:
 
-    Value:
+     'DOUBLE'
 
-         'DOUBLE'
+SQL examples:
 
-    SQL examples:
-
-         acos(0.5)
-         
+     acos(0.5)
+     
+```

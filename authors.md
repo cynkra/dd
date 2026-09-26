@@ -16,12 +16,12 @@ Source:
 [`DESCRIPTION`](https://github.com/cynkra/dd/blob/main/DESCRIPTION)
 
 Müller K (2026). *dd: Documentation for Functions Provided by DuckDB*. R
-package version 0.0.0.9000, <https://github.com/krlmlr/dd>.
+package version 0.0.0.9000, <https://github.com/cynkra/dd>.
 
     @Manual{,
       title = {dd: Documentation for Functions Provided by DuckDB},
       author = {Kirill Müller},
       year = {2026},
       note = {R package version 0.0.0.9000},
-      url = {https://github.com/krlmlr/dd},
+      url = {https://github.com/cynkra/dd},
     }

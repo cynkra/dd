@@ -6,7 +6,7 @@ Lists DuckDB functions for integration in R's help system.
 
 Useful links:
 
-- <https://github.com/krlmlr/dd>
+- <https://github.com/cynkra/dd>
 
 - <https://cynkra.github.io/dd>
 
