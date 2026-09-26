@@ -3,9 +3,6 @@
 \name{format}
 \alias{format}
 \title{DuckDB function format}
-\usage{
-format(format)
-}
 \arguments{
 \item{format}{\code{VARCHAR}}
 }

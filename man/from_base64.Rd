@@ -48,7 +48,7 @@ Other string:
 \code{\link[=concat]{concat()}},
 \code{\link[=concat_ws]{concat_ws()}},
 \code{\link[=contains]{contains()}},
-\code{\link[=format]{format()}},
+\code{\link{format}},
 \code{\link[=formatReadableDecimalSize]{formatReadableDecimalSize()}},
 \code{\link[=format_bytes]{format_bytes()}},
 \code{\link[=greatest]{greatest()}},
