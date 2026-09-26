@@ -7,7 +7,6 @@
 ^pkgdown$
 ^README\.Rmd$
 ^\.github$
-^index\.md$
 ^CLAUDE\.md$
 ^\.claude$
 ^\.ccache$
