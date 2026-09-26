@@ -14,7 +14,7 @@ ST_CoverageUnion(geoms)
 }
 \description{
 Union all geometries in a polygonal coverage into a single geometry.
-This may be faster than using \code{ST_Union}, but may use more memory.
+ This may be faster than using \code{ST_Union}, but may use more memory.
 }
 \section{Provided by}{
 

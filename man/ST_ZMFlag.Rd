@@ -14,7 +14,7 @@ ST_ZMFlag(geom)
 }
 \description{
 Returns a flag indicating the presence of Z and M values in the input geometry.
-0 = No Z or M values
+ 0 = No Z or M values
 1 = M values only
 2 = Z values only
 3 = Z and M values.

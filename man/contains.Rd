@@ -15,10 +15,10 @@ contains(string, search_string)
 \description{
 \itemize{
 \item \code{contains(string = VARCHAR, search_string = VARCHAR)}: Returns \code{true} if \code{search_string} is found within \code{string}.
-\item \code{contains(list = `T[]`, element = T)}: Returns \code{true} if the \code{list} contains the \code{element}.
-\item \code{contains(map = `MAP(K, V)`, key = K)}: Checks if a \code{map} contains a given \code{key}.
-\item \code{contains(col0 = STRUCT, col1 = ANY)}: (Description missing.)
-}
+ \item \code{contains(list = `T[]`, element = T)}: Returns \code{true} if the \code{list} contains the \code{element}.
+ \item \code{contains(map = `MAP(K, V)`, key = K)}: Checks if a \code{map} contains a given \code{key}.
+ \item \code{contains(col0 = STRUCT, col1 = ANY)}: (Description missing.)
+ }
 }
 \section{Overloads}{
 

@@ -15,8 +15,8 @@ octet_length(blob)
 \description{
 \itemize{
 \item \code{octet_length(blob = BLOB)}: Number of bytes in \code{blob}.
-\item \code{octet_length(bitstring = BIT)}: Returns the number of bytes in the \code{bitstring}.
-}
+ \item \code{octet_length(bitstring = BIT)}: Returns the number of bytes in the \code{bitstring}.
+ }
 }
 \section{Overloads}{
 

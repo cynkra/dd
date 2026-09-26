@@ -18,7 +18,7 @@ ST_MaximumInscribedCircle(geom, tolerance)
 Returns the maximum inscribed circle of the input geometry, optionally with a tolerance.
 
 By default, the tolerance is computed as \code{max(width, height) / 1000}.
-The return value is a struct with the center of the circle, the nearest point to the center on the boundary of the geometry, and the radius of the circle.
+ The return value is a struct with the center of the circle, the nearest point to the center on the boundary of the geometry, and the radius of the circle.
 }
 \section{Overloads}{
 
