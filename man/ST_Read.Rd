@@ -35,7 +35,9 @@ Unspecified.
 \description{
 Read and import a variety of geospatial file formats using the GDAL library.
 
-The \code{ST_Read} table function is based on the \href{https://gdal.org/index.html}{GDAL} translator library and enables reading spatial data from a variety of geospatial vector file formats as if they were DuckDB tables.See ST_Drivers for a list of supported file formats and drivers.
+The \code{ST_Read} table function is based on the \href{https://gdal.org/index.html}{GDAL} translator library and enables reading spatial data from a variety of geospatial vector file formats as if they were DuckDB tables.
+
+See \href{#st_drivers}{ST_Drivers} for a list of supported file formats and drivers.
 
 Except for the \code{path} parameter, all parameters are optional.\tabular{lll}{
    Parameter \tab Type \tab Description \cr

@@ -287,6 +287,41 @@ escape_bare_brackets <- function(x) {
   vapply(x, escape_outside_code, character(1), USE.NAMES = FALSE)
 }
 
+# roxygen2's markdown translation has no Rd equivalent for a Markdown block
+# quote: it aborts the whole `@description` with "block quotes are not currently
+# supported", which fails a CI that gates on roxygen2 warnings. DuckDB writes
+# asides as block quotes -- `ST_Read` points at `ST_Drivers` that way -- so drop
+# the `>` marker and let the prose stand as an ordinary paragraph. Nothing is
+# lost: roxygen2's fallback dropped the quoted line's markup anyway, and ran it
+# into the preceding paragraph without a separating space. A leading `>` inside
+# a fenced code block is content rather than markup, so fenced regions are left
+# untouched. Applied only to description prose, like `escape_bare_brackets()`.
+flatten_block_quotes <- function(x) {
+  flatten_one <- function(s) {
+    if (is.na(s)) {
+      return(s)
+    }
+    # `strsplit()` drops one trailing empty field, so remember whether the
+    # description ended in a newline and restore it after the rejoin.
+    ends_with_newline <- grepl("\n$", s)
+    lines <- strsplit(s, "\n", fixed = TRUE)[[1]]
+    in_fence <- FALSE
+    for (i in seq_along(lines)) {
+      if (grepl("^\\s*(```|~~~)", lines[[i]])) {
+        in_fence <- !in_fence
+      } else if (!in_fence) {
+        lines[[i]] <- sub("^\\s*>[ \t]?", "", lines[[i]])
+      }
+    }
+    out <- paste0(lines, collapse = "\n")
+    if (ends_with_newline) {
+      out <- paste0(out, "\n")
+    }
+    out
+  }
+  vapply(x, flatten_one, character(1), USE.NAMES = FALSE)
+}
+
 usage_and_params <- function(
   function_name,
   parameters,
@@ -473,7 +508,7 @@ usage_and_params <- function(
       "#' \\item ",
       grouped$sigs,
       ": ",
-      escape_bare_brackets(grouped$desc),
+      escape_bare_brackets(flatten_block_quotes(grouped$desc)),
       "\n"
     )
     description <- paste0(
@@ -496,7 +531,7 @@ usage_and_params <- function(
       )
     } else {
       description <- gsub("[.]*$", ".", description)
-      description <- escape_bare_brackets(description)
+      description <- escape_bare_brackets(flatten_block_quotes(description))
       description <- paste0("#' ", description, collapse = "\n#'\n")
     }
   }
