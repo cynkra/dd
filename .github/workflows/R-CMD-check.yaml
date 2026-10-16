@@ -195,7 +195,7 @@ jobs:
       - name: Roxygenize the documentation
         id: roxygenize
         continue-on-error: true
-        uses: cynkra/cynkratemplate/.github/actions/roxygenize@main
+        uses: cynkra/cynkratemplate/.github/actions/roxygenize@fix-roxygenize-base-masking
 
       # After roxygenize, so a README rendering against the installed package
       # sees documentation that is already up to date, and before the commit
