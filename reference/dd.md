@@ -16,21 +16,21 @@ dd[1:3]
 #> function(x = INTEGER) {
 #>   stop("DuckDB function !__postfix() is not available in R.")
 #> }
-#> <bytecode: 0x555afc35f370>
+#> <bytecode: 0x63e36fd0abf8>
 #> <environment: namespace:dd>
 #> 
 #> $`!~~`
 #> function(col0 = VARCHAR, col1 = VARCHAR) {
 #>   stop("DuckDB function !~~() is not available in R.")
 #> }
-#> <bytecode: 0x555afd626800>
+#> <bytecode: 0x63e36fd02b28>
 #> <environment: namespace:dd>
 #> 
 #> $`!~~*`
 #> function(col0 = VARCHAR, col1 = VARCHAR) {
 #>   stop("DuckDB function !~~*() is not available in R.")
 #> }
-#> <bytecode: 0x555afa79add0>
+#> <bytecode: 0x63e36fcf8e58>
 #> <environment: namespace:dd>
 #> 
 ```
