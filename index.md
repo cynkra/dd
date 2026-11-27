@@ -5,7 +5,7 @@ later also an easy way to test them. It is meant to be used in
 conjunction with [duckplyr](https://duckplyr.tidyverse.org/) and
 [duckdb](https://duckdb.org/docs/stable/clients/r).
 
-These pages document the functions of **DuckDB 1.5.5**.
+These pages document the functions of **DuckDB 2.0.1**.
 
 ## Installation
 
